@@ -10,14 +10,37 @@
   const state = {
     lang: 'th',
     view: 'overview',
+    market: {
+      tab: 'filter',
+      cat: 'all',
+      q: '',
+      minPrice: '',
+      maxPrice: '',
+      minLv: '',
+      maxLv: '',
+      el: '',
+      minRate: '',
+      monType: 'all',
+      when: 'all',
+      maxRod: '',
+      sort: 'ev',
+      dir: -1,
+      page: 0,
+      craftSkill: '',
+      craftMinLv: '',
+      craftMaxLv: '',
+      craftQ: '',
+      craftSort: 'profit',
+      craftDir: -1
+    },
     monsters: { q: '', kind: 'all', el: '', race: '', arm: '', minLv: '', maxLv: '', sort: 'lv', dir: 1, page: 0 },
     items: { tab: 'all', q: '', r: '', wt: '', el: '', minLv: '', maxLv: '', sort: 'lv', dir: 1, page: 0 },
     sets: { tab: 'regular', q: '', g: '' },
     jobs: { tab: 'jobs', tier: 'all', q: '', skJob: '', skType: '', skEl: '', skQ: '', skSort: 'n', skDir: 1, skPage: 0 },
     maps: { region: '', kind: '', secret: 'all', q: '' },
-    drops: { tab: 'drops', q: '', dtype: 'all', bossOnly: false, sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matPage: 0 },
+    drops: { tab: 'drops', q: '', dtype: 'all', monType: 'all', el: '', minLv: '', maxLv: '', minRate: '', minPrice: '', maxPrice: '', sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matMinPrice: '', matMaxPrice: '', matSort: 'p', matDir: -1, matPage: 0 },
     runes: { tab: 'runes', kind: '', on: '', q: '' },
-    quests: { tab: 'quests', ch: '', q: '', lifeTab: 'crops' },
+    quests: { tab: 'quests', ch: '', q: '', lifeTab: 'crops', lifeQ: '', lifeMinLv: '', lifeMaxLv: '', lifeMinPrice: '', lifeMaxPrice: '', lifeWhen: 'all', lifeSort: 'price', lifeDir: -1 },
     s2: { tab: 'patch' }
   };
 
@@ -30,6 +53,14 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
   const fmt = (n) => (n == null || n === '' ? '–' : Number(n).toLocaleString('en-US'));
+  const fmtCoin = (v) => {
+    if (v == null || v === '' || Number.isNaN(Number(v))) return '–';
+    const n = Number(v);
+    if (n === 0) return '0c';
+    if (Math.abs(n) >= 100) return Math.round(n).toLocaleString('en-US') + 'c';
+    if (Math.abs(n) >= 10) return n.toFixed(1).replace(/\.0$/, '') + 'c';
+    return n.toFixed(2).replace(/\.?0+$/, '') + 'c';
+  };
   const fmtPct = (v) => {
     const n = Number(v || 0);
     if (n >= 10) return n.toFixed(1).replace(/\.0$/, '') + '%';
@@ -38,6 +69,21 @@
     return n.toFixed(4).replace(/0+$/, '').replace(/\.$/, '') + '%';
   };
   const norm = (s) => String(s || '').toLowerCase().trim();
+  const WHEN_LABELS = {
+    0: { th: 'ตลอดวัน', en: 'Any time', color: '#6e6a86' },
+    1: { th: 'กลางคืน', en: 'Night', color: '#8a4fe0' },
+    2: { th: 'กลางวัน', en: 'Day', color: '#f5b942' }
+  };
+  function keepFocus(selector, renderFn) {
+    const el = $(selector);
+    const pos = el && typeof el.selectionStart === 'number' ? el.selectionStart : null;
+    renderFn();
+    const el2 = $(selector);
+    if (el2) {
+      el2.focus();
+      if (pos != null && typeof el2.setSelectionRange === 'function') el2.setSelectionRange(pos, pos);
+    }
+  }
 
   function tr(text) {
     if (text == null) return '';
@@ -187,6 +233,7 @@
 
   for (const m of (W.monsters || [])) {
     const maps = (m.maps || []).filter(Boolean);
+    let evSum = 0;
     for (const d of (m.drops || [])) {
       const [tid, ratePct] = [d[0], Number(d[1])];
       (ITEM_DROPPERS[tid] = ITEM_DROPPERS[tid] || []).push({ mon: m, ratePct });
@@ -197,6 +244,9 @@
         targetId: tid,
         targetName: it ? it.n : tid,
         ratePct,
+        price: null,
+        ev: null,
+        evPer1kHp: null,
         maps
       });
     }
@@ -205,12 +255,18 @@
       const ratePct = frac * 100;
       (MAT_DROPPERS[tid] = MAT_DROPPERS[tid] || []).push({ mon: m, ratePct });
       const mat = MAT[tid];
+      const price = mat && mat.p != null ? Number(mat.p) : null;
+      const ev = price != null ? price * frac : null;
+      if (ev != null) evSum += ev;
       FLAT_DROPS.push({
         mon: m,
         dtype: 'material',
         targetId: tid,
         targetName: mat ? mat.n : tid,
         ratePct,
+        price,
+        ev,
+        evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
         maps
       });
     }
@@ -219,21 +275,216 @@
       const ratePct = frac * 100;
       (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct });
       const rObj = RUNES[rid];
+      const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+      const ev = price != null ? price * frac : null;
       FLAT_DROPS.push({
         mon: m,
         dtype: 'rune',
         targetId: rid,
         targetName: rObj ? rObj.n : rid,
         ratePct,
+        price,
+        ev,
+        evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
         maps
       });
     }
+    m._evCoin = evSum;
+    m._evPer1kHp = m.hp > 0 ? (evSum / m.hp) * 1000 : 0;
   }
 
   for (const dict of [ITEM_DROPPERS, MAT_DROPPERS, RUNE_DROPPERS]) {
     for (const k of Object.keys(dict)) {
       dict[k].sort((a, b) => b.ratePct - a.ratePct || (a.mon.lv || 0) - (b.mon.lv || 0));
     }
+  }
+
+  // Smelter & Crafting Value-Add Analysis
+  const SMELT_GOODS = (S2.smelt && S2.smelt.goods) || {};
+  const SMELT_ANALYSIS = Object.entries((S2.smelt && S2.smelt.recipes) || {}).map(([rid, rc]) => {
+    const outId = rc.out;
+    const good = SMELT_GOODS[outId] || {};
+    const outMat = MAT[outId];
+    const outName = good.n || (outMat ? outMat.n : outId);
+    const outPrice = Number(good.price != null ? good.price : (outMat && outMat.p != null ? outMat.p : 0));
+    const outQty = Number(rc.n || 1);
+    const fee = Number(rc.coins || 0);
+    let rawCost = 0;
+    let hasWildcard = false;
+    const inputs = Object.entries(rc.in || {}).map(([mid, qty]) => {
+      const isWild = String(mid).startsWith('*');
+      if (isWild) hasWildcard = true;
+      const mp = isWild ? 0 : Number((MAT[mid] && MAT[mid].p) ?? (SMELT_GOODS[mid] && SMELT_GOODS[mid].price) ?? 0);
+      rawCost += mp * qty;
+      return { id: mid, qty, price: mp, isWild, name: (MAT[mid] && MAT[mid].n) || (SMELT_GOODS[mid] && SMELT_GOODS[mid].n) || mid };
+    });
+    const totalCost = rawCost + fee;
+    const revenue = outPrice * outQty;
+    const netProfit = revenue - totalCost;
+    const mult = rawCost > 0 ? revenue / rawCost : 0;
+    return {
+      id: rid,
+      outId,
+      outName,
+      outPrice,
+      outQty,
+      revenue,
+      fee,
+      rawCost,
+      totalCost,
+      netProfit,
+      mult,
+      lv: rc.lv || 1,
+      skill: rc.skill || '',
+      xp: rc.xp || 0,
+      hasWildcard,
+      inputs
+    };
+  });
+
+  // Unified Market Index (Drops + Fish + Ore + Wood + Crops + Smelter + Dishes + Runes)
+  const UNIFIED_MARKET = [];
+  for (const d of FLAT_DROPS) {
+    if (d.dtype !== 'material' && d.dtype !== 'rune') continue;
+    UNIFIED_MARKET.push({
+      cat: 'drop',
+      dtype: d.dtype,
+      id: d.targetId,
+      openKind: d.dtype === 'material' ? 'mat' : 'rune',
+      spriteKind: d.dtype === 'material' ? 'mats' : null,
+      name: d.targetName,
+      lv: d.mon.lv || 0,
+      price: d.price ?? 0,
+      ev: d.ev ?? 0,
+      ratePct: d.ratePct,
+      el: d.mon.el || 'neutral',
+      boss: !!d.mon.boss,
+      hp: d.mon.hp || 0,
+      evPer1kHp: d.evPer1kHp || 0,
+      mon: d.mon,
+      maps: d.maps || []
+    });
+  }
+  const LIFE_T = W.lifeTables || {};
+  for (const f of (LIFE_T.fish || [])) {
+    UNIFIED_MARKET.push({
+      cat: 'fish',
+      id: f.id,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: f.n,
+      lv: f.lv || 1,
+      price: Number(f.price || 0),
+      ev: Number(f.price || 0),
+      rod: f.rod || 1,
+      when: f.when || 0,
+      waters: f.waters || [],
+      xp: f.xp || 0
+    });
+  }
+  for (const o of (LIFE_T.ore || [])) {
+    const mat = MAT[o.mat];
+    const p = Number((mat && mat.p) || 0);
+    UNIFIED_MARKET.push({
+      cat: 'ore',
+      id: o.mat || o.id,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: (mat && mat.n) || o.n,
+      nodeName: o.n,
+      lv: o.lv || 1,
+      tier: o.tier || 1,
+      hits: o.hits || 0,
+      price: p,
+      ev: p,
+      xp: o.xp || 0
+    });
+  }
+  for (const w of (LIFE_T.wood || [])) {
+    const mat = MAT[w.mat];
+    const p = Number((mat && mat.p) || 0);
+    UNIFIED_MARKET.push({
+      cat: 'wood',
+      id: w.mat || w.id,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: (mat && mat.n) || w.n,
+      nodeName: w.n,
+      lv: w.lv || 1,
+      tier: w.tier || 1,
+      hits: w.hits || 0,
+      price: p,
+      ev: p,
+      xp: w.xp || 0
+    });
+  }
+  const seenCrops = new Set();
+  for (const c of [...(LIFE_T.crops || []), ...Object.entries(S2.farm || {}).map(([id, v]) => ({ id, ...v }))]) {
+    if (seenCrops.has(c.id)) continue;
+    seenCrops.add(c.id);
+    const mat = MAT[c.mat];
+    const p = Number(c.price != null ? c.price : ((mat && mat.p) || 0));
+    UNIFIED_MARKET.push({
+      cat: 'crop',
+      id: c.mat || c.id,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: c.n || (mat && mat.n) || c.id,
+      lv: c.lv || 1,
+      mins: c.mins || 0,
+      price: p,
+      ev: p,
+      xp: c.xp || 0
+    });
+  }
+  for (const sm of SMELT_ANALYSIS) {
+    UNIFIED_MARKET.push({
+      cat: 'smelt',
+      id: sm.outId,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: sm.outName,
+      lv: sm.lv,
+      skill: sm.skill,
+      price: sm.outPrice,
+      ev: sm.netProfit,
+      rawCost: sm.rawCost,
+      fee: sm.fee,
+      mult: sm.mult,
+      outQty: sm.outQty,
+      hasWildcard: sm.hasWildcard,
+      xp: sm.xp
+    });
+  }
+  for (const d of (LIFE_T.dishes || [])) {
+    UNIFIED_MARKET.push({
+      cat: 'dish',
+      id: d.id,
+      openKind: null,
+      spriteKind: null,
+      name: d.n,
+      lv: d.lv || 1,
+      price: Number(d.coins || 0),
+      ev: Number(d.coins || 0),
+      pot: d.pot || 1,
+      xp: d.xp || 0
+    });
+  }
+  for (const [rid, r] of Object.entries(RUNES)) {
+    const prices = r.price || [0, 0, 0];
+    UNIFIED_MARKET.push({
+      cat: 'rune',
+      id: rid,
+      openKind: 'rune',
+      spriteKind: null,
+      name: r.n,
+      lv: 1,
+      price: Number(prices[2] || prices[0] || 0),
+      ev: Number(prices[0] || 0),
+      prices,
+      kind: r.kind || '',
+      on: r.on || ''
+    });
   }
 
   // Stat formatting
@@ -269,6 +520,7 @@
   // ------------------------------------------------------------------ Navigation Config
   const NAV_ITEMS = [
     { id: 'overview', icon: '📊', th: 'ภาพรวม & สถิติ', en: 'Overview & Stats', count: null },
+    { id: 'market', icon: '💰', th: 'ฟาร์มเงิน & กรองราคา', en: 'Price & Farm Filter', count: UNIFIED_MARKET.length },
     { id: 'monsters', icon: '👾', th: 'มอนสเตอร์ & บอส', en: 'Monsters & Bosses', count: (W.monsters || []).length },
     { id: 'items', icon: '⚔️', th: 'อาวุธ & อุปกรณ์', en: 'Items & Gear', count: (W.items || []).length },
     { id: 'sets', icon: '🛡️', th: 'เซ็ตอุปกรณ์', en: 'Equipment Sets', count: (W.sets || []).length + (W.bossSets || []).length },
@@ -487,6 +739,341 @@
     });
   }
 
+  // ------------------------------------------------------------------ VIEW: MARKET & PRICE FILTER
+  function renderMarket() {
+    const st = state.market;
+    if (st.tab === 'craft') {
+      renderCraftAnalyzer();
+      return;
+    }
+
+    const q = norm(st.q);
+    const minP = st.minPrice !== '' ? Number(st.minPrice) : null;
+    const maxP = st.maxPrice !== '' ? Number(st.maxPrice) : null;
+    const minLv = st.minLv !== '' ? Number(st.minLv) : null;
+    const maxLv = st.maxLv !== '' ? Number(st.maxLv) : null;
+    const minR = st.minRate !== '' ? Number(st.minRate) : null;
+    const maxRod = st.maxRod !== '' ? Number(st.maxRod) : null;
+
+    const cats = [
+      ['all', L('ทั้งหมด', 'All')],
+      ['drop', L('ดรอปมอนสเตอร์', 'Monster Drops')],
+      ['fish', L('ปลา', 'Fish')],
+      ['ore', L('แร่', 'Ore')],
+      ['wood', L('ไม้', 'Wood')],
+      ['crop', L('พืชผัก', 'Crops')],
+      ['smelt', L('ของหลอม (Smelt)', 'Smelted')],
+      ['dish', L('อาหาร', 'Dishes')],
+      ['rune', L('รูน', 'Runes')]
+    ];
+    const catCounts = { all: UNIFIED_MARKET.length };
+    for (const row of UNIFIED_MARKET) catCounts[row.cat] = (catCounts[row.cat] || 0) + 1;
+
+    let list = UNIFIED_MARKET.filter((x) => {
+      if (st.cat !== 'all' && x.cat !== st.cat) return false;
+      if (minP != null && (x.price ?? 0) < minP) return false;
+      if (maxP != null && (x.price ?? 0) > maxP) return false;
+      if (minLv != null && (x.lv ?? 0) < minLv) return false;
+      if (maxLv != null && (x.lv ?? 0) > maxLv) return false;
+      if (st.el) {
+        if (x.cat !== 'drop' || x.el !== st.el) return false;
+      }
+      if (minR != null) {
+        if (x.cat !== 'drop' || (x.ratePct || 0) <= minR) return false;
+      }
+      if (st.monType !== 'all') {
+        if (x.cat !== 'drop') return false;
+        if (st.monType === 'boss' && !x.boss) return false;
+        if (st.monType === 'normal' && x.boss) return false;
+      }
+      if (st.when !== 'all') {
+        if (x.cat !== 'fish' || String(x.when) !== st.when) return false;
+      }
+      if (maxRod != null) {
+        if (x.cat !== 'fish' || (x.rod || 1) > maxRod) return false;
+      }
+      if (q) {
+        const monText = x.mon ? `${x.mon.n} ${tr(x.mon.n)} ${(x.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ')}` : '';
+        const hay = norm(`${x.id} ${x.name} ${tr(x.name)} ${x.nodeName || ''} ${tr(x.nodeName || '')} ${monText}`);
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+
+    list.sort((a, b) => {
+      let va = 0, vb = 0;
+      if (st.sort === 'ev') { va = a.ev ?? 0; vb = b.ev ?? 0; }
+      else if (st.sort === 'price') { va = a.price ?? 0; vb = b.price ?? 0; }
+      else if (st.sort === 'rate') { va = a.ratePct ?? -1; vb = b.ratePct ?? -1; }
+      else if (st.sort === 'lv') { va = a.lv ?? 0; vb = b.lv ?? 0; }
+      else if (st.sort === 'hp') { va = a.hp ?? 0; vb = b.hp ?? 0; }
+      else if (st.sort === 'evPerHp') { va = a.evPer1kHp ?? 0; vb = b.evPer1kHp ?? 0; }
+      else { va = tr(a.name); vb = tr(b.name); }
+      if (typeof va === 'number') return (va - vb) * st.dir;
+      return String(va).localeCompare(String(vb)) * st.dir;
+    });
+
+    const PER = 60;
+    const pages = Math.max(1, Math.ceil(list.length / PER));
+    st.page = Math.min(st.page, pages - 1);
+    const slice = list.slice(st.page * PER, st.page * PER + PER);
+
+    const catColor = { drop: '#3f95ff', fish: '#3aa6c4', ore: '#ff8f3f', wood: '#38c97a', crop: '#c99a0a', smelt: '#f5b942', dish: '#e667ad', rune: '#9a5cf0' };
+    const catLabel = Object.fromEntries(cats);
+    const elOpts = Object.entries(W.elements || {}).map(([k, v]) => `<option value="${k}" ${st.el === k ? 'selected' : ''}>${esc(tr(v))}</option>`).join('');
+
+    $('#mainView').innerHTML = `
+      <div class="page-head">
+        <div>
+          <h1>💰 ${L('ฟาร์มเงิน & ตัวกรองราคาทุกหมวด', 'Price, Level & Life Resource Filter')}</h1>
+          <p>${L('กรองราคา เลเวล มอนสเตอร์ ธาตุ % ดรอป ปลา (เวลา/เบ็ด) แร่ ไม้ พืชผัก ของหลอม และรูน ในหน้าเดียว', 'Unified filter & EV calculator across monster drops, fish, ore, wood, crops, smelted goods, dishes, and runes')}</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab-btn is-on" data-mktab="filter">🔍 ${L('กรองราคา & แหล่งฟาร์ม', 'Unified Filter')} (${fmt(UNIFIED_MARKET.length)})</button>
+        <button type="button" class="tab-btn" data-mktab="craft">🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่', 'Crafting & Smelter Value-Add')} (${SMELT_ANALYSIS.length})</button>
+      </div>
+
+      <div class="tabs">
+        ${cats.map(([k, lbl]) => `<button type="button" class="tab-btn ${st.cat === k ? 'is-on' : ''}" data-mkcat="${k}">${esc(lbl)} (${fmt(catCounts[k] || 0)})</button>`).join('')}
+      </div>
+
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+        <button type="button" class="chip-link" data-preset="water30">💧 ${L('ธาตุน้ำ Lv≤30 ดรอป>30%', 'Water Lv≤30 Drop>30%')}</button>
+        <button type="button" class="chip-link" data-preset="early">🌱 ${L('ต้นเกม Lv≤30 เฉลี่ยแพงสุด', 'Early Lv≤30 Best EV')}</button>
+        <button type="button" class="chip-link" data-preset="fishnight">🌙 ${L('ปลากลางคืน เบ็ด≤2', 'Night Fish Rod≤2')}</button>
+        <button type="button" class="chip-link" data-preset="orewood">⛏️ ${L('แร่ทั้งหมด', 'All Ores')}</button>
+        <button type="button" class="chip-link" data-preset="smelt">🔥 ${L('ของหลอมกำไรสูง', 'Best Smelt Profit')}</button>
+        <button type="button" class="chip-link" data-preset="reset">↺ ${L('ล้างตัวกรอง', 'Reset')}</button>
+      </div>
+
+      <div class="filter-bar">
+        <input class="input input--search" id="mkQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อของ / มอนสเตอร์ / แผนที่...', 'Search item, monster, map...')}">
+        <input class="input input--sm" id="mkMinP" type="number" step="any" placeholder="Min c" value="${esc(st.minPrice)}">
+        <input class="input input--sm" id="mkMaxP" type="number" step="any" placeholder="Max c" value="${esc(st.maxPrice)}">
+        <input class="input input--sm" id="mkMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}">
+        <input class="input input--sm" id="mkMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}">
+        <select class="select" id="mkEl"><option value="">${L('ทุกธาตุ (มอน)', 'All Elements')}</option>${elOpts}</select>
+        <input class="input input--sm" id="mkMinR" type="number" step="any" placeholder="Drop >%" value="${esc(st.minRate)}" title="${L('โอกาสดรอปมากกว่า (%)', 'Drop rate greater than (%)')}">
+        <select class="select" id="mkMonT">
+          <option value="all" ${st.monType === 'all' ? 'selected' : ''}>${L('มอน: ทั้งหมด', 'Mon: All')}</option>
+          <option value="normal" ${st.monType === 'normal' ? 'selected' : ''}>${L('เฉพาะมอนทั่วไป', 'Normal Only')}</option>
+          <option value="boss" ${st.monType === 'boss' ? 'selected' : ''}>${L('เฉพาะบอส', 'Boss Only')}</option>
+        </select>
+        <select class="select" id="mkWhen">
+          <option value="all" ${st.when === 'all' ? 'selected' : ''}>${L('เวลาตกปลา: ทั้งหมด', 'Fish Time: All')}</option>
+          <option value="0" ${st.when === '0' ? 'selected' : ''}>${L('ตลอดวัน', 'Any time')}</option>
+          <option value="1" ${st.when === '1' ? 'selected' : ''}>${L('กลางคืน', 'Night')}</option>
+          <option value="2" ${st.when === '2' ? 'selected' : ''}>${L('กลางวัน', 'Day')}</option>
+        </select>
+        <select class="select" id="mkRod">
+          <option value="">${L('เบ็ด: ทุกขั้น', 'Rod: Any')}</option>
+          ${[1, 2, 3, 4].map((r) => `<option value="${r}" ${st.maxRod === String(r) ? 'selected' : ''}>Rod ≤ ${r}</option>`).join('')}
+        </select>
+        <select class="select" id="mkSort">
+          <option value="ev" ${st.sort === 'ev' ? 'selected' : ''}>Sort: ${L('เฉลี่ย/กำไร (EV)', 'EV / Profit')}</option>
+          <option value="price" ${st.sort === 'price' ? 'selected' : ''}>Sort: ${L('ราคาต่อชิ้น', 'Unit Price')}</option>
+          <option value="rate" ${st.sort === 'rate' ? 'selected' : ''}>Sort: ${L('โอกาสดรอป %', 'Drop Rate %')}</option>
+          <option value="lv" ${st.sort === 'lv' ? 'selected' : ''}>Sort: Lv</option>
+          <option value="hp" ${st.sort === 'hp' ? 'selected' : ''}>Sort: HP</option>
+          <option value="evPerHp" ${st.sort === 'evPerHp' ? 'selected' : ''}>Sort: Coin/1k HP</option>
+          <option value="name" ${st.sort === 'name' ? 'selected' : ''}>Sort: Name</option>
+        </select>
+        <button type="button" class="btn" id="mkDir">${st.dir > 0 ? '▲ ASC' : '▼ DESC'}</button>
+      </div>
+
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr>
+          <th>${L('ไอเทม / ทรัพยากร', 'Item / Resource')}</th>
+          <th>${L('หมวด', 'Category')}</th>
+          <th>Lv</th>
+          <th>${L('แหล่งที่มา / รายละเอียด', 'Source / Details')}</th>
+          <th style="text-align:right">${L('เรต / ขั้น', 'Rate / Info')}</th>
+          <th style="text-align:right">${L('ราคา', 'Price')}</th>
+          <th style="text-align:right">${L('EV / กำไร', 'EV / Profit')}</th>
+        </tr></thead>
+        <tbody>
+          ${slice.map((x) => {
+            const icon = x.spriteKind ? atlasImg(x.spriteKind, x.id, 30) : (x.cat === 'rune' ? '🔮' : '🍲');
+            const openAttr = x.openKind ? `style="cursor:pointer" data-open="${x.openKind}" data-id="${esc(x.id)}"` : '';
+            let srcHtml = '<span class="muted">–</span>';
+            let metaHtml = '–';
+            if (x.cat === 'drop') {
+              const mapLabel = (x.maps || []).slice(0, 2).map((mp) => (MAP[mp] ? tr(MAP[mp].n) : mp)).join(', ');
+              srcHtml = `<div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(x.mon.id)}">${monSprite(x.mon, 28)}<div><div>${esc(tr(x.mon.n))} ${x.boss ? pill('BOSS', '#f25c69') : ''}</div><div class="name-sub">${elIcon(x.el, 12)} HP ${fmt(x.hp)}${mapLabel ? ' · ' + esc(mapLabel) : ''}</div></div></div>`;
+              metaHtml = fmtPct(x.ratePct);
+            } else if (x.cat === 'fish') {
+              const w = WHEN_LABELS[x.when] || WHEN_LABELS[0];
+              srcHtml = `<div style="display:flex;gap:5px;flex-wrap:wrap">${pill(L(w.th, w.en), w.color)} <span class="muted">${esc((x.waters || []).join(', '))}</span></div>`;
+              metaHtml = `Rod ${x.rod}`;
+            } else if (x.cat === 'ore' || x.cat === 'wood') {
+              srcHtml = `<span class="muted">${esc(tr(x.nodeName || ''))} · ${x.hits} hits</span>`;
+              metaHtml = `Tier ${x.tier}`;
+            } else if (x.cat === 'crop') {
+              srcHtml = `<span class="muted">${x.mins} min · EXP ${x.xp}</span>`;
+              metaHtml = `EXP ${x.xp}`;
+            } else if (x.cat === 'smelt') {
+              srcHtml = `<span class="muted">${esc(x.skill)} · Raw ${fmtCoin(x.rawCost)} + Fee ${fmtCoin(x.fee)}${x.hasWildcard ? ' (+wildcard)' : ''}</span>`;
+              metaHtml = `×${x.mult ? x.mult.toFixed(1) : '–'}`;
+            } else if (x.cat === 'dish') {
+              srcHtml = `<span class="muted">Pot Lv ${x.pot} · EXP ${x.xp}</span>`;
+              metaHtml = `EXP ${x.xp}`;
+            } else if (x.cat === 'rune') {
+              srcHtml = `<span class="muted">${esc(x.kind)} / ${esc(x.on)}</span>`;
+              metaHtml = `${(x.prices || []).join('/')}`;
+            }
+            return `<tr>
+              <td><div class="name-cell" ${openAttr}>${icon}<div>${nameHtml(x.name)}</div></div></td>
+              <td>${pill(catLabel[x.cat] || x.cat, catColor[x.cat] || '#8a8499')}</td>
+              <td class="num">${x.lv ?? '–'}</td>
+              <td>${srcHtml}</td>
+              <td class="num" style="text-align:right">${esc(metaHtml)}</td>
+              <td class="num" style="text-align:right;font-weight:700">${fmtCoin(x.price)}</td>
+              <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(x.ev)}</td>
+            </tr>`;
+          }).join('') || `<tr><td colspan="7" class="muted" style="text-align:center;padding:24px">${L('ไม่พบรายการที่ตรงกับตัวกรอง', 'No matching entries')}</td></tr>`}
+        </tbody>
+      </table></div>
+      ${renderPager(list.length, PER, st.page, 'data-mkpage="1"')}
+    `;
+
+    $('#mainView').querySelectorAll('[data-mktab]').forEach((b) => b.addEventListener('click', () => { st.tab = b.dataset.mktab; renderMarket(); }));
+    $('#mainView').querySelectorAll('[data-mkcat]').forEach((b) => b.addEventListener('click', () => { st.cat = b.dataset.mkcat; st.page = 0; renderMarket(); }));
+    $('#mainView').querySelectorAll('[data-preset]').forEach((b) => b.addEventListener('click', () => {
+      const p = b.dataset.preset;
+      Object.assign(st, { cat: 'all', q: '', minPrice: '', maxPrice: '', minLv: '', maxLv: '', el: '', minRate: '', monType: 'all', when: 'all', maxRod: '', sort: 'ev', dir: -1, page: 0 });
+      if (p === 'water30') Object.assign(st, { cat: 'drop', el: 'water', maxLv: '30', minRate: '30', monType: 'normal', sort: 'ev' });
+      else if (p === 'early') Object.assign(st, { cat: 'drop', maxLv: '30', minRate: '1', monType: 'normal', sort: 'ev' });
+      else if (p === 'fishnight') Object.assign(st, { cat: 'fish', when: '1', maxRod: '2', sort: 'price' });
+      else if (p === 'orewood') Object.assign(st, { cat: 'ore', sort: 'price' });
+      else if (p === 'smelt') Object.assign(st, { cat: 'smelt', sort: 'ev' });
+      renderMarket();
+    }));
+
+    $('#mkQ').addEventListener('input', (e) => { st.q = e.target.value; st.page = 0; keepFocus('#mkQ', renderMarket); });
+    $('#mkMinP').addEventListener('input', (e) => { st.minPrice = e.target.value; st.page = 0; keepFocus('#mkMinP', renderMarket); });
+    $('#mkMaxP').addEventListener('input', (e) => { st.maxPrice = e.target.value; st.page = 0; keepFocus('#mkMaxP', renderMarket); });
+    $('#mkMinLv').addEventListener('input', (e) => { st.minLv = e.target.value; st.page = 0; keepFocus('#mkMinLv', renderMarket); });
+    $('#mkMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; st.page = 0; keepFocus('#mkMaxLv', renderMarket); });
+    $('#mkMinR').addEventListener('input', (e) => { st.minRate = e.target.value; st.page = 0; keepFocus('#mkMinR', renderMarket); });
+    $('#mkEl').addEventListener('change', (e) => { st.el = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkMonT').addEventListener('change', (e) => { st.monType = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkWhen').addEventListener('change', (e) => { st.when = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkRod').addEventListener('change', (e) => { st.maxRod = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkSort').addEventListener('change', (e) => { st.sort = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkDir').addEventListener('click', () => { st.dir = -st.dir; renderMarket(); });
+    $('#mainView').querySelectorAll('[data-mkpage]').forEach((b) => b.addEventListener('click', () => { st.page = Number(b.dataset.page); renderMarket(); }));
+  }
+
+  function renderCraftAnalyzer() {
+    const st = state.market;
+    const q = norm(st.craftQ);
+    const minLv = st.craftMinLv !== '' ? Number(st.craftMinLv) : null;
+    const maxLv = st.craftMaxLv !== '' ? Number(st.craftMaxLv) : null;
+
+    const list = SMELT_ANALYSIS.filter((r) => {
+      if (st.craftSkill && r.skill !== st.craftSkill) return false;
+      if (minLv != null && r.lv < minLv) return false;
+      if (maxLv != null && r.lv > maxLv) return false;
+      if (q && !norm(`${r.outId} ${r.outName} ${tr(r.outName)} ${r.inputs.map((i) => `${i.name} ${tr(i.name)}`).join(' ')}`).includes(q)) return false;
+      return true;
+    }).sort((a, b) => {
+      let va = 0, vb = 0;
+      if (st.craftSort === 'profit') { va = a.netProfit; vb = b.netProfit; }
+      else if (st.craftSort === 'mult') { va = a.mult; vb = b.mult; }
+      else if (st.craftSort === 'revenue') { va = a.revenue; vb = b.revenue; }
+      else { va = a.lv; vb = b.lv; }
+      return (va - vb) * st.craftDir;
+    });
+
+    const givers = Object.entries((S2.orders && S2.orders.givers) || {});
+    const caps = (S2.orders && S2.orders.cap) || {};
+
+    $('#mainView').innerHTML = `
+      <div class="page-head">
+        <div>
+          <h1>🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่ & Work Orders', 'Crafting & Smelter Value-Add Analyzer')}</h1>
+          <p>${L('เปรียบเทียบราคาขายของดิบ vs ต้นทุน + ค่าหลอม เทียบเป็นกำไรสุทธิและตัวคูณมูลค่า', 'Compare raw ingredient sell price + smelting fee against output sell value')}</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab-btn" data-mktab="filter">🔍 ${L('กรองราคา & แหล่งฟาร์ม', 'Unified Filter')} (${fmt(UNIFIED_MARKET.length)})</button>
+        <button type="button" class="tab-btn is-on" data-mktab="craft">🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่', 'Crafting & Smelter Value-Add')} (${SMELT_ANALYSIS.length})</button>
+      </div>
+
+      <div class="filter-bar">
+        <input class="input input--search" id="crQ" type="search" value="${esc(st.craftQ)}" placeholder="${L('ค้นหาชื่อไอเทม / วัตถุดิบ...', 'Search recipe or material...')}">
+        <select class="select" id="crSkill">
+          <option value="">${L('ทุกสายสกิล', 'All Skills')}</option>
+          ${['mine', 'wood', 'farm', 'fish'].map((sk) => `<option value="${sk}" ${st.craftSkill === sk ? 'selected' : ''}>${esc(sk.toUpperCase())}</option>`).join('')}
+        </select>
+        <input class="input input--sm" id="crMinLv" type="number" placeholder="Min Lv" value="${esc(st.craftMinLv)}">
+        <input class="input input--sm" id="crMaxLv" type="number" placeholder="Max Lv" value="${esc(st.craftMaxLv)}">
+        <select class="select" id="crSort">
+          <option value="profit" ${st.craftSort === 'profit' ? 'selected' : ''}>Sort: ${L('กำไรสุทธิ', 'Net Profit')}</option>
+          <option value="mult" ${st.craftSort === 'mult' ? 'selected' : ''}>Sort: ${L('ตัวคูณมูลค่า (×)', 'Value Multiplier')}</option>
+          <option value="revenue" ${st.craftSort === 'revenue' ? 'selected' : ''}>Sort: ${L('ราคาขาย', 'Sell Value')}</option>
+          <option value="lv" ${st.craftSort === 'lv' ? 'selected' : ''}>Sort: Lv</option>
+        </select>
+        <button type="button" class="btn" id="crDir">${st.craftDir > 0 ? '▲ ASC' : '▼ DESC'}</button>
+      </div>
+
+      <div class="table-wrap" style="margin-bottom:18px"><table class="data-table">
+        <thead><tr>
+          <th>${L('ของที่หลอมได้', 'Output')}</th>
+          <th>${L('สาย / Lv', 'Skill / Lv')}</th>
+          <th>${L('วัตถุดิบที่ใช้', 'Ingredients')}</th>
+          <th style="text-align:right">${L('ทุนดิบ + ค่าหลอม', 'Raw + Fee')}</th>
+          <th style="text-align:right">${L('ราคาขาย', 'Sell')}</th>
+          <th style="text-align:right">${L('กำไรสุทธิ', 'Net Profit')}</th>
+          <th style="text-align:right">${L('เพิ่มมูลค่า', 'Mult')}</th>
+        </tr></thead>
+        <tbody>
+          ${list.map((r) => `<tr>
+            <td><div class="name-cell" style="cursor:pointer" data-open="mat" data-id="${esc(r.outId)}">${atlasImg('mats', r.outId, 30)}<div>${nameHtml(r.outName)}${r.outQty > 1 ? `<span class="name-sub">×${r.outQty}</span>` : ''}</div></div></td>
+            <td>${pill(r.skill.toUpperCase(), '#ff8f3f')} <span class="num">Lv ${r.lv}</span></td>
+            <td><div style="display:flex;gap:5px;flex-wrap:wrap">
+              ${r.inputs.map((inp) => inp.isWild
+                ? `<span class="stat-chip">${esc(inp.id)} ×${inp.qty}</span>`
+                : `<button type="button" class="chip-link" data-open="mat" data-id="${esc(inp.id)}">${atlasImg('mats', inp.id, 18)}<span>${esc(tr(inp.name))} ×${inp.qty} (${fmtCoin(inp.price)})</span></button>`
+              ).join('')}
+            </div></td>
+            <td class="num" style="text-align:right">${fmtCoin(r.rawCost)} + ${fmtCoin(r.fee)}</td>
+            <td class="num" style="text-align:right;font-weight:700">${fmtCoin(r.revenue)}</td>
+            <td class="num" style="text-align:right;font-weight:700;color:${r.netProfit >= 0 ? 'var(--green)' : 'var(--red)'}">${r.netProfit >= 0 ? '+' : ''}${fmtCoin(r.netProfit)}</td>
+            <td class="num" style="text-align:right;color:var(--gold)">${r.mult > 0 ? '×' + r.mult.toFixed(1) : (r.hasWildcard ? 'Wildcard' : '–')}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table></div>
+
+      <section class="panel">
+        <h2 class="panel__title"><span>📦 ${L('ส่งเควสต์ Work Orders กับ NPC (เพิ่มโบนัสเงินจากของหลอม)', 'Work Order NPCs (Sell Smelted Goods at Bonus Value)')}</span></h2>
+        <div class="kv-grid" style="margin-bottom:12px">
+          ${Object.entries(caps).map(([tier, cap]) => `<div class="kv-box"><div class="kv-box__k">Tier ${tier} Cap</div><div class="kv-box__v" style="color:var(--gold)">${fmt(cap)}c</div></div>`).join('')}
+        </div>
+        <div class="card-grid">
+          ${givers.map(([gid, gv]) => `
+            <article class="entity-card" style="cursor:default">
+              <div class="entity-card__head"><div style="flex:1">${nameHtml(gv.n)}</div>${pill(gid.toUpperCase(), '#3f95ff')}</div>
+              <div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+                ${(gv.goods || []).map((tierList, idx) => `<div><strong style="color:var(--gold)">T${idx + 1}:</strong> ${tierList.map((id) => esc(tr((SMELT_GOODS[id] && SMELT_GOODS[id].n) || id))).join(', ')}</div>`).join('')}
+              </div>
+            </article>`).join('')}
+        </div>
+      </section>
+    `;
+
+    $('#mainView').querySelectorAll('[data-mktab]').forEach((b) => b.addEventListener('click', () => { st.tab = b.dataset.mktab; renderMarket(); }));
+    $('#crQ').addEventListener('input', (e) => { st.craftQ = e.target.value; keepFocus('#crQ', renderCraftAnalyzer); });
+    $('#crMinLv').addEventListener('input', (e) => { st.craftMinLv = e.target.value; keepFocus('#crMinLv', renderCraftAnalyzer); });
+    $('#crMaxLv').addEventListener('input', (e) => { st.craftMaxLv = e.target.value; keepFocus('#crMaxLv', renderCraftAnalyzer); });
+    $('#crSkill').addEventListener('change', (e) => { st.craftSkill = e.target.value; renderCraftAnalyzer(); });
+    $('#crSort').addEventListener('change', (e) => { st.craftSort = e.target.value; renderCraftAnalyzer(); });
+    $('#crDir').addEventListener('click', () => { st.craftDir = -st.craftDir; renderCraftAnalyzer(); });
+  }
+
   // ------------------------------------------------------------------ VIEW 2: MONSTERS
   function renderMonsters() {
     const st = state.monsters;
@@ -517,6 +1104,8 @@
       if (st.sort === 'jexp') return m.jexp || 0;
       if (st.sort === 'atk') return Array.isArray(m.atk) ? m.atk[1] || m.atk[0] || 0 : 0;
       if (st.sort === 'ratio') return m.hp ? (m.exp || 0) / m.hp : 0;
+      if (st.sort === 'ev') return m._evCoin || 0;
+      if (st.sort === 'evhp') return m._evPer1kHp || 0;
       return tr(m.n);
     };
     list.sort((a, b) => {
@@ -563,6 +1152,8 @@
           <option value="jexp" ${st.sort === 'jexp' ? 'selected' : ''}>Sort: JEXP</option>
           <option value="atk" ${st.sort === 'atk' ? 'selected' : ''}>Sort: ATK</option>
           <option value="ratio" ${st.sort === 'ratio' ? 'selected' : ''}>Sort: EXP/HP</option>
+          <option value="ev" ${st.sort === 'ev' ? 'selected' : ''}>Sort: Coin/Kill (EV)</option>
+          <option value="evhp" ${st.sort === 'evhp' ? 'selected' : ''}>Sort: Coin/1k HP</option>
         </select>
         <button type="button" class="btn" id="monDir">${st.dir > 0 ? '▲ ASC' : '▼ DESC'}</button>
       </div>
@@ -576,6 +1167,7 @@
           <th style="text-align:right">HP</th>
           <th style="text-align:right">ATK</th>
           <th style="text-align:right">EXP / JEXP</th>
+          <th style="text-align:right">${L('เฉลี่ย/ตัว', 'EV/Kill')}</th>
           <th style="text-align:right">${L('ดรอป', 'Drops')}</th>
         </tr></thead>
         <tbody>
@@ -593,8 +1185,9 @@
               <td class="num" style="text-align:right">${fmt(m.hp)}</td>
               <td class="num" style="text-align:right">${Array.isArray(m.atk) ? `${fmt(m.atk[0])}–${fmt(m.atk[1])}` : '–'}</td>
               <td class="num" style="text-align:right"><span style="color:var(--gold)">${fmt(m.exp)}</span> / ${fmt(m.jexp)}</td>
+              <td class="num" style="text-align:right;color:var(--green);font-weight:700">${m._evCoin > 0 ? fmtCoin(m._evCoin) : '–'}</td>
               <td class="num" style="text-align:right">${(m.drops || []).length} ${L('ชิ้น', 'it')} · ${(m.mats || []).length} ${L('แร่', 'mt')}</td>
-            </tr>`).join('') || `<tr><td colspan="8" class="muted" style="text-align:center;padding:24px">${L('ไม่พบมอนสเตอร์ที่ตรงเงื่อนไข', 'No matching monsters')}</td></tr>`}
+            </tr>`).join('') || `<tr><td colspan="9" class="muted" style="text-align:center;padding:24px">${L('ไม่พบมอนสเตอร์ที่ตรงเงื่อนไข', 'No matching monsters')}</td></tr>`}
         </tbody>
       </table></div>
       ${renderPager(list.length, PER, st.page, 'data-mpage="1"')}
@@ -1129,9 +1722,22 @@
     }
 
     const q = norm(st.q);
+    const minLv = st.minLv !== '' ? Number(st.minLv) : null;
+    const maxLv = st.maxLv !== '' ? Number(st.maxLv) : null;
+    const minR = st.minRate !== '' ? Number(st.minRate) : null;
+    const minP = st.minPrice !== '' ? Number(st.minPrice) : null;
+    const maxP = st.maxPrice !== '' ? Number(st.maxPrice) : null;
+
     let list = FLAT_DROPS.filter((d) => {
       if (st.dtype !== 'all' && d.dtype !== st.dtype) return false;
-      if (st.bossOnly && !d.mon.boss) return false;
+      if (st.monType === 'boss' && !d.mon.boss) return false;
+      if (st.monType === 'normal' && d.mon.boss) return false;
+      if (st.el && (d.mon.el || 'neutral') !== st.el) return false;
+      if (minLv != null && (d.mon.lv || 0) < minLv) return false;
+      if (maxLv != null && (d.mon.lv || 0) > maxLv) return false;
+      if (minR != null && d.ratePct <= minR) return false;
+      if (minP != null && (d.price ?? -1) < minP) return false;
+      if (maxP != null && (d.price == null || d.price > maxP)) return false;
       if (q) {
         const hay = norm(`${d.targetId} ${d.targetName} ${tr(d.targetName)} ${d.mon.id} ${d.mon.n} ${tr(d.mon.n)}`);
         if (!hay.includes(q)) return false;
@@ -1140,8 +1746,11 @@
     });
 
     list.sort((a, b) => {
+      if (st.sort === 'ev') return ((a.ev ?? -1) - (b.ev ?? -1)) * st.dir;
+      if (st.sort === 'price') return ((a.price ?? -1) - (b.price ?? -1)) * st.dir;
       if (st.sort === 'rate') return (a.ratePct - b.ratePct) * st.dir;
       if (st.sort === 'lv') return ((a.mon.lv || 0) - (b.mon.lv || 0)) * st.dir;
+      if (st.sort === 'hp') return ((a.mon.hp || 0) - (b.mon.hp || 0)) * st.dir;
       return tr(a.targetName).localeCompare(tr(b.targetName)) * st.dir;
     });
 
@@ -1149,12 +1758,13 @@
     const pages = Math.max(1, Math.ceil(list.length / PER));
     st.page = Math.min(st.page, pages - 1);
     const slice = list.slice(st.page * PER, st.page * PER + PER);
+    const elOpts = Object.entries(W.elements || {}).map(([k, v]) => `<option value="${k}" ${st.el === k ? 'selected' : ''}>${esc(tr(v))}</option>`).join('');
 
     $('#mainView').innerHTML = `
       <div class="page-head">
         <div>
           <h1>💎 ${L('ค้นหาดรอป & สารบัญวัตถุดิบ', 'Drop Finder & Materials')}</h1>
-          <p>${L('ค้นหาว่าไอเทม วัตถุดิบ หรือรูนชิ้นไหนดรอปจากมอนสเตอร์ตัวใด (อัตราดรอป % คำนวณถูกต้องตามจริง)', 'Search across 4,069 item, material, and rune drop sources with exact drop rates')}</p>
+          <p>${L('ค้นหาไอเทม วัตถุดิบ หรือรูนที่ดรอปจากมอนสเตอร์ พร้อมตัวกรองธาตุ เลเวล % ดรอป และราคาขาย', 'Search across 4,069 drops — filter by element, level, drop rate %, and price')}</p>
         </div>
       </div>
 
@@ -1171,10 +1781,23 @@
           <option value="material" ${st.dtype === 'material' ? 'selected' : ''}>${L('วัตถุดิบ', 'Materials')}</option>
           <option value="rune" ${st.dtype === 'rune' ? 'selected' : ''}>${L('รูน', 'Runes')}</option>
         </select>
-        <label class="chip-link"><input type="checkbox" id="dropBoss" ${st.bossOnly ? 'checked' : ''}> ${L('เฉพาะบอส', 'Bosses only')}</label>
+        <select class="select" id="dropEl"><option value="">${L('ทุกธาตุ', 'All Elements')}</option>${elOpts}</select>
+        <select class="select" id="dropMonT">
+          <option value="all" ${st.monType === 'all' ? 'selected' : ''}>${L('มอน: ทั้งหมด', 'Mon: All')}</option>
+          <option value="normal" ${st.monType === 'normal' ? 'selected' : ''}>${L('เฉพาะมอนทั่วไป', 'Normal Only')}</option>
+          <option value="boss" ${st.monType === 'boss' ? 'selected' : ''}>${L('เฉพาะบอส', 'Boss Only')}</option>
+        </select>
+        <input class="input input--sm" id="dropMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}">
+        <input class="input input--sm" id="dropMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}">
+        <input class="input input--sm" id="dropMinR" type="number" step="any" placeholder="Drop >%" value="${esc(st.minRate)}">
+        <input class="input input--sm" id="dropMinP" type="number" step="any" placeholder="Min c" value="${esc(st.minPrice)}">
+        <input class="input input--sm" id="dropMaxP" type="number" step="any" placeholder="Max c" value="${esc(st.maxPrice)}">
         <select class="select" id="dropSort">
           <option value="rate" ${st.sort === 'rate' ? 'selected' : ''}>Sort: Rate %</option>
+          <option value="ev" ${st.sort === 'ev' ? 'selected' : ''}>Sort: EV (เฉลี่ย/ตัว)</option>
+          <option value="price" ${st.sort === 'price' ? 'selected' : ''}>Sort: Price (ราคา)</option>
           <option value="lv" ${st.sort === 'lv' ? 'selected' : ''}>Sort: Monster Lv</option>
+          <option value="hp" ${st.sort === 'hp' ? 'selected' : ''}>Sort: HP</option>
           <option value="name" ${st.sort === 'name' ? 'selected' : ''}>Sort: Name</option>
         </select>
         <button type="button" class="btn" id="dropDir">${st.dir > 0 ? '▲' : '▼'}</button>
@@ -1186,7 +1809,9 @@
           <th>${L('ประเภท', 'Type')}</th>
           <th>${L('มอนสเตอร์', 'Monster')}</th>
           <th>Lv</th>
+          <th style="text-align:right">${L('ราคา', 'Price')}</th>
           <th style="text-align:right">${L('โอกาสดรอป', 'Drop Rate')}</th>
+          <th style="text-align:right">${L('เฉลี่ย/ตัว', 'EV/Kill')}</th>
         </tr></thead>
         <tbody>
           ${slice.map((d) => {
@@ -1197,25 +1822,28 @@
             return `<tr>
               <td><div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">${icon}<div>${nameHtml(d.targetName)}</div></div></td>
               <td>${pill(d.dtype.toUpperCase(), d.dtype === 'item' ? '#3f95ff' : d.dtype === 'material' ? '#38c97a' : '#9a5cf0')}</td>
-              <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''}</div></div></td>
+              <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''} ${elIcon(d.mon.el, 13)}</div></div></td>
               <td class="num">${d.mon.lv ?? '–'}</td>
+              <td class="num" style="text-align:right">${fmtCoin(d.price)}</td>
               <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtPct(d.ratePct)}</td>
+              <td class="num" style="text-align:right;color:var(--green);font-weight:700">${fmtCoin(d.ev)}</td>
             </tr>`;
-          }).join('')}
+          }).join('') || `<tr><td colspan="7" class="muted" style="text-align:center;padding:24px">${L('ไม่พบรายการที่ตรงเงื่อนไข', 'No matching drops')}</td></tr>`}
         </tbody>
       </table></div>
       ${renderPager(list.length, PER, st.page, 'data-dpage="1"')}
     `;
 
     $('#mainView').querySelectorAll('[data-dtab]').forEach((b) => b.addEventListener('click', () => { st.tab = b.dataset.dtab; renderDrops(); }));
-    $('#dropQ').addEventListener('input', (e) => {
-      st.q = e.target.value; st.page = 0;
-      const pos = e.target.selectionStart;
-      renderDrops();
-      const inp = $('#dropQ'); if (inp) { inp.focus(); if (pos != null) inp.setSelectionRange(pos, pos); }
-    });
+    $('#dropQ').addEventListener('input', (e) => { st.q = e.target.value; st.page = 0; keepFocus('#dropQ', renderDrops); });
+    $('#dropMinLv').addEventListener('input', (e) => { st.minLv = e.target.value; st.page = 0; keepFocus('#dropMinLv', renderDrops); });
+    $('#dropMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; st.page = 0; keepFocus('#dropMaxLv', renderDrops); });
+    $('#dropMinR').addEventListener('input', (e) => { st.minRate = e.target.value; st.page = 0; keepFocus('#dropMinR', renderDrops); });
+    $('#dropMinP').addEventListener('input', (e) => { st.minPrice = e.target.value; st.page = 0; keepFocus('#dropMinP', renderDrops); });
+    $('#dropMaxP').addEventListener('input', (e) => { st.maxPrice = e.target.value; st.page = 0; keepFocus('#dropMaxP', renderDrops); });
     $('#dropType').addEventListener('change', (e) => { st.dtype = e.target.value; st.page = 0; renderDrops(); });
-    $('#dropBoss').addEventListener('change', (e) => { st.bossOnly = e.target.checked; st.page = 0; renderDrops(); });
+    $('#dropEl').addEventListener('change', (e) => { st.el = e.target.value; st.page = 0; renderDrops(); });
+    $('#dropMonT').addEventListener('change', (e) => { st.monType = e.target.value; st.page = 0; renderDrops(); });
     $('#dropSort').addEventListener('change', (e) => { st.sort = e.target.value; st.page = 0; renderDrops(); });
     $('#dropDir').addEventListener('click', () => { st.dir = -st.dir; renderDrops(); });
     $('#mainView').querySelectorAll('[data-dpage]').forEach((b) => b.addEventListener('click', () => { st.page = Number(b.dataset.page); renderDrops(); }));
@@ -1224,12 +1852,24 @@
   function renderMaterialsSubtab() {
     const st = state.drops;
     const q = norm(st.matQ);
+    const minP = st.matMinPrice !== '' ? Number(st.matMinPrice) : null;
+    const maxP = st.matMaxPrice !== '' ? Number(st.matMaxPrice) : null;
+
     let list = (W.materials || []).filter((mat) => {
       if (st.matFilter === 'rare' && !mat.rare) return false;
       if (st.matFilter === 'life' && !mat.life) return false;
+      if (minP != null && (mat.p ?? 0) < minP) return false;
+      if (maxP != null && (mat.p ?? 0) > maxP) return false;
       if (q && !norm(`${mat.id} ${mat.n} ${tr(mat.n)} ${mat.d || ''} ${tr(mat.d || '')}`).includes(q)) return false;
       return true;
     });
+
+    list.sort((a, b) => {
+      if (st.matSort === 'p') return ((a.p || 0) - (b.p || 0)) * st.matDir;
+      if (st.matSort === 'droppers') return ((MAT_DROPPERS[a.id] || []).length - (MAT_DROPPERS[b.id] || []).length) * st.matDir;
+      return tr(a.n).localeCompare(tr(b.n)) * st.matDir;
+    });
+
     const PER = 60;
     const pages = Math.max(1, Math.ceil(list.length / PER));
     st.matPage = Math.min(st.matPage, pages - 1);
@@ -1239,7 +1879,7 @@
       <div class="page-head">
         <div>
           <h1>🧱 ${L('สารบัญวัตถุดิบทั้งหมด', 'Materials Directory')}</h1>
-          <p>${L('1,530 วัตถุดิบและของคราฟต์ คลิกเพื่อดูมอนสเตอร์ที่ดรอป', '1,530 materials — click any material to see monster drop sources')}</p>
+          <p>${L('1,530 วัตถุดิบและของคราฟต์ กรองตามราคาหรือประเภทแล้วคลิกเพื่อดูมอนสเตอร์ที่ดรอป', '1,530 materials — filter by price/type and click to see drop sources')}</p>
         </div>
       </div>
 
@@ -1255,6 +1895,14 @@
           <option value="rare" ${st.matFilter === 'rare' ? 'selected' : ''}>${L('หายาก (Rare)', 'Rare Only')}</option>
           <option value="life" ${st.matFilter === 'life' ? 'selected' : ''}>${L('จากสกิลชีวิต (Life)', 'Life Skills Only')}</option>
         </select>
+        <input class="input input--sm" id="matMinP" type="number" step="any" placeholder="Min c" value="${esc(st.matMinPrice)}">
+        <input class="input input--sm" id="matMaxP" type="number" step="any" placeholder="Max c" value="${esc(st.matMaxPrice)}">
+        <select class="select" id="matSort">
+          <option value="p" ${st.matSort === 'p' ? 'selected' : ''}>Sort: Price (ราคา)</option>
+          <option value="droppers" ${st.matSort === 'droppers' ? 'selected' : ''}>Sort: Droppers</option>
+          <option value="n" ${st.matSort === 'n' ? 'selected' : ''}>Sort: Name</option>
+        </select>
+        <button type="button" class="btn" id="matDir">${st.matDir > 0 ? '▲' : '▼'}</button>
       </div>
 
       <div class="table-wrap"><table class="data-table">
@@ -1269,7 +1917,7 @@
           ${slice.map((m) => `<tr data-open="mat" data-id="${esc(m.id)}">
             <td><div class="name-cell"><span class="sprite-box">${atlasImg('mats', m.id, 32)}</span><div>${nameHtml(m.n)}</div></div></td>
             <td><div style="display:flex;gap:4px">${m.rare ? pill('RARE', '#f5b942') : ''}${m.life ? pill('LIFE', '#38c97a') : ''}${!m.rare && !m.life ? '<span class="muted">Common</span>' : ''}</div></td>
-            <td class="num" style="text-align:right">${fmt(m.p)}</td>
+            <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(m.p)}</td>
             <td class="muted">${esc(tr(m.from || '–'))}</td>
             <td class="num" style="text-align:right">${(MAT_DROPPERS[m.id] || []).length || '–'}</td>
           </tr>`).join('')}
@@ -1279,13 +1927,12 @@
     `;
 
     $('#mainView').querySelectorAll('[data-dtab]').forEach((b) => b.addEventListener('click', () => { st.tab = b.dataset.dtab; renderDrops(); }));
-    $('#matQ').addEventListener('input', (e) => {
-      st.matQ = e.target.value; st.matPage = 0;
-      const pos = e.target.selectionStart;
-      renderMaterialsSubtab();
-      const inp = $('#matQ'); if (inp) { inp.focus(); if (pos != null) inp.setSelectionRange(pos, pos); }
-    });
+    $('#matQ').addEventListener('input', (e) => { st.matQ = e.target.value; st.matPage = 0; keepFocus('#matQ', renderMaterialsSubtab); });
+    $('#matMinP').addEventListener('input', (e) => { st.matMinPrice = e.target.value; st.matPage = 0; keepFocus('#matMinP', renderMaterialsSubtab); });
+    $('#matMaxP').addEventListener('input', (e) => { st.matMaxPrice = e.target.value; st.matPage = 0; keepFocus('#matMaxP', renderMaterialsSubtab); });
     $('#matFilter').addEventListener('change', (e) => { st.matFilter = e.target.value; st.matPage = 0; renderMaterialsSubtab(); });
+    $('#matSort').addEventListener('change', (e) => { st.matSort = e.target.value; st.matPage = 0; renderMaterialsSubtab(); });
+    $('#matDir').addEventListener('click', () => { st.matDir = -st.matDir; renderMaterialsSubtab(); });
     $('#mainView').querySelectorAll('[data-mtpage]').forEach((b) => b.addEventListener('click', () => { st.matPage = Number(b.dataset.page); renderMaterialsSubtab(); }));
   }
 
@@ -1426,7 +2073,40 @@
     } else if (st.tab === 'life') {
       const tables = W.lifeTables || {};
       const tKeys = Object.keys(tables);
-      const curRows = tables[st.lifeTab] || [];
+      const rawRows = st.lifeTab === 'crops'
+        ? [...(tables.crops || []), ...Object.entries(S2.farm || {}).map(([id, v]) => ({ id, ...v }))]
+        : (tables[st.lifeTab] || []);
+      const lq = norm(st.lifeQ);
+      const minLv = st.lifeMinLv !== '' ? Number(st.lifeMinLv) : null;
+      const maxLv = st.lifeMaxLv !== '' ? Number(st.lifeMaxLv) : null;
+      const minP = st.lifeMinPrice !== '' ? Number(st.lifeMinPrice) : null;
+      const maxP = st.lifeMaxPrice !== '' ? Number(st.lifeMaxPrice) : null;
+
+      const resolvePrice = (r) => {
+        if (r.price != null) return Number(r.price);
+        if (r.mat && MAT[r.mat] && MAT[r.mat].p != null) return Number(MAT[r.mat].p);
+        if (r.coins != null) return Number(r.coins);
+        return 0;
+      };
+
+      const curRows = rawRows.map((r) => ({ ...r, _price: resolvePrice(r) })).filter((r) => {
+        if (minLv != null && (r.lv ?? 0) < minLv) return false;
+        if (maxLv != null && (r.lv ?? 0) > maxLv) return false;
+        if (minP != null && r._price < minP) return false;
+        if (maxP != null && r._price > maxP) return false;
+        if (st.lifeTab === 'fish' && st.lifeWhen !== 'all' && String(r.when || 0) !== st.lifeWhen) return false;
+        if (lq && !norm(`${r.id || ''} ${r.n || ''} ${tr(r.n || '')} ${(r.waters || []).join(' ')}`).includes(lq)) return false;
+        return true;
+      }).sort((a, b) => {
+        let va = 0, vb = 0;
+        if (st.lifeSort === 'price') { va = a._price; vb = b._price; }
+        else if (st.lifeSort === 'lv') { va = a.lv || 0; vb = b.lv || 0; }
+        else if (st.lifeSort === 'xp') { va = a.xp || 0; vb = b.xp || 0; }
+        else { va = tr(a.n || a.id); vb = tr(b.n || b.id); }
+        if (typeof va === 'number') return (va - vb) * st.lifeDir;
+        return String(va).localeCompare(String(vb)) * st.lifeDir;
+      });
+
       contentHtml = `
         <div class="card-grid" style="margin-bottom:18px">
           ${(W.life || []).map((lf) => `
@@ -1443,27 +2123,62 @@
 
         <div class="panel">
           <div class="panel__title">
-            <span>📋 ${L('ตารางสกิลชีวิต', 'Life Skill Tables')}</span>
+            <span>📋 ${L('ตารางสกิลชีวิต', 'Life Skill Tables')} (${curRows.length})</span>
             <div style="display:flex;gap:6px;flex-wrap:wrap">
-              ${tKeys.map((k) => `<button type="button" class="tab-btn ${st.lifeTab === k ? 'is-on' : ''}" data-ltab="${esc(k)}">${esc(k.toUpperCase())} (${tables[k].length})</button>`).join('')}
+              ${tKeys.map((k) => `<button type="button" class="tab-btn ${st.lifeTab === k ? 'is-on' : ''}" data-ltab="${esc(k)}">${esc(k.toUpperCase())} (${k === 'crops' ? (tables[k].length + Object.keys(S2.farm || {}).length) : tables[k].length})</button>`).join('')}
             </div>
           </div>
+
+          <div class="filter-bar">
+            <input class="input input--search" id="lfQ" type="search" value="${esc(st.lifeQ)}" placeholder="${L('ค้นหาชื่อปลา / แร่ / ไม้ / พืช...', 'Search fish, ore, wood, crop...')}">
+            <input class="input input--sm" id="lfMinLv" type="number" placeholder="Min Lv" value="${esc(st.lifeMinLv)}">
+            <input class="input input--sm" id="lfMaxLv" type="number" placeholder="Max Lv" value="${esc(st.lifeMaxLv)}">
+            <input class="input input--sm" id="lfMinP" type="number" step="any" placeholder="Min c" value="${esc(st.lifeMinPrice)}">
+            <input class="input input--sm" id="lfMaxP" type="number" step="any" placeholder="Max c" value="${esc(st.lifeMaxPrice)}">
+            ${st.lifeTab === 'fish' ? `
+              <select class="select" id="lfWhen">
+                <option value="all" ${st.lifeWhen === 'all' ? 'selected' : ''}>${L('ทุกช่วงเวลา', 'Any When')}</option>
+                <option value="0" ${st.lifeWhen === '0' ? 'selected' : ''}>${L('ตลอดวัน', 'Any time')}</option>
+                <option value="1" ${st.lifeWhen === '1' ? 'selected' : ''}>${L('กลางคืน', 'Night')}</option>
+                <option value="2" ${st.lifeWhen === '2' ? 'selected' : ''}>${L('กลางวัน', 'Day')}</option>
+              </select>` : ''}
+            <select class="select" id="lfSort">
+              <option value="price" ${st.lifeSort === 'price' ? 'selected' : ''}>Sort: Price (ราคา)</option>
+              <option value="lv" ${st.lifeSort === 'lv' ? 'selected' : ''}>Sort: Lv</option>
+              <option value="xp" ${st.lifeSort === 'xp' ? 'selected' : ''}>Sort: EXP</option>
+              <option value="name" ${st.lifeSort === 'name' ? 'selected' : ''}>Sort: Name</option>
+            </select>
+            <button type="button" class="btn" id="lfDir">${st.lifeDir > 0 ? '▲' : '▼'}</button>
+          </div>
+
           <div class="table-wrap"><table class="data-table">
             <thead><tr>
               <th>${L('ชื่อ', 'Name')}</th>
               <th>Lv</th>
               <th>EXP</th>
-              <th>${L('ราคา', 'Price')}</th>
+              <th style="text-align:right">${L('ราคา', 'Price')}</th>
               <th>${L('รายละเอียด', 'Details')}</th>
             </tr></thead>
             <tbody>
-              ${curRows.map((r) => `<tr>
-                <td><div class="name-cell">${r.mat ? atlasImg('mats', r.mat, 28) : ''}<div>${nameHtml(r.n || r.id)}</div></div></td>
-                <td class="num">${r.lv ?? '–'}</td>
-                <td class="num">${r.xp ?? '–'}</td>
-                <td class="num" style="color:var(--gold)">${fmt(r.price)}</td>
-                <td class="muted" style="font-size:12px">${r.mins ? `${r.mins} min` : ''}${r.waters ? r.waters.join(', ') : ''}${r.where ? tr(r.where) : ''}</td>
-              </tr>`).join('')}
+              ${curRows.map((r) => {
+                const iconId = r.mat || (st.lifeTab === 'fish' ? r.id : '');
+                const wLabel = st.lifeTab === 'fish' ? (WHEN_LABELS[r.when || 0] || WHEN_LABELS[0]) : null;
+                const detailParts = [];
+                if (r.mins) detailParts.push(`${r.mins} min`);
+                if (r.rod) detailParts.push(`Rod ${r.rod}`);
+                if (wLabel) detailParts.push(L(wLabel.th, wLabel.en));
+                if (r.waters) detailParts.push(r.waters.join(', '));
+                if (r.tier) detailParts.push(`Tier ${r.tier}`);
+                if (r.hits) detailParts.push(`${r.hits} hits`);
+                if (r.where) detailParts.push(tr(r.where));
+                return `<tr>
+                  <td><div class="name-cell" ${iconId ? `style="cursor:pointer" data-open="mat" data-id="${esc(iconId)}"` : ''}>${iconId ? atlasImg('mats', iconId, 28) : ''}<div>${nameHtml(r.n || r.id)}</div></div></td>
+                  <td class="num">${r.lv ?? '–'}</td>
+                  <td class="num">${r.xp ?? '–'}</td>
+                  <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(r._price)}</td>
+                  <td class="muted" style="font-size:12px">${esc(detailParts.join(' · ') || '–')}</td>
+                </tr>`;
+              }).join('')}
             </tbody>
           </table></div>
         </div>`;
@@ -1537,6 +2252,14 @@
       const inp = $('#qQ'); if (inp) { inp.focus(); if (pos != null) inp.setSelectionRange(pos, pos); }
     });
     if ($('#qCh')) $('#qCh').addEventListener('change', (e) => { st.ch = e.target.value; renderQuests(); });
+    if ($('#lfQ')) $('#lfQ').addEventListener('input', (e) => { st.lifeQ = e.target.value; keepFocus('#lfQ', renderQuests); });
+    if ($('#lfMinLv')) $('#lfMinLv').addEventListener('input', (e) => { st.lifeMinLv = e.target.value; keepFocus('#lfMinLv', renderQuests); });
+    if ($('#lfMaxLv')) $('#lfMaxLv').addEventListener('input', (e) => { st.lifeMaxLv = e.target.value; keepFocus('#lfMaxLv', renderQuests); });
+    if ($('#lfMinP')) $('#lfMinP').addEventListener('input', (e) => { st.lifeMinPrice = e.target.value; keepFocus('#lfMinP', renderQuests); });
+    if ($('#lfMaxP')) $('#lfMaxP').addEventListener('input', (e) => { st.lifeMaxPrice = e.target.value; keepFocus('#lfMaxP', renderQuests); });
+    if ($('#lfWhen')) $('#lfWhen').addEventListener('change', (e) => { st.lifeWhen = e.target.value; renderQuests(); });
+    if ($('#lfSort')) $('#lfSort').addEventListener('change', (e) => { st.lifeSort = e.target.value; renderQuests(); });
+    if ($('#lfDir')) $('#lfDir').addEventListener('click', () => { st.lifeDir = -st.lifeDir; renderQuests(); });
   }
 
   // ------------------------------------------------------------------ VIEW 10: SEASON 2, LORE & EXPORT
@@ -2033,6 +2756,7 @@
   function renderCurrentView() {
     switch (state.view) {
       case 'overview': renderOverview(); break;
+      case 'market': renderMarket(); break;
       case 'monsters': renderMonsters(); break;
       case 'items': renderItems(); break;
       case 'sets': renderSets(); break;
