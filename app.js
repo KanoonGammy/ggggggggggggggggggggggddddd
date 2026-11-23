@@ -244,7 +244,129 @@
   const MAT = byId(W.materials);
   const SET = byId(W.sets);
   const S2 = W.s2 || {};
-  const RUNES = (S2.runes && S2.runes.list) || {};
+  const RUNE_CFG = S2.runes || {};
+  const RUNES = RUNE_CFG.list || {};
+  const GUN_DROP = RUNE_CFG.gunDrop || {};
+  const SPELL_CFG = RUNE_CFG.spell || null;
+
+  const GUN_DROP_MON_KEYS = new Set();
+  const GUN_DROP_BY_MON = {};
+  for (const [rid, rows] of Object.entries(GUN_DROP)) {
+    for (const [mid, frac] of (rows || [])) {
+      const f = Number(frac || 0);
+      if (!(f > 0)) continue;
+      GUN_DROP_MON_KEYS.add(`${rid}|${mid}`);
+      (GUN_DROP_BY_MON[mid] = GUN_DROP_BY_MON[mid] || []).push({ rid, ratePct: f * 100 });
+    }
+  }
+  for (const rows of Object.values(GUN_DROP_BY_MON)) {
+    rows.sort((a, b) => b.ratePct - a.ratePct);
+  }
+
+  const SPELL_ELS_BY_RUNE = {};
+  if (SPELL_CFG && SPELL_CFG.of) {
+    for (const [el, rids] of Object.entries(SPELL_CFG.of)) {
+      for (const rid of (rids || [])) {
+        (SPELL_ELS_BY_RUNE[rid] = SPELL_ELS_BY_RUNE[rid] || []).push(el);
+      }
+    }
+  }
+
+  function getMonLvOnMap(mp, mon) {
+    const mlv = mp && mp.mlv && mon ? mp.mlv[mon.id] : null;
+    if (Array.isArray(mlv) && mlv.length >= 2) {
+      const lo = Number(mlv[0]);
+      const hi = Number(mlv[1]);
+      return { min: lo, max: hi, label: lo === hi ? `Lv ${lo}` : `Lv ${lo}–${hi}` };
+    }
+    if (mlv != null && !Number.isNaN(Number(mlv))) {
+      const n = Number(mlv);
+      return { min: n, max: n, label: `Lv ${n}` };
+    }
+    const baseLv = mon && mon.lv != null ? Number(mon.lv) : null;
+    return {
+      min: baseLv ?? 0,
+      max: baseLv ?? 0,
+      label: baseLv != null ? `Lv ${baseLv}` : 'Lv ?'
+    };
+  }
+
+  function parseMapMinLv(mp) {
+    const m = String((mp && mp.lv) || '').match(/\d+/);
+    return m ? Number(m[0]) : 999;
+  }
+
+  for (const m of (W.monsters || [])) {
+    const mapLvs = (m.maps || []).filter(Boolean).map((mpId) => {
+      const mp = MAP[mpId] || null;
+      const lvInfo = getMonLvOnMap(mp, m);
+      return { mapId: mpId, mp, min: lvInfo.min, max: lvInfo.max, label: lvInfo.label };
+    });
+    mapLvs.sort((a, b) => a.min - b.min || a.max - b.max);
+    m._mapLvs = mapLvs;
+    if (mapLvs.length) {
+      m._lvMin = Math.min(...mapLvs.map((x) => x.min));
+      m._lvMax = Math.max(...mapLvs.map((x) => x.max));
+    } else {
+      const base = Number(m.lv || 0);
+      m._lvMin = base;
+      m._lvMax = base;
+    }
+    m._lvLabel = m._lvMin === m._lvMax ? String(m._lvMin) : `${m._lvMin}–${m._lvMax}`;
+  }
+
+  function rangeMatchesLv(lo, hi, minLv, maxLv) {
+    if (minLv != null && hi < minLv) return false;
+    if (maxLv != null && lo > maxLv) return false;
+    return true;
+  }
+
+  function getEligibleMapLvs(mon, maps, selectedMap, minLv, maxLv) {
+    const baseIds = (maps && maps.length) ? maps : ((mon && mon.maps) || []).filter(Boolean);
+    const targetIds = selectedMap ? (baseIds.includes(selectedMap) ? [selectedMap] : []) : baseIds;
+    let entries = targetIds.map((mpId) => {
+      const mp = MAP[mpId] || null;
+      const lvInfo = getMonLvOnMap(mp, mon);
+      return { mapId: mpId, mp, min: lvInfo.min, max: lvInfo.max, label: lvInfo.label };
+    });
+    if (minLv != null || maxLv != null) {
+      entries = entries.filter((e) => rangeMatchesLv(e.min, e.max, minLv, maxLv));
+    }
+    entries.sort((a, b) => a.min - b.min || a.max - b.max);
+    return entries;
+  }
+
+  function hasSpawnInLvRange(mon, maps, selectedMap, minLv, maxLv) {
+    if (minLv == null && maxLv == null) return true;
+    if (!mon) return true;
+    const allMaps = (maps && maps.length) ? maps : (mon.maps || []).filter(Boolean);
+    if (!allMaps.length) return rangeMatchesLv(mon._lvMin, mon._lvMax, minLv, maxLv);
+    return getEligibleMapLvs(mon, allMaps, selectedMap, minLv, maxLv).length > 0;
+  }
+
+  function getDropLvRange(mon, maps, selectedMap, minLv, maxLv) {
+    if (!mon) return { min: 0, max: 0, label: '–', entries: [] };
+    let entries = getEligibleMapLvs(mon, maps, selectedMap, minLv, maxLv);
+    if (!entries.length) {
+      entries = getEligibleMapLvs(mon, maps, selectedMap, null, null);
+    }
+    if (entries.length) {
+      const lo = Math.min(...entries.map((e) => e.min));
+      const hi = Math.max(...entries.map((e) => e.max));
+      return { min: lo, max: hi, label: lo === hi ? String(lo) : `${lo}–${hi}`, entries };
+    }
+    return { min: mon._lvMin, max: mon._lvMax, label: mon._lvLabel, entries: [] };
+  }
+
+  function renderMapLvChips(entries, limit = 2) {
+    if (!entries || !entries.length) return '<span class="muted">–</span>';
+    const shown = entries.slice(0, limit).map((e) => {
+      const n = e.mp ? tr(e.mp.n) : e.mapId;
+      return `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(e.mapId)}">${esc(n)} · ${esc(e.label)}</button>`;
+    }).join(' ');
+    const more = entries.length > limit ? `<span class="muted" style="font-size:11px">+${entries.length - limit}</span>` : '';
+    return shown + (more ? ' ' + more : '');
+  }
 
   const ITEM_TO_SET = {};
   for (const st of (W.sets || [])) {
@@ -317,10 +439,39 @@
     }
     if (m.rune) {
       const [rid, frac] = [m.rune[0], Number(m.rune[1])];
+      if (!GUN_DROP_MON_KEYS.has(`${rid}|${m.id}`)) {
+        const ratePct = frac * 100;
+        (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct, source: 'direct', minLv: 0 });
+        const rObj = RUNES[rid];
+        const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+        const ev = price != null ? price * frac : null;
+        FLAT_DROPS.push({
+          mon: m,
+          dtype: 'rune',
+          targetId: rid,
+          targetName: rObj ? rObj.n : rid,
+          ratePct,
+          price,
+          ev,
+          evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
+          maps
+        });
+      }
+    }
+    m._evCoin = evSum;
+    m._evPer1kHp = m.hp > 0 ? (evSum / m.hp) * 1000 : 0;
+  }
+
+  // Index Gun Runes (W.s2.runes.gunDrop)
+  for (const [rid, rows] of Object.entries(GUN_DROP)) {
+    const rObj = RUNES[rid];
+    const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+    for (const [mid, fracRaw] of (rows || [])) {
+      const frac = Number(fracRaw || 0);
+      const m = MON[mid];
+      if (!m || !(frac > 0)) continue;
       const ratePct = frac * 100;
-      (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct });
-      const rObj = RUNES[rid];
-      const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+      (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct, source: 'gun', minLv: 0 });
       const ev = price != null ? price * frac : null;
       FLAT_DROPS.push({
         mon: m,
@@ -331,17 +482,129 @@
         price,
         ev,
         evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
-        maps
+        maps: (m.maps || []).filter(Boolean)
       });
     }
-    m._evCoin = evSum;
-    m._evPer1kHp = m.hp > 0 ? (evSum / m.hp) * 1000 : 0;
+  }
+
+  // Index Lv 70+ Element Spell Runes (W.s2.runes.spell)
+  if (SPELL_CFG && SPELL_CFG.of) {
+    const spellMinLv = Number(SPELL_CFG.lv || 70);
+    const spellFrac = Number(SPELL_CFG.rate || 0.00002);
+    const spellRatePct = spellFrac * 100;
+    for (const [rid, els] of Object.entries(SPELL_ELS_BY_RUNE)) {
+      const elSet = new Set(els);
+      const rObj = RUNES[rid];
+      const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+      const ev = price != null ? price * spellFrac : null;
+      for (const m of (W.monsters || [])) {
+        if (!elSet.has(m.el)) continue;
+        const allMaps = (m.maps || []).filter(Boolean);
+        const eligibleMaps = allMaps.filter((mpId) => getMonLvOnMap(MAP[mpId], m).max >= spellMinLv);
+        const noMapEligible = allMaps.length === 0 && Number(m.lv || 0) >= spellMinLv;
+        if (!eligibleMaps.length && !noMapEligible) continue;
+        (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct: spellRatePct, source: 'spell', minLv: spellMinLv });
+        FLAT_DROPS.push({
+          mon: m,
+          dtype: 'rune',
+          targetId: rid,
+          targetName: rObj ? rObj.n : rid,
+          ratePct: spellRatePct,
+          price,
+          ev,
+          evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
+          maps: eligibleMaps
+        });
+      }
+    }
   }
 
   for (const dict of [ITEM_DROPPERS, MAT_DROPPERS, RUNE_DROPPERS]) {
     for (const k of Object.keys(dict)) {
       dict[k].sort((a, b) => b.ratePct - a.ratePct || (a.mon.lv || 0) - (b.mon.lv || 0));
     }
+  }
+
+  function groupRuneDroppersByMap(droppers, sortMode = 'density') {
+    const mapBuckets = new Map();
+    for (const d of (droppers || [])) {
+      const reqLv = d.minLv || 0;
+      const mapIds = (d.mon.maps || []).filter(Boolean);
+      if (!mapIds.length) {
+        if (reqLv && Number(d.mon.lv || 0) < reqLv) continue;
+        let bucket = mapBuckets.get('__none__');
+        if (!bucket) {
+          bucket = {
+            mapId: '__none__',
+            mp: null,
+            mapMinLv: 9999,
+            maxRatePct: 0,
+            sortName: 'zzzzzz',
+            seenMons: new Set(),
+            monsters: []
+          };
+          mapBuckets.set('__none__', bucket);
+        }
+        if (!bucket.seenMons.has(d.mon.id)) {
+          bucket.seenMons.add(d.mon.id);
+          bucket.monsters.push({ ...d, lvInfo: getMonLvOnMap(null, d.mon) });
+          if (d.ratePct > bucket.maxRatePct) bucket.maxRatePct = d.ratePct;
+        }
+        continue;
+      }
+      for (const mpId of mapIds) {
+        const mp = MAP[mpId] || null;
+        const lvInfo = getMonLvOnMap(mp, d.mon);
+        if (reqLv && lvInfo.max < reqLv) continue;
+        let bucket = mapBuckets.get(mpId);
+        if (!bucket) {
+          bucket = {
+            mapId: mpId,
+            mp,
+            mapMinLv: mp ? parseMapMinLv(mp) : 9999,
+            maxRatePct: 0,
+            sortName: mp ? mp.n : mpId,
+            seenMons: new Set(),
+            monsters: []
+          };
+          mapBuckets.set(mpId, bucket);
+        }
+        if (!bucket.seenMons.has(d.mon.id)) {
+          bucket.seenMons.add(d.mon.id);
+          bucket.monsters.push({ ...d, lvInfo });
+          if (d.ratePct > bucket.maxRatePct) bucket.maxRatePct = d.ratePct;
+        }
+      }
+    }
+    const groups = Array.from(mapBuckets.values());
+    for (const g of groups) {
+      g.monsters.sort((a, b) =>
+        b.ratePct - a.ratePct ||
+        a.lvInfo.min - b.lvInfo.min ||
+        String(a.mon.n || '').localeCompare(String(b.mon.n || ''))
+      );
+    }
+    groups.sort((a, b) => {
+      if (a.mapId === '__none__' && b.mapId !== '__none__') return 1;
+      if (b.mapId === '__none__' && a.mapId !== '__none__') return -1;
+      if (sortMode === 'level') {
+        return a.mapMinLv - b.mapMinLv ||
+          b.monsters.length - a.monsters.length ||
+          b.maxRatePct - a.maxRatePct ||
+          a.sortName.localeCompare(b.sortName);
+      }
+      return b.maxRatePct - a.maxRatePct ||
+        b.monsters.length - a.monsters.length ||
+        a.mapMinLv - b.mapMinLv ||
+        a.sortName.localeCompare(b.sortName);
+    });
+    return groups;
+  }
+
+  const RUNE_MAP_COUNTS = {};
+  for (const rid of Object.keys(RUNES)) {
+    const groups = groupRuneDroppersByMap(RUNE_DROPPERS[rid] || []);
+    RUNE_MAP_COUNTS[rid] = groups.filter((g) => g.mapId !== '__none__').length;
   }
 
   // Monster Art Cards (s2.lore.arts + bl_card_*)
@@ -831,14 +1094,22 @@
     qObj._q = biText(qObj.id, qObj.t, qObj.ch, qObj.map, `lv ${qObj.lv ?? 1}`, qObj.obj);
   }
 
-  const RUNES_LIST = Object.entries(RUNES).map(([id, r]) => ({
-    id,
-    ...r,
-    _q: biText(
-      id, r.n, r.kind, r.on, r.t, r.price,
-      (RUNE_DROPPERS[id] || []).map((d) => [d.mon.id, d.mon.n])
-    )
-  }));
+  const RUNES_LIST = Object.entries(RUNES).map(([id, r]) => {
+    const droppers = RUNE_DROPPERS[id] || [];
+    const spellEls = SPELL_ELS_BY_RUNE[id] || [];
+    const groups = groupRuneDroppersByMap(droppers);
+    return {
+      id,
+      ...r,
+      _q: biText(
+        id, r.n, r.kind, r.on, r.t, r.price,
+        r.el, W.elements && W.elements[r.el],
+        spellEls, spellEls.map((el) => W.elements && W.elements[el]),
+        droppers.map((d) => [d.mon.id, d.mon.n]),
+        groups.filter((g) => g.mapId !== '__none__').map((g) => [g.mapId, g.mp && g.mp.n])
+      )
+    };
+  });
   const RELICS_LIST = Object.entries((S2.relics && S2.relics.list) || {}).map(([id, rel]) => ({
     id,
     ...rel,
@@ -1110,8 +1381,14 @@
       if (st.cat !== 'all' && x.cat !== st.cat) return false;
       if (minP != null && (x.price == null || x.price < minP)) return false;
       if (maxP != null && (x.price == null || x.price > maxP)) return false;
-      if (minLv != null && (x.lv ?? 0) < minLv) return false;
-      if (maxLv != null && (x.lv ?? 0) > maxLv) return false;
+      if (minLv != null || maxLv != null) {
+        if (isDropCat(x.cat) && x.mon) {
+          if (!hasSpawnInLvRange(x.mon, x.maps, st.map, minLv, maxLv)) return false;
+        } else {
+          if (minLv != null && (x.lv ?? 0) < minLv) return false;
+          if (maxLv != null && (x.lv ?? 0) > maxLv) return false;
+        }
+      }
       if (st.el) {
         if (!isDropCat(x.cat) || x.el !== st.el) return false;
       }
@@ -1141,7 +1418,12 @@
       if (st.sort === 'ev') { va = a.ev ?? -1; vb = b.ev ?? -1; }
       else if (st.sort === 'price') { va = a.price ?? -1; vb = b.price ?? -1; }
       else if (st.sort === 'rate') { va = a.ratePct ?? -1; vb = b.ratePct ?? -1; }
-      else if (st.sort === 'lv') { va = a.lv ?? 0; vb = b.lv ?? 0; }
+      else if (st.sort === 'lv') {
+        const ra = isDropCat(a.cat) && a.mon ? getDropLvRange(a.mon, a.maps, st.map, minLv, maxLv) : null;
+        const rb = isDropCat(b.cat) && b.mon ? getDropLvRange(b.mon, b.maps, st.map, minLv, maxLv) : null;
+        va = ra ? (st.dir > 0 ? ra.min : ra.max) : (a.lv ?? 0);
+        vb = rb ? (st.dir > 0 ? rb.min : rb.max) : (b.lv ?? 0);
+      }
       else if (st.sort === 'hp') { va = a.hp ?? 0; vb = b.hp ?? 0; }
       else if (st.sort === 'evPerHp') { va = a.evPer1kHp ?? 0; vb = b.evPer1kHp ?? 0; }
       else { va = tr(a.name); vb = tr(b.name); }
@@ -1236,10 +1518,11 @@
             const spriteId = x.cardMatId || x.id;
             const icon = x.spriteKind ? atlasImg(x.spriteKind, spriteId, 30) : (x.cat === 'rune' ? '🔮' : '🍲');
             const openAttr = x.openKind ? `style="cursor:pointer" data-open="${x.openKind}" data-id="${esc(x.id)}"` : '';
+            const lvRange = isDropCat(x.cat) && x.mon ? getDropLvRange(x.mon, x.maps, st.map, minLv, maxLv) : null;
             let srcHtml = '<span class="muted">–</span>';
             let metaHtml = '–';
             if (isDropCat(x.cat)) {
-              const mapChips = (x.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 6px;font-size:11px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
+              const mapChips = renderMapLvChips(lvRange ? lvRange.entries : [], 2);
               srcHtml = `<div class="name-cell">${monSprite(x.mon, 28)}<div><div style="cursor:pointer" data-open="monster" data-id="${esc(x.mon.id)}">${esc(tr(x.mon.n))} ${x.boss ? pill('BOSS', '#f25c69') : ''}</div><div class="name-sub" style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">${elIcon(x.el, 12)} <span>HP ${fmt(x.hp)}</span> ${mapChips}</div></div></div>`;
               metaHtml = fmtPct(x.ratePct);
             } else if (x.cat === 'fish') {
@@ -1265,7 +1548,7 @@
             return `<tr>
               <td><div class="name-cell" ${openAttr}>${icon}<div>${nameHtml(x.name)}</div></div></td>
               <td>${pill(catLabel[x.cat] || x.cat, catColor[x.cat] || '#8a8499')}</td>
-              <td class="num">${x.lv ?? '–'}</td>
+              <td class="num">${lvRange ? esc(lvRange.label) : (x.lv ?? '–')}</td>
               <td>${srcHtml}</td>
               <td class="num" style="text-align:right">${esc(metaHtml)}</td>
               <td class="num" style="text-align:right;font-weight:700">${fmtCoin(x.price)}</td>
@@ -1429,14 +1712,13 @@
       if (st.el && (m.el || 'neutral') !== st.el) return false;
       if (st.race && m.race !== st.race) return false;
       if (st.arm && (m.arm || 'flesh') !== st.arm) return false;
-      if (minLv != null && (m.lv || 0) < minLv) return false;
-      if (maxLv != null && (m.lv || 0) > maxLv) return false;
+      if (!hasSpawnInLvRange(m, m.maps, '', minLv, maxLv)) return false;
       if (q && !matchesQuery(m._q, q)) return false;
       return true;
     });
 
     const getVal = (m) => {
-      if (st.sort === 'lv') return m.lv || 0;
+      if (st.sort === 'lv') return st.dir > 0 ? m._lvMin : m._lvMax;
       if (st.sort === 'hp') return m.hp || 0;
       if (st.sort === 'exp') return m.exp || 0;
       if (st.sort === 'jexp') return m.jexp || 0;
@@ -1512,7 +1794,7 @@
           ${slice.map((m) => `
             <tr data-open="monster" data-id="${esc(m.id)}">
               <td><div class="name-cell">${monSprite(m, 40)}<div>${nameHtml(m.n)}${m.boss ? pill('BOSS', '#f25c69') : ''}${m.story ? pill('STORY', '#3f95ff') : ''}</div></div></td>
-              <td class="num">${m.lv ?? '–'}</td>
+              <td class="num">${esc(getDropLvRange(m, m.maps, '', minLv, maxLv).label)}</td>
               <td>${elPill(m.el)}</td>
               <td>
                 <div style="display:flex;gap:4px;flex-wrap:wrap">
@@ -2069,8 +2351,9 @@
       if (st.monType === 'normal' && d.mon.boss) return false;
       if (st.el && (d.mon.el || 'neutral') !== st.el) return false;
       if (st.map && !(d.maps || []).includes(st.map)) return false;
-      if (minLv != null && (d.mon.lv || 0) < minLv) return false;
-      if (maxLv != null && (d.mon.lv || 0) > maxLv) return false;
+      if (minLv != null || maxLv != null) {
+        if (!hasSpawnInLvRange(d.mon, d.maps, st.map, minLv, maxLv)) return false;
+      }
       if (minR != null && d.ratePct <= minR) return false;
       if (minP != null && (d.price == null || d.price < minP)) return false;
       if (maxP != null && (d.price == null || d.price > maxP)) return false;
@@ -2082,7 +2365,11 @@
       if (st.sort === 'ev') return ((a.ev ?? -1) - (b.ev ?? -1)) * st.dir;
       if (st.sort === 'price') return ((a.price ?? -1) - (b.price ?? -1)) * st.dir;
       if (st.sort === 'rate') return (a.ratePct - b.ratePct) * st.dir;
-      if (st.sort === 'lv') return ((a.mon.lv || 0) - (b.mon.lv || 0)) * st.dir;
+      if (st.sort === 'lv') {
+        const ra = getDropLvRange(a.mon, a.maps, st.map, minLv, maxLv);
+        const rb = getDropLvRange(b.mon, b.maps, st.map, minLv, maxLv);
+        return ((st.dir > 0 ? ra.min : ra.max) - (st.dir > 0 ? rb.min : rb.max)) * st.dir;
+      }
       if (st.sort === 'hp') return ((a.mon.hp || 0) - (b.mon.hp || 0)) * st.dir;
       return tr(a.targetName).localeCompare(tr(b.targetName)) * st.dir;
     });
@@ -2154,16 +2441,17 @@
             const icon = d.dtype === 'item' ? itemSprite(IT[d.targetId], 32)
               : d.dtype === 'material' ? atlasImg('mats', d.targetId, 32)
               : d.dtype === 'card' ? atlasImg('mats', d.cardMatId, 32)
-              : `<span class="pill" style="--c:#9a5cf0">🔮</span>`;
+              : atlasImg('mats', `bl_rune_${d.targetId}_1`, 32);
             const openKind = d.dtype === 'item' ? 'item' : d.dtype === 'material' ? 'mat' : d.dtype === 'card' ? 'card' : 'rune';
             const typeColor = d.dtype === 'item' ? '#3f95ff' : d.dtype === 'material' ? '#38c97a' : d.dtype === 'card' ? '#f5b942' : '#9a5cf0';
-            const mapChips = (d.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
+            const lvRange = getDropLvRange(d.mon, d.maps, st.map, minLv, maxLv);
+            const mapChips = renderMapLvChips(lvRange.entries, 2);
             return `<tr>
               <td><div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">${icon}<div>${nameHtml(d.targetName)}</div></div></td>
               <td>${pill(d.dtype.toUpperCase(), typeColor)}</td>
               <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''} ${elIcon(d.mon.el, 13)}</div></div></td>
-              <td class="num">${d.mon.lv ?? '–'}</td>
-              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips || '<span class="muted">–</span>'}</div></td>
+              <td class="num">${esc(lvRange.label)}</td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips}</div></td>
               <td class="num" style="text-align:right">${fmtCoin(d.price)}</td>
               <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtPct(d.ratePct)}</td>
               <td class="num" style="text-align:right;color:var(--green);font-weight:700">${fmtCoin(d.ev)}</td>
@@ -2289,15 +2577,24 @@
       if (st.kind === 'normal' && c.boss) return false;
       if (st.el && c.el !== st.el) return false;
       if (st.map && !(c.maps || []).includes(st.map)) return false;
-      if (minLv != null && c.lv < minLv) return false;
-      if (maxLv != null && c.lv > maxLv) return false;
+      if (minLv != null || maxLv != null) {
+        if (c.mon) {
+          if (!hasSpawnInLvRange(c.mon, c.maps, st.map, minLv, maxLv)) return false;
+        } else if (!rangeMatchesLv(c.lv, c.lv, minLv, maxLv)) {
+          return false;
+        }
+      }
       if (q && !matchesQuery(c._q, q)) return false;
       return true;
     });
 
     list.sort((a, b) => {
       if (st.sort === 'price') return (a.stallPrice - b.stallPrice) * st.dir;
-      if (st.sort === 'lv') return (a.lv - b.lv) * st.dir;
+      if (st.sort === 'lv') {
+        const ra = a.mon ? getDropLvRange(a.mon, a.maps, st.map, minLv, maxLv) : { min: a.lv, max: a.lv };
+        const rb = b.mon ? getDropLvRange(b.mon, b.maps, st.map, minLv, maxLv) : { min: b.lv, max: b.lv };
+        return ((st.dir > 0 ? ra.min : ra.max) - (st.dir > 0 ? rb.min : rb.max)) * st.dir;
+      }
       return tr(a.cardName).localeCompare(tr(b.cardName)) * st.dir;
     });
 
@@ -2348,13 +2645,14 @@
         </tr></thead>
         <tbody>
           ${slice.map((c) => {
-            const mapChips = (c.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
+            const lvRange = c.mon ? getDropLvRange(c.mon, c.maps, st.map, minLv, maxLv) : null;
+            const mapChips = lvRange ? renderMapLvChips(lvRange.entries, 2) : ((c.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ') || '<span class="muted">–</span>');
             return `<tr>
               <td><div class="name-cell" style="cursor:pointer" data-open="card" data-id="${esc(c.id)}"><span class="sprite-box">${atlasImg('mats', c.cardId, 34)}</span><div>${nameHtml(c.cardName, tr(c.artName))}</div></div></td>
               <td>${c.mon ? `<div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(c.mon.id)}">${monSprite(c.mon, 30)}<div>${esc(tr(c.monName))} ${c.boss ? pill('BOSS', '#f25c69') : ''}</div></div>` : esc(tr(c.monName))}</td>
-              <td class="num">${c.lv}</td>
+              <td class="num">${lvRange ? esc(lvRange.label) : c.lv}</td>
               <td>${elPill(c.el)}</td>
-              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips || '<span class="muted">–</span>'}</div></td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips}</div></td>
               <td><div class="stat-chips">${c.passives.map((p) => `<span class="stat-chip">${esc(tr(p))}</span>`).join('') || '<span class="muted">–</span>'}</div></td>
               <td class="num" style="text-align:right">${fmtPct(c.ratePct)}</td>
               <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(c.stallPrice)}</td>
@@ -2417,16 +2715,24 @@
         <div class="card-grid">
           ${runeEntries.map((r) => {
             const droppers = RUNE_DROPPERS[r.id] || [];
+            const mapCount = RUNE_MAP_COUNTS[r.id] || 0;
+            const isSpell = !!SPELL_ELS_BY_RUNE[r.id];
             return `<article class="entity-card" data-open="rune" data-id="${esc(r.id)}">
               <div class="entity-card__head">
+                ${atlasImg('mats', `bl_rune_${r.id}_1`, 38)}
                 <div style="flex:1">${nameHtml(r.n)}</div>
-                <div style="display:flex;gap:4px">${pill(r.kind || 'rune', '#9a5cf0')}${r.on ? pill(r.on, '#3f95ff') : ''}</div>
+                <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
+                  ${pill(r.kind || 'rune', '#9a5cf0')}
+                  ${r.on ? pill(r.on, '#3f95ff') : ''}
+                  ${r.el ? elPill(r.el) : ''}
+                  ${isSpell ? pill(`Lv ${SPELL_CFG.lv || 70}+`, '#ff8f3f') : ''}
+                </div>
               </div>
               <div style="font-size:12.5px;display:flex;flex-direction:column;gap:4px">
                 ${(r.t || []).map((txt, idx) => `<div><strong style="color:var(--gold)">Lv ${idx + 1}:</strong> ${esc(tr(txt))}</div>`).join('')}
               </div>
               <div class="muted" style="font-size:12px">
-                💰 ${(r.price || []).join(' / ')} · 👾 ${droppers.length} ${L('มอนสเตอร์ดรอป', 'droppers')}
+                💰 ${(r.price || []).join(' / ')} · 👾 ${droppers.length} ${L('มอน', 'mons')} · 🗺️ ${mapCount} ${L('แมพ', 'maps')}
               </div>
             </article>`;
           }).join('') || `<div class="muted">${L('ไม่พบรูนที่ตรงเงื่อนไข', 'No matching runes')}</div>`}
@@ -2872,6 +3178,67 @@
   }
 
   // ------------------------------------------------------------------ DETAIL MODAL
+  function renderRuneMapGroups(runeId, sortMode = 'density', filterText = '') {
+    const container = $('#runeMapGroups');
+    if (!container) return;
+    const droppers = RUNE_DROPPERS[runeId] || [];
+    const groups = groupRuneDroppersByMap(droppers, sortMode);
+    const q = norm(filterText);
+
+    const visibleGroups = groups
+      .map((g) => {
+        if (!q) return { ...g, filteredMons: g.monsters };
+        const mapHay = biText(g.mapId, g.mp ? g.mp.n : L('บอสพิเศษ', 'Special Boss'), g.mp ? g.mp.lv : '');
+        if (matchesQuery(mapHay, q)) return { ...g, filteredMons: g.monsters };
+        const filteredMons = g.monsters.filter((d) => {
+          const monHay = d.mon._q || biText(d.mon.id, d.mon.n, d.mon.el, W.elements && W.elements[d.mon.el], d.lvInfo.label);
+          return matchesQuery(monHay, q);
+        });
+        return { ...g, filteredMons };
+      })
+      .filter((g) => g.filteredMons.length > 0);
+
+    if (!visibleGroups.length) {
+      container.innerHTML = `<div class="muted" style="padding:14px;text-align:center">${L('ไม่พบแผนที่หรือมอนสเตอร์ที่ตรงคำค้น', 'No maps or monsters match your filter')}</div>`;
+      return;
+    }
+
+    container.innerHTML = `<div class="map-group-list">${visibleGroups.map((g) => {
+      const mons = g.filteredMons;
+      const maxRate = mons.reduce((mx, d) => Math.max(mx, d.ratePct), 0);
+      const countColor = mons.length >= 2 ? '#3aa6c4' : '#3f95ff';
+      const titleHtml = g.mp
+        ? `<button type="button" class="map-group__title" data-open="map" data-id="${esc(g.mapId)}">
+            <span>🗺️ ${esc(tr(g.mp.n))}</span>
+            ${state.lang === 'th' && tr(g.mp.n) !== g.mp.n ? `<span class="map-group__sub">(${esc(g.mp.n)})</span>` : ''}
+          </button>`
+        : `<span class="map-group__title" style="cursor:default">🌐 ${esc(L('บอสพิเศษ / ไม่มีแผนที่เกิดประจำ', 'Special Boss / No Fixed Spawn Map'))}</span>`;
+      return `
+        <div class="map-group">
+          <div class="map-group__head">
+            ${titleHtml}
+            <div class="map-group__meta">
+              ${g.mp && g.mp.lv ? pill(g.mp.lv, '#f5b942') : ''}
+              ${g.mp && g.mp.secret ? pill('SECRET', '#f25c69') : ''}
+              ${pill(`${mons.length} ${L('ตัวในแมพนี้', 'in map')}`, countColor)}
+              ${pill(`${L('สูงสุด', 'Max')} ${fmtPct(maxRate)}`, '#9a5cf0')}
+            </div>
+          </div>
+          <div class="map-group__mons">
+            ${mons.map(({ mon, ratePct, lvInfo }) => `
+              <button type="button" class="chip-link" data-open="monster" data-id="${esc(mon.id)}">
+                ${monSprite(mon, 24)}
+                <span>${esc(tr(mon.n))}</span>
+                ${mon.boss ? '<span title="Boss">👑</span>' : (mon.eliteOf ? '<span title="Elite">⚡</span>' : '')}
+                ${elIcon(mon.el, 14)}
+                <small class="muted">${esc(lvInfo.label)}</small>
+                <strong style="color:var(--purple)">${fmtPct(ratePct)}</strong>
+              </button>`).join('')}
+          </div>
+        </div>`;
+    }).join('')}</div>`;
+  }
+
   function openModal(kind, id) {
     let html = '';
     if (kind === 'monster') {
@@ -2886,7 +3253,7 @@
             <h2>${esc(tr(m.n))}</h2>
             <div class="muted">${esc(m.n)} · <code>${esc(m.id)}</code></div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
-              ${pill(`Lv ${m.lv ?? '?'}`, '#f5b942')}
+              ${pill(`Lv ${m._lvLabel}`, '#f5b942')}
               ${m.boss ? pill('BOSS', '#f25c69') : ''}
               ${elPill(m.el)}
               ${pill(tr((W.races && W.races[m.race]) || m.race), '#6e6a86')}
@@ -2905,12 +3272,9 @@
         </div>
 
         <div class="modal-section">
-          <h3>🗺️ ${L('แผนที่ที่พบ', 'Spawn Maps')} (${spawnMaps.length})</h3>
+          <h3>🗺️ ${L('แผนที่ที่พบ', 'Spawn Maps')} (${m._mapLvs.length})</h3>
           <div style="display:flex;flex-wrap:wrap;gap:6px">
-            ${spawnMaps.map((mpid) => {
-              const mp = MAP[mpid];
-              return `<button type="button" class="chip-link" data-open="map" data-id="${esc(mpid)}">📍 ${esc(tr(mp ? mp.n : mpid))}</button>`;
-            }).join('') || '<span class="muted">–</span>'}
+            ${m._mapLvs.map((entry) => `<button type="button" class="chip-link" data-open="map" data-id="${esc(entry.mapId)}">📍 ${esc(tr(entry.mp ? entry.mp.n : entry.mapId))} <strong style="color:var(--gold)">${esc(entry.label)}</strong></button>`).join('') || '<span class="muted">–</span>'}
           </div>
         </div>
 
@@ -2939,11 +3303,34 @@
               const mat = MAT[tid];
               return `<button type="button" class="chip-link" data-open="mat" data-id="${esc(tid)}">${atlasImg('mats', tid, 24)}<span>${esc(tr(mat ? mat.n : tid))}</span><strong style="color:var(--green)">${fmtPct(frac * 100)}</strong></button>`;
             }).join('')}
-            ${m.rune ? (() => {
-              const [rid, frac] = m.rune;
-              const rObj = RUNES[rid];
-              return `<button type="button" class="chip-link" data-open="rune" data-id="${esc(rid)}">🔮 <span>${esc(tr(rObj ? rObj.n : rid))}</span><strong style="color:var(--purple)">${fmtPct(frac * 100)}</strong></button>`;
-            })() : ''}
+            ${(() => {
+              const chips = [];
+              const gunDrops = GUN_DROP_BY_MON[m.id];
+              if (gunDrops && gunDrops.length) {
+                for (const gd of gunDrops) {
+                  const rObj = RUNES[gd.rid];
+                  chips.push(`<button type="button" class="chip-link" data-open="rune" data-id="${esc(gd.rid)}">${atlasImg('mats', `bl_rune_${gd.rid}_1`, 24)}<span>${esc(tr(rObj ? rObj.n : gd.rid))}</span><strong style="color:var(--purple)">${fmtPct(gd.ratePct)}</strong></button>`);
+                }
+              } else if (m.rune) {
+                const [rid, frac] = m.rune;
+                const rObj = RUNES[rid];
+                chips.push(`<button type="button" class="chip-link" data-open="rune" data-id="${esc(rid)}">${atlasImg('mats', `bl_rune_${rid}_1`, 24)}<span>${esc(tr(rObj ? rObj.n : rid))}</span><strong style="color:var(--purple)">${fmtPct(frac * 100)}</strong></button>`);
+              }
+              if (SPELL_CFG && SPELL_CFG.of) {
+                const spellMinLv = Number(SPELL_CFG.lv || 70);
+                const spellRatePct = Number(SPELL_CFG.rate || 0.00002) * 100;
+                const spellRids = SPELL_CFG.of[m.el] || [];
+                const mMaps = (m.maps || []).filter(Boolean);
+                const hasLv70Map = mMaps.length === 0 ? Number(m.lv || 0) >= spellMinLv : mMaps.some((mpId) => getMonLvOnMap(MAP[mpId], m).max >= spellMinLv);
+                if (spellRids.length && hasLv70Map) {
+                  for (const srid of spellRids) {
+                    const srObj = RUNES[srid];
+                    chips.push(`<button type="button" class="chip-link" data-open="rune" data-id="${esc(srid)}">${atlasImg('mats', `bl_rune_${srid}_1`, 24)}<span>${esc(tr(srObj ? srObj.n : srid))}</span><strong style="color:var(--purple)">Lv ${spellMinLv}+ · ${fmtPct(spellRatePct)}</strong></button>`);
+                  }
+                }
+              }
+              return chips.join('');
+            })()}
           </div>
         </div>
         ${CARD_BY_MON[m.id] ? (() => {
@@ -3219,28 +3606,80 @@
       const r = RUNES[id];
       if (!r) return;
       const droppers = RUNE_DROPPERS[id] || [];
+      const allGroups = groupRuneDroppersByMap(droppers, 'density');
+      const realMapCount = allGroups.filter((g) => g.mapId !== '__none__').length;
+      const spellEls = SPELL_ELS_BY_RUNE[id] || [];
+      const isGun = !!GUN_DROP[id];
+      const spellMinLv = Number((SPELL_CFG && SPELL_CFG.lv) || 70);
+      const spellRatePct = Number((SPELL_CFG && SPELL_CFG.rate) || 0.00002) * 100;
+      const spellElLabels = spellEls.map((el) => tr((W.elements && W.elements[el]) || el)).join(' / ');
+      const ruleNote = spellEls.length
+        ? L(
+            `📖 กติการูนร่ายเวท: ดรอปเสริมจากมอนสเตอร์ Lv ${spellMinLv}+ ธาตุ ${spellElLabels} ทุกตัว โอกาส ${fmtPct(spellRatePct)} ต่อตัว (นอกเหนือจากรูนประจำตัว) — ด้านล่างคัดเฉพาะแมพที่มอนเลเวลถึง ${spellMinLv}+ เท่านั้น`,
+            `📖 Spell Rune Rule: Drops as an extra ${fmtPct(spellRatePct)} chance from any Lv ${spellMinLv}+ ${spellElLabels} monster alongside its own rune — only maps reaching Lv ${spellMinLv}+ are shown below.`
+          )
+        : isGun
+          ? L(
+              `📖 กติการูนปืน: ดรอปจากตระกูลแมงป่อง (แมงป่องแดง / แมงป่องยิงพิษ) แทนรูนเจาะ (อัตรารวม 0.01% ต่อตัว แบ่งสุ่มตามแต่ละรูนปืน)`,
+              `📖 Gun Rune Rule: Drops from Red Scorpion / Venom-Shot Scorpion in place of pierce runes (0.01% combined gun-rune roll split across eligible gun runes).`
+            )
+          : L(
+              `📖 กติการูนทั่วไป: ดรอปขั้น I จากมอนสเตอร์ในแผนที่ด้านล่าง (รวม ${RUNE_CFG.merge || 3} ชิ้นเป็นขั้นถัดไปฟรี I → II → III ที่แท็บรูนของป๋าหมูหริ่ง)`,
+              `📖 Standard Drop Rule: Drops at Tier I from the monsters grouped below (merge ${RUNE_CFG.merge || 3} of a tier into the next for free at Papa Moo's Runes tab).`
+            );
       html = `
         <div class="modal-hero">
+          <div class="rune-tier-icons">
+            ${[1, 2, 3].map((tier) => atlasImg('mats', `bl_rune_${id}_${tier}`, tier === 3 ? 60 : tier === 2 ? 52 : 44)).join('')}
+          </div>
           <div style="flex:1">
-            <h2>🔮 ${esc(tr(r.n))}</h2>
+            <h2>${esc(tr(r.n))}</h2>
             <div class="muted">${esc(r.n)} · <code>${esc(id)}</code></div>
-            <div style="display:flex;gap:6px;margin-top:8px">${pill(r.kind || 'rune', '#9a5cf0')}${r.on ? pill(r.on, '#3f95ff') : ''}</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+              ${pill(r.kind || 'rune', '#9a5cf0')}
+              ${r.on ? pill(r.on, '#3f95ff') : ''}
+              ${r.el ? elPill(r.el) : ''}
+              ${spellEls.length ? pill(`Lv ${spellMinLv}+`, '#ff8f3f') : ''}
+            </div>
           </div>
         </div>
         <div class="modal-section">
           <h3>✨ ${L('ความสามารถแต่ละระดับ', 'Effects by Tier')}</h3>
-          ${(r.t || []).map((txt, idx) => `<div style="margin-bottom:6px"><strong style="color:var(--gold)">Tier ${idx + 1}:</strong> ${esc(tr(txt))} <span class="muted">(${(r.price || [])[idx] ?? '–'})</span></div>`).join('')}
+          ${(r.t || []).map((txt, idx) => `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">${atlasImg('mats', `bl_rune_${id}_${idx + 1}`, 26)}<div><strong style="color:var(--gold)">Tier ${idx + 1}:</strong> ${esc(tr(txt))} <span class="muted">(${fmtCoin((r.price || [])[idx])})</span></div></div>`).join('')}
+          <div class="rune-rule-note">${esc(ruleNote)}</div>
         </div>
         <div class="modal-section">
-          <h3>👾 ${L('มอนสเตอร์ที่ดรอปรูนนี้', 'Dropped By')} (${droppers.length})</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            ${droppers.map(({ mon, ratePct }) => `<button type="button" class="chip-link" data-open="monster" data-id="${esc(mon.id)}">${monSprite(mon, 24)}<span>${esc(tr(mon.n))}</span><strong style="color:var(--purple)">${fmtPct(ratePct)}</strong></button>`).join('') || '<span class="muted">–</span>'}
+          <h3>🗺️ ${L('แผนที่ & มอนสเตอร์ที่ดรอป (จัดกลุ่มตามแมพ)', 'Drop Maps & Monsters (Grouped by Map)')} — ${droppers.length} ${L('มอน', 'monsters')} · ${realMapCount} ${L('แมพ', 'maps')}</h3>
+          <div class="rune-modal-controls">
+            <input class="input" id="runeModalFilter" type="search" placeholder="${L('กรองชื่อแมพ หรือ ชื่อมอนสเตอร์ในรูนนี้...', 'Filter map or monster name...')}">
+            <button type="button" class="btn is-on" data-rmsort="density">${L('จัดกลุ่มแมพมอนเยอะ / เรตสูง', 'Best Rate & Density')}</button>
+            <button type="button" class="btn" data-rmsort="level">${L('เรียงตามเลเวลแมพ', 'Sort by Map Lv')}</button>
           </div>
+          <div id="runeMapGroups"></div>
         </div>`;
     }
 
     if (!html) return;
     $('#modalBody').innerHTML = html;
+    if (kind === 'rune') {
+      let modalSort = 'density';
+      let modalFilter = '';
+      renderRuneMapGroups(id, modalSort, modalFilter);
+      const filterInput = $('#runeModalFilter');
+      if (filterInput) {
+        filterInput.addEventListener('input', (e) => {
+          modalFilter = e.target.value;
+          renderRuneMapGroups(id, modalSort, modalFilter);
+        });
+      }
+      $('#modalBody').querySelectorAll('[data-rmsort]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          modalSort = btn.dataset.rmsort;
+          $('#modalBody').querySelectorAll('[data-rmsort]').forEach((b) => b.classList.toggle('is-on', b === btn));
+          renderRuneMapGroups(id, modalSort, modalFilter);
+        });
+      });
+    }
     $('#modalBackdrop').hidden = false;
   }
 
@@ -3271,7 +3710,7 @@
       }
     };
 
-    pushHits(W.monsters || [], 'monster', L('มอนสเตอร์', 'Monster'), (m) => monSprite(m, 28), (m) => `${m.n} · Lv ${m.lv ?? '?'}`);
+    pushHits(W.monsters || [], 'monster', L('มอนสเตอร์', 'Monster'), (m) => monSprite(m, 28), (m) => `${m.n} · Lv ${m._lvLabel}`);
     pushHits(W.items || [], 'item', L('ไอเทม', 'Item'), (it) => itemSprite(it, 28), (it) => `${it.n} · ${it.s}`);
     pushHits(W.sets || [], 'set', L('เซ็ต', 'Set'), () => '🛡️', (s) => `${tr(s.b2)} · ${tr(s.b3)}`);
     pushHits(W.jobs || [], 'job', L('อาชีพ', 'Job'), (j) => atlasImg('jobs', j.id, 28), (j) => `${j.n} · Tier ${j.tier}`);
@@ -3279,7 +3718,7 @@
     pushHits(W.maps || [], 'map', L('แผนที่', 'Map'), () => '🗺️', (mp) => `${mp.n} · ${mp.lv || ''}`);
     pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => `${m.n} · ${fmtCoin(m.p)}`);
     pushHits(CARDS_LIST.map((c) => ({ id: c.id, n: c.cardName, ...c })), 'card', L('การ์ด', 'Card'), (c) => atlasImg('mats', c.cardId, 28), (c) => `${tr(c.monName)} · ${fmtCoin(c.stallPrice)}`);
-    pushHits(RUNES_LIST, 'rune', L('รูน', 'Rune'), () => '🔮', (r) => r.n);
+    pushHits(RUNES_LIST, 'rune', L('รูน', 'Rune'), (r) => atlasImg('mats', `bl_rune_${r.id}_1`, 28), (r) => `${r.n} · ${(RUNE_DROPPERS[r.id] || []).length} ${L('มอน', 'mons')} / ${RUNE_MAP_COUNTS[r.id] || 0} ${L('แมพ', 'maps')}`);
     pushHits(W.quests || [], 'quest', L('เควสต์', 'Quest'), () => '📜', (x) => `${tr(x.ch)} · Lv ${x.lv ?? 1}`);
 
     if (!hits.length) {

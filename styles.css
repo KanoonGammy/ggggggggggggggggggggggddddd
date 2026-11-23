@@ -948,6 +948,101 @@ table.data-table {
 .muted { color: var(--text-2); }
 .loading-box { padding: 40px; text-align: center; color: var(--text-2); }
 
+/* Rune Modal & Map-Grouped Droppers */
+.rune-tier-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  flex-shrink: 0;
+}
+.rune-rule-note {
+  background: rgba(154, 92, 240, 0.1);
+  border: 1px solid rgba(154, 92, 240, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 12.5px;
+  color: var(--text-1);
+  margin-top: 10px;
+}
+.rune-modal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.rune-modal-controls .input {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+.btn.is-on {
+  border-color: var(--gold);
+  background: rgba(245, 185, 66, 0.16);
+  color: var(--gold);
+}
+.map-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.map-group {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.map-group__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--border);
+}
+.map-group__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--text-0);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.15s;
+}
+.map-group__title:hover {
+  color: var(--gold);
+}
+.map-group__sub {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-2);
+}
+.map-group__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+}
+.map-group__mons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.map-group__mons .chip-link {
+  background: var(--bg-1);
+}
+
 .sidebar-backdrop {
   display: none;
 }
