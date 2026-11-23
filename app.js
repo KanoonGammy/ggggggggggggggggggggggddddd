@@ -87,10 +87,10 @@
     }
   }
 
-  function tr(text) {
+  function trAlways(text) {
     if (text == null) return '';
     const s = String(text);
-    if (!s || state.lang === 'en') return s;
+    if (!s) return '';
     if (Object.prototype.hasOwnProperty.call(DATA_TR, s)) return DATA_TR[s];
     if (Object.prototype.hasOwnProperty.call(UI_TR, s)) return UI_TR[s];
     if (/\d/.test(s)) {
@@ -100,6 +100,49 @@
       if (hit) return hit.replace(/\{(\d+)\}/g, (m, i) => (nums[i] != null ? nums[i] : m));
     }
     return s;
+  }
+
+  function tr(text) {
+    if (text == null) return '';
+    const s = String(text);
+    if (!s || state.lang === 'en') return s;
+    return trAlways(s);
+  }
+
+  function collectBi(val, out) {
+    if (val == null || val === false) return;
+    if (Array.isArray(val)) {
+      for (const x of val) collectBi(x, out);
+      return;
+    }
+    if (typeof val === 'object') {
+      for (const [k, v] of Object.entries(val)) {
+        out.push(k);
+        collectBi(v, out);
+      }
+      return;
+    }
+    const s = String(val);
+    if (!s) return;
+    out.push(s);
+    const th = trAlways(s);
+    if (th && th !== s) out.push(th);
+  }
+
+  function biText(...vals) {
+    const out = [];
+    for (const v of vals) collectBi(v, out);
+    return norm(out.join(' '));
+  }
+
+  function matchesQuery(haystack, rawQuery) {
+    const q = norm(rawQuery);
+    if (!q) return true;
+    const tokens = q.split(/\s+/).filter(Boolean);
+    for (const tok of tokens) {
+      if (!haystack.includes(tok)) return false;
+    }
+    return true;
   }
 
   function L(thText, enText) {
@@ -624,6 +667,189 @@
     return out;
   }
 
+  // Pre-build bilingual full-text search indexes (_q) across all entities
+  for (const it of (W.items || [])) {
+    const setObj = ITEM_TO_SET[it.id];
+    const droppers = ITEM_DROPPERS[it.id] || [];
+    const wskNames = (it.wsk || []).map((b) => [b[0], SKILL_MAP[b[0]] && SKILL_MAP[b[0]].n]);
+    it._q = biText(
+      it.id, it.n, it.d, it.ab, it.s, it.r, `lv ${it.lv || 1}`,
+      it.wt, W.wtypes && W.wtypes[it.wt],
+      it.el, W.elements && W.elements[it.el],
+      it.atk ? `atk ${it.atk}` : '',
+      itemStatsList(it), it.st,
+      setObj ? [setObj.n, setObj.b2, setObj.b3, setObj.pas] : '',
+      wskNames,
+      droppers.map((d) => [d.mon.id, d.mon.n])
+    );
+  }
+
+  for (const s of (W.sets || [])) {
+    const pcsInfo = (s.pcs || []).map((pid) => {
+      const it = IT[pid];
+      return it ? [pid, it.n, it.d, it.ab, itemStatsList(it), it.st] : pid;
+    });
+    s._q = biText(
+      s.id, s.n, s.line, `g${s.g}`, `grade ${s.g}`, `lv ${s.lv}`,
+      s.b2, s.b3, s.pas, s.bonuses, pcsInfo
+    );
+  }
+
+  for (const bs of (W.bossSets || [])) {
+    const m = MON[bs.boss];
+    const hatIt = IT[bs.hat];
+    const accIt = IT[bs.acc];
+    const wInfo = (bs.w || []).map((wid) => IT[wid] ? [wid, IT[wid].n, IT[wid].ab] : wid);
+    bs._q = biText(
+      bs.boss, m && m.n, bs.n, bs.text,
+      hatIt && [hatIt.n, hatIt.ab, itemStatsList(hatIt)],
+      accIt && [accIt.n, accIt.ab, itemStatsList(accIt)],
+      wInfo
+    );
+  }
+
+  for (const m of (W.monsters || [])) {
+    const armTypes = (S2.armour && S2.armour.types) || {};
+    const bm = S2.bossMoves && S2.bossMoves[m.id];
+    const cObj = CARD_BY_MON[m.id];
+    m._q = biText(
+      m.id, m.n, `lv ${m.lv ?? ''}`,
+      m.boss ? 'boss' : 'normal', m.story ? 'story' : '',
+      m.el, W.elements && W.elements[m.el],
+      m.race, W.races && W.races[m.race],
+      m.arm, armTypes[m.arm] && armTypes[m.arm].n, m.st,
+      (m.maps || []).map((mpid) => [mpid, MAP[mpid] && MAP[mpid].n]),
+      (m.drops || []).map(([tid]) => [tid, IT[tid] && IT[tid].n]),
+      (m.mats || []).map(([tid]) => [tid, MAT[tid] && MAT[tid].n]),
+      m.rune ? [m.rune[0], RUNES[m.rune[0]] && RUNES[m.rune[0]].n] : '',
+      cObj ? [cObj.cardName, cObj.artName, cObj.passives] : '',
+      bm ? [bm.moves, bm.minion] : ''
+    );
+  }
+
+  for (const j of (W.jobs || [])) {
+    j._q = biText(
+      j.id, j.n, j.d, `tier ${j.tier}`,
+      j.from && [j.from, JOB[j.from] && JOB[j.from].n],
+      (j.wt || []).map((w) => [w, W.wtypes && W.wtypes[w]]),
+      (j.lines || []).map((ln) => [ln.id, ln.n, ln.el]),
+      (j.sk || []).map((sk) => [sk.id, sk.n, sk.d])
+    );
+  }
+
+  for (const s of ALL_SKILLS) {
+    const boosters = SKILL_BOOSTERS[s.id] || [];
+    s._q = biText(
+      s.id, s.n, s.d, s.jobId, s.jobName, s.line,
+      s.active ? (s.type === 'magic' ? 'magic' : 'attack') : 'passive',
+      s.type, s.el, W.elements && W.elements[s.el], s.rg ? `range ${s.rg}` : '',
+      boosters.map((b) => [b.item.id, b.item.n])
+    );
+  }
+
+  for (const mp of (W.maps || [])) {
+    const reg = mp.pin && REG[mp.pin[0]];
+    const parent = mp.parent && MAP[mp.parent];
+    mp._q = biText(
+      mp.id, mp.n, mp.lv, mp.kind, mp.secret ? 'secret' : '',
+      reg && [reg.id, reg.n],
+      parent && [parent.id, parent.n],
+      mp.zones,
+      (mp.mons || []).map((mid) => MON[mid] ? [mid, MON[mid].n, MON[mid].el, W.elements && W.elements[MON[mid].el]] : mid)
+    );
+  }
+
+  for (const mat of (W.materials || [])) {
+    const droppers = MAT_DROPPERS[mat.id] || [];
+    mat._q = biText(
+      mat.id, mat.n, mat.d, mat.from, mat.p != null ? `${mat.p}c` : '',
+      mat.rare ? 'rare' : '', mat.life ? 'life' : '',
+      droppers.map((d) => [d.mon.id, d.mon.n, (d.mon.maps || []).map((mp) => MAP[mp] && MAP[mp].n)])
+    );
+  }
+
+  for (const c of CARDS_LIST) {
+    const fam = c.fam && LORE_CFG.fam && LORE_CFG.fam[c.fam];
+    c._q = biText(
+      c.id, c.cardId, c.cardName, c.monName, c.artName, c.artDesc,
+      c.el, W.elements && W.elements[c.el],
+      c.boss ? 'boss 5000' : 'normal 500', `lv ${c.lv}`,
+      c.fam, fam && [fam.n, fam.perks],
+      c.passives,
+      (c.maps || []).map((mp) => [mp, MAP[mp] && MAP[mp].n])
+    );
+  }
+
+  for (const d of FLAT_DROPS) {
+    const extra = d.dtype === 'item' ? (IT[d.targetId] && IT[d.targetId]._q)
+      : d.dtype === 'material' ? (MAT[d.targetId] && MAT[d.targetId]._q)
+      : d.dtype === 'card' ? (CARD_BY_MON[d.targetId] && CARD_BY_MON[d.targetId]._q)
+      : (RUNES[d.targetId] ? biText(RUNES[d.targetId].n, RUNES[d.targetId].t, RUNES[d.targetId].kind, RUNES[d.targetId].on) : '');
+    d._q = `${extra || ''} ` + biText(
+      d.dtype, d.targetId, d.targetName,
+      d.mon.id, d.mon.n, d.mon.el, W.elements && W.elements[d.mon.el],
+      d.mon.boss ? 'boss' : 'normal', `lv ${d.mon.lv ?? ''}`,
+      (d.maps || []).map((mp) => [mp, MAP[mp] && MAP[mp].n])
+    );
+  }
+
+  const SMELT_WORK_ORDER_NPCS = {};
+  for (const [gid, gv] of Object.entries((S2.orders && S2.orders.givers) || {})) {
+    for (const tierList of (gv.goods || [])) {
+      for (const id of tierList) {
+        (SMELT_WORK_ORDER_NPCS[id] = SMELT_WORK_ORDER_NPCS[id] || []).push(gv.n);
+      }
+    }
+  }
+  for (const r of SMELT_ANALYSIS) {
+    const good = SMELT_GOODS[r.outId];
+    r._q = biText(
+      r.id, r.outId, r.outName, r.skill, `lv ${r.lv}`,
+      good && good.d,
+      r.inputs.map((i) => [i.id, i.name]),
+      SMELT_WORK_ORDER_NPCS[r.outId]
+    );
+  }
+
+  for (const x of UNIFIED_MARKET) {
+    const extra = x.cat === 'gear' ? (IT[x.id] && IT[x.id]._q)
+      : x.cat === 'card' ? (CARD_BY_MON[x.id] && CARD_BY_MON[x.id]._q)
+      : x.cat === 'smelt' ? (SMELT_ANALYSIS.find((r) => r.outId === x.id)?._q || '')
+      : (MAT[x.id] && MAT[x.id]._q) || '';
+    const wObj = x.when != null ? WHEN_LABELS[x.when] : null;
+    x._q = `${extra} ` + biText(
+      x.cat, x.id, x.name, x.nodeName, x.skill, x.kind, x.on,
+      x.waters, wObj && [wObj.th, wObj.en],
+      x.el, W.elements && W.elements[x.el],
+      x.mon && [x.mon.id, x.mon.n],
+      (x.maps || []).map((mp) => [mp, MAP[mp] && MAP[mp].n]),
+      `lv ${x.lv ?? ''}`, x.price != null ? `${x.price}c` : ''
+    );
+  }
+
+  for (const qObj of (W.quests || [])) {
+    qObj._q = biText(qObj.id, qObj.t, qObj.ch, qObj.map, `lv ${qObj.lv ?? 1}`, qObj.obj);
+  }
+
+  const RUNES_LIST = Object.entries(RUNES).map(([id, r]) => ({
+    id,
+    ...r,
+    _q: biText(
+      id, r.n, r.kind, r.on, r.t, r.price,
+      (RUNE_DROPPERS[id] || []).map((d) => [d.mon.id, d.mon.n])
+    )
+  }));
+  const RELICS_LIST = Object.entries((S2.relics && S2.relics.list) || {}).map(([id, rel]) => ({
+    id,
+    ...rel,
+    _q: biText(id, rel.n, rel.el, W.elements && W.elements[rel.el], rel.gain, rel.price)
+  }));
+  const KEYSTONES_LIST = Object.entries((S2.keystone && S2.keystone.branches) || {}).map(([id, ks]) => ({
+    id,
+    ...ks,
+    _q: biText(id, ks.n, ks.small, ks.gain, ks.price)
+  }));
+
   // ------------------------------------------------------------------ Navigation Config
   const NAV_ITEMS = [
     { id: 'overview', icon: '📊', th: 'ภาพรวม & สถิติ', en: 'Overview & Stats', count: null },
@@ -906,11 +1132,7 @@
       if (maxRod != null) {
         if (x.cat !== 'fish' || (x.rod || 1) > maxRod) return false;
       }
-      if (q) {
-        const monText = x.mon ? `${x.mon.n} ${tr(x.mon.n)} ${(x.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ')}` : '';
-        const hay = norm(`${x.id} ${x.name} ${tr(x.name)} ${x.nodeName || ''} ${tr(x.nodeName || '')} ${monText}`);
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesQuery(x._q, q)) return false;
       return true;
     });
 
@@ -1095,7 +1317,7 @@
       if (st.craftSkill && r.skill !== st.craftSkill) return false;
       if (minLv != null && r.lv < minLv) return false;
       if (maxLv != null && r.lv > maxLv) return false;
-      if (q && !norm(`${r.outId} ${r.outName} ${tr(r.outName)} ${r.inputs.map((i) => `${i.name} ${tr(i.name)}`).join(' ')}`).includes(q)) return false;
+      if (q && !matchesQuery(r._q, q)) return false;
       return true;
     }).sort((a, b) => {
       let va = 0, vb = 0;
@@ -1209,10 +1431,7 @@
       if (st.arm && (m.arm || 'flesh') !== st.arm) return false;
       if (minLv != null && (m.lv || 0) < minLv) return false;
       if (maxLv != null && (m.lv || 0) > maxLv) return false;
-      if (q) {
-        const hay = norm(`${m.id} ${m.n} ${tr(m.n)}`);
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesQuery(m._q, q)) return false;
       return true;
     });
 
@@ -1353,10 +1572,7 @@
       if (st.el && (it.el || 'neutral') !== st.el) return false;
       if (minLv != null && (it.lv || 0) < minLv) return false;
       if (maxLv != null && (it.lv || 0) > maxLv) return false;
-      if (q) {
-        const hay = norm(`${it.id} ${it.n} ${tr(it.n)} ${it.d || ''} ${tr(it.d || '')}`);
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesQuery(it._q, q)) return false;
       return true;
     });
 
@@ -1439,7 +1655,7 @@
               </td>
               <td>${pill(tr(it.r), RAR_COLOR[it.r] || '#8a8499')}</td>
               <td class="num">${it.lv ?? 1}</td>
-              <td><div class="stat-chips">${stats.slice(0, 4).map((s) => `<span class="stat-chip">${esc(s)}</span>`).join('') || '<span class="muted">–</span>'}</div></td>
+              <td><div class="stat-chips">${stats.slice(0, 4).map((s) => `<span class="stat-chip">${esc(s)}</span>`).join('') || (it.ab ? '' : '<span class="muted">–</span>')}</div>${it.ab ? `<div class="name-sub" style="margin-top:3px">✨ ${esc(tr(it.ab))}</div>` : ''}</td>
               <td class="num" style="text-align:right">${droppers.length ? `<span style="color:var(--gold)">${droppers.length} ${L('ตัว', 'mons')}</span>` : '<span class="muted">–</span>'}</td>
             </tr>`;
           }).join('') || `<tr><td colspan="6" class="muted" style="text-align:center;padding:24px">${L('ไม่พบไอเทมที่ตรงเงื่อนไข', 'No matching items')}</td></tr>`}
@@ -1471,11 +1687,11 @@
     const q = norm(st.q);
     const sets = (W.sets || []).filter((s) => {
       if (st.g && String(s.g) !== st.g) return false;
-      if (q && !norm(`${s.id} ${s.n} ${tr(s.n)} ${s.pas || ''} ${tr(s.pas || '')}`).includes(q)) return false;
+      if (q && !matchesQuery(s._q, q)) return false;
       return true;
     });
     const bossSets = (W.bossSets || []).filter((bs) => {
-      if (q && !norm(`${bs.boss} ${bs.n} ${tr(bs.n)} ${bs.text || ''}`).includes(q)) return false;
+      if (q && !matchesQuery(bs._q, q)) return false;
       return true;
     });
 
@@ -1493,7 +1709,7 @@
       </div>
 
       <div class="filter-bar">
-        <input class="input input--search" id="setQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อเซ็ต / เอฟเฟกต์...', 'Search set name or effect...')}">
+        <input class="input input--search" id="setQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อเซ็ต / ค่าพลัง (เช่น MATK, SP, HP, CRIT) / เอฟเฟกต์ / ชิ้นส่วน...', 'Search set name, stats (MATK, SP, CRIT), passive, or piece...')}">
         ${st.tab === 'regular' ? `
           <select class="select" id="setG">
             <option value="">${L('ทุกเกรด (Grade)', 'All Grades')}</option>
@@ -1566,7 +1782,7 @@
     const q = norm(st.q);
     const jobs = (W.jobs || []).filter((j) => {
       if (st.tier !== 'all' && String(j.tier) !== st.tier) return false;
-      if (q && !norm(`${j.id} ${j.n} ${tr(j.n)} ${j.d || ''} ${tr(j.d || '')}`).includes(q)) return false;
+      if (q && !matchesQuery(j._q, q)) return false;
       return true;
     });
 
@@ -1634,7 +1850,7 @@
       if (st.skJob && s.jobId !== st.skJob) return false;
       if (st.skType && typeOf(s) !== st.skType) return false;
       if (st.skEl && (s.el || 'neutral') !== st.skEl) return false;
-      if (q && !norm(`${s.id} ${s.n} ${tr(s.n)} ${s.d} ${tr(s.d)} ${s.jobName} ${tr(s.jobName)}`).includes(q)) return false;
+      if (q && !matchesQuery(s._q, q)) return false;
       return true;
     });
 
@@ -1741,7 +1957,7 @@
       }
       if (st.kind && mp.kind !== st.kind) return false;
       if (st.secret === 'secret' && !mp.secret) return false;
-      if (q && !norm(`${mp.id} ${mp.n} ${tr(mp.n)} ${(mp.zones || []).join(' ')}`).includes(q)) return false;
+      if (q && !matchesQuery(mp._q, q)) return false;
       return true;
     });
 
@@ -1858,11 +2074,7 @@
       if (minR != null && d.ratePct <= minR) return false;
       if (minP != null && (d.price == null || d.price < minP)) return false;
       if (maxP != null && (d.price == null || d.price > maxP)) return false;
-      if (q) {
-        const mapTxt = (d.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ');
-        const hay = norm(`${d.targetId} ${d.targetName} ${tr(d.targetName)} ${d.mon.id} ${d.mon.n} ${tr(d.mon.n)} ${mapTxt}`);
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesQuery(d._q, q)) return false;
       return true;
     });
 
@@ -1989,7 +2201,7 @@
       if (st.matFilter === 'life' && !mat.life) return false;
       if (minP != null && (mat.p ?? 0) < minP) return false;
       if (maxP != null && (mat.p ?? 0) > maxP) return false;
-      if (q && !norm(`${mat.id} ${mat.n} ${tr(mat.n)} ${mat.d || ''} ${tr(mat.d || '')}`).includes(q)) return false;
+      if (q && !matchesQuery(mat._q, q)) return false;
       return true;
     });
 
@@ -2079,12 +2291,7 @@
       if (st.map && !(c.maps || []).includes(st.map)) return false;
       if (minLv != null && c.lv < minLv) return false;
       if (maxLv != null && c.lv > maxLv) return false;
-      if (q) {
-        const mapTxt = (c.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ');
-        const pasTxt = (c.passives || []).map((p) => `${p} ${tr(p)}`).join(' ');
-        const hay = norm(`${c.id} ${c.cardId} ${c.cardName} ${tr(c.cardName)} ${c.monName} ${tr(c.monName)} ${c.artName} ${tr(c.artName)} ${pasTxt} ${mapTxt}`);
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesQuery(c._q, q)) return false;
       return true;
     });
 
@@ -2173,14 +2380,14 @@
   function renderRunes() {
     const st = state.runes;
     const q = norm(st.q);
-    const runeEntries = Object.entries(RUNES).filter(([id, r]) => {
+    const runeEntries = RUNES_LIST.filter((r) => {
       if (st.kind && r.kind !== st.kind) return false;
       if (st.on && r.on !== st.on) return false;
-      if (q && !norm(`${id} ${r.n} ${tr(r.n)} ${(r.t || []).join(' ')}`).includes(q)) return false;
+      if (q && !matchesQuery(r._q, q)) return false;
       return true;
     });
-    const relics = Object.entries((S2.relics && S2.relics.list) || {});
-    const keystones = Object.entries((S2.keystone && S2.keystone.branches) || {});
+    const relics = RELICS_LIST.filter((rel) => !q || matchesQuery(rel._q, q));
+    const keystones = KEYSTONES_LIST.filter((ks) => !q || matchesQuery(ks._q, q));
     const onSet = Array.from(new Set(Object.values(RUNES).map((r) => r.on).filter(Boolean)));
     const kindSet = Array.from(new Set(Object.values(RUNES).map((r) => r.kind).filter(Boolean)));
 
@@ -2193,21 +2400,24 @@
       </div>
 
       <div class="tabs">
-        <button type="button" class="tab-btn ${st.tab === 'runes' ? 'is-on' : ''}" data-rtab="runes">${L('รูน', 'Runes')} (${Object.keys(RUNES).length})</button>
-        <button type="button" class="tab-btn ${st.tab === 'relics' ? 'is-on' : ''}" data-rtab="relics">${L('เรลิก', 'Relics')} (${relics.length})</button>
-        <button type="button" class="tab-btn ${st.tab === 'keystones' ? 'is-on' : ''}" data-rtab="keystones">${L('คีย์สโตน', 'Keystones')} (${keystones.length})</button>
+        <button type="button" class="tab-btn ${st.tab === 'runes' ? 'is-on' : ''}" data-rtab="runes">${L('รูน', 'Runes')} (${RUNES_LIST.length})</button>
+        <button type="button" class="tab-btn ${st.tab === 'relics' ? 'is-on' : ''}" data-rtab="relics">${L('เรลิก', 'Relics')} (${RELICS_LIST.length})</button>
+        <button type="button" class="tab-btn ${st.tab === 'keystones' ? 'is-on' : ''}" data-rtab="keystones">${L('คีย์สโตน', 'Keystones')} (${KEYSTONES_LIST.length})</button>
+      </div>
+
+      <div class="filter-bar">
+        <input class="input input--search" id="runeQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหารูน / เรลิก / คีย์สโตน / เอฟเฟกต์ / มอนที่ดรอป...', 'Search rune, relic, keystone, effect, dropper...')}">
+        ${st.tab === 'runes' ? `
+          <select class="select" id="runeKind"><option value="">${L('ทุกหมวด', 'All Kinds')}</option>${kindSet.map((k) => `<option value="${esc(k)}" ${st.kind === k ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select>
+          <select class="select" id="runeOn"><option value="">${L('ทุกเงื่อนไข (On)', 'All Triggers')}</option>${onSet.map((k) => `<option value="${esc(k)}" ${st.on === k ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select>
+        ` : ''}
       </div>
 
       ${st.tab === 'runes' ? `
-        <div class="filter-bar">
-          <input class="input input--search" id="runeQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหารูน / เอฟเฟกต์...', 'Search rune or effect...')}">
-          <select class="select" id="runeKind"><option value="">${L('ทุกหมวด', 'All Kinds')}</option>${kindSet.map((k) => `<option value="${esc(k)}" ${st.kind === k ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select>
-          <select class="select" id="runeOn"><option value="">${L('ทุกเงื่อนไข (On)', 'All Triggers')}</option>${onSet.map((k) => `<option value="${esc(k)}" ${st.on === k ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select>
-        </div>
         <div class="card-grid">
-          ${runeEntries.map(([id, r]) => {
-            const droppers = RUNE_DROPPERS[id] || [];
-            return `<article class="entity-card" data-open="rune" data-id="${esc(id)}">
+          ${runeEntries.map((r) => {
+            const droppers = RUNE_DROPPERS[r.id] || [];
+            return `<article class="entity-card" data-open="rune" data-id="${esc(r.id)}">
               <div class="entity-card__head">
                 <div style="flex:1">${nameHtml(r.n)}</div>
                 <div style="display:flex;gap:4px">${pill(r.kind || 'rune', '#9a5cf0')}${r.on ? pill(r.on, '#3f95ff') : ''}</div>
@@ -2219,10 +2429,10 @@
                 💰 ${(r.price || []).join(' / ')} · 👾 ${droppers.length} ${L('มอนสเตอร์ดรอป', 'droppers')}
               </div>
             </article>`;
-          }).join('')}
+          }).join('') || `<div class="muted">${L('ไม่พบรูนที่ตรงเงื่อนไข', 'No matching runes')}</div>`}
         </div>` : st.tab === 'relics' ? `
         <div class="card-grid">
-          ${relics.map(([id, rel]) => `
+          ${relics.map((rel) => `
             <article class="entity-card" style="cursor:default">
               <div class="entity-card__head">
                 ${elIcon(rel.el, 28)}
@@ -2233,31 +2443,26 @@
                 <div style="color:var(--green)">▲ <strong>${L('จุดเด่น:', 'Gain:')}</strong> ${esc(tr(rel.gain))}</div>
                 <div style="color:var(--red);margin-top:6px">▼ <strong>${L('ข้อเสีย:', 'Price:')}</strong> ${esc(tr(rel.price))}</div>
               </div>
-            </article>`).join('')}
+            </article>`).join('') || `<div class="muted">${L('ไม่พบเรลิกที่ตรงเงื่อนไข', 'No matching relics')}</div>`}
         </div>` : `
         <div class="card-grid">
-          ${keystones.map(([id, ks]) => `
+          ${keystones.map((ks) => `
             <article class="entity-card" style="cursor:default">
               <div class="entity-card__head">
                 <div style="flex:1">${nameHtml(ks.n)}</div>
-                ${pill(id.toUpperCase(), '#f5b942')}
+                ${pill(ks.id.toUpperCase(), '#f5b942')}
               </div>
               <div style="font-size:12.5px;display:flex;flex-direction:column;gap:6px">
                 <div><strong style="color:var(--text-2)">${L('โหนดย่อย:', 'Small Node:')}</strong> ${esc(tr(ks.small))}</div>
                 <div style="color:var(--green)">▲ <strong>${L('คีย์สโตน:', 'Gain:')}</strong> ${esc(tr(ks.gain))}</div>
                 <div style="color:var(--red)">▼ <strong>${L('ข้อแลกเปลี่ยน:', 'Price:')}</strong> ${esc(tr(ks.price))}</div>
               </div>
-            </article>`).join('')}
+            </article>`).join('') || `<div class="muted">${L('ไม่พบคีย์สโตนที่ตรงเงื่อนไข', 'No matching keystones')}</div>`}
         </div>`}
     `;
 
     $('#mainView').querySelectorAll('[data-rtab]').forEach((b) => b.addEventListener('click', () => { st.tab = b.dataset.rtab; renderRunes(); }));
-    if ($('#runeQ')) $('#runeQ').addEventListener('input', (e) => {
-      st.q = e.target.value;
-      const pos = e.target.selectionStart;
-      renderRunes();
-      const inp = $('#runeQ'); if (inp) { inp.focus(); if (pos != null) inp.setSelectionRange(pos, pos); }
-    });
+    if ($('#runeQ')) $('#runeQ').addEventListener('input', (e) => { st.q = e.target.value; keepFocus('#runeQ', renderRunes); });
     if ($('#runeKind')) $('#runeKind').addEventListener('change', (e) => { st.kind = e.target.value; renderRunes(); });
     if ($('#runeOn')) $('#runeOn').addEventListener('change', (e) => { st.on = e.target.value; renderRunes(); });
   }
@@ -2272,7 +2477,7 @@
       const q = norm(st.q);
       const list = (W.quests || []).filter((x) => {
         if (st.ch && x.ch !== st.ch) return false;
-        if (q && !norm(`${x.id} ${x.t} ${tr(x.t)} ${x.ch} ${tr(x.ch)} ${(x.obj || []).join(' ')}`).includes(q)) return false;
+        if (q && !matchesQuery(x._q, q)) return false;
         return true;
       });
       contentHtml = `
@@ -2322,13 +2527,19 @@
         return 0;
       };
 
-      const curRows = rawRows.map((r) => ({ ...r, _price: resolvePrice(r) })).filter((r) => {
+      const curRows = rawRows.map((r) => {
+        const wObj = r.when != null ? WHEN_LABELS[r.when] : null;
+        const matInfo = r.mat && MAT[r.mat];
+        const ingNames = r.mats ? Object.keys(r.mats).map((mid) => [mid, MAT[mid] && MAT[mid].n]) : '';
+        const rowQ = biText(r.id, r.n, r.waters, r.where, wObj && [wObj.th, wObj.en], r.rod ? `rod ${r.rod}` : '', r.tier ? `tier ${r.tier}` : '', r.buff, ingNames, matInfo && [matInfo.n, matInfo.d]);
+        return { ...r, _price: resolvePrice(r), _q: rowQ };
+      }).filter((r) => {
         if (minLv != null && (r.lv ?? 0) < minLv) return false;
         if (maxLv != null && (r.lv ?? 0) > maxLv) return false;
         if (minP != null && r._price < minP) return false;
         if (maxP != null && r._price > maxP) return false;
         if (st.lifeTab === 'fish' && st.lifeWhen !== 'all' && String(r.when || 0) !== st.lifeWhen) return false;
-        if (lq && !norm(`${r.id || ''} ${r.n || ''} ${tr(r.n || '')} ${(r.waters || []).join(' ')}`).includes(lq)) return false;
+        if (lq && !matchesQuery(r._q, lq)) return false;
         return true;
       }).sort((a, b) => {
         let va = 0, vb = 0;
@@ -2803,6 +3014,7 @@
           </div>
         </div>
         ${it.d ? `<p style="color:var(--text-1)">${esc(tr(it.d))}</p>` : ''}
+        ${it.ab ? `<p style="color:var(--gold);margin-top:4px">✨ ${esc(tr(it.ab))}</p>` : ''}
         <div class="modal-section">
           <h3>📊 ${L('ค่าสเตตัส', 'Stats')}</h3>
           <div class="stat-chips">${stats.map((s) => `<span class="stat-chip">${esc(s)}</span>`).join('') || '<span class="muted">–</span>'}</div>
@@ -2834,6 +3046,57 @@
           <div style="display:flex;flex-wrap:wrap;gap:6px">
             ${droppers.map(({ mon, ratePct }) => `<button type="button" class="chip-link" data-open="monster" data-id="${esc(mon.id)}">${monSprite(mon, 24)}<span>${esc(tr(mon.n))} (Lv ${mon.lv ?? '?'})</span><strong style="color:var(--gold)">${fmtPct(ratePct)}</strong></button>`).join('') || `<span class="muted">${L('ไม่มีข้อมูลดรอปจากมอนสเตอร์ (อาจมาจากร้านค้า/เควสต์/กาชา)', 'No monster drop sources (shop/quest/gacha)')}</span>`}
           </div>
+        </div>`;
+    } else if (kind === 'set') {
+      const s = SET[id];
+      if (!s) return;
+      html = `
+        <div class="modal-hero">
+          <div style="flex:1">
+            <h2>🛡️ ${esc(tr(s.n))}</h2>
+            <div class="muted">${esc(s.n)} · <code>${esc(s.id)}</code></div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+              ${pill(`Grade ${s.g}`, GRADE_COLOR[s.g] || '#8a8499')}
+              ${pill(`Lv ${s.lv}`, '#f5b942')}
+              ${pill(s.line || 'set', '#3f95ff')}
+            </div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h3>✨ ${L('โบนัสเซ็ต', 'Set Bonuses')}</h3>
+          <div style="font-size:13.5px;display:flex;flex-direction:column;gap:6px">
+            <div><strong style="color:var(--gold)">2pc:</strong> ${esc(tr(s.b2))}</div>
+            <div><strong style="color:var(--gold)">3pc:</strong> ${esc(tr(s.b3))}</div>
+            ${s.pas ? `<div style="color:var(--text-0)">✨ ${esc(tr(s.pas))}</div>` : ''}
+          </div>
+        </div>
+        <div class="modal-section">
+          <h3>⚔️ ${L('ชิ้นส่วนในเซ็ต', 'Set Pieces')} (${(s.pcs || []).length})</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${(s.pcs || []).map((pid) => {
+              const p = IT[pid];
+              return `<button type="button" class="chip-link" data-open="item" data-id="${esc(pid)}">${itemSprite(p, 28)}<span>${esc(tr(p ? p.n : pid))}</span></button>`;
+            }).join('')}
+          </div>
+        </div>`;
+    } else if (kind === 'quest') {
+      const qObj = (W.quests || []).find((x) => x.id === id);
+      if (!qObj) return;
+      html = `
+        <div class="modal-hero">
+          <div style="flex:1">
+            <h2>📜 ${esc(tr(qObj.t))}</h2>
+            <div class="muted">${esc(qObj.t)} · <code>${esc(qObj.id)}</code></div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+              ${pill(`Lv ${qObj.lv ?? 1}`, '#f5b942')}
+              ${qObj.map ? pill(tr(qObj.map), '#38c97a') : ''}
+              ${qObj.coins ? pill(`${fmt(qObj.coins)}c`, '#ff8f3f') : ''}
+            </div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h3>📖 ${esc(tr(qObj.ch))}</h3>
+          <ul style="margin:0;padding-left:18px;font-size:13px">${(qObj.obj || []).map((o) => `<li>${esc(tr(o))}</li>`).join('')}</ul>
         </div>`;
     } else if (kind === 'job') {
       const j = JOB[id];
@@ -2995,25 +3258,29 @@
     }
 
     const hits = [];
-    const pushHits = (arr, kind, label, spriteFn, getSub) => {
+    const pushHits = (arr, kind, label, spriteFn, getSub, maxCat = 5) => {
+      let catCount = 0;
       for (const x of arr) {
-        if (hits.length >= 24) break;
-        const n = x.n || x.t || '';
-        const hay = norm(`${x.id} ${n} ${tr(n)}`);
-        if (hay.includes(q)) {
+        if (catCount >= maxCat || hits.length >= 40) break;
+        const n = x.n || x.t || x.cardName || x.name || '';
+        const hay = x._q || biText(x.id, n);
+        if (matchesQuery(hay, q)) {
           hits.push({ kind, id: x.id, label, title: tr(n), sub: getSub(x), icon: spriteFn(x) });
+          catCount++;
         }
       }
     };
 
     pushHits(W.monsters || [], 'monster', L('มอนสเตอร์', 'Monster'), (m) => monSprite(m, 28), (m) => `${m.n} · Lv ${m.lv ?? '?'}`);
     pushHits(W.items || [], 'item', L('ไอเทม', 'Item'), (it) => itemSprite(it, 28), (it) => `${it.n} · ${it.s}`);
+    pushHits(W.sets || [], 'set', L('เซ็ต', 'Set'), () => '🛡️', (s) => `${tr(s.b2)} · ${tr(s.b3)}`);
     pushHits(W.jobs || [], 'job', L('อาชีพ', 'Job'), (j) => atlasImg('jobs', j.id, 28), (j) => `${j.n} · Tier ${j.tier}`);
     pushHits(ALL_SKILLS, 'skill', L('สกิล', 'Skill'), (s) => atlasImg('skills', s.icon, 28), (s) => `${s.n} · ${tr(s.jobName)}`);
     pushHits(W.maps || [], 'map', L('แผนที่', 'Map'), () => '🗺️', (mp) => `${mp.n} · ${mp.lv || ''}`);
-    pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => m.n);
+    pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => `${m.n} · ${fmtCoin(m.p)}`);
     pushHits(CARDS_LIST.map((c) => ({ id: c.id, n: c.cardName, ...c })), 'card', L('การ์ด', 'Card'), (c) => atlasImg('mats', c.cardId, 28), (c) => `${tr(c.monName)} · ${fmtCoin(c.stallPrice)}`);
-    pushHits(Object.entries(RUNES).map(([id, r]) => ({ id, ...r })), 'rune', L('รูน', 'Rune'), () => '🔮', (r) => r.n);
+    pushHits(RUNES_LIST, 'rune', L('รูน', 'Rune'), () => '🔮', (r) => r.n);
+    pushHits(W.quests || [], 'quest', L('เควสต์', 'Quest'), () => '📜', (x) => `${tr(x.ch)} · Lv ${x.lv ?? 1}`);
 
     if (!hits.length) {
       box.innerHTML = `<div class="muted" style="padding:12px;text-align:center">${L('ไม่พบข้อมูลที่ค้นหา', 'No matches found')}</div>`;
