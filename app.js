@@ -42,6 +42,7 @@
     drops: { tab: 'drops', q: '', dtype: 'all', monType: 'all', el: '', map: '', minLv: '', maxLv: '', minRate: '', minPrice: '', maxPrice: '', sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matMinPrice: '', matMaxPrice: '', matSort: 'p', matDir: -1, matPage: 0 },
     cards: { q: '', kind: 'all', el: '', map: '', minLv: '', maxLv: '', sort: 'price', dir: -1, page: 0 },
     runes: { tab: 'runes', kind: '', on: '', q: '' },
+    cooking: { q: '', pot: 'all', kind: 'all', minLv: '', maxLv: '', sort: 'price', dir: -1, viewMode: 'cards' },
     quests: { tab: 'quests', ch: '', q: '', lifeTab: 'crops', lifeQ: '', lifeMinLv: '', lifeMaxLv: '', lifeMinPrice: '', lifeMaxPrice: '', lifeWhen: 'all', lifeSort: 'price', lifeDir: -1 },
     s2: { tab: 'patch' }
   };
@@ -869,17 +870,75 @@
       xp: sm.xp
     });
   }
-  for (const d of (LIFE_T.dishes || [])) {
+  function formatBuff(buff) {
+    if (!buff) return '–';
+    const parts = [];
+    if (buff.atk != null) parts.push(`<span class="badge" style="background:rgba(242,92,105,0.18);color:#f25c69;border:1px solid rgba(242,92,105,0.4)">⚔️ ATK +${buff.atk}</span>`);
+    if (buff.matk != null) parts.push(`<span class="badge" style="background:rgba(154,92,240,0.18);color:#9a5cf0;border:1px solid rgba(154,92,240,0.4)">🔮 MATK +${buff.matk}</span>`);
+    if (buff.taken != null) parts.push(`<span class="badge" style="background:rgba(63,149,255,0.18);color:#3f95ff;border:1px solid rgba(63,149,255,0.4)">🛡️ ${L(`ลดดาเมจ -${buff.taken}%`, `Damage Taken -${buff.taken}%`)}</span>`);
+    if (buff.hpReg != null) parts.push(`<span class="badge" style="background:rgba(56,201,122,0.18);color:#38c97a;border:1px solid rgba(56,201,122,0.4)">❤️ ${L(`ฟื้นฟู HP +${buff.hpReg}/5s`, `HP Regen +${buff.hpReg}/5s`)}</span>`);
+    if (buff.spReg != null) parts.push(`<span class="badge" style="background:rgba(186,104,200,0.18);color:#ba68c8;border:1px solid rgba(186,104,200,0.4)">💧 ${L(`ฟื้นฟู SP +${buff.spReg}/5s`, `SP Regen +${buff.spReg}/5s`)}</span>`);
+    if (buff.spd != null) parts.push(`<span class="badge" style="background:rgba(245,185,66,0.18);color:#f5b942;border:1px solid rgba(245,185,66,0.4)">👟 ${L(`ความเร็ว +${buff.spd}`, `Move Speed +${buff.spd}`)}</span>`);
+    return parts.join(' ');
+  }
+
+  const DISH_BY_ID = {};
+  const DISHES_LIST = ((LIFE_T.dishes || [])).map((d) => {
+    const mat = MAT[d.id];
+    const sellPrice = Number((mat && mat.p != null) ? mat.p : Math.round(Number(d.coins || 0) * 1.5));
+    const cookCost = Number(d.coins || 0);
+    const netProfit = sellPrice - cookCost;
+    const profitPct = cookCost > 0 ? Math.round((netProfit / cookCost) * 100) : 0;
+    let rawCost = 0;
+    const ingredients = Object.entries(d.mats || {}).map(([mid, qty]) => {
+      const m = MAT[mid];
+      const unitPrice = Number((m && m.p) || 0);
+      const totalMatPrice = unitPrice * qty;
+      rawCost += totalMatPrice;
+      return { id: mid, qty, unitPrice, totalMatPrice, name: (m && m.n) || mid };
+    });
+    const totalInvested = rawCost + cookCost;
+    const trueProfit = sellPrice - totalInvested;
+    const dishObj = {
+      ...d,
+      mat,
+      sellPrice,
+      cookCost,
+      netProfit,
+      profitPct,
+      rawCost,
+      totalInvested,
+      trueProfit,
+      ingredients,
+      _q: biText(
+        d.id, d.n, mat && [mat.n, mat.d], `pot ${d.pot}`, `lv ${d.lv}`,
+        d.kind, d.buff,
+        ingredients.map((i) => [i.id, i.name, MAT[i.id] && MAT[i.id].n]),
+        `${sellPrice}c`, `${cookCost}c`, `${netProfit}c`
+      )
+    };
+    DISH_BY_ID[d.id] = dishObj;
+    return dishObj;
+  });
+
+  for (const d of DISHES_LIST) {
     UNIFIED_MARKET.push({
       cat: 'dish',
       id: d.id,
-      openKind: null,
-      spriteKind: null,
-      name: d.n,
+      openKind: 'mat',
+      spriteKind: 'mats',
+      name: (d.mat && d.mat.n) || d.n,
       lv: d.lv || 1,
-      price: Number(d.coins || 0),
-      ev: Number(d.coins || 0),
+      price: d.sellPrice,
+      cost: d.cookCost,
+      ev: d.netProfit,
+      profit: d.netProfit,
+      profitPct: d.profitPct,
+      trueProfit: d.trueProfit,
       pot: d.pot || 1,
+      buff: d.buff,
+      mats: d.mats,
+      kind: d.kind,
       xp: d.xp || 0
     });
   }
@@ -1125,6 +1184,7 @@
   const NAV_ITEMS = [
     { id: 'overview', icon: '📊', th: 'ภาพรวม & สถิติ', en: 'Overview & Stats', count: null },
     { id: 'market', icon: '💰', th: 'ฟาร์มเงิน & กรองราคา', en: 'Price & Farm Filter', count: UNIFIED_MARKET.length },
+    { id: 'cooking', icon: '🍲', th: 'ทำอาหาร & เมนูอาหาร', en: 'Cooking & Dishes', count: DISHES_LIST.length },
     { id: 'monsters', icon: '👾', th: 'มอนสเตอร์ & บอส', en: 'Monsters & Bosses', count: (W.monsters || []).length },
     { id: 'items', icon: '⚔️', th: 'อาวุธ & อุปกรณ์', en: 'Items & Gear', count: (W.items || []).length },
     { id: 'sets', icon: '🛡️', th: 'เซ็ตอุปกรณ์', en: 'Equipment Sets', count: (W.sets || []).length + (W.bossSets || []).length },
@@ -1195,6 +1255,7 @@
     const kpis = [
       { view: 'items', icon: '⚔️', label: L('ไอเทม & อาวุธ', 'Items & Weapons'), val: items.length, sub: `${items.filter((x) => x.s === 'weapon').length} ${L('อาวุธ', 'weapons')}` },
       { view: 'monsters', icon: '👾', label: L('มอนสเตอร์', 'Monsters'), val: mons.length, sub: `${bosses.length} ${L('บอส', 'bosses')}` },
+      { view: 'cooking', icon: '🍲', label: L('ทำอาหาร & เมนู', 'Cooking & Dishes'), val: DISHES_LIST.length, sub: L('บัฟ 30 นาที · กำไร +50%', '30m Buff · +50% Profit') },
       { view: 'maps', icon: '🗺️', label: L('แผนที่', 'Maps'), val: (W.maps || []).length, sub: `${(W.regions || []).length} ${L('ภูมิภาค', 'regions')}` },
       { view: 'jobs', icon: '🧙', label: L('อาชีพ & สกิล', 'Jobs & Skills'), val: (W.jobs || []).length, sub: `${ALL_SKILLS.length} ${L('สกิล', 'skills')}` },
       { view: 'drops', icon: '💎', label: L('วัตถุดิบ & ดรอป', 'Materials & Drops'), val: (W.materials || []).length, sub: `${fmt(FLAT_DROPS.length)} ${L('รายการดรอป', 'drop links')}` },
@@ -1539,8 +1600,8 @@
               srcHtml = `<span class="muted">${esc(x.skill)} · Raw ${fmtCoin(x.rawCost)} + Fee ${fmtCoin(x.fee)}${x.hasWildcard ? ' (+wildcard)' : ''}</span>`;
               metaHtml = `×${x.mult ? x.mult.toFixed(1) : '–'}`;
             } else if (x.cat === 'dish') {
-              srcHtml = `<span class="muted">Pot Lv ${x.pot} · EXP ${x.xp}</span>`;
-              metaHtml = `EXP ${x.xp}`;
+              srcHtml = `<span class="muted">Pot Lv ${x.pot} · ${L('ค่าปรุง', 'Fee')} ${fmtCoin(x.cost)}</span>`;
+              metaHtml = `+${fmtCoin(x.ev)} (+${x.profitPct || 50}%)`;
             } else if (x.cat === 'rune') {
               srcHtml = `<span class="muted">${esc(x.kind)} / ${esc(x.on)}</span>`;
               metaHtml = `${(x.prices || []).join('/')}`;
@@ -1696,6 +1757,277 @@
     $('#crSkill').addEventListener('change', (e) => { st.craftSkill = e.target.value; renderCraftAnalyzer(); });
     $('#crSort').addEventListener('change', (e) => { st.craftSort = e.target.value; renderCraftAnalyzer(); });
     $('#crDir').addEventListener('click', () => { st.craftDir = -st.craftDir; renderCraftAnalyzer(); });
+  }
+
+  // ------------------------------------------------------------------ VIEW: COOKING & DISHES
+  function renderCooking() {
+    const st = state.cooking;
+    const q = norm(st.q);
+    const minLv = st.minLv !== '' ? Number(st.minLv) : null;
+    const maxLv = st.maxLv !== '' ? Number(st.maxLv) : null;
+
+    let list = DISHES_LIST.filter((d) => {
+      if (st.pot !== 'all' && String(d.pot) !== st.pot) return false;
+      if (st.kind !== 'all') {
+        if (st.kind === 'atk' && d.buff.atk == null && d.buff.matk == null) return false;
+        if (st.kind === 'def' && d.buff.taken == null) return false;
+        if (st.kind === 'regen' && d.buff.hpReg == null && d.buff.spReg == null) return false;
+        if (st.kind === 'spd' && d.buff.spd == null) return false;
+      }
+      if (minLv != null && d.lv < minLv) return false;
+      if (maxLv != null && d.lv > maxLv) return false;
+      if (q && !matchesQuery(d._q, q)) return false;
+      return true;
+    });
+
+    list.sort((a, b) => {
+      let va = 0, vb = 0;
+      if (st.sort === 'price') { va = a.sellPrice; vb = b.sellPrice; }
+      else if (st.sort === 'profit') { va = a.netProfit; vb = b.netProfit; }
+      else if (st.sort === 'trueProfit') { va = a.trueProfit; vb = b.trueProfit; }
+      else if (st.sort === 'cost') { va = a.cookCost; vb = b.cookCost; }
+      else if (st.sort === 'lv') { va = a.lv; vb = b.lv; }
+      else if (st.sort === 'xp') { va = a.xp; vb = b.xp; }
+      else { va = tr(a.n); vb = tr(b.n); }
+      if (typeof va === 'number') return (va - vb) * st.dir;
+      return String(va).localeCompare(String(vb)) * st.dir;
+    });
+
+    const kindLabels = {
+      all: L('ทั้งหมด (8 เมนู)', 'All Dishes (8)'),
+      atk: L('⚔️ พลังโจมตี (ATK/MATK)', '⚔️ Attack (ATK/MATK)'),
+      def: L('🛡️ ป้องกัน / ลดความเสียหาย', '🛡️ Defense (Damage Reduction)'),
+      regen: L('❤️ ฟื้นฟู HP/SP', '❤️ Regeneration (HP/SP)'),
+      spd: L('👟 ความเร็วเคลื่อนที่', '👟 Movement Speed')
+    };
+
+    const potCounts = { all: DISHES_LIST.length, 1: 0, 2: 0, 3: 0, 4: 0 };
+    for (const d of DISHES_LIST) {
+      if (potCounts[d.pot] != null) potCounts[d.pot]++;
+    }
+
+    $('#mainView').innerHTML = `
+      <div class="page-head">
+        <div>
+          <h1>🍲 ${L('ทำอาหาร & เมนูอาหาร (Cooking & Dishes)', 'Cooking & Dish Recipes')}</h1>
+          <p>${L('คู่มือเมนูอาหารครบสูตร แหล่งวัตถุดิบ บัฟสเตตัส 30 นาที ค่าปรุง และราคาขายทำกำไรสำหรับพ่อค้าและสายฟาร์ม', 'Complete cooking recipes, ingredient sources, 30-minute status buffs, cooking fees, and selling prices with profit margins')}</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid" style="margin-bottom:16px">
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>🍲 ${L('เมนูอาหารทั้งหมด', 'Total Recipes')}</span><span class="muted">Pot 1–4</span></div>
+          <div class="kpi-card__val">${DISHES_LIST.length} ${L('เมนู', 'dishes')}</div>
+          <div class="kpi-card__sub">${L('เลเวล 1 ถึง 25', 'Level 1 to 25')}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>⏱️ ${L('ระยะเวลาบัฟ', 'Buff Duration')}</span><span style="color:var(--green)">100% Active</span></div>
+          <div class="kpi-card__val" style="color:var(--green)">30 ${L('นาที', 'mins')}</div>
+          <div class="kpi-card__sub">${L('คงอยู่ยาวนานตลอดการลงดัน/ฟาร์ม', 'Active throughout dungeons & farming')}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>💰 ${L('อัตรากำไรขายต่อจาน', 'Profit Margin')}</span><span style="color:var(--gold)">+50%</span></div>
+          <div class="kpi-card__val" style="color:var(--gold)">1.5×</div>
+          <div class="kpi-card__sub">${L('ราคาขาย = 150% ของค่าปรุงอาหาร', 'Selling price = 150% of cooking fee')}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>🐻 ${L('สถานที่ทำอาหาร', 'Cooking Location')}</span><span>Camp</span></div>
+          <div class="kpi-card__val" style="font-size:16px;margin-top:10px;color:var(--text-0)">${L('ป้าหมีหม้อดำ', 'Auntie Blackpot Bear')}</div>
+          <div class="kpi-card__sub">${L('ข้างกองไฟกลางค่าย (Forest Camp)', 'Beside central campfire')}</div>
+        </div>
+      </div>
+
+      <!-- Quick Preset Filter Buttons -->
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+        <button type="button" class="chip-link ${st.kind === 'all' && st.pot === 'all' ? 'is-active' : ''}" data-ckpreset="all">🌟 ${L('ทั้งหมด (8 เมนู)', 'All Dishes')}</button>
+        <button type="button" class="chip-link ${st.kind === 'atk' ? 'is-active' : ''}" data-ckpreset="atk">⚔️ ${L('เน้นบัฟโจมตี (ATK/MATK)', 'Attack Boost')}</button>
+        <button type="button" class="chip-link ${st.kind === 'def' ? 'is-active' : ''}" data-ckpreset="def">🛡️ ${L('เน้นลดดาเมจ (Damage -%)', 'Damage Reduction')}</button>
+        <button type="button" class="chip-link ${st.kind === 'regen' ? 'is-active' : ''}" data-ckpreset="regen">❤️ ${L('เน้นฟื้นฟู (HP/SP Regen)', 'HP/SP Regen')}</button>
+        <button type="button" class="chip-link ${st.kind === 'spd' ? 'is-active' : ''}" data-ckpreset="spd">👟 ${L('เน้นความเร็ว (Speed)', 'Movement Speed')}</button>
+        <button type="button" class="chip-link" data-ckpreset="profit">💎 ${L('เมนูขายกำไรสูงสุด', 'Top Profit Margin')}</button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <input class="input input--search" id="ckQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่ออาหาร, วัตถุดิบ, หรือบัฟ (เช่น สตูว์, แครอท, ATK, taken)...', 'Search dish name, ingredient, buff (e.g. carrot, stew, ATK)...')}">
+        <select class="select" id="ckPot">
+          <option value="all" ${st.pot === 'all' ? 'selected' : ''}>${L('ทุกหม้อต้ม (All Pots)', 'All Pots')} (${potCounts.all})</option>
+          <option value="1" ${st.pot === '1' ? 'selected' : ''}>${L('หม้อต้ม 1 (Pot 1)', 'Pot 1')} (${potCounts[1]})</option>
+          <option value="2" ${st.pot === '2' ? 'selected' : ''}>${L('หม้อต้ม 2 (Pot 2)', 'Pot 2')} (${potCounts[2]})</option>
+          <option value="3" ${st.pot === '3' ? 'selected' : ''}>${L('หม้อต้ม 3 (Pot 3)', 'Pot 3')} (${potCounts[3]})</option>
+          <option value="4" ${st.pot === '4' ? 'selected' : ''}>${L('หม้อต้ม 4 (Pot 4)', 'Pot 4')} (${potCounts[4]})</option>
+        </select>
+        <select class="select" id="ckKind">
+          ${Object.entries(kindLabels).map(([k, lbl]) => `<option value="${k}" ${st.kind === k ? 'selected' : ''}>${lbl}</option>`).join('')}
+        </select>
+        <input class="input input--sm" id="ckMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}" title="${L('เลเวลขั้นต่ำ', 'Minimum level')}">
+        <input class="input input--sm" id="ckMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}" title="${L('เลเวลสูงสุด', 'Maximum level')}">
+        <select class="select" id="ckSort">
+          <option value="price" ${st.sort === 'price' ? 'selected' : ''}>Sort: ${L('💰 ราคาขาย (Sell Price)', 'Sell Price')}</option>
+          <option value="profit" ${st.sort === 'profit' ? 'selected' : ''}>Sort: ${L('📈 กำไรต่อจาน (Net Profit)', 'Net Profit')}</option>
+          <option value="trueProfit" ${st.sort === 'trueProfit' ? 'selected' : ''}>Sort: ${L('💎 กำไรหักวัตถุดิบ (True Profit)', 'True Profit')}</option>
+          <option value="cost" ${st.sort === 'cost' ? 'selected' : ''}>Sort: ${L('ค่าปรุง (Cook Fee)', 'Cook Fee')}</option>
+          <option value="lv" ${st.sort === 'lv' ? 'selected' : ''}>Sort: ${L('เลเวลที่ต้องการ (Lv)', 'Level')}</option>
+          <option value="xp" ${st.sort === 'xp' ? 'selected' : ''}>Sort: ${L('EXP ทำอาหาร', 'Cooking EXP')}</option>
+          <option value="name" ${st.sort === 'name' ? 'selected' : ''}>Sort: ${L('ชื่ออาหาร (Name)', 'Name')}</option>
+        </select>
+        <button type="button" class="btn" id="ckDir" title="${L('สลับลำดับ มากไปน้อย / น้อยไปมาก', 'Toggle Sort Direction')}">${st.dir > 0 ? '▲ ASC' : '▼ DESC'}</button>
+        <div style="display:flex;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden">
+          <button type="button" class="btn ${st.viewMode === 'cards' ? 'is-active' : ''}" id="ckViewCards" style="padding:6px 10px;font-size:12px;border:none">🗂️ ${L('การ์ด', 'Cards')}</button>
+          <button type="button" class="btn ${st.viewMode === 'table' ? 'is-active' : ''}" id="ckViewTable" style="padding:6px 10px;font-size:12px;border:none">📑 ${L('ตาราง', 'Table')}</button>
+        </div>
+      </div>
+
+      ${st.viewMode === 'cards' ? renderCookingCards(list) : renderCookingTable(list)}
+    `;
+
+    // Attach listeners
+    $('#ckQ').addEventListener('input', (e) => { st.q = e.target.value; keepFocus('#ckQ', renderCooking); });
+    $('#ckPot').addEventListener('change', (e) => { st.pot = e.target.value; renderCooking(); });
+    $('#ckKind').addEventListener('change', (e) => { st.kind = e.target.value; renderCooking(); });
+    $('#ckMinLv').addEventListener('input', (e) => { st.minLv = e.target.value; keepFocus('#ckMinLv', renderCooking); });
+    $('#ckMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; keepFocus('#ckMaxLv', renderCooking); });
+    $('#ckSort').addEventListener('change', (e) => { st.sort = e.target.value; renderCooking(); });
+    $('#ckDir').addEventListener('click', () => { st.dir = -st.dir; renderCooking(); });
+    $('#ckViewCards').addEventListener('click', () => { st.viewMode = 'cards'; renderCooking(); });
+    $('#ckViewTable').addEventListener('click', () => { st.viewMode = 'table'; renderCooking(); });
+
+    $('#mainView').querySelectorAll('[data-ckpreset]').forEach((b) => b.addEventListener('click', () => {
+      const p = b.dataset.ckpreset;
+      Object.assign(st, { q: '', pot: 'all', minLv: '', maxLv: '', dir: -1 });
+      if (p === 'all') { st.kind = 'all'; st.sort = 'price'; }
+      else if (p === 'atk') { st.kind = 'atk'; st.sort = 'price'; }
+      else if (p === 'def') { st.kind = 'def'; st.sort = 'price'; }
+      else if (p === 'regen') { st.kind = 'regen'; st.sort = 'price'; }
+      else if (p === 'spd') { st.kind = 'spd'; st.sort = 'price'; }
+      else if (p === 'profit') { st.kind = 'all'; st.sort = 'profit'; }
+      renderCooking();
+    }));
+  }
+
+  function renderCookingCards(list) {
+    if (!list.length) {
+      return `<div class="muted" style="text-align:center;padding:48px">${L('ไม่พบเมนูอาหารที่ตรงกับตัวกรอง', 'No matching dishes found')}</div>`;
+    }
+    return `
+      <div class="card-grid">
+        ${list.map((d) => `
+          <article class="panel" style="display:flex;flex-direction:column;gap:12px;transition:border-color 0.15s;border:1px solid var(--border)">
+            <div style="display:flex;align-items:flex-start;gap:12px">
+              <span style="cursor:pointer" data-open="mat" data-id="${esc(d.id)}">${atlasImg('mats', d.id, 50)}</span>
+              <div style="flex:1">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+                  <h3 style="margin:0;font-size:16px;cursor:pointer" data-open="mat" data-id="${esc(d.id)}">${esc(tr(d.n))}</h3>
+                  ${pill(`Lv ${d.lv}`, '#f5b942')}
+                </div>
+                <div class="muted" style="font-size:12px;margin-top:2px">${esc(d.n)} · ${pill(`Pot ${d.pot}`, '#9a5cf0')}</div>
+              </div>
+            </div>
+
+            ${d.mat && d.mat.d ? `<div style="font-size:12px;color:var(--text-1);font-style:italic;line-height:1.4">"${esc(tr(d.mat.d))}"</div>` : ''}
+
+            <!-- Pricing Box -->
+            <div style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;display:flex;flex-direction:column;gap:6px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between">
+                <span style="font-size:12px;color:var(--text-2)">${L('💰 ราคาขาย (Sell Price):', '💰 Sell Price:')}</span>
+                <span style="font-size:18px;font-weight:800;color:var(--gold);font-family:var(--font-mono)">${fmtCoin(d.sellPrice)}</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px">
+                <span class="muted">${L('ค่าปรุงอาหาร (Cook Fee):', 'Cooking Fee:')}</span>
+                <span class="num">${fmtCoin(d.cookCost)}</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px">
+                <span style="color:var(--green);font-weight:600">${L('กำไรขายสุทธิ (Profit):', 'Net Profit:')}</span>
+                <span class="num" style="color:var(--green);font-weight:700">+${fmtCoin(d.netProfit)} (+${d.profitPct}%)</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text-2);border-top:1px dashed var(--border);padding-top:4px">
+                <span>${L('กำไรหักต้นทุนวัตถุดิบ:', 'Profit after raw mats:')}</span>
+                <span class="num" style="color:${d.trueProfit >= 0 ? 'var(--gold)' : 'var(--red)'}">+${fmtCoin(d.trueProfit)}</span>
+              </div>
+            </div>
+
+            <!-- Buffs Box -->
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-sm);padding:8px 10px">
+              <div style="font-size:11.5px;color:var(--text-2);display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                <span>⏱️ ${L('ผลบัฟอาหาร (Buff Duration)', 'Buff Effects')}</span>
+                <span style="color:var(--green);font-weight:600">30 ${L('นาที', 'mins')}</span>
+              </div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                ${formatBuff(d.buff)}
+              </div>
+            </div>
+
+            <!-- Recipe Ingredients -->
+            <div style="margin-top:auto">
+              <div style="font-size:11.5px;color:var(--text-2);margin-bottom:6px">📋 ${L('วัตถุดิบที่ต้องใช้ (คลิกดูแหล่งดรอป):', 'Required Ingredients (click to inspect):')}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px">
+                ${d.ingredients.map((ing) => `
+                  <button type="button" class="chip-link" style="padding:4px 8px;font-size:11.5px" data-open="mat" data-id="${esc(ing.id)}">
+                    ${atlasImg('mats', ing.id, 18)}
+                    <span>${esc(tr(ing.name))} <strong style="color:var(--gold)">×${ing.qty}</strong></span>
+                  </button>`).join('')}
+              </div>
+            </div>
+
+            <div style="font-size:11px;color:var(--text-2);display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:8px">
+              <span>Auntie Blackpot Bear</span>
+              <span class="muted">+${d.xp} Cooking EXP</span>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderCookingTable(list) {
+    if (!list.length) {
+      return `<div class="muted" style="text-align:center;padding:48px">${L('ไม่พบเมนูอาหารที่ตรงกับตัวกรอง', 'No matching dishes found')}</div>`;
+    }
+    return `
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr>
+          <th>${L('เมนูอาหาร', 'Dish')}</th>
+          <th>Lv</th>
+          <th>Pot</th>
+          <th style="text-align:right">${L('ราคาขาย', 'Sell Price')}</th>
+          <th style="text-align:right">${L('ค่าปรุง', 'Cook Fee')}</th>
+          <th style="text-align:right">${L('กำไร', 'Profit')}</th>
+          <th>${L('ผลบัฟ (นาน 30 นาที)', 'Buff (30 mins)')}</th>
+          <th>${L('วัตถุดิบที่ต้องใช้', 'Ingredients')}</th>
+          <th style="text-align:right">EXP</th>
+        </tr></thead>
+        <tbody>
+          ${list.map((d) => `
+            <tr>
+              <td>
+                <div class="name-cell" style="cursor:pointer" data-open="mat" data-id="${esc(d.id)}">
+                  ${atlasImg('mats', d.id, 32)}
+                  <div>
+                    <strong>${esc(tr(d.n))}</strong>
+                    <div class="name-sub">${esc(d.n)}</div>
+                  </div>
+                </div>
+              </td>
+              <td class="num">${d.lv}</td>
+              <td>${pill(`Pot ${d.pot}`, '#9a5cf0')}</td>
+              <td class="num" style="text-align:right;color:var(--gold);font-weight:800;font-size:14px">${fmtCoin(d.sellPrice)}</td>
+              <td class="num" style="text-align:right;color:var(--text-1)">${fmtCoin(d.cookCost)}</td>
+              <td class="num" style="text-align:right;color:var(--green);font-weight:700">+${fmtCoin(d.netProfit)}</td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${formatBuff(d.buff)}</div></td>
+              <td>
+                <div style="display:flex;gap:4px;flex-wrap:wrap">
+                  ${d.ingredients.map((ing) => `
+                    <button type="button" class="chip-link" style="padding:2px 6px;font-size:11px" data-open="mat" data-id="${esc(ing.id)}">
+                      ${atlasImg('mats', ing.id, 16)}<span>${esc(tr(ing.name))} ×${ing.qty}</span>
+                    </button>`).join('')}
+                </div>
+              </td>
+              <td class="num" style="text-align:right">+${d.xp}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table></div>
+    `;
   }
 
   // ------------------------------------------------------------------ VIEW 2: MONSTERS
@@ -2829,6 +3161,7 @@
       const resolvePrice = (r) => {
         if (r.price != null) return Number(r.price);
         if (r.mat && MAT[r.mat] && MAT[r.mat].p != null) return Number(MAT[r.mat].p);
+        if (MAT[r.id] && MAT[r.id].p != null) return Number(MAT[r.id].p);
         if (r.coins != null) return Number(r.coins);
         return 0;
       };
@@ -2911,9 +3244,11 @@
             </tr></thead>
             <tbody>
               ${curRows.map((r) => {
-                const iconId = r.mat || (st.lifeTab === 'fish' ? r.id : '');
+                const iconId = r.mat || (st.lifeTab === 'fish' || st.lifeTab === 'dishes' ? r.id : '');
                 const wLabel = st.lifeTab === 'fish' ? (WHEN_LABELS[r.when || 0] || WHEN_LABELS[0]) : null;
                 const detailParts = [];
+                if (r.pot) detailParts.push(`Pot ${r.pot}`);
+                if (st.lifeTab === 'dishes' && r.coins) detailParts.push(`${L('ค่าปรุง', 'Fee')} ${fmtCoin(r.coins)}`);
                 if (r.mins) detailParts.push(`${r.mins} min`);
                 if (r.rod) detailParts.push(`Rod ${r.rod}`);
                 if (wLabel) detailParts.push(L(wLabel.th, wLabel.en));
@@ -2926,7 +3261,7 @@
                   <td class="num">${r.lv ?? '–'}</td>
                   <td class="num">${r.xp ?? '–'}</td>
                   <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(r._price)}</td>
-                  <td class="muted" style="font-size:12px">${esc(detailParts.join(' · ') || '–')}</td>
+                  <td class="muted" style="font-size:12px">${st.lifeTab === 'dishes' && r.buff ? `${formatBuff(r.buff)} · ` : ''}${esc(detailParts.join(' · ') || '–')}</td>
                 </tr>`;
               }).join('')}
             </tbody>
@@ -3582,26 +3917,64 @@
       const mat = MAT[id];
       if (!mat) return;
       const droppers = MAT_DROPPERS[mat.id] || [];
+      const dish = DISH_BY_ID[mat.id];
       html = `
         <div class="modal-hero">
           <span class="sprite-box">${atlasImg('mats', mat.id, 64)}</span>
           <div style="flex:1">
             <h2>${esc(tr(mat.n))}</h2>
             <div class="muted">${esc(mat.n)} · <code>${esc(mat.id)}</code></div>
-            <div style="display:flex;gap:6px;margin-top:8px">
-              ${pill(`Price: ${fmt(mat.p)}`, '#f5b942')}
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+              ${dish ? pill(L('อาหาร (Dish)', 'Dish'), '#e667ad') : ''}
+              ${pill(`${L('ราคาขาย', 'Sell')}: ${fmtCoin(mat.p)}`, '#f5b942')}
+              ${dish ? pill(`Pot ${dish.pot}`, '#9a5cf0') : ''}
+              ${dish ? pill(`Lv ${dish.lv}`, '#3f95ff') : ''}
+              ${dish ? pill(L('บัฟ 30 นาที', '30m Buff'), '#38c97a') : ''}
               ${mat.rare ? pill('RARE', '#ff8f3f') : ''}
               ${mat.life ? pill('LIFE', '#38c97a') : ''}
             </div>
           </div>
         </div>
         <p>${esc(tr(mat.d || ''))}</p>
-        <div class="modal-section">
-          <h3>👾 ${L('ดรอปจากมอนสเตอร์', 'Dropped By')} (${droppers.length})</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            ${droppers.map(({ mon, ratePct }) => `<button type="button" class="chip-link" data-open="monster" data-id="${esc(mon.id)}">${monSprite(mon, 24)}<span>${esc(tr(mon.n))}</span><strong style="color:var(--green)">${fmtPct(ratePct)}</strong></button>`).join('') || `<span class="muted">${esc(tr(mat.from || '–'))}</span>`}
+        ${dish ? `
+          <div class="modal-section">
+            <h3>🍲 ${L('สูตรและข้อมูลการปรุงอาหาร', 'Cooking & Recipe Details')}</h3>
+            <div class="kv-grid" style="margin-bottom:10px">
+              <div class="kv-box"><div class="kv-box__k">${L('หม้อต้มที่ต้องใช้', 'Required Pot')}</div><div class="kv-box__v" style="color:var(--gold)">Pot ${dish.pot}</div></div>
+              <div class="kv-box"><div class="kv-box__k">${L('เลเวลที่ต้องการ', 'Required Lv')}</div><div class="kv-box__v">Lv ${dish.lv}</div></div>
+              <div class="kv-box"><div class="kv-box__k">${L('ค่าปรุงอาหาร', 'Cook Fee')}</div><div class="kv-box__v" style="color:var(--red)">${fmtCoin(dish.cookCost)}</div></div>
+              <div class="kv-box"><div class="kv-box__k">${L('ราคาขาย (NPC/Stall)', 'Sell Price')}</div><div class="kv-box__v" style="color:var(--gold);font-weight:800">${fmtCoin(dish.sellPrice)}</div></div>
+              <div class="kv-box"><div class="kv-box__k">${L('กำไรต่อจาน', 'Net Profit')}</div><div class="kv-box__v" style="color:var(--green);font-weight:700">+${fmtCoin(dish.netProfit)} (+${dish.profitPct}%)</div></div>
+              <div class="kv-box"><div class="kv-box__k">${L('EXP ทำอาหาร', 'Cooking EXP')}</div><div class="kv-box__v">+${dish.xp}</div></div>
+            </div>
+            <div style="margin-bottom:8px">
+              <strong>${L('⏱️ ผลบัฟ (นาน 30 นาที):', '⏱️ Buff Effects (30 min duration):')}</strong>
+              <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">${formatBuff(dish.buff)}</div>
+            </div>
+            <div>
+              <strong>${L('📋 วัตถุดิบที่ต้องใช้ (คลิกดูแหล่งดรอป):', '📋 Required Ingredients (click to inspect):')}</strong>
+              <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+                ${dish.ingredients.map((ing) => `<button type="button" class="chip-link" data-open="mat" data-id="${esc(ing.id)}">${atlasImg('mats', ing.id, 20)}<span>${esc(tr(ing.name))} ×${ing.qty}</span><span class="muted">(${fmtCoin(ing.unitPrice)})</span></button>`).join('')}
+              </div>
+            </div>
           </div>
-        </div>`;
+        ` : ''}
+        ${droppers.length ? `
+          <div class="modal-section">
+            <h3>👾 ${L('ดรอปจากมอนสเตอร์', 'Dropped By')} (${droppers.length})</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              ${droppers.map(({ mon, ratePct }) => `<button type="button" class="chip-link" data-open="monster" data-id="${esc(mon.id)}">${monSprite(mon, 24)}<span>${esc(tr(mon.n))}</span><strong style="color:var(--green)">${fmtPct(ratePct)}</strong></button>`).join('')}
+            </div>
+          </div>
+        ` : (dish ? `
+          <div class="modal-section">
+            <div class="muted">🐻 ${L('สถานที่ทำอาหาร: ป้าหมีหม้อดำ ข้างกองไฟกลางค่าย (Auntie Blackpot Bear, Central Campfire)', 'Cook Location: Auntie Blackpot Bear, Central Campfire')}</div>
+          </div>
+        ` : (mat.from ? `
+          <div class="modal-section">
+            <div class="muted">${esc(tr(mat.from))}</div>
+          </div>
+        ` : ''))}`;
     } else if (kind === 'rune') {
       const r = RUNES[id];
       if (!r) return;
@@ -3717,6 +4090,7 @@
     pushHits(ALL_SKILLS, 'skill', L('สกิล', 'Skill'), (s) => atlasImg('skills', s.icon, 28), (s) => `${s.n} · ${tr(s.jobName)}`);
     pushHits(W.maps || [], 'map', L('แผนที่', 'Map'), () => '🗺️', (mp) => `${mp.n} · ${mp.lv || ''}`);
     pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => `${m.n} · ${fmtCoin(m.p)}`);
+    pushHits(DISHES_LIST, 'mat', L('อาหาร', 'Dish'), (d) => atlasImg('mats', d.id, 28), (d) => `${d.n} · ${L('ราคาขาย', 'Sell')} ${fmtCoin(d.sellPrice)} · Pot ${d.pot}`);
     pushHits(CARDS_LIST.map((c) => ({ id: c.id, n: c.cardName, ...c })), 'card', L('การ์ด', 'Card'), (c) => atlasImg('mats', c.cardId, 28), (c) => `${tr(c.monName)} · ${fmtCoin(c.stallPrice)}`);
     pushHits(RUNES_LIST, 'rune', L('รูน', 'Rune'), (r) => atlasImg('mats', `bl_rune_${r.id}_1`, 28), (r) => `${r.n} · ${(RUNE_DROPPERS[r.id] || []).length} ${L('มอน', 'mons')} / ${RUNE_MAP_COUNTS[r.id] || 0} ${L('แมพ', 'maps')}`);
     pushHits(W.quests || [], 'quest', L('เควสต์', 'Quest'), () => '📜', (x) => `${tr(x.ch)} · Lv ${x.lv ?? 1}`);
@@ -3743,6 +4117,7 @@
     switch (state.view) {
       case 'overview': renderOverview(); break;
       case 'market': renderMarket(); break;
+      case 'cooking': renderCooking(); break;
       case 'monsters': renderMonsters(); break;
       case 'items': renderItems(); break;
       case 'sets': renderSets(); break;
