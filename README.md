@@ -17,18 +17,19 @@
 ### ฟีเจอร์ใน Dashboard (`index.html` + `app.js` + `styles.css`)
 - **สลับภาษา ไทย (TH) / English (EN)** ได้ทันทีทุกหน้าและในหน้าต่างรายละเอียด (ใช้พจนานุกรมภาษาไทย 10,834 รายการจากตัวเกมจริง)
 - **Global Search (`Ctrl+K`)**: ค้นหามอนสเตอร์ อาวุธ ไอเทม อาชีพ สกิล แผนที่ วัตถุดิบ และรูนพร้อมกัน
-- **11 หมวดหมู่หลัก**:
+- **12 หมวดหมู่หลัก**:
   1. **Overview & Stats** — ภาพรวม KPI, กราฟสัดส่วนไอเทม/ธาตุ/เกราะ, อันดับบอส HP สูงสุด, มอนสเตอร์ EXP สูงสุด และกราฟ EXP Lv 1–98
-  2. **Price & Farm Filter (ฟาร์มเงิน & กรองราคา)** — ตัวกรองรวมทุกหมวด (ดรอปมอน ปลา แร่ ไม้ พืชผัก ของหลอม อาหาร รูน) กรองตามราคา เลเวล ธาตุ % ดรอป ช่วงเวลาตกปลา/ขั้นเบ็ด พร้อมหน้า **วิเคราะห์กำไรคราฟต์/หลอมแร่ & Work Orders**
-  3. **Monsters & Bosses** — ค้นหา กรองธาตุ/เผ่า/เกราะ/เลเวล ดูแผนที่เกิด อัตราดรอปจริง และเรียงตามเงินเฉลี่ยต่อตัว (`EV/Kill` / `Coin/1k HP`)
+  2. **Price & Farm Filter (ฟาร์มเงิน & กรองราคา)** — ตัวกรองรวมทุกหมวด (ไอเทม/อาวุธดรอป วัตถุดิบดรอป การ์ด ปลา แร่ ไม้ พืชผัก ของหลอม อาหาร รูน) กรองตามราคา เลเวล แมพ ธาตุ % ดรอป ช่วงเวลาตกปลา/ขั้นเบ็ด พร้อมหน้า **วิเคราะห์กำไรคราฟต์/หลอมแร่ & Work Orders**
+  3. **Monsters & Bosses** — ค้นหา กรองธาตุ/เผ่า/เกราะ/เลเวล ดูแผนที่เกิด อัตราดรอปจริง การ์ด และเรียงตามเงินเฉลี่ยต่อตัว (`EV/Kill` / `Coin/1k HP`)
   4. **Items & Gear** — อาวุธ ชุด หมวก โล่ เครื่องประดับ พร้อมค่าสเตตัส โบนัสเซ็ต และแหล่งดรอปย้อนกลับ
   5. **Equipment Sets** — 80 เซ็ตทั่วไป + 5 เซ็ตบอส พร้อมชิ้นส่วนกดดูรายละเอียดได้
   6. **Jobs & Skills** — 46 อาชีพ + 428 สกิล พร้อมตารางความแรงตามเลเวล ระยะสกิล และอาวุธเสริมสกิล
   7. **Maps & World** — แผนที่โลก 5 ภูมิภาคแบบปักหมุดคลิกได้ + รายละเอียดมอนสเตอร์ที่เกิด
-  8. **Drop Finder & Materials** — ค้นหาจุดดรอป 4,069 รายการ (กรองธาตุ เลเวล % ดรอป ราคา) + 1,530 วัตถุดิบเรียงตามราคา
-  9. **Runes, Relics & Keystones** — 47 รูน (Tier 1–3), 10 เรลิก, 4 คีย์สโตน
-  10. **Quests & Life Skills** — 97 เควสต์, 5 สกิลชีวิต, ตารางพืช/ปลา/แร่/ไม้ (พร้อมราคาและตัวกรองครบ), 22 สูตรเตาหลอม
-  11. **Season 2 & Export Hub** — Patch Notes, Blood Moon, Lore Book, Mounts/Wings และปุ่มดาวน์โหลดไฟล์ JSON / CSV ทุกไฟล์
+  8. **Drop Finder & Materials** — ค้นหาจุดดรอป 4,403 รายการ (กรองแมพ ธาตุ เลเวล % ดรอป ราคา + แสดงคอลัมน์แมพ) + 1,530 วัตถุดิบเรียงตามราคา
+  9. **Monster Cards (การ์ดมอนสเตอร์)** — 338 การ์ด Lore Art พร้อมราคาตั้งร้าน (500c / 5,000c) พาสซีฟ แมพ และธาตุ
+  10. **Runes, Relics & Keystones** — 47 รูน (Tier 1–3), 10 เรลิก, 4 คีย์สโตน
+  11. **Quests & Life Skills** — 97 เควสต์, 5 สกิลชีวิต, ตารางพืช/ปลา/แร่/ไม้ (พร้อมราคาและตัวกรองครบ), 22 สูตรเตาหลอม
+  12. **Season 2 & Export Hub** — Patch Notes, Blood Moon, Lore Book, Mounts/Wings และปุ่มดาวน์โหลดไฟล์ JSON / CSV ทุกไฟล์
 
 ---
 
@@ -44,7 +45,8 @@
 | **Maps & Regions** (5 ภูมิภาค) | 176 + 5 | [maps.json](data/db/maps.json), [regions.json](data/db/regions.json) | [maps.csv](data/csv/maps.csv) |
 | **Jobs & Skills** | 46 / 428 | [jobs.json](data/db/jobs.json), [skills.json](data/db/skills.json) | [jobs.csv](data/csv/jobs.csv), [skills.csv](data/csv/skills.csv) |
 | **Materials** | 1,530 | [materials.json](data/db/materials.json) | [materials.csv](data/csv/materials.csv) |
-| **Flat Drop Index** (Item / Mat / Rune) | 4,069 | [drops.json](data/db/drops.json) | [drops.csv](data/csv/drops.csv) |
+| **Monster Cards** (การ์ด Lore Art) | 338 | [cards.json](data/db/cards.json) | [cards.csv](data/csv/cards.csv) |
+| **Flat Drop Index** (Item / Mat / Card / Rune) | 4,403 | [drops.json](data/db/drops.json) | [drops.csv](data/csv/drops.csv) |
 | **Quests** | 97 | [quests.json](data/db/quests.json) | [quests.csv](data/csv/quests.csv) |
 | **Runes / Relics / Keystones** | 47 / 10 / 4 | [runes_relics_keystones.json](data/db/runes_relics_keystones.json) | [runes.csv](data/csv/runes.csv) |
 | **Monster Skills, Lore & Map Fit** | 22 Lore / 15 Skills | [monster_skills_lore.json](data/db/monster_skills_lore.json) | – |

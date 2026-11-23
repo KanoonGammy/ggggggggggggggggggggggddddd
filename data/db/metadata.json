@@ -4,7 +4,7 @@
   "season": "SS2 · v0.2",
   "s2_version": "v0.2 · Season 2 test · 6 Nov 2026",
   "wiki_built_at": "2026-11-23T08:52:49.305Z",
-  "scraped_at": "2026-11-23T10:59:13.971927+00:00",
+  "scraped_at": "2026-11-23T11:48:14.534112+00:00",
   "counts": {
     "items": 2130,
     "sets": 80,
@@ -16,7 +16,8 @@
     "jobs": 46,
     "skills": 428,
     "materials": 1530,
-    "drops_total": 4069,
+    "cards": 338,
+    "drops_total": 4403,
     "quests": 97,
     "runes": 47,
     "relics": 10,
@@ -68,11 +69,15 @@
     },
     {
       "path": "data/db/drops.json",
-      "bytes": 1893326
+      "bytes": 2047345
     },
     {
       "path": "data/db/quests.json",
       "bytes": 66813
+    },
+    {
+      "path": "data/db/cards.json",
+      "bytes": 492219
     },
     {
       "path": "data/db/runes_relics_keystones.json",
@@ -128,8 +133,8 @@
     },
     {
       "path": "data/csv/drops.csv",
-      "bytes": 822088,
-      "rows": 4069
+      "bytes": 890106,
+      "rows": 4403
     },
     {
       "path": "data/csv/quests.csv",
@@ -140,6 +145,11 @@
       "path": "data/csv/runes.csv",
       "bytes": 20216,
       "rows": 47
+    },
+    {
+      "path": "data/csv/cards.csv",
+      "bytes": 201867,
+      "rows": 338
     }
   ],
   "assets": [

@@ -4068,3 +4068,337 @@ baphomet_root,Baphomet · Root-Possessed Form,บาโฟเม็ด ร่า
 baphomet_root,Baphomet · Root-Possessed Form,บาโฟเม็ด ร่างรากสิง,99,True,item,hat_baph,Demon Goat Lord's Horn,เขาจ้าวแพะปีศาจ,1.0,
 baphomet_root,Baphomet · Root-Possessed Form,บาโฟเม็ด ร่างรากสิง,99,True,item,hat_baphroot,Goat Lord Root Horns,เขารากจ้าวแพะ,1.0,
 baphomet_root,Baphomet · Root-Possessed Form,บาโฟเม็ด ร่างรากสิง,99,True,rune,heavy,Heavy Rune,รูนหนัก,4.0,
+slime_green,Leaf Slime,สไลม์ใบไม้,5,False,card,bl_card_slime_green,Leaf Slime Card,การ์ดสไลม์ใบไม้,0.01,farm
+slime_blue,Clearwater Slime,สไลม์น้ำใส,18,False,card,bl_card_slime_blue,Clearwater Slime Card,การ์ดสไลม์น้ำใส,0.01,meadow|marsh|tallgrass|appleslope|dandelion|apiary|beaverdam|reedmaze|eelhut
+slime_stone,Mossy Rock Slime,สไลม์หินตะไคร่,31,False,card,bl_card_slime_stone,Mossy Rock Slime Card,การ์ดสไลม์หินตะไคร่,0.01,woods|batcave|antmine1|acorngrove|hunterlodge|moonwell|quarry1|quarry2
+slime_honey,Honey Slime,สไลม์น้ำผึ้ง,15,False,card,bl_card_slime_honey,Honey Slime Card,การ์ดสไลม์น้ำผึ้ง,0.01,meadow|battlefield|appleslope|dandelion|apiary
+slime_glow,Glow Slime,สไลม์เรืองแสง,90,False,card,bl_card_slime_glow,Glow Slime Card,การ์ดสไลม์เรืองแสง,0.01,woods|swamp|dark|sporevale|fallencap|acorngrove|hunterlodge|moonwell|bubblepits|cagetrees
+slime_lava,Lava Slime,สไลม์ลาวา,78,False,card,bl_card_slime_lava,Lava Slime Card,การ์ดสไลม์ลาวา,0.01,canyon|burnt|volcano|lavavent1|lavalake|ashvale|goldsluice|dustgulch|meteor1|meteor2|meteor3
+bat,Nightfall Bat,ค้างคาวรัตติกาล,79,False,card,bl_card_bat,Nightfall Bat Card,การ์ดค้างคาวรัตติกาล,0.01,farm|graveyard|lake|batcave|batnest|weepgarden|willows|shipwreck|shipgrave|diggervillage|wreathfield|giantbones|quarry1|quarry2|quarry3
+bee,Giant Bee,ผึ้งยักษ์,44,False,card,bl_card_bee,Giant Bee Card,การ์ดผึ้งยักษ์,0.01,meadow|wind|battlefield|appleslope|dandelion|apiary|heathmoor|howlpass|cliffmill
+moth,Glowing Night Moth,ผีเสื้อราตรีเรืองแสง,40,False,card,bl_card_moth,Glowing Night Moth Card,การ์ดผีเสื้อราตรีเรืองแสง,0.01,woods|acorngrove|hunterlodge|moonwell
+boar,Stubtusk Boar,หมูป่าเขี้ยวตัน,9,False,card,bl_card_boar,Stubtusk Boar Card,การ์ดหมูป่าเขี้ยวตัน,0.01,farm
+wolf,Moonshadow Wolf,หมาป่าเงาจันทร์,82,False,card,bl_card_wolf,Moonshadow Wolf Card,การ์ดหมาป่าเงาจันทร์,0.01,woods|prime|acorngrove|hunterlodge|moonwell|hotsprings
+scorpion,Red Scorpion,แมงป่องแดง,82,False,card,bl_card_scorpion,Red Scorpion Card,การ์ดแมงป่องแดง,0.01,canyon|volcano|goldsluice|dustgulch
+skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,card,bl_card_skeleton,Skeleton Soldier Card,การ์ดโครงกระดูกทหาร,0.01,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
+scarecrow,Haunted Scarecrow,หุ่นไล่กาผีสิง,18,False,card,bl_card_scarecrow,Haunted Scarecrow Card,การ์ดหุ่นไล่กาผีสิง,0.01,meadow|farm|cornmaze|battlefield|melonfield|windpump|curinghouse|appleslope|dandelion|apiary
+stump,Ghost Stump,ตอไม้ผี,38,False,card,bl_card_stump,Ghost Stump Card,การ์ดตอไม้ผี,0.01,woods|acorngrove|hunterlodge|moonwell
+golem,Red Rock Golem,โกเลมหินแดง,78,False,card,bl_card_golem,Red Rock Golem Card,การ์ดโกเลมหินแดง,0.01,canyon|goldsluice|dustgulch
+pumpkin,Mischief Pumpkin,ฟักทองจอมซน,9,False,card,bl_card_pumpkin,Mischief Pumpkin Card,การ์ดฟักทองจอมซน,0.01,farm|melonfield|windpump|curinghouse
+carrot,Dashing Carrot,แครอทจอมพุ่ง,10,False,card,bl_card_carrot,Dashing Carrot Card,การ์ดแครอทจอมพุ่ง,0.01,farm|melonfield|windpump|curinghouse
+crow,Corn Thief Crow,อีกาขโมยข้าวโพด,38,False,card,bl_card_crow,Corn Thief Crow Card,การ์ดอีกาขโมยข้าวโพด,0.01,farm|road|cornmaze|battlefield|refugeecamp|woodbridge|wagonvale|melonfield|windpump|curinghouse
+frog,Clearmarsh Frog,กบบึงใส,19,False,card,bl_card_frog,Clearmarsh Frog Card,การ์ดกบบึงใส,0.01,marsh|stiltvillage|beaverdam|reedmaze|eelhut
+crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,card,bl_card_crab,Bigclaw Brook Crab Card,การ์ดปูก้ามโตลำธาร,0.01,marsh|stiltvillage|beaverdam|reedmaze|eelhut
+dragonfly,Sapphire Dragonfly,แมลงปอไพลิน,23,False,card,bl_card_dragonfly,Sapphire Dragonfly Card,การ์ดแมลงปอไพลิน,0.01,marsh|beaverdam|reedmaze|eelhut
+turtle,Grumpy Moss Turtle,เต่าตะไคร่ขี้โมโห,24,False,card,bl_card_turtle,Grumpy Moss Turtle Card,การ์ดเต่าตะไคร่ขี้โมโห,0.01,marsh|beaverdam|reedmaze|eelhut
+zombie,Farmer Zombie,ซอมบี้ชาวนา,38,False,card,bl_card_zombie,Farmer Zombie Card,การ์ดซอมบี้ชาวนา,0.01,graveyard|crypt1|coffinhollow|diggervillage|wreathfield|giantbones
+ghost,Wisp Ghost,ผีดวงไฟ,96,False,card,bl_card_ghost,Wisp Ghost Card,การ์ดผีดวงไฟ,0.01,graveyard|crypt1|crypt2|dark|weepgarden|shadowpath|diggervillage|wreathfield|giantbones|silver2
+tombstone,Haunted Gravestone,ป้ายหลุมศพผีสิง,31,False,card,bl_card_tombstone,Haunted Gravestone Card,การ์ดป้ายหลุมศพผีสิง,0.01,graveyard|diggervillage|wreathfield|giantbones
+ember_fox,Red Ember Fox,จิ้งจอกถ่านแดง,45,False,card,bl_card_ember_fox,Red Ember Fox Card,การ์ดจิ้งจอกถ่านแดง,0.01,burnt|stumpfield|ashvale|stillburning
+char_stump,Smoldering Stump,ตอไม้ถ่านคุ,44,False,card,bl_card_char_stump,Smoldering Stump Card,การ์ดตอไม้ถ่านคุ,0.01,burnt|stumpfield|ashvale|stillburning
+ash_wisp,Cinder Sprite,ภูตเถ้าถ่าน,42,False,card,bl_card_ash_wisp,Cinder Sprite Card,การ์ดภูตเถ้าถ่าน,0.01,burnt|stumpfield|stillburning
+storm_eagle,Storm Eagle,อินทรีพายุ,49,False,card,bl_card_storm_eagle,Storm Eagle Card,การ์ดอินทรีพายุ,0.01,wind|eyrie|heathmoor|howlpass|cliffmill
+cloud_ram,Curlhorn Cloud Sheep,แกะเมฆเขาม้วน,50,False,card,bl_card_cloud_ram,Curlhorn Cloud Sheep Card,การ์ดแกะเมฆเขาม้วน,0.01,wind|heathmoor|howlpass|cliffmill
+gust_sprite,Whirlwind Sprite,ภูตลมหมุน,46,False,card,bl_card_gust_sprite,Whirlwind Sprite Card,การ์ดภูตลมหมุน,0.01,wind|heathmoor|howlpass|cliffmill
+poison_toad,Poison Toad,คางคกพิษ,59,False,card,bl_card_poison_toad,Poison Toad Card,การ์ดคางคกพิษ,0.01,swamp|mangrove|poisonvillage|bubblepits|cagetrees
+swamp_snake,Bogvenom Snake,งูหนองพิษ,62,False,card,bl_card_swamp_snake,Bogvenom Snake Card,การ์ดงูหนองพิษ,0.01,swamp|mangrove|bubblepits|cagetrees
+maneater,Man-Eating Flower,ดอกไม้กินคน,62,False,card,bl_card_maneater,Man-Eating Flower Card,การ์ดดอกไม้กินคน,0.01,swamp|bubblepits|cagetrees
+salamander,Salamander,ซาลาแมนเดอร์,84,False,card,bl_card_salamander,Salamander Card,การ์ดซาลาแมนเดอร์,0.01,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
+magma_golem,Lava Golem,โกเลมลาวา,89,False,card,bl_card_magma_golem,Lava Golem Card,การ์ดโกเลมลาวา,0.01,volcano|lavavent2|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
+fire_bat,Flame Bat,ค้างคาวเปลวไฟ,87,False,card,bl_card_fire_bat,Flame Bat Card,การ์ดค้างคาวเปลวไฟ,0.01,volcano|lavavent1|lavavent2|obsidian|smokevent|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7
+kappa,Mistbog Kappa,กัปปะหนองหมอก,84,False,card,bl_card_kappa,Mistbog Kappa Card,การ์ดกัปปะหนองหมอก,0.01,lake|floatvillage|willows
+mist_wraith,Shadowmist Sprite,ภูตหมอกเงา,92,False,card,bl_card_mist_wraith,Shadowmist Sprite Card,การ์ดภูตหมอกเงา,0.01,lake|isle|floatvillage|willows|shipwreck|reefs|lighthouse
+shadow_heron,Shadow Heron,นกกระสาเงา,88,False,card,bl_card_shadow_heron,Shadow Heron Card,การ์ดนกกระสาเงา,0.01,lake|floatvillage|willows
+raptor,Leaf Raptor,แร็พเตอร์ใบไม้,89,False,card,bl_card_raptor,Leaf Raptor Card,การ์ดแร็พเตอร์ใบไม้,0.01,prime|tarpit|fernvale|hotsprings
+elder_treant,Ancient Giant Tree,ต้นไม้ยักษ์โบราณ,91,False,card,bl_card_elder_treant,Ancient Giant Tree Card,การ์ดต้นไม้ยักษ์โบราณ,0.01,prime|tarpit|hotsprings
+rhino_beetle,Giant Rhino Beetle,ด้วงแรดยักษ์,89,False,card,bl_card_rhino_beetle,Giant Rhino Beetle Card,การ์ดด้วงแรดยักษ์,0.01,prime|tarpit|hotsprings
+cave_spider,Cave Spider,แมงมุมถ้ำ,19,False,card,bl_card_cave_spider,Cave Spider Card,การ์ดแมงมุมถ้ำ,0.01,batcave|batnest|quarry1|quarry2|quarry3
+worker_ant,Worker Ant,มดงาน,44,False,card,bl_card_worker_ant,Worker Ant Card,การ์ดมดงาน,0.01,antmine1|antmine2|antmine3|quarry2|quarry3
+soldier_ant,Soldier Ant,มดทหาร,49,False,card,bl_card_soldier_ant,Soldier Ant Card,การ์ดมดทหาร,0.01,antmine1|antmine2|antmine3|quarry3|silver1|silver2
+flying_ant,Flying Ant,มดบิน,47,False,card,bl_card_flying_ant,Flying Ant Card,การ์ดมดบิน,0.01,antmine2|antmine3|silver1|silver2
+bone_knight,Bone Knight,อัศวินกระดูก,52,False,card,bl_card_bone_knight,Bone Knight Card,การ์ดอัศวินกระดูก,0.01,crypt1|crypt2|silver1|silver2
+candle_wisp,Candle Spirit,วิญญาณเทียน,47,False,card,bl_card_candle_wisp,Candle Spirit Card,การ์ดวิญญาณเทียน,0.01,crypt1|crypt2|silver1|silver2
+lava_worm,Lava Worm,หนอนลาวา,89,False,card,bl_card_lava_worm,Lava Worm Card,การ์ดหนอนลาวา,0.01,lavavent1|lavavent2|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7
+fire_imp,Flame Imp,อิมป์เปลวไฟ,90,False,card,bl_card_fire_imp,Flame Imp Card,การ์ดอิมป์เปลวไฟ,0.01,lavavent1|lavavent2|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7
+caravan_bandit,Caravan Robber,โจรปล้นคาราวาน,42,False,card,bl_card_caravan_bandit,Caravan Robber Card,การ์ดโจรปล้นคาราวาน,0.01,road|refugeecamp|woodbridge|wagonvale
+hollow_horse,Hollow Horse,ม้ากลวง,41,False,card,bl_card_hollow_horse,Hollow Horse Card,การ์ดม้ากลวง,0.01,road|refugeecamp|woodbridge|wagonvale
+giant_crow,Giant Crow,อีกายักษ์,42,False,card,bl_card_giant_crow,Giant Crow Card,การ์ดอีกายักษ์,0.01,road|salt|woodbridge|saltdock|watchtower
+toll_guard,Salt Checkpoint Guard,ยามด่านเกลือ,48,False,card,bl_card_toll_guard,Salt Checkpoint Guard Card,การ์ดยามด่านเกลือ,0.01,salt|saltflats|saltdock|watchtower
+hound,Hunting Hound,สุนัขล่า,47,False,card,bl_card_hound,Hunting Hound Card,การ์ดสุนัขล่า,0.01,salt|saltflats|watchtower
+snow_wolf,Snow Wolf,หมาป่าหิมะ,58,False,card,bl_card_snow_wolf,Snow Wolf Card,การ์ดหมาป่าหิมะ,0.01,peak|snowpines|icefall|avalanche
+ice_goat,Mountain Goat,แพะภูเขา,58,False,card,bl_card_ice_goat,Mountain Goat Card,การ์ดแพะภูเขา,0.01,peak|snowpines|icefall|avalanche
+storm_spirit,Blizzard Sprite,ภูตพายุหิมะ,57,False,card,bl_card_storm_spirit,Blizzard Sprite Card,การ์ดภูตพายุหิมะ,0.01,peak|owl3|snowpines|icefall|avalanche
+stone_owl,Stone Owl,นกฮูกหิน,58,False,card,bl_card_stone_owl,Stone Owl Card,การ์ดนกฮูกหิน,0.01,owl1|owl2|owl3
+hollow_stargazer,Hollow Astronomer's Aide,ผู้ช่วยนักดาราศาสตร์กลวง,58,False,card,bl_card_hollow_stargazer,Hollow Astronomer's Aide Card,การ์ดผู้ช่วยนักดาราศาสตร์กลวง,0.01,owl1|owl2|owl3
+hollow_villager,Hollow Villager,ชาวบ้านกลวง,72,False,card,bl_card_hollow_villager,Hollow Villager Card,การ์ดชาวบ้านกลวง,0.01,nroad|silentfarm|roadinn|travelgrave
+shadow_crow,Shadow Crow,อีกาเงา,93,False,card,bl_card_shadow_crow,Shadow Crow Card,การ์ดอีกาเงา,0.01,nroad|dark|blackroots|shadowpath|treeedge|silentfarm|roadinn|travelgrave
+hollow_guard,Hollow Guard,ยามกลวง,82,False,card,bl_card_hollow_guard,Hollow Guard Card,การ์ดยามกลวง,0.01,outer|nightmarket|tannery|moat
+city_hound,Capital Stray,หมาจรเมืองหลวง,80,False,card,bl_card_city_hound,Capital Stray Card,การ์ดหมาจรเมืองหลวง,0.01,outer|nightmarket|tannery|moat
+hollow_carthorse,Hollow Cart Horse,ม้าลากเกวียนกลวง,82,False,card,bl_card_hollow_carthorse,Hollow Cart Horse Card,การ์ดม้าลากเกวียนกลวง,0.01,outer|nightmarket|tannery|moat
+candle_minion,Candle's Henchman,ลูกน้องแคนเดิล,86,False,card,bl_card_candle_minion,Candle's Henchman Card,การ์ดลูกน้องแคนเดิล,0.01,canal|sluicegate|warehouses|shipyard
+canal_rat,Canal Rat,หนูคลอง,86,False,card,bl_card_canal_rat,Canal Rat Card,การ์ดหนูคลอง,0.01,canal|cathedral|sluicegate|warehouses|shipyard|whitestatues|clocksquare|rooftops
+light_filler,Light Filler,คนกรอกแสง,86,False,card,bl_card_light_filler,Light Filler Card,การ์ดคนกรอกแสง,0.01,canal|sluicegate|warehouses|shipyard
+flying_book,Flying Book,หนังสือบิน,84,False,card,bl_card_flying_book,Flying Book Card,การ์ดหนังสือบิน,0.01,ledger1|ledger2
+hollow_lamplighter,Hollow Lightkeeper,ผู้จุดตะเกียงกลวง,88,False,card,bl_card_hollow_lamplighter,Hollow Lightkeeper Card,การ์ดผู้จุดตะเกียงกลวง,0.01,ledger1|ledger2
+paper_blade,Paper Blade,ใบมีดกระดาษ,87,False,card,bl_card_paper_blade,Paper Blade Card,การ์ดใบมีดกระดาษ,0.01,ledger1|ledger2
+mist_citizen,Mist Townsfolk,ชาวเมืองหมอก,92,False,card,bl_card_mist_citizen,Mist Townsfolk Card,การ์ดชาวเมืองหมอก,0.01,isle|reefs|lighthouse|shipgrave
+lightless_deer,Lightless Deer,กวางไร้แสง,96,False,card,bl_card_lightless_deer,Lightless Deer Card,การ์ดกวางไร้แสง,0.01,dark|blackroots|shadowpath
+faceless_puppet,Faceless Puppet,หุ่นไร้หน้า,94,False,card,bl_card_faceless_puppet,Faceless Puppet Card,การ์ดหุ่นไร้หน้า,0.01,dark|puppet1|puppet2|blackroots
+wooden_hand,Giant Puppet Hand,มือหุ่นยักษ์,92,False,card,bl_card_wooden_hand,Giant Puppet Hand Card,การ์ดมือหุ่นยักษ์,0.01,puppet1|puppet2
+thread_binder,Thread Wrapper,ด้ายพันคน,94,False,card,bl_card_thread_binder,Thread Wrapper Card,การ์ดด้ายพันคน,0.01,puppet1|puppet2
+cardinal_puppet,Cardinal's Puppet,หุ่นของคาร์ดินัล,99,False,card,bl_card_cardinal_puppet,Cardinal's Puppet Card,การ์ดหุ่นของคาร์ดินัล,0.01,cathedral|whitestatues|clocksquare|rooftops
+temple_soldier,Temple Soldier,ทหารวิหาร,99,False,card,bl_card_temple_soldier,Temple Soldier Card,การ์ดทหารวิหาร,0.01,cathedral|whitestatues|clocksquare|rooftops
+bell_puppet,Bell Puppet,หุ่นระฆัง,99,False,card,bl_card_bell_puppet,Bell Puppet Card,การ์ดหุ่นระฆัง,0.01,bell1|bell2|bell3|bell4|bell5|bell6|bell7
+hollow_bellringer,Hollow Bell Ringer,ผู้ตีระฆังกลวง,99,False,card,bl_card_hollow_bellringer,Hollow Bell Ringer Card,การ์ดผู้ตีระฆังกลวง,0.01,bell1|bell2|bell3|bell4|bell5|bell6|bell7
+first_lamplighter,First Lightkeeper,ผู้จุดตะเกียงรุ่นแรก,99,False,card,bl_card_first_lamplighter,First Lightkeeper Card,การ์ดผู้จุดตะเกียงรุ่นแรก,0.01,grave1|grave2
+star_crystal,Living Star Crystal,ผลึกดาวมีชีวิต,99,False,card,bl_card_star_crystal,Living Star Crystal Card,การ์ดผลึกดาวมีชีวิต,0.01,grave1|grave2
+field_mouse,Rice Thief Vole,หนูนาขโมยข้าว,17,False,card,bl_card_field_mouse,Rice Thief Vole Card,การ์ดหนูนาขโมยข้าว,0.01,farm2|threshing
+sunflower_bee,Sunflower Bee,ผึ้งทานตะวัน,18,False,card,bl_card_sunflower_bee,Sunflower Bee Card,การ์ดผึ้งทานตะวัน,0.01,farm2|threshing
+bucket_scarecrow,Lid-Shield Scarecrow,หุ่นไล่กาถือฝาถัง,18,False,card,bl_card_bucket_scarecrow,Lid-Shield Scarecrow Card,การ์ดหุ่นไล่กาถือฝาถัง,0.01,farm2|pens|threshing
+angry_rooster,Moody Jungle Fowl,ไก่ป่าเจ้าอารมณ์,18,False,card,bl_card_angry_rooster,Moody Jungle Fowl Card,การ์ดไก่ป่าเจ้าอารมณ์,0.01,farm2|cornmaze|threshing
+potato_walker,Walking Potato,มันฝรั่งเดินได้,17,False,card,bl_card_potato_walker,Walking Potato Card,การ์ดมันฝรั่งเดินได้,0.01,farm2|pens|threshing
+seed_flower,Seed-Shooting Flower,ดอกไม้ยิงเมล็ด,21,False,card,bl_card_seed_flower,Seed-Shooting Flower Card,การ์ดดอกไม้ยิงเมล็ด,0.01,meadow2|thornrose
+horn_rabbit,Unihorn Rabbit,กระต่ายเขาเดียว,22,False,card,bl_card_horn_rabbit,Unihorn Rabbit Card,การ์ดกระต่ายเขาเดียว,0.01,meadow2|tallgrass|thornrose
+firefly_healer,Healer Firefly,หิ่งห้อยหมอยา,21,False,card,bl_card_firefly_healer,Healer Firefly Card,การ์ดหิ่งห้อยหมอยา,0.01,meadow2|thornrose
+sleep_moth,Sleep-Dust Moth,ผีเสื้อผงหลับ,22,False,card,bl_card_sleep_moth,Sleep-Dust Moth Card,การ์ดผีเสื้อผงหลับ,0.01,meadow2|tallgrass|thornrose
+hedgehog,Splitting Hedgehog,เม่นแตกตัว,22,False,card,bl_card_hedgehog,Splitting Hedgehog Card,การ์ดเม่นแตกตัว,0.01,meadow2|tallgrass|thornrose
+spit_frog,Spitwater Frog,กบพ่นน้ำ,24,False,card,bl_card_spit_frog,Spitwater Frog Card,การ์ดกบพ่นน้ำ,0.01,marsh2|logdrive|springcave
+split_shroom,Splitting Water Shroom,เห็ดน้ำแตกตัว,28,False,card,bl_card_split_shroom,Splitting Water Shroom Card,การ์ดเห็ดน้ำแตกตัว,0.01,marsh2|logdrive|springcave
+otter,Hunter Otter,นากนักล่า,28,False,card,bl_card_otter,Hunter Otter Card,การ์ดนากนักล่า,0.01,marsh2|stiltvillage|logdrive|springcave
+kingfisher,Diving Kingfisher,นกกระเต็นดำน้ำ,28,False,card,bl_card_kingfisher,Diving Kingfisher Card,การ์ดนกกระเต็นดำน้ำ,0.01,marsh2|stiltvillage|logdrive|springcave
+leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,card,bl_card_leap_trout,Leaping Trout Card,การ์ดปลาเทราต์กระโดด,0.01,marsh2|logdrive|springcave
+shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,card,bl_card_shield_crab,Big Shield Rock Crab Card,การ์ดปูหินโล่ใหญ่,0.01,marsh3|cascades|behindfalls|fallstop
+mud_eel,Mud Eel,ปลาไหลมุดโคลน,32,False,card,bl_card_mud_eel,Mud Eel Card,การ์ดปลาไหลมุดโคลน,0.01,marsh3|cascades|behindfalls|fallstop
+dragonfly_lead,Dragonfly Leader,แมลงปอจ่าฝูง,34,False,card,bl_card_dragonfly_lead,Dragonfly Leader Card,การ์ดแมลงปอจ่าฝูง,0.01,marsh3|cascades|behindfalls|fallstop
+mist_sprite,Mist Water Sprite,ภูตละอองน้ำ,33,False,card,bl_card_mist_sprite,Mist Water Sprite Card,การ์ดภูตละอองน้ำ,0.01,marsh3|cascades|behindfalls|fallstop
+water_newt,Water Salamander,ซาลาแมนเดอร์น้ำ,34,False,card,bl_card_water_newt,Water Salamander Card,การ์ดซาลาแมนเดอร์น้ำ,0.01,marsh3|cascades|behindfalls|fallstop
+grave_digger,Gravedigger Ghost,ผีขุดหลุม,38,False,card,bl_card_grave_digger,Gravedigger Ghost Card,การ์ดผีขุดหลุม,0.01,graveyard2|coffinhollow|keeperhouse
+bone_archer,Skeleton Archer,โครงกระดูกพลธนู,35,False,card,bl_card_bone_archer,Skeleton Archer Card,การ์ดโครงกระดูกพลธนู,0.01,graveyard2|keeperhouse
+candle_witch,Candlewax Witch,แม่มดเทียนไข,38,False,card,bl_card_candle_witch,Candlewax Witch Card,การ์ดแม่มดเทียนไข,0.01,graveyard2|weepgarden|keeperhouse
+coffin_bomb,Exploding Coffin,โลงผีระเบิด,37,False,card,bl_card_coffin_bomb,Exploding Coffin Card,การ์ดโลงผีระเบิด,0.01,graveyard2|keeperhouse
+grave_crow,Graveyard Crow,อีกาสุสาน,35,False,card,bl_card_grave_crow,Graveyard Crow Card,การ์ดอีกาสุสาน,0.01,graveyard2|coffinhollow|keeperhouse
+puff_shroom,Puffball Shroom,เห็ดพองลม,46,False,card,bl_card_puff_shroom,Puffball Shroom Card,การ์ดเห็ดพองลม,0.01,woods2|sporevale|glowpool
+shroom_beetle,Shroom-Carrier Beetle,ด้วงแบกเห็ด,45,False,card,bl_card_shroom_beetle,Shroom-Carrier Beetle Card,การ์ดด้วงแบกเห็ด,0.01,woods2|sporevale|glowpool
+shroom_wolf,Shroom Wolf Leader,หมาป่าเห็ดจ่าฝูง,46,False,card,bl_card_shroom_wolf,Shroom Wolf Leader Card,การ์ดหมาป่าเห็ดจ่าฝูง,0.01,woods2|fallencap|glowpool
+doctor_shroom,Doctor Shroom,เห็ดหมอ,43,False,card,bl_card_doctor_shroom,Doctor Shroom Card,การ์ดเห็ดหมอ,0.01,woods2|sporevale|glowpool
+glow_spider,Glowweb Spider,แมงมุมใยเรือง,44,False,card,bl_card_glow_spider,Glowweb Spider Card,การ์ดแมงมุมใยเรือง,0.01,woods2|fallencap|glowpool
+blade_sprite,Bladewind Sprite,ภูตลมใบมีด,51,False,card,bl_card_blade_sprite,Bladewind Sprite Card,การ์ดภูตลมใบมีด,0.01,wind2|chainisles
+storm_sparrow,Storm Sparrow,นกกระจอกพายุ,52,False,card,bl_card_storm_sparrow,Storm Sparrow Card,การ์ดนกกระจอกพายุ,0.01,wind2|ropebridge|eyrie|chainisles
+cloud_ram_lead,Cloud Sheep Leader,แกะเมฆจ่าฝูง,54,False,card,bl_card_cloud_ram_lead,Cloud Sheep Leader Card,การ์ดแกะเมฆจ่าฝูง,0.01,wind2|ropebridge|chainisles
+float_rock,Splitting Floating Rock,ก้อนหินลอยแตกตัว,54,False,card,bl_card_float_rock,Splitting Floating Rock Card,การ์ดก้อนหินลอยแตกตัว,0.01,wind2|ropebridge|chainisles
+cliff_goat,Cliff Goat,แพะผาหน้าผา,53,False,card,bl_card_cliff_goat,Cliff Goat Card,การ์ดแพะผาหน้าผา,0.01,wind2|ropebridge|eyrie|chainisles
+bloat_toad,Bloated Poison Toad,คางคกพองพิษ,66,False,card,bl_card_bloat_toad,Bloated Poison Toad Card,การ์ดคางคกพองพิษ,0.01,swamp2|poisonvillage|pitcherfield|cocoonwood
+split_slug,Splitting Poison Slug,ทากพิษแตกตัว,67,False,card,bl_card_split_slug,Splitting Poison Slug Card,การ์ดทากพิษแตกตัว,0.01,swamp2|roots1|poisonvillage|pitcherfield|cocoonwood
+mother_bloom,Venom Mother Bloom,ดอกแม่พิษ,74,False,card,bl_card_mother_bloom,Venom Mother Bloom Card,การ์ดดอกแม่พิษ,0.01,swamp2|roots2|poisonvillage|pitcherfield|cocoonwood
+mosquito,Giant Mosquito,ยุงยักษ์,62,False,card,bl_card_mosquito,Giant Mosquito Card,การ์ดยุงยักษ์,0.01,swamp2|mangrove|pitcherfield|cocoonwood
+swamp_croc,Bog Venom Crocodile,จระเข้หนองพิษ,65,False,card,bl_card_swamp_croc,Bog Venom Crocodile Card,การ์ดจระเข้หนองพิษ,0.01,swamp2|pitcherfield|cocoonwood
+crystal_mole,Crystal-Digging Mole,ตุ่นขุดผลึก,71,False,card,bl_card_crystal_mole,Crystal-Digging Mole Card,การ์ดตุ่นขุดผลึก,0.01,canyon2|minecart|floodedmine|geodehall|minerscamp
+crystal_golem,Splitting Crystal Golem,โกเลมผลึกแตกตัว,72,False,card,bl_card_crystal_golem,Splitting Crystal Golem Card,การ์ดโกเลมผลึกแตกตัว,0.01,canyon2|floodedmine|geodehall|minerscamp
+ghost_miner,Ghost Miner,คนงานเหมืองผี,69,False,card,bl_card_ghost_miner,Ghost Miner Card,การ์ดคนงานเหมืองผี,0.01,canyon2|minecart|floodedmine|geodehall|minerscamp
+crystal_bat,Crystal Bat,ค้างคาวผลึก,70,False,card,bl_card_crystal_bat,Crystal Bat Card,การ์ดค้างคาวผลึก,0.01,canyon2|minecart|floodedmine|geodehall|minerscamp
+haunted_cart,Haunted Ore Cart,รถเข็นแร่ผีสิง,71,False,card,bl_card_haunted_cart,Haunted Ore Cart Card,การ์ดรถเข็นแร่ผีสิง,0.01,canyon2|minecart|floodedmine|geodehall|minerscamp
+spit_scorpion,Venom-Shot Scorpion,แมงป่องยิงพิษ,77,False,card,bl_card_spit_scorpion,Venom-Shot Scorpion Card,การ์ดแมงป่องยิงพิษ,0.01,canyon3|dryoasis|antlionpits|raiderfort
+sand_lizard,Sand Lizard Leader,กิ้งก่าทรายจ่าฝูง,80,False,card,bl_card_sand_lizard,Sand Lizard Leader Card,การ์ดกิ้งก่าทรายจ่าฝูง,0.01,canyon3|dryoasis|antlionpits|raiderfort
+stone_vulture,Stone Vulture,นกแร้งหิน,77,False,card,bl_card_stone_vulture,Stone Vulture Card,การ์ดนกแร้งหิน,0.01,canyon3|dryoasis|antlionpits|raiderfort
+sand_giant,Sandstone Giant,ยักษ์หินทราย,80,False,card,bl_card_sand_giant,Sandstone Giant Card,การ์ดยักษ์หินทราย,0.01,canyon3|dryoasis|antlionpits|raiderfort
+dust_devil,Sandstorm Ghost,ผีพายุทราย,80,False,card,bl_card_dust_devil,Sandstorm Ghost Card,การ์ดผีพายุทราย,0.01,canyon3|dryoasis|antlionpits|raiderfort
+pterosaur,Pterosaur,เทอโรซอร์,95,False,card,bl_card_pterosaur,Pterosaur Card,การ์ดเทอโรซอร์,0.01,prime2|fernvale|ammonbeach|pteronest|amberwood
+ankylo,Hammertail Ankylosaur,แองคิโลซอร์หางค้อน,98,False,card,bl_card_ankylo,Hammertail Ankylosaur Card,การ์ดแองคิโลซอร์หางค้อน,0.01,prime2|tarpit|ammonbeach|pteronest|amberwood
+tiny_dino,Tiny Dino Leader,ไดโนจิ๋วจ่าฝูง,97,False,card,bl_card_tiny_dino,Tiny Dino Leader Card,การ์ดไดโนจิ๋วจ่าฝูง,0.01,prime2|fernvale|ammonbeach|pteronest|amberwood
+hatchling,Wildwood Dragonling,ลูกมังกรไพร,96,False,card,bl_card_hatchling,Wildwood Dragonling Card,การ์ดลูกมังกรไพร,0.01,prime2|ammonbeach|pteronest|amberwood
+plesio,Plesiosaur,พลีซิโอซอร์,97,False,card,bl_card_plesio,Plesiosaur Card,การ์ดพลีซิโอซอร์,0.01,prime2|ammonbeach|pteronest|amberwood
+mother_bat,Mother Roost Bat,ค้างคาวแม่รัง,15,False,card,bl_card_mother_bat,Mother Roost Bat Card,การ์ดค้างคาวแม่รัง,0.01,batcave
+echo_bat,Sonar Bat,ค้างคาวคลื่นเสียง,12,False,card,bl_card_echo_bat,Sonar Bat Card,การ์ดค้างคาวคลื่นเสียง,0.01,batcave
+bomb_ant,Bomb Ant,มดระเบิด,42,False,card,bl_card_bomb_ant,Bomb Ant Card,การ์ดมดระเบิด,0.01,antmine2|antmine3
+nurse_ant,Nurse Ant,มดพยาบาล,49,False,card,bl_card_nurse_ant,Nurse Ant Card,การ์ดมดพยาบาล,0.01,antmine1|antmine2|antmine3
+dig_ant,Tunnel Ant,มดขุดอุโมงค์,33,False,card,bl_card_dig_ant,Tunnel Ant Card,การ์ดมดขุดอุโมงค์,0.01,antmine1|antmine2
+tomb_knight,Gravestone Shield Knight,อัศวินโล่หลุมศพ,51,False,card,bl_card_tomb_knight,Gravestone Shield Knight Card,การ์ดอัศวินโล่หลุมศพ,0.01,crypt1|crypt2
+bone_pile,Splitting Bone Pile,กองกระดูกแตกตัว,48,False,card,bl_card_bone_pile,Splitting Bone Pile Card,การ์ดกองกระดูกแตกตัว,0.01,crypt1|crypt2
+bone_shaman,Bone Shaman,หมอผีกระดูก,50,False,card,bl_card_bone_shaman,Bone Shaman Card,การ์ดหมอผีกระดูก,0.01,crypt2
+walking_scope,Walking Telescope,กล้องดูดาวเดินได้,57,False,card,bl_card_walking_scope,Walking Telescope Card,การ์ดกล้องดูดาวเดินได้,0.01,owl1|owl2|owl3
+owlet_lead,Owlet Leader,ลูกนกฮูกจ่าฝูง,55,False,card,bl_card_owlet_lead,Owlet Leader Card,การ์ดลูกนกฮูกจ่าฝูง,0.01,owl1|owl2
+root_worm,Burrowing Root Worm,หนอนรากมุดดิน,74,False,card,bl_card_root_worm,Burrowing Root Worm Card,การ์ดหนอนรากมุดดิน,0.01,roots1|roots2
+poison_spore,Floating Poison Spore,สปอร์พิษลอย,71,False,card,bl_card_poison_spore,Floating Poison Spore Card,การ์ดสปอร์พิษลอย,0.01,roots1|roots2
+bloom_sprout,Venom Mother Larva,ตัวอ่อนต้นแม่พิษ,74,False,card,bl_card_bloom_sprout,Venom Mother Larva Card,การ์ดตัวอ่อนต้นแม่พิษ,0.01,roots1|roots2
+poison_ladybug,Poison Ladybug,เต่าทองพิษ,71,False,card,bl_card_poison_ladybug,Poison Ladybug Card,การ์ดเต่าทองพิษ,0.01,roots1|roots2
+lava_imp,Lava-Spitting Imp,อิมป์พ่นลาวา,90,False,card,bl_card_lava_imp,Lava-Spitting Imp Card,การ์ดอิมป์พ่นลาวา,0.01,lavavent1|lavavent2
+magma_blob,Splitting Magma Blob,ก้อนแมกมาแตกตัว,87,False,card,bl_card_magma_blob,Splitting Magma Blob Card,การ์ดก้อนแมกมาแตกตัว,0.01,lavavent1|lavavent2
+ink_drop,Splitting Ink Drop,หยดหมึกแตกตัว,85,False,card,bl_card_ink_drop,Splitting Ink Drop Card,การ์ดหยดหมึกแตกตัว,0.01,ledger1|ledger2
+cabinet_guard,Shield Filing Cabinet,ตู้เอกสารโล่,87,False,card,bl_card_cabinet_guard,Shield Filing Cabinet Card,การ์ดตู้เอกสารโล่,0.01,ledger1|ledger2
+repair_puppet,Repairman Puppet,หุ่นช่างซ่อม,94,False,card,bl_card_repair_puppet,Repairman Puppet Card,การ์ดหุ่นช่างซ่อม,0.01,puppet1|puppet2
+spring_bomb,Exploding Spring Puppet,หุ่นสปริงระเบิด,92,False,card,bl_card_spring_bomb,Exploding Spring Puppet Card,การ์ดหุ่นสปริงระเบิด,0.01,puppet1|puppet2
+bomb_bell,Exploding Mini Bell,ระฆังจิ๋วระเบิด,99,False,card,bl_card_bomb_bell,Exploding Mini Bell Card,การ์ดระฆังจิ๋วระเบิด,0.01,bell1|bell2|bell3|bell4|bell5|bell6|bell7
+bell_lead,Bell Puppet Leader,หุ่นระฆังจ่าฝูง,99,False,card,bl_card_bell_lead,Bell Puppet Leader Card,การ์ดหุ่นระฆังจ่าฝูง,0.01,bell1|bell2|bell3|bell4|bell5|bell6|bell7
+glass_warden,Glass Floor Warden,ผู้เฝ้าพื้นแก้ว,99,False,card,bl_card_glass_warden,Glass Floor Warden Card,การ์ดผู้เฝ้าพื้นแก้ว,0.01,grave1|grave2
+tiny_meteor,Mini Meteor,ดาวตกจิ๋ว,99,False,card,bl_card_tiny_meteor,Mini Meteor Card,การ์ดดาวตกจิ๋ว,0.01,grave1|grave2
+straw_shooter,Seed-Shooting Straw Puppet,หุ่นฟางยิงเมล็ด,18,False,card,bl_card_straw_shooter,Seed-Shooting Straw Puppet Card,การ์ดหุ่นฟางยิงเมล็ด,0.01,cornmaze
+popcorn_pod,Popping Corncob,ฝักข้าวโพดป๊อป,18,False,card,bl_card_popcorn_pod,Popping Corncob Card,การ์ดฝักข้าวโพดป๊อป,0.01,cornmaze
+black_ewe,Black Ewe,แม่แกะดำ,18,False,card,bl_card_black_ewe,Black Ewe Card,การ์ดแม่แกะดำ,0.01,pens
+stitch_doll,Stitched Straw Doll,ตุ๊กตาฟางเย็บแผล,18,False,card,bl_card_stitch_doll,Stitched Straw Doll Card,การ์ดตุ๊กตาฟางเย็บแผล,0.01,pens
+grass_lurker,Ambush Grass Worm,หนอนหญ้าซุ่ม,22,False,card,bl_card_grass_lurker,Ambush Grass Worm Card,การ์ดหนอนหญ้าซุ่ม,0.01,tallgrass
+moon_hare,Moonshadow Rabbit,กระต่ายเงาจันทร์,22,False,card,bl_card_moon_hare,Moonshadow Rabbit Card,การ์ดกระต่ายเงาจันทร์,0.01,tallgrass
+rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,card,bl_card_rusty_squire,Rusty Armor Soldier Card,การ์ดทหารเกราะสนิม,0.01,battlefield
+banner_wraith,Torn Banner Spirit,วิญญาณธงขาด,22,False,card,bl_card_banner_wraith,Torn Banner Spirit Card,การ์ดวิญญาณธงขาด,0.01,battlefield
+drowned_fisher,Drowned Fisherman,ชาวประมงจมน้ำ,28,False,card,bl_card_drowned_fisher,Drowned Fisherman Card,การ์ดชาวประมงจมน้ำ,0.01,stiltvillage
+mud_leech,Giant Mud Leech,ปลิงโคลนยักษ์,28,False,card,bl_card_mud_leech,Giant Mud Leech Card,การ์ดปลิงโคลนยักษ์,0.01,stiltvillage
+weeping_statue,Weeping Statue,รูปปั้นร้องไห้,38,False,card,bl_card_weeping_statue,Weeping Statue Card,การ์ดรูปปั้นร้องไห้,0.01,weepgarden
+grave_moth,Grave Moth,ผีเสื้อหลุมศพ,38,False,card,bl_card_grave_moth,Grave Moth Card,การ์ดผีเสื้อหลุมศพ,0.01,weepgarden
+coffin_mimic,Biting Coffin,โลงศพกัด,38,False,card,bl_card_coffin_mimic,Biting Coffin Card,การ์ดโลงศพกัด,0.01,coffinhollow
+mist_widow,Mist Widow,แม่ม่ายหมอก,38,False,card,bl_card_mist_widow,Mist Widow Card,การ์ดแม่ม่ายหมอก,0.01,coffinhollow
+spore_puffer,Spore Lung,ปอดสปอร์,46,False,card,bl_card_spore_puffer,Spore Lung Card,การ์ดปอดสปอร์,0.01,sporevale
+myco_knight,Mold Knight,อัศวินเห็ดรา,46,False,card,bl_card_myco_knight,Mold Knight Card,การ์ดอัศวินเห็ดรา,0.01,sporevale
+gill_stalker,Gill Ghost,ผีครีบเห็ด,46,False,card,bl_card_gill_stalker,Gill Ghost Card,การ์ดผีครีบเห็ด,0.01,fallencap
+cap_beetle,Mushroom Cap Beetle,ด้วงหมวกเห็ด,46,False,card,bl_card_cap_beetle,Mushroom Cap Beetle Card,การ์ดด้วงหมวกเห็ด,0.01,fallencap
+root_crawler,Blackroot Inchworm,ตัวคืบรากดำ,96,False,card,bl_card_root_crawler,Blackroot Inchworm Card,การ์ดตัวคืบรากดำ,0.01,blackroots|treeedge
+violet_wisp,Violet Light Sprite,ภูตแสงม่วง,96,False,card,bl_card_violet_wisp,Violet Light Sprite Card,การ์ดภูตแสงม่วง,0.01,blackroots|treeedge
+shade_walker,Walking Shadow,เงาเดินได้,96,False,card,bl_card_shade_walker,Walking Shadow Card,การ์ดเงาเดินได้,0.01,shadowpath
+echo_bell,Silent Bell,กระดิ่งเงียบ,96,False,card,bl_card_echo_bell,Silent Bell Card,การ์ดกระดิ่งเงียบ,0.01,shadowpath
+tree_herald,Tree Herald,ผู้ประกาศต้นไม้,96,False,card,bl_card_tree_herald,Tree Herald Card,การ์ดผู้ประกาศต้นไม้,0.01,treeedge
+rootbound_hound,Root-Possessed Hound,หมารากสิง,96,False,card,bl_card_rootbound_hound,Root-Possessed Hound Card,การ์ดหมารากสิง,0.01,treeedge
+blast_imp,Exploding Earth Imp,อิมป์ดินระเบิด,78,False,card,bl_card_blast_imp,Exploding Earth Imp Card,การ์ดอิมป์ดินระเบิด,0.01,minecart
+rail_spider,Rail Spider,แมงมุมรางเหล็ก,78,False,card,bl_card_rail_spider,Rail Spider Card,การ์ดแมงมุมรางเหล็ก,0.01,minecart
+obsidian_knight,Black Glass Knight,อัศวินแก้วดำ,84,False,card,bl_card_obsidian_knight,Black Glass Knight Card,การ์ดอัศวินแก้วดำ,0.01,obsidian
+steam_wisp,Steam Sprite,ภูตไอร้อน,84,False,card,bl_card_steam_wisp,Steam Sprite Card,การ์ดภูตไอร้อน,0.01,obsidian
+lava_eel,Lava Eel,ปลาไหลลาวา,84,False,card,bl_card_lava_eel,Lava Eel Card,การ์ดปลาไหลลาวา,0.01,lavalake
+magma_frog,Fire-Spitting Lava Frog,กบลาวาพ่นไฟ,84,False,card,bl_card_magma_frog,Fire-Spitting Lava Frog Card,การ์ดกบลาวาพ่นไฟ,0.01,lavalake
+smoke_wraith,Blacksmoke Spirit,วิญญาณควันดำ,84,False,card,bl_card_smoke_wraith,Blacksmoke Spirit Card,การ์ดวิญญาณควันดำ,0.01,smokevent
+cinder_brute,Cinder Giant,ยักษ์เถ้าถ่าน,84,False,card,bl_card_cinder_brute,Cinder Giant Card,การ์ดยักษ์เถ้าถ่าน,0.01,smokevent
+tide_crab,Tidal Crab,ปูแม่น้ำขึ้น,62,False,card,bl_card_tide_crab,Tidal Crab Card,การ์ดปูแม่น้ำขึ้น,0.01,mangrove
+moss_lurker,Hanging Moss Ghost,ผีมอสห้อย,62,False,card,bl_card_moss_lurker,Hanging Moss Ghost Card,การ์ดผีมอสห้อย,0.01,mangrove
+vial_imp,Poison Bottle Imp,อิมป์ขวดพิษ,66,False,card,bl_card_vial_imp,Poison Bottle Imp Card,การ์ดอิมป์ขวดพิษ,0.01,poisonvillage
+gatherer_ghoul,Poison Gatherer Ghost,ผีคนเก็บพิษ,66,False,card,bl_card_gatherer_ghoul,Poison Gatherer Ghost Card,การ์ดผีคนเก็บพิษ,0.01,poisonvillage
+soot_puff,Splitting Soot Puff,ปุยเขม่าแตกตัว,45,False,card,bl_card_soot_puff,Splitting Soot Puff Card,การ์ดปุยเขม่าแตกตัว,0.01,stumpfield
+smoke_mole,Whitesmoke Mole,ตุ่นควันขาว,45,False,card,bl_card_smoke_mole,Whitesmoke Mole Card,การ์ดตุ่นควันขาว,0.01,stumpfield
+ash_weaver,Ash-Weaving Spider,แมงมุมทอเถ้า,45,False,card,bl_card_ash_weaver,Ash-Weaving Spider Card,การ์ดแมงมุมทอเถ้า,0.01,ashvale
+cinder_owl,Ember Owl,นกฮูกถ่านไฟ,45,False,card,bl_card_cinder_owl,Ember Owl Card,การ์ดนกฮูกถ่านไฟ,0.01,ashvale
+fire_stag,Firehorn Deer,กวางเขาไฟ,45,False,card,bl_card_fire_stag,Firehorn Deer Card,การ์ดกวางเขาไฟ,0.01,stillburning
+flame_dryad,Flame Wood Sprite,ภูตไม้เปลวไฟ,45,False,card,bl_card_flame_dryad,Flame Wood Sprite Card,การ์ดภูตไม้เปลวไฟ,0.01,stillburning
+kite_bat,Torn Kite Bat,ค้างคาวว่าวขาด,54,False,card,bl_card_kite_bat,Torn Kite Bat Card,การ์ดค้างคาวว่าวขาด,0.01,ropebridge
+chime_spirit,Wind Chime Sprite,ภูตกระดิ่งลม,54,False,card,bl_card_chime_spirit,Wind Chime Sprite Card,การ์ดภูตกระดิ่งลม,0.01,ropebridge
+nest_golem,Nest Golem,โกเลมรังนก,54,False,card,bl_card_nest_golem,Nest Golem Card,การ์ดโกเลมรังนก,0.01,eyrie
+storm_chick,Thunder Eaglet,ลูกอินทรีฟ้าผ่า,54,False,card,bl_card_storm_chick,Thunder Eaglet Card,การ์ดลูกอินทรีฟ้าผ่า,0.01,eyrie
+tar_blob,Splitting Tar Blob,ก้อนน้ำมันดินแตกตัว,92,False,card,bl_card_tar_blob,Splitting Tar Blob Card,การ์ดก้อนน้ำมันดินแตกตัว,0.01,tarpit
+woolly_calf,Woolly Mammoth Calf,ลูกช้างขนยาว,92,False,card,bl_card_woolly_calf,Woolly Mammoth Calf Card,การ์ดลูกช้างขนยาว,0.01,tarpit
+horsetail_mantis,Ponytail Mantis,ตั๊กแตนตำข้าวหางม้า,92,False,card,bl_card_horsetail_mantis,Ponytail Mantis Card,การ์ดตั๊กแตนตำข้าวหางม้า,0.01,fernvale
+frill_lizard,Venom-Spitting Frill Lizard,กิ้งก่าแผงคอพ่นพิษ,92,False,card,bl_card_frill_lizard,Venom-Spitting Frill Lizard Card,การ์ดกิ้งก่าแผงคอพ่นพิษ,0.01,fernvale
+lantern_jelly,Lantern Jellyfish,แมงกะพรุนตะเกียง,88,False,card,bl_card_lantern_jelly,Lantern Jellyfish Card,การ์ดแมงกะพรุนตะเกียง,0.01,floatvillage|shipwreck
+raft_turtle,Raft-House Turtle,เต่าแพบ้าน,88,False,card,bl_card_raft_turtle,Raft-House Turtle Card,การ์ดเต่าแพบ้าน,0.01,floatvillage
+willow_hand,Willow Branch Hand,มือกิ่งหลิว,88,False,card,bl_card_willow_hand,Willow Branch Hand Card,การ์ดมือกิ่งหลิว,0.01,willows
+crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,card,bl_card_crayfish_brute,Giant Crayfish Card,การ์ดกุ้งเครย์ฟิชยักษ์,0.01,willows
+ghost_sailor,Ghost Sailor,กะลาสีผี,88,False,card,bl_card_ghost_sailor,Ghost Sailor Card,การ์ดกะลาสีผี,0.01,shipwreck|shipgrave
+serpent_figurehead,Sea Serpent Figurehead,หัวเรืองูทะเล,88,False,card,bl_card_serpent_figurehead,Sea Serpent Figurehead Card,การ์ดหัวเรืองูทะเล,0.01,shipwreck
+coral_golem,Coral Golem,โกเลมปะการัง,92,False,card,bl_card_coral_golem,Coral Golem Card,การ์ดโกเลมปะการัง,0.01,reefs
+needle_urchin,Splitting Sea Urchin,เม่นทะเลแตกตัว,92,False,card,bl_card_needle_urchin,Splitting Sea Urchin Card,การ์ดเม่นทะเลแตกตัว,0.01,reefs
+keeper_ghost,Lighthouse Keeper Ghost,ผีคนเฝ้าประภาคาร,92,False,card,bl_card_keeper_ghost,Lighthouse Keeper Ghost Card,การ์ดผีคนเฝ้าประภาคาร,0.01,lighthouse
+fog_hound,Mist Hound,หมาหมอก,92,False,card,bl_card_fog_hound,Mist Hound Card,การ์ดหมาหมอก,0.01,lighthouse
+anchor_brute,Anchor-Dragging Giant,ยักษ์ลากสมอ,92,False,card,bl_card_anchor_brute,Anchor-Dragging Giant Card,การ์ดยักษ์ลากสมอ,0.01,shipgrave
+kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,card,bl_card_kraken_arm,Kraken Tentacle Card,การ์ดหนวดคราเคน,0.01,shipgrave
+lost_lantern,Stray Lantern,ตะเกียงหลงทาง,42,False,card,bl_card_lost_lantern,Stray Lantern Card,การ์ดตะเกียงหลงทาง,0.01,refugeecamp
+tent_crawler,Creeping Tent,เต็นท์คืบคลาน,42,False,card,bl_card_tent_crawler,Creeping Tent Card,การ์ดเต็นท์คืบคลาน,0.01,refugeecamp
+river_troll,Bridge Troll,โทรลใต้สะพาน,42,False,card,bl_card_river_troll,Bridge Troll Card,การ์ดโทรลใต้สะพาน,0.01,woodbridge
+plank_beaver,Gnawing Beaver,บีเวอร์แทะไม้,42,False,card,bl_card_plank_beaver,Gnawing Beaver Card,การ์ดบีเวอร์แทะไม้,0.01,woodbridge
+wheel_spirit,Cartwheel Sprite,ภูตล้อเกวียน,42,False,card,bl_card_wheel_spirit,Cartwheel Sprite Card,การ์ดภูตล้อเกวียน,0.01,wagonvale
+harness_hound,Cart Hound,หมาลากเกวียน,42,False,card,bl_card_harness_hound,Cart Hound Card,การ์ดหมาลากเกวียน,0.01,wagonvale
+salt_golem,Salt Block Golem,โกเลมก้อนเกลือ,48,False,card,bl_card_salt_golem,Salt Block Golem Card,การ์ดโกเลมก้อนเกลือ,0.01,saltflats
+brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,card,bl_card_brine_shrimp,Giant Brine Shrimp Card,การ์ดกุ้งน้ำเค็มยักษ์,0.01,saltflats
+dock_gull,Thieving Gull,นกนางนวลขี้ขโมย,48,False,card,bl_card_dock_gull,Thieving Gull Card,การ์ดนกนางนวลขี้ขโมย,0.01,saltdock
+brine_barrel,Walking Brine Barrel,ถังน้ำเกลือเดินได้,48,False,card,bl_card_brine_barrel,Walking Brine Barrel Card,การ์ดถังน้ำเกลือเดินได้,0.01,saltdock
+signal_crow,Signal Crow,อีกาส่งสัญญาณ,48,False,card,bl_card_signal_crow,Signal Crow Card,การ์ดอีกาส่งสัญญาณ,0.01,watchtower
+tower_sentry,Hollow Tower Guard,ยามหอคอยกลวง,48,False,card,bl_card_tower_sentry,Hollow Tower Guard Card,การ์ดยามหอคอยกลวง,0.01,watchtower
+snow_owl,Snowy Owlet,นกฮูกหิมะ,58,False,card,bl_card_snow_owl,Snowy Owlet Card,การ์ดนกฮูกหิมะ,0.01,snowpines
+pine_bear,Snowpine Bear,หมีสนหิมะ,58,False,card,bl_card_pine_bear,Snowpine Bear Card,การ์ดหมีสนหิมะ,0.01,snowpines
+frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,card,bl_card_frost_sprite,Ice Flake Sprite Card,การ์ดภูตเกล็ดน้ำแข็ง,0.01,icefall
+crevasse_worm,Fissure Worm,หนอนรอยแยก,58,False,card,bl_card_crevasse_worm,Fissure Worm Card,การ์ดหนอนรอยแยก,0.01,icefall
+snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,card,bl_card_snowball_yeti,Snowball Yeti Card,การ์ดเยติลูกหิมะ,0.01,avalanche
+avalanche_ram,Avalanche Horn Sheep,แกะเขาหิมะถล่ม,58,False,card,bl_card_avalanche_ram,Avalanche Horn Sheep Card,การ์ดแกะเขาหิมะถล่ม,0.01,avalanche
+hollow_plowman,Hollow Plowing Farmer,ชาวนากลวงไถนา,72,False,card,bl_card_hollow_plowman,Hollow Plowing Farmer Card,การ์ดชาวนากลวงไถนา,0.01,silentfarm
+hush_fox,Silent Fox,จิ้งจอกเงียบงัน,72,False,card,bl_card_hush_fox,Silent Fox Card,การ์ดจิ้งจอกเงียบงัน,0.01,silentfarm
+innkeeper_ghost,Innkeeper Ghost,ผีเจ้าของโรงเตี๊ยม,72,False,card,bl_card_innkeeper_ghost,Innkeeper Ghost Card,การ์ดผีเจ้าของโรงเตี๊ยม,0.01,roadinn
+stew_slime,Cold Soup Slime,สไลม์ซุปเย็นชืด,72,False,card,bl_card_stew_slime,Cold Soup Slime Card,การ์ดสไลม์ซุปเย็นชืด,0.01,roadinn
+wanderer_ghost,Traveler Ghost,ผีนักเดินทาง,72,False,card,bl_card_wanderer_ghost,Traveler Ghost Card,การ์ดผีนักเดินทาง,0.01,travelgrave
+milestone_golem,Walking Milestone,หลักไมล์เดินได้,72,False,card,bl_card_milestone_golem,Walking Milestone Card,การ์ดหลักไมล์เดินได้,0.01,travelgrave
+pickpocket_cat,Pickpocket Cat,แมวล้วงกระเป๋า,82,False,card,bl_card_pickpocket_cat,Pickpocket Cat Card,การ์ดแมวล้วงกระเป๋า,0.01,nightmarket
+lamp_vendor,Hollow Lantern Seller,คนขายตะเกียงกลวง,82,False,card,bl_card_lamp_vendor,Hollow Lantern Seller Card,การ์ดคนขายตะเกียงกลวง,0.01,nightmarket
+vat_slime,Dye Pit Slime,สไลม์บ่อย้อม,82,False,card,bl_card_vat_slime,Dye Pit Slime Card,การ์ดสไลม์บ่อย้อม,0.01,tannery
+leather_wolf,Stitched-Hide Wolf,หมาป่าหนังเย็บ,82,False,card,bl_card_leather_wolf,Stitched-Hide Wolf Card,การ์ดหมาป่าหนังเย็บ,0.01,tannery
+moat_turtle,Ironhead Moat Turtle,เต่าคูเมืองหัวเหล็ก,82,False,card,bl_card_moat_turtle,Ironhead Moat Turtle Card,การ์ดเต่าคูเมืองหัวเหล็ก,0.01,moat
+drain_frog,Drain Frog,กบท่อระบาย,82,False,card,bl_card_drain_frog,Drain Frog Card,การ์ดกบท่อระบาย,0.01,moat
+gate_gear,Sluice Gear,เฟืองประตูน้ำ,86,False,card,bl_card_gate_gear,Sluice Gear Card,การ์ดเฟืองประตูน้ำ,0.01,sluicegate
+sluice_spirit,Overflow Gate Sprite,ภูตน้ำล้นประตู,86,False,card,bl_card_sluice_spirit,Overflow Gate Sprite Card,การ์ดภูตน้ำล้นประตู,0.01,sluicegate
+crate_spider,Crate Spider,แมงมุมลังไม้,86,False,card,bl_card_crate_spider,Crate Spider Card,การ์ดแมงมุมลังไม้,0.01,warehouses
+dock_brute,Hollow Sack Porter,กุลีกลวงแบกกระสอบ,86,False,card,bl_card_dock_brute,Hollow Sack Porter Card,การ์ดกุลีกลวงแบกกระสอบ,0.01,warehouses
+rivet_bat,Rivet Bat,ค้างคาวหมุดย้ำ,86,False,card,bl_card_rivet_bat,Rivet Bat Card,การ์ดค้างคาวหมุดย้ำ,0.01,shipyard
+saw_beetle,Sawtooth Beetle,ด้วงฟันเลื่อย,86,False,card,bl_card_saw_beetle,Sawtooth Beetle Card,การ์ดด้วงฟันเลื่อย,0.01,shipyard
+marble_hound,Marble Hound,หมาหินอ่อน,99,False,card,bl_card_marble_hound,Marble Hound Card,การ์ดหมาหินอ่อน,0.01,whitestatues
+veiled_statue,Veiled Statue,รูปปั้นผ้าคลุมหน้า,99,False,card,bl_card_veiled_statue,Veiled Statue Card,การ์ดรูปปั้นผ้าคลุมหน้า,0.01,whitestatues
+clockwork_owl,Wind-Up Owl,นกฮูกไขลาน,99,False,card,bl_card_clockwork_owl,Wind-Up Owl Card,การ์ดนกฮูกไขลาน,0.01,clocksquare
+hour_knight,Clock Hand Knight,อัศวินเข็มนาฬิกา,99,False,card,bl_card_hour_knight,Clock Hand Knight Card,การ์ดอัศวินเข็มนาฬิกา,0.01,clocksquare
+soot_sweeper,Chimney Sweep Ghost,ผีคนปัดปล่องไฟ,99,False,card,bl_card_soot_sweeper,Chimney Sweep Ghost Card,การ์ดผีคนปัดปล่องไฟ,0.01,rooftops
+weather_rooster,Weathervane Rooster,ไก่ใบพัดลม,99,False,card,bl_card_weather_rooster,Weathervane Rooster Card,การ์ดไก่ใบพัดลม,0.01,rooftops
+melon_roller,Rolling Melon,แตงโมกลิ้ง,10,False,card,bl_card_melon_roller,Rolling Melon Card,การ์ดแตงโมกลิ้ง,0.01,melonfield
+mad_goose,Raging Goose,ห่านคลั่ง,10,False,card,bl_card_mad_goose,Raging Goose Card,การ์ดห่านคลั่ง,0.01,windpump
+gourd_lantern,Lantern Gourd,น้ำเต้าตะเกียง,10,False,card,bl_card_gourd_lantern,Lantern Gourd Card,การ์ดน้ำเต้าตะเกียง,0.01,curinghouse
+apple_worm,Rotten Apple Worm,หนอนแอปเปิลเน่า,18,False,card,bl_card_apple_worm,Rotten Apple Worm Card,การ์ดหนอนแอปเปิลเน่า,0.01,appleslope
+puff_sprite,Dandelion Puff Sprite,ภูตปุยแดนดิไลออน,18,False,card,bl_card_puff_sprite,Dandelion Puff Sprite Card,การ์ดภูตปุยแดนดิไลออน,0.01,dandelion
+wax_golem,Honeycomb Golem,โกเลมรวงผึ้ง,18,False,card,bl_card_wax_golem,Honeycomb Golem Card,การ์ดโกเลมรวงผึ้ง,0.01,apiary
+sack_mimic,Biting Grain Sack,กระสอบข้าวกัด,18,False,card,bl_card_sack_mimic,Biting Grain Sack Card,การ์ดกระสอบข้าวกัด,0.01,threshing
+water_strider,Giant Water Strider,จิงโจ้น้ำยักษ์,24,False,card,bl_card_water_strider,Giant Water Strider Card,การ์ดจิงโจ้น้ำยักษ์,0.01,beaverdam
+reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,card,bl_card_reed_muskrat,Water Rat Leader Card,การ์ดหนูน้ำจ่าฝูง,0.01,reedmaze
+mud_pike,Mud Pike,ปลาไพค์โคลน,24,False,card,bl_card_mud_pike,Mud Pike Card,การ์ดปลาไพค์โคลน,0.01,eelhut
+rose_mantis,Thornrose Grasshopper,ตั๊กแตนกุหลาบหนาม,22,False,card,bl_card_rose_mantis,Thornrose Grasshopper Card,การ์ดตั๊กแตนกุหลาบหนาม,0.01,thornrose
+grave_cat,Graveyard Black Cat,แมวดำสุสาน,32,False,card,bl_card_grave_cat,Graveyard Black Cat Card,การ์ดแมวดำสุสาน,0.01,diggervillage
+wreath_spider,Wreath Spider,แมงมุมพวงหรีด,32,False,card,bl_card_wreath_spider,Wreath Spider Card,การ์ดแมงมุมพวงหรีด,0.01,wreathfield
+bone_crab,Horned Skull Crab,ปูกะโหลกเขา,32,False,card,bl_card_bone_crab,Horned Skull Crab Card,การ์ดปูกะโหลกเขา,0.01,giantbones
+log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,card,bl_card_log_lurker,Ambush Log Card,การ์ดท่อนซุงซุ่ม,0.01,logdrive
+pebble_golem,Pebble Golem,โกเลมก้อนกรวด,28,False,card,bl_card_pebble_golem,Pebble Golem Card,การ์ดโกเลมก้อนกรวด,0.01,springcave
+acorn_squirrel,Acorn-Throwing Squirrel,กระรอกปาลูกโอ๊ก,40,False,card,bl_card_acorn_squirrel,Acorn-Throwing Squirrel Card,การ์ดกระรอกปาลูกโอ๊ก,0.01,acorngrove
+moss_bear,Moss Bear,หมีตะไคร่,40,False,card,bl_card_moss_bear,Moss Bear Card,การ์ดหมีตะไคร่,0.01,hunterlodge
+bucket_sprite,Moon Spring Bucket Sprite,ภูตถังน้ำบ่อจันทร์,40,False,card,bl_card_bucket_sprite,Moon Spring Bucket Sprite Card,การ์ดภูตถังน้ำบ่อจันทร์,0.01,moonwell
+firefly_knight,Giant Firefly Beetle,ด้วงหิ่งห้อยยักษ์,34,False,card,bl_card_firefly_knight,Giant Firefly Beetle Card,การ์ดด้วงหิ่งห้อยยักษ์,0.01,cascades
+crystal_snail,Crystal-Shell Snail,หอยทากเปลือกผลึก,34,False,card,bl_card_crystal_snail,Crystal-Shell Snail Card,การ์ดหอยทากเปลือกผลึก,0.01,behindfalls
+falls_serpent,Waterfall Snake,งูน้ำตก,34,False,card,bl_card_falls_serpent,Waterfall Snake Card,การ์ดงูน้ำตก,0.01,fallstop
+raven_butler,Butler Crow,อีกาพ่อบ้าน,38,False,card,bl_card_raven_butler,Butler Crow Card,การ์ดอีกาพ่อบ้าน,0.01,keeperhouse
+cap_hermit,Mushroom Hermit Crab,ปูเสฉวนหมวกเห็ด,46,False,card,bl_card_cap_hermit,Mushroom Hermit Crab Card,การ์ดปูเสฉวนหมวกเห็ด,0.01,glowpool
+moor_pony,Windfield Pony,ม้าแคระทุ่งลม,50,False,card,bl_card_moor_pony,Windfield Pony Card,การ์ดม้าแคระทุ่งลม,0.01,heathmoor
+stone_marmot,Cliff Marmot,มาร์มอตหินผา,50,False,card,bl_card_stone_marmot,Cliff Marmot Card,การ์ดมาร์มอตหินผา,0.01,howlpass
+thorn_tumbler,Rolling Thistle,หญ้าหนามกลิ้ง,50,False,card,bl_card_thorn_tumbler,Rolling Thistle Card,การ์ดหญ้าหนามกลิ้ง,0.01,cliffmill
+sky_ray,Sky Ray,กระเบนฟ้า,54,False,card,bl_card_sky_ray,Sky Ray Card,การ์ดกระเบนฟ้า,0.01,chainisles
+sailback,Sailback Lizard,กิ้งก่าหลังใบเรือ,92,False,card,bl_card_sailback,Sailback Lizard Card,การ์ดกิ้งก่าหลังใบเรือ,0.01,hotsprings
+ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,card,bl_card_ammonite,Crawling Ammonite Card,การ์ดแอมโมไนต์คลาน,0.01,ammonbeach
+egg_thief,Egg-Thief Dino,ไดโนขโมยไข่,98,False,card,bl_card_egg_thief,Egg-Thief Dino Card,การ์ดไดโนขโมยไข่,0.01,pteronest
+amber_golem,Amber Golem,โกเลมอำพัน,98,False,card,bl_card_amber_golem,Amber Golem Card,การ์ดโกเลมอำพัน,0.01,amberwood
+swamp_hog,Bog Venom Hog,หมูหนองพิษ,62,False,card,bl_card_swamp_hog,Bog Venom Hog Card,การ์ดหมูหนองพิษ,0.01,bubblepits
+lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,card,bl_card_lure_angler,Bog Anglerfish Card,การ์ดปลาตกเบ็ดหนอง,0.01,cagetrees
+rattle_viper,Red Rock Rattlesnake,งูหางกระดิ่งหินแดง,78,False,card,bl_card_rattle_viper,Red Rock Rattlesnake Card,การ์ดงูหางกระดิ่งหินแดง,0.01,goldsluice
+rock_armadillo,Red Rock Pangolin,ตัวนิ่มหินแดง,78,False,card,bl_card_rock_armadillo,Red Rock Pangolin Card,การ์ดตัวนิ่มหินแดง,0.01,dustgulch
+sundew_creeper,Dewdrop Flycatcher,หยาดน้ำค้างกินแมลง,66,False,card,bl_card_sundew_creeper,Dewdrop Flycatcher Card,การ์ดหยาดน้ำค้างกินแมลง,0.01,pitcherfield
+cocoon_weaver,Poison Cocoon Weaver,หนอนทอรังพิษ,66,False,card,bl_card_cocoon_weaver,Poison Cocoon Weaver Card,การ์ดหนอนทอรังพิษ,0.01,cocoonwood
+rust_crab,Mine Rust Crab,ปูสนิมเหมือง,72,False,card,bl_card_rust_crab,Mine Rust Crab Card,การ์ดปูสนิมเหมือง,0.01,floodedmine
+geode_hopper,Leaping Geode,หินจีโอดกระโดด,72,False,card,bl_card_geode_hopper,Leaping Geode Card,การ์ดหินจีโอดกระโดด,0.01,geodehall
+cage_canary,Caged Ghost Canary,นกขมิ้นผีในกรง,72,False,card,bl_card_cage_canary,Caged Ghost Canary Card,การ์ดนกขมิ้นผีในกรง,0.01,minerscamp
+mirage_wisp,Mirage Sprite,ภูตภาพลวงตา,80,False,card,bl_card_mirage_wisp,Mirage Sprite Card,การ์ดภูตภาพลวงตา,0.01,dryoasis
+antlion,Giant Antlion,แมลงช้างยักษ์,80,False,card,bl_card_antlion,Giant Antlion Card,การ์ดแมลงช้างยักษ์,0.01,antlionpits
+sand_shark,Sand Shark,ฉลามทราย,80,False,card,bl_card_sand_shark,Sand Shark Card,การ์ดฉลามทราย,0.01,raiderfort
+bat_king,Bat King,ราชาค้างคาว,22,True,card,bl_card_bat_king,Bat King Card,การ์ดราชาค้างคาว,0.01,batnest
+mushking,Glowshroom King,ราชาเห็ดเรืองแสง,50,True,card,bl_card_mushking,Glowshroom King Card,การ์ดราชาเห็ดเรืองแสง,0.01,woods
+ant_queen,Ant Queen,นางพญามด,50,True,card,bl_card_ant_queen,Ant Queen Card,การ์ดนางพญามด,0.01,antmine3
+crypt_lord,Grave King,ราชาสุสาน,55,True,card,bl_card_crypt_lord,Grave King Card,การ์ดราชาสุสาน,0.01,crypt2
+lava_dragon,Lava Dragon,มังกรลาวา,99,True,card,bl_card_lava_dragon,Lava Dragon Card,การ์ดมังกรลาวา,0.01,lavavent2
+hundred_string,Hundred-String Puppet,หุ่นร้อยเชือก,99,True,card,bl_card_hundred_string,Hundred-String Puppet Card,การ์ดหุ่นร้อยเชือก,0.01,bell7
+aurelion,"Aurelian, the Fallen Star",ออเรเลียน ดาวที่ตกลงมา,99,True,card,bl_card_aurelion,"Aurelian, the Fallen Star Card",การ์ดออเรเลียน ดาวที่ตกลงมา,0.01,
+sb_ivy,"Ivy, the Fire Thief",ไอวี่ ผู้ขโมยไฟ,20,True,card,bl_card_sb_ivy,"Ivy, the Fire Thief Card",การ์ดไอวี่ ผู้ขโมยไฟ,0.01,battlefield
+sb_morrow,Doctor Morrow,หมอมอร์โรว์,38,True,card,bl_card_sb_morrow,Doctor Morrow Card,การ์ดหมอมอร์โรว์,0.01,graveyard2
+sb_raven,"Raven, the Brother in Shadow",ไรเวน พี่ชายในเงา,40,True,card,bl_card_sb_raven,"Raven, the Brother in Shadow Card",การ์ดไรเวน พี่ชายในเงา,0.01,moonwell
+sb_halvard,"Lord Halvard, Master of the Salt Gate",ลอร์ดฮัลวาร์ด เจ้าด่านเกลือ,46,True,card,bl_card_sb_halvard,"Lord Halvard, Master of the Salt Gate Card",การ์ดลอร์ดฮัลวาร์ด เจ้าด่านเกลือ,0.01,salt
+sb_ignis,"Ignis, the Fire Feeder",อิกนิส ผู้ป้อนไฟ,50,True,card,bl_card_sb_ignis,"Ignis, the Fire Feeder Card",การ์ดอิกนิส ผู้ป้อนไฟ,0.01,cliffmill
+sb_vosse,Magister Voss,มาจิสเตอร์วอสส์,58,True,card,bl_card_sb_vosse,Magister Voss Card,การ์ดมาจิสเตอร์วอสส์,0.01,owl3
+sb_gareth,"Gareth, the Broken Oath",กาเรธ คำสาบานที่แตก,68,True,card,bl_card_sb_gareth,"Gareth, the Broken Oath Card",การ์ดกาเรธ คำสาบานที่แตก,0.01,canyon
+sb_aldric,Captain Aldric,กัปตันอัลดริก,80,True,card,bl_card_sb_aldric,Captain Aldric Card,การ์ดกัปตันอัลดริก,0.01,outer
+sb_gorm,"Gorm, King of Demon Horns",กอร์ม ราชาเขาอสูร,82,True,card,bl_card_sb_gorm,"Gorm, King of Demon Horns Card",การ์ดกอร์ม ราชาเขาอสูร,0.01,fernvale
+sb_candle,Madame Candle,มาดามแคนเดิล,84,True,card,bl_card_sb_candle,Madame Candle Card,การ์ดมาดามแคนเดิล,0.01,canal
+sb_quill,Brother Quill,บราเดอร์ควิลล์,88,True,card,bl_card_sb_quill,Brother Quill Card,การ์ดบราเดอร์ควิลล์,0.01,ledger2
+sb_nocturne,Archbishop Nocturne,อาร์ชบิชอปโนคเทิร์น,90,True,card,bl_card_sb_nocturne,Archbishop Nocturne Card,การ์ดอาร์ชบิชอปโนคเทิร์น,0.01,isle
+sb_puppet1,Puppet No. 1,หุ่นหมายเลขหนึ่ง,92,True,card,bl_card_sb_puppet1,Puppet No. 1 Card,การ์ดหุ่นหมายเลขหนึ่ง,0.01,dark
+sb_puppet6,Puppet No. 6,หุ่นที่ 6,93,True,card,bl_card_sb_puppet6,Puppet No. 6 Card,การ์ดหุ่นที่ 6,0.01,puppet2
+sb_severin,Cardinal Severin,คาร์ดินัลเซเวริน,99,True,card,bl_card_sb_severin,Cardinal Severin Card,การ์ดคาร์ดินัลเซเวริน,0.01,cathedral
+sb_lumen3,Old Lumen · The Last Flame,ตาลูเมน · ไฟดวงสุดท้าย,99,True,card,bl_card_sb_lumen3,Old Lumen · The Last Flame Card,การ์ดตาลูเมน · ไฟดวงสุดท้าย,0.01,

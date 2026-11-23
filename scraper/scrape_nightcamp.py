@@ -536,6 +536,73 @@ def main() -> None:
         r_entry["dropped_by"] = rune_droppers.get(rid, [])
         runes_enriched[rid] = r_entry
 
+    # Cards (Monster Lore Book Arts)
+    lore_data: dict[str, Any] = s2.get("lore", {})
+    card_cfg: dict[str, Any] = lore_data.get("card", {})
+    card_rate_pct = round(float(card_cfg.get("rate", 0.0001)) * 100.0, 6)
+    card_price_norm = card_cfg.get("price", 500)
+    card_price_boss = card_cfg.get("priceBoss", 5000)
+
+    cards_norm: list[dict[str, Any]] = []
+    for art in lore_data.get("arts", []):
+        tid = art["t"]
+        cid = f"bl_card_{tid}"
+        mat_obj = mat_by_id.get(cid, {})
+        mon_obj = mon_by_id.get(tid, {})
+        is_boss = bool(art.get("boss"))
+        cname = mat_obj.get("n") or f"{art.get('mon', tid)} Card"
+        m_maps = [mp for mp in (mon_obj.get("maps") or []) if mp is not None]
+        m_map_names = [map_by_id[mp]["n"] if mp in map_by_id else mp for mp in m_maps]
+        passives = [" · ".join(str(x) for x in row) for row in art.get("apw", [])]
+        passives_th = [" · ".join(tr(x) for x in row) for row in art.get("apw", [])]
+        el_key = art.get("el") or mon_obj.get("el") or "neutral"
+        stall_price = card_price_boss if is_boss else card_price_norm
+        cards_norm.append(
+            {
+                "id": cid,
+                "monster_id": tid,
+                "card_name": cname,
+                "card_name_th": tr(cname),
+                "monster_name": art.get("mon", mon_obj.get("n", tid)),
+                "monster_name_th": tr(art.get("mon", mon_obj.get("n", tid))),
+                "art_name": art.get("n", ""),
+                "art_name_th": tr(art.get("n", "")),
+                "art_desc": art.get("d", ""),
+                "art_desc_th": tr(art.get("d", "")),
+                "boss": is_boss,
+                "lv": art.get("lv") or mon_obj.get("lv"),
+                "el": el_key,
+                "element_name_th": tr(elements.get(el_key, el_key)),
+                "fam": art.get("fam", ""),
+                "cd": art.get("cd"),
+                "rate_pct": card_rate_pct,
+                "stall_price": stall_price,
+                "base_price": mat_obj.get("p", 225 if is_boss else 23),
+                "passives": passives,
+                "passives_th": passives_th,
+                "maps": m_maps,
+                "map_names": m_map_names,
+                "map_names_th": [tr(n) for n in m_map_names],
+            }
+        )
+        if mon_obj:
+            flat_drops.append(
+                {
+                    "monster_id": tid,
+                    "monster_name": mon_obj.get("n", tid),
+                    "monster_name_th": tr(mon_obj.get("n", tid)),
+                    "monster_lv": mon_obj.get("lv"),
+                    "boss": bool(mon_obj.get("boss")),
+                    "drop_type": "card",
+                    "target_id": cid,
+                    "target_name": cname,
+                    "target_name_th": tr(cname),
+                    "rate_pct": card_rate_pct,
+                    "maps": m_maps,
+                    "map_names": m_map_names,
+                }
+            )
+
     runes_relics_keystones = {
         "runes": {**s2.get("runes", {}), "list": runes_enriched},
         "relics": s2.get("relics", {}),
@@ -612,6 +679,7 @@ def main() -> None:
         ("materials.json", materials_norm),
         ("drops.json", flat_drops),
         ("quests.json", quests_norm),
+        ("cards.json", cards_norm),
         ("runes_relics_keystones.json", runes_relics_keystones),
         ("monster_skills_lore.json", monster_skills_lore),
         ("life_smelt.json", life_smelt),
@@ -838,6 +906,25 @@ def main() -> None:
         ],
     )
 
+    add_csv(
+        "cards.csv",
+        [
+            "id", "monster_id", "card_name", "card_name_th", "monster_name", "monster_name_th",
+            "art_name", "art_name_th", "boss", "lv", "el", "element_name_th", "fam", "cd",
+            "rate_pct", "stall_price", "base_price", "passives", "passives_th", "maps", "map_names_th",
+        ],
+        [
+            {
+                **c,
+                "passives": join_vals(c.get("passives"), " | "),
+                "passives_th": join_vals(c.get("passives_th"), " | "),
+                "maps": join_vals(c.get("maps")),
+                "map_names_th": join_vals(c.get("map_names_th"), " | "),
+            }
+            for c in cards_norm
+        ],
+    )
+
     scraped_at = datetime.now(timezone.utc).isoformat()
     metadata = {
         "source": BASE_URL + "index.html",
@@ -857,6 +944,7 @@ def main() -> None:
             "jobs": len(jobs_norm),
             "skills": len(skills_flat),
             "materials": len(materials_norm),
+            "cards": len(cards_norm),
             "drops_total": len(flat_drops),
             "quests": len(quests_norm),
             "runes": len(runes_enriched),

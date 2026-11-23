@@ -19,6 +19,7 @@
       minLv: '',
       maxLv: '',
       el: '',
+      map: '',
       minRate: '',
       monType: 'all',
       when: 'all',
@@ -38,7 +39,8 @@
     sets: { tab: 'regular', q: '', g: '' },
     jobs: { tab: 'jobs', tier: 'all', q: '', skJob: '', skType: '', skEl: '', skQ: '', skSort: 'n', skDir: 1, skPage: 0 },
     maps: { region: '', kind: '', secret: 'all', q: '' },
-    drops: { tab: 'drops', q: '', dtype: 'all', monType: 'all', el: '', minLv: '', maxLv: '', minRate: '', minPrice: '', maxPrice: '', sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matMinPrice: '', matMaxPrice: '', matSort: 'p', matDir: -1, matPage: 0 },
+    drops: { tab: 'drops', q: '', dtype: 'all', monType: 'all', el: '', map: '', minLv: '', maxLv: '', minRate: '', minPrice: '', maxPrice: '', sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matMinPrice: '', matMaxPrice: '', matSort: 'p', matDir: -1, matPage: 0 },
+    cards: { q: '', kind: 'all', el: '', map: '', minLv: '', maxLv: '', sort: 'price', dir: -1, page: 0 },
     runes: { tab: 'runes', kind: '', on: '', q: '' },
     quests: { tab: 'quests', ch: '', q: '', lifeTab: 'crops', lifeQ: '', lifeMinLv: '', lifeMaxLv: '', lifeMinPrice: '', lifeMaxPrice: '', lifeWhen: 'all', lifeSort: 'price', lifeDir: -1 },
     s2: { tab: 'patch' }
@@ -299,6 +301,68 @@
     }
   }
 
+  // Monster Art Cards (s2.lore.arts + bl_card_*)
+  const LORE_CFG = S2.lore || {};
+  const CARD_CFG = LORE_CFG.card || { rate: 0.0001, price: 500, priceBoss: 5000 };
+  const CARD_RATE_PCT = Number(CARD_CFG.rate || 0.0001) * 100;
+  const CARD_BY_MON = {};
+  const CARDS_LIST = (LORE_CFG.arts || []).map((a) => {
+    const cardId = 'bl_card_' + a.t;
+    const matObj = MAT[cardId];
+    const monObj = MON[a.t] || null;
+    const isBoss = !!a.boss;
+    const cardName = (matObj && matObj.n) || (a.mon + ' Card');
+    const stallPrice = Number(isBoss ? (CARD_CFG.priceBoss || 5000) : (CARD_CFG.price || 500));
+    const basePrice = Number((matObj && matObj.p) ?? (isBoss ? 225 : 23));
+    const maps = monObj ? (monObj.maps || []).filter(Boolean) : [];
+    const el = a.el || (monObj && monObj.el) || 'neutral';
+    const passives = (a.apw || []).map((row) => row.join(' · '));
+    const cardObj = {
+      id: a.t,
+      cardId,
+      cardName,
+      monName: a.mon || (monObj ? monObj.n : a.t),
+      artName: a.n || '',
+      artDesc: a.d || '',
+      boss: isBoss,
+      lv: Number(a.lv || (monObj && monObj.lv) || 0),
+      el,
+      fam: a.fam || '',
+      cd: a.cd || 0,
+      ratePct: CARD_RATE_PCT,
+      stallPrice,
+      basePrice,
+      passives,
+      mon: monObj,
+      maps
+    };
+    CARD_BY_MON[a.t] = cardObj;
+    if (monObj) {
+      FLAT_DROPS.push({
+        mon: monObj,
+        dtype: 'card',
+        targetId: a.t,
+        cardMatId: cardId,
+        targetName: cardName,
+        ratePct: CARD_RATE_PCT,
+        price: stallPrice,
+        ev: stallPrice * (CARD_RATE_PCT / 100),
+        evPer1kHp: monObj.hp > 0 ? ((stallPrice * (CARD_RATE_PCT / 100)) / monObj.hp) * 1000 : null,
+        maps
+      });
+    }
+    return cardObj;
+  });
+
+  const MAPS_WITH_MONS = (W.maps || []).filter((mp) => (mp.mons || []).length > 0);
+  function mapOptionsHtml(selectedId) {
+    return MAPS_WITH_MONS
+      .slice()
+      .sort((a, b) => tr(a.n).localeCompare(tr(b.n)))
+      .map((mp) => `<option value="${esc(mp.id)}" ${selectedId === mp.id ? 'selected' : ''}>${esc(tr(mp.n))}${mp.lv ? ' (' + esc(mp.lv) + ')' : ''}</option>`)
+      .join('');
+  }
+
   // Smelter & Crafting Value-Add Analysis
   const SMELT_GOODS = (S2.smelt && S2.smelt.goods) || {};
   const SMELT_ANALYSIS = Object.entries((S2.smelt && S2.smelt.recipes) || {}).map(([rid, rc]) => {
@@ -342,9 +406,52 @@
     };
   });
 
-  // Unified Market Index (Drops + Fish + Ore + Wood + Crops + Smelter + Dishes + Runes)
+  // Unified Market Index (Gear Drops + Material Drops + Cards + Fish + Ore + Wood + Crops + Smelter + Dishes + Runes)
   const UNIFIED_MARKET = [];
   for (const d of FLAT_DROPS) {
+    if (d.dtype === 'item') {
+      UNIFIED_MARKET.push({
+        cat: 'gear',
+        dtype: 'item',
+        id: d.targetId,
+        openKind: 'item',
+        spriteKind: 'items',
+        name: d.targetName,
+        lv: d.mon.lv || 0,
+        price: null,
+        ev: 0,
+        ratePct: d.ratePct,
+        el: d.mon.el || 'neutral',
+        boss: !!d.mon.boss,
+        hp: d.mon.hp || 0,
+        evPer1kHp: 0,
+        mon: d.mon,
+        maps: d.maps || []
+      });
+      continue;
+    }
+    if (d.dtype === 'card') {
+      UNIFIED_MARKET.push({
+        cat: 'card',
+        dtype: 'card',
+        id: d.targetId,
+        cardMatId: d.cardMatId,
+        openKind: 'card',
+        spriteKind: 'mats',
+        name: d.targetName,
+        lv: d.mon.lv || 0,
+        price: d.price ?? 500,
+        ev: d.ev ?? 0,
+        ratePct: d.ratePct,
+        el: d.mon.el || 'neutral',
+        boss: !!d.mon.boss,
+        hp: d.mon.hp || 0,
+        evPer1kHp: d.evPer1kHp || 0,
+        mon: d.mon,
+        maps: d.maps || []
+      });
+      continue;
+    }
     if (d.dtype !== 'material' && d.dtype !== 'rune') continue;
     UNIFIED_MARKET.push({
       cat: 'drop',
@@ -527,6 +634,7 @@
     { id: 'jobs', icon: '🧙', th: 'อาชีพ & สกิล', en: 'Jobs & Skills', count: (W.jobs || []).length },
     { id: 'maps', icon: '🗺️', th: 'แผนที่ & โลก', en: 'Maps & World', count: (W.maps || []).length },
     { id: 'drops', icon: '💎', th: 'ค้นหาดรอป & วัตถุดิบ', en: 'Drops & Materials', count: FLAT_DROPS.length },
+    { id: 'cards', icon: '🃏', th: 'การ์ดมอนสเตอร์', en: 'Monster Cards', count: CARDS_LIST.length },
     { id: 'runes', icon: '🔮', th: 'รูน, เรลิก & คีย์สโตน', en: 'Runes & Relics', count: Object.keys(RUNES).length },
     { id: 'quests', icon: '📜', th: 'เควสต์ & สกิลชีวิต', en: 'Quests & Life Skills', count: (W.quests || []).length },
     { id: 'season2', icon: '🌙', th: 'Season 2 & Export', en: 'Season 2 & Export', count: null }
@@ -757,7 +865,9 @@
 
     const cats = [
       ['all', L('ทั้งหมด', 'All')],
-      ['drop', L('ดรอปมอนสเตอร์', 'Monster Drops')],
+      ['drop', L('วัตถุดิบดรอป', 'Material Drops')],
+      ['gear', L('ไอเทม/อาวุธดรอป', 'Gear Drops')],
+      ['card', L('การ์ดมอนสเตอร์', 'Monster Cards')],
       ['fish', L('ปลา', 'Fish')],
       ['ore', L('แร่', 'Ore')],
       ['wood', L('ไม้', 'Wood')],
@@ -768,21 +878,25 @@
     ];
     const catCounts = { all: UNIFIED_MARKET.length };
     for (const row of UNIFIED_MARKET) catCounts[row.cat] = (catCounts[row.cat] || 0) + 1;
+    const isDropCat = (c) => c === 'drop' || c === 'gear' || c === 'card';
 
     let list = UNIFIED_MARKET.filter((x) => {
       if (st.cat !== 'all' && x.cat !== st.cat) return false;
-      if (minP != null && (x.price ?? 0) < minP) return false;
-      if (maxP != null && (x.price ?? 0) > maxP) return false;
+      if (minP != null && (x.price == null || x.price < minP)) return false;
+      if (maxP != null && (x.price == null || x.price > maxP)) return false;
       if (minLv != null && (x.lv ?? 0) < minLv) return false;
       if (maxLv != null && (x.lv ?? 0) > maxLv) return false;
       if (st.el) {
-        if (x.cat !== 'drop' || x.el !== st.el) return false;
+        if (!isDropCat(x.cat) || x.el !== st.el) return false;
+      }
+      if (st.map) {
+        if (!isDropCat(x.cat) || !(x.maps || []).includes(st.map)) return false;
       }
       if (minR != null) {
-        if (x.cat !== 'drop' || (x.ratePct || 0) <= minR) return false;
+        if (!isDropCat(x.cat) || (x.ratePct || 0) <= minR) return false;
       }
       if (st.monType !== 'all') {
-        if (x.cat !== 'drop') return false;
+        if (!isDropCat(x.cat)) return false;
         if (st.monType === 'boss' && !x.boss) return false;
         if (st.monType === 'normal' && x.boss) return false;
       }
@@ -802,8 +916,8 @@
 
     list.sort((a, b) => {
       let va = 0, vb = 0;
-      if (st.sort === 'ev') { va = a.ev ?? 0; vb = b.ev ?? 0; }
-      else if (st.sort === 'price') { va = a.price ?? 0; vb = b.price ?? 0; }
+      if (st.sort === 'ev') { va = a.ev ?? -1; vb = b.ev ?? -1; }
+      else if (st.sort === 'price') { va = a.price ?? -1; vb = b.price ?? -1; }
       else if (st.sort === 'rate') { va = a.ratePct ?? -1; vb = b.ratePct ?? -1; }
       else if (st.sort === 'lv') { va = a.lv ?? 0; vb = b.lv ?? 0; }
       else if (st.sort === 'hp') { va = a.hp ?? 0; vb = b.hp ?? 0; }
@@ -818,7 +932,7 @@
     st.page = Math.min(st.page, pages - 1);
     const slice = list.slice(st.page * PER, st.page * PER + PER);
 
-    const catColor = { drop: '#3f95ff', fish: '#3aa6c4', ore: '#ff8f3f', wood: '#38c97a', crop: '#c99a0a', smelt: '#f5b942', dish: '#e667ad', rune: '#9a5cf0' };
+    const catColor = { drop: '#3f95ff', gear: '#e667ad', card: '#f5b942', fish: '#3aa6c4', ore: '#ff8f3f', wood: '#38c97a', crop: '#c99a0a', smelt: '#f5b942', dish: '#e667ad', rune: '#9a5cf0' };
     const catLabel = Object.fromEntries(cats);
     const elOpts = Object.entries(W.elements || {}).map(([k, v]) => `<option value="${k}" ${st.el === k ? 'selected' : ''}>${esc(tr(v))}</option>`).join('');
 
@@ -826,7 +940,7 @@
       <div class="page-head">
         <div>
           <h1>💰 ${L('ฟาร์มเงิน & ตัวกรองราคาทุกหมวด', 'Price, Level & Life Resource Filter')}</h1>
-          <p>${L('กรองราคา เลเวล มอนสเตอร์ ธาตุ % ดรอป ปลา (เวลา/เบ็ด) แร่ ไม้ พืชผัก ของหลอม และรูน ในหน้าเดียว', 'Unified filter & EV calculator across monster drops, fish, ore, wood, crops, smelted goods, dishes, and runes')}</p>
+          <p>${L('กรองราคา เลเวล มอนสเตอร์ แมพ ธาตุ % ดรอป การ์ด ปลา (เวลา/เบ็ด) แร่ ไม้ พืชผัก ของหลอม และรูน ในหน้าเดียว', 'Unified filter across gear/material/card drops, maps, elements, fish, ore, wood, crops, smelted goods, and runes')}</p>
         </div>
       </div>
 
@@ -842,6 +956,7 @@
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
         <button type="button" class="chip-link" data-preset="water30">💧 ${L('ธาตุน้ำ Lv≤30 ดรอป>30%', 'Water Lv≤30 Drop>30%')}</button>
         <button type="button" class="chip-link" data-preset="early">🌱 ${L('ต้นเกม Lv≤30 เฉลี่ยแพงสุด', 'Early Lv≤30 Best EV')}</button>
+        <button type="button" class="chip-link" data-preset="cards">🃏 ${L('การ์ดบอส (5,000c)', 'Boss Cards (5,000c)')}</button>
         <button type="button" class="chip-link" data-preset="fishnight">🌙 ${L('ปลากลางคืน เบ็ด≤2', 'Night Fish Rod≤2')}</button>
         <button type="button" class="chip-link" data-preset="orewood">⛏️ ${L('แร่ทั้งหมด', 'All Ores')}</button>
         <button type="button" class="chip-link" data-preset="smelt">🔥 ${L('ของหลอมกำไรสูง', 'Best Smelt Profit')}</button>
@@ -849,12 +964,13 @@
       </div>
 
       <div class="filter-bar">
-        <input class="input input--search" id="mkQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อของ / มอนสเตอร์ / แผนที่...', 'Search item, monster, map...')}">
+        <input class="input input--search" id="mkQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อของ / การ์ด / มอนสเตอร์ / แผนที่...', 'Search item, card, monster, map...')}">
         <input class="input input--sm" id="mkMinP" type="number" step="any" placeholder="Min c" value="${esc(st.minPrice)}">
         <input class="input input--sm" id="mkMaxP" type="number" step="any" placeholder="Max c" value="${esc(st.maxPrice)}">
         <input class="input input--sm" id="mkMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}">
         <input class="input input--sm" id="mkMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}">
         <select class="select" id="mkEl"><option value="">${L('ทุกธาตุ (มอน)', 'All Elements')}</option>${elOpts}</select>
+        <select class="select" id="mkMap"><option value="">${L('ทุกแมพ', 'All Maps')}</option>${mapOptionsHtml(st.map)}</select>
         <input class="input input--sm" id="mkMinR" type="number" step="any" placeholder="Drop >%" value="${esc(st.minRate)}" title="${L('โอกาสดรอปมากกว่า (%)', 'Drop rate greater than (%)')}">
         <select class="select" id="mkMonT">
           <option value="all" ${st.monType === 'all' ? 'selected' : ''}>${L('มอน: ทั้งหมด', 'Mon: All')}</option>
@@ -888,20 +1004,21 @@
           <th>${L('ไอเทม / ทรัพยากร', 'Item / Resource')}</th>
           <th>${L('หมวด', 'Category')}</th>
           <th>Lv</th>
-          <th>${L('แหล่งที่มา / รายละเอียด', 'Source / Details')}</th>
+          <th>${L('แหล่งที่มา / แมพ', 'Source / Map')}</th>
           <th style="text-align:right">${L('เรต / ขั้น', 'Rate / Info')}</th>
           <th style="text-align:right">${L('ราคา', 'Price')}</th>
           <th style="text-align:right">${L('EV / กำไร', 'EV / Profit')}</th>
         </tr></thead>
         <tbody>
           ${slice.map((x) => {
-            const icon = x.spriteKind ? atlasImg(x.spriteKind, x.id, 30) : (x.cat === 'rune' ? '🔮' : '🍲');
+            const spriteId = x.cardMatId || x.id;
+            const icon = x.spriteKind ? atlasImg(x.spriteKind, spriteId, 30) : (x.cat === 'rune' ? '🔮' : '🍲');
             const openAttr = x.openKind ? `style="cursor:pointer" data-open="${x.openKind}" data-id="${esc(x.id)}"` : '';
             let srcHtml = '<span class="muted">–</span>';
             let metaHtml = '–';
-            if (x.cat === 'drop') {
-              const mapLabel = (x.maps || []).slice(0, 2).map((mp) => (MAP[mp] ? tr(MAP[mp].n) : mp)).join(', ');
-              srcHtml = `<div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(x.mon.id)}">${monSprite(x.mon, 28)}<div><div>${esc(tr(x.mon.n))} ${x.boss ? pill('BOSS', '#f25c69') : ''}</div><div class="name-sub">${elIcon(x.el, 12)} HP ${fmt(x.hp)}${mapLabel ? ' · ' + esc(mapLabel) : ''}</div></div></div>`;
+            if (isDropCat(x.cat)) {
+              const mapChips = (x.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 6px;font-size:11px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
+              srcHtml = `<div class="name-cell">${monSprite(x.mon, 28)}<div><div style="cursor:pointer" data-open="monster" data-id="${esc(x.mon.id)}">${esc(tr(x.mon.n))} ${x.boss ? pill('BOSS', '#f25c69') : ''}</div><div class="name-sub" style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">${elIcon(x.el, 12)} <span>HP ${fmt(x.hp)}</span> ${mapChips}</div></div></div>`;
               metaHtml = fmtPct(x.ratePct);
             } else if (x.cat === 'fish') {
               const w = WHEN_LABELS[x.when] || WHEN_LABELS[0];
@@ -942,9 +1059,10 @@
     $('#mainView').querySelectorAll('[data-mkcat]').forEach((b) => b.addEventListener('click', () => { st.cat = b.dataset.mkcat; st.page = 0; renderMarket(); }));
     $('#mainView').querySelectorAll('[data-preset]').forEach((b) => b.addEventListener('click', () => {
       const p = b.dataset.preset;
-      Object.assign(st, { cat: 'all', q: '', minPrice: '', maxPrice: '', minLv: '', maxLv: '', el: '', minRate: '', monType: 'all', when: 'all', maxRod: '', sort: 'ev', dir: -1, page: 0 });
+      Object.assign(st, { cat: 'all', q: '', minPrice: '', maxPrice: '', minLv: '', maxLv: '', el: '', map: '', minRate: '', monType: 'all', when: 'all', maxRod: '', sort: 'ev', dir: -1, page: 0 });
       if (p === 'water30') Object.assign(st, { cat: 'drop', el: 'water', maxLv: '30', minRate: '30', monType: 'normal', sort: 'ev' });
       else if (p === 'early') Object.assign(st, { cat: 'drop', maxLv: '30', minRate: '1', monType: 'normal', sort: 'ev' });
+      else if (p === 'cards') Object.assign(st, { cat: 'card', monType: 'boss', sort: 'price' });
       else if (p === 'fishnight') Object.assign(st, { cat: 'fish', when: '1', maxRod: '2', sort: 'price' });
       else if (p === 'orewood') Object.assign(st, { cat: 'ore', sort: 'price' });
       else if (p === 'smelt') Object.assign(st, { cat: 'smelt', sort: 'ev' });
@@ -958,6 +1076,7 @@
     $('#mkMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; st.page = 0; keepFocus('#mkMaxLv', renderMarket); });
     $('#mkMinR').addEventListener('input', (e) => { st.minRate = e.target.value; st.page = 0; keepFocus('#mkMinR', renderMarket); });
     $('#mkEl').addEventListener('change', (e) => { st.el = e.target.value; st.page = 0; renderMarket(); });
+    $('#mkMap').addEventListener('change', (e) => { st.map = e.target.value; st.page = 0; renderMarket(); });
     $('#mkMonT').addEventListener('change', (e) => { st.monType = e.target.value; st.page = 0; renderMarket(); });
     $('#mkWhen').addEventListener('change', (e) => { st.when = e.target.value; st.page = 0; renderMarket(); });
     $('#mkRod').addEventListener('change', (e) => { st.maxRod = e.target.value; st.page = 0; renderMarket(); });
@@ -1733,13 +1852,15 @@
       if (st.monType === 'boss' && !d.mon.boss) return false;
       if (st.monType === 'normal' && d.mon.boss) return false;
       if (st.el && (d.mon.el || 'neutral') !== st.el) return false;
+      if (st.map && !(d.maps || []).includes(st.map)) return false;
       if (minLv != null && (d.mon.lv || 0) < minLv) return false;
       if (maxLv != null && (d.mon.lv || 0) > maxLv) return false;
       if (minR != null && d.ratePct <= minR) return false;
-      if (minP != null && (d.price ?? -1) < minP) return false;
+      if (minP != null && (d.price == null || d.price < minP)) return false;
       if (maxP != null && (d.price == null || d.price > maxP)) return false;
       if (q) {
-        const hay = norm(`${d.targetId} ${d.targetName} ${tr(d.targetName)} ${d.mon.id} ${d.mon.n} ${tr(d.mon.n)}`);
+        const mapTxt = (d.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ');
+        const hay = norm(`${d.targetId} ${d.targetName} ${tr(d.targetName)} ${d.mon.id} ${d.mon.n} ${tr(d.mon.n)} ${mapTxt}`);
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -1764,7 +1885,7 @@
       <div class="page-head">
         <div>
           <h1>💎 ${L('ค้นหาดรอป & สารบัญวัตถุดิบ', 'Drop Finder & Materials')}</h1>
-          <p>${L('ค้นหาไอเทม วัตถุดิบ หรือรูนที่ดรอปจากมอนสเตอร์ พร้อมตัวกรองธาตุ เลเวล % ดรอป และราคาขาย', 'Search across 4,069 drops — filter by element, level, drop rate %, and price')}</p>
+          <p>${L('ค้นหาไอเทม วัตถุดิบ การ์ด หรือรูนที่ดรอปจากมอนสเตอร์ พร้อมตัวกรองแมพ ธาตุ เลเวล % ดรอป และราคา', 'Search across 4,403 drops — filter by map, element, monster level, drop rate %, and price')}</p>
         </div>
       </div>
 
@@ -1774,14 +1895,16 @@
       </div>
 
       <div class="filter-bar">
-        <input class="input input--search" id="dropQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อไอเทม / วัตถุดิบ / รูน / ชื่อมอนสเตอร์...', 'Search target item/mat/rune or monster...')}">
+        <input class="input input--search" id="dropQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาไอเทม / การ์ด / วัตถุดิบ / มอนสเตอร์ / แมพ...', 'Search item, card, mat, monster, map...')}">
         <select class="select" id="dropType">
           <option value="all" ${st.dtype === 'all' ? 'selected' : ''}>${L('ทุกประเภทดรอป', 'All Drop Types')}</option>
           <option value="item" ${st.dtype === 'item' ? 'selected' : ''}>${L('ไอเทมสวมใส่/อาวุธ', 'Items / Gear')}</option>
           <option value="material" ${st.dtype === 'material' ? 'selected' : ''}>${L('วัตถุดิบ', 'Materials')}</option>
+          <option value="card" ${st.dtype === 'card' ? 'selected' : ''}>${L('การ์ดมอนสเตอร์', 'Monster Cards')}</option>
           <option value="rune" ${st.dtype === 'rune' ? 'selected' : ''}>${L('รูน', 'Runes')}</option>
         </select>
         <select class="select" id="dropEl"><option value="">${L('ทุกธาตุ', 'All Elements')}</option>${elOpts}</select>
+        <select class="select" id="dropMap"><option value="">${L('ทุกแมพ', 'All Maps')}</option>${mapOptionsHtml(st.map)}</select>
         <select class="select" id="dropMonT">
           <option value="all" ${st.monType === 'all' ? 'selected' : ''}>${L('มอน: ทั้งหมด', 'Mon: All')}</option>
           <option value="normal" ${st.monType === 'normal' ? 'selected' : ''}>${L('เฉพาะมอนทั่วไป', 'Normal Only')}</option>
@@ -1809,6 +1932,7 @@
           <th>${L('ประเภท', 'Type')}</th>
           <th>${L('มอนสเตอร์', 'Monster')}</th>
           <th>Lv</th>
+          <th>${L('แมพ', 'Map')}</th>
           <th style="text-align:right">${L('ราคา', 'Price')}</th>
           <th style="text-align:right">${L('โอกาสดรอป', 'Drop Rate')}</th>
           <th style="text-align:right">${L('เฉลี่ย/ตัว', 'EV/Kill')}</th>
@@ -1817,18 +1941,22 @@
           ${slice.map((d) => {
             const icon = d.dtype === 'item' ? itemSprite(IT[d.targetId], 32)
               : d.dtype === 'material' ? atlasImg('mats', d.targetId, 32)
+              : d.dtype === 'card' ? atlasImg('mats', d.cardMatId, 32)
               : `<span class="pill" style="--c:#9a5cf0">🔮</span>`;
-            const openKind = d.dtype === 'item' ? 'item' : d.dtype === 'material' ? 'mat' : 'rune';
+            const openKind = d.dtype === 'item' ? 'item' : d.dtype === 'material' ? 'mat' : d.dtype === 'card' ? 'card' : 'rune';
+            const typeColor = d.dtype === 'item' ? '#3f95ff' : d.dtype === 'material' ? '#38c97a' : d.dtype === 'card' ? '#f5b942' : '#9a5cf0';
+            const mapChips = (d.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
             return `<tr>
               <td><div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">${icon}<div>${nameHtml(d.targetName)}</div></div></td>
-              <td>${pill(d.dtype.toUpperCase(), d.dtype === 'item' ? '#3f95ff' : d.dtype === 'material' ? '#38c97a' : '#9a5cf0')}</td>
+              <td>${pill(d.dtype.toUpperCase(), typeColor)}</td>
               <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''} ${elIcon(d.mon.el, 13)}</div></div></td>
               <td class="num">${d.mon.lv ?? '–'}</td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips || '<span class="muted">–</span>'}</div></td>
               <td class="num" style="text-align:right">${fmtCoin(d.price)}</td>
               <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtPct(d.ratePct)}</td>
               <td class="num" style="text-align:right;color:var(--green);font-weight:700">${fmtCoin(d.ev)}</td>
             </tr>`;
-          }).join('') || `<tr><td colspan="7" class="muted" style="text-align:center;padding:24px">${L('ไม่พบรายการที่ตรงเงื่อนไข', 'No matching drops')}</td></tr>`}
+          }).join('') || `<tr><td colspan="8" class="muted" style="text-align:center;padding:24px">${L('ไม่พบรายการที่ตรงเงื่อนไข', 'No matching drops')}</td></tr>`}
         </tbody>
       </table></div>
       ${renderPager(list.length, PER, st.page, 'data-dpage="1"')}
@@ -1843,6 +1971,7 @@
     $('#dropMaxP').addEventListener('input', (e) => { st.maxPrice = e.target.value; st.page = 0; keepFocus('#dropMaxP', renderDrops); });
     $('#dropType').addEventListener('change', (e) => { st.dtype = e.target.value; st.page = 0; renderDrops(); });
     $('#dropEl').addEventListener('change', (e) => { st.el = e.target.value; st.page = 0; renderDrops(); });
+    $('#dropMap').addEventListener('change', (e) => { st.map = e.target.value; st.page = 0; renderDrops(); });
     $('#dropMonT').addEventListener('change', (e) => { st.monType = e.target.value; st.page = 0; renderDrops(); });
     $('#dropSort').addEventListener('change', (e) => { st.sort = e.target.value; st.page = 0; renderDrops(); });
     $('#dropDir').addEventListener('click', () => { st.dir = -st.dir; renderDrops(); });
@@ -1934,6 +2063,110 @@
     $('#matSort').addEventListener('change', (e) => { st.matSort = e.target.value; st.matPage = 0; renderMaterialsSubtab(); });
     $('#matDir').addEventListener('click', () => { st.matDir = -st.matDir; renderMaterialsSubtab(); });
     $('#mainView').querySelectorAll('[data-mtpage]').forEach((b) => b.addEventListener('click', () => { st.matPage = Number(b.dataset.page); renderMaterialsSubtab(); }));
+  }
+
+  // ------------------------------------------------------------------ VIEW: CARDS
+  function renderCards() {
+    const st = state.cards;
+    const q = norm(st.q);
+    const minLv = st.minLv !== '' ? Number(st.minLv) : null;
+    const maxLv = st.maxLv !== '' ? Number(st.maxLv) : null;
+
+    let list = CARDS_LIST.filter((c) => {
+      if (st.kind === 'boss' && !c.boss) return false;
+      if (st.kind === 'normal' && c.boss) return false;
+      if (st.el && c.el !== st.el) return false;
+      if (st.map && !(c.maps || []).includes(st.map)) return false;
+      if (minLv != null && c.lv < minLv) return false;
+      if (maxLv != null && c.lv > maxLv) return false;
+      if (q) {
+        const mapTxt = (c.maps || []).map((mp) => (MAP[mp] ? `${MAP[mp].n} ${tr(MAP[mp].n)}` : mp)).join(' ');
+        const pasTxt = (c.passives || []).map((p) => `${p} ${tr(p)}`).join(' ');
+        const hay = norm(`${c.id} ${c.cardId} ${c.cardName} ${tr(c.cardName)} ${c.monName} ${tr(c.monName)} ${c.artName} ${tr(c.artName)} ${pasTxt} ${mapTxt}`);
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+
+    list.sort((a, b) => {
+      if (st.sort === 'price') return (a.stallPrice - b.stallPrice) * st.dir;
+      if (st.sort === 'lv') return (a.lv - b.lv) * st.dir;
+      return tr(a.cardName).localeCompare(tr(b.cardName)) * st.dir;
+    });
+
+    const PER = 60;
+    const pages = Math.max(1, Math.ceil(list.length / PER));
+    st.page = Math.min(st.page, pages - 1);
+    const slice = list.slice(st.page * PER, st.page * PER + PER);
+    const elOpts = Object.entries(W.elements || {}).map(([k, v]) => `<option value="${k}" ${st.el === k ? 'selected' : ''}>${esc(tr(v))}</option>`).join('');
+
+    $('#mainView').innerHTML = `
+      <div class="page-head">
+        <div>
+          <h1>🃏 ${L('การ์ดมอนสเตอร์ (Lore Art Cards)', 'Monster Cards (Lore Art Cards)')}</h1>
+          <p>${L('การ์ดทั้งหมด 338 ใบ ดรอป 0.01% จากมอนสเตอร์ — ตั้งร้านขายแนะนำ 500c (ทั่วไป) / 5,000c (บอส)', '338 Monster Art Cards · 0.01% drop rate · Suggested stall price: 500c (normal) / 5,000c (boss)')}</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        ${[['all', L('ทั้งหมด', 'All Cards') + ` (${CARDS_LIST.length})`], ['boss', L('การ์ดบอส 5,000c', 'Boss Cards (5,000c)') + ` (${CARDS_LIST.filter((c) => c.boss).length})`], ['normal', L('การ์ดทั่วไป 500c', 'Normal Cards (500c)') + ` (${CARDS_LIST.filter((c) => !c.boss).length})`]].map(([k, lbl]) =>
+          `<button type="button" class="tab-btn ${st.kind === k ? 'is-on' : ''}" data-ckind="${k}">${esc(lbl)}</button>`
+        ).join('')}
+      </div>
+
+      <div class="filter-bar">
+        <input class="input input--search" id="cardQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อการ์ด / มอนสเตอร์ / สกิล / พาสซีฟ / แมพ...', 'Search card, monster, art, passive, map...')}">
+        <select class="select" id="cardEl"><option value="">${L('ทุกธาตุ', 'All Elements')}</option>${elOpts}</select>
+        <select class="select" id="cardMap"><option value="">${L('ทุกแมพ', 'All Maps')}</option>${mapOptionsHtml(st.map)}</select>
+        <input class="input input--sm" id="cardMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}">
+        <input class="input input--sm" id="cardMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}">
+        <select class="select" id="cardSort">
+          <option value="price" ${st.sort === 'price' ? 'selected' : ''}>Sort: ${L('ราคาตั้งร้าน', 'Stall Price')}</option>
+          <option value="lv" ${st.sort === 'lv' ? 'selected' : ''}>Sort: Lv</option>
+          <option value="name" ${st.sort === 'name' ? 'selected' : ''}>Sort: Name</option>
+        </select>
+        <button type="button" class="btn" id="cardDir">${st.dir > 0 ? '▲ ASC' : '▼ DESC'}</button>
+      </div>
+
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr>
+          <th>${L('การ์ด & ท่า Lore Art', 'Card & Lore Art')}</th>
+          <th>${L('มอนสเตอร์', 'Monster')}</th>
+          <th>Lv</th>
+          <th>${L('ธาตุ', 'Element')}</th>
+          <th>${L('แมพที่ดรอป', 'Maps')}</th>
+          <th>${L('พาสซีฟ', 'Passives')}</th>
+          <th style="text-align:right">${L('โอกาส', 'Rate')}</th>
+          <th style="text-align:right">${L('ราคาตั้งร้าน', 'Stall Price')}</th>
+        </tr></thead>
+        <tbody>
+          ${slice.map((c) => {
+            const mapChips = (c.maps || []).slice(0, 2).map((mp) => `<button type="button" class="chip-link" style="padding:2px 7px;font-size:11.5px" data-open="map" data-id="${esc(mp)}">${esc(MAP[mp] ? tr(MAP[mp].n) : mp)}</button>`).join(' ');
+            return `<tr>
+              <td><div class="name-cell" style="cursor:pointer" data-open="card" data-id="${esc(c.id)}"><span class="sprite-box">${atlasImg('mats', c.cardId, 34)}</span><div>${nameHtml(c.cardName, tr(c.artName))}</div></div></td>
+              <td>${c.mon ? `<div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(c.mon.id)}">${monSprite(c.mon, 30)}<div>${esc(tr(c.monName))} ${c.boss ? pill('BOSS', '#f25c69') : ''}</div></div>` : esc(tr(c.monName))}</td>
+              <td class="num">${c.lv}</td>
+              <td>${elPill(c.el)}</td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips || '<span class="muted">–</span>'}</div></td>
+              <td><div class="stat-chips">${c.passives.map((p) => `<span class="stat-chip">${esc(tr(p))}</span>`).join('') || '<span class="muted">–</span>'}</div></td>
+              <td class="num" style="text-align:right">${fmtPct(c.ratePct)}</td>
+              <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(c.stallPrice)}</td>
+            </tr>`;
+          }).join('') || `<tr><td colspan="8" class="muted" style="text-align:center;padding:24px">${L('ไม่พบการ์ดที่ตรงเงื่อนไข', 'No matching cards')}</td></tr>`}
+        </tbody>
+      </table></div>
+      ${renderPager(list.length, PER, st.page, 'data-cpage="1"')}
+    `;
+
+    $('#mainView').querySelectorAll('[data-ckind]').forEach((b) => b.addEventListener('click', () => { st.kind = b.dataset.ckind; st.page = 0; renderCards(); }));
+    $('#cardQ').addEventListener('input', (e) => { st.q = e.target.value; st.page = 0; keepFocus('#cardQ', renderCards); });
+    $('#cardMinLv').addEventListener('input', (e) => { st.minLv = e.target.value; st.page = 0; keepFocus('#cardMinLv', renderCards); });
+    $('#cardMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; st.page = 0; keepFocus('#cardMaxLv', renderCards); });
+    $('#cardEl').addEventListener('change', (e) => { st.el = e.target.value; st.page = 0; renderCards(); });
+    $('#cardMap').addEventListener('change', (e) => { st.map = e.target.value; st.page = 0; renderCards(); });
+    $('#cardSort').addEventListener('change', (e) => { st.sort = e.target.value; st.page = 0; renderCards(); });
+    $('#cardDir').addEventListener('click', () => { st.dir = -st.dir; renderCards(); });
+    $('#mainView').querySelectorAll('[data-cpage]').forEach((b) => b.addEventListener('click', () => { st.page = Number(b.dataset.page); renderCards(); }));
   }
 
   // ------------------------------------------------------------------ VIEW 8: RUNES, RELICS, KEYSTONES
@@ -2278,12 +2511,12 @@
     const dbFiles = [
       'metadata.json', 'items.json', 'sets.json', 'boss_sets.json', 'monsters.json',
       'maps.json', 'regions.json', 'jobs.json', 'skills.json', 'materials.json',
-      'drops.json', 'quests.json', 'runes_relics_keystones.json',
+      'cards.json', 'drops.json', 'quests.json', 'runes_relics_keystones.json',
       'monster_skills_lore.json', 'life_smelt.json', 'mounts_wings_gacha.json', 'systems_season2.json'
     ];
     const csvFiles = [
       'items.csv', 'monsters.csv', 'maps.csv', 'jobs.csv', 'skills.csv',
-      'materials.csv', 'drops.csv', 'quests.csv', 'runes.csv'
+      'materials.csv', 'cards.csv', 'drops.csv', 'quests.csv', 'runes.csv'
     ];
 
     let body = '';
@@ -2500,6 +2733,52 @@
               const rObj = RUNES[rid];
               return `<button type="button" class="chip-link" data-open="rune" data-id="${esc(rid)}">🔮 <span>${esc(tr(rObj ? rObj.n : rid))}</span><strong style="color:var(--purple)">${fmtPct(frac * 100)}</strong></button>`;
             })() : ''}
+          </div>
+        </div>
+        ${CARD_BY_MON[m.id] ? (() => {
+          const c = CARD_BY_MON[m.id];
+          return `<div class="modal-section">
+            <h3>🃏 ${L('การ์ดมอนสเตอร์ (Art Card)', 'Monster Art Card')}</h3>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <button type="button" class="chip-link" data-open="card" data-id="${esc(c.id)}">${atlasImg('mats', c.cardId, 28)}<span>${esc(tr(c.cardName))}</span><strong style="color:var(--gold)">${fmtPct(c.ratePct)} · ${fmtCoin(c.stallPrice)}</strong></button>
+              ${c.passives.map((p) => `<span class="stat-chip">${esc(tr(p))}</span>`).join('')}
+            </div>
+          </div>`;
+        })() : ''}`;
+    } else if (kind === 'card') {
+      const c = CARD_BY_MON[id];
+      if (!c) return;
+      const fam = c.fam && LORE_CFG.fam && LORE_CFG.fam[c.fam];
+      html = `
+        <div class="modal-hero">
+          <span class="sprite-box">${atlasImg('mats', c.cardId, 68)}</span>
+          <div style="flex:1">
+            <h2>🃏 ${esc(tr(c.cardName))}</h2>
+            <div class="muted">${esc(c.cardName)} · <code>${esc(c.cardId)}</code></div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+              ${pill(`Lv ${c.lv}`, '#f5b942')}
+              ${c.boss ? pill('BOSS CARD', '#f25c69') : pill('NORMAL CARD', '#3f95ff')}
+              ${elPill(c.el)}
+            </div>
+          </div>
+        </div>
+        <div class="kv-grid">
+          <div class="kv-box"><div class="kv-box__k">${L('ราคาตั้งร้านแนะนำ', 'Suggested Stall Price')}</div><div class="kv-box__v" style="color:var(--gold)">${fmtCoin(c.stallPrice)}</div></div>
+          <div class="kv-box"><div class="kv-box__k">${L('ราคาพื้นฐาน', 'Base Price')}</div><div class="kv-box__v">${fmtCoin(c.basePrice)}</div></div>
+          <div class="kv-box"><div class="kv-box__k">${L('โอกาสดรอป', 'Drop Rate')}</div><div class="kv-box__v">${fmtPct(c.ratePct)}</div></div>
+          <div class="kv-box"><div class="kv-box__k">CD</div><div class="kv-box__v">${c.cd}s</div></div>
+        </div>
+        <div class="modal-section">
+          <h3>✨ ${L('ท่า Lore Art:', 'Lore Art:')} ${esc(tr(c.artName))}</h3>
+          <p style="margin:0 0 8px">${esc(tr(c.artDesc))}</p>
+          <div class="stat-chips">${c.passives.map((p) => `<span class="stat-chip">${esc(tr(p))}</span>`).join('')}</div>
+          ${fam && fam.perks ? `<div style="margin-top:10px;font-size:12.5px;color:var(--text-1)"><strong>${esc(tr(fam.n))} Perks:</strong> ${fam.perks.map((pk) => esc(tr(pk))).join(' · ')}</div>` : ''}
+        </div>
+        <div class="modal-section">
+          <h3>👾 ${L('ดรอปจากมอนสเตอร์ & แมพ', 'Monster & Spawn Maps')}</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${c.mon ? `<button type="button" class="chip-link" data-open="monster" data-id="${esc(c.mon.id)}">${monSprite(c.mon, 24)}<span>${esc(tr(c.monName))} (Lv ${c.lv})</span></button>` : ''}
+            ${(c.maps || []).map((mpid) => `<button type="button" class="chip-link" data-open="map" data-id="${esc(mpid)}">📍 ${esc(tr(MAP[mpid] ? MAP[mpid].n : mpid))}</button>`).join('')}
           </div>
         </div>`;
     } else if (kind === 'item') {
@@ -2733,6 +3012,7 @@
     pushHits(ALL_SKILLS, 'skill', L('สกิล', 'Skill'), (s) => atlasImg('skills', s.icon, 28), (s) => `${s.n} · ${tr(s.jobName)}`);
     pushHits(W.maps || [], 'map', L('แผนที่', 'Map'), () => '🗺️', (mp) => `${mp.n} · ${mp.lv || ''}`);
     pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => m.n);
+    pushHits(CARDS_LIST.map((c) => ({ id: c.id, n: c.cardName, ...c })), 'card', L('การ์ด', 'Card'), (c) => atlasImg('mats', c.cardId, 28), (c) => `${tr(c.monName)} · ${fmtCoin(c.stallPrice)}`);
     pushHits(Object.entries(RUNES).map(([id, r]) => ({ id, ...r })), 'rune', L('รูน', 'Rune'), () => '🔮', (r) => r.n);
 
     if (!hits.length) {
@@ -2763,6 +3043,7 @@
       case 'jobs': renderJobs(); break;
       case 'maps': renderMaps(); break;
       case 'drops': renderDrops(); break;
+      case 'cards': renderCards(); break;
       case 'runes': renderRunes(); break;
       case 'quests': renderQuests(); break;
       case 'season2': renderSeason2(); break;
