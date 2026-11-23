@@ -1,0 +1,5946 @@
+{
+  "runes": {
+    "keys": [
+      "split",
+      "pierce",
+      "bounce",
+      "echo",
+      "wide",
+      "focus",
+      "linger",
+      "pull",
+      "corpse",
+      "haste",
+      "heavy",
+      "blood",
+      "execute",
+      "corrode",
+      "burn",
+      "curse",
+      "skyfall",
+      "rush",
+      "ambush",
+      "stagger",
+      "pal",
+      "share",
+      "shell",
+      "moonrite",
+      "arc",
+      "wildfire",
+      "frostbite",
+      "venom",
+      "shade",
+      "trap",
+      "spmeteor",
+      "spthunder",
+      "spfrost",
+      "spquake",
+      "spmagnus",
+      "spwhirl",
+      "splord",
+      "spshadow",
+      "grenade",
+      "ricochet",
+      "hollow",
+      "duel",
+      "dragon",
+      "barrel",
+      "recoil",
+      "apierce",
+      "wpierce"
+    ],
+    "list": {
+      "split": {
+        "n": "Split Rune",
+        "on": "proj",
+        "t": [
+          "Projectiles +1 · damage −30%",
+          "Projectiles +2 · damage −30%",
+          "Projectiles +2 · damage −20%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "split",
+        "name_th": "รูนแยก",
+        "t_th": [
+          "ลูกยิง +1 · ดาเมจ −30%",
+          "ลูกยิง +2 · ดาเมจ −30%",
+          "ลูกยิง +2 · ดาเมจ −20%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "slime_green",
+            "monster_name": "Leaf Slime",
+            "monster_name_th": "สไลม์ใบไม้",
+            "monster_lv": 5,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "slime_blue",
+            "monster_name": "Clearwater Slime",
+            "monster_name_th": "สไลม์น้ำใส",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "slime_stone",
+            "monster_name": "Mossy Rock Slime",
+            "monster_name_th": "สไลม์หินตะไคร่",
+            "monster_lv": 31,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "split_slug",
+            "monster_name": "Splitting Poison Slug",
+            "monster_name_th": "ทากพิษแตกตัว",
+            "monster_lv": 67,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stew_slime",
+            "monster_name": "Cold Soup Slime",
+            "monster_name_th": "สไลม์ซุปเย็นชืด",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ink_drop",
+            "monster_name": "Splitting Ink Drop",
+            "monster_name_th": "หยดหมึกแตกตัว",
+            "monster_lv": 85,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "pierce": {
+        "n": "Pierce Rune",
+        "on": "proj",
+        "t": [
+          "Pierces enemies · damage −15%",
+          "Pierces enemies · damage −8%",
+          "Pierces enemies at full power"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "pierce",
+        "name_th": "รูนทะลุ",
+        "t_th": [
+          "ทะลุศัตรู · ดาเมจ −15%",
+          "ทะลุศัตรู · ดาเมจ −8%",
+          "ทะลุศัตรู เต็มแรง"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "straw_shooter",
+            "monster_name": "Seed-Shooting Straw Puppet",
+            "monster_name_th": "หุ่นฟางยิงเมล็ด",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "seed_flower",
+            "monster_name": "Seed-Shooting Flower",
+            "monster_name_th": "ดอกไม้ยิงเมล็ด",
+            "monster_lv": 21,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "spit_frog",
+            "monster_name": "Spitwater Frog",
+            "monster_name_th": "กบพ่นน้ำ",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bone_archer",
+            "monster_name": "Skeleton Archer",
+            "monster_name_th": "โครงกระดูกพลธนู",
+            "monster_lv": 35,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "bounce": {
+        "n": "Reflect Rune",
+        "on": "proj",
+        "t": [
+          "Bounces to the next enemy once, 60%",
+          "Bounces 2 times 60%",
+          "Bounces 3 times 80%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "bounce",
+        "name_th": "รูนสะท้อน",
+        "t_th": [
+          "เด้งไปตัวถัดไป 1 ครั้ง 60%",
+          "เด้ง 2 ครั้ง 60%",
+          "เด้ง 3 ครั้ง 80%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "crab",
+            "monster_name": "Bigclaw Brook Crab",
+            "monster_name_th": "ปูก้ามโตลำธาร",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "water_strider",
+            "monster_name": "Giant Water Strider",
+            "monster_name_th": "จิงโจ้น้ำยักษ์",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mud_leech",
+            "monster_name": "Giant Mud Leech",
+            "monster_name_th": "ปลิงโคลนยักษ์",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "water_newt",
+            "monster_name": "Water Salamander",
+            "monster_name_th": "ซาลาแมนเดอร์น้ำ",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "river_troll",
+            "monster_name": "Bridge Troll",
+            "monster_name_th": "โทรลใต้สะพาน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "brine_barrel",
+            "monster_name": "Walking Brine Barrel",
+            "monster_name_th": "ถังน้ำเกลือเดินได้",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tide_crab",
+            "monster_name": "Tidal Crab",
+            "monster_name_th": "ปูแม่น้ำขึ้น",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lantern_jelly",
+            "monster_name": "Lantern Jellyfish",
+            "monster_name_th": "แมงกะพรุนตะเกียง",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "needle_urchin",
+            "monster_name": "Splitting Sea Urchin",
+            "monster_name_th": "เม่นทะเลแตกตัว",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "echo": {
+        "n": "Echo Rune",
+        "on": "attack",
+        "t": [
+          "Recasts itself after 0.6 s for 30% damage",
+          "Recast 40%",
+          "Recast 55%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "echo",
+        "name_th": "รูนก้อง",
+        "t_th": [
+          "ร่ายซ้ำเองหลัง 0.6 วิ ดาเมจ 30%",
+          "ร่ายซ้ำ 40%",
+          "ร่ายซ้ำ 55%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "crystal_bat",
+            "monster_name": "Crystal Bat",
+            "monster_name_th": "ค้างคาวผลึก",
+            "monster_lv": 70,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bat",
+            "monster_name": "Nightfall Bat",
+            "monster_name_th": "ค้างคาวรัตติกาล",
+            "monster_lv": 79,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "wide": {
+        "n": "Expand Rune",
+        "on": "area",
+        "t": [
+          "Area +30% · damage −10%",
+          "Area +45% · damage −10%",
+          "Area +60% · damage −5%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "wide",
+        "name_th": "รูนขยาย",
+        "t_th": [
+          "พื้นที่ +30% · ดาเมจ −10%",
+          "พื้นที่ +45% · ดาเมจ −10%",
+          "พื้นที่ +60% · ดาเมจ −5%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "pumpkin",
+            "monster_name": "Mischief Pumpkin",
+            "monster_name_th": "ฟักทองจอมซน",
+            "monster_lv": 9,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "field_mouse",
+            "monster_name": "Rice Thief Vole",
+            "monster_name_th": "หนูนาขโมยข้าว",
+            "monster_lv": 17,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "potato_walker",
+            "monster_name": "Walking Potato",
+            "monster_name_th": "มันฝรั่งเดินได้",
+            "monster_lv": 17,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sack_mimic",
+            "monster_name": "Biting Grain Sack",
+            "monster_name_th": "กระสอบข้าวกัด",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rose_mantis",
+            "monster_name": "Thornrose Grasshopper",
+            "monster_name_th": "ตั๊กแตนกุหลาบหนาม",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "weeping_statue",
+            "monster_name": "Weeping Statue",
+            "monster_name_th": "รูปปั้นร้องไห้",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "worker_ant",
+            "monster_name": "Worker Ant",
+            "monster_name_th": "มดงาน",
+            "monster_lv": 44,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cap_hermit",
+            "monster_name": "Mushroom Hermit Crab",
+            "monster_name_th": "ปูเสฉวนหมวกเห็ด",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "soldier_ant",
+            "monster_name": "Soldier Ant",
+            "monster_name_th": "มดทหาร",
+            "monster_lv": 49,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stone_marmot",
+            "monster_name": "Cliff Marmot",
+            "monster_name_th": "มาร์มอตหินผา",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "float_rock",
+            "monster_name": "Splitting Floating Rock",
+            "monster_name_th": "ก้อนหินลอยแตกตัว",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "pine_bear",
+            "monster_name": "Snowpine Bear",
+            "monster_name_th": "หมีสนหิมะ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "antlion",
+            "monster_name": "Giant Antlion",
+            "monster_name_th": "แมลงช้างยักษ์",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "obsidian_knight",
+            "monster_name": "Black Glass Knight",
+            "monster_name_th": "อัศวินแก้วดำ",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "serpent_figurehead",
+            "monster_name": "Sea Serpent Figurehead",
+            "monster_name_th": "หัวเรืองูทะเล",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "frill_lizard",
+            "monster_name": "Venom-Spitting Frill Lizard",
+            "monster_name_th": "กิ้งก่าแผงคอพ่นพิษ",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "egg_thief",
+            "monster_name": "Egg-Thief Dino",
+            "monster_name_th": "ไดโนขโมยไข่",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "focus": {
+        "n": "Compress Rune",
+        "on": "area",
+        "t": [
+          "Area −40% · damage +25%",
+          "Damage +35%",
+          "Damage +50%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "focus",
+        "name_th": "รูนหดแน่น",
+        "t_th": [
+          "พื้นที่ −40% · ดาเมจ +25%",
+          "ดาเมจ +35%",
+          "ดาเมจ +50%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "bat_crimson",
+            "monster_name": "Nightfall Bat · Bloodbird Red Form",
+            "monster_name_th": "ค้างคาวรัตติกาล · ร่างแดงเลือดนก",
+            "monster_lv": 16,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "black_ewe_frost",
+            "monster_name": "Black Ewe · Ice Eye Form",
+            "monster_name_th": "แม่แกะดำ · ร่างตาน้ำแข็ง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "crow_red",
+            "monster_name": "Corn Thief Crow · Red Fur Form",
+            "monster_name_th": "อีกาขโมยข้าวโพด · ร่างขนแดง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "puff_sprite_pink",
+            "monster_name": "Dandelion Puff Sprite · Pink Fluff Form",
+            "monster_name_th": "ภูตปุยแดนดิไลออน · ร่างปุยชมพู",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "wax_golem_blue",
+            "monster_name": "Honeycomb Golem · Blue Wax Form",
+            "monster_name_th": "โกเลมรวงผึ้ง · ร่างขี้ผึ้งฟ้า",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "straw_shooter_ember",
+            "monster_name": "Seed-Shooting Straw Puppet · Fire Straw Form",
+            "monster_name_th": "หุ่นฟางยิงเมล็ด · ร่างฟางไฟ",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rose_mantis_violet",
+            "monster_name": "Thornrose Grasshopper · Purple Rose Form",
+            "monster_name_th": "ตั๊กแตนกุหลาบหนาม · ร่างกุหลาบม่วง",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "water_strider_gold",
+            "monster_name": "Giant Water Strider · Gold Stripe Form",
+            "monster_name_th": "จิงโจ้น้ำยักษ์ · ร่างลายทอง",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "turtle_jade",
+            "monster_name": "Grumpy Moss Turtle · Green Stone Form",
+            "monster_name_th": "เต่าตะไคร่ขี้โมโห · ร่างหินเขียว",
+            "monster_lv": 27,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "log_lurker_blue",
+            "monster_name": "Ambush Log · Blue Moss Form",
+            "monster_name_th": "ท่อนซุงซุ่ม · ร่างตะไคร่ฟ้า",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "crystal_snail_violet",
+            "monster_name": "Crystal-Shell Snail · Purple Crystal Form",
+            "monster_name_th": "หอยทากเปลือกผลึก · ร่างผลึกม่วง",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "falls_serpent_gold",
+            "monster_name": "Waterfall Snake · Gold Scale Form",
+            "monster_name_th": "งูน้ำตก · ร่างเกล็ดทอง",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "zombie_mold",
+            "monster_name": "Farmer Zombie · Green Mold Form",
+            "monster_name_th": "ซอมบี้ชาวนา · ร่างราเขียว",
+            "monster_lv": 37,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "ghost_violet",
+            "monster_name": "Wisp Ghost · Dusky Purple Form",
+            "monster_name_th": "ผีดวงไฟ · ร่างม่วงหม่น",
+            "monster_lv": 37,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "raven_butler_teal",
+            "monster_name": "Butler Crow · Green Vest Form",
+            "monster_name_th": "อีกาพ่อบ้าน · ร่างเสื้อกั๊กเขียว",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "weeping_statue_jade",
+            "monster_name": "Weeping Statue · Cracked Jade Form",
+            "monster_name_th": "รูปปั้นร้องไห้ · ร่างหยกร้าว",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "acorn_squirrel_blue",
+            "monster_name": "Acorn-Throwing Squirrel · Indigo Fur Form",
+            "monster_name_th": "กระรอกปาลูกโอ๊ก · ร่างขนคราม",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "bucket_sprite_pink",
+            "monster_name": "Moon Spring Bucket Sprite · Pink Mist Form",
+            "monster_name_th": "ภูตถังน้ำบ่อจันทร์ · ร่างหมอกชมพู",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "moss_bear_pink",
+            "monster_name": "Moss Bear · Pink Moss Form",
+            "monster_name_th": "หมีตะไคร่ · ร่างตะไคร่ชมพู",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "stump_shroom",
+            "monster_name": "Ghost Stump · Mushroom-Grown Form",
+            "monster_name_th": "ตอไม้ผี · ร่างเห็ดขึ้น",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "gill_stalker_pale",
+            "monster_name": "Gill Ghost · Pale White Form",
+            "monster_name_th": "ผีครีบเห็ด · ร่างซีดขาว",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "cap_hermit_orange",
+            "monster_name": "Mushroom Hermit Crab · Orange Cap Form",
+            "monster_name_th": "ปูเสฉวนหมวกเห็ด · ร่างหมวกส้ม",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "spore_puffer_gold",
+            "monster_name": "Spore Lung · Gold Spore Form",
+            "monster_name_th": "ปอดสปอร์ · ร่างสปอร์ทอง",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "tower_sentry_pale",
+            "monster_name": "Hollow Tower Guard · Pale Guard Form",
+            "monster_name_th": "ยามหอคอยกลวง · ร่างยามซีด",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "stone_marmot_olive",
+            "monster_name": "Cliff Marmot · Olive Fur Form",
+            "monster_name_th": "มาร์มอตหินผา · ร่างขนมะกอก",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "thorn_tumbler_violet",
+            "monster_name": "Rolling Thistle · Purple Thorn Form",
+            "monster_name_th": "หญ้าหนามกลิ้ง · ร่างหนามม่วง",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "ant_obsidian",
+            "monster_name": "Soldier Ant · Onyx Form",
+            "monster_name_th": "มดทหาร · ร่างนิล",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "moor_pony_blue",
+            "monster_name": "Windfield Pony · Indigo Fur Form",
+            "monster_name_th": "ม้าแคระทุ่งลม · ร่างขนคราม",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "knight_rust",
+            "monster_name": "Bone Knight · Red Rust Form",
+            "monster_name_th": "อัศวินกระดูก · ร่างสนิมแดง",
+            "monster_lv": 52,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "sky_ray_violet",
+            "monster_name": "Sky Ray · Thunder Purple Form",
+            "monster_name_th": "กระเบนฟ้า · ร่างม่วงอสนี",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "eagle_bolt",
+            "monster_name": "Storm Eagle · Lightning Form",
+            "monster_name_th": "อินทรีพายุ · ร่างฟ้าผ่า",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "kite_bat_crimson",
+            "monster_name": "Torn Kite Bat · Red Kite Form",
+            "monster_name_th": "ค้างคาวว่าวขาด · ร่างว่าวแดง",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "avalanche_ram_black",
+            "monster_name": "Avalanche Horn Sheep · Black Fur Form",
+            "monster_name_th": "แกะเขาหิมะถล่ม · ร่างขนดำ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "snow_owl_aurora",
+            "monster_name": "Snowy Owl · Aurora Form",
+            "monster_name_th": "นกฮูกหิมะ · ร่างแสงเหนือ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "owl_star",
+            "monster_name": "Stone Owl · Star Form",
+            "monster_name_th": "นกฮูกหิน · ร่างดาว",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "lure_angler_violet",
+            "monster_name": "Bog Anglerfish · Purple Glow Form",
+            "monster_name_th": "ปลาตกเบ็ดหนอง · ร่างแสงม่วง",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "snake_triple",
+            "monster_name": "Bogvenom Snake · Red Venom Form",
+            "monster_name_th": "งูหนองพิษ · ร่างพิษแดง",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "cocoon_weaver_lime",
+            "monster_name": "Poison Cocoon Weaver · Fresh Green Silk Form",
+            "monster_name_th": "หนอนทอรังพิษ · ร่างไหมเขียวสด",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "hollow_plowman_rust",
+            "monster_name": "Hollow Plowing Farmer · Red Rust Form",
+            "monster_name_th": "ชาวนากลวงไถนา · ร่างสนิมแดง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "geode_hopper_blue",
+            "monster_name": "Leaping Geode · Blue Crystal Form",
+            "monster_name_th": "หินจีโอดกระโดด · ร่างผลึกฟ้า",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rust_crab_brass",
+            "monster_name": "Mine Rust Crab · Brass Form",
+            "monster_name_th": "ปูสนิมเหมือง · ร่างทองเหลือง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "golem_crystal",
+            "monster_name": "Red Rock Golem · Crystal Form",
+            "monster_name_th": "โกเลมหินแดง · ร่างผลึก",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "wanderer_ghost_ember",
+            "monster_name": "Traveler Ghost · Warm Fire Form",
+            "monster_name_th": "ผีนักเดินทาง · ร่างไฟอุ่น",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rail_spider_copper",
+            "monster_name": "Rail Spider · Copper Form",
+            "monster_name_th": "แมงมุมรางเหล็ก · ร่างทองแดง",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rattle_viper_blue",
+            "monster_name": "Red Rock Rattlesnake · Blue Scale Form",
+            "monster_name_th": "งูหางกระดิ่งหินแดง · ร่างเกล็ดฟ้า",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "scorpion_copper",
+            "monster_name": "Red Scorpion · Copper Form",
+            "monster_name_th": "แมงป่องแดง · ร่างทองแดง",
+            "monster_lv": 79,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "antlion_blue",
+            "monster_name": "Giant Antlion · Indigo Shell Form",
+            "monster_name_th": "แมลงช้างยักษ์ · ร่างเปลือกคราม",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "vat_slime_indigo",
+            "monster_name": "Dye Pit Slime · Indigo Dyed Form",
+            "monster_name_th": "สไลม์บ่อย้อม · ร่างย้อมคราม",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "moat_turtle_jade",
+            "monster_name": "Ironhead Moat Turtle · Jade Form",
+            "monster_name_th": "เต่าคูเมืองหัวเหล็ก · ร่างหยก",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "pickpocket_cat_gold",
+            "monster_name": "Pickpocket Cat · Gold Fur Form",
+            "monster_name_th": "แมวล้วงกระเป๋า · ร่างขนทอง",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "obsidian_knight_ruby",
+            "monster_name": "Black Glass Knight · Ruby Form",
+            "monster_name_th": "อัศวินแก้วดำ · ร่างทับทิม",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "smoke_wraith_white",
+            "monster_name": "Blacksmoke Spirit · White Smoke Form",
+            "monster_name_th": "วิญญาณควันดำ · ร่างควันขาว",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "lava_eel_azure",
+            "monster_name": "Lava Eel · Electric Form",
+            "monster_name_th": "ปลาไหลลาวา · ร่างไฟฟ้า",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "saw_beetle_gold",
+            "monster_name": "Sawtooth Beetle · Brass Form",
+            "monster_name_th": "ด้วงฟันเลื่อย · ร่างทองเหลือง",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "ghost_sailor_amber",
+            "monster_name": "Ghost Sailor · Amber Form",
+            "monster_name_th": "กะลาสีผี · ร่างอำพัน",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "crayfish_brute_red",
+            "monster_name": "Giant Crayfish · Boiled Red Form",
+            "monster_name_th": "กุ้งเครย์ฟิชยักษ์ · ร่างแดงสุก",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "puppet_black",
+            "monster_name": "Faceless Puppet · Blackwood Form",
+            "monster_name_th": "หุ่นไร้หน้า · ร่างไม้ดำ",
+            "monster_lv": 94,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "root_crawler_crimson",
+            "monster_name": "Blackroot Inchworm · Blood Red Form",
+            "monster_name_th": "ตัวคืบรากดำ · ร่างแดงเลือด",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "egg_thief_pink",
+            "monster_name": "Egg-Thief Dino · Pink Fur Form",
+            "monster_name_th": "ไดโนขโมยไข่ · ร่างขนชมพู",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "soot_sweeper_violet",
+            "monster_name": "Chimney Sweep Ghost · Purple Soot Form",
+            "monster_name_th": "ผีคนปัดปล่องไฟ · ร่างเขม่าม่วง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.25
+          }
+        ]
+      },
+      "linger": {
+        "n": "Linger Rune",
+        "on": "area",
+        "t": [
+          "Leaves a lingering ring for 2 s, hitting every second for 15%",
+          "Lingers 3 s · 20%",
+          "Lingers 4 s · 25%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "linger",
+        "name_th": "รูนค้าง",
+        "t_th": [
+          "ทิ้งวงค้าง 2 วิ ตีทุกวิ 15%",
+          "ค้าง 3 วิ · 20%",
+          "ค้าง 4 วิ · 25%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "sleep_moth",
+            "monster_name": "Sleep-Dust Moth",
+            "monster_name_th": "ผีเสื้อผงหลับ",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mushling",
+            "monster_name": "Sprite Shroom",
+            "monster_name_th": "ลูกเห็ดพราย",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moth",
+            "monster_name": "Glowing Night Moth",
+            "monster_name_th": "ผีเสื้อราตรีเรืองแสง",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "poison_spore",
+            "monster_name": "Floating Poison Spore",
+            "monster_name_th": "สปอร์พิษลอย",
+            "monster_lv": 71,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "pull": {
+        "n": "Drain Rune",
+        "on": "area",
+        "t": [
+          "Pulls enemies around the aimed spot to the center",
+          "Pull + slow 2 s",
+          "Pull + stun 0.8 s"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "pull",
+        "name_th": "รูนดูด",
+        "t_th": [
+          "ดูดศัตรูรอบจุดเล็งเข้ากลาง",
+          "ดูด + ช้า 2 วิ",
+          "ดูด + มึน 0.8 วิ"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "walking_scope",
+            "monster_name": "Walking Telescope",
+            "monster_name_th": "กล้องดูดาวเดินได้",
+            "monster_lv": 57,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "wooden_hand",
+            "monster_name": "Giant Puppet Hand",
+            "monster_name_th": "มือหุ่นยักษ์",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "thread_binder",
+            "monster_name": "Thread Wrapper",
+            "monster_name_th": "ด้ายพันคน",
+            "monster_lv": 94,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "corpse": {
+        "n": "Corpse Burst Rune",
+        "on": "attack",
+        "t": [
+          "Enemies killed by this skill explode for 50% ATK",
+          "Explodes for 75% ATK",
+          "Explodes for 100% ATK"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "corpse",
+        "name_th": "รูนระเบิดศพ",
+        "t_th": [
+          "ตัวที่ตายจากสกิลนี้ระเบิด 50% ATK",
+          "ระเบิด 75% ATK",
+          "ระเบิด 100% ATK"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "coffin_bomb",
+            "monster_name": "Exploding Coffin",
+            "monster_name_th": "โลงผีระเบิด",
+            "monster_lv": 37,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "coffin_mimic",
+            "monster_name": "Biting Coffin",
+            "monster_name_th": "โลงศพกัด",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bomb_ant",
+            "monster_name": "Bomb Ant",
+            "monster_name_th": "มดระเบิด",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "soot_puff",
+            "monster_name": "Splitting Soot Puff",
+            "monster_name_th": "ปุยเขม่าแตกตัว",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "puff_shroom",
+            "monster_name": "Puffball Shroom",
+            "monster_name_th": "เห็ดพองลม",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "haste": {
+        "n": "Swift Rune",
+        "on": "any",
+        "t": [
+          "Cooldown and delay −15% · damage −10%",
+          "−22% · damage −10%",
+          "−30% · damage −10%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "haste",
+        "name_th": "รูนเร็ว",
+        "t_th": [
+          "คูลดาวน์และดีเลย์ −15% · ดาเมจ −10%",
+          "−22% · ดาเมจ −10%",
+          "−30% · ดาเมจ −10%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "sunflower_bee",
+            "monster_name": "Sunflower Bee",
+            "monster_name_th": "ผึ้งทานตะวัน",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moon_hare",
+            "monster_name": "Moonshadow Rabbit",
+            "monster_name_th": "กระต่ายเงาจันทร์",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dragonfly",
+            "monster_name": "Sapphire Dragonfly",
+            "monster_name_th": "แมลงปอไพลิน",
+            "monster_lv": 23,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "kingfisher",
+            "monster_name": "Diving Kingfisher",
+            "monster_name_th": "นกกระเต็นดำน้ำ",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "firefly_knight",
+            "monster_name": "Giant Firefly Beetle",
+            "monster_name_th": "ด้วงหิ่งห้อยยักษ์",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crow",
+            "monster_name": "Corn Thief Crow",
+            "monster_name_th": "อีกาขโมยข้าวโพด",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "giant_crow",
+            "monster_name": "Giant Crow",
+            "monster_name_th": "อีกายักษ์",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cap_beetle",
+            "monster_name": "Mushroom Cap Beetle",
+            "monster_name_th": "ด้วงหมวกเห็ด",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "flying_ant",
+            "monster_name": "Flying Ant",
+            "monster_name_th": "มดบิน",
+            "monster_lv": 47,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "storm_eagle",
+            "monster_name": "Storm Eagle",
+            "monster_name_th": "อินทรีพายุ",
+            "monster_lv": 49,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sky_ray",
+            "monster_name": "Sky Ray",
+            "monster_name_th": "กระเบนฟ้า",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "storm_chick",
+            "monster_name": "Thunder Eaglet",
+            "monster_name_th": "ลูกอินทรีฟ้าผ่า",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "snow_owl",
+            "monster_name": "Snowy Owlet",
+            "monster_name_th": "นกฮูกหิมะ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "flying_book",
+            "monster_name": "Flying Book",
+            "monster_name_th": "หนังสือบิน",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "paper_blade",
+            "monster_name": "Paper Blade",
+            "monster_name_th": "ใบมีดกระดาษ",
+            "monster_lv": 87,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shadow_crow",
+            "monster_name": "Shadow Crow",
+            "monster_name_th": "อีกาเงา",
+            "monster_lv": 93,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "heavy": {
+        "n": "Heavy Rune",
+        "on": "attack",
+        "t": [
+          "Damage +20% · post-cast delay +30%",
+          "Damage +30% · delay +30%",
+          "Damage +40% · delay +25%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "heavy",
+        "name_th": "รูนหนัก",
+        "t_th": [
+          "ดาเมจ +20% · ดีเลย์หลังร่าย +30%",
+          "ดาเมจ +30% · ดีเลย์ +30%",
+          "ดาเมจ +40% · ดีเลย์ +25%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "harlock",
+            "monster_name": "Harven, the Midnight Reaper",
+            "monster_name_th": "ฮาร์เวน ผู้เก็บเกี่ยวยามดึก",
+            "monster_lv": 20,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "bat_king",
+            "monster_name": "Bat King",
+            "monster_name_th": "ราชาค้างคาว",
+            "monster_lv": 22,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "selene",
+            "monster_name": "Seline, Archer of the Moon's Shadow",
+            "monster_name_th": "เซลีน นักธนูใต้เงาจันทร์",
+            "monster_lv": 24,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "merrick",
+            "monster_name": "Merrick, Spear of the Deep Marsh",
+            "monster_name_th": "เมอร์ริก ทวนแห่งบึงลึก",
+            "monster_lv": 36,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "victor",
+            "monster_name": "Victor, the Gravestone Swordsman",
+            "monster_name_th": "วิกเตอร์ นักดาบหลุมศพ",
+            "monster_lv": 40,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "rowan",
+            "monster_name": "Rowan, the Guide Who Got Lost",
+            "monster_name_th": "โรวัน คนนำทางที่หลงเอง",
+            "monster_lv": 44,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "cassian",
+            "monster_name": "Cassian, the Smoldering Knight",
+            "monster_name_th": "แคสเซียน อัศวินถ่านคุ",
+            "monster_lv": 47,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "silas",
+            "monster_name": "Silas, the Spore Mage",
+            "monster_name_th": "ซิลาส จอมเวทสปอร์",
+            "monster_lv": 48,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "ant_queen",
+            "monster_name": "Ant Queen",
+            "monster_name_th": "นางพญามด",
+            "monster_lv": 50,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "mushking",
+            "monster_name": "Glowshroom King",
+            "monster_name_th": "ราชาเห็ดเรืองแสง",
+            "monster_lv": 50,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "iris",
+            "monster_name": "Iris, Twin Swords of the Salt Gate",
+            "monster_name_th": "ไอริส ดาบคู่แห่งด่านเกลือ",
+            "monster_lv": 50,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "crypt_lord",
+            "monster_name": "Grave King",
+            "monster_name_th": "ราชาสุสาน",
+            "monster_lv": 55,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "falk",
+            "monster_name": "Falk, the Whistlewind Hunter",
+            "monster_name_th": "ฟัลค์ นักล่าลมหวีด",
+            "monster_lv": 56,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "inga",
+            "monster_name": "Inga, the Northern Ice Witch",
+            "monster_name_th": "อิงกา แม่มดน้ำแข็งเหนือ",
+            "monster_lv": 60,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "oswin",
+            "monster_name": "Oswin, the Poison Mixer",
+            "monster_name_th": "ออสวิน ช่างผสมยาพิษ",
+            "monster_lv": 68,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "elwin",
+            "monster_name": "Elwin, the Northern Wolf Herder",
+            "monster_name_th": "เอลวิน คนเลี้ยงหมาป่าทางเหนือ",
+            "monster_lv": 74,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "bartho",
+            "monster_name": "Bartho, Gunslinger of the Abandoned Mine",
+            "monster_name_th": "บาร์โธ มือปืนเหมืองร้าง",
+            "monster_lv": 82,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "rook",
+            "monster_name": "Rock, the Gate Guard Who Never Changed Shifts",
+            "monster_name_th": "ร็อค ยามประตูที่ไม่เคยเปลี่ยนเวร",
+            "monster_lv": 84,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "drakos",
+            "monster_name": "Dragos, the Lava-Mad Warrior",
+            "monster_name_th": "ดราโกส นักรบคลั่งลาวา",
+            "monster_lv": 86,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "pip",
+            "monster_name": "Pip, the Shadow Under the Bridge",
+            "monster_name_th": "พิพ เงาใต้สะพาน",
+            "monster_lv": 88,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "lyria",
+            "monster_name": "Liria, the Singer in the Mist",
+            "monster_name_th": "ลิเรีย นักร้องในหมอก",
+            "monster_lv": 90,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "orla",
+            "monster_name": "Orla, the Island Fire-Lighter",
+            "monster_name_th": "ออร์ลา ผู้จุดไฟบนเกาะ",
+            "monster_lv": 94,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "nyx",
+            "monster_name": "Nix, the Wisp Keeper",
+            "monster_name_th": "นิกซ์ คนเลี้ยงภูตดวงไฟ",
+            "monster_lv": 98,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "dragon_mother",
+            "monster_name": "Wildwood Dragon Mother",
+            "monster_name_th": "แม่มังกรไพร",
+            "monster_lv": 98,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "baphomet_root",
+            "monster_name": "Baphomet · Root-Possessed Form",
+            "monster_name_th": "บาโฟเม็ด ร่างรากสิง",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "casper",
+            "monster_name": "Casper, the Puppeteer",
+            "monster_name_th": "แคสเปอร์ คนเชิดหุ่น",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "hundred_string",
+            "monster_name": "Hundred-String Puppet",
+            "monster_name_th": "หุ่นร้อยเชือก",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "lava_dragon",
+            "monster_name": "Lava Dragon",
+            "monster_name_th": "มังกรลาวา",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 4.0
+          },
+          {
+            "monster_id": "talon",
+            "monster_name": "Talon, Blackroot Dragon Knight",
+            "monster_name_th": "ทาลอน อัศวินมังกรรากดำ",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 4.0
+          }
+        ]
+      },
+      "blood": {
+        "n": "Blood Rune",
+        "on": "any",
+        "t": [
+          "Uses HP instead of SP (1 SP = 2 HP) · damage +15%",
+          "Damage +20%",
+          "Damage +25% · 1 SP = 1.5 HP"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "blood",
+        "name_th": "รูนเลือด",
+        "t_th": [
+          "ใช้ HP แทน SP (1 SP = 2 HP) · ดาเมจ +15%",
+          "ดาเมจ +20%",
+          "ดาเมจ +25% · 1 SP = 1.5 HP"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "sb_ivy",
+            "monster_name": "Ivy, the Fire Thief",
+            "monster_name_th": "ไอวี่ ผู้ขโมยไฟ",
+            "monster_lv": 20,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_morrow",
+            "monster_name": "Doctor Morrow",
+            "monster_name_th": "หมอมอร์โรว์",
+            "monster_lv": 38,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_raven",
+            "monster_name": "Raven, the Brother in Shadow",
+            "monster_name_th": "ไรเวน พี่ชายในเงา",
+            "monster_lv": 40,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_halvard",
+            "monster_name": "Lord Halvard, Master of the Salt Gate",
+            "monster_name_th": "ลอร์ดฮัลวาร์ด เจ้าด่านเกลือ",
+            "monster_lv": 46,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_ignis",
+            "monster_name": "Ignis, the Fire Feeder",
+            "monster_name_th": "อิกนิส ผู้ป้อนไฟ",
+            "monster_lv": 50,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_vosse",
+            "monster_name": "Magister Voss",
+            "monster_name_th": "มาจิสเตอร์วอสส์",
+            "monster_lv": 58,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_gareth",
+            "monster_name": "Gareth, the Broken Oath",
+            "monster_name_th": "กาเรธ คำสาบานที่แตก",
+            "monster_lv": 68,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_aldric",
+            "monster_name": "Captain Aldric",
+            "monster_name_th": "กัปตันอัลดริก",
+            "monster_lv": 80,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_gorm",
+            "monster_name": "Gorm, King of Demon Horns",
+            "monster_name_th": "กอร์ม ราชาเขาอสูร",
+            "monster_lv": 82,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_candle",
+            "monster_name": "Madame Candle",
+            "monster_name_th": "มาดามแคนเดิล",
+            "monster_lv": 84,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_quill",
+            "monster_name": "Brother Quill",
+            "monster_name_th": "บราเดอร์ควิลล์",
+            "monster_lv": 88,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet2",
+            "monster_name": "Puppet No. 2",
+            "monster_name_th": "หุ่นที่ 2",
+            "monster_lv": 89,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_nocturne",
+            "monster_name": "Archbishop Nocturne",
+            "monster_name_th": "อาร์ชบิชอปโนคเทิร์น",
+            "monster_lv": 90,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet3",
+            "monster_name": "Puppet No. 3",
+            "monster_name_th": "หุ่นที่ 3",
+            "monster_lv": 90,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet4",
+            "monster_name": "Puppet No. 4",
+            "monster_name_th": "หุ่นที่ 4",
+            "monster_lv": 91,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet1",
+            "monster_name": "Puppet No. 1",
+            "monster_name_th": "หุ่นหมายเลขหนึ่ง",
+            "monster_lv": 92,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet5",
+            "monster_name": "Puppet No. 5",
+            "monster_name_th": "หุ่นที่ 5",
+            "monster_lv": 92,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_puppet6",
+            "monster_name": "Puppet No. 6",
+            "monster_name_th": "หุ่นที่ 6",
+            "monster_lv": 93,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "aurelion",
+            "monster_name": "Aurelian, the Fallen Star",
+            "monster_name_th": "ออเรเลียน ดาวที่ตกลงมา",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_severin",
+            "monster_name": "Cardinal Severin",
+            "monster_name_th": "คาร์ดินัลเซเวริน",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_lumen3",
+            "monster_name": "Old Lumen · The Last Flame",
+            "monster_name_th": "ตาลูเมน · ไฟดวงสุดท้าย",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_aurel",
+            "monster_name": "Saint Aurel",
+            "monster_name_th": "นักบุญออเรล",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 5.0
+          },
+          {
+            "monster_id": "sb_aurel2",
+            "monster_name": "Saint Aurel · The Awakened Star",
+            "monster_name_th": "นักบุญออเรล · ดาวที่ตื่น",
+            "monster_lv": 99,
+            "boss": true,
+            "rate_pct": 5.0
+          }
+        ]
+      },
+      "execute": {
+        "n": "Execute Rune",
+        "on": "attack",
+        "t": [
+          "Damage +30% against targets below 30% HP",
+          "Below 30% · +45%",
+          "Below 35% · +60%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "execute",
+        "name_th": "รูนประหาร",
+        "t_th": [
+          "เป้าเลือดต่ำกว่า 30% ดาเมจ +30%",
+          "ต่ำกว่า 30% · +45%",
+          "ต่ำกว่า 35% · +60%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "gourd_lantern_green",
+            "monster_name": "Lantern Gourd · Green Fire Form",
+            "monster_name_th": "น้ำเต้าตะเกียง · ร่างไฟเขียว",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "mad_goose_blue",
+            "monster_name": "Raging Goose · Indigo Beak Form",
+            "monster_name_th": "ห่านคลั่ง · ร่างจะงอยคราม",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "melon_roller_orange",
+            "monster_name": "Rolling Melon · Orange Rind Form",
+            "monster_name_th": "แตงโมกลิ้ง · ร่างเปลือกส้ม",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "sack_mimic_red",
+            "monster_name": "Biting Grain Sack · Red Sack Form",
+            "monster_name_th": "กระสอบข้าวกัด · ร่างกระสอบแดง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "apple_worm_green",
+            "monster_name": "Rotten Apple Worm · Green Worm Form",
+            "monster_name_th": "หนอนแอปเปิลเน่า · ร่างหนอนเขียว",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "moon_hare_eclipse",
+            "monster_name": "Moonshadow Rabbit · New Moon Form",
+            "monster_name_th": "กระต่ายเงาจันทร์ · ร่างจันทร์ดับ",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rusty_squire_gold",
+            "monster_name": "Rusty Armor Soldier · Gold Armor Form",
+            "monster_name_th": "ทหารเกราะสนิม · ร่างเกราะทอง",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "boar_silver",
+            "monster_name": "Stubtusk Boar · Silver Horn Form",
+            "monster_name_th": "หมูป่าเขี้ยวตัน · ร่างเขาเงิน",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "mud_pike_violet",
+            "monster_name": "Mud Pike · Purple Scale Form",
+            "monster_name_th": "ปลาไพค์โคลน · ร่างเกล็ดม่วง",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "reed_muskrat_blue",
+            "monster_name": "Water Rat Leader · Indigo Fur Form",
+            "monster_name_th": "หนูน้ำจ่าฝูง · ร่างขนคราม",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "mud_leech_red",
+            "monster_name": "Giant Mud Leech · Blood Form",
+            "monster_name_th": "ปลิงโคลนยักษ์ · ร่างเลือด",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "pebble_golem_pink",
+            "monster_name": "Pebble Golem · Pink Gravel Form",
+            "monster_name_th": "โกเลมก้อนกรวด · ร่างกรวดชมพู",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "grave_cat_brown",
+            "monster_name": "Graveyard Black Cat · Brown Fur Form",
+            "monster_name_th": "แมวดำสุสาน · ร่างขนน้ำตาล",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "bone_crab_blue",
+            "monster_name": "Horned Skull Crab · Blue Claw Form",
+            "monster_name_th": "ปูกะโหลกเขา · ร่างก้ามฟ้า",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "wreath_spider_violet",
+            "monster_name": "Wreath Spider · Purple Blossom Form",
+            "monster_name_th": "แมงมุมพวงหรีด · ร่างดอกม่วง",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "firefly_knight_blue",
+            "monster_name": "Giant Firefly Beetle · Blue Glow Form",
+            "monster_name_th": "ด้วงหิ่งห้อยยักษ์ · ร่างแสงฟ้า",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "dragonfly_rainbow",
+            "monster_name": "Sapphire Dragonfly · Rainbow Form",
+            "monster_name_th": "แมลงปอไพลิน · ร่างสายรุ้ง",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "coffin_mimic_violet",
+            "monster_name": "Biting Coffin · Purple Wood Form",
+            "monster_name_th": "โลงศพกัด · ร่างไม้ม่วง",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "harness_hound_ash",
+            "monster_name": "Cart Hound · Ash Fur Form",
+            "monster_name_th": "หมาลากเกวียน · ร่างขนเถ้า",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "plank_beaver_gold",
+            "monster_name": "Gnawing Beaver · Gold Tooth Form",
+            "monster_name_th": "บีเวอร์แทะไม้ · ร่างฟันทอง",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "lost_lantern_blue",
+            "monster_name": "Stray Lantern · Blue Flame Form",
+            "monster_name_th": "ตะเกียงหลงทาง · ร่างเปลวฟ้า",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "cinder_owl_frost",
+            "monster_name": "Ember Owl · Snow Form",
+            "monster_name_th": "นกฮูกถ่านไฟ · ร่างหิมะ",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "fire_stag_azure",
+            "monster_name": "Firehorn Deer · Electric Form",
+            "monster_name_th": "กวางเขาไฟ · ร่างไฟฟ้า",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "smoke_mole_frost",
+            "monster_name": "Whitesmoke Mole · Frost Form",
+            "monster_name_th": "ตุ่นควันขาว · ร่างน้ำค้างแข็ง",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "wolf_frost",
+            "monster_name": "Moonshadow Wolf · Frost Form",
+            "monster_name_th": "หมาป่าเงาจันทร์ · ร่างน้ำค้างแข็ง",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "salt_golem_rose",
+            "monster_name": "Salt Block Golem · Pink Salt Form",
+            "monster_name_th": "โกเลมก้อนเกลือ · ร่างเกลือชมพู",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "dock_gull_storm",
+            "monster_name": "Thieving Gull · Storm Form",
+            "monster_name_th": "นกนางนวลขี้ขโมย · ร่างพายุ",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "storm_chick_gold",
+            "monster_name": "Thunder Eaglet · Gold Form",
+            "monster_name_th": "ลูกอินทรีฟ้าผ่า · ร่างทอง",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "crevasse_worm_azure",
+            "monster_name": "Fissure Worm · Deep Blue Ice Form",
+            "monster_name_th": "หนอนรอยแยก · ร่างน้ำแข็งฟ้าเข้ม",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "swamp_hog_green",
+            "monster_name": "Bog Venom Hog · Green Fur Form",
+            "monster_name_th": "หมูหนองพิษ · ร่างขนเขียว",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "tide_crab_violet",
+            "monster_name": "Tidal Crab · Dusky Purple Form",
+            "monster_name_th": "ปูแม่น้ำขึ้น · ร่างม่วงหม่น",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "sundew_creeper_green",
+            "monster_name": "Dewdrop Flycatcher · Green Leaf Form",
+            "monster_name_th": "หยาดน้ำค้างกินแมลง · ร่างใบเขียว",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "vial_imp_gold",
+            "monster_name": "Poison Bottle Imp · Gold Form",
+            "monster_name_th": "อิมป์ขวดพิษ · ร่างทอง",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "cage_canary_blue",
+            "monster_name": "Caged Ghost Canary · Blue Fur Form",
+            "monster_name_th": "นกขมิ้นผีในกรง · ร่างขนฟ้า",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "stew_slime_spicy",
+            "monster_name": "Cold Soup Slime · Chili Soup Form",
+            "monster_name_th": "สไลม์ซุปเย็นชืด · ร่างซุปพริก",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rock_armadillo_green",
+            "monster_name": "Red Rock Pangolin · Green Armor Form",
+            "monster_name_th": "ตัวนิ่มหินแดง · ร่างเกราะเขียว",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "mirage_wisp_blue",
+            "monster_name": "Mirage Sprite · Blue Mirage Form",
+            "monster_name_th": "ภูตภาพลวงตา · ร่างภาพลวงฟ้า",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "sand_shark_teal",
+            "monster_name": "Sand Shark · Blue Hide Form",
+            "monster_name_th": "ฉลามทราย · ร่างหนังฟ้า",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "crate_spider_ink",
+            "monster_name": "Crate Spider · Black Ink Form",
+            "monster_name_th": "แมงมุมลังไม้ · ร่างหมึกดำ",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "gate_gear_copper",
+            "monster_name": "Sluice Gear · Copper Form",
+            "monster_name_th": "เฟืองประตูน้ำ · ร่างทองแดง",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "imp_blue",
+            "monster_name": "Flame Imp · Electric Form",
+            "monster_name_th": "อิมป์เปลวไฟ · ร่างไฟฟ้า",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "book_gold",
+            "monster_name": "Flying Book · Gold Cover Form",
+            "monster_name_th": "หนังสือบิน · ร่างปกทอง",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "lantern_jelly_rose",
+            "monster_name": "Lantern Jellyfish · Rose Pink Form",
+            "monster_name_th": "แมงกะพรุนตะเกียง · ร่างชมพูกุหลาบ",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "kraken_arm_crimson",
+            "monster_name": "Kraken Tentacle · Deep Red Form",
+            "monster_name_th": "หนวดคราเคน · ร่างแดงเข้ม",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "fog_hound_amber",
+            "monster_name": "Mist Hound · Amber Form",
+            "monster_name_th": "หมาหมอก · ร่างอำพัน",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "horsetail_mantis_violet",
+            "monster_name": "Ponytail Mantis · Purple Form",
+            "monster_name_th": "ตั๊กแตนตำข้าวหางม้า · ร่างม่วง",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "sailback_blue",
+            "monster_name": "Sailback Lizard · Blue Sail Form",
+            "monster_name_th": "กิ้งก่าหลังใบเรือ · ร่างใบเรือฟ้า",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "needle_urchin_gold",
+            "monster_name": "Splitting Sea Urchin · Gold Form",
+            "monster_name_th": "เม่นทะเลแตกตัว · ร่างทอง",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "woolly_calf_snow",
+            "monster_name": "Woolly Mammoth Calf · Snow Form",
+            "monster_name_th": "ลูกช้างขนยาว · ร่างหิมะ",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "rootbound_hound_frost",
+            "monster_name": "Root-Possessed Hound · Dew Form",
+            "monster_name_th": "หมารากสิง · ร่างน้ำค้าง",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "shade_walker_violet",
+            "monster_name": "Walking Shadow · Violet Shadow Form",
+            "monster_name_th": "เงาเดินได้ · ร่างเงาม่วง",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "amber_golem_green",
+            "monster_name": "Amber Golem · Green Amber Form",
+            "monster_name_th": "โกเลมอำพัน · ร่างอำพันเขียว",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "ammonite_violet",
+            "monster_name": "Crawling Ammonite · Purple Pattern Form",
+            "monster_name_th": "แอมโมไนต์คลาน · ร่างลายม่วง",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "raptor_plume",
+            "monster_name": "Leaf Raptor · Feathered Form",
+            "monster_name_th": "แร็พเตอร์ใบไม้ · ร่างขนนก",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "bell_silver",
+            "monster_name": "Bell Puppet · Silver Form",
+            "monster_name_th": "หุ่นระฆัง · ร่างเงิน",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "lamplighter_gold",
+            "monster_name": "First Lightkeeper · Gold Form",
+            "monster_name_th": "ผู้จุดตะเกียงรุ่นแรก · ร่างทอง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "marble_hound_gold",
+            "monster_name": "Marble Hound · Gold Crack Form",
+            "monster_name_th": "หมาหินอ่อน · ร่างรอยร้าวทอง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.25
+          },
+          {
+            "monster_id": "clockwork_owl_silver",
+            "monster_name": "Wind-Up Owl · Silver Form",
+            "monster_name_th": "นกฮูกไขลาน · ร่างเงิน",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.25
+          }
+        ]
+      },
+      "corrode": {
+        "n": "Corrode Rune",
+        "on": "attack",
+        "t": [
+          "Poison 4 s",
+          "Stronger poison",
+          "Strongest poison"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "corrode",
+        "name_th": "รูนกัดกร่อน",
+        "t_th": [
+          "ติดพิษ 4 วิ",
+          "พิษแรงขึ้น",
+          "พิษแรงสุด"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "swamp_hog",
+            "monster_name": "Bog Venom Hog",
+            "monster_name_th": "หมูหนองพิษ",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "swamp_snake",
+            "monster_name": "Bogvenom Snake",
+            "monster_name_th": "งูหนองพิษ",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sundew_creeper",
+            "monster_name": "Dewdrop Flycatcher",
+            "monster_name_th": "หยาดน้ำค้างกินแมลง",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cocoon_weaver",
+            "monster_name": "Poison Cocoon Weaver",
+            "monster_name_th": "หนอนทอรังพิษ",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rattle_viper",
+            "monster_name": "Red Rock Rattlesnake",
+            "monster_name_th": "งูหางกระดิ่งหินแดง",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "burn": {
+        "n": "Burn Rune",
+        "on": "attack",
+        "t": [
+          "Burn 3 s",
+          "Burn 4 s",
+          "Burn 5 s"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "burn",
+        "name_th": "รูนเผา",
+        "t_th": [
+          "ติดไฟ 3 วิ",
+          "ติดไฟ 4 วิ",
+          "ติดไฟ 5 วิ"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "gourd_lantern",
+            "monster_name": "Lantern Gourd",
+            "monster_name_th": "น้ำเต้าตะเกียง",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "popcorn_pod",
+            "monster_name": "Popping Corncob",
+            "monster_name_th": "ฝักข้าวโพดป๊อป",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ash_weaver",
+            "monster_name": "Ash-Weaving Spider",
+            "monster_name_th": "แมงมุมทอเถ้า",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "fire_stag",
+            "monster_name": "Firehorn Deer",
+            "monster_name_th": "กวางเขาไฟ",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ember_fox",
+            "monster_name": "Red Ember Fox",
+            "monster_name_th": "จิ้งจอกถ่านแดง",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mirage_wisp",
+            "monster_name": "Mirage Sprite",
+            "monster_name_th": "ภูตภาพลวงตา",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "salamander",
+            "monster_name": "Salamander",
+            "monster_name_th": "ซาลาแมนเดอร์",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "fire_imp",
+            "monster_name": "Flame Imp",
+            "monster_name_th": "อิมป์เปลวไฟ",
+            "monster_lv": 90,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sailback",
+            "monster_name": "Sailback Lizard",
+            "monster_name_th": "กิ้งก่าหลังใบเรือ",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "curse": {
+        "n": "Curse Rune",
+        "on": "attack",
+        "t": [
+          "Target takes +8% damage from all sources for 5 s",
+          "+12%",
+          "+16%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "curse",
+        "name_th": "รูนสาป",
+        "t_th": [
+          "เป้ารับดาเมจทุกแหล่ง +8% 5 วิ",
+          "+12%",
+          "+16%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "bucket_scarecrow",
+            "monster_name": "Lid-Shield Scarecrow",
+            "monster_name_th": "หุ่นไล่กาถือฝาถัง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rusty_squire",
+            "monster_name": "Rusty Armor Soldier",
+            "monster_name_th": "ทหารเกราะสนิม",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "drowned_fisher",
+            "monster_name": "Drowned Fisherman",
+            "monster_name_th": "ชาวประมงจมน้ำ",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "zombie",
+            "monster_name": "Farmer Zombie",
+            "monster_name_th": "ซอมบี้ชาวนา",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bucket_sprite",
+            "monster_name": "Moon Spring Bucket Sprite",
+            "monster_name_th": "ภูตถังน้ำบ่อจันทร์",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tower_sentry",
+            "monster_name": "Hollow Tower Guard",
+            "monster_name_th": "ยามหอคอยกลวง",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bone_pile",
+            "monster_name": "Splitting Bone Pile",
+            "monster_name_th": "กองกระดูกแตกตัว",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bone_shaman",
+            "monster_name": "Bone Shaman",
+            "monster_name_th": "หมอผีกระดูก",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bone_knight",
+            "monster_name": "Bone Knight",
+            "monster_name_th": "อัศวินกระดูก",
+            "monster_lv": 52,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "chime_spirit",
+            "monster_name": "Wind Chime Sprite",
+            "monster_name_th": "ภูตกระดิ่งลม",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "storm_spirit",
+            "monster_name": "Blizzard Sprite",
+            "monster_name_th": "ภูตพายุหิมะ",
+            "monster_lv": 57,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "gatherer_ghoul",
+            "monster_name": "Poison Gatherer Ghost",
+            "monster_name_th": "ผีคนเก็บพิษ",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cage_canary",
+            "monster_name": "Caged Ghost Canary",
+            "monster_name_th": "นกขมิ้นผีในกรง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_plowman",
+            "monster_name": "Hollow Plowing Farmer",
+            "monster_name_th": "ชาวนากลวงไถนา",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "skeleton",
+            "monster_name": "Skeleton Soldier",
+            "monster_name_th": "โครงกระดูกทหาร",
+            "monster_lv": 75,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lamp_vendor",
+            "monster_name": "Hollow Lantern Seller",
+            "monster_name_th": "คนขายตะเกียงกลวง",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "smoke_wraith",
+            "monster_name": "Blacksmoke Spirit",
+            "monster_name_th": "วิญญาณควันดำ",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dock_brute",
+            "monster_name": "Hollow Sack Porter",
+            "monster_name_th": "กุลีกลวงแบกกระสอบ",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ghost_sailor",
+            "monster_name": "Ghost Sailor",
+            "monster_name_th": "กะลาสีผี",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "keeper_ghost",
+            "monster_name": "Lighthouse Keeper Ghost",
+            "monster_name_th": "ผีคนเฝ้าประภาคาร",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mist_citizen",
+            "monster_name": "Mist Townsfolk",
+            "monster_name_th": "ชาวเมืองหมอก",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "echo_bell",
+            "monster_name": "Silent Bell",
+            "monster_name_th": "กระดิ่งเงียบ",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "violet_wisp",
+            "monster_name": "Violet Light Sprite",
+            "monster_name_th": "ภูตแสงม่วง",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ghost",
+            "monster_name": "Wisp Ghost",
+            "monster_name_th": "ผีดวงไฟ",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "veiled_statue",
+            "monster_name": "Veiled Statue",
+            "monster_name_th": "รูปปั้นผ้าคลุมหน้า",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "skyfall": {
+        "n": "Skyfall Rune",
+        "on": "attack",
+        "t": [
+          "A falling star follows, 1 star at 40%",
+          "1 shot 60%",
+          "2 shots 50%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "skyfall",
+        "name_th": "รูนตกฟ้า",
+        "t_th": [
+          "ดาวตกตามลงมา 1 ลูก 40%",
+          "1 ลูก 60%",
+          "2 ลูก 50%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "star_crystal",
+            "monster_name": "Living Star Crystal",
+            "monster_name_th": "ผลึกดาวมีชีวิต",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tiny_meteor",
+            "monster_name": "Mini Meteor",
+            "monster_name_th": "ดาวตกจิ๋ว",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "rush": {
+        "n": "Dash Rune",
+        "on": "melee",
+        "t": [
+          "Dash toward the target up to 3 tiles before hitting",
+          "Dash 4 tiles",
+          "Dash 5 tiles · damage +15%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "rush",
+        "name_th": "รูนพุ่ง",
+        "t_th": [
+          "พุ่งหาเป้า 3 ช่องก่อนตี",
+          "พุ่ง 4 ช่อง",
+          "พุ่ง 5 ช่อง · ดาเมจ +15%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "carrot",
+            "monster_name": "Dashing Carrot",
+            "monster_name_th": "แครอทจอมพุ่ง",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_horse",
+            "monster_name": "Hollow Horse",
+            "monster_name_th": "ม้ากลวง",
+            "monster_lv": 41,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "harness_hound",
+            "monster_name": "Cart Hound",
+            "monster_name_th": "หมาลากเกวียน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hound",
+            "monster_name": "Hunting Hound",
+            "monster_name_th": "สุนัขล่า",
+            "monster_lv": 47,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cloud_ram",
+            "monster_name": "Curlhorn Cloud Sheep",
+            "monster_name_th": "แกะเมฆเขาม้วน",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "snow_wolf",
+            "monster_name": "Snow Wolf",
+            "monster_name_th": "หมาป่าหิมะ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "haunted_cart",
+            "monster_name": "Haunted Ore Cart",
+            "monster_name_th": "รถเข็นแร่ผีสิง",
+            "monster_lv": 71,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "city_hound",
+            "monster_name": "Capital Stray",
+            "monster_name_th": "หมาจรเมืองหลวง",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sand_giant",
+            "monster_name": "Sandstone Giant",
+            "monster_name_th": "ยักษ์หินทราย",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_carthorse",
+            "monster_name": "Hollow Cart Horse",
+            "monster_name_th": "ม้าลากเกวียนกลวง",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "wolf",
+            "monster_name": "Moonshadow Wolf",
+            "monster_name_th": "หมาป่าเงาจันทร์",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "leather_wolf",
+            "monster_name": "Stitched-Hide Wolf",
+            "monster_name_th": "หมาป่าหนังเย็บ",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "raptor",
+            "monster_name": "Leaf Raptor",
+            "monster_name_th": "แร็พเตอร์ใบไม้",
+            "monster_lv": 89,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lightless_deer",
+            "monster_name": "Lightless Deer",
+            "monster_name_th": "กวางไร้แสง",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "marble_hound",
+            "monster_name": "Marble Hound",
+            "monster_name_th": "หมาหินอ่อน",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "weather_rooster",
+            "monster_name": "Weathervane Rooster",
+            "monster_name_th": "ไก่ใบพัดลม",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "ambush": {
+        "n": "Ambush Rune",
+        "on": "melee",
+        "t": [
+          "First hit on an enemy that isn't fighting yet +40%",
+          "+60%",
+          "+80%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "ambush",
+        "name_th": "รูนซุ่ม",
+        "t_th": [
+          "ตีแรกใส่ตัวที่ยังไม่สู้ +40%",
+          "+60%",
+          "+80%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "apple_worm",
+            "monster_name": "Rotten Apple Worm",
+            "monster_name_th": "หนอนแอปเปิลเน่า",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mud_eel",
+            "monster_name": "Mud Eel",
+            "monster_name_th": "ปลาไหลมุดโคลน",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "grave_digger",
+            "monster_name": "Gravedigger Ghost",
+            "monster_name_th": "ผีขุดหลุม",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "smoke_mole",
+            "monster_name": "Whitesmoke Mole",
+            "monster_name_th": "ตุ่นควันขาว",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ghost_miner",
+            "monster_name": "Ghost Miner",
+            "monster_name_th": "คนงานเหมืองผี",
+            "monster_lv": 69,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crystal_mole",
+            "monster_name": "Crystal-Digging Mole",
+            "monster_name_th": "ตุ่นขุดผลึก",
+            "monster_lv": 71,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lava_eel",
+            "monster_name": "Lava Eel",
+            "monster_name_th": "ปลาไหลลาวา",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lava_worm",
+            "monster_name": "Lava Worm",
+            "monster_name_th": "หนอนลาวา",
+            "monster_lv": 89,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "root_crawler",
+            "monster_name": "Blackroot Inchworm",
+            "monster_name_th": "ตัวคืบรากดำ",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rootbound_hound",
+            "monster_name": "Root-Possessed Hound",
+            "monster_name_th": "หมารากสิง",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "stagger": {
+        "n": "Impact Rune",
+        "on": "melee",
+        "t": [
+          "Stun 0.4 s",
+          "Stun 0.6 s",
+          "Stun 0.8 s"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "stagger",
+        "name_th": "รูนกระแทก",
+        "t_th": [
+          "มึน 0.4 วิ",
+          "มึน 0.6 วิ",
+          "มึน 0.8 วิ"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "frog",
+            "monster_name": "Clearmarsh Frog",
+            "monster_name_th": "กบบึงใส",
+            "monster_lv": 19,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hedgehog",
+            "monster_name": "Splitting Hedgehog",
+            "monster_name_th": "เม่นแตกตัว",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "horn_rabbit",
+            "monster_name": "Unihorn Rabbit",
+            "monster_name_th": "กระต่ายเขาเดียว",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "caravan_bandit",
+            "monster_name": "Caravan Robber",
+            "monster_name_th": "โจรปล้นคาราวาน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tent_crawler",
+            "monster_name": "Creeping Tent",
+            "monster_name_th": "เต็นท์คืบคลาน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hour_knight",
+            "monster_name": "Clock Hand Knight",
+            "monster_name_th": "อัศวินเข็มนาฬิกา",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "pal": {
+        "n": "Partner Rune",
+        "on": "pet",
+        "t": [
+          "Summoned beasts last 30% longer",
+          "+50%",
+          "+70%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "pal",
+        "name_th": "รูนคู่หู",
+        "t_th": [
+          "สัตว์ที่เรียกอยู่นานขึ้น 30%",
+          "+50%",
+          "+70%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "owlet_lead",
+            "monster_name": "Owlet Leader",
+            "monster_name_th": "ลูกนกฮูกจ่าฝูง",
+            "monster_lv": 55,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mother_bloom",
+            "monster_name": "Venom Mother Bloom",
+            "monster_name_th": "ดอกแม่พิษ",
+            "monster_lv": 74,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bell_lead",
+            "monster_name": "Bell Puppet Leader",
+            "monster_name_th": "หุ่นระฆังจ่าฝูง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "share": {
+        "n": "Share Rune",
+        "on": "buff",
+        "t": [
+          "The buff also lands on friends around you (50% effect)",
+          "Effect 65%",
+          "Effect 80%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "share",
+        "name_th": "รูนแบ่งปัน",
+        "t_th": [
+          "บัฟติดเพื่อนรอบตัว (ผล 50%)",
+          "ผล 65%",
+          "ผล 80%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "repair_puppet",
+            "monster_name": "Repairman Puppet",
+            "monster_name_th": "หุ่นช่างซ่อม",
+            "monster_lv": 94,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "shell": {
+        "n": "Shell Rune",
+        "on": "buff",
+        "t": [
+          "After a buff, gain a shield of 8% max HP",
+          "Shield 12%",
+          "Shield 16%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "shell",
+        "name_th": "รูนเปลือก",
+        "t_th": [
+          "บัฟแล้วได้โล่ 8% HP สูงสุด",
+          "โล่ 12%",
+          "โล่ 16%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "wax_golem",
+            "monster_name": "Honeycomb Golem",
+            "monster_name_th": "โกเลมรวงผึ้ง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "golem",
+            "monster_name": "Red Rock Golem",
+            "monster_name_th": "โกเลมหินแดง",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cabinet_guard",
+            "monster_name": "Shield Filing Cabinet",
+            "monster_name_th": "ตู้เอกสารโล่",
+            "monster_lv": 87,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "glass_warden",
+            "monster_name": "Glass Floor Warden",
+            "monster_name_th": "ผู้เฝ้าพื้นแก้ว",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "moonrite": {
+        "n": "Moon Rune",
+        "on": "any",
+        "t": [
+          "Night damage +20% · day −10%",
+          "Night +30%",
+          "Night +40%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "moonrite",
+        "name_th": "รูนจันทร์",
+        "t_th": [
+          "กลางคืนดาเมจ +20% · กลางวัน −10%",
+          "กลางคืน +30%",
+          "กลางคืน +40%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "grave_cat",
+            "monster_name": "Graveyard Black Cat",
+            "monster_name_th": "แมวดำสุสาน",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "raven_butler",
+            "monster_name": "Butler Crow",
+            "monster_name_th": "อีกาพ่อบ้าน",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_villager",
+            "monster_name": "Hollow Villager",
+            "monster_name_th": "ชาวบ้านกลวง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hush_fox",
+            "monster_name": "Silent Fox",
+            "monster_name_th": "จิ้งจอกเงียบงัน",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "light_filler",
+            "monster_name": "Light Filler",
+            "monster_name_th": "คนกรอกแสง",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_lamplighter",
+            "monster_name": "Hollow Lightkeeper",
+            "monster_name_th": "ผู้จุดตะเกียงกลวง",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mist_wraith",
+            "monster_name": "Shadowmist Sprite",
+            "monster_name_th": "ภูตหมอกเงา",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "soot_sweeper",
+            "monster_name": "Chimney Sweep Ghost",
+            "monster_name_th": "ผีคนปัดปล่องไฟ",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "arc": {
+        "n": "Arc Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 35% chance lightning jumps to nearby monsters · About 10% more group damage on every skill",
+          "On cast, 35% chance lightning jumps to nearby monsters · About 16% more group damage on every skill",
+          "On cast, 35% chance lightning jumps to nearby monsters · About 25% more group damage on every skill"
+        ],
+        "kind": "proc",
+        "el": "wind",
+        "hex": "#ffe878",
+        "share": [
+          0.1,
+          0.16,
+          0.25
+        ],
+        "p": 0.35,
+        "alone": 0,
+        "jumps": [
+          2,
+          3,
+          3
+        ],
+        "reach": 300,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "arc",
+        "name_th": "รูนสายฟ้าแตก",
+        "t_th": [
+          "ร่ายแล้ว 35% สายฟ้าแตกไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 10% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 35% สายฟ้าแตกไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 16% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 35% สายฟ้าแตกไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 25% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "mad_goose",
+            "monster_name": "Raging Goose",
+            "monster_name_th": "ห่านคลั่ง",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "puff_sprite",
+            "monster_name": "Dandelion Puff Sprite",
+            "monster_name_th": "ภูตปุยแดนดิไลออน",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "angry_rooster",
+            "monster_name": "Moody Jungle Fowl",
+            "monster_name_th": "ไก่ป่าเจ้าอารมณ์",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dragonfly_lead",
+            "monster_name": "Dragonfly Leader",
+            "monster_name_th": "แมลงปอจ่าฝูง",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bee",
+            "monster_name": "Giant Bee",
+            "monster_name_th": "ผึ้งยักษ์",
+            "monster_lv": 44,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cinder_owl",
+            "monster_name": "Ember Owl",
+            "monster_name_th": "นกฮูกถ่านไฟ",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "gust_sprite",
+            "monster_name": "Whirlwind Sprite",
+            "monster_name_th": "ภูตลมหมุน",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dock_gull",
+            "monster_name": "Thieving Gull",
+            "monster_name_th": "นกนางนวลขี้ขโมย",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "thorn_tumbler",
+            "monster_name": "Rolling Thistle",
+            "monster_name_th": "หญ้าหนามกลิ้ง",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moor_pony",
+            "monster_name": "Windfield Pony",
+            "monster_name_th": "ม้าแคระทุ่งลม",
+            "monster_lv": 50,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "blade_sprite",
+            "monster_name": "Bladewind Sprite",
+            "monster_name_th": "ภูตลมใบมีด",
+            "monster_lv": 51,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "storm_sparrow",
+            "monster_name": "Storm Sparrow",
+            "monster_name_th": "นกกระจอกพายุ",
+            "monster_lv": 52,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cloud_ram_lead",
+            "monster_name": "Cloud Sheep Leader",
+            "monster_name_th": "แกะเมฆจ่าฝูง",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "kite_bat",
+            "monster_name": "Torn Kite Bat",
+            "monster_name_th": "ค้างคาวว่าวขาด",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dust_devil",
+            "monster_name": "Sandstorm Ghost",
+            "monster_name_th": "ผีพายุทราย",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "pterosaur",
+            "monster_name": "Pterosaur",
+            "monster_name_th": "เทอโรซอร์",
+            "monster_lv": 95,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "clockwork_owl",
+            "monster_name": "Wind-Up Owl",
+            "monster_name_th": "นกฮูกไขลาน",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "wildfire": {
+        "n": "Wildfire Rune",
+        "on": "attack",
+        "t": [
+          "Kills with this skill spread fire to nearby monsters · About 12% more group damage on every skill",
+          "Kills with this skill spread fire to nearby monsters · About 20% more group damage on every skill",
+          "Kills with this skill spread fire to nearby monsters · About 30% more group damage on every skill"
+        ],
+        "kind": "proc",
+        "el": "fire",
+        "hex": "#ff9040",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": null,
+        "alone": 0,
+        "jumps": null,
+        "reach": 200,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "wildfire",
+        "name_th": "รูนไฟลาม",
+        "t_th": [
+          "ตัวที่ตายจากสกิลนี้ ไฟลามไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ตัวที่ตายจากสกิลนี้ ไฟลามไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ตัวที่ตายจากสกิลนี้ ไฟลามไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "flame_dryad",
+            "monster_name": "Flame Wood Sprite",
+            "monster_name_th": "ภูตไม้เปลวไฟ",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sand_lizard",
+            "monster_name": "Sand Lizard Leader",
+            "monster_name_th": "กิ้งก่าทรายจ่าฝูง",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "magma_frog",
+            "monster_name": "Fire-Spitting Lava Frog",
+            "monster_name_th": "กบลาวาพ่นไฟ",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "steam_wisp",
+            "monster_name": "Steam Sprite",
+            "monster_name_th": "ภูตไอร้อน",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "fire_bat",
+            "monster_name": "Flame Bat",
+            "monster_name_th": "ค้างคาวเปลวไฟ",
+            "monster_lv": 87,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "magma_blob",
+            "monster_name": "Splitting Magma Blob",
+            "monster_name_th": "ก้อนแมกมาแตกตัว",
+            "monster_lv": 87,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "magma_golem",
+            "monster_name": "Lava Golem",
+            "monster_name_th": "โกเลมลาวา",
+            "monster_lv": 89,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lava_imp",
+            "monster_name": "Lava-Spitting Imp",
+            "monster_name_th": "อิมป์พ่นลาวา",
+            "monster_lv": 90,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "frostbite": {
+        "n": "Frost Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 30% chance of a cold burst around the target that slows · About 8% more group damage on every skill",
+          "On cast, 30% chance of a cold burst around the target that slows · About 12% more group damage on every skill",
+          "On cast, 30% chance of a cold burst around the target that slows · About 18% more group damage on every skill"
+        ],
+        "kind": "proc",
+        "el": "water",
+        "hex": "#a8dcff",
+        "share": [
+          0.08,
+          0.12,
+          0.18
+        ],
+        "p": 0.3,
+        "alone": 0.25,
+        "jumps": null,
+        "reach": 160,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "frostbite",
+        "name_th": "รูนฟรอสต์",
+        "t_th": [
+          "ร่ายแล้ว 30% ความเย็นแตกรอบเป้า ช้าลง · ตีฝูงแรงขึ้นราว 8% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 30% ความเย็นแตกรอบเป้า ช้าลง · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 30% ความเย็นแตกรอบเป้า ช้าลง · ตีฝูงแรงขึ้นราว 18% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "mud_pike",
+            "monster_name": "Mud Pike",
+            "monster_name_th": "ปลาไพค์โคลน",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "reed_muskrat",
+            "monster_name": "Water Rat Leader",
+            "monster_name_th": "หนูน้ำจ่าฝูง",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "leap_trout",
+            "monster_name": "Leaping Trout",
+            "monster_name_th": "ปลาเทราต์กระโดด",
+            "monster_lv": 25,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "log_lurker",
+            "monster_name": "Ambush Log",
+            "monster_name_th": "ท่อนซุงซุ่ม",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "otter",
+            "monster_name": "Hunter Otter",
+            "monster_name_th": "นากนักล่า",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "split_shroom",
+            "monster_name": "Splitting Water Shroom",
+            "monster_name_th": "เห็ดน้ำแตกตัว",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "falls_serpent",
+            "monster_name": "Waterfall Snake",
+            "monster_name_th": "งูน้ำตก",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "brine_shrimp",
+            "monster_name": "Giant Brine Shrimp",
+            "monster_name_th": "กุ้งน้ำเค็มยักษ์",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crevasse_worm",
+            "monster_name": "Fissure Worm",
+            "monster_name_th": "หนอนรอยแยก",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "frost_sprite",
+            "monster_name": "Ice Flake Sprite",
+            "monster_name_th": "ภูตเกล็ดน้ำแข็ง",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ice_goat",
+            "monster_name": "Mountain Goat",
+            "monster_name_th": "แพะภูเขา",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "snowball_yeti",
+            "monster_name": "Snowball Yeti",
+            "monster_name_th": "เยติลูกหิมะ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lure_angler",
+            "monster_name": "Bog Anglerfish",
+            "monster_name_th": "ปลาตกเบ็ดหนอง",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "kappa",
+            "monster_name": "Mistbog Kappa",
+            "monster_name_th": "กัปปะหนองหมอก",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crayfish_brute",
+            "monster_name": "Giant Crayfish",
+            "monster_name_th": "กุ้งเครย์ฟิชยักษ์",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shadow_heron",
+            "monster_name": "Shadow Heron",
+            "monster_name_th": "นกกระสาเงา",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "kraken_arm",
+            "monster_name": "Kraken Tentacle",
+            "monster_name_th": "หนวดคราเคน",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "fog_hound",
+            "monster_name": "Mist Hound",
+            "monster_name_th": "หมาหมอก",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "plesio",
+            "monster_name": "Plesiosaur",
+            "monster_name_th": "พลีซิโอซอร์",
+            "monster_lv": 97,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ammonite",
+            "monster_name": "Crawling Ammonite",
+            "monster_name_th": "แอมโมไนต์คลาน",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "venom": {
+        "n": "Venom Rune",
+        "on": "attack",
+        "t": [
+          "On cast, poison stacks on the target, up to 5 · About 6% more single-target damage on every skill",
+          "On cast, poison stacks on the target, up to 5 · About 10% more single-target damage on every skill",
+          "On cast, poison stacks on the target, up to 5 · About 15% more single-target damage on every skill"
+        ],
+        "kind": "proc",
+        "el": "poison",
+        "hex": "#96e65a",
+        "share": [
+          0.06,
+          0.1,
+          0.15
+        ],
+        "p": null,
+        "alone": null,
+        "jumps": null,
+        "reach": null,
+        "max": 5,
+        "dur": 6,
+        "delay": null,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "venom",
+        "name_th": "รูนพิษซ้อน",
+        "t_th": [
+          "ร่ายแล้วพิษซ้อนบนเป้า สูงสุด 5 ชั้น · ตีเป้าเดียวแรงขึ้นราว 6% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้วพิษซ้อนบนเป้า สูงสุด 5 ชั้น · ตีเป้าเดียวแรงขึ้นราว 10% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้วพิษซ้อนบนเป้า สูงสุด 5 ชั้น · ตีเป้าเดียวแรงขึ้นราว 15% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "cave_spider",
+            "monster_name": "Cave Spider",
+            "monster_name_th": "แมงมุมถ้ำ",
+            "monster_lv": 19,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "wreath_spider",
+            "monster_name": "Wreath Spider",
+            "monster_name_th": "แมงมุมพวงหรีด",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "glow_spider",
+            "monster_name": "Glowweb Spider",
+            "monster_name_th": "แมงมุมใยเรือง",
+            "monster_lv": 44,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "spore_puffer",
+            "monster_name": "Spore Lung",
+            "monster_name_th": "ปอดสปอร์",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "poison_toad",
+            "monster_name": "Poison Toad",
+            "monster_name_th": "คางคกพิษ",
+            "monster_lv": 59,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mosquito",
+            "monster_name": "Giant Mosquito",
+            "monster_name_th": "ยุงยักษ์",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "swamp_croc",
+            "monster_name": "Bog Venom Crocodile",
+            "monster_name_th": "จระเข้หนองพิษ",
+            "monster_lv": 65,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bloat_toad",
+            "monster_name": "Bloated Poison Toad",
+            "monster_name_th": "คางคกพองพิษ",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "vial_imp",
+            "monster_name": "Poison Bottle Imp",
+            "monster_name_th": "อิมป์ขวดพิษ",
+            "monster_lv": 66,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "poison_ladybug",
+            "monster_name": "Poison Ladybug",
+            "monster_name_th": "เต่าทองพิษ",
+            "monster_lv": 71,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bloom_sprout",
+            "monster_name": "Venom Mother Larva",
+            "monster_name_th": "ตัวอ่อนต้นแม่พิษ",
+            "monster_lv": 74,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "drain_frog",
+            "monster_name": "Drain Frog",
+            "monster_name_th": "กบท่อระบาย",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "canal_rat",
+            "monster_name": "Canal Rat",
+            "monster_name_th": "หนูคลอง",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "shade": {
+        "n": "Shade Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 30% chance a shadow strikes the target again · About 6% more single-target damage on every skill",
+          "On cast, 30% chance a shadow strikes the target again · About 10% more single-target damage on every skill",
+          "On cast, 30% chance a shadow strikes the target again · About 15% more single-target damage on every skill"
+        ],
+        "kind": "proc",
+        "el": "shadow",
+        "hex": "#be78ff",
+        "share": [
+          0.06,
+          0.1,
+          0.15
+        ],
+        "p": 0.3,
+        "alone": null,
+        "jumps": null,
+        "reach": null,
+        "max": null,
+        "dur": null,
+        "delay": 0.28,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "shade",
+        "name_th": "รูนเงาตีซ้ำ",
+        "t_th": [
+          "ร่ายแล้ว 30% เงาตีเป้าซ้ำ · ตีเป้าเดียวแรงขึ้นราว 6% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 30% เงาตีเป้าซ้ำ · ตีเป้าเดียวแรงขึ้นราว 10% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 30% เงาตีเป้าซ้ำ · ตีเป้าเดียวแรงขึ้นราว 15% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "echo_bat",
+            "monster_name": "Sonar Bat",
+            "monster_name_th": "ค้างคาวคลื่นเสียง",
+            "monster_lv": 12,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mother_bat",
+            "monster_name": "Mother Roost Bat",
+            "monster_name_th": "ค้างคาวแม่รัง",
+            "monster_lv": 15,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "black_ewe",
+            "monster_name": "Black Ewe",
+            "monster_name_th": "แม่แกะดำ",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tombstone",
+            "monster_name": "Haunted Gravestone",
+            "monster_name_th": "ป้ายหลุมศพผีสิง",
+            "monster_lv": 31,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "grave_crow",
+            "monster_name": "Graveyard Crow",
+            "monster_name_th": "อีกาสุสาน",
+            "monster_lv": 35,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "gill_stalker",
+            "monster_name": "Gill Ghost",
+            "monster_name_th": "ผีครีบเห็ด",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "signal_crow",
+            "monster_name": "Signal Crow",
+            "monster_name_th": "อีกาส่งสัญญาณ",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_stargazer",
+            "monster_name": "Hollow Astronomer's Aide",
+            "monster_name_th": "ผู้ช่วยนักดาราศาสตร์กลวง",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_guard",
+            "monster_name": "Hollow Guard",
+            "monster_name_th": "ยามกลวง",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "pickpocket_cat",
+            "monster_name": "Pickpocket Cat",
+            "monster_name_th": "แมวล้วงกระเป๋า",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shade_walker",
+            "monster_name": "Walking Shadow",
+            "monster_name_th": "เงาเดินได้",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hollow_bellringer",
+            "monster_name": "Hollow Bell Ringer",
+            "monster_name_th": "ผู้ตีระฆังกลวง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "trap": {
+        "n": "Trap Rune",
+        "on": "attack",
+        "t": [
+          "On cast, sets a trap at the aim point (every 5 s) · About 8% more group damage",
+          "On cast, sets a trap at the aim point (every 5 s) · About 13% more group damage",
+          "On cast, sets a trap at the aim point (every 5 s) · About 20% more group damage"
+        ],
+        "kind": "proc",
+        "el": "earth",
+        "hex": "#ffcd6e",
+        "share": [
+          0.08,
+          0.13,
+          0.2
+        ],
+        "p": null,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 150,
+        "max": 2,
+        "dur": null,
+        "delay": null,
+        "cd": 5,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "trap",
+        "name_th": "รูนกับดัก",
+        "t_th": [
+          "ร่ายแล้ววางกับดักที่จุดเล็ง (ทุก 5 วิ) · ตีฝูงแรงขึ้นราว 8%",
+          "ร่ายแล้ววางกับดักที่จุดเล็ง (ทุก 5 วิ) · ตีฝูงแรงขึ้นราว 13%",
+          "ร่ายแล้ววางกับดักที่จุดเล็ง (ทุก 5 วิ) · ตีฝูงแรงขึ้นราว 20%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "boar",
+            "monster_name": "Stubtusk Boar",
+            "monster_name_th": "หมูป่าเขี้ยวตัน",
+            "monster_lv": 9,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "melon_roller",
+            "monster_name": "Rolling Melon",
+            "monster_name_th": "แตงโมกลิ้ง",
+            "monster_lv": 10,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "scarecrow",
+            "monster_name": "Haunted Scarecrow",
+            "monster_name_th": "หุ่นไล่กาผีสิง",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stitch_doll",
+            "monster_name": "Stitched Straw Doll",
+            "monster_name_th": "ตุ๊กตาฟางเย็บแผล",
+            "monster_lv": 18,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "grass_lurker",
+            "monster_name": "Ambush Grass Worm",
+            "monster_name_th": "หนอนหญ้าซุ่ม",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "pebble_golem",
+            "monster_name": "Pebble Golem",
+            "monster_name_th": "โกเลมก้อนกรวด",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "dig_ant",
+            "monster_name": "Tunnel Ant",
+            "monster_name_th": "มดขุดอุโมงค์",
+            "monster_lv": 33,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "acorn_squirrel",
+            "monster_name": "Acorn-Throwing Squirrel",
+            "monster_name_th": "กระรอกปาลูกโอ๊ก",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moss_bear",
+            "monster_name": "Moss Bear",
+            "monster_name_th": "หมีตะไคร่",
+            "monster_lv": 40,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "plank_beaver",
+            "monster_name": "Gnawing Beaver",
+            "monster_name_th": "บีเวอร์แทะไม้",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "doctor_shroom",
+            "monster_name": "Doctor Shroom",
+            "monster_name_th": "เห็ดหมอ",
+            "monster_lv": 43,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shroom_beetle",
+            "monster_name": "Shroom-Carrier Beetle",
+            "monster_name_th": "ด้วงแบกเห็ด",
+            "monster_lv": 45,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shroom_wolf",
+            "monster_name": "Shroom Wolf Leader",
+            "monster_name_th": "หมาป่าเห็ดจ่าฝูง",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "salt_golem",
+            "monster_name": "Salt Block Golem",
+            "monster_name_th": "โกเลมก้อนเกลือ",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "nurse_ant",
+            "monster_name": "Nurse Ant",
+            "monster_name_th": "มดพยาบาล",
+            "monster_lv": 49,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cliff_goat",
+            "monster_name": "Cliff Goat",
+            "monster_name_th": "แพะผาหน้าผา",
+            "monster_lv": 53,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "nest_golem",
+            "monster_name": "Nest Golem",
+            "monster_name_th": "โกเลมรังนก",
+            "monster_lv": 54,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "avalanche_ram",
+            "monster_name": "Avalanche Horn Sheep",
+            "monster_name_th": "แกะเขาหิมะถล่ม",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stone_owl",
+            "monster_name": "Stone Owl",
+            "monster_name_th": "นกฮูกหิน",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moss_lurker",
+            "monster_name": "Hanging Moss Ghost",
+            "monster_name_th": "ผีมอสห้อย",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "maneater",
+            "monster_name": "Man-Eating Flower",
+            "monster_name_th": "ดอกไม้กินคน",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "geode_hopper",
+            "monster_name": "Leaping Geode",
+            "monster_name_th": "หินจีโอดกระโดด",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "milestone_golem",
+            "monster_name": "Walking Milestone",
+            "monster_name_th": "หลักไมล์เดินได้",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "root_worm",
+            "monster_name": "Burrowing Root Worm",
+            "monster_name_th": "หนอนรากมุดดิน",
+            "monster_lv": 74,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stone_vulture",
+            "monster_name": "Stone Vulture",
+            "monster_name_th": "นกแร้งหิน",
+            "monster_lv": 77,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rail_spider",
+            "monster_name": "Rail Spider",
+            "monster_name_th": "แมงมุมรางเหล็ก",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rock_armadillo",
+            "monster_name": "Red Rock Pangolin",
+            "monster_name_th": "ตัวนิ่มหินแดง",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sand_shark",
+            "monster_name": "Sand Shark",
+            "monster_name_th": "ฉลามทราย",
+            "monster_lv": 80,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rivet_bat",
+            "monster_name": "Rivet Bat",
+            "monster_name_th": "ค้างคาวหมุดย้ำ",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "gate_gear",
+            "monster_name": "Sluice Gear",
+            "monster_name_th": "เฟืองประตูน้ำ",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "willow_hand",
+            "monster_name": "Willow Branch Hand",
+            "monster_name_th": "มือกิ่งหลิว",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "horsetail_mantis",
+            "monster_name": "Ponytail Mantis",
+            "monster_name_th": "ตั๊กแตนตำข้าวหางม้า",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tar_blob",
+            "monster_name": "Splitting Tar Blob",
+            "monster_name_th": "ก้อนน้ำมันดินแตกตัว",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "woolly_calf",
+            "monster_name": "Woolly Mammoth Calf",
+            "monster_name_th": "ลูกช้างขนยาว",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "hatchling",
+            "monster_name": "Wildwood Dragonling",
+            "monster_name_th": "ลูกมังกรไพร",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tiny_dino",
+            "monster_name": "Tiny Dino Leader",
+            "monster_name_th": "ไดโนจิ๋วจ่าฝูง",
+            "monster_lv": 97,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "spmeteor": {
+        "n": "Meteor Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance a meteor falls on the target · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance a meteor falls on the target · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance a meteor falls on the target · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "fire",
+        "hex": "#ff7a3c",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 220,
+        "max": null,
+        "dur": null,
+        "delay": 0.9,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spmeteor",
+        "name_th": "รูนอุกกาบาตถล่ม",
+        "t_th": [
+          "ร่ายแล้ว 10% อุกกาบาตถล่มตกใส่เป้า · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% อุกกาบาตถล่มตกใส่เป้า · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% อุกกาบาตถล่มตกใส่เป้า · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spthunder": {
+        "n": "Thunder Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance thunder strikes the target and those beside it · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance thunder strikes the target and those beside it · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance thunder strikes the target and those beside it · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "wind",
+        "hex": "#ffe85a",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 160,
+        "max": null,
+        "dur": null,
+        "delay": 0.15,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spthunder",
+        "name_th": "รูนสายฟ้าฟาด",
+        "t_th": [
+          "ร่ายแล้ว 10% สายฟ้าฟาดเป้าและตัวข้างๆ · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% สายฟ้าฟาดเป้าและตัวข้างๆ · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% สายฟ้าฟาดเป้าและตัวข้างๆ · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spfrost": {
+        "n": "Frost Nova Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance a frost nova bursts around you and slows monsters · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance a frost nova bursts around you and slows monsters · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance a frost nova bursts around you and slows monsters · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "water",
+        "hex": "#8ce1ff",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 240,
+        "max": null,
+        "dur": null,
+        "delay": 0.25,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spfrost",
+        "name_th": "รูนวงน้ำแข็ง",
+        "t_th": [
+          "ร่ายแล้ว 10% วงน้ำแข็งแตกรอบตัว มอนช้าลง · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% วงน้ำแข็งแตกรอบตัว มอนช้าลง · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% วงน้ำแข็งแตกรอบตัว มอนช้าลง · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spquake": {
+        "n": "Earth Spike Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance stone spikes burst under the target · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance stone spikes burst under the target · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance stone spikes burst under the target · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "earth",
+        "hex": "#e6af64",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 150,
+        "max": null,
+        "dur": null,
+        "delay": 0.2,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spquake",
+        "name_th": "รูนหินแหลมพสุธา",
+        "t_th": [
+          "ร่ายแล้ว 10% หินแหลมพุ่งใต้เป้า · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% หินแหลมพุ่งใต้เป้า · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% หินแหลมพุ่งใต้เป้า · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spmagnus": {
+        "n": "Magnus Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance a Magnus circle of light opens under the target · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance a Magnus circle of light opens under the target · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance a Magnus circle of light opens under the target · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "holy",
+        "hex": "#fff0be",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 240,
+        "max": null,
+        "dur": null,
+        "delay": 0.5,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spmagnus",
+        "name_th": "รูนวงเวทแสงขับมาร",
+        "t_th": [
+          "ร่ายแล้ว 10% วงเวทแสงขับมารใต้เป้า · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% วงเวทแสงขับมารใต้เป้า · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% วงเวทแสงขับมารใต้เป้า · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spwhirl": {
+        "n": "Whirlwind Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": null,
+        "hex": "#d7e6f5",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 190,
+        "max": null,
+        "dur": null,
+        "delay": 0.15,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spwhirl",
+        "name_th": "รูนดาบพายุหมุน",
+        "t_th": [
+          "ร่ายแล้ว 10% ดาบพายุหมุนรอบตัว (ธาตุอาวุธ) · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% ดาบพายุหมุนรอบตัว (ธาตุอาวุธ) · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% ดาบพายุหมุนรอบตัว (ธาตุอาวุธ) · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "splord": {
+        "n": "Lord of Thunder Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance many lightning bolts strike around the target · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance many lightning bolts strike around the target · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance many lightning bolts strike around the target · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "wind",
+        "hex": "#96a0ff",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 260,
+        "max": null,
+        "dur": null,
+        "delay": 0.4,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "splord",
+        "name_th": "รูนเจ้าแห่งอสนี",
+        "t_th": [
+          "ร่ายแล้ว 10% ฟ้าผ่าหลายลูกรอบเป้า · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% ฟ้าผ่าหลายลูกรอบเป้า · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% ฟ้าผ่าหลายลูกรอบเป้า · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "spshadow": {
+        "n": "Shadow Meteor Spell Rune",
+        "on": "attack",
+        "t": [
+          "On cast, 10% chance shadow meteors fall around you · About 12% more damage on packs with it on every skill",
+          "On cast, 10% chance shadow meteors fall around you · About 20% more damage on packs with it on every skill",
+          "On cast, 10% chance shadow meteors fall around you · About 30% more damage on packs with it on every skill"
+        ],
+        "kind": "proc",
+        "el": "shadow",
+        "hex": "#aa6eff",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 220,
+        "max": null,
+        "dur": null,
+        "delay": 0.5,
+        "cd": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "spshadow",
+        "name_th": "รูนอุกกาบาตเงา",
+        "t_th": [
+          "ร่ายแล้ว 10% อุกกาบาตเงาตกรอบตัว · ตีฝูงแรงขึ้นราว 12% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% อุกกาบาตเงาตกรอบตัว · ตีฝูงแรงขึ้นราว 20% เมื่อใส่ทุกสกิล",
+          "ร่ายแล้ว 10% อุกกาบาตเงาตกรอบตัว · ตีฝูงแรงขึ้นราว 30% เมื่อใส่ทุกสกิล"
+        ],
+        "dropped_by": []
+      },
+      "grenade": {
+        "n": "Grenade Rune",
+        "on": "attack",
+        "t": [
+          "On a shot, 30% chance to lob a grenade at the target: a fire blast that burns · About 14% more group damage on every gun skill · Gunslingers only, any gun",
+          "On a shot, 30% chance to lob a grenade at the target: a fire blast that burns · About 22% more group damage on every gun skill · Gunslingers only, any gun",
+          "On a shot, 30% chance to lob a grenade at the target: a fire blast that burns · About 34% more group damage on every gun skill · Gunslingers only, any gun"
+        ],
+        "kind": "gun",
+        "el": "fire",
+        "hex": "#ff9646",
+        "gun": "all",
+        "share": [
+          0.14,
+          0.22,
+          0.34
+        ],
+        "guard": null,
+        "p": 0.3,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 160,
+        "max": null,
+        "dur": null,
+        "delay": 0.35,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "grenade",
+        "name_th": "รูนระเบิดมือ",
+        "t_th": [
+          "ยิงแล้ว 30% ปาระเบิดมือใส่เป้า ระเบิดเป็นวง ติดไฟ · ตีฝูงแรงขึ้นราว 14% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ",
+          "ยิงแล้ว 30% ปาระเบิดมือใส่เป้า ระเบิดเป็นวง ติดไฟ · ตีฝูงแรงขึ้นราว 22% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ",
+          "ยิงแล้ว 30% ปาระเบิดมือใส่เป้า ระเบิดเป็นวง ติดไฟ · ตีฝูงแรงขึ้นราว 34% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "scorpion",
+            "monster_name": "Red Scorpion",
+            "monster_name_th": "แมงป่องแดง",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "ricochet": {
+        "n": "Ricochet Rune",
+        "on": "attack",
+        "t": [
+          "On a shot, 40% chance the bullet ricochets to nearby monsters · About 13% more group damage on every gun skill · Gunslingers only, any gun",
+          "On a shot, 40% chance the bullet ricochets to nearby monsters · About 21% more group damage on every gun skill · Gunslingers only, any gun",
+          "On a shot, 40% chance the bullet ricochets to nearby monsters · About 32% more group damage on every gun skill · Gunslingers only, any gun"
+        ],
+        "kind": "gun",
+        "el": "neutral",
+        "hex": "#ffe296",
+        "gun": "all",
+        "share": [
+          0.13,
+          0.21,
+          0.32
+        ],
+        "guard": null,
+        "p": 0.4,
+        "alone": 0.3,
+        "jumps": [
+          2,
+          3,
+          4
+        ],
+        "reach": 280,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "ricochet",
+        "name_th": "รูนกระสุนชิ่ง",
+        "t_th": [
+          "ยิงแล้ว 40% กระสุนชิ่งไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 13% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ",
+          "ยิงแล้ว 40% กระสุนชิ่งไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 21% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ",
+          "ยิงแล้ว 40% กระสุนชิ่งไปตัวข้างๆ · ตีฝูงแรงขึ้นราว 32% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนทุกแบบ"
+        ],
+        "dropped_by": []
+      },
+      "hollow": {
+        "n": "Hollow Point Rune",
+        "on": "attack",
+        "t": [
+          "Every shot's first hit bursts in a small ring · About 10% more group damage on every gun skill · Gunslingers only, with pistols",
+          "Every shot's first hit bursts in a small ring · About 16% more group damage on every gun skill · Gunslingers only, with pistols",
+          "Every shot's first hit bursts in a small ring · About 25% more group damage on every gun skill · Gunslingers only, with pistols"
+        ],
+        "kind": "gun",
+        "el": "fire",
+        "hex": "#ffbe5a",
+        "gun": "pistol",
+        "share": [
+          0.1,
+          0.16,
+          0.25
+        ],
+        "guard": null,
+        "p": 1,
+        "alone": 0.4,
+        "jumps": null,
+        "reach": 110,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "hollow",
+        "name_th": "รูนหัวกระสุนระเบิด",
+        "t_th": [
+          "ยิงทุกครั้ง นัดแรกที่โดนแตกเป็นวงเล็ก · ตีฝูงแรงขึ้นราว 10% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก",
+          "ยิงทุกครั้ง นัดแรกที่โดนแตกเป็นวงเล็ก · ตีฝูงแรงขึ้นราว 16% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก",
+          "ยิงทุกครั้ง นัดแรกที่โดนแตกเป็นวงเล็ก · ตีฝูงแรงขึ้นราว 25% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก"
+        ],
+        "dropped_by": []
+      },
+      "duel": {
+        "n": "Duel Rune",
+        "on": "attack",
+        "t": [
+          "Six shots in a row on one target: the sixth is a decisive shot · About 9% more single-target damage on every gun skill · Gunslingers only, with pistols",
+          "Six shots in a row on one target: the sixth is a decisive shot · About 14% more single-target damage on every gun skill · Gunslingers only, with pistols",
+          "Six shots in a row on one target: the sixth is a decisive shot · About 22% more single-target damage on every gun skill · Gunslingers only, with pistols"
+        ],
+        "kind": "gun",
+        "el": "neutral",
+        "hex": "#fff5d2",
+        "gun": "pistol",
+        "share": [
+          0.09,
+          0.14,
+          0.22
+        ],
+        "guard": null,
+        "p": null,
+        "alone": null,
+        "jumps": null,
+        "reach": null,
+        "max": 6,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "duel",
+        "name_th": "รูนดวลปืน",
+        "t_th": [
+          "ยิงเป้าเดิมติดกัน 6 ครั้ง นัดที่ 6 เป็นนัดตัดสิน · ตีเป้าเดียวแรงขึ้นราว 9% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก",
+          "ยิงเป้าเดิมติดกัน 6 ครั้ง นัดที่ 6 เป็นนัดตัดสิน · ตีเป้าเดียวแรงขึ้นราว 14% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก",
+          "ยิงเป้าเดิมติดกัน 6 ครั้ง นัดที่ 6 เป็นนัดตัดสิน · ตีเป้าเดียวแรงขึ้นราว 22% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือปืนพก"
+        ],
+        "dropped_by": []
+      },
+      "dragon": {
+        "n": "Dragon's Breath Rune",
+        "on": "attack",
+        "t": [
+          "Every shot breathes a cone of fire from the muzzle that burns · About 16% more group damage on every gun skill · Gunslingers only, with a shotgun",
+          "Every shot breathes a cone of fire from the muzzle that burns · About 26% more group damage on every gun skill · Gunslingers only, with a shotgun",
+          "Every shot breathes a cone of fire from the muzzle that burns · About 40% more group damage on every gun skill · Gunslingers only, with a shotgun"
+        ],
+        "kind": "gun",
+        "el": "fire",
+        "hex": "#ff7832",
+        "gun": "shotgun",
+        "share": [
+          0.16,
+          0.26,
+          0.4
+        ],
+        "guard": null,
+        "p": 1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 260,
+        "max": null,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "dragon",
+        "name_th": "รูนลูกปรายเพลิง",
+        "t_th": [
+          "ยิงทุกครั้ง ไฟพ่นหน้าปืนเป็นกรวย ติดไฟ · ตีฝูงแรงขึ้นราว 16% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงทุกครั้ง ไฟพ่นหน้าปืนเป็นกรวย ติดไฟ · ตีฝูงแรงขึ้นราว 26% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงทุกครั้ง ไฟพ่นหน้าปืนเป็นกรวย ติดไฟ · ตีฝูงแรงขึ้นราว 40% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "spit_scorpion",
+            "monster_name": "Venom-Shot Scorpion",
+            "monster_name_th": "แมงป่องยิงพิษ",
+            "monster_lv": 77,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "barrel": {
+        "n": "Double Barrel Rune",
+        "on": "attack",
+        "t": [
+          "On a shot, 35% chance the second barrel fires at the target · About 12% more single-target damage on every gun skill · Gunslingers only, with a shotgun",
+          "On a shot, 35% chance the second barrel fires at the target · About 20% more single-target damage on every gun skill · Gunslingers only, with a shotgun",
+          "On a shot, 35% chance the second barrel fires at the target · About 30% more single-target damage on every gun skill · Gunslingers only, with a shotgun"
+        ],
+        "kind": "gun",
+        "el": "neutral",
+        "hex": "#e6e6f0",
+        "gun": "shotgun",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "guard": null,
+        "p": 0.35,
+        "alone": null,
+        "jumps": null,
+        "reach": null,
+        "max": null,
+        "dur": null,
+        "delay": 0.15,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "barrel",
+        "name_th": "รูนสองลำกล้อง",
+        "t_th": [
+          "ยิงแล้ว 35% ลำกล้องที่สองยิงตามใส่เป้า · ตีเป้าเดียวแรงขึ้นราว 12% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงแล้ว 35% ลำกล้องที่สองยิงตามใส่เป้า · ตีเป้าเดียวแรงขึ้นราว 20% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงแล้ว 35% ลำกล้องที่สองยิงตามใส่เป้า · ตีเป้าเดียวแรงขึ้นราว 30% เมื่อใส่ทุกสกิลปืน · ใช้ได้เฉพาะสายปืน ถือลูกซอง"
+        ],
+        "dropped_by": []
+      },
+      "recoil": {
+        "n": "Recoil Rune",
+        "on": "attack",
+        "t": [
+          "A hit on a monster within 160 pushes it back and you take 8% less damage for 2 s · Gunslingers only, with a shotgun",
+          "A hit on a monster within 160 pushes it back and you take 12% less damage for 2 s · Gunslingers only, with a shotgun",
+          "A hit on a monster within 160 pushes it back and you take 16% less damage for 2 s · Gunslingers only, with a shotgun"
+        ],
+        "kind": "gun",
+        "el": "neutral",
+        "hex": "#c8dcff",
+        "gun": "shotgun",
+        "share": null,
+        "guard": [
+          0.08,
+          0.12,
+          0.16
+        ],
+        "p": null,
+        "alone": null,
+        "jumps": null,
+        "reach": 160,
+        "max": null,
+        "dur": 2,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "recoil",
+        "name_th": "รูนแรงถีบ",
+        "t_th": [
+          "ยิงโดนมอนในระยะ 160 มอนถอยหลัง เรารับดาเมจลดลง 8% นาน 2 วิ · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงโดนมอนในระยะ 160 มอนถอยหลัง เรารับดาเมจลดลง 12% นาน 2 วิ · ใช้ได้เฉพาะสายปืน ถือลูกซอง",
+          "ยิงโดนมอนในระยะ 160 มอนถอยหลัง เรารับดาเมจลดลง 16% นาน 2 วิ · ใช้ได้เฉพาะสายปืน ถือลูกซอง"
+        ],
+        "dropped_by": []
+      },
+      "apierce": {
+        "n": "Armor Pierce Rune",
+        "on": "attack",
+        "t": [
+          "Armor Pierce 15% (physical skills) · counts in the +50% bonus cap a hit",
+          "Armor Pierce 25% (physical skills) · counts in the +50% bonus cap a hit",
+          "Armor Pierce 35% (physical skills) · counts in the +50% bonus cap a hit"
+        ],
+        "kind": "pierce",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "apierce",
+        "name_th": "รูนเจาะเกราะ",
+        "t_th": [
+          "เจาะเกราะ 15% (สกิลกาย) · นับในเพดานโบนัส +50% ต่อฮิต",
+          "เจาะเกราะ 25% (สกิลกาย) · นับในเพดานโบนัส +50% ต่อฮิต",
+          "เจาะเกราะ 35% (สกิลกาย) · นับในเพดานโบนัส +50% ต่อฮิต"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "turtle",
+            "monster_name": "Grumpy Moss Turtle",
+            "monster_name_th": "เต่าตะไคร่ขี้โมโห",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bone_crab",
+            "monster_name": "Horned Skull Crab",
+            "monster_name_th": "ปูกะโหลกเขา",
+            "monster_lv": 32,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shield_crab",
+            "monster_name": "Big Shield Rock Crab",
+            "monster_name_th": "ปูหินโล่ใหญ่",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crystal_snail",
+            "monster_name": "Crystal-Shell Snail",
+            "monster_name_th": "หอยทากเปลือกผลึก",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "stump",
+            "monster_name": "Ghost Stump",
+            "monster_name_th": "ตอไม้ผี",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "char_stump",
+            "monster_name": "Smoldering Stump",
+            "monster_name_th": "ตอไม้ถ่านคุ",
+            "monster_lv": 44,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "myco_knight",
+            "monster_name": "Mold Knight",
+            "monster_name_th": "อัศวินเห็ดรา",
+            "monster_lv": 46,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "toll_guard",
+            "monster_name": "Salt Checkpoint Guard",
+            "monster_name_th": "ยามด่านเกลือ",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tomb_knight",
+            "monster_name": "Gravestone Shield Knight",
+            "monster_name_th": "อัศวินโล่หลุมศพ",
+            "monster_lv": 51,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rust_crab",
+            "monster_name": "Mine Rust Crab",
+            "monster_name_th": "ปูสนิมเหมือง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crystal_golem",
+            "monster_name": "Splitting Crystal Golem",
+            "monster_name_th": "โกเลมผลึกแตกตัว",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "moat_turtle",
+            "monster_name": "Ironhead Moat Turtle",
+            "monster_name_th": "เต่าคูเมืองหัวเหล็ก",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cinder_brute",
+            "monster_name": "Cinder Giant",
+            "monster_name_th": "ยักษ์เถ้าถ่าน",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crate_spider",
+            "monster_name": "Crate Spider",
+            "monster_name_th": "แมงมุมลังไม้",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "saw_beetle",
+            "monster_name": "Sawtooth Beetle",
+            "monster_name_th": "ด้วงฟันเลื่อย",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "raft_turtle",
+            "monster_name": "Raft-House Turtle",
+            "monster_name_th": "เต่าแพบ้าน",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "rhino_beetle",
+            "monster_name": "Giant Rhino Beetle",
+            "monster_name_th": "ด้วงแรดยักษ์",
+            "monster_lv": 89,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "elder_treant",
+            "monster_name": "Ancient Giant Tree",
+            "monster_name_th": "ต้นไม้ยักษ์โบราณ",
+            "monster_lv": 91,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "anchor_brute",
+            "monster_name": "Anchor-Dragging Giant",
+            "monster_name_th": "ยักษ์ลากสมอ",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "coral_golem",
+            "monster_name": "Coral Golem",
+            "monster_name_th": "โกเลมปะการัง",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "spring_bomb",
+            "monster_name": "Exploding Spring Puppet",
+            "monster_name_th": "หุ่นสปริงระเบิด",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "faceless_puppet",
+            "monster_name": "Faceless Puppet",
+            "monster_name_th": "หุ่นไร้หน้า",
+            "monster_lv": 94,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "amber_golem",
+            "monster_name": "Amber Golem",
+            "monster_name_th": "โกเลมอำพัน",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ankylo",
+            "monster_name": "Hammertail Ankylosaur",
+            "monster_name_th": "แองคิโลซอร์หางค้อน",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bell_puppet",
+            "monster_name": "Bell Puppet",
+            "monster_name_th": "หุ่นระฆัง",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "cardinal_puppet",
+            "monster_name": "Cardinal's Puppet",
+            "monster_name_th": "หุ่นของคาร์ดินัล",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "bomb_bell",
+            "monster_name": "Exploding Mini Bell",
+            "monster_name_th": "ระฆังจิ๋วระเบิด",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "temple_soldier",
+            "monster_name": "Temple Soldier",
+            "monster_name_th": "ทหารวิหาร",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "wpierce": {
+        "n": "Ward Pierce Rune",
+        "on": "attack",
+        "t": [
+          "Ward Pierce 15% (magic skills) · counts in the +50% bonus cap a hit",
+          "Ward Pierce 25% (magic skills) · counts in the +50% bonus cap a hit",
+          "Ward Pierce 35% (magic skills) · counts in the +50% bonus cap a hit"
+        ],
+        "kind": "pierce",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "wpierce",
+        "name_th": "รูนเจาะเวท",
+        "t_th": [
+          "เจาะเวท 15% (สกิลเวท) · นับในเพดานโบนัส +50% ต่อฮิต",
+          "เจาะเวท 25% (สกิลเวท) · นับในเพดานโบนัส +50% ต่อฮิต",
+          "เจาะเวท 35% (สกิลเวท) · นับในเพดานโบนัส +50% ต่อฮิต"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "slime_honey",
+            "monster_name": "Honey Slime",
+            "monster_name_th": "สไลม์น้ำผึ้ง",
+            "monster_lv": 15,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "firefly_healer",
+            "monster_name": "Healer Firefly",
+            "monster_name_th": "หิ่งห้อยหมอยา",
+            "monster_lv": 21,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "banner_wraith",
+            "monster_name": "Torn Banner Spirit",
+            "monster_name_th": "วิญญาณธงขาด",
+            "monster_lv": 22,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mist_sprite",
+            "monster_name": "Mist Water Sprite",
+            "monster_name_th": "ภูตละอองน้ำ",
+            "monster_lv": 33,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "candle_witch",
+            "monster_name": "Candlewax Witch",
+            "monster_name_th": "แม่มดเทียนไข",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "grave_moth",
+            "monster_name": "Grave Moth",
+            "monster_name_th": "ผีเสื้อหลุมศพ",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "mist_widow",
+            "monster_name": "Mist Widow",
+            "monster_name_th": "แม่ม่ายหมอก",
+            "monster_lv": 38,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "wheel_spirit",
+            "monster_name": "Cartwheel Sprite",
+            "monster_name_th": "ภูตล้อเกวียน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ash_wisp",
+            "monster_name": "Cinder Sprite",
+            "monster_name_th": "ภูตเถ้าถ่าน",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "lost_lantern",
+            "monster_name": "Stray Lantern",
+            "monster_name_th": "ตะเกียงหลงทาง",
+            "monster_lv": 42,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "candle_wisp",
+            "monster_name": "Candle Spirit",
+            "monster_name_th": "วิญญาณเทียน",
+            "monster_lv": 47,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "innkeeper_ghost",
+            "monster_name": "Innkeeper Ghost",
+            "monster_name_th": "ผีเจ้าของโรงเตี๊ยม",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "wanderer_ghost",
+            "monster_name": "Traveler Ghost",
+            "monster_name_th": "ผีนักเดินทาง",
+            "monster_lv": 72,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "blast_imp",
+            "monster_name": "Exploding Earth Imp",
+            "monster_name_th": "อิมป์ดินระเบิด",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "slime_lava",
+            "monster_name": "Lava Slime",
+            "monster_name_th": "สไลม์ลาวา",
+            "monster_lv": 78,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "vat_slime",
+            "monster_name": "Dye Pit Slime",
+            "monster_name_th": "สไลม์บ่อย้อม",
+            "monster_lv": 82,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "candle_minion",
+            "monster_name": "Candle's Henchman",
+            "monster_name_th": "ลูกน้องแคนเดิล",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "sluice_spirit",
+            "monster_name": "Overflow Gate Sprite",
+            "monster_name_th": "ภูตน้ำล้นประตู",
+            "monster_lv": 86,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "slime_glow",
+            "monster_name": "Glow Slime",
+            "monster_name_th": "สไลม์เรืองแสง",
+            "monster_lv": 90,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "tree_herald",
+            "monster_name": "Tree Herald",
+            "monster_name_th": "ผู้ประกาศต้นไม้",
+            "monster_lv": 96,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "first_lamplighter",
+            "monster_name": "First Lightkeeper",
+            "monster_name_th": "ผู้จุดตะเกียงรุ่นแรก",
+            "monster_lv": 99,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      }
+    },
+    "on": {
+      "proj": "Projectiles",
+      "area": "Area",
+      "melee": "Melee",
+      "attack": "Attack Skills",
+      "buff": "Buffs",
+      "pet": "Summon Beasts",
+      "any": "All Skills"
+    },
+    "rate": {
+      "normal": 0.0001,
+      "elite": 0.0025,
+      "boss": 0.04,
+      "story": 0.05
+    },
+    "slots": [
+      [
+        1,
+        1,
+        null
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        5,
+        3,
+        5
+      ],
+      [
+        10,
+        5,
+        10
+      ]
+    ],
+    "merge": 3,
+    "basicLv": [
+      40,
+      70
+    ],
+    "bucket": 0.5,
+    "procCap": 0.5,
+    "procWin": 5,
+    "procHitCap": 3,
+    "spell": {
+      "lv": 70,
+      "rate": 2e-05,
+      "of": {
+        "fire": [
+          "spmeteor"
+        ],
+        "wind": [
+          "spthunder",
+          "splord"
+        ],
+        "water": [
+          "spfrost"
+        ],
+        "earth": [
+          "spquake"
+        ],
+        "holy": [
+          "spmagnus"
+        ],
+        "undead": [
+          "spmagnus"
+        ],
+        "shadow": [
+          "spshadow"
+        ],
+        "ghost": [
+          "spshadow"
+        ],
+        "neutral": [
+          "spwhirl"
+        ],
+        "poison": [
+          "spwhirl"
+        ]
+      }
+    },
+    "gunCap": {
+      "pistol": 0.4,
+      "shotgun": 0.6
+    },
+    "gunDrop": {
+      "grenade": [
+        [
+          "scorpion",
+          2.52e-05
+        ],
+        [
+          "spit_scorpion",
+          2.01e-05
+        ]
+      ],
+      "ricochet": [
+        [
+          "scorpion",
+          2.49e-05
+        ],
+        [
+          "spit_scorpion",
+          1.97e-05
+        ]
+      ],
+      "hollow": [
+        [
+          "scorpion",
+          2.48e-05
+        ]
+      ],
+      "duel": [
+        [
+          "scorpion",
+          2.51e-05
+        ]
+      ],
+      "dragon": [
+        [
+          "spit_scorpion",
+          2.01e-05
+        ]
+      ],
+      "barrel": [
+        [
+          "spit_scorpion",
+          2e-05
+        ]
+      ],
+      "recoil": [
+        [
+          "spit_scorpion",
+          2.01e-05
+        ]
+      ]
+    }
+  },
+  "relics": {
+    "list": {
+      "storm": {
+        "n": "Storm Heart",
+        "el": "wind",
+        "gain": "Arc Runes jump to 2 more monsters, trigger more often, 30% stronger",
+        "price": "Direct skill damage −10%"
+      },
+      "ember": {
+        "n": "Ember Crown",
+        "el": "fire",
+        "gain": "Every kill spreads fire, even without a Wildfire Rune",
+        "price": "Burns on monsters last half as long"
+      },
+      "lure": {
+        "n": "Queen's Brooch",
+        "el": "earth",
+        "gain": "Traps pull nearby monsters in, 50% stronger",
+        "price": "Only one trap at a time"
+      },
+      "frost": {
+        "n": "Ice Core",
+        "el": "water",
+        "gain": "3 Chill stacks freeze · Frost Runes trigger more often",
+        "price": "Your Fire damage −30%"
+      },
+      "fang": {
+        "n": "Scorpion Fang",
+        "el": "poison",
+        "gain": "Poison stacks to 8, 30% stronger",
+        "price": "Direct skill damage −10%"
+      },
+      "twin": {
+        "n": "Twin Shadow",
+        "el": "shadow",
+        "gain": "Every 3rd cast, a shadow always strikes again",
+        "price": "Skills cost 20% more SP"
+      },
+      "pact": {
+        "n": "Blood Pact",
+        "el": "undead",
+        "gain": "Skills cost HP instead of SP · Damage +12%",
+        "price": "The HP cost is double the SP cost"
+      },
+      "eye": {
+        "n": "Hawk's Eye",
+        "el": "holy",
+        "gain": "First hit on an unhurt monster +25%",
+        "price": "Later hits −5%"
+      },
+      "shell": {
+        "n": "Old Shell",
+        "el": "neutral",
+        "gain": "Damage taken −20%",
+        "price": "Damage −10%"
+      },
+      "bell": {
+        "n": "Last Bell",
+        "el": "ghost",
+        "gain": "Each kill cuts every cooldown by 1 s",
+        "price": "All cooldowns 25% longer"
+      }
+    },
+    "drop": 0.04,
+    "worn": 2
+  },
+  "keystone": {
+    "branches": {
+      "dot": {
+        "n": "Deep Venom",
+        "small": "Damage over time +5%",
+        "gain": "Total damage over time +80%",
+        "price": "Direct damage −30%"
+      },
+      "runes": {
+        "n": "Rune Overflow",
+        "small": "Rune effects +5%",
+        "gain": "Rune effects x1.3 total · bonus damage cap +70%",
+        "price": "Cap per hit down to +30%"
+      },
+      "rhythm": {
+        "n": "Blade Rhythm",
+        "small": "Basic attacks +2%",
+        "gain": "Every 5th basic attack hits again",
+        "price": "Skill cooldown +20%"
+      },
+      "pierce": {
+        "n": "Breach",
+        "small": "Armor Pierce and Ward Pierce +5%",
+        "gain": "Pierce +30% in all · pierce cap 60%",
+        "price": "Hits on Flesh armour −10%"
+      }
+    },
+    "lv": [
+      40,
+      50,
+      60,
+      70,
+      80,
+      90
+    ],
+    "reset": 50000
+  },
+  "runeMats": [
+    "bl_rune_arc_1",
+    "bl_rune_arc_2",
+    "bl_rune_arc_3",
+    "bl_rune_wildfire_1",
+    "bl_rune_wildfire_2",
+    "bl_rune_wildfire_3",
+    "bl_rune_frostbite_1",
+    "bl_rune_frostbite_2",
+    "bl_rune_frostbite_3",
+    "bl_rune_venom_1",
+    "bl_rune_venom_2",
+    "bl_rune_venom_3",
+    "bl_rune_shade_1",
+    "bl_rune_shade_2",
+    "bl_rune_shade_3",
+    "bl_rune_trap_1",
+    "bl_rune_trap_2",
+    "bl_rune_trap_3",
+    "bl_rune_spmeteor_1",
+    "bl_rune_spmeteor_2",
+    "bl_rune_spmeteor_3",
+    "bl_rune_spthunder_1",
+    "bl_rune_spthunder_2",
+    "bl_rune_spthunder_3",
+    "bl_rune_spfrost_1",
+    "bl_rune_spfrost_2",
+    "bl_rune_spfrost_3",
+    "bl_rune_spquake_1",
+    "bl_rune_spquake_2",
+    "bl_rune_spquake_3",
+    "bl_rune_spmagnus_1",
+    "bl_rune_spmagnus_2",
+    "bl_rune_spmagnus_3",
+    "bl_rune_spwhirl_1",
+    "bl_rune_spwhirl_2",
+    "bl_rune_spwhirl_3",
+    "bl_rune_splord_1",
+    "bl_rune_splord_2",
+    "bl_rune_splord_3",
+    "bl_rune_spshadow_1",
+    "bl_rune_spshadow_2",
+    "bl_rune_spshadow_3",
+    "bl_rune_grenade_1",
+    "bl_rune_grenade_2",
+    "bl_rune_grenade_3",
+    "bl_rune_ricochet_1",
+    "bl_rune_ricochet_2",
+    "bl_rune_ricochet_3",
+    "bl_rune_hollow_1",
+    "bl_rune_hollow_2",
+    "bl_rune_hollow_3",
+    "bl_rune_duel_1",
+    "bl_rune_duel_2",
+    "bl_rune_duel_3",
+    "bl_rune_dragon_1",
+    "bl_rune_dragon_2",
+    "bl_rune_dragon_3",
+    "bl_rune_barrel_1",
+    "bl_rune_barrel_2",
+    "bl_rune_barrel_3",
+    "bl_rune_recoil_1",
+    "bl_rune_recoil_2",
+    "bl_rune_recoil_3",
+    "bl_rune_apierce_1",
+    "bl_rune_apierce_2",
+    "bl_rune_apierce_3",
+    "bl_rune_wpierce_1",
+    "bl_rune_wpierce_2",
+    "bl_rune_wpierce_3"
+  ],
+  "procs": {
+    "arc": {
+      "n": "Arc Rune",
+      "on": "attack",
+      "el": "wind",
+      "hex": "#ffe878",
+      "s": [
+        0.1,
+        0.16,
+        0.25
+      ],
+      "p": 0.35,
+      "t": [
+        "On cast, 35% chance lightning jumps to nearby monsters · About 10% more group damage on every skill",
+        "On cast, 35% chance lightning jumps to nearby monsters · About 16% more group damage on every skill",
+        "On cast, 35% chance lightning jumps to nearby monsters · About 25% more group damage on every skill"
+      ],
+      "jumps": [
+        2,
+        3,
+        3
+      ]
+    },
+    "wildfire": {
+      "n": "Wildfire Rune",
+      "on": "attack",
+      "el": "fire",
+      "hex": "#ff9040",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "t": [
+        "Kills with this skill spread fire to nearby monsters · About 12% more group damage on every skill",
+        "Kills with this skill spread fire to nearby monsters · About 20% more group damage on every skill",
+        "Kills with this skill spread fire to nearby monsters · About 30% more group damage on every skill"
+      ]
+    },
+    "frostbite": {
+      "n": "Frost Rune",
+      "on": "attack",
+      "el": "water",
+      "hex": "#a8dcff",
+      "s": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "p": 0.3,
+      "t": [
+        "On cast, 30% chance of a cold burst around the target that slows · About 8% more group damage on every skill",
+        "On cast, 30% chance of a cold burst around the target that slows · About 12% more group damage on every skill",
+        "On cast, 30% chance of a cold burst around the target that slows · About 18% more group damage on every skill"
+      ],
+      "r": 160
+    },
+    "venom": {
+      "n": "Venom Rune",
+      "on": "attack",
+      "el": "poison",
+      "hex": "#96e65a",
+      "s": [
+        0.06,
+        0.1,
+        0.15
+      ],
+      "t": [
+        "On cast, poison stacks on the target, up to 5 · About 6% more single-target damage on every skill",
+        "On cast, poison stacks on the target, up to 5 · About 10% more single-target damage on every skill",
+        "On cast, poison stacks on the target, up to 5 · About 15% more single-target damage on every skill"
+      ],
+      "max": 5,
+      "dur": 6
+    },
+    "shade": {
+      "n": "Shade Rune",
+      "on": "attack",
+      "el": "shadow",
+      "hex": "#be78ff",
+      "s": [
+        0.06,
+        0.1,
+        0.15
+      ],
+      "p": 0.3,
+      "t": [
+        "On cast, 30% chance a shadow strikes the target again · About 6% more single-target damage on every skill",
+        "On cast, 30% chance a shadow strikes the target again · About 10% more single-target damage on every skill",
+        "On cast, 30% chance a shadow strikes the target again · About 15% more single-target damage on every skill"
+      ]
+    },
+    "trap": {
+      "n": "Trap Rune",
+      "on": "attack",
+      "el": "earth",
+      "hex": "#ffcd6e",
+      "s": [
+        0.08,
+        0.13,
+        0.2
+      ],
+      "t": [
+        "On cast, sets a trap at the aim point (every 5 s) · About 8% more group damage",
+        "On cast, sets a trap at the aim point (every 5 s) · About 13% more group damage",
+        "On cast, sets a trap at the aim point (every 5 s) · About 20% more group damage"
+      ],
+      "max": 2,
+      "cd": 5,
+      "r": 150
+    },
+    "spmeteor": {
+      "n": "Meteor Spell Rune",
+      "on": "attack",
+      "el": "fire",
+      "hex": "#ff7a3c",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance a meteor falls on the target · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance a meteor falls on the target · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance a meteor falls on the target · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "meteor",
+      "at": "foe",
+      "r": 220
+    },
+    "spthunder": {
+      "n": "Thunder Spell Rune",
+      "on": "attack",
+      "el": "wind",
+      "hex": "#ffe85a",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance thunder strikes the target and those beside it · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance thunder strikes the target and those beside it · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance thunder strikes the target and those beside it · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "thunder",
+      "at": "foe",
+      "r": 160
+    },
+    "spfrost": {
+      "n": "Frost Nova Spell Rune",
+      "on": "attack",
+      "el": "water",
+      "hex": "#8ce1ff",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance a frost nova bursts around you and slows monsters · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance a frost nova bursts around you and slows monsters · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance a frost nova bursts around you and slows monsters · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "mg_frostnova",
+      "at": "hero",
+      "r": 240
+    },
+    "spquake": {
+      "n": "Earth Spike Spell Rune",
+      "on": "attack",
+      "el": "earth",
+      "hex": "#e6af64",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance stone spikes burst under the target · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance stone spikes burst under the target · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance stone spikes burst under the target · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "mg_quake",
+      "at": "foe",
+      "r": 150
+    },
+    "spmagnus": {
+      "n": "Magnus Spell Rune",
+      "on": "attack",
+      "el": "holy",
+      "hex": "#fff0be",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance a Magnus circle of light opens under the target · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance a Magnus circle of light opens under the target · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance a Magnus circle of light opens under the target · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "magnus",
+      "at": "foe",
+      "r": 240
+    },
+    "spwhirl": {
+      "n": "Whirlwind Spell Rune",
+      "on": "attack",
+      "el": null,
+      "hex": "#d7e6f5",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance a whirlwind of blades spins around you (weapon element) · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "bk_whirlwind",
+      "at": "hero",
+      "r": 190
+    },
+    "splord": {
+      "n": "Lord of Thunder Spell Rune",
+      "on": "attack",
+      "el": "wind",
+      "hex": "#96a0ff",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance many lightning bolts strike around the target · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance many lightning bolts strike around the target · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance many lightning bolts strike around the target · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "am_lordthunder",
+      "at": "foe",
+      "r": 260
+    },
+    "spshadow": {
+      "n": "Shadow Meteor Spell Rune",
+      "on": "attack",
+      "el": "shadow",
+      "hex": "#aa6eff",
+      "s": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "p": 0.1,
+      "t": [
+        "On cast, 10% chance shadow meteors fall around you · About 12% more damage on packs with it on every skill",
+        "On cast, 10% chance shadow meteors fall around you · About 20% more damage on packs with it on every skill",
+        "On cast, 10% chance shadow meteors fall around you · About 30% more damage on packs with it on every skill"
+      ],
+      "sk": "as_meteor",
+      "at": "hero",
+      "r": 220
+    }
+  }
+}

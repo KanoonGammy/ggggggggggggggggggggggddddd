@@ -1,0 +1,483 @@
+﻿id,n,name_th,lv,boss,story,el,atkEl,race,arm,armKind,armBar,hp,atk_min,atk_max,def,mdef,hit,flee,exp,jexp,maps,drop_count,mat_count
+slime_green,Leaf Slime,สไลม์ใบไม้,5,False,False,wind,wind,formless,flesh,normal,30,396,10,15,0.7,1.4,8,6,8,5,farm,5,3
+slime_blue,Clearwater Slime,สไลม์น้ำใส,18,False,False,water,water,formless,spirit,normal,30,1676,27,41,1.8,10.8,27,22,17,11,meadow|marsh|tallgrass|appleslope|dandelion|apiary|beaverdam|reedmaze|eelhut,10,3
+slime_stone,Mossy Rock Slime,สไลม์หินตะไคร่,31,False,False,earth,earth,formless,heavy,normal,67,2768,38,56,17.6,4.2,47,38,26,21,woods|batcave|antmine1|acorngrove|hunterlodge|moonwell|quarry1|quarry2,12,4
+slime_honey,Honey Slime,สไลม์น้ำผึ้ง,15,False,False,neutral,neutral,formless,spirit,normal,30,1565,23,35,1.2,9,23,18,15,10,meadow|battlefield|appleslope|dandelion|apiary,9,3
+slime_glow,Glow Slime,สไลม์เรืองแสง,90,False,False,poison,poison,formless,spirit,normal,200,28613,137,206,8.4,57.6,135,109,68,54,woods|swamp|dark|sporevale|fallencap|acorngrove|hunterlodge|moonwell|bubblepits|cagetrees,10,3
+slime_lava,Lava Slime,สไลม์ลาวา,78,False,False,fire,fire,formless,spirit,normal,200,35141,130,194,7.2,50.4,117,94,59,47,canyon|burnt|volcano|lavavent1|lavalake|ashvale|goldsluice|dustgulch|meteor1|meteor2|meteor3,8,4
+bat,Nightfall Bat,ค้างคาวรัตติกาล,79,False,False,shadow,shadow,brute,hide,normal,200,39385,124,186,16,14,142,145,75,56,farm|graveyard|lake|batcave|batnest|weepgarden|willows|shipwreck|shipgrave|diggervillage|wreathfield|giantbones|quarry1|quarry2|quarry3,7,3
+bee,Giant Bee,ผึ้งยักษ์,44,False,False,wind,wind,insect,hide,normal,134,9537,74,111,11,8,84,78,49,37,meadow|wind|battlefield|appleslope|dandelion|apiary|heathmoor|howlpass|cliffmill,7,5
+moth,Glowing Night Moth,ผีเสื้อราตรีเรืองแสง,40,False,False,wind,poison,insect,hide,normal,110,7154,64,96,8,11,72,68,45,34,woods|acorngrove|hunterlodge|moonwell,10,4
+boar,Stubtusk Boar,หมูป่าเขี้ยวตัน,9,False,False,earth,neutral,brute,hide,normal,30,1149,23,34,4,1,14,12,16,10,farm,0,3
+wolf,Moonshadow Wolf,หมาป่าเงาจันทร์,82,False,False,earth,neutral,brute,hide,normal,200,61766,186,280,30,12,156,134,101,66,woods|prime|acorngrove|hunterlodge|moonwell|hotsprings,10,3
+scorpion,Red Scorpion,แมงป่องแดง,82,False,False,fire,fire,insect,heavy,normal,200,67943,195,292,60,9,156,122,101,76,canyon|volcano|goldsluice|dustgulch,10,4
+skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,False,undead,neutral,undead,heavy,normal,200,47736,159,240,52.8,5.4,135,101,86,77,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch,11,4
+scarecrow,Haunted Scarecrow,หุ่นไล่กาผีสิง,18,False,False,earth,neutral,plant,heavy,normal,30,2845,36,55,9.6,1.8,31,23,26,20,meadow|farm|cornmaze|battlefield|melonfield|windpump|curinghouse|appleslope|dandelion|apiary,10,4
+stump,Ghost Stump,ตอไม้ผี,38,False,False,earth,earth,plant,heavy,normal,98,10816,76,114,33.6,3.6,61,43,51,38,woods|acorngrove|hunterlodge|moonwell,10,3
+golem,Red Rock Golem,โกเลมหินแดง,78,False,False,neutral,earth,formless,heavy,normal,200,97313,198,297,60,8.4,133,83,118,89,canyon|goldsluice|dustgulch,11,3
+pumpkin,Mischief Pumpkin,ฟักทองจอมซน,9,False,False,earth,earth,plant,flesh,normal,30,766,15,23,1.4,1.4,14,11,12,9,farm|melonfield|windpump|curinghouse,8,4
+carrot,Dashing Carrot,แครอทจอมพุ่ง,10,False,False,earth,earth,plant,flesh,normal,30,934,21,32,2.1,1.4,17,16,16,12,farm|melonfield|windpump|curinghouse,4,4
+crow,Corn Thief Crow,อีกาขโมยข้าวโพด,38,False,False,wind,neutral,brute,hide,normal,98,5023,55,83,8,7,72,73,41,31,farm|road|cornmaze|battlefield|refugeecamp|woodbridge|wagonvale|melonfield|windpump|curinghouse,12,4
+frog,Clearmarsh Frog,กบบึงใส,19,False,False,water,water,brute,flesh,normal,30,2147,32,47,2.1,4.9,29,23,21,16,marsh|stiltvillage|beaverdam|reedmaze|eelhut,10,3
+crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,False,water,water,brute,heavy,normal,43,3039,40,61,22.4,2.4,43,34,33,21,marsh|stiltvillage|beaverdam|reedmaze|eelhut,9,4
+dragonfly,Sapphire Dragonfly,แมลงปอไพลิน,23,False,False,wind,wind,insect,hide,normal,40,1973,36,54,5,5,46,49,30,23,marsh|beaverdam|reedmaze|eelhut,8,4
+turtle,Grumpy Moss Turtle,เต่าตะไคร่ขี้โมโห,24,False,False,water,water,brute,heavy,normal,43,4145,40,61,36.8,1.2,38,27,39,29,marsh|beaverdam|reedmaze|eelhut,5,4
+zombie,Farmer Zombie,ซอมบี้ชาวนา,38,False,False,undead,neutral,undead,flesh,normal,98,11204,76,114,9.8,2.1,61,43,51,46,graveyard|crypt1|coffinhollow|diggervillage|wreathfield|giantbones,10,5
+ghost,Wisp Ghost,ผีดวงไฟ,96,False,False,ghost,ghost,spirit,spirit,normal,200,42956,204,306,9,52.2,182,170,121,109,graveyard|crypt1|crypt2|dark|weepgarden|shadowpath|diggervillage|wreathfield|giantbones|silver2,10,3
+tombstone,Haunted Gravestone,ป้ายหลุมศพผีสิง,31,False,False,shadow,shadow,spirit,heavy,normal,67,5745,57,86,32,3,50,33,46,35,graveyard|diggervillage|wreathfield|giantbones,10,3
+ember_fox,Red Ember Fox,จิ้งจอกถ่านแดง,45,False,False,fire,fire,brute,hide,normal,140,13088,97,145,14,8,90,86,56,42,burnt|stumpfield|ashvale|stillburning,10,4
+char_stump,Smoldering Stump,ตอไม้ถ่านคุ,44,False,False,fire,fire,plant,heavy,normal,134,18438,90,136,40,4.2,70,50,60,45,burnt|stumpfield|ashvale|stillburning,10,3
+ash_wisp,Cinder Sprite,ภูตเถ้าถ่าน,42,False,False,ghost,fire,spirit,spirit,normal,122,8055,79,118,4.2,25.2,80,74,55,50,burnt|stumpfield|stillburning,6,3
+storm_eagle,Storm Eagle,อินทรีพายุ,49,False,False,wind,wind,brute,hide,normal,174,18842,100,150,12,10,103,97,63,47,wind|eyrie|heathmoor|howlpass|cliffmill,10,3
+cloud_ram,Curlhorn Cloud Sheep,แกะเมฆเขาม้วน,50,False,False,wind,neutral,brute,heavy,normal,183,31983,102,153,35.2,5.4,85,68,64,48,wind|heathmoor|howlpass|cliffmill,10,3
+gust_sprite,Whirlwind Sprite,ภูตลมหมุน,46,False,False,wind,wind,spirit,spirit,normal,149,12539,77,116,5.4,30.6,69,65,46,35,wind|heathmoor|howlpass|cliffmill,9,4
+poison_toad,Poison Toad,คางคกพิษ,59,False,False,poison,poison,brute,flesh,normal,200,35499,103,155,11.9,12.6,89,71,60,45,swamp|mangrove|poisonvillage|bubblepits|cagetrees,10,3
+swamp_snake,Bogvenom Snake,งูหนองพิษ,62,False,False,poison,poison,brute,hide,normal,200,40240,138,207,22,11,124,105,81,61,swamp|mangrove|bubblepits|cagetrees,10,3
+maneater,Man-Eating Flower,ดอกไม้กินคน,62,False,False,earth,poison,plant,flesh,normal,200,64384,138,207,17.5,7.7,112,69,90,68,swamp|bubblepits|cagetrees,10,4
+salamander,Salamander,ซาลาแมนเดอร์,84,False,False,fire,fire,dragon,hide,normal,200,71400,201,301,40,15,168,137,111,83,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7,10,4
+magma_golem,Lava Golem,โกเลมลาวา,89,False,False,fire,fire,formless,heavy,normal,200,98892,243,365,60,9.6,151,95,142,107,volcano|lavavent2|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7,8,3
+fire_bat,Flame Bat,ค้างคาวเปลวไฟ,87,False,False,fire,fire,brute,hide,normal,200,47063,184,276,21,21,174,166,102,77,volcano|lavavent1|lavavent2|obsidian|smokevent|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7,8,3
+kappa,Mistbog Kappa,กัปปะหนองหมอก,84,False,False,water,water,spirit,hide,normal,200,84382,193,288,40,18,160,125,111,83,lake|floatvillage|willows,11,3
+mist_wraith,Shadowmist Sprite,ภูตหมอกเงา,92,False,False,shadow,shadow,spirit,spirit,normal,200,44775,218,328,10.8,59.4,184,156,125,113,lake|isle|floatvillage|willows|shipwreck|reefs|lighthouse,10,4
+shadow_heron,Shadow Heron,นกกระสาเงา,88,False,False,water,shadow,brute,hide,normal,200,59822,231,346,32,21,194,156,120,90,lake|floatvillage|willows,11,3
+raptor,Leaf Raptor,แร็พเตอร์ใบไม้,89,False,False,earth,neutral,dragon,hide,normal,200,56865,234,352,36,13,187,170,125,81,prime|tarpit|fernvale|hotsprings,10,3
+elder_treant,Ancient Giant Tree,ต้นไม้ยักษ์โบราณ,91,False,False,earth,earth,plant,heavy,normal,200,109343,261,391,60,13.2,155,94,162,122,prime|tarpit|hotsprings,10,3
+rhino_beetle,Giant Rhino Beetle,ด้วงแรดยักษ์,89,False,False,earth,earth,insect,heavy,normal,200,79114,225,338,60,7.8,160,114,134,101,prime|tarpit|hotsprings,10,3
+cave_spider,Cave Spider,แมงมุมถ้ำ,19,False,False,poison,poison,insect,hide,normal,30,2278,35,52,5,3,36,32,26,20,batcave|batnest|quarry1|quarry2|quarry3,10,3
+worker_ant,Worker Ant,มดงาน,44,False,False,earth,earth,insect,hide,normal,134,12081,78,117,19,7,75,69,51,38,antmine1|antmine2|antmine3|quarry2|quarry3,5,3
+soldier_ant,Soldier Ant,มดทหาร,49,False,False,earth,earth,insect,heavy,normal,174,29916,109,164,52.8,3.6,83,66,68,51,antmine1|antmine2|antmine3|quarry3|silver1|silver2,12,4
+flying_ant,Flying Ant,มดบิน,47,False,False,wind,wind,insect,hide,normal,157,14159,88,131,15,7,94,90,56,42,antmine2|antmine3|silver1|silver2,6,3
+bone_knight,Bone Knight,อัศวินกระดูก,52,False,False,undead,neutral,undead,heavy,normal,200,48327,125,188,52.8,5.4,99,70,79,71,crypt1|crypt2|silver1|silver2,11,3
+candle_wisp,Candle Spirit,วิญญาณเทียน,47,False,False,ghost,fire,spirit,spirit,normal,157,14159,92,138,4.8,28.8,89,83,63,57,crypt1|crypt2|silver1|silver2,10,3
+lava_worm,Lava Worm,หนอนลาวา,89,False,False,fire,fire,formless,flesh,normal,200,71694,225,338,37.1,9.1,151,120,129,97,lavavent1|lavavent2|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7,7,4
+fire_imp,Flame Imp,อิมป์เปลวไฟ,90,False,False,fire,fire,spirit,spirit,normal,200,48422,237,356,21.6,39.6,189,172,127,95,lavavent1|lavavent2|meteor1|meteor2|meteor3|meteor4|meteor5|meteor6|meteor7,10,4
+caravan_bandit,Caravan Robber,โจรปล้นคาราวาน,42,False,False,neutral,neutral,brute,hide,normal,122,10736,91,136,13,6,88,77,53,40,road|refugeecamp|woodbridge|wagonvale,6,3
+hollow_horse,Hollow Horse,ม้ากลวง,41,False,False,shadow,neutral,brute,hide,normal,116,12764,89,133,16,6,70,64,54,41,road|refugeecamp|woodbridge|wagonvale,4,3
+giant_crow,Giant Crow,อีกายักษ์,42,False,False,wind,neutral,brute,hide,normal,122,8588,83,124,10,9,84,80,51,38,road|salt|woodbridge|saltdock|watchtower,4,3
+toll_guard,Salt Checkpoint Guard,ยามด่านเกลือ,48,False,False,earth,neutral,brute,heavy,normal,166,25821,98,147,46.4,5.4,91,61,64,48,salt|saltflats|saltdock|watchtower,9,3
+hound,Hunting Hound,สุนัขล่า,47,False,False,neutral,neutral,brute,hide,normal,157,16817,105,158,15,7,99,90,61,46,salt|saltflats|watchtower,8,3
+snow_wolf,Snow Wolf,หมาป่าหิมะ,58,False,False,water,water,brute,hide,normal,200,40059,128,192,21,12,122,111,76,57,peak|snowpines|icefall|avalanche,8,3
+ice_goat,Mountain Goat,แพะภูเขา,58,False,False,water,neutral,brute,hide,normal,200,49171,123,184,28,10,104,82,76,57,peak|snowpines|icefall|avalanche,9,3
+storm_spirit,Blizzard Sprite,ภูตพายุหิมะ,57,False,False,wind,wind,brute,spirit,normal,200,31916,121,181,6.6,37.8,114,101,78,59,peak|owl3|snowpines|icefall|avalanche,4,3
+stone_owl,Stone Owl,นกฮูกหิน,58,False,False,earth,earth,brute,heavy,normal,200,47341,128,192,60,5.4,116,90,82,62,owl1|owl2|owl3,5,4
+hollow_stargazer,Hollow Astronomer's Aide,ผู้ช่วยนักดาราศาสตร์กลวง,58,False,False,shadow,shadow,brute,hide,normal,200,43701,128,192,21,19,116,82,79,59,owl1|owl2|owl3,5,4
+hollow_villager,Hollow Villager,ชาวบ้านกลวง,72,False,False,shadow,neutral,brute,hide,normal,200,58268,152,227,29,11,130,92,93,70,nroad|silentfarm|roadinn|travelgrave,7,3
+shadow_crow,Shadow Crow,อีกาเงา,93,False,False,shadow,shadow,brute,hide,normal,200,43871,232,347,22,28,195,184,117,88,nroad|dark|blackroots|shadowpath|treeedge|silentfarm|roadinn|travelgrave,9,4
+hollow_guard,Hollow Guard,ยามกลวง,82,False,False,shadow,neutral,brute,hide,normal,200,92649,195,292,59,20,164,111,116,87,outer|nightmarket|tannery|moat,7,3
+city_hound,Capital Stray,หมาจรเมืองหลวง,80,False,False,neutral,neutral,brute,hide,normal,200,58515,189,283,29,12,168,153,102,77,outer|nightmarket|tannery|moat,7,3
+hollow_carthorse,Hollow Cart Horse,ม้าลากเกวียนกลวง,82,False,False,shadow,neutral,brute,hide,normal,200,117355,211,317,46,12,148,105,124,93,outer|nightmarket|tannery|moat,8,3
+candle_minion,Candle's Henchman,ลูกน้องแคนเดิล,86,False,False,fire,fire,brute,spirit,normal,200,69103,206,310,16.8,37.8,172,128,109,82,canal|sluicegate|warehouses|shipyard,8,3
+canal_rat,Canal Rat,หนูคลอง,86,False,False,poison,poison,brute,hide,normal,200,59671,199,297,28,13,181,164,105,79,canal|cathedral|sluicegate|warehouses|shipyard|whitestatues|clocksquare|rooftops,12,3
+light_filler,Light Filler,คนกรอกแสง,86,False,False,shadow,holy,brute,hide,normal,200,87941,215,323,38,26,163,110,121,91,canal|sluicegate|warehouses|shipyard,7,3
+flying_book,Flying Book,หนังสือบิน,84,False,False,ghost,neutral,brute,spirit,normal,200,61663,201,301,14.4,59.4,176,155,111,83,ledger1|ledger2,7,3
+hollow_lamplighter,Hollow Lightkeeper,ผู้จุดตะเกียงกลวง,88,False,False,shadow,fire,brute,hide,normal,200,73407,231,346,35,26,176,119,124,93,ledger1|ledger2,7,3
+paper_blade,Paper Blade,ใบมีดกระดาษ,87,False,False,wind,wind,brute,hide,normal,200,52952,227,341,17,23,191,172,119,89,ledger1|ledger2,7,3
+mist_citizen,Mist Townsfolk,ชาวเมืองหมอก,92,False,False,ghost,water,brute,spirit,normal,200,61279,208,313,13.2,60,184,144,125,94,isle|reefs|lighthouse|shipgrave,9,4
+lightless_deer,Lightless Deer,กวางไร้แสง,96,False,False,shadow,shadow,brute,hide,normal,200,85911,276,413,46,29,202,156,143,107,dark|blackroots|shadowpath,10,4
+faceless_puppet,Faceless Puppet,หุ่นไร้หน้า,94,False,False,neutral,neutral,brute,heavy,normal,200,70527,255,384,60,13.8,197,147,136,102,dark|puppet1|puppet2|blackroots,11,4
+wooden_hand,Giant Puppet Hand,มือหุ่นยักษ์,92,False,False,earth,neutral,brute,heavy,normal,200,70706,247,370,60,10.2,184,144,133,100,puppet1|puppet2,9,3
+thread_binder,Thread Wrapper,ด้ายพันคน,94,False,False,neutral,shadow,brute,hide,normal,200,68006,255,384,38,28,207,140,141,106,puppet1|puppet2,9,3
+cardinal_puppet,Cardinal's Puppet,หุ่นของคาร์ดินัล,99,False,False,holy,holy,brute,heavy,normal,200,94380,301,451,60,25.2,208,141,157,118,cathedral|whitestatues|clocksquare|rooftops,8,5
+temple_soldier,Temple Soldier,ทหารวิหาร,99,False,False,holy,neutral,brute,heavy,normal,200,100279,290,436,60,18,208,134,157,118,cathedral|whitestatues|clocksquare|rooftops,11,4
+bell_puppet,Bell Puppet,หุ่นระฆัง,99,False,False,wind,neutral,brute,heavy,normal,200,58988,312,467,60,14.4,188,113,137,103,bell1|bell2|bell3|bell4|bell5|bell6|bell7,10,4
+hollow_bellringer,Hollow Bell Ringer,ผู้ตีระฆังกลวง,99,False,False,shadow,neutral,brute,hide,normal,200,50139,301,451,40,30,218,148,129,97,bell1|bell2|bell3|bell4|bell5|bell6|bell7,10,4
+first_lamplighter,First Lightkeeper,ผู้จุดตะเกียงรุ่นแรก,99,False,False,ghost,holy,brute,spirit,normal,200,76684,323,484,21.6,60,218,168,212,159,grave1|grave2,9,4
+star_crystal,Living Star Crystal,ผลึกดาวมีชีวิต,99,False,False,holy,holy,brute,spirit,normal,200,58988,236,354,26.4,60,149,141,157,118,grave1|grave2,7,4
+mushling,Sprite Shroom,ลูกเห็ดพราย,38,False,False,earth,neutral,plant,flesh,normal,98,3479,38,57,3.5,4.2,57,54,8,6,woods,5,1
+field_mouse,Rice Thief Vole,หนูนาขโมยข้าว,17,False,False,earth,neutral,brute,hide,normal,30,2706,38,57,7,3,32,27,28,21,farm2|threshing,4,4
+sunflower_bee,Sunflower Bee,ผึ้งทานตะวัน,18,False,False,wind,wind,brute,hide,normal,30,3877,44,66,8,4,36,34,38,29,farm2|threshing,4,3
+bucket_scarecrow,Lid-Shield Scarecrow,หุ่นไล่กาถือฝาถัง,18,False,False,earth,neutral,brute,heavy,normal,30,3363,38,57,17.6,1.8,32,23,30,23,farm2|pens|threshing,3,4
+angry_rooster,Moody Jungle Fowl,ไก่ป่าเจ้าอารมณ์,18,False,False,wind,neutral,brute,hide,normal,30,2583,42,63,6,3,36,31,28,21,farm2|cornmaze|threshing,3,4
+potato_walker,Walking Potato,มันฝรั่งเดินได้,17,False,False,earth,earth,brute,flesh,normal,30,1966,30,44,2.8,4.2,27,22,21,16,farm2|pens|threshing,4,3
+seed_flower,Seed-Shooting Flower,ดอกไม้ยิงเมล็ด,21,False,False,earth,earth,brute,flesh,normal,33,2517,37,56,4.2,3.5,44,33,31,23,meadow2|thornrose,6,3
+horn_rabbit,Unihorn Rabbit,กระต่ายเขาเดียว,22,False,False,neutral,neutral,brute,hide,normal,37,2839,43,64,8,3,44,37,32,24,meadow2|tallgrass|thornrose,3,3
+firefly_healer,Healer Firefly,หิ่งห้อยหมอยา,21,False,False,wind,wind,brute,spirit,normal,33,2517,26,39,3.6,14.4,40,30,34,26,meadow2|thornrose,4,4
+sleep_moth,Sleep-Dust Moth,ผีเสื้อผงหลับ,22,False,False,wind,poison,brute,hide,normal,37,2271,39,59,5,5,44,42,31,23,meadow2|tallgrass|thornrose,4,3
+hedgehog,Splitting Hedgehog,เม่นแตกตัว,22,False,False,earth,neutral,brute,hide,normal,37,3408,37,55,8,5,40,30,34,26,meadow2|tallgrass|thornrose,5,4
+spit_frog,Spitwater Frog,กบพ่นน้ำ,24,False,False,water,water,brute,flesh,normal,43,2488,39,59,4.9,4.2,50,37,35,26,marsh2|logdrive|springcave,3,3
+split_shroom,Splitting Water Shroom,เห็ดน้ำแตกตัว,28,False,False,water,water,brute,flesh,normal,57,4074,44,66,7,4.2,50,38,41,31,marsh2|logdrive|springcave,3,3
+otter,Hunter Otter,นากนักล่า,28,False,False,water,neutral,brute,hide,normal,57,3394,51,76,10,4,56,48,39,29,marsh2|stiltvillage|logdrive|springcave,4,3
+kingfisher,Diving Kingfisher,นกกระเต็นดำน้ำ,28,False,False,water,water,brute,hide,normal,57,2715,47,69,7,6,56,53,38,29,marsh2|stiltvillage|logdrive|springcave,4,3
+leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,False,water,water,brute,hide,normal,47,2271,33,50,6,8,40,32,28,21,marsh2|logdrive|springcave,5,4
+shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,False,water,neutral,brute,heavy,normal,77,7198,60,91,32,3.6,61,44,50,38,marsh3|cascades|behindfalls|fallstop,5,3
+mud_eel,Mud Eel,ปลาไหลมุดโคลน,32,False,False,water,water,brute,flesh,normal,70,5063,57,86,9.1,4.2,61,50,45,34,marsh3|cascades|behindfalls|fallstop,4,4
+dragonfly_lead,Dragonfly Leader,แมลงปอจ่าฝูง,34,False,False,wind,wind,brute,hide,normal,77,8306,69,103,15,7,68,65,64,48,marsh3|cascades|behindfalls|fallstop,4,4
+mist_sprite,Mist Water Sprite,ภูตละอองน้ำ,33,False,False,water,water,brute,spirit,normal,73,4540,38,57,5.4,23.4,63,47,48,36,marsh3|cascades|behindfalls|fallstop,4,3
+water_newt,Water Salamander,ซาลาแมนเดอร์น้ำ,34,False,False,water,water,brute,hide,normal,77,6090,63,95,14,6,65,48,46,35,marsh3|cascades|behindfalls|fallstop,4,3
+grave_digger,Gravedigger Ghost,ผีขุดหลุม,38,False,False,ghost,shadow,brute,spirit,normal,98,8502,76,114,9,12.6,72,59,52,39,graveyard2|coffinhollow|keeperhouse,4,3
+bone_archer,Skeleton Archer,โครงกระดูกพลธนู,35,False,False,undead,neutral,brute,heavy,normal,80,5455,60,91,16,4.8,74,55,47,35,graveyard2|keeperhouse,4,3
+candle_witch,Candlewax Witch,แม่มดเทียนไข,38,False,False,fire,fire,brute,spirit,normal,98,7726,55,83,7.2,23.4,72,51,56,42,graveyard2|weepgarden|keeperhouse,9,3
+coffin_bomb,Exploding Coffin,โลงผีระเบิด,37,False,False,undead,shadow,brute,heavy,normal,92,4993,73,109,14.4,4.2,70,60,46,35,graveyard2|keeperhouse,3,3
+grave_crow,Graveyard Crow,อีกาสุสาน,35,False,False,shadow,neutral,brute,hide,normal,80,4846,63,95,8,7,70,67,45,34,graveyard2|coffinhollow|keeperhouse,6,3
+puff_shroom,Puffball Shroom,เห็ดพองลม,46,False,False,poison,poison,brute,hide,normal,149,10970,94,142,11,8,87,75,55,41,woods2|sporevale|glowpool,6,3
+shroom_beetle,Shroom-Carrier Beetle,ด้วงแบกเห็ด,45,False,False,earth,neutral,brute,heavy,normal,140,17917,88,132,43.2,4.8,81,58,63,47,woods2|sporevale|glowpool,6,3
+shroom_wolf,Shroom Wolf Leader,หมาป่าเห็ดจ่าฝูง,46,False,False,earth,neutral,brute,hide,normal,149,23509,103,154,20,7,92,78,83,62,woods2|fallencap|glowpool,4,3
+doctor_shroom,Doctor Shroom,เห็ดหมอ,43,False,False,earth,earth,brute,spirit,normal,128,10536,56,85,7.2,30.6,82,61,61,46,woods2|sporevale|glowpool,3,4
+glow_spider,Glowweb Spider,แมงมุมใยเรือง,44,False,False,poison,poison,brute,hide,normal,134,11444,82,123,12,11,92,69,57,43,woods2|fallencap|glowpool,4,3
+blade_sprite,Bladewind Sprite,ภูตลมใบมีด,51,False,False,wind,wind,brute,spirit,normal,191,24595,95,142,8.4,21.6,107,80,65,49,wind2|chainisles,4,4
+storm_sparrow,Storm Sparrow,นกกระจอกพายุ,52,False,False,wind,wind,brute,hide,normal,200,24165,101,152,12,11,104,99,64,48,wind2|ropebridge|eyrie|chainisles,4,4
+cloud_ram_lead,Cloud Sheep Leader,แกะเมฆจ่าฝูง,54,False,False,wind,neutral,brute,heavy,normal,200,48591,120,180,38.4,4.8,108,92,95,71,wind2|ropebridge|chainisles,6,3
+float_rock,Splitting Floating Rock,ก้อนหินลอยแตกตัว,54,False,False,earth,earth,brute,heavy,normal,200,38873,100,150,30.4,6.6,97,73,71,53,wind2|ropebridge|chainisles,6,3
+cliff_goat,Cliff Goat,แพะผาหน้าผา,53,False,False,earth,neutral,brute,hide,normal,200,31303,113,169,19,8,106,90,68,51,wind2|ropebridge|eyrie|chainisles,6,4
+bloat_toad,Bloated Poison Toad,คางคกพองพิษ,66,False,False,poison,poison,brute,flesh,normal,200,30390,136,205,11.2,8.4,125,108,76,57,swamp2|poisonvillage|pitcherfield|cocoonwood,5,3
+split_slug,Splitting Poison Slug,ทากพิษแตกตัว,67,False,False,poison,poison,brute,flesh,normal,200,52846,126,189,16.8,9.8,121,90,87,65,swamp2|roots1|poisonvillage|pitcherfield|cocoonwood,5,4
+mother_bloom,Venom Mother Bloom,ดอกแม่พิษ,74,False,False,poison,poison,brute,spirit,normal,200,42700,100,150,12.6,52.2,141,105,99,74,swamp2|roots2|poisonvillage|pitcherfield|cocoonwood,5,4
+mosquito,Giant Mosquito,ยุงยักษ์,62,False,False,poison,poison,brute,hide,normal,200,32192,121,180,15,13,124,118,75,56,swamp2|mangrove|pitcherfield|cocoonwood,5,4
+swamp_croc,Bog Venom Crocodile,จระเข้หนองพิษ,65,False,False,poison,poison,brute,hide,normal,200,46989,134,201,26,12,124,101,84,63,swamp2|pitcherfield|cocoonwood,5,4
+crystal_mole,Crystal-Digging Mole,ตุ่นขุดผลึก,71,False,False,earth,earth,brute,hide,normal,200,50691,149,223,28,13,135,111,91,68,canyon2|minecart|floodedmine|geodehall|minerscamp,6,3
+crystal_golem,Splitting Crystal Golem,โกเลมผลึกแตกตัว,72,False,False,earth,earth,brute,heavy,normal,200,55937,138,206,41.6,9,130,97,93,70,canyon2|floodedmine|geodehall|minerscamp,7,3
+ghost_miner,Ghost Miner,คนงานเหมืองผี,69,False,False,ghost,neutral,brute,spirit,normal,200,45074,105,156,13.2,41.4,131,93,96,72,canyon2|minecart|floodedmine|geodehall|minerscamp,5,4
+crystal_bat,Crystal Bat,ค้างคาวผลึก,70,False,False,earth,earth,brute,hide,normal,200,36383,139,210,17,15,140,134,84,63,canyon2|minecart|floodedmine|geodehall|minerscamp,6,4
+haunted_cart,Haunted Ore Cart,รถเข็นแร่ผีสิง,71,False,False,ghost,neutral,brute,spirit,normal,200,46083,156,234,15.6,19.8,142,121,88,66,canyon2|minecart|floodedmine|geodehall|minerscamp,5,4
+spit_scorpion,Venom-Shot Scorpion,แมงป่องยิงพิษ,77,False,False,fire,poison,brute,heavy,normal,200,46716,150,224,35.2,10.8,162,120,95,71,canyon3|dryoasis|antlionpits|raiderfort,5,3
+sand_lizard,Sand Lizard Leader,กิ้งก่าทรายจ่าฝูง,80,False,False,fire,neutral,brute,hide,normal,200,87771,189,283,35,12,160,136,136,102,canyon3|dryoasis|antlionpits|raiderfort,7,3
+stone_vulture,Stone Vulture,นกแร้งหิน,77,False,False,earth,neutral,brute,heavy,normal,200,41525,157,236,28.8,9.6,154,147,91,68,canyon3|dryoasis|antlionpits|raiderfort,5,4
+sand_giant,Sandstone Giant,ยักษ์หินทราย,80,False,False,earth,earth,brute,heavy,normal,200,99474,165,247,60,8.4,144,102,106,80,canyon3|dryoasis|antlionpits|raiderfort,4,3
+dust_devil,Sandstorm Ghost,ผีพายุทราย,80,False,False,wind,wind,brute,hide,normal,200,40960,173,259,19,14,152,130,91,68,canyon3|dryoasis|antlionpits|raiderfort,7,3
+pterosaur,Pterosaur,เทอโรซอร์,95,False,False,wind,neutral,brute,hide,normal,200,41596,211,316,23,20,190,181,111,83,prime2|fernvale|ammonbeach|pteronest|amberwood,9,3
+ankylo,Hammertail Ankylosaur,แองคิโลซอร์หางค้อน,98,False,False,earth,earth,brute,heavy,normal,200,91505,222,332,60,10.8,176,125,128,96,prime2|tarpit|ammonbeach|pteronest|amberwood,9,4
+tiny_dino,Tiny Dino Leader,ไดโนจิ๋วจ่าฝูง,97,False,False,earth,neutral,brute,hide,normal,200,83140,249,374,43,15,194,165,163,122,prime2|fernvale|ammonbeach|pteronest|amberwood,11,4
+hatchling,Wildwood Dragonling,ลูกมังกรไพร,96,False,False,earth,wind,brute,hide,normal,200,48325,204,306,27,23,202,150,117,88,prime2|ammonbeach|pteronest|amberwood,11,4
+plesio,Plesiosaur,พลีซิโอซอร์,97,False,False,water,water,brute,hide,normal,200,60969,228,343,39,17,184,151,122,92,prime2|ammonbeach|pteronest|amberwood,12,3
+mother_bat,Mother Roost Bat,ค้างคาวแม่รัง,15,False,False,shadow,shadow,brute,hide,normal,30,2085,25,37,5,5,29,20,27,20,batcave,7,3
+echo_bat,Sonar Bat,ค้างคาวคลื่นเสียง,12,False,False,shadow,wind,brute,hide,normal,30,1327,26,39,3,3,25,19,21,16,batcave,5,3
+bomb_ant,Bomb Ant,มดระเบิด,42,False,False,earth,fire,brute,hide,normal,122,7515,87,130,10,8,80,68,51,38,antmine2|antmine3,4,3
+nurse_ant,Nurse Ant,มดพยาบาล,49,False,False,earth,earth,brute,spirit,normal,174,19954,64,96,8.4,34.2,93,70,68,51,antmine1|antmine2|antmine3,3,3
+dig_ant,Tunnel Ant,มดขุดอุโมงค์,33,False,False,earth,earth,brute,hide,normal,73,5549,60,90,13,6,63,51,47,35,antmine1|antmine2,6,3
+tomb_knight,Gravestone Shield Knight,อัศวินโล่หลุมศพ,51,False,False,undead,neutral,brute,heavy,normal,191,35523,99,149,49.6,5.4,92,65,70,53,crypt1|crypt2,7,3
+bone_pile,Splitting Bone Pile,กองกระดูกแตกตัว,48,False,False,undead,neutral,brute,heavy,normal,166,23835,89,134,27.2,6,86,65,64,48,crypt1|crypt2,6,3
+bone_shaman,Bone Shaman,หมอผีกระดูก,50,False,False,undead,shadow,brute,spirit,normal,183,22142,65,97,8.4,36,95,71,69,52,crypt2,4,4
+walking_scope,Walking Telescope,กล้องดูดาวเดินได้,57,False,False,wind,holy,brute,heavy,normal,200,31916,105,158,25.6,8.4,120,89,72,54,owl1|owl2|owl3,6,3
+owlet_lead,Owlet Leader,ลูกนกฮูกจ่าฝูง,55,False,False,wind,neutral,brute,hide,normal,200,50217,122,183,24,10,105,78,97,73,owl1|owl2,10,4
+root_worm,Burrowing Root Worm,หนอนรากมุดดิน,74,False,False,earth,poison,brute,flesh,normal,200,52189,157,235,21,9.1,141,115,95,71,roots1|roots2,8,3
+poison_spore,Floating Poison Spore,สปอร์พิษลอย,71,False,False,poison,poison,brute,flesh,normal,200,41474,136,204,14,11.9,149,111,88,66,roots1|roots2,4,3
+bloom_sprout,Venom Mother Larva,ตัวอ่อนต้นแม่พิษ,74,False,False,poison,poison,brute,flesh,normal,200,47444,114,171,16.8,16.8,141,100,102,77,roots1|roots2,4,3
+poison_ladybug,Poison Ladybug,เต่าทองพิษ,71,False,False,poison,poison,brute,hide,normal,200,32258,149,223,17,13,135,116,81,61,roots1|roots2,4,3
+lava_imp,Lava-Spitting Imp,อิมป์พ่นลาวา,90,False,False,fire,fire,brute,spirit,normal,200,39619,183,274,15,39.6,189,140,110,83,lavavent1|lavavent2,9,3
+magma_blob,Splitting Magma Blob,ก้อนแมกมาแตกตัว,87,False,False,fire,fire,brute,flesh,normal,200,70594,175,263,21.7,12.6,157,117,110,83,lavavent1|lavavent2,9,3
+ink_drop,Splitting Ink Drop,หยดหมึกแตกตัว,85,False,False,water,shadow,brute,flesh,normal,200,79624,169,255,21.7,12.6,153,115,108,81,ledger1|ledger2,11,4
+cabinet_guard,Shield Filing Cabinet,ตู้เอกสารโล่,87,False,False,earth,neutral,brute,heavy,normal,200,76484,184,276,60,9.6,157,111,114,86,ledger1|ledger2,8,3
+repair_puppet,Repairman Puppet,หุ่นช่างซ่อม,94,False,False,neutral,neutral,brute,spirit,normal,200,45344,138,207,15.6,60,179,133,123,92,puppet1|puppet2,7,4
+spring_bomb,Exploding Spring Puppet,หุ่นสปริงระเบิด,92,False,False,neutral,neutral,brute,heavy,normal,200,32999,208,313,35.2,10.2,175,150,103,77,puppet1|puppet2,7,3
+bomb_bell,Exploding Mini Bell,ระฆังจิ๋วระเบิด,99,False,False,wind,wind,brute,heavy,normal,200,35393,236,354,38.4,10.8,188,161,91,69,bell1|bell2|bell3|bell4|bell5|bell6|bell7,12,4
+bell_lead,Bell Puppet Leader,หุ่นระฆังจ่าฝูง,99,False,False,wind,neutral,brute,heavy,normal,200,53089,258,386,57.6,10.8,188,141,137,103,bell1|bell2|bell3|bell4|bell5|bell6|bell7,10,3
+glass_warden,Glass Floor Warden,ผู้เฝ้าพื้นแก้ว,99,False,False,holy,holy,brute,heavy,normal,200,61937,226,338,60,10.8,178,127,157,118,grave1|grave2,9,4
+tiny_meteor,Mini Meteor,ดาวตกจิ๋ว,99,False,False,holy,fire,brute,heavy,normal,200,41292,236,354,38.4,10.8,188,161,134,101,grave1|grave2,9,4
+crow_red,Corn Thief Crow · Red Fur Form,อีกาขโมยข้าวโพด · ร่างขนแดง,18,False,False,wind,neutral,brute,hide,normal,30,3024,36,55,4,3,34,34,45,34,farm2|pens|threshing,3,4
+boar_silver,Stubtusk Boar · Silver Horn Form,หมูป่าเขี้ยวตัน · ร่างเขาเงิน,22,False,False,earth,neutral,brute,hide,normal,37,6129,51,77,13,3,35,28,60,45,meadow2|battlefield|thornrose,13,3
+turtle_jade,Grumpy Moss Turtle · Green Stone Form,เต่าตะไคร่ขี้โมโห · ร่างหินเขียว,27,False,False,water,water,brute,heavy,normal,53,8702,56,83,49.6,1.2,43,30,85,64,marsh2|logdrive|springcave,6,3
+dragonfly_rainbow,Sapphire Dragonfly · Rainbow Form,แมลงปอไพลิน · ร่างสายรุ้ง,34,False,False,wind,wind,brute,hide,normal,77,6973,68,102,8,7,68,72,81,61,marsh3|cascades|behindfalls|fallstop,3,4
+zombie_mold,Farmer Zombie · Green Mold Form,ซอมบี้ชาวนา · ร่างราเขียว,37,False,False,undead,neutral,brute,flesh,normal,92,18619,91,136,11.2,2.1,59,42,99,74,graveyard2|keeperhouse,5,3
+ghost_violet,Wisp Ghost · Dusky Purple Form,ผีดวงไฟ · ร่างม่วงหม่น,37,False,False,ghost,ghost,brute,spirit,normal,92,10273,82,124,4.2,19.8,70,65,103,77,graveyard2|weepgarden|keeperhouse,4,3
+stump_shroom,Ghost Stump · Mushroom-Grown Form,ตอไม้ผี · ร่างเห็ดขึ้น,46,False,False,earth,earth,brute,heavy,normal,149,39499,118,177,49.6,4.2,74,52,119,89,woods2|glowpool,3,3
+wolf_frost,Moonshadow Wolf · Frost Form,หมาป่าเงาจันทร์ · ร่างน้ำค้างแข็ง,46,False,False,earth,neutral,brute,hide,normal,149,28211,123,185,20,7,87,75,119,89,woods2|glowpool,4,4
+eagle_bolt,Storm Eagle · Lightning Form,อินทรีพายุ · ร่างฟ้าผ่า,54,False,False,wind,wind,brute,hide,normal,200,49561,137,206,16,11,113,107,137,103,wind2|eyrie|chainisles,4,3
+snake_triple,Bogvenom Snake · Red Venom Form,งูหนองพิษ · ร่างพิษแดง,66,False,False,poison,poison,brute,hide,normal,200,78142,185,279,29,12,132,112,171,128,swamp2|pitcherfield|cocoonwood,7,4
+golem_crystal,Red Rock Golem · Crystal Form,โกเลมหินแดง · ร่างผลึก,72,False,False,neutral,earth,brute,heavy,normal,200,151024,224,336,60,7.8,122,77,220,165,canyon2|floodedmine|geodehall|minerscamp,6,3
+scorpion_copper,Red Scorpion · Copper Form,แมงป่องแดง · ร่างทองแดง,79,False,False,fire,fire,brute,heavy,normal,200,111411,232,349,60,8.4,150,118,194,146,canyon3|dryoasis|antlionpits|raiderfort,5,3
+raptor_plume,Leaf Raptor · Feathered Form,แร็พเตอร์ใบไม้ · ร่างขนนก,98,False,False,earth,neutral,brute,hide,normal,200,118388,343,515,47,15,206,187,274,206,prime2|ammonbeach|pteronest|amberwood,11,4
+bat_crimson,Nightfall Bat · Bloodbird Red Form,ค้างคาวรัตติกาล · ร่างแดงเลือดนก,16,False,False,shadow,shadow,brute,hide,normal,30,2907,33,49,4,3,29,29,39,29,batcave,6,3
+ant_obsidian,Soldier Ant · Onyx Form,มดทหาร · ร่างนิล,50,False,False,earth,earth,brute,heavy,normal,183,59791,139,209,60,3.6,85,68,138,104,antmine3,6,3
+knight_rust,Bone Knight · Red Rust Form,อัศวินกระดูก · ร่างสนิมแดง,52,False,False,undead,neutral,brute,heavy,normal,200,86995,157,235,60,5.4,99,70,158,119,crypt2,9,3
+owl_star,Stone Owl · Star Form,นกฮูกหิน · ร่างดาว,58,False,False,earth,earth,brute,heavy,normal,200,85223,160,240,60,5.4,116,90,163,122,owl3,5,4
+imp_blue,Flame Imp · Electric Form,อิมป์เปลวไฟ · ร่างไฟฟ้า,88,False,False,fire,fire,brute,spirit,normal,200,107672,288,433,25.2,37.8,185,168,248,186,lavavent2,9,4
+book_gold,Flying Book · Gold Cover Form,หนังสือบิน · ร่างปกทอง,88,False,False,ghost,neutral,brute,spirit,normal,200,92991,267,399,18,60,185,162,231,173,ledger2,9,3
+puppet_black,Faceless Puppet · Blackwood Form,หุ่นไร้หน้า · ร่างไม้ดำ,94,False,False,neutral,neutral,brute,heavy,normal,200,126954,320,480,60,13.8,197,147,272,204,puppet2,9,4
+bell_silver,Bell Puppet · Silver Form,หุ่นระฆัง · ร่างเงิน,99,False,False,wind,neutral,brute,heavy,normal,200,106178,390,584,60,14.4,188,113,274,206,bell4|bell5|bell6|bell7,9,4
+lamplighter_gold,First Lightkeeper · Gold Form,ผู้จุดตะเกียงรุ่นแรก · ร่างทอง,99,False,False,ghost,holy,brute,spirit,normal,200,138031,403,605,25.8,60,218,168,424,318,grave2,9,3
+myco_knight,Mold Knight,อัศวินเห็ดรา,46,False,False,earth,poison,brute,heavy,normal,149,20374,90,135,44.8,4.8,83,59,64,48,sporevale,2,4
+rootbound_hound,Root-Possessed Hound,หมารากสิง,96,False,False,shadow,shadow,brute,hide,normal,200,69803,235,352,35,14,192,163,117,88,treeedge,1,4
+rootbound_hound_frost,Root-Possessed Hound · Dew Form,หมารากสิง · ร่างน้ำค้าง,96,False,False,shadow,shadow,brute,hide,normal,200,125643,293,440,41,14,192,163,233,175,treeedge,1,3
+weather_rooster,Weathervane Rooster,ไก่ใบพัดลม,99,False,False,wind,wind,brute,hide,normal,200,88482,258,386,44,21,198,189,166,125,rooftops,1,4
+cap_hermit,Mushroom Hermit Crab,ปูเสฉวนหมวกเห็ด,46,False,False,earth,water,brute,hide,normal,149,17240,94,142,18,8,87,65,60,45,glowpool,1,3
+cap_hermit_orange,Mushroom Hermit Crab · Orange Cap Form,ปูเสฉวนหมวกเห็ด · ร่างหมวกส้ม,46,False,False,earth,water,brute,hide,normal,149,31026,118,177,22,8,87,65,119,89,glowpool,1,3
+banner_wraith,Torn Banner Spirit,วิญญาณธงขาด,22,False,False,ghost,shadow,brute,spirit,normal,37,4259,44,66,6,9,44,42,45,34,battlefield,1,3
+crevasse_worm,Fissure Worm,หนอนรอยแยก,58,False,False,water,water,brute,flesh,normal,200,40059,118,176,16.1,7,110,90,76,57,icefall,1,3
+crevasse_worm_azure,Fissure Worm · Deep Blue Ice Form,หนอนรอยแยก · ร่างน้ำแข็งฟ้าเข้ม,58,False,False,water,water,brute,flesh,normal,200,72102,147,220,19.6,7,110,90,152,114,icefall,1,4
+lava_eel,Lava Eel,ปลาไหลลาวา,84,False,False,fire,fire,brute,flesh,normal,200,71400,184,276,23.8,10.5,160,131,107,80,lavalake,1,3
+lava_eel_azure,Lava Eel · Electric Form,ปลาไหลลาวา · ร่างไฟฟ้า,84,False,False,fire,fire,brute,flesh,normal,200,128523,230,345,28,10.5,160,131,214,161,lavalake,1,4
+ghost_sailor,Ghost Sailor,กะลาสีผี,88,False,False,ghost,water,brute,spirit,normal,200,48946,178,267,15,37.8,185,137,107,80,shipwreck|shipgrave,1,3
+ghost_sailor_amber,Ghost Sailor · Amber Form,กะลาสีผี · ร่างอำพัน,88,False,False,ghost,water,brute,spirit,normal,200,88089,222,332,18,37.8,185,137,215,161,shipwreck,1,3
+hour_knight,Clock Hand Knight,อัศวินเข็มนาฬิกา,99,False,False,neutral,neutral,brute,heavy,normal,200,85532,226,338,60,10.8,178,127,129,97,clocksquare,2,4
+water_strider,Giant Water Strider,จิงโจ้น้ำยักษ์,24,False,False,water,neutral,brute,hide,normal,43,2764,45,67,9,4,48,41,35,26,beaverdam,1,3
+water_strider_gold,Giant Water Strider · Gold Stripe Form,จิงโจ้น้ำยักษ์ · ร่างลายทอง,24,False,False,water,neutral,brute,hide,normal,43,4974,56,83,10,4,48,41,69,52,beaverdam,1,4
+moor_pony,Windfield Pony,ม้าแคระทุ่งลม,50,False,False,wind,neutral,brute,hide,normal,183,24602,107,160,18,8,100,85,64,48,heathmoor,1,3
+moor_pony_blue,Windfield Pony · Indigo Fur Form,ม้าแคระทุ่งลม · ร่างขนคราม,50,False,False,wind,neutral,brute,hide,normal,183,44284,133,200,22,8,100,85,128,96,heathmoor,1,3
+cap_beetle,Mushroom Cap Beetle,ด้วงหมวกเห็ด,46,False,False,earth,neutral,brute,heavy,normal,149,15672,99,148,27.2,4.2,92,78,60,45,fallencap,2,3
+frill_lizard,Venom-Spitting Frill Lizard,กิ้งก่าแผงคอพ่นพิษ,92,False,False,earth,poison,brute,hide,normal,200,56561,190,284,26,22,193,144,112,84,fernvale,1,4
+coral_golem,Coral Golem,โกเลมปะการัง,92,False,False,water,earth,brute,heavy,normal,200,68347,199,299,60,10.2,166,118,121,91,reefs,2,4
+bone_crab,Horned Skull Crab,ปูกะโหลกเขา,32,False,False,undead,neutral,brute,heavy,normal,70,5982,54,82,30.4,3.6,58,41,47,35,giantbones,1,4
+bone_crab_blue,Horned Skull Crab · Blue Claw Form,ปูกะโหลกเขา · ร่างก้ามฟ้า,32,False,False,undead,neutral,brute,heavy,normal,70,10764,68,102,36.8,3.6,58,41,94,71,giantbones,1,4
+swamp_hog,Bog Venom Hog,หมูหนองพิษ,62,False,False,poison,poison,brute,hide,normal,200,40240,132,199,22,9,124,105,78,59,bubblepits,1,3
+swamp_hog_green,Bog Venom Hog · Green Fur Form,หมูหนองพิษ · ร่างขนเขียว,62,False,False,poison,poison,brute,hide,normal,200,72431,165,248,27,9,124,105,156,117,bubblepits,1,4
+salt_golem,Salt Block Golem,โกเลมก้อนเกลือ,48,False,False,earth,neutral,brute,heavy,normal,166,25821,94,141,46.4,5.4,86,61,67,50,saltflats,1,3
+salt_golem_rose,Salt Block Golem · Pink Salt Form,โกเลมก้อนเกลือ · ร่างเกลือชมพู,48,False,False,earth,neutral,brute,heavy,normal,166,46483,117,176,56,5.4,86,61,133,100,saltflats,1,3
+pine_bear,Snowpine Bear,หมีสนหิมะ,58,False,False,earth,neutral,brute,hide,normal,200,54625,128,192,26,10,110,82,101,76,snowpines,1,3
+hollow_plowman,Hollow Plowing Farmer,ชาวนากลวงไถนา,72,False,False,undead,neutral,brute,hide,normal,200,51276,152,227,29,13,137,102,89,67,silentfarm,1,4
+hollow_plowman_rust,Hollow Plowing Farmer · Red Rust Form,ชาวนากลวงไถนา · ร่างสนิมแดง,72,False,False,undead,neutral,brute,hide,normal,200,92299,190,284,35,13,137,102,178,134,silentfarm,1,3
+log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,False,water,earth,brute,flesh,normal,57,3732,48,73,7.7,3.5,53,44,41,31,logdrive,1,4
+log_lurker_blue,Ambush Log · Blue Moss Form,ท่อนซุงซุ่ม · ร่างตะไคร่ฟ้า,28,False,False,water,earth,brute,flesh,normal,57,6717,60,91,9.1,3.5,53,44,81,61,logdrive,1,3
+sailback,Sailback Lizard,กิ้งก่าหลังใบเรือ,92,False,False,fire,fire,brute,hide,normal,200,65987,208,313,37,17,175,131,112,84,hotsprings,1,4
+sailback_blue,Sailback Lizard · Blue Sail Form,กิ้งก่าหลังใบเรือ · ร่างใบเรือฟ้า,92,False,False,fire,fire,brute,hide,normal,200,118778,261,391,44,17,175,131,224,168,hotsprings,1,4
+weeping_statue,Weeping Statue,รูปปั้นร้องไห้,38,False,False,earth,neutral,brute,heavy,normal,98,8502,76,114,24,4.2,72,54,51,38,weepgarden,1,3
+weeping_statue_jade,Weeping Statue · Cracked Jade Form,รูปปั้นร้องไห้ · ร่างหยกร้าว,38,False,False,earth,neutral,brute,heavy,normal,98,15298,95,142,28.8,4.2,72,54,101,76,weepgarden,1,3
+river_troll,Bridge Troll,โทรลใต้สะพาน,42,False,False,water,neutral,brute,hide,normal,122,16103,94,142,18,8,80,60,76,57,woodbridge,1,3
+milestone_golem,Walking Milestone,หลักไมล์เดินได้,72,False,False,earth,neutral,brute,heavy,normal,200,60599,145,217,60,7.8,130,92,96,72,travelgrave,1,4
+moat_turtle,Ironhead Moat Turtle,เต่าคูเมืองหัวเหล็ก,82,False,False,water,neutral,brute,heavy,normal,200,80296,171,256,60,9,148,105,108,81,moat,2,3
+moat_turtle_jade,Ironhead Moat Turtle · Jade Form,เต่าคูเมืองหัวเหล็ก · ร่างหยก,82,False,False,water,neutral,brute,heavy,normal,200,144529,213,320,60,9,148,105,217,163,moat,2,3
+cinder_brute,Cinder Giant,ยักษ์เถ้าถ่าน,84,False,False,fire,fire,brute,heavy,normal,200,97363,201,301,59.2,9,160,119,142,107,smokevent,1,3
+wax_golem,Honeycomb Golem,โกเลมรวงผึ้ง,18,False,False,earth,neutral,brute,heavy,normal,30,3363,38,57,17.6,1.8,32,23,30,23,apiary,1,4
+wax_golem_blue,Honeycomb Golem · Blue Wax Form,โกเลมรวงผึ้ง · ร่างขี้ผึ้งฟ้า,18,False,False,earth,neutral,brute,heavy,normal,30,6045,48,72,20.8,1.8,32,23,60,45,apiary,1,4
+amber_golem,Amber Golem,โกเลมอำพัน,98,False,False,earth,fire,brute,heavy,normal,200,74348,222,332,60,10.8,176,125,128,96,amberwood,1,4
+amber_golem_green,Amber Golem · Green Amber Form,โกเลมอำพัน · ร่างอำพันเขียว,98,False,False,earth,fire,brute,heavy,normal,200,133822,278,416,60,10.8,176,125,256,192,amberwood,1,3
+popcorn_pod,Popping Corncob,ฝักข้าวโพดป๊อป,18,False,False,fire,fire,brute,flesh,normal,30,1812,40,60,2.8,2.1,34,29,26,20,cornmaze,1,3
+tent_crawler,Creeping Tent,เต็นท์คืบคลาน,42,False,False,neutral,neutral,brute,heavy,normal,122,13956,83,124,40,4.8,76,54,59,44,refugeecamp,1,4
+blast_imp,Exploding Earth Imp,อิมป์ดินระเบิด,78,False,False,earth,fire,brute,spirit,normal,200,37844,167,251,11.4,25.2,148,127,89,67,minecart,1,4
+tar_blob,Splitting Tar Blob,ก้อนน้ำมันดินแตกตัว,92,False,False,earth,poison,brute,flesh,normal,200,68347,190,284,23.1,13.3,166,124,116,87,tarpit,1,3
+needle_urchin,Splitting Sea Urchin,เม่นทะเลแตกตัว,92,False,False,water,poison,brute,heavy,normal,200,68347,190,284,52.8,11.4,166,124,87,65,reefs,1,4
+needle_urchin_gold,Splitting Sea Urchin · Gold Form,เม่นทะเลแตกตัว · ร่างทอง,92,False,False,water,poison,brute,heavy,normal,200,123022,237,356,60,11.4,166,124,174,131,reefs,1,5
+melon_roller,Rolling Melon,แตงโมกลิ้ง,10,False,False,earth,neutral,brute,flesh,normal,30,1037,26,39,2.8,1.4,20,17,19,14,melonfield,1,4
+melon_roller_orange,Rolling Melon · Orange Rind Form,แตงโมกลิ้ง · ร่างเปลือกส้ม,10,False,False,earth,neutral,brute,flesh,normal,30,1867,32,48,2.8,1.4,20,17,37,28,melonfield,1,4
+rock_armadillo,Red Rock Pangolin,ตัวนิ่มหินแดง,78,False,False,earth,neutral,brute,heavy,normal,200,70281,160,240,60,8.4,140,100,103,77,dustgulch,1,4
+rock_armadillo_green,Red Rock Pangolin · Green Armor Form,ตัวนิ่มหินแดง · ร่างเกราะเขียว,78,False,False,earth,neutral,brute,heavy,normal,200,126513,199,300,60,8.4,140,100,207,155,dustgulch,1,3
+moon_hare,Moonshadow Rabbit,กระต่ายเงาจันทร์,22,False,False,wind,neutral,brute,hide,normal,37,2839,43,64,8,3,44,37,32,24,tallgrass,1,4
+moon_hare_eclipse,Moonshadow Rabbit · New Moon Form,กระต่ายเงาจันทร์ · ร่างจันทร์ดับ,22,False,False,wind,neutral,brute,hide,normal,37,5110,54,80,10,3,44,37,65,49,tallgrass,1,3
+plank_beaver,Gnawing Beaver,บีเวอร์แทะไม้,42,False,False,earth,neutral,brute,hide,normal,122,10736,91,136,15,6,84,71,55,41,woodbridge,1,3
+plank_beaver_gold,Gnawing Beaver · Gold Tooth Form,บีเวอร์แทะไม้ · ร่างฟันทอง,42,False,False,earth,neutral,brute,hide,normal,122,19324,113,170,18,6,84,71,110,83,woodbridge,1,3
+hush_fox,Silent Fox,จิ้งจอกเงียบงัน,72,False,False,shadow,shadow,brute,hide,normal,200,46614,158,238,26,11,144,122,89,67,silentfarm,1,3
+mad_goose,Raging Goose,ห่านคลั่ง,10,False,False,wind,neutral,brute,hide,normal,30,1141,25,37,4,2,19,14,19,14,windpump,1,4
+mad_goose_blue,Raging Goose · Indigo Beak Form,ห่านคลั่ง · ร่างจะงอยคราม,10,False,False,wind,neutral,brute,hide,normal,30,2054,31,46,5,2,19,14,37,28,windpump,1,4
+egg_thief,Egg-Thief Dino,ไดโนขโมยไข่,98,False,False,earth,neutral,brute,flesh,normal,200,74348,243,364,24.5,10.5,196,167,119,89,pteronest,1,4
+egg_thief_pink,Egg-Thief Dino · Pink Fur Form,ไดโนขโมยไข่ · ร่างขนชมพู,98,False,False,earth,neutral,brute,flesh,normal,200,133822,304,455,29.4,10.5,196,167,238,179,pteronest,1,4
+gill_stalker,Gill Ghost,ผีครีบเห็ด,46,False,False,shadow,earth,brute,spirit,normal,149,17240,94,142,10.8,14.4,87,65,60,45,fallencap,1,3
+gill_stalker_pale,Gill Ghost · Pale White Form,ผีครีบเห็ด · ร่างซีดขาว,46,False,False,shadow,earth,brute,spirit,normal,149,31026,118,177,13.2,14.4,87,65,119,89,fallencap,1,3
+crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,False,water,neutral,brute,heavy,normal,200,59822,196,292,56,9.6,167,125,107,80,willows,1,3
+crayfish_brute_red,Giant Crayfish · Boiled Red Form,กุ้งเครย์ฟิชยักษ์ · ร่างแดงสุก,88,False,False,water,neutral,brute,heavy,normal,200,107672,245,366,60,9.6,167,125,215,161,willows,1,4
+shade_walker,Walking Shadow,เงาเดินได้,96,False,False,shadow,shadow,brute,spirit,normal,200,75173,224,337,22.8,30.6,182,136,117,88,shadowpath,1,3
+shade_walker_violet,Walking Shadow · Violet Shadow Form,เงาเดินได้ · ร่างเงาม่วง,96,False,False,shadow,shadow,brute,spirit,normal,200,135314,280,420,27.6,30.6,182,136,233,175,shadowpath,1,4
+marble_hound,Marble Hound,หมาหินอ่อน,99,False,False,earth,neutral,brute,heavy,normal,200,76684,247,371,57.6,9,198,168,120,90,whitestatues,1,4
+marble_hound_gold,Marble Hound · Gold Crack Form,หมาหินอ่อน · ร่างรอยร้าวทอง,99,False,False,earth,neutral,brute,heavy,normal,200,138031,308,463,60,9,198,168,240,180,whitestatues,1,3
+grave_cat,Graveyard Black Cat,แมวดำสุสาน,32,False,False,shadow,shadow,brute,hide,normal,70,4599,60,89,12,5,64,54,44,33,diggervillage,1,3
+grave_cat_brown,Graveyard Black Cat · Brown Fur Form,แมวดำสุสาน · ร่างขนน้ำตาล,32,False,False,shadow,shadow,brute,hide,normal,70,8279,75,112,14,5,64,54,87,65,diggervillage,1,4
+geode_hopper,Leaping Geode,หินจีโอดกระโดด,72,False,False,earth,earth,brute,heavy,normal,200,55937,138,206,41.6,9,130,97,69,52,geodehall,1,3
+geode_hopper_blue,Leaping Geode · Blue Crystal Form,หินจีโอดกระโดด · ร่างผลึกฟ้า,72,False,False,earth,earth,brute,heavy,normal,200,100692,172,259,49.6,9,130,97,139,104,geodehall,1,4
+brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,False,water,water,brute,hide,normal,166,17877,89,134,13,12,101,75,62,47,saltflats,1,3
+root_crawler,Blackroot Inchworm,ตัวคืบรากดำ,96,False,False,shadow,earth,brute,flesh,normal,200,75173,224,337,26.6,11.9,182,150,121,91,blackroots|treeedge,1,3
+root_crawler_crimson,Blackroot Inchworm · Blood Red Form,ตัวคืบรากดำ · ร่างแดงเลือด,96,False,False,shadow,earth,brute,flesh,normal,200,135314,280,420,32.2,11.9,182,150,242,182,blackroots,1,4
+kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,False,water,water,brute,flesh,normal,200,65987,208,313,25.9,11.9,175,144,116,87,shipgrave,1,4
+kraken_arm_crimson,Kraken Tentacle · Deep Red Form,หนวดคราเคน · ร่างแดงเข้ม,92,False,False,water,water,brute,flesh,normal,200,118778,261,391,30.8,11.9,175,144,233,175,shipgrave,1,4
+acorn_squirrel,Acorn-Throwing Squirrel,กระรอกปาลูกโอ๊ก,40,False,False,earth,neutral,brute,hide,normal,110,8048,75,113,11,10,84,62,53,40,acorngrove,1,3
+acorn_squirrel_blue,Acorn-Throwing Squirrel · Indigo Fur Form,กระรอกปาลูกโอ๊ก · ร่างขนคราม,40,False,False,earth,neutral,brute,hide,normal,110,14487,94,141,13,10,84,62,106,80,acorngrove,1,3
+sundew_creeper,Dewdrop Flycatcher,หยาดน้ำค้างกินแมลง,66,False,False,poison,poison,brute,flesh,normal,200,39072,124,185,12.6,11.2,139,103,82,62,pitcherfield,1,4
+sundew_creeper_green,Dewdrop Flycatcher · Green Leaf Form,หยาดน้ำค้างกินแมลง · ร่างใบเขียว,66,False,False,poison,poison,brute,flesh,normal,200,70334,155,232,15.4,11.2,139,103,165,124,pitcherfield,1,4
+kite_bat,Torn Kite Bat,ค้างคาวว่าวขาด,54,False,False,wind,wind,brute,hide,normal,200,25916,105,157,13,11,108,103,66,50,ropebridge,1,4
+kite_bat_crimson,Torn Kite Bat · Red Kite Form,ค้างคาวว่าวขาด · ร่างว่าวแดง,54,False,False,wind,wind,brute,hide,normal,200,46649,131,197,16,11,108,103,132,99,ropebridge,1,3
+tower_sentry,Hollow Tower Guard,ยามหอคอยกลวง,48,False,False,undead,neutral,brute,heavy,normal,166,17877,89,134,20.8,7.2,101,75,62,47,watchtower,1,4
+tower_sentry_pale,Hollow Tower Guard · Pale Guard Form,ยามหอคอยกลวง · ร่างยามซีด,48,False,False,undead,neutral,brute,heavy,normal,166,32179,112,167,25.6,7.2,101,75,124,93,watchtower,1,3
+avalanche_ram,Avalanche Horn Sheep,แกะเขาหิมะถล่ม,58,False,False,earth,neutral,brute,heavy,normal,200,36417,123,184,33.6,5.4,116,99,73,55,avalanche,1,4
+avalanche_ram_black,Avalanche Horn Sheep · Black Fur Form,แกะเขาหิมะถล่ม · ร่างขนดำ,58,False,False,earth,neutral,brute,heavy,normal,200,65550,154,230,40,5.4,116,99,147,110,avalanche,1,4
+crate_spider,Crate Spider,แมงมุมลังไม้,86,False,False,neutral,neutral,brute,heavy,normal,200,75378,172,258,38.4,12.6,181,134,105,79,warehouses,1,3
+crate_spider_ink,Crate Spider · Black Ink Form,แมงมุมลังไม้ · ร่างหมึกดำ,86,False,False,neutral,neutral,brute,heavy,normal,200,135685,215,323,46.4,12.6,181,134,210,158,warehouses,1,3
+clockwork_owl,Wind-Up Owl,นกฮูกไขลาน,99,False,False,wind,neutral,brute,heavy,normal,200,64887,226,338,38.4,12.6,198,189,115,86,clocksquare,1,4
+clockwork_owl_silver,Wind-Up Owl · Silver Form,นกฮูกไขลาน · ร่างเงิน,99,False,False,wind,neutral,brute,heavy,normal,200,116796,282,422,46.4,12.6,198,189,231,173,clocksquare,1,4
+snow_owl,Snowy Owlet,นกฮูกหิมะ,58,False,False,water,water,brute,hide,normal,200,29133,112,168,14,12,116,111,70,53,snowpines,1,3
+snow_owl_aurora,Snowy Owl · Aurora Form,นกฮูกหิมะ · ร่างแสงเหนือ,58,False,False,water,water,brute,hide,normal,200,52447,140,210,17,12,116,111,141,106,snowpines,1,4
+frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,False,water,water,brute,spirit,normal,200,32775,75,112,9.6,41.4,110,82,79,59,icefall,1,4
+stew_slime,Cold Soup Slime,สไลม์ซุปเย็นชืด,72,False,False,poison,poison,brute,spirit,normal,200,37291,117,176,10.2,43.2,115,92,69,52,roadinn,2,4
+stew_slime_spicy,Cold Soup Slime · Chili Soup Form,สไลม์ซุปเย็นชืด · ร่างซุปพริก,72,False,False,poison,poison,brute,spirit,normal,200,67119,147,220,12.6,43.2,115,92,137,103,roadinn,2,3
+tree_herald,Tree Herald,ผู้ประกาศต้นไม้,96,False,False,shadow,earth,brute,spirit,normal,200,64434,143,214,16.2,60,182,136,125,94,treeedge,1,5
+soot_sweeper,Chimney Sweep Ghost,ผีคนปัดปล่องไฟ,99,False,False,shadow,shadow,brute,hide,normal,200,53089,215,323,28,24,208,154,120,90,rooftops,1,4
+soot_sweeper_violet,Chimney Sweep Ghost · Purple Soot Form,ผีคนปัดปล่องไฟ · ร่างเขม่าม่วง,99,False,False,shadow,shadow,brute,hide,normal,200,95560,269,403,33,24,208,154,240,180,rooftops,1,4
+puff_sprite,Dandelion Puff Sprite,ภูตปุยแดนดิไลออน,18,False,False,wind,wind,brute,spirit,normal,30,2066,38,57,2.4,7.2,36,34,27,20,dandelion,1,3
+puff_sprite_pink,Dandelion Puff Sprite · Pink Fluff Form,ภูตปุยแดนดิไลออน · ร่างปุยชมพู,18,False,False,wind,wind,brute,spirit,normal,30,3716,48,72,3,7.2,36,34,53,40,dandelion,1,3
+ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,False,water,water,brute,heavy,normal,200,68629,211,317,43.2,14.4,206,153,119,89,ammonbeach,1,4
+ammonite_violet,Crawling Ammonite · Purple Pattern Form,แอมโมไนต์คลาน · ร่างลายม่วง,98,False,False,water,water,brute,heavy,normal,200,123536,264,395,52.8,14.4,206,153,238,179,ammonbeach,1,3
+mud_leech,Giant Mud Leech,ปลิงโคลนยักษ์,28,False,False,water,poison,brute,flesh,normal,57,4074,44,66,7,4.2,50,38,41,31,stiltvillage,1,3
+mud_leech_red,Giant Mud Leech · Blood Form,ปลิงโคลนยักษ์ · ร่างเลือด,28,False,False,water,poison,brute,flesh,normal,57,7332,56,82,8.4,4.2,50,38,81,61,stiltvillage,1,3
+soot_puff,Splitting Soot Puff,ปุยเขม่าแตกตัว,45,False,False,fire,neutral,brute,flesh,normal,140,16534,84,126,11.2,6.3,81,61,61,46,stumpfield,1,3
+steam_wisp,Steam Sprite,ภูตไอร้อน,84,False,False,fire,water,brute,spirit,normal,200,58418,117,175,14.4,59.4,160,119,111,83,obsidian,1,3
+fog_hound,Mist Hound,หมาหมอก,92,False,False,water,shadow,brute,hide,normal,200,61279,218,328,33,14,184,156,112,84,lighthouse,1,4
+fog_hound_amber,Mist Hound · Amber Form,หมาหมอก · ร่างอำพัน,92,False,False,water,shadow,brute,hide,normal,200,110299,273,408,40,14,184,156,224,168,lighthouse,1,5
+apple_worm,Rotten Apple Worm,หนอนแอปเปิลเน่า,18,False,False,earth,poison,brute,flesh,normal,30,2066,31,47,2.8,4.2,29,23,21,16,appleslope,1,4
+apple_worm_green,Rotten Apple Worm · Green Worm Form,หนอนแอปเปิลเน่า · ร่างหนอนเขียว,18,False,False,earth,poison,brute,flesh,normal,30,3716,39,58,3.5,4.2,29,23,43,32,appleslope,1,3
+crystal_snail,Crystal-Shell Snail,หอยทากเปลือกผลึก,34,False,False,water,earth,brute,heavy,normal,77,7198,60,91,32,3.6,61,44,50,38,behindfalls,1,3
+crystal_snail_violet,Crystal-Shell Snail · Purple Crystal Form,หอยทากเปลือกผลึก · ร่างผลึกม่วง,34,False,False,water,earth,brute,heavy,normal,77,12958,75,113,38.4,3.6,61,44,99,74,behindfalls,1,3
+mist_widow,Mist Widow,แม่ม่ายหมอก,38,False,False,ghost,shadow,brute,spirit,normal,98,6957,48,72,6.6,27,72,54,54,41,coffinhollow,1,4
+lost_lantern,Stray Lantern,ตะเกียงหลงทาง,42,False,False,ghost,fire,brute,spirit,normal,122,8588,83,124,6,16.2,84,80,53,40,refugeecamp,1,3
+lost_lantern_blue,Stray Lantern · Blue Flame Form,ตะเกียงหลงทาง · ร่างเปลวฟ้า,42,False,False,ghost,fire,brute,spirit,normal,122,15456,103,155,7.2,16.2,84,80,106,80,refugeecamp,1,3
+ash_weaver,Ash-Weaving Spider,แมงมุมทอเถ้า,45,False,False,fire,fire,brute,hide,normal,140,12406,84,126,13,11,95,70,59,44,ashvale,1,3
+lamp_vendor,Hollow Lantern Seller,คนขายตะเกียงกลวง,82,False,False,undead,fire,brute,hide,normal,200,71031,162,244,23,20,172,128,101,76,nightmarket,1,4
+gourd_lantern,Lantern Gourd,น้ำเต้าตะเกียง,10,False,False,fire,fire,brute,spirit,normal,30,934,22,34,1.8,3.6,21,16,19,14,curinghouse,1,3
+gourd_lantern_green,Lantern Gourd · Green Fire Form,น้ำเต้าตะเกียง · ร่างไฟเขียว,10,False,False,fire,fire,brute,spirit,normal,30,1683,28,42,1.8,3.6,21,16,37,28,curinghouse,1,3
+lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,False,water,poison,brute,hide,normal,200,44265,126,190,25,11,118,97,81,61,cagetrees,1,4
+lure_angler_violet,Bog Anglerfish · Purple Glow Form,ปลาตกเบ็ดหนอง · ร่างแสงม่วง,62,False,False,water,poison,brute,hide,normal,200,79677,158,237,30,11,118,97,162,122,cagetrees,1,4
+stitch_doll,Stitched Straw Doll,ตุ๊กตาฟางเย็บแผล,18,False,False,earth,neutral,brute,spirit,normal,30,2329,26,38,3,12.6,34,26,30,23,pens,1,3
+coffin_mimic,Biting Coffin,โลงศพกัด,38,False,False,undead,shadow,brute,flesh,normal,98,7726,79,119,9.8,4.2,76,65,51,38,coffinhollow,1,4
+coffin_mimic_violet,Biting Coffin · Purple Wood Form,โลงศพกัด · ร่างไม้ม่วง,38,False,False,undead,shadow,brute,flesh,normal,98,13905,99,149,11.2,4.2,76,65,101,76,coffinhollow,1,3
+innkeeper_ghost,Innkeeper Ghost,ผีเจ้าของโรงเตี๊ยม,72,False,False,ghost,shadow,brute,spirit,normal,200,46614,110,166,13.8,43.2,137,97,100,75,roadinn,1,3
+raft_turtle,Raft-House Turtle,เต่าแพบ้าน,88,False,False,water,neutral,brute,heavy,normal,200,70697,187,279,60,9.6,158,113,116,87,floatvillage,1,4
+vat_slime,Dye Pit Slime,สไลม์บ่อย้อม,82,False,False,poison,poison,brute,spirit,normal,200,49413,138,207,12,48.6,131,105,77,58,tannery,1,3
+vat_slime_indigo,Dye Pit Slime · Indigo Dyed Form,สไลม์บ่อย้อม · ร่างย้อมคราม,82,False,False,poison,poison,brute,spirit,normal,200,88940,172,259,14.4,48.6,131,105,155,116,tannery,1,4
+raven_butler,Butler Crow,อีกาพ่อบ้าน,38,False,False,shadow,shadow,brute,hide,normal,98,7726,55,83,12,13,72,51,56,42,keeperhouse,1,4
+raven_butler_teal,Butler Crow · Green Vest Form,อีกาพ่อบ้าน · ร่างเสื้อกั๊กเขียว,38,False,False,shadow,shadow,brute,hide,normal,98,13905,69,104,15,13,72,51,113,85,keeperhouse,1,3
+mirage_wisp,Mirage Sprite,ภูตภาพลวงตา,80,False,False,fire,fire,brute,spirit,normal,200,46811,165,247,11.4,30.6,160,153,95,71,dryoasis,1,3
+mirage_wisp_blue,Mirage Sprite · Blue Mirage Form,ภูตภาพลวงตา · ร่างภาพลวงฟ้า,80,False,False,fire,fire,brute,spirit,normal,200,84261,206,310,13.8,30.6,160,153,189,142,dryoasis,1,3
+rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,False,undead,neutral,brute,heavy,normal,37,3690,39,59,20.8,2.4,40,28,35,26,battlefield,2,4
+rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,False,undead,neutral,brute,heavy,normal,37,6647,48,73,25.6,2.4,40,28,70,53,battlefield,2,3
+smoke_mole,Whitesmoke Mole,ตุ่นควันขาว,45,False,False,earth,fire,brute,hide,normal,140,15161,92,139,18,8,86,70,61,46,stumpfield,1,4
+smoke_mole_frost,Whitesmoke Mole · Frost Form,ตุ่นควันขาว · ร่างน้ำค้างแข็ง,45,False,False,earth,fire,brute,hide,normal,140,27286,116,173,22,8,86,70,122,92,stumpfield,1,3
+tide_crab,Tidal Crab,ปูแม่น้ำขึ้น,62,False,False,water,neutral,brute,heavy,normal,200,40240,92,138,32,12,118,84,87,65,mangrove,1,3
+tide_crab_violet,Tidal Crab · Dusky Purple Form,ปูแม่น้ำขึ้น · ร่างม่วงหม่น,62,False,False,water,neutral,brute,heavy,normal,200,72431,115,172,38.4,12,118,84,174,131,mangrove,1,3
+snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,False,water,neutral,brute,hide,normal,200,43701,107,160,21,12,104,78,57,43,avalanche,1,4
+pickpocket_cat,Pickpocket Cat,แมวล้วงกระเป๋า,82,False,False,shadow,neutral,brute,hide,normal,200,77207,186,280,30,12,164,139,101,76,nightmarket,1,3
+pickpocket_cat_gold,Pickpocket Cat · Gold Fur Form,แมวล้วงกระเป๋า · ร่างขนทอง,82,False,False,shadow,neutral,brute,hide,normal,200,138975,233,350,35,12,164,139,201,151,nightmarket,1,3
+sack_mimic,Biting Grain Sack,กระสอบข้าวกัด,18,False,False,earth,neutral,brute,hide,normal,30,3099,36,55,6,4,32,24,22,17,threshing,1,3
+sack_mimic_red,Biting Grain Sack · Red Sack Form,กระสอบข้าวกัด · ร่างกระสอบแดง,18,False,False,earth,neutral,brute,hide,normal,30,5579,46,68,8,4,32,24,43,32,threshing,1,4
+moss_bear,Moss Bear,หมีตะไคร่,40,False,False,earth,neutral,brute,hide,normal,110,9837,83,124,16,7,76,57,53,40,hunterlodge,1,4
+moss_bear_pink,Moss Bear · Pink Moss Form,หมีตะไคร่ · ร่างตะไคร่ชมพู,40,False,False,earth,neutral,brute,hide,normal,110,17706,103,155,19,7,76,57,106,80,hunterlodge,1,3
+wanderer_ghost,Traveler Ghost,ผีนักเดินทาง,72,False,False,ghost,ghost,brute,spirit,normal,200,41953,96,145,12,50.4,137,102,96,72,travelgrave,1,4
+wanderer_ghost_ember,Traveler Ghost · Warm Fire Form,ผีนักเดินทาง · ร่างไฟอุ่น,72,False,False,ghost,ghost,brute,spirit,normal,200,75511,121,181,14.4,50.4,137,102,192,144,travelgrave,1,3
+sluice_spirit,Overflow Gate Sprite,ภูตน้ำล้นประตู,86,False,False,water,water,brute,spirit,normal,200,75378,120,181,14.4,60,163,122,113,85,sluicegate,1,3
+woolly_calf,Woolly Mammoth Calf,ลูกช้างขนยาว,92,False,False,earth,neutral,brute,hide,normal,200,61279,218,328,33,14,184,156,112,84,tarpit,1,4
+woolly_calf_snow,Woolly Mammoth Calf · Snow Form,ลูกช้างขนยาว · ร่างหิมะ,92,False,False,earth,neutral,brute,hide,normal,200,110299,273,408,40,14,184,156,224,168,tarpit,1,4
+horsetail_mantis,Ponytail Mantis,ตั๊กแตนตำข้าวหางม้า,92,False,False,earth,wind,brute,hide,normal,200,65987,208,313,37,17,175,131,112,84,fernvale,1,4
+horsetail_mantis_violet,Ponytail Mantis · Purple Form,ตั๊กแตนตำข้าวหางม้า · ร่างม่วง,92,False,False,earth,wind,brute,hide,normal,200,118778,261,391,44,17,175,131,224,168,fernvale,1,3
+reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,False,water,neutral,brute,hide,normal,43,4145,46,70,11,4,48,41,48,36,reedmaze,1,4
+reed_muskrat_blue,Water Rat Leader · Indigo Fur Form,หนูน้ำจ่าฝูง · ร่างขนคราม,24,False,False,water,neutral,brute,hide,normal,43,7459,59,87,13,4,48,41,96,72,reedmaze,1,3
+cinder_owl,Ember Owl,นกฮูกถ่านไฟ,45,False,False,wind,fire,brute,hide,normal,140,11023,88,132,11,9,90,86,56,42,ashvale,1,3
+cinder_owl_frost,Ember Owl · Snow Form,นกฮูกถ่านไฟ · ร่างหิมะ,45,False,False,wind,fire,brute,hide,normal,140,19841,110,165,13,9,90,86,113,85,ashvale,1,4
+wheel_spirit,Cartwheel Sprite,ภูตล้อเกวียน,42,False,False,wind,neutral,brute,spirit,normal,122,12882,79,118,9,16.2,76,57,57,43,wagonvale,1,4
+nest_golem,Nest Golem,โกเลมรังนก,54,False,False,earth,neutral,brute,heavy,normal,200,42112,105,157,51.2,6,97,69,74,56,eyrie,1,4
+gate_gear,Sluice Gear,เฟืองประตูน้ำ,86,False,False,earth,neutral,brute,heavy,normal,200,91085,172,258,49.6,10.8,155,116,109,82,sluicegate,1,3
+gate_gear_copper,Sluice Gear · Copper Form,เฟืองประตูน้ำ · ร่างทองแดง,86,False,False,earth,neutral,brute,heavy,normal,200,163941,215,323,59.2,10.8,155,116,218,164,sluicegate,1,3
+thorn_tumbler,Rolling Thistle,หญ้าหนามกลิ้ง,50,False,False,wind,wind,brute,flesh,normal,183,17222,102,153,8.4,6.3,95,82,59,44,cliffmill,1,3
+thorn_tumbler_violet,Rolling Thistle · Purple Thorn Form,หญ้าหนามกลิ้ง · ร่างหนามม่วง,50,False,False,wind,wind,brute,flesh,normal,183,30999,128,191,9.8,6.3,95,82,119,89,cliffmill,1,3
+dock_gull,Thieving Gull,นกนางนวลขี้ขโมย,48,False,False,wind,neutral,brute,hide,normal,166,15891,94,141,12,10,96,92,60,45,saltdock,1,3
+dock_gull_storm,Thieving Gull · Storm Form,นกนางนวลขี้ขโมย · ร่างพายุ,48,False,False,wind,neutral,brute,hide,normal,166,28606,117,176,14,10,96,92,119,89,saltdock,1,3
+obsidian_knight,Black Glass Knight,อัศวินแก้วดำ,84,False,False,earth,fire,brute,heavy,normal,200,84382,175,263,60,9,151,108,111,83,obsidian,2,3
+obsidian_knight_ruby,Black Glass Knight · Ruby Form,อัศวินแก้วดำ · ร่างทับทิม,84,False,False,earth,fire,brute,heavy,normal,200,151880,219,330,60,9,151,108,222,167,obsidian,2,3
+saw_beetle,Sawtooth Beetle,ด้วงฟันเลื่อย,86,False,False,earth,neutral,brute,heavy,normal,200,87941,190,285,54.4,9,163,122,105,79,shipyard,1,3
+saw_beetle_gold,Sawtooth Beetle · Brass Form,ด้วงฟันเลื่อย · ร่างทองเหลือง,86,False,False,earth,neutral,brute,heavy,normal,200,158290,237,355,60,9,163,122,210,158,shipyard,1,4
+rose_mantis,Thornrose Grasshopper,ตั๊กแตนกุหลาบหนาม,22,False,False,earth,neutral,brute,hide,normal,37,3123,41,61,9,4,42,31,32,24,thornrose,1,4
+rose_mantis_violet,Thornrose Grasshopper · Purple Rose Form,ตั๊กแตนกุหลาบหนาม · ร่างกุหลาบม่วง,22,False,False,earth,neutral,brute,hide,normal,37,5620,51,77,11,4,42,31,65,49,thornrose,1,3
+sand_shark,Sand Shark,ฉลามทราย,80,False,False,earth,neutral,brute,hide,normal,200,58515,180,271,29,12,160,136,98,74,raiderfort,1,3
+sand_shark_teal,Sand Shark · Blue Hide Form,ฉลามทราย · ร่างหนังฟ้า,80,False,False,earth,neutral,brute,hide,normal,200,105326,226,339,35,12,160,136,197,148,raiderfort,1,3
+black_ewe,Black Ewe,แม่แกะดำ,18,False,False,shadow,neutral,brute,hide,normal,30,2845,29,44,6,5,34,24,31,23,pens,1,3
+black_ewe_frost,Black Ewe · Ice Eye Form,แม่แกะดำ · ร่างตาน้ำแข็ง,18,False,False,shadow,neutral,brute,hide,normal,30,5114,36,55,8,5,34,24,62,47,pens,1,3
+storm_chick,Thunder Eaglet,ลูกอินทรีฟ้าผ่า,54,False,False,wind,wind,brute,hide,normal,200,22675,110,165,13,10,103,88,63,47,eyrie,1,3
+storm_chick_gold,Thunder Eaglet · Gold Form,ลูกอินทรีฟ้าผ่า · ร่างทอง,54,False,False,wind,wind,brute,hide,normal,200,40812,137,206,16,10,103,88,127,95,eyrie,1,4
+lantern_jelly,Lantern Jellyfish,แมงกะพรุนตะเกียง,88,False,False,water,water,brute,spirit,normal,200,43502,187,279,12.6,32.4,176,168,103,77,floatvillage|shipwreck,1,4
+lantern_jelly_rose,Lantern Jellyfish · Rose Pink Form,แมงกะพรุนตะเกียง · ร่างชมพูกุหลาบ,88,False,False,water,water,brute,spirit,normal,200,78309,234,349,15,32.4,176,168,207,155,floatvillage,1,3
+keeper_ghost,Lighthouse Keeper Ghost,ผีคนเฝ้าประภาคาร,92,False,False,ghost,water,brute,spirit,normal,200,56561,133,199,15.6,60,175,131,121,91,lighthouse,1,4
+echo_bell,Silent Bell,กระดิ่งเงียบ,96,False,False,ghost,wind,brute,spirit,normal,200,64434,204,306,16.2,41.4,202,150,117,88,shadowpath,1,3
+bucket_sprite,Moon Spring Bucket Sprite,ภูตถังน้ำบ่อจันทร์,40,False,False,water,ghost,brute,spirit,normal,110,8048,53,79,6.6,28.8,76,57,57,43,moonwell,1,3
+bucket_sprite_pink,Moon Spring Bucket Sprite · Pink Mist Form,ภูตถังน้ำบ่อจันทร์ · ร่างหมอกชมพู,40,False,False,water,ghost,brute,spirit,normal,110,14487,66,99,7.8,28.8,76,57,114,86,moonwell,1,3
+cage_canary,Caged Ghost Canary,นกขมิ้นผีในกรง,72,False,False,ghost,wind,brute,spirit,normal,200,41953,138,206,12,30.6,151,112,89,67,minerscamp,1,3
+cage_canary_blue,Caged Ghost Canary · Blue Fur Form,นกขมิ้นผีในกรง · ร่างขนฟ้า,72,False,False,ghost,wind,brute,spirit,normal,200,75511,172,259,14.4,30.6,151,112,178,134,minerscamp,1,3
+chime_spirit,Wind Chime Sprite,ภูตกระดิ่งลม,54,False,False,wind,wind,brute,spirit,normal,200,29155,70,105,9,37.8,103,77,74,56,ropebridge,1,4
+serpent_figurehead,Sea Serpent Figurehead,หัวเรืองูทะเล,88,False,False,earth,water,brute,heavy,normal,200,54378,205,306,51.2,7.8,176,150,107,80,shipwreck,1,3
+veiled_statue,Veiled Statue,รูปปั้นผ้าคลุมหน้า,99,False,False,ghost,ghost,brute,spirit,normal,200,70785,150,226,16.8,60,188,141,129,97,whitestatues,1,4
+sky_ray,Sky Ray,กระเบนฟ้า,54,False,False,wind,wind,brute,hide,normal,200,25916,105,157,13,11,108,103,66,50,chainisles,1,3
+sky_ray_violet,Sky Ray · Thunder Purple Form,กระเบนฟ้า · ร่างม่วงอสนี,54,False,False,wind,wind,brute,hide,normal,200,46649,131,197,16,11,108,103,132,99,chainisles,1,4
+drowned_fisher,Drowned Fisherman,ชาวประมงจมน้ำ,28,False,False,undead,water,brute,flesh,normal,57,3055,44,66,5.6,4.9,59,44,39,29,stiltvillage,1,3
+harness_hound,Cart Hound,หมาลากเกวียน,42,False,False,neutral,neutral,brute,hide,normal,122,11809,87,130,17,8,80,60,55,41,wagonvale,1,3
+harness_hound_ash,Cart Hound · Ash Fur Form,หมาลากเกวียน · ร่างขนเถ้า,42,False,False,neutral,neutral,brute,hide,normal,122,21257,108,162,20,8,80,60,110,83,wagonvale,1,3
+anchor_brute,Anchor-Dragging Giant,ยักษ์ลากสมอ,92,False,False,undead,water,brute,heavy,normal,200,70706,228,341,60,10.2,175,131,155,116,shipgrave,2,3
+falls_serpent,Waterfall Snake,งูน้ำตก,34,False,False,water,water,brute,hide,normal,77,4982,58,86,10,8,71,53,46,35,fallstop,1,3
+falls_serpent_gold,Waterfall Snake · Gold Scale Form,งูน้ำตก · ร่างเกล็ดทอง,34,False,False,water,water,brute,hide,normal,77,8970,72,107,11,8,71,53,92,69,fallstop,1,4
+rattle_viper,Red Rock Rattlesnake,งูหางกระดิ่งหินแดง,78,False,False,poison,poison,brute,hide,normal,200,59469,167,251,31,14,148,111,96,72,goldsluice,1,3
+rattle_viper_blue,Red Rock Rattlesnake · Blue Scale Form,งูหางกระดิ่งหินแดง · ร่างเกล็ดฟ้า,78,False,False,poison,poison,brute,hide,normal,200,107042,209,314,37,14,148,111,192,144,goldsluice,1,4
+spore_puffer,Spore Lung,ปอดสปอร์,46,False,False,poison,poison,brute,flesh,normal,149,10970,94,142,7.7,5.6,87,75,55,41,sporevale,1,3
+spore_puffer_gold,Spore Lung · Gold Spore Form,ปอดสปอร์ · ร่างสปอร์ทอง,46,False,False,poison,poison,brute,flesh,normal,149,19749,118,177,9.1,5.6,87,75,110,83,sporevale,1,4
+vial_imp,Poison Bottle Imp,อิมป์ขวดพิษ,66,False,False,poison,poison,brute,spirit,normal,200,39072,124,185,10.8,28.8,139,103,82,62,poisonvillage,1,3
+vial_imp_gold,Poison Bottle Imp · Gold Form,อิมป์ขวดพิษ · ร่างทอง,66,False,False,poison,poison,brute,spirit,normal,200,70334,155,232,13.2,28.8,139,103,165,124,poisonvillage,1,3
+drain_frog,Drain Frog,กบท่อระบาย,82,False,False,poison,poison,brute,flesh,normal,200,43236,178,268,14,10.5,156,134,93,70,moat,1,3
+stone_marmot,Cliff Marmot,มาร์มอตหินผา,50,False,False,earth,neutral,brute,hide,normal,183,22142,93,139,14,12,105,78,64,48,howlpass,1,3
+stone_marmot_olive,Cliff Marmot · Olive Fur Form,มาร์มอตหินผา · ร่างขนมะกอก,50,False,False,earth,neutral,brute,hide,normal,183,39855,116,174,17,12,105,78,128,96,howlpass,1,3
+straw_shooter,Seed-Shooting Straw Puppet,หุ่นฟางยิงเมล็ด,18,False,False,earth,neutral,brute,hide,normal,30,2329,36,55,5,4,38,28,28,21,cornmaze,1,4
+straw_shooter_ember,Seed-Shooting Straw Puppet · Fire Straw Form,หุ่นฟางยิงเมล็ด · ร่างฟางไฟ,18,False,False,earth,neutral,brute,hide,normal,30,4183,46,68,6,4,38,28,56,42,cornmaze,1,3
+brine_barrel,Walking Brine Barrel,ถังน้ำเกลือเดินได้,48,False,False,water,water,brute,heavy,normal,166,13905,98,147,19.2,5.4,91,78,57,43,saltdock,1,3
+magma_frog,Fire-Spitting Lava Frog,กบลาวาพ่นไฟ,84,False,False,fire,fire,brute,flesh,normal,200,58418,168,251,16.8,14,176,131,103,77,lavalake,1,4
+rivet_bat,Rivet Bat,ค้างคาวหมุดย้ำ,86,False,False,earth,neutral,brute,hide,normal,200,69103,181,272,21,18,172,164,101,76,shipyard,1,4
+pebble_golem,Pebble Golem,โกเลมก้อนกรวด,28,False,False,earth,water,brute,heavy,normal,57,4074,44,66,16,3.6,50,38,41,31,springcave,1,3
+pebble_golem_pink,Pebble Golem · Pink Gravel Form,โกเลมก้อนกรวด · ร่างกรวดชมพู,28,False,False,earth,water,brute,heavy,normal,57,7332,56,82,19.2,3.6,50,38,81,61,springcave,1,3
+rust_crab,Mine Rust Crab,ปูสนิมเหมือง,72,False,False,earth,water,brute,heavy,normal,200,60599,145,217,60,7.8,130,92,96,72,floodedmine,1,3
+rust_crab_brass,Mine Rust Crab · Brass Form,ปูสนิมเหมือง · ร่างทองเหลือง,72,False,False,earth,water,brute,heavy,normal,200,109070,181,271,60,7.8,130,92,192,144,floodedmine,1,4
+moss_lurker,Hanging Moss Ghost,ผีมอสห้อย,62,False,False,earth,poison,brute,flesh,normal,200,44265,126,190,17.5,7.7,118,88,78,59,mangrove,1,4
+smoke_wraith,Blacksmoke Spirit,วิญญาณควันดำ,84,False,False,ghost,fire,brute,spirit,normal,200,51927,175,263,12,32.4,168,160,99,74,smokevent,1,4
+smoke_wraith_white,Blacksmoke Spirit · White Smoke Form,วิญญาณควันดำ · ร่างควันขาว,84,False,False,ghost,fire,brute,spirit,normal,200,93463,219,330,14.4,32.4,168,160,198,149,smokevent,1,4
+grass_lurker,Ambush Grass Worm,หนอนหญ้าซุ่ม,22,False,False,earth,neutral,brute,flesh,normal,37,3123,41,61,6.3,2.8,42,34,34,26,tallgrass,1,4
+gatherer_ghoul,Poison Gatherer Ghost,ผีคนเก็บพิษ,66,False,False,undead,poison,brute,flesh,normal,200,65119,148,223,20.3,8.4,125,94,114,86,poisonvillage,1,4
+mud_pike,Mud Pike,ปลาไพค์โคลน,24,False,False,water,water,brute,hide,normal,43,3039,43,64,10,4,46,37,36,27,eelhut,1,3
+mud_pike_violet,Mud Pike · Purple Scale Form,ปลาไพค์โคลน · ร่างเกล็ดม่วง,24,False,False,water,water,brute,hide,normal,43,5468,54,80,12,4,46,37,72,54,eelhut,1,3
+antlion,Giant Antlion,แมลงช้างยักษ์,80,False,False,earth,neutral,brute,hide,normal,200,64365,173,259,32,14,152,125,102,77,antlionpits,1,4
+antlion_blue,Giant Antlion · Indigo Shell Form,แมลงช้างยักษ์ · ร่างเปลือกคราม,80,False,False,earth,neutral,brute,hide,normal,200,115858,216,324,38,14,152,125,204,153,antlionpits,1,3
+grave_moth,Grave Moth,ผีเสื้อหลุมศพ,38,False,False,ghost,poison,brute,spirit,normal,98,6180,72,109,5.4,14.4,76,73,49,37,weepgarden,1,3
+leather_wolf,Stitched-Hide Wolf,หมาป่าหนังเย็บ,82,False,False,neutral,neutral,brute,hide,normal,200,92649,195,292,36,12,164,139,139,104,tannery,1,4
+willow_hand,Willow Branch Hand,มือกิ่งหลิว,88,False,False,earth,water,brute,heavy,normal,200,59822,196,292,56,9.6,167,137,112,84,willows,1,3
+rail_spider,Rail Spider,แมงมุมรางเหล็ก,78,False,False,earth,neutral,brute,hide,normal,200,48656,152,228,22,19,164,122,96,72,minecart,1,3
+rail_spider_copper,Rail Spider · Copper Form,แมงมุมรางเหล็ก · ร่างทองแดง,78,False,False,earth,neutral,brute,hide,normal,200,87585,191,285,26,19,164,122,192,144,minecart,1,4
+dock_brute,Hollow Sack Porter,กุลีกลวงแบกกระสอบ,86,False,False,undead,neutral,brute,hide,normal,200,94229,206,310,38,15,163,122,146,110,warehouses,1,3
+wreath_spider,Wreath Spider,แมงมุมพวงหรีด,32,False,False,poison,poison,brute,hide,normal,70,4142,52,78,9,8,67,50,44,33,wreathfield,1,3
+wreath_spider_violet,Wreath Spider · Purple Blossom Form,แมงมุมพวงหรีด · ร่างดอกม่วง,32,False,False,poison,poison,brute,hide,normal,70,7449,65,98,11,8,67,50,87,65,wreathfield,1,4
+cocoon_weaver,Poison Cocoon Weaver,หนอนทอรังพิษ,66,False,False,poison,poison,brute,flesh,normal,200,39072,87,130,12.6,18.2,125,94,89,67,cocoonwood,1,4
+cocoon_weaver_lime,Poison Cocoon Weaver · Fresh Green Silk Form,หนอนทอรังพิษ · ร่างไหมเขียวสด,66,False,False,poison,poison,brute,flesh,normal,200,70334,109,163,15.4,18.2,125,94,177,133,cocoonwood,1,4
+fire_stag,Firehorn Deer,กวางเขาไฟ,45,False,False,fire,fire,brute,hide,normal,140,13779,97,145,16,7,90,77,59,44,stillburning,1,3
+fire_stag_azure,Firehorn Deer · Electric Form,กวางเขาไฟ · ร่างไฟฟ้า,45,False,False,fire,fire,brute,hide,normal,140,24802,121,181,19,7,90,77,117,88,stillburning,1,3
+flame_dryad,Flame Wood Sprite,ภูตไม้เปลวไฟ,45,False,False,fire,fire,brute,spirit,normal,140,12406,59,88,7.8,32.4,86,64,63,47,stillburning,1,3
+signal_crow,Signal Crow,อีกาส่งสัญญาณ,48,False,False,shadow,shadow,brute,hide,normal,166,29793,107,161,21,10,96,92,86,65,watchtower,1,3
+violet_wisp,Violet Light Sprite,ภูตแสงม่วง,96,False,False,ghost,shadow,brute,spirit,normal,200,59064,214,321,13.8,36,192,183,112,84,blackroots|treeedge,1,3
+firefly_knight,Giant Firefly Beetle,ด้วงหิ่งห้อยยักษ์,34,False,False,wind,wind,brute,heavy,normal,77,4429,60,91,12.8,4.2,68,65,44,33,cascades,2,3
+firefly_knight_blue,Giant Firefly Beetle · Blue Glow Form,ด้วงหิ่งห้อยยักษ์ · ร่างแสงฟ้า,34,False,False,wind,wind,brute,heavy,normal,77,7976,75,113,16,4.2,68,65,88,66,cascades,2,3
+bat_king,Bat King,ราชาค้างคาว,22,True,False,shadow,shadow,brute,hide,boss,220,3513510,52,77,8,5,44,37,597,537,batnest,32,2
+mushking,Glowshroom King,ราชาเห็ดเรืองแสง,50,True,False,poison,poison,plant,flesh,boss,1097,6462720,148,223,16.8,8.4,95,61,1975,1778,woods,30,2
+ant_queen,Ant Queen,นางพญามด,50,True,False,earth,earth,insect,heavy,boss,1097,6462720,148,223,51.2,7.2,95,61,2074,1867,antmine3,32,2
+crypt_lord,Grave King,ราชาสุสาน,55,True,False,undead,shadow,undead,spirit,boss,1200,7623264,173,259,15.6,41.4,116,74,2580,2322,crypt2,32,2
+lava_dragon,Lava Dragon,มังกรลาวา,99,True,False,fire,fire,dragon,heavy,boss,1200,18906250,386,580,60,18,198,120,5535,4982,lavavent2,32,2
+sb_ivy,"Ivy, the Fire Thief",ไอวี่ ผู้ขโมยไฟ,20,True,True,shadow,shadow,brute,spirit,boss,180,1845907,56,83,6,12.6,40,31,694,521,battlefield,2,0
+sb_morrow,Doctor Morrow,หมอมอร์โรว์,38,True,True,poison,poison,brute,hide,boss,588,1969338,104,155,18,13,76,59,1166,875,graveyard2,4,0
+sb_raven,"Raven, the Brother in Shadow",ไรเวน พี่ชายในเงา,40,True,True,shadow,shadow,brute,heavy,boss,660,2155106,113,169,30.4,7.8,80,62,1219,914,moonwell,4,0
+sb_halvard,"Lord Halvard, Master of the Salt Gate",ลอร์ดฮัลวาร์ด เจ้าด่านเกลือ,46,True,True,earth,neutral,brute,heavy,boss,891,1927368,129,193,35.2,9,92,72,1376,1032,salt,4,0
+sb_ignis,"Ignis, the Fire Feeder",อิกนิส ผู้ป้อนไฟ,50,True,True,fire,fire,brute,spirit,boss,1097,2423520,139,209,14.4,30.6,100,78,1481,1111,cliffmill,4,0
+sb_vosse,Magister Voss,มาจิสเตอร์วอสส์,58,True,True,wind,wind,brute,spirit,boss,1200,3081125,160,240,16.8,34.2,116,90,1691,1268,owl3,4,0
+sb_gareth,"Gareth, the Broken Oath",กาเรธ คำสาบานที่แตก,68,True,True,holy,neutral,brute,heavy,boss,1200,2357131,193,289,52.8,13.2,136,106,1954,1466,canyon,8,0
+sb_aldric,Captain Aldric,กัปตันอัลดริก,80,True,True,neutral,neutral,brute,heavy,boss,1200,3566091,235,354,60,15.6,160,125,2269,1702,outer,6,0
+sb_gorm,"Gorm, King of Demon Horns",กอร์ม ราชาเขาอสูร,82,True,True,earth,earth,brute,heavy,boss,1200,3721546,244,366,60,16.2,164,128,2321,1741,fernvale,4,0
+sb_candle,Madame Candle,มาดามแคนเดิล,84,True,True,fire,fire,brute,spirit,boss,1200,3867864,251,376,24,50.4,168,131,2374,1781,canal,2,0
+sb_quill,Brother Quill,บราเดอร์ควิลล์,88,True,True,shadow,neutral,brute,spirit,boss,1200,4124095,267,399,25.2,52.2,176,137,2479,1859,ledger2,2,0
+sb_nocturne,Archbishop Nocturne,อาร์ชบิชอปโนคเทิร์น,90,True,True,shadow,shadow,brute,spirit,boss,1200,4236540,274,411,25.8,54,180,140,2531,1898,isle,2,0
+sb_puppet1,Puppet No. 1,หุ่นหมายเลขหนึ่ง,92,True,True,neutral,shadow,brute,heavy,boss,1200,4496704,284,427,60,18,184,144,2584,1938,dark,2,0
+sb_puppet6,Puppet No. 6,หุ่นที่ 6,93,True,True,neutral,neutral,brute,heavy,boss,1200,4629457,290,435,60,18.6,186,145,2610,1958,puppet2,2,0
+sb_severin,Cardinal Severin,คาร์ดินัลเซเวริน,99,True,True,holy,holy,brute,spirit,boss,1200,7089844,323,484,28.8,59.4,198,154,2768,2076,cathedral,3,0
+hundred_string,Hundred-String Puppet,หุ่นร้อยเชือก,99,True,False,neutral,shadow,brute,heavy,boss,1200,79406250,430,644,60,25.2,218,127,31826,23870,bell7,44,2
+sb_lumen3,Old Lumen · The Last Flame,ตาลูเมน · ไฟดวงสุดท้าย,99,True,True,fire,holy,brute,spirit,boss,1200,9925781,323,484,28.8,59.4,198,154,2768,2076,,2,0
+aurelion,"Aurelian, the Fallen Star",ออเรเลียน ดาวที่ตกลงมา,99,True,False,holy,holy,brute,spirit,boss,180,86625,14,22,0.6,1.8,2,1,2451,1838,,46,2
+dragon_mother,Wildwood Dragon Mother,แม่มังกรไพร,98,True,False,earth,wind,brute,hide,boss,1200,17703322,380,571,59,32,206,125,27961,20971,prime2,44,2
+sb_aurel,Saint Aurel,นักบุญออเรล,99,True,True,holy,holy,brute,spirit,boss,1200,14179688,323,484,28.8,59.4,198,154,27214,20411,grave2,35,1
+sb_aurel2,Saint Aurel · The Awakened Star,นักบุญออเรล · ดาวที่ตื่น,99,True,True,holy,holy,brute,spirit,boss,1200,14179688,323,484,28.8,59.4,198,154,27214,20411,,36,1
+sb_puppet2,Puppet No. 2,หุ่นที่ 2,89,True,True,neutral,neutral,brute,heavy,boss,1200,4181887,270,405,60,17.4,178,139,2505,1879,puppet1,2,0
+sb_puppet3,Puppet No. 3,หุ่นที่ 3,90,True,True,neutral,shadow,brute,heavy,boss,1200,4236540,274,411,60,18,180,140,2531,1898,puppet1,2,0
+sb_puppet4,Puppet No. 4,หุ่นที่ 4,91,True,True,neutral,fire,brute,heavy,boss,1200,4365683,279,419,60,18,182,142,2558,1919,puppet2,2,0
+sb_puppet5,Puppet No. 5,หุ่นที่ 5,92,True,True,neutral,neutral,brute,heavy,boss,1200,4496704,284,427,60,18,184,144,2584,1938,puppet2,2,0
+harlock,"Harven, the Midnight Reaper",ฮาร์เวน ผู้เก็บเกี่ยวยามดึก,20,True,False,shadow,neutral,brute,hide,boss,180,3516013,104,155,9,6,40,33,694,521,farm2|cornmaze|pens|threshing,3,1
+selene,"Seline, Archer of the Moon's Shadow",เซลีน นักธนูใต้เงาจันทร์,24,True,False,wind,neutral,brute,hide,boss,260,3130764,109,163,11,7,48,39,799,599,meadow|meadow2|tallgrass|battlefield|appleslope|dandelion|apiary|thornrose,3,1
+merrick,"Merrick, Spear of the Deep Marsh",เมอร์ริก ทวนแห่งบึงลึก,36,True,False,water,water,brute,hide,boss,516,3784184,177,265,16,11,72,59,1114,836,marsh|marsh2|marsh3|stiltvillage|beaverdam|reedmaze|eelhut|logdrive|springcave|cascades|behindfalls|fallstop,2,1
+victor,"Victor, the Gravestone Swordsman",วิกเตอร์ นักดาบหลุมศพ,40,True,False,undead,shadow,brute,heavy,boss,660,5746950,211,316,28.8,7.2,80,65,1219,914,graveyard|graveyard2|weepgarden|coffinhollow|diggervillage|wreathfield|giantbones|keeperhouse,2,1
+silas,"Silas, the Spore Mage",ซิลาส จอมเวทสปอร์,48,True,False,poison,poison,brute,spirit,boss,994,5783616,250,375,12.6,25.2,96,78,1429,1072,woods|woods2|sporevale|fallencap|acorngrove|hunterlodge|moonwell|glowpool,3,1
+nyx,"Nix, the Wisp Keeper",นิกซ์ คนเลี้ยงภูตดวงไฟ,98,True,False,ghost,shadow,brute,spirit,boss,1200,17703322,591,887,25.8,52.2,196,160,2741,2056,dark|blackroots|shadowpath|treeedge,3,1
+bartho,"Bartho, Gunslinger of the Abandoned Mine",บาร์โธ มือปืนเหมืองร้าง,82,True,False,earth,fire,brute,hide,boss,1200,9924122,455,681,36,25,164,134,2321,1741,canyon|canyon2|canyon3|minecart|goldsluice|dustgulch|floodedmine|geodehall|minerscamp|dryoasis|antlionpits|raiderfort,3,1
+drakos,"Dragos, the Lava-Mad Warrior",ดราโกส นักรบคลั่งลาวา,86,True,False,fire,fire,brute,heavy,boss,1200,10664854,482,724,60,15.6,172,140,2426,1820,volcano|obsidian|lavalake|smokevent,2,1
+oswin,"Oswin, the Poison Mixer",ออสวิน ช่างผสมยาพิษ,68,True,False,poison,poison,brute,hide,boss,1200,6285683,360,540,30,20,136,111,1954,1466,swamp|swamp2|mangrove|poisonvillage|bubblepits|cagetrees|pitcherfield|cocoonwood,3,1
+cassian,"Cassian, the Smoldering Knight",แคสเซียน อัศวินถ่านคุ,47,True,False,fire,fire,brute,heavy,boss,943,5457024,245,368,33.6,8.4,94,77,1403,1052,burnt|stumpfield|ashvale|stillburning,3,1
+falk,"Falk, the Whistlewind Hunter",ฟัลค์ นักล่าลมหวีด,56,True,False,wind,wind,brute,hide,boss,1200,7826803,289,434,25,17,112,91,1639,1229,wind|wind2|ropebridge|eyrie|heathmoor|howlpass|cliffmill|chainisles,2,1
+talon,"Talon, Blackroot Dragon Knight",ทาลอน อัศวินมังกรรากดำ,99,True,False,earth,fire,brute,heavy,boss,1200,18906250,601,902,60,18,198,161,2768,2076,prime|prime2|tarpit|fernvale|hotsprings|ammonbeach|pteronest|amberwood,3,1
+lyria,"Liria, the Singer in the Mist",ลิเรีย นักร้องในหมอก,90,True,False,water,wind,brute,spirit,boss,1200,11297440,512,767,24,48.6,180,147,2531,1898,lake|floatvillage|willows|shipwreck,3,1
+orla,"Orla, the Island Fire-Lighter",ออร์ลา ผู้จุดไฟบนเกาะ,94,True,False,fire,fire,brute,spirit,boss,1200,13336692,551,826,24.6,50.4,188,153,2636,1977,isle|reefs|lighthouse|shipgrave,3,1
+rowan,"Rowan, the Guide Who Got Lost",โรวัน คนนำทางที่หลงเอง,44,True,False,wind,neutral,brute,hide,boss,804,5558035,230,345,19,13,88,72,1324,993,road|refugeecamp|woodbridge|wagonvale,2,1
+iris,"Iris, Twin Swords of the Salt Gate",ไอริส ดาบคู่แห่งด่านเกลือ,50,True,False,wind,neutral,brute,hide,boss,1097,6462720,260,390,22,15,100,82,1481,1111,salt|saltflats|saltdock|watchtower,3,1
+inga,"Inga, the Northern Ice Witch",อิงกา แม่มดน้ำแข็งเหนือ,60,True,False,water,water,brute,spirit,boss,1200,7896281,309,464,15.6,32.4,120,98,1744,1308,peak|snowpines|icefall|avalanche,3,1
+elwin,"Elwin, the Northern Wolf Herder",เอลวิน คนเลี้ยงหมาป่าทางเหนือ,74,True,False,earth,neutral,brute,hide,boss,1200,7573335,399,599,33,22,148,121,2111,1583,nroad|silentfarm|roadinn|travelgrave,3,1
+rook,"Rock, the Gate Guard Who Never Changed Shifts",ร็อค ยามประตูที่ไม่เคยเปลี่ยนเวร,84,True,False,earth,neutral,brute,heavy,boss,1200,10314304,468,703,59.2,15,168,137,2374,1781,outer|nightmarket|tannery|moat,3,1
+pip,"Pip, the Shadow Under the Bridge",พิพ เงาใต้สะพาน,88,True,False,shadow,shadow,brute,hide,boss,1200,10997587,497,746,39,26,176,143,2479,1859,canal|sluicegate|warehouses|shipyard,3,1
+casper,"Casper, the Puppeteer",แคสเปอร์ คนเชิดหุ่น,99,True,False,shadow,shadow,brute,spirit,boss,1200,18906250,601,902,26.4,54,198,161,2768,2076,cathedral|whitestatues|clocksquare|rooftops,3,1
+baphomet_root,Baphomet · Root-Possessed Form,บาโฟเม็ด ร่างรากสิง,99,True,False,shadow,shadow,brute,spirit,boss,180,86800,14,21,0.6,0,2,1,520,390,,4,0

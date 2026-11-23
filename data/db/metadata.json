@@ -1,0 +1,242 @@
+{
+  "source": "https://play.nightcamp.app/wiki/index.html",
+  "wiki_version": 2,
+  "season": "SS2 · v0.2",
+  "s2_version": "v0.2 · Season 2 test · 6 Nov 2026",
+  "wiki_built_at": "2026-11-23T08:52:49.305Z",
+  "scraped_at": "2026-11-23T10:59:13.971927+00:00",
+  "counts": {
+    "items": 2130,
+    "sets": 80,
+    "boss_sets": 5,
+    "monsters": 482,
+    "bosses": 52,
+    "maps": 176,
+    "regions": 5,
+    "jobs": 46,
+    "skills": 428,
+    "materials": 1530,
+    "drops_total": 4069,
+    "quests": 97,
+    "runes": 47,
+    "relics": 10,
+    "keystones": 4,
+    "mounts": 6,
+    "wings": 28,
+    "lore_families": 22,
+    "smelt_recipes": 22,
+    "pages": 19,
+    "th_data_entries": 10834,
+    "th_ui_entries": 2024
+  },
+  "db_files": [
+    {
+      "path": "data/db/items.json",
+      "bytes": 1594875
+    },
+    {
+      "path": "data/db/sets.json",
+      "bytes": 68010
+    },
+    {
+      "path": "data/db/boss_sets.json",
+      "bytes": 5589
+    },
+    {
+      "path": "data/db/monsters.json",
+      "bytes": 923300
+    },
+    {
+      "path": "data/db/maps.json",
+      "bytes": 422555
+    },
+    {
+      "path": "data/db/regions.json",
+      "bytes": 749
+    },
+    {
+      "path": "data/db/jobs.json",
+      "bytes": 854033
+    },
+    {
+      "path": "data/db/skills.json",
+      "bytes": 655855
+    },
+    {
+      "path": "data/db/materials.json",
+      "bytes": 1152015
+    },
+    {
+      "path": "data/db/drops.json",
+      "bytes": 1893326
+    },
+    {
+      "path": "data/db/quests.json",
+      "bytes": 66813
+    },
+    {
+      "path": "data/db/runes_relics_keystones.json",
+      "bytes": 214442
+    },
+    {
+      "path": "data/db/monster_skills_lore.json",
+      "bytes": 305194
+    },
+    {
+      "path": "data/db/life_smelt.json",
+      "bytes": 96631
+    },
+    {
+      "path": "data/db/mounts_wings_gacha.json",
+      "bytes": 10930
+    },
+    {
+      "path": "data/db/systems_season2.json",
+      "bytes": 116693
+    }
+  ],
+  "csv_files": [
+    {
+      "path": "data/csv/items.csv",
+      "bytes": 696342,
+      "rows": 2130
+    },
+    {
+      "path": "data/csv/monsters.csv",
+      "bytes": 93557,
+      "rows": 482
+    },
+    {
+      "path": "data/csv/maps.csv",
+      "bytes": 38540,
+      "rows": 176
+    },
+    {
+      "path": "data/csv/jobs.csv",
+      "bytes": 25226,
+      "rows": 46
+    },
+    {
+      "path": "data/csv/skills.csv",
+      "bytes": 229220,
+      "rows": 428
+    },
+    {
+      "path": "data/csv/materials.csv",
+      "bytes": 691207,
+      "rows": 1530
+    },
+    {
+      "path": "data/csv/drops.csv",
+      "bytes": 822088,
+      "rows": 4069
+    },
+    {
+      "path": "data/csv/quests.csv",
+      "bytes": 42018,
+      "rows": 97
+    },
+    {
+      "path": "data/csv/runes.csv",
+      "bytes": 20216,
+      "rows": 47
+    }
+  ],
+  "assets": [
+    {
+      "source": "data/wiki_hats128.webp",
+      "path": "assets/atlas/wiki_hats128.webp",
+      "bytes": 1306404
+    },
+    {
+      "source": "data/wiki_items.webp",
+      "path": "assets/atlas/wiki_items.webp",
+      "bytes": 4457600
+    },
+    {
+      "source": "data/wiki_jobs.webp",
+      "path": "assets/atlas/wiki_jobs.webp",
+      "bytes": 367636
+    },
+    {
+      "source": "data/wiki_mats.webp",
+      "path": "assets/atlas/wiki_mats.webp",
+      "bytes": 2286278
+    },
+    {
+      "source": "data/wiki_mons.webp",
+      "path": "assets/atlas/wiki_mons.webp",
+      "bytes": 2395918
+    },
+    {
+      "source": "data/wiki_skills.webp",
+      "path": "assets/atlas/wiki_skills.webp",
+      "bytes": 638784
+    },
+    {
+      "source": "assets/el/earth.webp",
+      "path": "assets/el/earth.webp",
+      "bytes": 3176
+    },
+    {
+      "source": "assets/el/fire.webp",
+      "path": "assets/el/fire.webp",
+      "bytes": 3100
+    },
+    {
+      "source": "assets/el/ghost.webp",
+      "path": "assets/el/ghost.webp",
+      "bytes": 3112
+    },
+    {
+      "source": "assets/el/holy.webp",
+      "path": "assets/el/holy.webp",
+      "bytes": 3206
+    },
+    {
+      "source": "assets/el/neutral.webp",
+      "path": "assets/el/neutral.webp",
+      "bytes": 2718
+    },
+    {
+      "source": "assets/el/poison.webp",
+      "path": "assets/el/poison.webp",
+      "bytes": 4534
+    },
+    {
+      "source": "assets/el/shadow.webp",
+      "path": "assets/el/shadow.webp",
+      "bytes": 2674
+    },
+    {
+      "source": "assets/el/undead.webp",
+      "path": "assets/el/undead.webp",
+      "bytes": 3018
+    },
+    {
+      "source": "assets/el/water.webp",
+      "path": "assets/el/water.webp",
+      "bytes": 3134
+    },
+    {
+      "source": "assets/el/wind.webp",
+      "path": "assets/el/wind.webp",
+      "bytes": 3160
+    },
+    {
+      "source": "assets/favicon.png",
+      "path": "assets/favicon.png",
+      "bytes": 7374
+    },
+    {
+      "source": "assets/s2/logo.webp",
+      "path": "assets/logo.webp",
+      "bytes": 64824
+    },
+    {
+      "source": "assets/b2/map.webp",
+      "path": "assets/map.webp",
+      "bytes": 268558
+    }
+  ]
+}

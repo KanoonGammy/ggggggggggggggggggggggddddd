@@ -1,0 +1,4716 @@
+{
+  "life": [
+    {
+      "id": "wood",
+      "n": "Woodcutting",
+      "perks": [
+        [
+          5,
+          "Axe cuts get wider"
+        ],
+        [
+          10,
+          "More wood more often"
+        ],
+        [
+          15,
+          "Trees fall faster"
+        ],
+        [
+          20,
+          "Rare bonus items drop more often"
+        ],
+        [
+          25,
+          "Moonwood drops more often"
+        ],
+        [
+          30,
+          "Master: Deep Cut gives extra wood every time"
+        ]
+      ],
+      "guide": [
+        {
+          "mat": "lf_birch",
+          "n": "Birch Wood",
+          "lv": 1,
+          "where": "Moonlit Meadow"
+        },
+        {
+          "mat": "lf_oak",
+          "n": "Oak Wood",
+          "lv": 1,
+          "where": "Firefly Farm · Pumpkin Patch · Glowshroom Forest · Graveyard"
+        },
+        {
+          "mat": "lf_pine",
+          "n": "Pine Wood",
+          "lv": 5,
+          "where": "Glowshroom Forest · Whistling Plains · Shadowmist Lake"
+        },
+        {
+          "mat": "lf_moonwood",
+          "n": "Moonwood",
+          "lv": 12,
+          "where": "Some trees in every field, at night only (glowing blue)"
+        },
+        {
+          "mat": "lf_willow",
+          "n": "Willow Wood",
+          "lv": 9,
+          "where": "Clearbrook Frog Marsh · Venom Bog"
+        },
+        {
+          "mat": "lf_charcoal",
+          "n": "Charcoal",
+          "lv": 13,
+          "where": "Smoldering Burnt Forest · Sleeping Volcano"
+        },
+        {
+          "mat": "lf_acacia",
+          "n": "Acacia Wood",
+          "lv": 17,
+          "where": "Red Rock Cliffs"
+        },
+        {
+          "mat": "lf_silverwood",
+          "n": "Silverwood",
+          "lv": 21,
+          "where": "Northward Trail · Shadowmist Lake"
+        },
+        {
+          "mat": "lf_ancient",
+          "n": "Ancient Wood",
+          "lv": 25,
+          "where": "Primeval Forest"
+        }
+      ],
+      "tools": [
+        "Iron Axe",
+        "Steel Axe",
+        "Moonsilver Axe",
+        "Meteor Axe"
+      ],
+      "mentor": "Uncle Bucktooth the beaver",
+      "upg": [
+        {
+          "lv": 8,
+          "coins": 1000,
+          "mats": {
+            "lf_oak": 12,
+            "lf_iron": 6
+          }
+        },
+        {
+          "lv": 16,
+          "coins": 10000,
+          "mats": {
+            "lf_pine": 15,
+            "lf_moonsilver": 6,
+            "lf_moonwood": 3
+          }
+        },
+        {
+          "lv": 24,
+          "coins": 60000,
+          "mats": {
+            "lf_silverwood": 12,
+            "lf_starore": 4,
+            "lf_moonwood": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "mine",
+      "n": "Mining",
+      "perks": [
+        [
+          5,
+          "Sparks last longer"
+        ],
+        [
+          10,
+          "More ore more often"
+        ],
+        [
+          15,
+          "Tapping is 30% quieter"
+        ],
+        [
+          20,
+          "Gems turn up more often"
+        ],
+        [
+          25,
+          "Starfall Ore drops more often"
+        ],
+        [
+          30,
+          "Master: tapping on the spark makes almost no sound"
+        ]
+      ],
+      "guide": [
+        {
+          "mat": "lf_copper",
+          "n": "Copper Ore",
+          "lv": 1,
+          "where": "Fieldside Quarry F1–3 · Meadowside Bat Cave · Firefly Farm stone yard"
+        },
+        {
+          "mat": "lf_quartz",
+          "n": "Quartz",
+          "lv": 3,
+          "where": "Fieldside Quarry F1–3 · Meadowside Bat Cave"
+        },
+        {
+          "mat": "lf_iron",
+          "n": "Iron Ore",
+          "lv": 6,
+          "where": "Fieldside Quarry F1–3 · Ant Mine B1–B3"
+        },
+        {
+          "mat": "lf_amber",
+          "n": "Amber",
+          "lv": 10,
+          "where": "Deep Silver Shaft B4 · Ant Mine B1–B3 (more common on deep floors)"
+        },
+        {
+          "mat": "lf_silver",
+          "n": "Silver Ore",
+          "lv": 13,
+          "where": "Deep Silver Shaft B4–B5 · Ant Mine B2–B3 · Underground Graveyard"
+        },
+        {
+          "mat": "lf_moonsilver",
+          "n": "Moon Silver",
+          "lv": 16,
+          "where": "Deep Silver Shaft B4–B5 · Underground Graveyard 1–2"
+        },
+        {
+          "mat": "lf_soul",
+          "n": "Spirit Crystal",
+          "lv": 18,
+          "where": "Deep Silver Shaft B4–B5 · Underground Graveyard 1–2"
+        },
+        {
+          "mat": "lf_orange",
+          "n": "Orange Crystal",
+          "lv": 20,
+          "where": "Abandoned Orange Crystal Mine (Red Rock Cliffs)"
+        },
+        {
+          "mat": "lf_obsidian",
+          "n": "Obsidian",
+          "lv": 23,
+          "where": "Meteor Shaft F1–3 · Volcano Crater · Sleeping Volcano"
+        },
+        {
+          "mat": "lf_fireore",
+          "n": "Flame Ore",
+          "lv": 25,
+          "where": "Meteor Shaft F1–7 · Volcano Crater · Sleeping Volcano"
+        },
+        {
+          "mat": "lf_starore",
+          "n": "Starfall Ore",
+          "lv": 28,
+          "where": "Meteor Shaft F1–7 · Dungeons Lv 85+, one vein per floor: Volcano Crater 1–2 · Puppet Workshop 2 · Star Pit 1–2 · Bell Tower 6 (other dungeons are very rare)"
+        },
+        {
+          "mat": "lf_ruby",
+          "n": "Gems (Ruby, Sapphire, Emerald, Topaz, Amethyst)",
+          "lv": 1,
+          "where": "Tap the ore on the spark for a chance of drops"
+        }
+      ],
+      "tools": [
+        "Iron Pickaxe",
+        "Steel Pickaxe",
+        "Moonsilver Pickaxe",
+        "Meteor Pickaxe"
+      ],
+      "mentor": "Firehead the mole",
+      "upg": [
+        {
+          "lv": 8,
+          "coins": 1000,
+          "mats": {
+            "lf_stone": 15,
+            "lf_iron": 10
+          }
+        },
+        {
+          "lv": 16,
+          "coins": 10000,
+          "mats": {
+            "lf_silver": 8,
+            "lf_moonsilver": 6,
+            "lf_willow": 6
+          }
+        },
+        {
+          "lv": 24,
+          "coins": 60000,
+          "mats": {
+            "lf_obsidian": 10,
+            "lf_starore": 4,
+            "lf_silverwood": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "n": "Farming",
+      "perks": [
+        [
+          5,
+          "Vegetables grow 10% faster"
+        ],
+        [
+          10,
+          "More harvests more often"
+        ],
+        [
+          15,
+          "Seeds come back more often"
+        ],
+        [
+          20,
+          "Vegetables grow another 10% faster"
+        ],
+        [
+          25,
+          "Crows won't dare come near"
+        ],
+        [
+          30,
+          "Master: every vegetable plot gets +1 star"
+        ]
+      ],
+      "guide": [
+        {
+          "mat": "lf_carrot",
+          "n": "Carrot",
+          "lv": 1,
+          "where": "Seeds 5 coins at Granny Rabbit · Ready in 4 m"
+        },
+        {
+          "mat": "lf_potato",
+          "n": "Potato",
+          "lv": 3,
+          "where": "Seeds 8 coins at Granny Rabbit · Ready in 25 m"
+        },
+        {
+          "mat": "lf_wheat",
+          "n": "Wheat",
+          "lv": 6,
+          "where": "Seeds 10 coins at Granny Rabbit · Ready in 40 m"
+        },
+        {
+          "mat": "lf_herb",
+          "n": "Healing Herb",
+          "lv": 10,
+          "where": "Seeds 15 coins at Granny Rabbit · ready in 1 h"
+        },
+        {
+          "mat": "lf_pumpkin",
+          "n": "Pumpkin",
+          "lv": 14,
+          "where": "Seeds 25 coins at Granny Rabbit · Ready in 1 h  30 m"
+        },
+        {
+          "mat": "lf_moonflower",
+          "n": "Moonflower",
+          "lv": 20,
+          "where": "Seeds 45 coins at Granny Rabbit · ready in 2 h · Blooms and harvests at night only"
+        },
+        {
+          "mat": "lf_cotton",
+          "n": "Cotton",
+          "lv": 2,
+          "where": "Seeds 6 coins at Granny Rabbit · Ready in 30 m"
+        },
+        {
+          "mat": "lf_flax",
+          "n": "Hemp",
+          "lv": 8,
+          "where": "Seeds 15 coins at Granny Rabbit · Ready in 60 m"
+        }
+      ],
+      "tools": [
+        "Tin Watering Can",
+        "Copper Watering Can",
+        "Moonsilver Watering Can",
+        "Meteor Watering Can"
+      ],
+      "mentor": "Granny Rabbit",
+      "upg": [
+        {
+          "lv": 8,
+          "coins": 800,
+          "mats": {
+            "lf_copper": 8,
+            "lf_stone": 10
+          }
+        },
+        {
+          "lv": 16,
+          "coins": 8000,
+          "mats": {
+            "lf_moonsilver": 5,
+            "lf_moonflower": 5,
+            "lf_willow": 5
+          }
+        },
+        {
+          "lv": 24,
+          "coins": 50000,
+          "mats": {
+            "lf_starore": 3,
+            "lf_silverwood": 6,
+            "lf_pumpkin": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "n": "Fishing",
+      "perks": [
+        [
+          5,
+          "Fish bite faster"
+        ],
+        [
+          10,
+          "Sometimes 2 fish"
+        ],
+        [
+          15,
+          "The sweet spot is wider"
+        ],
+        [
+          20,
+          "Rare fish more often"
+        ],
+        [
+          25,
+          "Guardian Fish bite more often"
+        ],
+        [
+          30,
+          "Master: line doesn't snap easily, fish don't escape easily"
+        ]
+      ],
+      "guide": [
+        {
+          "mat": "fs_minnow",
+          "n": "Silver Minnow",
+          "lv": 1,
+          "where": "Ordinary ponds and marshes · Clearbrook Frog Marsh · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_shrimp",
+          "n": "Clear Shrimp",
+          "lv": 1,
+          "where": "Clearbrook Frog Marsh · Ordinary ponds and marshes · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_perch",
+          "n": "Striped Perch",
+          "lv": 1,
+          "where": "Ordinary ponds and marshes · Shadowmist Lake · Clearbrook Frog Marsh"
+        },
+        {
+          "mat": "fs_goldfish",
+          "n": "Fantail Goldfish",
+          "lv": 2,
+          "where": "Ordinary ponds and marshes"
+        },
+        {
+          "mat": "fs_bluegill",
+          "n": "Bluecheek Fish",
+          "lv": 3,
+          "where": "Ordinary ponds and marshes · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_crab",
+          "n": "River Crab",
+          "lv": 3,
+          "where": "Clearbrook Frog Marsh · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_frogfish",
+          "n": "Tadpole Head Fish",
+          "lv": 4,
+          "where": "Clearbrook Frog Marsh"
+        },
+        {
+          "mat": "fs_carp",
+          "n": "Golden Carp",
+          "lv": 5,
+          "where": "Ordinary ponds and marshes · Clearbrook Frog Marsh · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_catfish",
+          "n": "Longwhisker Catfish",
+          "lv": 6,
+          "where": "Clearbrook Frog Marsh · Ordinary ponds and marshes"
+        },
+        {
+          "mat": "fs_lilyfish",
+          "n": "Lotus Leaf Fish",
+          "lv": 8,
+          "where": "Ordinary ponds and marshes · Clearbrook Frog Marsh"
+        },
+        {
+          "mat": "fs_bone",
+          "n": "Bonefish",
+          "lv": 8,
+          "where": "Graveyard Mound Pond"
+        },
+        {
+          "mat": "fs_eel",
+          "n": "Green-Striped Eel",
+          "lv": 9,
+          "where": "Clearbrook Frog Marsh · Poison Mangrove Swamp"
+        },
+        {
+          "mat": "fs_glowfish",
+          "n": "Glowshroom Fish",
+          "lv": 10,
+          "where": "Marsh in the Glowshroom Forest"
+        },
+        {
+          "mat": "fs_moonkoi",
+          "n": "Moonlight Carp",
+          "lv": 12,
+          "where": "Ordinary ponds and marshes · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_ghost",
+          "n": "Clear Ghost Fish",
+          "lv": 12,
+          "where": "Graveyard Mound Pond"
+        },
+        {
+          "mat": "fs_lantern",
+          "n": "Lanternfish",
+          "lv": 14,
+          "where": "Marsh in the Glowshroom Forest · Shadowmist Lake"
+        },
+        {
+          "mat": "fs_slimefish",
+          "n": "Poison Jelly Fish",
+          "lv": 14,
+          "where": "Poison Mangrove Swamp"
+        },
+        {
+          "mat": "fs_trout",
+          "n": "Rainbow Trout",
+          "lv": 15,
+          "where": "Shadowmist Lake"
+        },
+        {
+          "mat": "fs_puffer",
+          "n": "Poison Pufferfish",
+          "lv": 16,
+          "where": "Poison Mangrove Swamp"
+        },
+        {
+          "mat": "fs_pike",
+          "n": "Silverfang Pike",
+          "lv": 18,
+          "where": "Shadowmist Lake"
+        },
+        {
+          "mat": "fs_meteor",
+          "n": "Starfall Fish",
+          "lv": 18,
+          "where": "Any water"
+        },
+        {
+          "mat": "fs_mistray",
+          "n": "Mist Ray",
+          "lv": 20,
+          "where": "Shadowmist Lake"
+        },
+        {
+          "mat": "fs_ember",
+          "n": "Smoldering Cinder Fish",
+          "lv": 20,
+          "where": "Volcano lava pond (Moonsilver Fishing Rod or better)"
+        },
+        {
+          "mat": "fs_lavafish",
+          "n": "Lava Fish",
+          "lv": 22,
+          "where": "Volcano lava pond (Moonsilver Fishing Rod or better)"
+        },
+        {
+          "mat": "fs_lilyking",
+          "n": "Lotus Marsh Fish King",
+          "lv": 20,
+          "where": "Ordinary ponds and marshes"
+        },
+        {
+          "mat": "fs_lakeshadow",
+          "n": "Shadow Beneath Mist Lake",
+          "lv": 26,
+          "where": "Shadowmist Lake"
+        },
+        {
+          "mat": "fs_magmadragon",
+          "n": "Lava Dragon Fish",
+          "lv": 28,
+          "where": "Volcano lava pond (Moonsilver Fishing Rod or better)"
+        }
+      ],
+      "tools": [
+        "Bamboo Rod",
+        "Willow Rod",
+        "Moonsilver Rod",
+        "Meteor Rod"
+      ],
+      "mentor": "Grandpa Otter",
+      "upg": [
+        {
+          "lv": 8,
+          "coins": 1000,
+          "mats": {
+            "lf_willow": 6,
+            "lf_copper": 6
+          }
+        },
+        {
+          "lv": 16,
+          "coins": 10000,
+          "mats": {
+            "lf_moonsilver": 6,
+            "lf_silverwood": 4,
+            "fs_ghost": 2
+          }
+        },
+        {
+          "lv": 24,
+          "coins": 60000,
+          "mats": {
+            "lf_starore": 4,
+            "lf_moonwood": 6,
+            "fs_lantern": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cook",
+      "n": "Cooking",
+      "perks": [
+        [
+          5,
+          "Sometimes gives 1 extra plate"
+        ],
+        [
+          10,
+          "Food buffs last 10% longer"
+        ],
+        [
+          15,
+          "Use 10% fewer coins"
+        ],
+        [
+          20,
+          "Bonus food more often"
+        ],
+        [
+          25,
+          "Food buffs last 20% longer"
+        ],
+        [
+          30,
+          "Master: food is 20% stronger"
+        ]
+      ],
+      "guide": [
+        {
+          "mat": "fd_carrot_stew",
+          "n": "Carrot Stew",
+          "lv": 1,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_fish_skewer",
+          "n": "Grilled Fish Skewer",
+          "lv": 1,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_herb_soup",
+          "n": "Herb Soup",
+          "lv": 3,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_moon_tea",
+          "n": "Moonflower Tea",
+          "lv": 5,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_pumpkin_pie",
+          "n": "Pumpkin Pie",
+          "lv": 8,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_honey_pancake",
+          "n": "Honey Pancakes",
+          "lv": 15,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_hotpot",
+          "n": "Hearty Hotpot",
+          "lv": 20,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        },
+        {
+          "mat": "fd_fullmoon_stew",
+          "n": "Full Moon Stew",
+          "lv": 25,
+          "where": "Auntie Blackpot Bear · Beside the campfire"
+        }
+      ],
+      "tools": [
+        "Iron Pot",
+        "Copper Pot",
+        "Moonsilver Pot",
+        "Meteor Pot"
+      ],
+      "mentor": "Auntie Blackpot the bear",
+      "upg": [
+        {
+          "lv": 8,
+          "coins": 2000,
+          "mats": {
+            "lf_iron": 10,
+            "lf_copper": 8
+          }
+        },
+        {
+          "lv": 16,
+          "coins": 20000,
+          "mats": {
+            "lf_moonsilver": 8,
+            "lf_silver": 8,
+            "lf_amber": 3
+          }
+        },
+        {
+          "lv": 24,
+          "coins": 120000,
+          "mats": {
+            "lf_starore": 4,
+            "lf_obsidian": 8,
+            "lf_moonwood": 4
+          }
+        }
+      ]
+    }
+  ],
+  "lifeTables": {
+    "crops": [
+      {
+        "id": "carrot",
+        "n": "Carrot",
+        "mat": "lf_carrot",
+        "seed": "sd_carrot",
+        "lv": 1,
+        "mins": 4,
+        "xp": 10,
+        "price": 5
+      },
+      {
+        "id": "potato",
+        "n": "Potato",
+        "mat": "lf_potato",
+        "seed": "sd_potato",
+        "lv": 3,
+        "mins": 25,
+        "xp": 16,
+        "price": 8
+      },
+      {
+        "id": "wheat",
+        "n": "Wheat",
+        "mat": "lf_wheat",
+        "seed": "sd_wheat",
+        "lv": 6,
+        "mins": 40,
+        "xp": 22,
+        "price": 10
+      },
+      {
+        "id": "herb",
+        "n": "Healing Herb",
+        "mat": "lf_herb",
+        "seed": "sd_herb",
+        "lv": 10,
+        "mins": 60,
+        "xp": 30,
+        "price": 15
+      },
+      {
+        "id": "pumpkin",
+        "n": "Pumpkin",
+        "mat": "lf_pumpkin",
+        "seed": "sd_pumpkin",
+        "lv": 14,
+        "mins": 90,
+        "xp": 45,
+        "price": 25
+      },
+      {
+        "id": "moonflower",
+        "n": "Moonflower",
+        "mat": "lf_moonflower",
+        "seed": "sd_moonflower",
+        "lv": 20,
+        "mins": 120,
+        "xp": 70,
+        "price": 45
+      },
+      {
+        "id": "cotton",
+        "n": "Cotton",
+        "mat": "lf_cotton",
+        "seed": "sd_cotton",
+        "lv": 2,
+        "mins": 30,
+        "xp": 14,
+        "price": 6
+      },
+      {
+        "id": "flax",
+        "n": "Hemp",
+        "mat": "lf_flax",
+        "seed": "sd_flax",
+        "lv": 8,
+        "mins": 60,
+        "xp": 26,
+        "price": 15
+      }
+    ],
+    "fish": [
+      {
+        "id": "fs_minnow",
+        "n": "Silver Minnow",
+        "price": 4,
+        "waters": [
+          "pond",
+          "marsh",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 1,
+        "rod": 1,
+        "cm": [
+          5,
+          9
+        ],
+        "fight": 1,
+        "xp": 6
+      },
+      {
+        "id": "fs_shrimp",
+        "n": "Clear Shrimp",
+        "price": 6,
+        "waters": [
+          "marsh",
+          "pond",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 1,
+        "rod": 1,
+        "cm": [
+          3,
+          6
+        ],
+        "fight": 0.8,
+        "xp": 5
+      },
+      {
+        "id": "fs_perch",
+        "n": "Striped Perch",
+        "price": 8,
+        "waters": [
+          "pond",
+          "lake",
+          "marsh"
+        ],
+        "when": 0,
+        "lv": 1,
+        "rod": 1,
+        "cm": [
+          12,
+          24
+        ],
+        "fight": 1.5,
+        "xp": 9
+      },
+      {
+        "id": "fs_goldfish",
+        "n": "Fantail Goldfish",
+        "price": 12,
+        "waters": [
+          "pond"
+        ],
+        "when": 2,
+        "lv": 2,
+        "rod": 1,
+        "cm": [
+          8,
+          15
+        ],
+        "fight": 1,
+        "xp": 10
+      },
+      {
+        "id": "fs_bluegill",
+        "n": "Bluecheek Fish",
+        "price": 10,
+        "waters": [
+          "pond",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 3,
+        "rod": 1,
+        "cm": [
+          10,
+          20
+        ],
+        "fight": 1.5,
+        "xp": 10
+      },
+      {
+        "id": "fs_crab",
+        "n": "River Crab",
+        "price": 16,
+        "waters": [
+          "marsh",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 3,
+        "rod": 1,
+        "cm": [
+          6,
+          14
+        ],
+        "fight": 1.5,
+        "xp": 12
+      },
+      {
+        "id": "fs_frogfish",
+        "n": "Tadpole Head Fish",
+        "price": 20,
+        "waters": [
+          "marsh"
+        ],
+        "when": 0,
+        "lv": 4,
+        "rod": 1,
+        "cm": [
+          15,
+          30
+        ],
+        "fight": 2,
+        "xp": 16
+      },
+      {
+        "id": "fs_carp",
+        "n": "Golden Carp",
+        "price": 18,
+        "waters": [
+          "pond",
+          "marsh",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 5,
+        "rod": 1,
+        "cm": [
+          25,
+          60
+        ],
+        "fight": 2.5,
+        "xp": 16
+      },
+      {
+        "id": "fs_catfish",
+        "n": "Longwhisker Catfish",
+        "price": 22,
+        "waters": [
+          "marsh",
+          "pond"
+        ],
+        "when": 0,
+        "lv": 6,
+        "rod": 1,
+        "cm": [
+          30,
+          70
+        ],
+        "fight": 3,
+        "xp": 20
+      },
+      {
+        "id": "fs_lilyfish",
+        "n": "Lotus Leaf Fish",
+        "price": 26,
+        "waters": [
+          "pond",
+          "marsh"
+        ],
+        "when": 2,
+        "lv": 8,
+        "rod": 1,
+        "cm": [
+          18,
+          35
+        ],
+        "fight": 2,
+        "xp": 22
+      },
+      {
+        "id": "fs_bone",
+        "n": "Bonefish",
+        "price": 30,
+        "waters": [
+          "grave"
+        ],
+        "when": 0,
+        "lv": 8,
+        "rod": 1,
+        "cm": [
+          20,
+          45
+        ],
+        "fight": 2.5,
+        "xp": 24
+      },
+      {
+        "id": "fs_eel",
+        "n": "Green-Striped Eel",
+        "price": 28,
+        "waters": [
+          "marsh",
+          "poison"
+        ],
+        "when": 1,
+        "lv": 9,
+        "rod": 1,
+        "cm": [
+          40,
+          90
+        ],
+        "fight": 3.5,
+        "xp": 26
+      },
+      {
+        "id": "fs_glowfish",
+        "n": "Glowshroom Fish",
+        "price": 34,
+        "waters": [
+          "woods"
+        ],
+        "when": 0,
+        "lv": 10,
+        "rod": 1,
+        "cm": [
+          18,
+          40
+        ],
+        "fight": 2.5,
+        "xp": 28
+      },
+      {
+        "id": "fs_moonkoi",
+        "n": "Moonlight Carp",
+        "price": 70,
+        "waters": [
+          "pond",
+          "lake"
+        ],
+        "when": 1,
+        "lv": 12,
+        "rod": 1,
+        "cm": [
+          40,
+          80
+        ],
+        "fight": 3,
+        "xp": 45
+      },
+      {
+        "id": "fs_ghost",
+        "n": "Clear Ghost Fish",
+        "price": 55,
+        "waters": [
+          "grave"
+        ],
+        "when": 1,
+        "lv": 12,
+        "rod": 1,
+        "cm": [
+          25,
+          50
+        ],
+        "fight": 3,
+        "xp": 38
+      },
+      {
+        "id": "fs_lantern",
+        "n": "Lanternfish",
+        "price": 60,
+        "waters": [
+          "woods",
+          "lake"
+        ],
+        "when": 1,
+        "lv": 14,
+        "rod": 1,
+        "cm": [
+          20,
+          45
+        ],
+        "fight": 3,
+        "xp": 40
+      },
+      {
+        "id": "fs_slimefish",
+        "n": "Poison Jelly Fish",
+        "price": 40,
+        "waters": [
+          "poison"
+        ],
+        "when": 0,
+        "lv": 14,
+        "rod": 1,
+        "cm": [
+          20,
+          40
+        ],
+        "fight": 3,
+        "xp": 34
+      },
+      {
+        "id": "fs_trout",
+        "n": "Rainbow Trout",
+        "price": 45,
+        "waters": [
+          "lake"
+        ],
+        "when": 2,
+        "lv": 15,
+        "rod": 1,
+        "cm": [
+          30,
+          60
+        ],
+        "fight": 3,
+        "xp": 38
+      },
+      {
+        "id": "fs_puffer",
+        "n": "Poison Pufferfish",
+        "price": 48,
+        "waters": [
+          "poison"
+        ],
+        "when": 0,
+        "lv": 16,
+        "rod": 1,
+        "cm": [
+          15,
+          30
+        ],
+        "fight": 3.5,
+        "xp": 40
+      },
+      {
+        "id": "fs_pike",
+        "n": "Silverfang Pike",
+        "price": 65,
+        "waters": [
+          "lake"
+        ],
+        "when": 0,
+        "lv": 18,
+        "rod": 2,
+        "cm": [
+          60,
+          120
+        ],
+        "fight": 4,
+        "xp": 52
+      },
+      {
+        "id": "fs_meteor",
+        "n": "Starfall Fish",
+        "price": 400,
+        "waters": [
+          "pond",
+          "marsh",
+          "woods",
+          "grave",
+          "poison",
+          "lake"
+        ],
+        "when": 1,
+        "lv": 18,
+        "rod": 2,
+        "cm": [
+          40,
+          80
+        ],
+        "fight": 4.5,
+        "xp": 150
+      },
+      {
+        "id": "fs_mistray",
+        "n": "Mist Ray",
+        "price": 90,
+        "waters": [
+          "lake"
+        ],
+        "when": 1,
+        "lv": 20,
+        "rod": 2,
+        "cm": [
+          60,
+          140
+        ],
+        "fight": 4.5,
+        "xp": 70
+      },
+      {
+        "id": "fs_ember",
+        "n": "Smoldering Cinder Fish",
+        "price": 80,
+        "waters": [
+          "lava"
+        ],
+        "when": 0,
+        "lv": 20,
+        "rod": 3,
+        "cm": [
+          12,
+          25
+        ],
+        "fight": 3,
+        "xp": 60
+      },
+      {
+        "id": "fs_lavafish",
+        "n": "Lava Fish",
+        "price": 110,
+        "waters": [
+          "lava"
+        ],
+        "when": 0,
+        "lv": 22,
+        "rod": 3,
+        "cm": [
+          30,
+          70
+        ],
+        "fight": 4,
+        "xp": 80
+      },
+      {
+        "id": "fs_lilyking",
+        "n": "Lotus Marsh Fish King",
+        "price": 1500,
+        "waters": [
+          "pond"
+        ],
+        "when": 0,
+        "lv": 20,
+        "rod": 2,
+        "cm": [
+          120,
+          200
+        ],
+        "fight": 5,
+        "xp": 400
+      },
+      {
+        "id": "fs_lakeshadow",
+        "n": "Shadow Beneath Mist Lake",
+        "price": 2500,
+        "waters": [
+          "lake"
+        ],
+        "when": 1,
+        "lv": 26,
+        "rod": 3,
+        "cm": [
+          200,
+          320
+        ],
+        "fight": 5.5,
+        "xp": 600
+      },
+      {
+        "id": "fs_magmadragon",
+        "n": "Lava Dragon Fish",
+        "price": 3000,
+        "waters": [
+          "lava"
+        ],
+        "when": 0,
+        "lv": 28,
+        "rod": 4,
+        "cm": [
+          150,
+          260
+        ],
+        "fight": 6,
+        "xp": 700
+      },
+      {
+        "id": "fs_boot",
+        "n": "Old Boot",
+        "price": 1,
+        "waters": [
+          "pond",
+          "marsh",
+          "woods",
+          "grave",
+          "poison",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 1,
+        "rod": 1,
+        "cm": [
+          0,
+          0
+        ],
+        "fight": 0.6,
+        "xp": 2
+      },
+      {
+        "id": "fs_weed",
+        "n": "Tangled Seaweed",
+        "price": 1,
+        "waters": [
+          "pond",
+          "marsh",
+          "woods",
+          "grave",
+          "poison",
+          "lake"
+        ],
+        "when": 0,
+        "lv": 1,
+        "rod": 1,
+        "cm": [
+          0,
+          0
+        ],
+        "fight": 0.5,
+        "xp": 2
+      },
+      {
+        "id": "fs_chest",
+        "n": "Sunken Treasure Chest",
+        "price": 0,
+        "waters": [
+          "pond",
+          "marsh",
+          "woods",
+          "grave",
+          "poison",
+          "lake",
+          "lava"
+        ],
+        "when": 0,
+        "lv": 6,
+        "rod": 1,
+        "cm": [
+          0,
+          0
+        ],
+        "fight": 2.5,
+        "xp": 20
+      }
+    ],
+    "ore": [
+      {
+        "id": "copper",
+        "n": "Copper Vein",
+        "mat": "lf_copper",
+        "lv": 1,
+        "tier": 1,
+        "hits": 7,
+        "xp": 14
+      },
+      {
+        "id": "quartz",
+        "n": "Quartz Cluster",
+        "mat": "lf_quartz",
+        "lv": 3,
+        "tier": 1,
+        "hits": 8,
+        "xp": 17
+      },
+      {
+        "id": "iron",
+        "n": "Iron Vein",
+        "mat": "lf_iron",
+        "lv": 6,
+        "tier": 1,
+        "hits": 9,
+        "xp": 24
+      },
+      {
+        "id": "amber",
+        "n": "Amber Vein",
+        "mat": "lf_amber",
+        "lv": 10,
+        "tier": 2,
+        "hits": 10,
+        "xp": 32
+      },
+      {
+        "id": "silver",
+        "n": "Silver Vein",
+        "mat": "lf_silver",
+        "lv": 13,
+        "tier": 2,
+        "hits": 11,
+        "xp": 40
+      },
+      {
+        "id": "moonsilver",
+        "n": "Moonsilver Vein",
+        "mat": "lf_moonsilver",
+        "lv": 16,
+        "tier": 2,
+        "hits": 12,
+        "xp": 50
+      },
+      {
+        "id": "soul",
+        "n": "Soul Crystal",
+        "mat": "lf_soul",
+        "lv": 18,
+        "tier": 3,
+        "hits": 13,
+        "xp": 58
+      },
+      {
+        "id": "orange",
+        "n": "Orange Crystal Vein",
+        "mat": "lf_orange",
+        "lv": 20,
+        "tier": 3,
+        "hits": 13,
+        "xp": 62
+      },
+      {
+        "id": "obsidian",
+        "n": "Obsidian Rock",
+        "mat": "lf_obsidian",
+        "lv": 23,
+        "tier": 3,
+        "hits": 15,
+        "xp": 75
+      },
+      {
+        "id": "fire",
+        "n": "fire",
+        "mat": "lf_fireore",
+        "lv": 25,
+        "tier": 4,
+        "hits": 16,
+        "xp": 85
+      },
+      {
+        "id": "star",
+        "n": "star",
+        "mat": "lf_starore",
+        "lv": 28,
+        "tier": 4,
+        "hits": 20,
+        "xp": 120
+      }
+    ],
+    "wood": [
+      {
+        "id": "birch",
+        "n": "Birch",
+        "mat": "lf_birch",
+        "lv": 1,
+        "tier": 1,
+        "hits": 6,
+        "xp": 12
+      },
+      {
+        "id": "oak",
+        "n": "Oak",
+        "mat": "lf_oak",
+        "lv": 1,
+        "tier": 1,
+        "hits": 7,
+        "xp": 14
+      },
+      {
+        "id": "pine",
+        "n": "Pine",
+        "mat": "lf_pine",
+        "lv": 5,
+        "tier": 1,
+        "hits": 9,
+        "xp": 22
+      },
+      {
+        "id": "willow",
+        "n": "Willow",
+        "mat": "lf_willow",
+        "lv": 9,
+        "tier": 2,
+        "hits": 11,
+        "xp": 32
+      },
+      {
+        "id": "moon",
+        "n": "Moonlight Tree",
+        "mat": "lf_moonwood",
+        "lv": 12,
+        "tier": 2,
+        "hits": 12,
+        "xp": 80
+      },
+      {
+        "id": "charcoal",
+        "n": "Burnt Tree",
+        "mat": "lf_charcoal",
+        "lv": 13,
+        "tier": 2,
+        "hits": 11,
+        "xp": 40
+      },
+      {
+        "id": "acacia",
+        "n": "Acacia",
+        "mat": "lf_acacia",
+        "lv": 17,
+        "tier": 3,
+        "hits": 13,
+        "xp": 55
+      },
+      {
+        "id": "silverwood",
+        "n": "Silver Tree",
+        "mat": "lf_silverwood",
+        "lv": 21,
+        "tier": 3,
+        "hits": 15,
+        "xp": 70
+      },
+      {
+        "id": "ancient",
+        "n": "Ancient Tree",
+        "mat": "lf_ancient",
+        "lv": 25,
+        "tier": 4,
+        "hits": 18,
+        "xp": 95
+      }
+    ],
+    "dishes": [
+      {
+        "id": "fd_carrot_stew",
+        "lv": 1,
+        "pot": 1,
+        "kind": "red",
+        "buff": {
+          "atk": 5,
+          "matk": 5
+        },
+        "mats": {
+          "lf_carrot": 3,
+          "lf_potato": 2,
+          "mat_boar_tusk": 10
+        },
+        "coins": 200,
+        "xp": 12,
+        "n": "Carrot Stew"
+      },
+      {
+        "id": "fd_fish_skewer",
+        "lv": 1,
+        "pot": 1,
+        "kind": "blue",
+        "buff": {
+          "taken": 6
+        },
+        "mats": {
+          "fs_minnow": 2,
+          "fs_perch": 1,
+          "lf_herb": 1
+        },
+        "coins": 200,
+        "xp": 12,
+        "n": "Grilled Fish Skewer"
+      },
+      {
+        "id": "fd_herb_soup",
+        "lv": 3,
+        "pot": 1,
+        "kind": "green",
+        "buff": {
+          "hpReg": 30
+        },
+        "mats": {
+          "lf_herb": 3,
+          "mat_leaf_jelly": 10
+        },
+        "coins": 300,
+        "xp": 18,
+        "n": "Herb Soup"
+      },
+      {
+        "id": "fd_moon_tea",
+        "lv": 5,
+        "pot": 1,
+        "kind": "purple",
+        "buff": {
+          "spReg": 30
+        },
+        "mats": {
+          "lf_moonflower": 1,
+          "lf_herb": 1,
+          "mat_water_jelly": 8
+        },
+        "coins": 400,
+        "xp": 25,
+        "n": "Moonflower Tea"
+      },
+      {
+        "id": "fd_pumpkin_pie",
+        "lv": 8,
+        "pot": 1,
+        "kind": "yellow",
+        "buff": {
+          "spd": 5
+        },
+        "mats": {
+          "lf_pumpkin": 2,
+          "lf_wheat": 2,
+          "lf_nest": 1
+        },
+        "coins": 600,
+        "xp": 35,
+        "n": "Pumpkin Pie"
+      },
+      {
+        "id": "fd_honey_pancake",
+        "lv": 15,
+        "pot": 2,
+        "kind": "orange",
+        "buff": {
+          "atk": 3,
+          "matk": 3,
+          "taken": 4
+        },
+        "mats": {
+          "lf_wheat": 3,
+          "lf_nest": 1,
+          "mat_honeycomb": 6
+        },
+        "coins": 1500,
+        "xp": 60,
+        "n": "Honey Pancakes"
+      },
+      {
+        "id": "fd_hotpot",
+        "lv": 20,
+        "pot": 3,
+        "kind": "red",
+        "buff": {
+          "atk": 8,
+          "matk": 8
+        },
+        "mats": {
+          "fs_catfish": 2,
+          "lf_potato": 3,
+          "lf_carrot": 3,
+          "mat_red_cap": 10
+        },
+        "coins": 4000,
+        "xp": 90,
+        "n": "Hearty Hotpot"
+      },
+      {
+        "id": "fd_fullmoon_stew",
+        "lv": 25,
+        "pot": 4,
+        "kind": "blue",
+        "buff": {
+          "taken": 10,
+          "hpReg": 30
+        },
+        "mats": {
+          "fs_moonkoi": 1,
+          "lf_moonflower": 2,
+          "mat_ancient_sap": 8
+        },
+        "coins": 8000,
+        "xp": 140,
+        "n": "Full Moon Stew"
+      }
+    ]
+  },
+  "cookMins": 30,
+  "smelt": {
+    "goods": {
+      "lc_ingot_iron": {
+        "n": "Iron Ingot",
+        "price": 45,
+        "ref": 45,
+        "d": "3 Iron Ore smelted with Charcoal and Copper Ore. Refines Tier 1 metal gear.",
+        "from": "lf_iron"
+      },
+      "lc_ingot_silver": {
+        "n": "Silver Ingot",
+        "price": 100,
+        "ref": 100,
+        "d": "Silver ore smelted into bars. Refines Tier 2 metal gear.",
+        "from": "lf_silver"
+      },
+      "lc_ingot_moon": {
+        "n": "Moon Silver Ingot",
+        "price": 135,
+        "ref": 135,
+        "d": "Moon Silver smelted into bars, glowing a faint blue. Refines Tier 3 metal gear.",
+        "from": "lf_moonsilver"
+      },
+      "lc_ingot_star": {
+        "n": "Star Ingot",
+        "price": 175,
+        "ref": 175,
+        "d": "Starfall Ore smelted into golden bars. Refines Tier 4 metal gear.",
+        "from": "lf_starore"
+      },
+      "lc_plank_pine": {
+        "n": "Pine Plank",
+        "price": 80,
+        "ref": 80,
+        "d": "Pine Wood sawn into planks and coated with Tree Sap. Refines Tier 1 wooden weapons.",
+        "from": "lf_pine"
+      },
+      "lc_plank_willow": {
+        "n": "Willow Plank",
+        "price": 170,
+        "ref": 170,
+        "d": "Willow Wood sawn into planks and coated with waterproof Tree Sap. Tough and bendy. Refines Tier 2 wooden weapons.",
+        "from": "lf_willow"
+      },
+      "lc_plank_silver": {
+        "n": "Silverwood Plank",
+        "price": 185,
+        "ref": 185,
+        "d": "Silverwood coated with Tree Sap, with a pearly sheen. Refines Tier 3 wooden weapons.",
+        "from": "lf_silverwood"
+      },
+      "lc_plank_ancient": {
+        "n": "Ancient Plank",
+        "price": 235,
+        "ref": 235,
+        "d": "Ancient Wood bonded to Moonwood with Tree Sap. Refines Tier 4 wooden weapons.",
+        "from": "lf_ancient"
+      },
+      "lc_cut_quartz": {
+        "n": "Cut Quartz",
+        "price": 75,
+        "ref": 75,
+        "d": "Quartz cut into facets. Refines Tier 1 orbs, lanterns and accessories.",
+        "from": "lf_quartz"
+      },
+      "lc_cut_amber": {
+        "n": "Cut Amber",
+        "price": 510,
+        "ref": 510,
+        "d": "Amber cut into facets. Refines Tier 2 orbs, lanterns and accessories.",
+        "from": "lf_amber"
+      },
+      "lc_cut_soul": {
+        "n": "Cut Spirit Crystal",
+        "price": 285,
+        "ref": 285,
+        "d": "Spirit Crystal cut into facets. Refines Tier 3 orbs, lanterns and accessories.",
+        "from": "lf_soul"
+      },
+      "lc_cut_obsidian": {
+        "n": "Cut Obsidian",
+        "price": 430,
+        "ref": 430,
+        "d": "Obsidian polished with Flame Ore. Refines Tier 4 orbs, lanterns and accessories.",
+        "from": "lf_obsidian"
+      },
+      "lc_cloth_cotton": {
+        "n": "Cotton Cloth",
+        "price": 60,
+        "ref": 60,
+        "d": "Handwoven cotton, used to refine outfits and hats, tier 1",
+        "from": "lf_wheat"
+      },
+      "lc_cloth_linen": {
+        "n": "Linen Cloth",
+        "price": 150,
+        "ref": 150,
+        "d": "Cloth woven from hemp, used to refine outfits and hats, tier 2",
+        "from": "lf_wheat"
+      },
+      "lc_cloth_moon": {
+        "n": "Moonflower Silk",
+        "price": 345,
+        "ref": 345,
+        "d": "Cloth woven from moonflower fibers, with a blue sheen. Refines Tier 3 outfits and hats.",
+        "from": "lf_moonflower"
+      },
+      "lc_cloth_night": {
+        "n": "Midnight Silk",
+        "price": 845,
+        "ref": 845,
+        "d": "Moonflower silk dyed with Spirit Crystal. Refines Tier 4 outfits and hats.",
+        "from": "lf_moonflower"
+      },
+      "lc_quench_oil": {
+        "n": "Soaked Oil",
+        "price": 50,
+        "ref": 50,
+        "d": "Thick simmered fish oil. Quenches gear when refining +5 and up.",
+        "from": "lf_sap"
+      },
+      "lc_lamp_oil": {
+        "n": "Lamp Oil",
+        "price": 13,
+        "ref": 13,
+        "d": "Clear fish oil for filling lanterns in the deep mine.",
+        "from": "lf_sap"
+      },
+      "lc_polish": {
+        "n": "Polishing Powder",
+        "price": 60,
+        "ref": 60,
+        "d": "Finely ground quartz, used to polish the grade of",
+        "from": "lf_quartz"
+      },
+      "lc_starcore": {
+        "n": "Star Core",
+        "price": 3000,
+        "ref": 3000,
+        "d": "Golden core from the deepest Starfall Ore. Makes Anti-Break Stones.",
+        "from": "lf_starore"
+      }
+    },
+    "recipes": {
+      "lc_ingot_iron": {
+        "out": "lc_ingot_iron",
+        "in": {
+          "lf_iron": 3,
+          "lf_charcoal": 1,
+          "lf_copper": 1
+        },
+        "n": 1,
+        "coins": 5,
+        "skill": "mine",
+        "lv": 6,
+        "xp": 5
+      },
+      "lc_ingot_silver": {
+        "out": "lc_ingot_silver",
+        "in": {
+          "lf_silver": 3,
+          "lf_charcoal": 1
+        },
+        "n": 1,
+        "coins": 10,
+        "skill": "mine",
+        "lv": 13,
+        "xp": 9
+      },
+      "lc_ingot_moon": {
+        "out": "lc_ingot_moon",
+        "in": {
+          "lf_moonsilver": 3,
+          "lf_charcoal": 1,
+          "*mon3": 1
+        },
+        "n": 1,
+        "coins": 14,
+        "skill": "mine",
+        "lv": 16,
+        "xp": 8
+      },
+      "lc_ingot_star": {
+        "out": "lc_ingot_star",
+        "in": {
+          "lf_starore": 3,
+          "lf_charcoal": 1,
+          "*mon4": 1
+        },
+        "n": 1,
+        "coins": 18,
+        "skill": "mine",
+        "lv": 28,
+        "xp": 9
+      },
+      "charcoal_birch": {
+        "out": "lf_charcoal",
+        "in": {
+          "lf_birch": 2
+        },
+        "n": 1,
+        "coins": 0,
+        "skill": "wood",
+        "lv": 1,
+        "xp": 6
+      },
+      "charcoal_oak": {
+        "out": "lf_charcoal",
+        "in": {
+          "lf_oak": 2
+        },
+        "n": 1,
+        "coins": 0,
+        "skill": "wood",
+        "lv": 1,
+        "xp": 6
+      },
+      "lc_plank_pine": {
+        "out": "lc_plank_pine",
+        "in": {
+          "lf_pine": 10,
+          "lf_sap": 3
+        },
+        "n": 1,
+        "coins": 8,
+        "skill": "wood",
+        "lv": 5,
+        "xp": 8
+      },
+      "lc_plank_willow": {
+        "out": "lc_plank_willow",
+        "in": {
+          "lf_willow": 10,
+          "lf_sap": 3
+        },
+        "n": 1,
+        "coins": 17,
+        "skill": "wood",
+        "lv": 9,
+        "xp": 13
+      },
+      "lc_plank_silver": {
+        "out": "lc_plank_silver",
+        "in": {
+          "lf_silverwood": 10,
+          "lf_sap": 3,
+          "*mon3": 2
+        },
+        "n": 1,
+        "coins": 19,
+        "skill": "wood",
+        "lv": 21,
+        "xp": 13
+      },
+      "lc_plank_ancient": {
+        "out": "lc_plank_ancient",
+        "in": {
+          "lf_ancient": 10,
+          "lf_moonwood": 1,
+          "lf_sap": 3,
+          "*mon4": 2
+        },
+        "n": 1,
+        "coins": 24,
+        "skill": "wood",
+        "lv": 25,
+        "xp": 12
+      },
+      "lc_cut_quartz": {
+        "out": "lc_cut_quartz",
+        "in": {
+          "lf_quartz": 3
+        },
+        "n": 1,
+        "coins": 8,
+        "skill": "mine",
+        "lv": 3,
+        "xp": 8
+      },
+      "lc_cut_amber": {
+        "out": "lc_cut_amber",
+        "in": {
+          "lf_amber": 3
+        },
+        "n": 1,
+        "coins": 51,
+        "skill": "mine",
+        "lv": 10,
+        "xp": 38
+      },
+      "lc_cut_soul": {
+        "out": "lc_cut_soul",
+        "in": {
+          "lf_soul": 3,
+          "*mon3": 3
+        },
+        "n": 1,
+        "coins": 29,
+        "skill": "mine",
+        "lv": 18,
+        "xp": 19
+      },
+      "lc_cut_obsidian": {
+        "out": "lc_cut_obsidian",
+        "in": {
+          "lf_obsidian": 3,
+          "lf_fireore": 1,
+          "*mon4": 3
+        },
+        "n": 1,
+        "coins": 43,
+        "skill": "mine",
+        "lv": 23,
+        "xp": 21
+      },
+      "lc_cloth_cotton": {
+        "out": "lc_cloth_cotton",
+        "in": {
+          "lf_cotton": 3
+        },
+        "n": 1,
+        "coins": 6,
+        "skill": "farm",
+        "lv": 2,
+        "xp": 6
+      },
+      "lc_cloth_linen": {
+        "out": "lc_cloth_linen",
+        "in": {
+          "lf_flax": 3
+        },
+        "n": 1,
+        "coins": 15,
+        "skill": "farm",
+        "lv": 8,
+        "xp": 11
+      },
+      "lc_cloth_moon": {
+        "out": "lc_cloth_moon",
+        "in": {
+          "lf_moonflower": 3,
+          "*mon3": 3
+        },
+        "n": 1,
+        "coins": 35,
+        "skill": "farm",
+        "lv": 15,
+        "xp": 22
+      },
+      "lc_cloth_night": {
+        "out": "lc_cloth_night",
+        "in": {
+          "lf_moonflower": 3,
+          "lf_soul": 1,
+          "*mon4": 6
+        },
+        "n": 1,
+        "coins": 85,
+        "skill": "farm",
+        "lv": 22,
+        "xp": 41
+      },
+      "lc_quench_oil": {
+        "out": "lc_quench_oil",
+        "in": {
+          "*fish": 2
+        },
+        "n": 1,
+        "coins": 5,
+        "skill": "fish",
+        "lv": 1,
+        "xp": 12
+      },
+      "lc_lamp_oil": {
+        "out": "lc_lamp_oil",
+        "in": {
+          "*fish": 1
+        },
+        "n": 2,
+        "coins": 3,
+        "skill": "fish",
+        "lv": 1,
+        "xp": 6
+      },
+      "lc_polish": {
+        "out": "lc_polish",
+        "in": {
+          "lf_quartz": 2
+        },
+        "n": 1,
+        "coins": 6,
+        "skill": "mine",
+        "lv": 3,
+        "xp": 10
+      },
+      "mat_safety": {
+        "out": "mat_safety",
+        "in": {
+          "lc_starcore": 1,
+          "lc_ingot_star": 2
+        },
+        "n": 1,
+        "coins": 2000,
+        "skill": "mine",
+        "lv": 28,
+        "xp": 150
+      }
+    },
+    "per": {
+      "metal": {
+        "1": 4,
+        "2": 8,
+        "3": 17,
+        "4": 47
+      },
+      "crystal": {
+        "1": 2,
+        "2": 2,
+        "3": 8,
+        "4": 19
+      },
+      "wood": {
+        "1": 2,
+        "2": 5,
+        "3": 13,
+        "4": 35
+      },
+      "cloth": {
+        "1": 3,
+        "2": 5,
+        "3": 7,
+        "4": 10
+      }
+    },
+    "by": {
+      "metal": [
+        "lc_ingot_iron",
+        "lc_ingot_silver",
+        "lc_ingot_moon",
+        "lc_ingot_star"
+      ],
+      "wood": [
+        "lc_plank_pine",
+        "lc_plank_willow",
+        "lc_plank_silver",
+        "lc_plank_ancient"
+      ],
+      "crystal": [
+        "lc_cut_quartz",
+        "lc_cut_amber",
+        "lc_cut_soul",
+        "lc_cut_obsidian"
+      ],
+      "cloth": [
+        "lc_cloth_cotton",
+        "lc_cloth_linen",
+        "lc_cloth_moon",
+        "lc_cloth_night"
+      ]
+    },
+    "fee": 0.1,
+    "any": {
+      "*fish": "Any fish",
+      "*mon3": "Monster leftover, Lv 51-75",
+      "*mon4": "Monster leftover, Lv 76+"
+    },
+    "anyIds": {
+      "*mon3": [
+        "mat_scorpion_sting",
+        "mat_croc_tooth",
+        "mat_golem_core",
+        "mat_mother_pollen",
+        "mat_slug_slime",
+        "mat_toxic_wart",
+        "mat_cracked_vial",
+        "mat_gatherer_glove",
+        "mat_poison_silk",
+        "mat_sticky_dew",
+        "mat_fire_wing",
+        "mat_acorn_helm",
+        "mat_salamander_scale",
+        "mat_cart_wheel",
+        "mat_crystal_wing",
+        "mat_miner_lamp",
+        "mat_mole_lamp",
+        "mat_orange_core",
+        "mat_cold_stew",
+        "mat_hush_ribbon",
+        "mat_inn_key",
+        "mat_kappa_dish",
+        "mat_milestone_chip",
+        "mat_ploughshare",
+        "mat_worn_compass",
+        "mat_blast_fuse",
+        "mat_rail_rivet",
+        "mat_rock_plate",
+        "mat_viper_rattle",
+        "mat_geode_shard",
+        "mat_ghost_feather",
+        "mat_rust_rivet",
+        "mat_cracked_lens",
+        "mat_heron_plume",
+        "mat_mist_veil",
+        "mat_brass_button",
+        "mat_ladybug_shell",
+        "mat_root_fiber",
+        "mat_spore_pod",
+        "mat_young_bud",
+        "mat_frill_scale",
+        "mat_rock_feather",
+        "mat_sand_orb",
+        "mat_sandstone_slab",
+        "mat_shadow_quill",
+        "mat_venom_bulb",
+        "mat_raptor_claw",
+        "mat_antlion_jaw",
+        "mat_cinder_heart",
+        "mat_drain_slime",
+        "mat_dye_lump",
+        "mat_eel_crust",
+        "mat_iron_scute",
+        "mat_lava_sac",
+        "mat_mirage_glass",
+        "mat_obsidian_flake",
+        "mat_sand_fin",
+        "mat_smoke_essence",
+        "mat_steam_pearl",
+        "mat_stitched_hide",
+        "mat_stolen_button",
+        "mat_vendor_token",
+        "mat_bell_collar",
+        "mat_magma_core",
+        "mat_guard_badge",
+        "mat_carved_fang",
+        "mat_crayfish_claw",
+        "mat_ghost_rope",
+        "mat_jelly_lamp",
+        "mat_raft_shell",
+        "mat_willow_knot",
+        "mat_beetle_horn",
+        "mat_rat_tail",
+        "mat_bent_nail",
+        "mat_rivet_wing",
+        "mat_still_water",
+        "mat_cart_lantern",
+        "mat_lizard_frill",
+        "mat_mantis_blade",
+        "mat_sail_skin",
+        "mat_tar_lump",
+        "mat_woolly_tuft",
+        "mat_black_wick",
+        "mat_ancient_sap",
+        "mat_ptero_crest",
+        "mat_tiny_claw"
+      ],
+      "*mon4": [
+        "mat_imp_fork",
+        "mat_worm_plate",
+        "mat_brass_cog",
+        "mat_sack_rope",
+        "mat_saw_tooth",
+        "mat_lava_belly",
+        "mat_magma_crust",
+        "mat_anchor_chain",
+        "mat_coral_chunk",
+        "mat_fog_fang",
+        "mat_keeper_wick",
+        "mat_kraken_sucker",
+        "mat_urchin_spine",
+        "mat_cracked_jar",
+        "mat_black_root",
+        "mat_herald_knot",
+        "mat_hound_root",
+        "mat_shadow_thread",
+        "mat_silent_clapper",
+        "mat_wisp_ember",
+        "mat_amber_chunk",
+        "mat_ammonite_pearl",
+        "mat_glow_page",
+        "mat_thief_plume",
+        "mat_ink_blade",
+        "mat_clock_hand",
+        "mat_clock_spring",
+        "mat_club_tail",
+        "mat_dragon_eggshell",
+        "mat_drawer_key",
+        "mat_marble_shard",
+        "mat_old_lampwick",
+        "mat_pen_nib",
+        "mat_plesio_flipper",
+        "mat_stone_veil",
+        "mat_sweep_bristle",
+        "mat_vane_arrow"
+      ]
+    }
+  },
+  "orders": {
+    "givers": {
+      "mole": {
+        "n": "Fire-Head Mole",
+        "pic": "assets/life/npc_mole.png",
+        "goods": [
+          [
+            "lc_ingot_iron",
+            "lc_cut_quartz"
+          ],
+          [
+            "lc_ingot_silver",
+            "lc_cut_amber"
+          ],
+          [
+            "lc_ingot_moon",
+            "lc_cut_soul"
+          ],
+          [
+            "lc_ingot_star",
+            "lc_cut_obsidian"
+          ]
+        ]
+      },
+      "beaver": {
+        "n": "Uncle Bucktooth",
+        "pic": "assets/life/npc_beaver.png",
+        "goods": [
+          [
+            "lc_plank_pine"
+          ],
+          [
+            "lc_plank_willow"
+          ],
+          [
+            "lc_plank_silver"
+          ],
+          [
+            "lc_plank_ancient"
+          ]
+        ]
+      },
+      "otter": {
+        "n": "Tanak",
+        "pic": "assets/life/npc_otter.png",
+        "goods": [
+          [
+            "lc_quench_oil",
+            "lc_lamp_oil"
+          ],
+          [
+            "lc_quench_oil",
+            "lc_lamp_oil"
+          ],
+          [
+            "lc_quench_oil",
+            "lc_lamp_oil"
+          ],
+          [
+            "lc_quench_oil",
+            "lc_lamp_oil"
+          ]
+        ]
+      },
+      "rabbit": {
+        "n": "Granny Rabbit",
+        "pic": "assets/life/npc_rabbit.png",
+        "goods": [
+          [
+            "lc_cloth_cotton"
+          ],
+          [
+            "lc_cloth_linen"
+          ],
+          [
+            "lc_cloth_moon"
+          ],
+          [
+            "lc_cloth_night"
+          ]
+        ]
+      }
+    },
+    "cap": {
+      "1": 1500,
+      "2": 3000,
+      "3": 5000,
+      "4": 9000
+    },
+    "pay": 0.6
+  },
+  "mines": {
+    "floors": {
+      "quarry1": {
+        "n": "Fieldside Quarry F1",
+        "lv": "Lv 5–12 · Mining Lv 1+",
+        "parent": "homefarm",
+        "mine": "quarry",
+        "mineLv": 1,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "copper",
+            5,
+            "lf_copper"
+          ],
+          [
+            "quartz",
+            2,
+            "lf_quartz"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            5,
+            9
+          ],
+          "hollow": [
+            8,
+            12
+          ],
+          "chest_wood": [
+            12,
+            12
+          ],
+          "chest_iron": [
+            12,
+            12
+          ],
+          "chest_gold": [
+            12,
+            12
+          ]
+        }
+      },
+      "quarry2": {
+        "n": "Fieldside Quarry F2",
+        "lv": "Lv 12–18 · Mining Lv 3+",
+        "parent": "quarry1",
+        "mine": "quarry",
+        "mineLv": 3,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "copper",
+            3,
+            "lf_copper"
+          ],
+          [
+            "quartz",
+            3,
+            "lf_quartz"
+          ],
+          [
+            "iron",
+            2,
+            "lf_iron"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            12,
+            15
+          ],
+          "hollow": [
+            14,
+            18
+          ],
+          "chest_wood": [
+            18,
+            18
+          ],
+          "chest_iron": [
+            18,
+            18
+          ],
+          "chest_gold": [
+            18,
+            18
+          ]
+        }
+      },
+      "quarry3": {
+        "n": "Fieldside Quarry F3",
+        "lv": "Lv 18–25 · Mining Lv 6+",
+        "parent": "quarry2",
+        "mine": "quarry",
+        "mineLv": 6,
+        "dark": false,
+        "mother": "iron",
+        "ores": [
+          [
+            "iron",
+            4,
+            "lf_iron"
+          ],
+          [
+            "quartz",
+            2,
+            "lf_quartz"
+          ],
+          [
+            "copper",
+            1,
+            "lf_copper"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            18,
+            21
+          ],
+          "hollow": [
+            21,
+            25
+          ],
+          "chest_wood": [
+            25,
+            25
+          ],
+          "chest_iron": [
+            25,
+            25
+          ],
+          "chest_gold": [
+            25,
+            25
+          ]
+        }
+      },
+      "silver1": {
+        "n": "Deep Silver Shaft B4",
+        "lv": "Lv 50–56 · Mining Lv 13+",
+        "parent": "antmine3",
+        "mine": "silver",
+        "mineLv": 13,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "silver",
+            4,
+            "lf_silver"
+          ],
+          [
+            "moonsilver",
+            2,
+            "lf_moonsilver"
+          ],
+          [
+            "amber",
+            1,
+            "lf_amber"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            50,
+            53
+          ],
+          "hollow": [
+            52,
+            56
+          ],
+          "chest_wood": [
+            56,
+            56
+          ],
+          "chest_iron": [
+            56,
+            56
+          ],
+          "chest_gold": [
+            56,
+            56
+          ]
+        }
+      },
+      "silver2": {
+        "n": "Deep Silver Shaft B5",
+        "lv": "Lv 56–62 · Mining Lv 16+ · Dark",
+        "parent": "silver1",
+        "mine": "silver",
+        "mineLv": 16,
+        "dark": true,
+        "mother": "moonsilver",
+        "ores": [
+          [
+            "moonsilver",
+            4,
+            "lf_moonsilver"
+          ],
+          [
+            "soul",
+            2,
+            "lf_soul"
+          ],
+          [
+            "silver",
+            1,
+            "lf_silver"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            56,
+            59
+          ],
+          "hollow": [
+            58,
+            62
+          ],
+          "chest_wood": [
+            62,
+            62
+          ],
+          "chest_iron": [
+            62,
+            62
+          ],
+          "chest_gold": [
+            62,
+            62
+          ]
+        }
+      },
+      "meteor1": {
+        "n": "Meteor Shaft F1",
+        "lv": "Lv 60–66 · Mining Lv 18+",
+        "parent": "volcano",
+        "mine": "meteor",
+        "mineLv": 18,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "obsidian",
+            5,
+            "lf_obsidian"
+          ],
+          [
+            "fire",
+            1,
+            "lf_fireore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            60,
+            63
+          ],
+          "hollow": [
+            62,
+            66
+          ],
+          "chest_wood": [
+            66,
+            66
+          ],
+          "chest_iron": [
+            66,
+            66
+          ],
+          "chest_gold": [
+            66,
+            66
+          ]
+        }
+      },
+      "meteor2": {
+        "n": "Meteor Shaft F2",
+        "lv": "Lv 66–72 · Mining Lv 20+",
+        "parent": "meteor1",
+        "mine": "meteor",
+        "mineLv": 20,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "obsidian",
+            3,
+            "lf_obsidian"
+          ],
+          [
+            "fire",
+            3,
+            "lf_fireore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            66,
+            69
+          ],
+          "hollow": [
+            68,
+            72
+          ],
+          "chest_wood": [
+            72,
+            72
+          ],
+          "chest_iron": [
+            72,
+            72
+          ],
+          "chest_gold": [
+            72,
+            72
+          ]
+        }
+      },
+      "meteor3": {
+        "n": "Meteor Shaft F3",
+        "lv": "Lv 72–78 · Mining Lv 23+",
+        "parent": "meteor2",
+        "mine": "meteor",
+        "mineLv": 23,
+        "dark": false,
+        "mother": null,
+        "ores": [
+          [
+            "fire",
+            4,
+            "lf_fireore"
+          ],
+          [
+            "obsidian",
+            2,
+            "lf_obsidian"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            72,
+            75
+          ],
+          "hollow": [
+            74,
+            78
+          ],
+          "chest_wood": [
+            78,
+            78
+          ],
+          "chest_iron": [
+            78,
+            78
+          ],
+          "chest_gold": [
+            78,
+            78
+          ]
+        }
+      },
+      "meteor4": {
+        "n": "Meteor Shaft F4",
+        "lv": "Lv 78–84 · Mining Lv 25+ · Dark",
+        "parent": "meteor3",
+        "mine": "meteor",
+        "mineLv": 25,
+        "dark": true,
+        "mother": null,
+        "ores": [
+          [
+            "fire",
+            4,
+            "lf_fireore"
+          ],
+          [
+            "star",
+            1,
+            "lf_starore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            78,
+            81
+          ],
+          "hollow": [
+            80,
+            84
+          ],
+          "chest_wood": [
+            84,
+            84
+          ],
+          "chest_iron": [
+            84,
+            84
+          ],
+          "chest_gold": [
+            84,
+            84
+          ]
+        }
+      },
+      "meteor5": {
+        "n": "Meteor Shaft F5",
+        "lv": "Lv 84–90 · Mining Lv 26+ · Dark",
+        "parent": "meteor4",
+        "mine": "meteor",
+        "mineLv": 26,
+        "dark": true,
+        "mother": "star",
+        "ores": [
+          [
+            "fire",
+            3,
+            "lf_fireore"
+          ],
+          [
+            "star",
+            2,
+            "lf_starore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            84,
+            87
+          ],
+          "hollow": [
+            86,
+            90
+          ],
+          "chest_wood": [
+            90,
+            90
+          ],
+          "chest_iron": [
+            90,
+            90
+          ],
+          "chest_gold": [
+            90,
+            90
+          ]
+        }
+      },
+      "meteor6": {
+        "n": "Meteor Shaft F6",
+        "lv": "Lv 90–95 · Mining Lv 27+ · Dark",
+        "parent": "meteor5",
+        "mine": "meteor",
+        "mineLv": 27,
+        "dark": true,
+        "mother": "star",
+        "ores": [
+          [
+            "star",
+            3,
+            "lf_starore"
+          ],
+          [
+            "fire",
+            2,
+            "lf_fireore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            90,
+            93
+          ],
+          "hollow": [
+            92,
+            95
+          ],
+          "chest_wood": [
+            95,
+            95
+          ],
+          "chest_iron": [
+            95,
+            95
+          ],
+          "chest_gold": [
+            95,
+            95
+          ]
+        }
+      },
+      "meteor7": {
+        "n": "Meteor Shaft F7",
+        "lv": "Lv 95–99 · Mining Lv 28+ · Dark",
+        "parent": "meteor6",
+        "mine": "meteor",
+        "mineLv": 28,
+        "dark": true,
+        "mother": "star",
+        "ores": [
+          [
+            "star",
+            4,
+            "lf_starore"
+          ],
+          [
+            "fire",
+            1,
+            "lf_fireore"
+          ]
+        ],
+        "mons": {
+          "slime": [
+            95,
+            97
+          ],
+          "hollow": [
+            96,
+            99
+          ],
+          "chest_wood": [
+            99,
+            99
+          ],
+          "chest_iron": [
+            99,
+            99
+          ],
+          "chest_gold": [
+            99,
+            99
+          ]
+        }
+      }
+    },
+    "ladder": {
+      "quarry": {
+        "copper": "quartz",
+        "quartz": "iron"
+      },
+      "silver": {
+        "iron": "amber",
+        "amber": "silver",
+        "silver": "moonsilver",
+        "moonsilver": "soul"
+      },
+      "meteor": {
+        "obsidian": "fire",
+        "fire": "star"
+      }
+    },
+    "back": {
+      "quarry": 1800,
+      "silver": 2400,
+      "meteor": 3600
+    },
+    "motherEvery": 1800,
+    "oilSecs": 300,
+    "starCore": 0.04,
+    "strike": {
+      "perfect": 1,
+      "miss": 0.8,
+      "auto": 0.5
+    },
+    "autoTree": 0.5,
+    "autoSec": 14400
+  },
+  "farm": {
+    "cotton": {
+      "n": "Cotton",
+      "seed": "sd_cotton",
+      "mat": "lf_cotton",
+      "lv": 2,
+      "mins": 30,
+      "xp": 14,
+      "price": 6,
+      "after": "potato"
+    },
+    "flax": {
+      "n": "Hemp",
+      "seed": "sd_flax",
+      "mat": "lf_flax",
+      "lv": 8,
+      "mins": 60,
+      "xp": 26,
+      "price": 15,
+      "after": "wheat"
+    }
+  },
+  "refineNeeds": {
+    "metal": {
+      "id": "sword",
+      "slot": "weapon",
+      "steps": [
+        [
+          [
+            [
+              "lc_ingot_iron",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              36
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              48
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              72
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              84
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              96
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              108
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_silver",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              48
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              72
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              96
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              144
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              168
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              192
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              216
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              240
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_moon",
+              51
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              102
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              153
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              204
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              255
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              306
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              357
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              408
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              459
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              510
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_star",
+              141
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              282
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              423
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              564
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              705
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              846
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              987
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              1128
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              1269
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              1410
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ]
+      ]
+    },
+    "wood": {
+      "id": "bow",
+      "slot": "weapon",
+      "steps": [
+        [
+          [
+            [
+              "lc_plank_pine",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              18
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              30
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              42
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              48
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              54
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_pine",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_plank_willow",
+              15
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              30
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              45
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              60
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              75
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              90
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              105
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              135
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_willow",
+              150
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_plank_silver",
+              39
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              78
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              117
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              156
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              195
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              234
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              273
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              312
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              351
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_silver",
+              390
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_plank_ancient",
+              105
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              210
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              315
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              420
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              525
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              630
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              735
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              840
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              945
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_plank_ancient",
+              1050
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ]
+      ]
+    },
+    "crystal": {
+      "id": "staff_lantern",
+      "slot": "weapon",
+      "steps": [
+        [
+          [
+            [
+              "lc_cut_quartz",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              18
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              30
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              42
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              48
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              54
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_quartz",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cut_amber",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              18
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              30
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              42
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              48
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              54
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_amber",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cut_soul",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              48
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              72
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              96
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              144
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              168
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              192
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              216
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_soul",
+              240
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cut_obsidian",
+              57
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              114
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              171
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              228
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              285
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              342
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              399
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              456
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              513
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cut_obsidian",
+              570
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ]
+      ]
+    },
+    "cloth": {
+      "id": "top_traveler",
+      "slot": "top",
+      "steps": [
+        [
+          [
+            [
+              "lc_cloth_cotton",
+              9
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              9
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              18
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              18
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              27
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              27
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              45
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_cotton",
+              45
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cloth_linen",
+              15
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              15
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              30
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              30
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              45
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              45
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              75
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_linen",
+              75
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cloth_moon",
+              21
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              21
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              42
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              42
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              63
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              63
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              84
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              84
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              105
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_moon",
+              105
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_cloth_night",
+              30
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              30
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              60
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              60
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              90
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              90
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              150
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_cloth_night",
+              150
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ]
+      ]
+    },
+    "armour": {
+      "id": "top_of_hv_tin",
+      "slot": "top",
+      "steps": [
+        [
+          [
+            [
+              "lc_ingot_iron",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              12
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              36
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              48
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              48
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_iron",
+              60
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_silver",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              24
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              48
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              48
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              72
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              72
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              96
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              96
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_silver",
+              120
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_moon",
+              51
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              51
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              102
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              102
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              153
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              153
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              204
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              204
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              255
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_moon",
+              255
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              "lc_ingot_star",
+              141
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              141
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              282
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              282
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              423
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              423
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              564
+            ],
+            [
+              "lc_quench_oil",
+              3
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              564
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              705
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ],
+          [
+            [
+              "lc_ingot_star",
+              705
+            ],
+            [
+              "lc_quench_oil",
+              6
+            ]
+          ]
+        ]
+      ]
+    }
+  },
+  "lifeXpK": 6
+}

@@ -1,0 +1,5215 @@
+{
+  "version": "v0.2 · Season 2 test · 6 Nov 2026",
+  "season": "SS2 · v0.2",
+  "sys": {
+    "refine": {
+      "safe": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "tab": {
+        "1": {
+          "1": 80,
+          "2": 70,
+          "3": 60,
+          "4": 50,
+          "5": 40,
+          "6": 30,
+          "7": 22,
+          "8": 15,
+          "9": 10,
+          "10": 5
+        },
+        "2": {
+          "1": 75,
+          "2": 65,
+          "3": 55,
+          "4": 45,
+          "5": 35,
+          "6": 25,
+          "7": 18,
+          "8": 12,
+          "9": 8,
+          "10": 4
+        },
+        "3": {
+          "1": 70,
+          "2": 60,
+          "3": 50,
+          "4": 40,
+          "5": 30,
+          "6": 22,
+          "7": 15,
+          "8": 10,
+          "9": 6,
+          "10": 3
+        },
+        "4": {
+          "1": 65,
+          "2": 55,
+          "3": 45,
+          "4": 35,
+          "5": 25,
+          "6": 18,
+          "7": 12,
+          "8": 8,
+          "9": 5,
+          "10": 2
+        }
+      },
+      "ore": {
+        "1": "lf_iron",
+        "2": "lf_silver",
+        "3": "lf_moonsilver",
+        "4": "lf_starore"
+      },
+      "heatK": 1,
+      "heatMax": 1,
+      "max": 95,
+      "brk": {
+        "9": 25,
+        "10": 40
+      },
+      "cost": {
+        "1": [
+          180,
+          546,
+          1044,
+          1654,
+          2364,
+          6329,
+          8100,
+          10029,
+          12109,
+          14332
+        ],
+        "2": [
+          720,
+          2183,
+          4176,
+          6617,
+          9456,
+          25317,
+          32398,
+          40115,
+          48434,
+          57327
+        ],
+        "3": [
+          1600,
+          4850,
+          9279,
+          14703,
+          21012,
+          56259,
+          71996,
+          89144,
+          107631,
+          127394
+        ],
+        "4": [
+          3000,
+          9094,
+          17399,
+          27569,
+          39398,
+          105486,
+          134992,
+          167146,
+          201808,
+          238864
+        ]
+      }
+    },
+    "drill": 6000000,
+    "stone": 30000,
+    "pity": 0,
+    "pots": [
+      {
+        "id": "red",
+        "color": "red",
+        "size": "s",
+        "amt": 60,
+        "price": 5,
+        "icon": "ic_potion",
+        "n": "Red Potion (Small)"
+      },
+      {
+        "id": "red_m",
+        "color": "red",
+        "size": "m",
+        "amt": 220,
+        "price": 16,
+        "icon": "ic_potion_m",
+        "n": "Red Potion (Medium)"
+      },
+      {
+        "id": "red_l",
+        "color": "red",
+        "size": "l",
+        "amt": 900,
+        "price": 38,
+        "icon": "ic_potion_l",
+        "n": "Red Potion (Large)"
+      },
+      {
+        "id": "blue",
+        "color": "blue",
+        "size": "s",
+        "amt": 60,
+        "price": 3,
+        "icon": "ic_sppotion",
+        "n": "Blue Potion (Small)"
+      },
+      {
+        "id": "blue_m",
+        "color": "blue",
+        "size": "m",
+        "amt": 200,
+        "price": 9,
+        "icon": "ic_sppotion_m",
+        "n": "Blue Potion (Medium)"
+      },
+      {
+        "id": "blue_l",
+        "color": "blue",
+        "size": "l",
+        "amt": 390,
+        "price": 22,
+        "icon": "ic_sppotion_l",
+        "n": "Blue Potion (Large)"
+      }
+    ],
+    "brew": {
+      "batch": 10,
+      "recipes": [
+        {
+          "id": "red",
+          "junk": 2,
+          "coins": 25
+        },
+        {
+          "id": "red_m",
+          "junk": 2,
+          "coins": 80
+        },
+        {
+          "id": "red_l",
+          "junk": 2,
+          "coins": 190
+        },
+        {
+          "id": "blue",
+          "junk": 2,
+          "coins": 15
+        },
+        {
+          "id": "blue_m",
+          "junk": 2,
+          "coins": 45
+        },
+        {
+          "id": "blue_l",
+          "junk": 2,
+          "coins": 110
+        },
+        {
+          "id": "th_dare",
+          "junk": 30,
+          "coins": 600
+        },
+        {
+          "id": "th_hush",
+          "junk": 30,
+          "coins": 400
+        },
+        {
+          "id": "ap_swift",
+          "junk": 30,
+          "coins": 500
+        }
+      ]
+    },
+    "craft": [
+      {
+        "t": "sword",
+        "n": "Sword",
+        "list": [
+          {
+            "id": "sw_copper",
+            "n": "Copper Short Sword",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_bat_wing": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "sw_iron",
+            "n": "Steel Knight Sword",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_crow_feather": 48,
+              "mat_sleep_dust": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "sw_moonsteel",
+            "n": "Lunar Iron Sword",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_gust_orb": 90,
+              "mat_goat_horn": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "sw_starmetal",
+            "n": "Starsteel Sword",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_fire_wing": 180,
+              "mat_imp_fork": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "gsword",
+        "n": "Greatsword",
+        "list": [
+          {
+            "id": "gs_training",
+            "n": "Training Wood Greatsword"
+          },
+          {
+            "id": "gs_blackiron",
+            "n": "Black Iron Greatsword",
+            "coins": 6000,
+            "mats": {
+              "mat_boar_tusk": 27,
+              "mat_moss_shell": 13,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "gs_steel",
+            "n": "Steel Greatsword",
+            "coins": 45000,
+            "mats": {
+              "mat_ant_shell": 48,
+              "mat_old_bone": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "gs_lunar",
+            "n": "Lunar Greatsword",
+            "coins": 180000,
+            "mats": {
+              "mat_ghost_flame": 94,
+              "mat_kappa_dish": 56,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "gs_meteor",
+            "n": "Falling Star Greatsword",
+            "coins": 4000000,
+            "mats": {
+              "mat_worm_plate": 150,
+              "mat_beetle_horn": 100,
+              "mat_magma_core": 50,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          },
+          {
+            "id": "gs_midnightsun",
+            "n": "Midnight Sun Greatsword",
+            "coins": 2000000,
+            "mats": {
+              "mat_bat_crown": 1,
+              "mat_queen_tiara": 1,
+              "mat_lord_crown": 1,
+              "mat_dragon_heart": 1,
+              "mat_king_crown": 1
+            }
+          }
+        ]
+      },
+      {
+        "t": "spear",
+        "n": "Spear",
+        "list": [
+          {
+            "id": "sp_tusk",
+            "n": "Boar Tusk Spear",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_bat_wing": 24,
+              "mat_leaf_jelly": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "sp_iron",
+            "n": "Camp Smith Iron Spear",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_cursed_straw": 48,
+              "mat_ant_powder": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "sp_antler",
+            "n": "Forest Antler Spear",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_web": 90,
+              "mat_brass_bell": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "sp_heartwood",
+            "n": "Giant Heartwood Spear",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_salamander_scale": 180,
+              "mat_bell_collar": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "lance",
+        "n": "Long Spear",
+        "list": [
+          {
+            "id": "ln_pinecone",
+            "n": "Pinecone Pike",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_echo_ear": 24,
+              "mat_leaf_jelly": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "ln_pike",
+            "n": "Camp Watch Pike",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_water_jelly": 48,
+              "mat_blue_plume": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "ln_snakefang",
+            "n": "Bog Serpent Fang Pike",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_storm_feather": 90,
+              "mat_snow_fur": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "ln_raptor",
+            "n": "Raptor Leaf Pike",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_miner_lamp": 180,
+              "mat_frill_scale": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "axe",
+        "n": "Axe",
+        "list": [
+          {
+            "id": "ax_tusk",
+            "n": "Boar Tusk Axe",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_honeycomb": 24,
+              "mat_boar_tusk": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "ax_bearded",
+            "n": "Ironbeard Axe",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_frog_lily": 48,
+              "mat_frog_cheek": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "ax_damascus",
+            "n": "Watered Steel Axe",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_black_salt": 90,
+              "mat_snow_fur": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "ax_royal",
+            "n": "Royal War Axe",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_kappa_dish": 180,
+              "mat_shadow_quill": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "gaxe",
+        "n": "Giant Axe",
+        "list": [
+          {
+            "id": "ga_stoneslime",
+            "n": "Stone Slime Great Axe",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_pumpkin_stem": 24,
+              "mat_boar_tusk": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "ga_dane",
+            "n": "Broadleaf Great Axe",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_frog_lily": 48,
+              "mat_jelly_cap": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "ga_bardiche",
+            "n": "Longleaf Great Axe",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_wind_stone": 90,
+              "mat_stone_feather": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "ga_warlord",
+            "n": "Warlord Great Axe",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_ladybug_shell": 180,
+              "mat_raptor_claw": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "hammer",
+        "n": "Giant Hammer",
+        "list": [
+          {
+            "id": "hm_acorn",
+            "n": "Acorn Great Hammer",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "hm_sledge",
+            "n": "Blacksmith Great Hammer",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_pearl_horn": 48,
+              "mat_ant_shell": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "hm_anvil",
+            "n": "Anvil Great Hammer",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_brass_bell": 90,
+              "mat_glow_web": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "hm_titan",
+            "n": "Titan Great Hammer",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_imp_fork": 180,
+              "mat_brass_button": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "mace",
+        "n": "Mace",
+        "list": [
+          {
+            "id": "mc_ladybug",
+            "n": "Ladybug Club",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_pumpkin_stem": 24,
+              "mat_echo_ear": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "mc_flanged",
+            "n": "Iron Fin Club",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_pearl_horn": 48,
+              "mat_old_bone": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "mc_knight",
+            "n": "Knight's Club",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_scorpion_sting": 90,
+              "mat_glow_mane": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "mc_cage",
+            "n": "Ruby Iron Cage Club",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_bell_collar": 180,
+              "mat_crystal_wing": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "dagger",
+        "n": "Twin Daggers",
+        "list": [
+          {
+            "id": "dg_flint",
+            "n": "Firestone Knives",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_leaf_jelly": 24,
+              "mat_carrot_top": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "dg_hunter",
+            "n": "Hunter Knives",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_turtle_moss": 48,
+              "mat_nest_fluff": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "dg_damascus",
+            "n": "Watered Steel Knives",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_snow_fur": 90,
+              "mat_black_salt": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "dg_parry",
+            "n": "Guard's Ward Knives",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_sandstone_slab": 180,
+              "mat_miner_lamp": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "katar",
+        "n": "Katar",
+        "list": [
+          {
+            "id": "kt_scarecrow",
+            "n": "Scarecrow Katar",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_cursed_straw": 24,
+              "mat_boar_tusk": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "kt_steel",
+            "n": "Steel Katar",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_shovel_leg": 48,
+              "mat_rooster_feather": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "kt_piercer",
+            "n": "Armor-Piercing Katar",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_gust_orb": 90,
+              "mat_goat_horn": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "kt_masterwork",
+            "n": "Smith's Masterpiece Katar",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_shadow_quill": 180,
+              "mat_heron_plume": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "bow",
+        "n": "Bow",
+        "list": [
+          {
+            "id": "bw_ashwood",
+            "n": "Ash Longbow",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_pumpkin_stem": 24,
+              "mat_boar_tusk": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "bw_steel",
+            "n": "Steel Longbow",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_ant_wing": 48,
+              "mat_sprout_potato": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "bw_ebony",
+            "n": "Silver-Inlaid Blackwood Bow",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_web": 90,
+              "mat_brass_bell": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "bw_composite",
+            "n": "Triple Composite Bow",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_raptor_claw": 180,
+              "mat_spore_pod": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "xbow",
+        "n": "Crossbow",
+        "list": [
+          {
+            "id": "xb_iron",
+            "n": "Smith's Iron Crossbow",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_echo_ear": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "xb_arbalest",
+            "n": "Soldier Steel Crossbow",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_zombie_patch": 48,
+              "mat_dragonfly_wing": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "xb_hunter",
+            "n": "Silent Hunter Crossbow",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_mane": 90,
+              "mat_scorpion_sting": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "xb_repeater",
+            "n": "Royal Clockwork Crossbow",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_brass_button": 180,
+              "mat_magma_core": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "staff",
+        "n": "Rod",
+        "list": [
+          {
+            "id": "st_tusk",
+            "n": "Boar Tusk Rod",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_bat_wing": 24,
+              "mat_leaf_jelly": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "st_quartz",
+            "n": "Brass Quartz Rod",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_zombie_patch": 48,
+              "mat_crab_claw": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "st_golemfist",
+            "n": "Golem Fist Rod",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_black_salt": 90,
+              "mat_snow_fur": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "st_rootheart",
+            "n": "Wildwood Heart Rod",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_crystal_wing": 180,
+              "mat_sand_orb": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "orb",
+        "n": "Orb",
+        "list": [
+          {
+            "id": "ob_slingshot",
+            "n": "Slingshot Orb",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_leaf_jelly": 24,
+              "mat_carrot_top": 16,
+              "lf_quartz": 5
+            }
+          },
+          {
+            "id": "ob_gimbal",
+            "n": "Brass Ring Orb",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_glow_jelly": 48,
+              "mat_hedge_spine": 32,
+              "lf_amber": 10
+            }
+          },
+          {
+            "id": "ob_geode",
+            "n": "Geode Orb",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_goat_horn": 90,
+              "mat_gust_orb": 60,
+              "lf_soul": 20
+            }
+          },
+          {
+            "id": "ob_magmacore",
+            "n": "Magma Core Orb",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_miner_lamp": 180,
+              "mat_sandstone_slab": 120,
+              "lf_obsidian": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "lantern",
+        "n": "Lantern",
+        "list": [
+          {
+            "id": "lt_snail",
+            "n": "Snail Shell Lantern",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_nest_fluff": 24,
+              "mat_bat_wing": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "lt_hurricane",
+            "n": "Brass Fence Lantern",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_crow_feather": 48,
+              "mat_sleep_dust": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "lt_golemhead",
+            "n": "Golem Head Lantern",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_goat_horn": 90,
+              "mat_acorn_helm": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "lt_beacon",
+            "n": "Lighthouse Lantern",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_heron_plume": 180,
+              "mat_venom_bulb": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "book",
+        "n": "Tome",
+        "list": [
+          {
+            "id": "bk_slate",
+            "n": "Stone Tablet Tome",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "bk_iron",
+            "n": "Iron-Bound Tome",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_cursed_straw": 48,
+              "mat_ant_powder": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "bk_golem",
+            "n": "Golem Brick Tome",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_wind_stone": 90,
+              "mat_gust_orb": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "bk_beetle",
+            "n": "Rhino Beetle Shell Tome",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_spore_pod": 180,
+              "mat_beetle_horn": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "knuckle",
+        "n": "Knuckles",
+        "list": [
+          {
+            "id": "kn_spider",
+            "n": "Spider Leg Knuckles",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "kn_steel",
+            "n": "Steel Knuckles",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_bucket_lid": 48,
+              "mat_moss_shell": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "kn_golem",
+            "n": "Golem Stone Knuckles",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_toad_gland": 90,
+              "mat_glow_web": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "kn_bluesteel",
+            "n": "Gold Indigo Steel Knuckles",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_magma_core": 180,
+              "mat_mist_veil": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "qstaff",
+        "n": "Quarterstaff",
+        "list": [
+          {
+            "id": "qs_birch",
+            "n": "Birch Quarterstaff",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_bat_wing": 24,
+              "mat_leaf_jelly": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "qs_ironbound",
+            "n": "Iron-Banded Quarterstaff",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_water_jelly": 48,
+              "mat_trout_scale": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "qs_ironwood",
+            "n": "Ironwood Quarterstaff",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_gust_orb": 90,
+              "mat_goat_horn": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "qs_treeroot",
+            "n": "Giant Root Quarterstaff",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_sand_orb": 180,
+              "mat_crystal_wing": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "huuma",
+        "n": "Giant Star",
+        "list": [
+          {
+            "id": "hu_samara",
+            "n": "Winged Seed Shuriken",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_bat_wing": 24,
+              "mat_nest_fluff": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "hu_steel",
+            "n": "Camp Smith Iron Shuriken",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_frog_lily": 48,
+              "mat_jelly_cap": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "hu_redstone",
+            "n": "Chiseled Red Stone Shuriken",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_web": 90,
+              "mat_brass_bell": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "hu_beetle",
+            "n": "Rhino Beetle Elytra Shuriken",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_sandstone_slab": 180,
+              "mat_cart_wheel": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "dsword",
+        "n": "Twin Swords",
+        "list": [
+          {
+            "id": "ds_bronze",
+            "n": "Bronze Twin Swords",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_echo_ear": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "ds_saber",
+            "n": "Cavalry Twin Swords",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_dragonfly_wing": 48,
+              "mat_grave_chip": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "ds_duelist",
+            "n": "Duelist Twin Swords",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_mane": 90,
+              "mat_scorpion_sting": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "ds_royal",
+            "n": "Royal Guard Twin Swords",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_venom_bulb": 180,
+              "mat_young_bud": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "bell",
+        "n": "Spirit Bell",
+        "list": [
+          {
+            "id": "bl_stoneslime",
+            "n": "Stone Slime Spirit Bell",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_pumpkin_stem": 24,
+              "mat_boar_tusk": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "bl_brass",
+            "n": "Brass Spirit Bell",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_pearl_horn": 48,
+              "mat_old_bone": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "bl_bronze",
+            "n": "Fern Bronze Spirit Bell",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_black_salt": 90,
+              "mat_snow_fur": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "bl_magma",
+            "n": "Magma Stone Spirit Bell",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_beetle_horn": 180,
+              "mat_spore_pod": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "instrument",
+        "n": "Instrument",
+        "list": [
+          {
+            "id": "in_maple",
+            "n": "Maple Wood Instrument",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_bat_wing": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "in_oak",
+            "n": "Brass Oak Instrument",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_turtle_moss": 48,
+              "mat_nest_fluff": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "in_ebony",
+            "n": "Pearl-Inlaid Blackwood Instrument",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_goat_horn": 90,
+              "mat_gust_orb": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "in_hurdy",
+            "n": "Royal Artisan Hurdy-Gurdy Instrument",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_mist_veil": 180,
+              "mat_worm_plate": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "whip",
+        "n": "Whip",
+        "list": [
+          {
+            "id": "wp_boarhide",
+            "n": "Boarhide Whip",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_nest_fluff": 24,
+              "mat_bat_wing": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "wp_bullwhip",
+            "n": "Eight-Strand Braid Whip",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_shovel_leg": 48,
+              "mat_rooster_feather": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "wp_steelchain",
+            "n": "Steel Chain Whip",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_brass_bell": 90,
+              "mat_glow_web": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "wp_royal",
+            "n": "Gold-Thread Braid Whip",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_orange_core": 180,
+              "mat_cart_lantern": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "pistol",
+        "n": "Twin Pistols",
+        "list": [
+          {
+            "id": "ps_tusk",
+            "n": "Boar Tusk Twin Pistols",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_pumpkin_stem": 24,
+              "mat_rooster_feather": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "ps_pepperbox",
+            "n": "Six-Barrel Twin Pistols",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_jelly_cap": 48,
+              "mat_crab_claw": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "ps_duelist",
+            "n": "Steel Duel Twin Pistols",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_scorpion_sting": 90,
+              "mat_glow_mane": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "ps_magma",
+            "n": "Lava Golem Twin Pistols",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_cart_wheel": 180,
+              "mat_frill_scale": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "shotgun",
+        "n": "Shotgun",
+        "list": [
+          {
+            "id": "sg_honey",
+            "n": "Honey Jar Shotgun",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_leaf_jelly": 24,
+              "mat_boar_tusk": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "sg_double",
+            "n": "Double-Barrel Shotgun",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_grave_chip": 48,
+              "mat_hedge_spine": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "sg_golem",
+            "n": "Red Stone Golem Shotgun",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_snow_fur": 90,
+              "mat_black_salt": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "sg_lavaworm",
+            "n": "Lava Worm Shotgun",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_heron_plume": 180,
+              "mat_venom_bulb": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "scythe",
+        "n": "Great Scythe",
+        "list": [
+          {
+            "id": "sc_boar",
+            "n": "Boar Tusk Great Scythe",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "sc_iron",
+            "n": "Hand-Forged Iron Great Scythe",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_zombie_patch": 48,
+              "mat_crab_claw": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "sc_golem",
+            "n": "Golem Stone Great Scythe",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_spark_tuft": 90,
+              "mat_puff_spore": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "sc_beetle",
+            "n": "Rhino Beetle Horn Great Scythe",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_root_fiber": 180,
+              "mat_fire_wing": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "sickle",
+        "n": "Twin Scythes",
+        "list": [
+          {
+            "id": "sk_maple",
+            "n": "Maple Seed Twin Scythes",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_bat_wing": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "sk_steel",
+            "n": "War Iron Twin Scythes",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_glow_jelly": 48,
+              "mat_hedge_spine": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "sk_hawkbill",
+            "n": "Hawk Beak Twin Scythes",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_web": 90,
+              "mat_brass_bell": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "sk_master",
+            "n": "Masterpiece Twin Scythes",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_worm_plate": 180,
+              "mat_salamander_scale": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "puppet",
+        "n": "Puppet Control Bar",
+        "list": [
+          {
+            "id": "pp_crab",
+            "n": "Big-Claw Crab Puppet Stick",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_echo_ear": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "pp_tent",
+            "n": "Tent Puppet Stick",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_corn_cob": 48,
+              "mat_moss_shell": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "pp_golem",
+            "n": "Golem Chain Puppet Stick",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_golem_core": 90,
+              "mat_black_salt": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "pp_magma",
+            "n": "Lava Rock Puppet Stick",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_cart_lantern": 180,
+              "mat_mole_lamp": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "wire",
+        "n": "Iron Thread",
+        "list": [
+          {
+            "id": "wr_pebble",
+            "n": "Rolling Stone Steel Thread",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_leaf_jelly": 24,
+              "mat_echo_ear": 16,
+              "lf_iron": 5
+            }
+          },
+          {
+            "id": "wr_anchor",
+            "n": "Ship Anchor Steel Thread",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_sun_petal": 48,
+              "mat_trout_scale": 32,
+              "lf_silver": 10
+            }
+          },
+          {
+            "id": "wr_golem",
+            "n": "Golem Fist Steel Thread",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_black_salt": 90,
+              "mat_snow_fur": 60,
+              "lf_moonsilver": 20
+            }
+          },
+          {
+            "id": "wr_lavaworm",
+            "n": "Lava Worm Steel Thread",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_frill_scale": 180,
+              "mat_kappa_dish": 120,
+              "lf_fireore": 30,
+              "lf_starore": 3
+            }
+          }
+        ]
+      },
+      {
+        "t": "torch",
+        "n": "Torch",
+        "list": [
+          {
+            "id": "tc_pinecone",
+            "n": "Pinecone Torch",
+            "g": 1,
+            "coins": 20000,
+            "mats": {
+              "mat_boar_tusk": 24,
+              "mat_pumpkin_stem": 16,
+              "lf_pine": 5
+            }
+          },
+          {
+            "id": "tc_iron",
+            "n": "Wrought Iron Torch",
+            "g": 2,
+            "coins": 150000,
+            "mats": {
+              "mat_bucket_lid": 48,
+              "mat_moss_shell": 32,
+              "lf_willow": 10
+            }
+          },
+          {
+            "id": "tc_golem",
+            "n": "Golem Stone Torch",
+            "g": 3,
+            "coins": 600000,
+            "mats": {
+              "mat_glow_web": 90,
+              "mat_toad_gland": 60,
+              "lf_silverwood": 20
+            }
+          },
+          {
+            "id": "tc_magma",
+            "n": "Lava Rock Torch",
+            "g": 4,
+            "coins": 2000000,
+            "mats": {
+              "mat_rock_feather": 180,
+              "mat_ladybug_shell": 120,
+              "lf_ancient": 30,
+              "lf_moonwood": 3
+            }
+          }
+        ]
+      }
+    ],
+    "econ": {
+      "full": 400,
+      "floor": 0.4,
+      "span": 5000,
+      "week": 1.5,
+      "tax": 0.05,
+      "stall": 0.15,
+      "warp": [
+        200,
+        30
+      ]
+    },
+    "party": {
+      "max": 5,
+      "gap": 20,
+      "bonus": 0.2,
+      "support": 0.3
+    },
+    "opts": {
+      "atk": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "crit": {
+        "tiers": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "aspd": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "leech": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 10,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "spKill": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0.5,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "stat": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "on": "WDHA",
+        "g": "atk",
+        "cap": 10,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "str",
+          "agi",
+          "vit",
+          "int",
+          "dex",
+          "luk"
+        ]
+      },
+      "race": {
+        "tiers": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "plant",
+          "brute",
+          "insect",
+          "undead",
+          "spirit",
+          "formless",
+          "dragon"
+        ]
+      },
+      "el": {
+        "tiers": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "water",
+          "earth",
+          "fire",
+          "wind",
+          "poison",
+          "shadow",
+          "ghost",
+          "undead"
+        ]
+      },
+      "acd": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "WA",
+        "g": "skill",
+        "cap": 50,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "pen": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 50,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "mpen": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 50,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "critDmg": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 100,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "boss": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "matk": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "hit": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "elDmg": {
+        "tiers": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "water",
+          "earth",
+          "fire",
+          "wind",
+          "poison",
+          "holy",
+          "shadow",
+          "ghost",
+          "undead"
+        ]
+      },
+      "inflict": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "burn",
+          "chill",
+          "shock",
+          "crack",
+          "curse",
+          "poison",
+          "bleed"
+        ]
+      },
+      "spLeech": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "on": "W",
+        "g": "atk",
+        "cap": 0.01,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "cast": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "WA",
+        "g": "skill",
+        "cap": 30,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "cdr": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "on": "WA",
+        "g": "skill",
+        "cap": 60,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "spCost": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "WA",
+        "g": "skill",
+        "cap": 70,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "skill": {
+        "tiers": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "on": "W",
+        "g": "skill",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "resEl": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "DHA",
+        "g": "def",
+        "cap": 50,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "water",
+          "earth",
+          "fire",
+          "wind",
+          "poison",
+          "shadow",
+          "ghost",
+          "undead"
+        ]
+      },
+      "resSt": {
+        "tiers": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "on": "DHA",
+        "g": "def",
+        "cap": 80,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "stun",
+          "freeze",
+          "sleep",
+          "poison",
+          "bleed",
+          "burn",
+          "silence",
+          "blind",
+          "slow"
+        ]
+      },
+      "resRace": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 40,
+        "special": false,
+        "fixed": false,
+        "subs": [
+          "plant",
+          "brute",
+          "insect",
+          "undead",
+          "spirit",
+          "formless",
+          "dragon"
+        ]
+      },
+      "resBoss": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 30,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "resMelee": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "D",
+        "g": "def",
+        "cap": 40,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "resRange": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 40,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "hpPct": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "on": "DHA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "spPct": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "on": "DHA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "hpReg": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "spReg": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "heal": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "flee": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "DHA",
+        "g": "def",
+        "cap": 50,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "pdodge": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "on": "HA",
+        "g": "def",
+        "cap": 10,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "spd": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "threatUp": {
+        "tiers": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            13,
+            15
+          ]
+        ],
+        "on": "WD",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "threatDown": {
+        "tiers": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            13,
+            15
+          ]
+        ],
+        "on": "WA",
+        "g": "def",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "immune": {
+        "tiers": [
+          [
+            50,
+            50
+          ],
+          [
+            50,
+            50
+          ],
+          [
+            50,
+            50
+          ]
+        ],
+        "on": "DHA",
+        "g": "special",
+        "cap": 0,
+        "special": true,
+        "fixed": true,
+        "subs": [
+          "stun",
+          "freeze",
+          "sleep",
+          "poison",
+          "bleed",
+          "burn",
+          "silence",
+          "blind",
+          "slow"
+        ]
+      },
+      "proc": {
+        "tiers": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "on": "W",
+        "g": "special",
+        "cap": 0,
+        "special": true,
+        "fixed": false,
+        "subs": [
+          "windline",
+          "lightning",
+          "spores",
+          "bats",
+          "icespikes",
+          "firepillar",
+          "fireballs",
+          "crescent"
+        ]
+      },
+      "aspdAcc": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "on": "A",
+        "g": "atk",
+        "cap": 0,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      }
+    },
+    "hs": {
+      "stun": {
+        "dur": 1.6,
+        "hard": true,
+        "by": "vit",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": ""
+      },
+      "freeze": {
+        "dur": 2.4,
+        "hard": true,
+        "by": "mdef",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": ""
+      },
+      "sleep": {
+        "dur": 3.5,
+        "hard": true,
+        "by": "int",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": true,
+        "cure": ""
+      },
+      "poison": {
+        "dur": 8,
+        "hard": false,
+        "by": "vit",
+        "dot": 0.012,
+        "noHp": true,
+        "noSp": false,
+        "wake": false,
+        "cure": "g"
+      },
+      "bleed": {
+        "dur": 8,
+        "hard": false,
+        "by": "vit",
+        "dot": 0.016,
+        "noHp": true,
+        "noSp": true,
+        "wake": false,
+        "cure": "g"
+      },
+      "burn": {
+        "dur": 5,
+        "hard": false,
+        "by": "mdef",
+        "dot": 0.025,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": "g"
+      },
+      "silence": {
+        "dur": 5,
+        "hard": false,
+        "by": "int",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": ""
+      },
+      "blind": {
+        "dur": 6,
+        "hard": false,
+        "by": "int",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": ""
+      },
+      "slow": {
+        "dur": 5,
+        "hard": false,
+        "by": "agi",
+        "dot": 0,
+        "noHp": false,
+        "noSp": false,
+        "wake": false,
+        "cure": ""
+      }
+    },
+    "cures": {
+      "g": {
+        "id": "hs_cure_g",
+        "price": 60,
+        "ids": [
+          "poison",
+          "bleed",
+          "burn"
+        ]
+      },
+      "p": {
+        "id": "hs_cure_p",
+        "price": 300,
+        "ids": [
+          "poison",
+          "bleed",
+          "burn",
+          "silence",
+          "blind",
+          "slow"
+        ]
+      }
+    },
+    "en2": {
+      "opt": {
+        "threatUp": [
+          "Threat on hit +",
+          "%"
+        ],
+        "threatDown": [
+          "Threat −",
+          "%"
+        ],
+        "atk": [
+          "ATK",
+          "%"
+        ],
+        "crit": [
+          "Critical",
+          "%"
+        ],
+        "aspd": [
+          "Attack speed",
+          "%"
+        ],
+        "aspdAcc": [
+          "Attack speed (accessory)",
+          "%"
+        ],
+        "leech": [
+          "Life steal",
+          "%"
+        ],
+        "spKill": [
+          "SP on kill",
+          ""
+        ],
+        "stat": [
+          "A stat (STR, AGI, VIT, INT, DEX, LUK)",
+          ""
+        ],
+        "race": [
+          "Damage vs a race",
+          "%"
+        ],
+        "el": [
+          "Damage vs an element",
+          "%"
+        ],
+        "pen": [
+          "Armor pierce",
+          "%"
+        ],
+        "mpen": [
+          "Magic pierce",
+          "%"
+        ],
+        "critDmg": [
+          "Critical damage",
+          "%"
+        ],
+        "boss": [
+          "Damage vs bosses",
+          "%"
+        ],
+        "matk": [
+          "MATK",
+          "%"
+        ],
+        "hit": [
+          "HIT",
+          ""
+        ],
+        "elDmg": [
+          "Element damage (one element)",
+          "%"
+        ],
+        "inflict": [
+          "Inflict a status (chance)",
+          "%"
+        ],
+        "spLeech": [
+          "SP steal",
+          "%"
+        ],
+        "cast": [
+          "Faster cast",
+          "%"
+        ],
+        "acd": [
+          "Shorter after-cast delay",
+          "%"
+        ],
+        "cdr": [
+          "Shorter cooldown",
+          "%"
+        ],
+        "spCost": [
+          "Cheaper skills (SP)",
+          "%"
+        ],
+        "skill": [
+          "One named skill",
+          "%"
+        ],
+        "resEl": [
+          "Element resist (one element)",
+          "%"
+        ],
+        "resSt": [
+          "Status resist (one status)",
+          "%"
+        ],
+        "resRace": [
+          "Race resist (one race)",
+          "%"
+        ],
+        "resBoss": [
+          "Boss resist",
+          "%"
+        ],
+        "resMelee": [
+          "Melee guard",
+          "%"
+        ],
+        "resRange": [
+          "Ranged guard",
+          "%"
+        ],
+        "hpPct": [
+          "Max HP",
+          "%"
+        ],
+        "spPct": [
+          "Max SP",
+          "%"
+        ],
+        "hpReg": [
+          "HP regen",
+          "%"
+        ],
+        "spReg": [
+          "SP regen",
+          "%"
+        ],
+        "heal": [
+          "Healing received",
+          "%"
+        ],
+        "flee": [
+          "FLEE",
+          ""
+        ],
+        "pdodge": [
+          "Perfect dodge",
+          ""
+        ],
+        "spd": [
+          "Move speed",
+          "%"
+        ],
+        "immune": [
+          "Immune to a status",
+          ""
+        ],
+        "proc": [
+          "Cast a spell on hit",
+          "%"
+        ]
+      },
+      "group": {
+        "atk": "Attack",
+        "skill": "Skills",
+        "def": "Defence",
+        "special": "Special (drops only)"
+      },
+      "pool": {
+        "W": "Weapons",
+        "D": "Tops & pants",
+        "H": "Hats",
+        "A": "Accessories"
+      },
+      "st": {
+        "stun": [
+          "Stun",
+          "can't move, attack or cast"
+        ],
+        "freeze": [
+          "Freeze",
+          "can't move, attack or cast"
+        ],
+        "sleep": [
+          "Sleep",
+          "can't move, attack or cast; a hit wakes you"
+        ],
+        "poison": [
+          "Poison",
+          "lose HP every second, no HP regen"
+        ],
+        "bleed": [
+          "Bleed",
+          "lose HP every second, no HP or SP regen"
+        ],
+        "burn": [
+          "Burn",
+          "lose HP every second"
+        ],
+        "silence": [
+          "Silence",
+          "no skills"
+        ],
+        "blind": [
+          "Blind",
+          "HIT and FLEE −25%, the edge of the screen goes dark"
+        ],
+        "slow": [
+          "Slow",
+          "walk 40% slower, attack 20% slower"
+        ]
+      },
+      "by": {
+        "vit": "VIT",
+        "int": "INT",
+        "agi": "AGI",
+        "mdef": "MDEF and INT"
+      },
+      "cure": {
+        "g": [
+          "Green Antidote",
+          "cures poison, bleed and burn"
+        ],
+        "p": [
+          "Camp Panacea",
+          "cures every lasting status (not stun, freeze or sleep)"
+        ]
+      },
+      "inflict": {
+        "burn": "Burn",
+        "chill": "Chill",
+        "shock": "Shock",
+        "crack": "Crack",
+        "curse": "Curse",
+        "poison": "Poison",
+        "bleed": "Bleed"
+      },
+      "spell": {
+        "windline": "Wind Blade",
+        "lightning": "Lightning",
+        "spores": "Poison Spores",
+        "bats": "Bat Swarm",
+        "icespikes": "Ice Spikes",
+        "firepillar": "Fire Pillar",
+        "fireballs": "Fireballs",
+        "crescent": "Moon Crescent"
+      },
+      "trait": {
+        "thirst": [
+          "Thirst",
+          "ATK and MATK +25%",
+          "lose 1% HP a second out of combat"
+        ],
+        "moonblind": [
+          "Moonblind",
+          "Critical +40 at night",
+          "HIT −30 by day"
+        ],
+        "nightshade": [
+          "Nightshade",
+          "damage +30% at night",
+          "damage −20% by day"
+        ],
+        "glass": [
+          "Glass",
+          "damage +35%",
+          "damage taken +25%"
+        ],
+        "fireheart": [
+          "Fire Heart",
+          "fire damage +40%",
+          "damage taken +15%"
+        ],
+        "coldblood": [
+          "Cold Blood",
+          "skill cooldowns −20%",
+          "SP regen −50%"
+        ],
+        "lastbreath": [
+          "Last Breath",
+          "the lower your HP, the harder you hit (×2 under 30%)",
+          "HP healing works at half"
+        ],
+        "biggame": [
+          "Big Game",
+          "+30% vs bosses and big monsters",
+          "−15% vs small monsters"
+        ],
+        "hollowbone": [
+          "Hollow Bone",
+          "attack speed +20%",
+          "damage taken +20%"
+        ],
+        "deeproot": [
+          "Deep Root",
+          "stand still 2 s: damage +40%",
+          "walk 15% slower"
+        ],
+        "frenzy": [
+          "Frenzy",
+          "every 5 kills ATK +8% (up to 5 times)",
+          "the stacks vanish below half HP"
+        ],
+        "skillweave": [
+          "Shadow Web",
+          "skill damage +25%",
+          "ATK −15%"
+        ],
+        "wisp": [
+          "Haunting Wisp",
+          "15% of hits: a ghost wisp strikes again for 80%",
+          "each wisp costs 5 SP"
+        ],
+        "sacrifice": [
+          "Sacrifice",
+          "out of SP, cast with HP (1 SP = 2 HP)",
+          "SP potions do nothing"
+        ],
+        "thirdeye": [
+          "Reflection",
+          "perfect dodge +12",
+          "max HP −15%"
+        ],
+        "bark": [
+          "Bark Skin",
+          "damage taken −20%",
+          "attack speed −15%"
+        ],
+        "onemind": [
+          "One Mind",
+          "basic attacks +30%",
+          "skill damage −15%"
+        ],
+        "shadowfoot": [
+          "Shadow Step",
+          "FLEE +25",
+          "damage taken +15% by day"
+        ]
+      },
+      "on": {
+        "proj": "shots",
+        "area": "areas",
+        "melee": "melee",
+        "attack": "attacks",
+        "any": "any skill",
+        "buff": "buffs",
+        "pet": "summons"
+      },
+      "rune": {
+        "split": [
+          "Split",
+          [
+            "+1 shot, damage −30%",
+            "+2 shots, damage −30%",
+            "+2 shots, damage −20%"
+          ]
+        ],
+        "pierce": [
+          "Pierce",
+          [
+            "shots pierce, damage −15%",
+            "pierce, damage −8%",
+            "pierce at full damage"
+          ]
+        ],
+        "bounce": [
+          "Bounce",
+          [
+            "bounces to 1 more enemy at 60%",
+            "2 bounces at 60%",
+            "3 bounces at 80%"
+          ]
+        ],
+        "echo": [
+          "Echo",
+          [
+            "casts again by itself 0.6 s later at 30%",
+            "again at 40%",
+            "again at 55%"
+          ]
+        ],
+        "wide": [
+          "Widen",
+          [
+            "area +30%, damage −10%",
+            "area +45%, damage −10%",
+            "area +60%, damage −5%"
+          ]
+        ],
+        "focus": [
+          "Focus",
+          [
+            "area −40%, damage +25%",
+            "damage +35%",
+            "damage +50%"
+          ]
+        ],
+        "linger": [
+          "Linger",
+          [
+            "leaves a zone 2 s, 15% a second",
+            "3 s, 20%",
+            "4 s, 25%"
+          ]
+        ],
+        "pull": [
+          "Pull",
+          [
+            "pulls enemies to the aim point",
+            "pull + slow 2 s",
+            "pull + stun 0.8 s"
+          ]
+        ],
+        "corpse": [
+          "Corpse Burst",
+          [
+            "a kill bursts for 50% ATK",
+            "bursts for 75% ATK",
+            "bursts for 100% ATK"
+          ]
+        ],
+        "haste": [
+          "Haste",
+          [
+            "cooldown and delay −15%, damage −10%",
+            "−22%, damage −10%",
+            "−30%, damage −10%"
+          ]
+        ],
+        "heavy": [
+          "Heavy",
+          [
+            "damage +20%, after-cast delay +30%",
+            "damage +30%, delay +30%",
+            "damage +40%, delay +30%"
+          ]
+        ],
+        "blood": [
+          "Blood",
+          [
+            "pay HP for SP (1 SP = 2 HP), damage +15%",
+            "damage +20%",
+            "damage +25%, 1 SP = 1.5 HP"
+          ]
+        ],
+        "execute": [
+          "Execute",
+          [
+            "targets under 30% HP take +30%",
+            "under 30%: +45%",
+            "under 35%: +60%"
+          ]
+        ],
+        "corrode": [
+          "Corrode",
+          [
+            "poisons 4 s",
+            "stronger poison",
+            "strongest poison"
+          ]
+        ],
+        "burn": [
+          "Burn",
+          [
+            "sets on fire 3 s",
+            "fire 4 s",
+            "fire 5 s"
+          ]
+        ],
+        "curse": [
+          "Curse",
+          [
+            "the target takes +8% from everything for 5 s",
+            "+12%",
+            "+16%"
+          ]
+        ],
+        "skyfall": [
+          "Skyfall",
+          [
+            "a falling star follows at 40%",
+            "1 star at 60%",
+            "2 stars at 50%"
+          ]
+        ],
+        "rush": [
+          "Rush",
+          [
+            "dash 3 tiles to the target first",
+            "dash 4 tiles",
+            "dash 5 tiles, damage +15%"
+          ]
+        ],
+        "ambush": [
+          "Ambush",
+          [
+            "first hit on a calm monster +40%",
+            "+60%",
+            "+80%"
+          ]
+        ],
+        "stagger": [
+          "Stagger",
+          [
+            "stuns 0.4 s",
+            "stuns 0.6 s",
+            "stuns 0.8 s"
+          ]
+        ],
+        "pal": [
+          "Companion",
+          [
+            "summons last 30% longer",
+            "+50%",
+            "+70%"
+          ]
+        ],
+        "share": [
+          "Share",
+          [
+            "the buff also reaches nearby friends at 50%",
+            "at 65%",
+            "at 80%"
+          ]
+        ],
+        "shell": [
+          "Shell",
+          [
+            "buffing gives a shield of 8% max HP",
+            "shield 12%",
+            "shield 16%"
+          ]
+        ],
+        "moonrite": [
+          "Moon",
+          [
+            "damage +20% at night, −10% by day",
+            "night +30%",
+            "night +40%"
+          ]
+        ]
+      },
+      "fam": {
+        "split": [
+          "Split Body",
+          "leaves 2 decoys for 6 s that lure enemies, then they burst in {el} for {p}% ATK/MATK"
+        ],
+        "bomb": [
+          "Plant Bomb",
+          "a {el} bomb bursts after 1.2 s, a wide blast of {p}% ATK/MATK"
+        ],
+        "heal": [
+          "Own Medicine",
+          "heals you and nearby friends {h}% of max HP"
+        ],
+        "shield": [
+          "Raise Shield",
+          "a shield for 3 s, damage taken −50%, then a counter blow of {p}% ATK/MATK"
+        ],
+        "summon": [
+          "Call the Pack",
+          "2 tiny pack mates fight for 12 s, {s}% ATK/MATK a hit"
+        ],
+        "shoot": [
+          "Fan Shot",
+          "3 {el} shots in a fan, {p}% ATK/MATK each"
+        ],
+        "burrow": [
+          "Burrow",
+          "vanish underground 1.5 s (enemies lose you), then burst up for {p}% ATK/MATK"
+        ],
+        "sonic": [
+          "Sonic Wave",
+          "a ring of sound stuns 1 s and hits for {p}% ATK/MATK"
+        ],
+        "spore": [
+          "Spore Cloud",
+          "spores around you slow enemies 4 s and hit for {p}% ATK/MATK"
+        ],
+        "swoop": [
+          "Swoop",
+          "swoop forward through everything for {p}% ATK/MATK"
+        ],
+        "leap": [
+          "Leap Slam",
+          "leap to the aim point and slam the ground in {el} for {p}% ATK/MATK"
+        ],
+        "charge": [
+          "Charge",
+          "charge forward, knocking enemies away, {p}% ATK/MATK"
+        ],
+        "poison": [
+          "Poison Pool",
+          "a poison pool for 5 s, {d}% ATK/MATK a second"
+        ],
+        "flame": [
+          "Fire Trail",
+          "run leaving a trail of fire for 4 s, {d}% ATK/MATK every half second"
+        ],
+        "thread": [
+          "Thread Pull",
+          "pull 3 enemies to you, {p}% ATK/MATK"
+        ],
+        "star": [
+          "Starfall",
+          "3 small stars fall around the target, {p}% ATK/MATK each (holy)"
+        ],
+        "hex": [
+          "Hex",
+          "curse enemies around the target 6 s: +25% damage taken, {p}% ATK/MATK"
+        ],
+        "phase": [
+          "Hollow Form",
+          "become a shadow 1.5 s, dodging everything, then slash around for {p}% ATK/MATK"
+        ],
+        "quake": [
+          "Quake",
+          "slam the ground: enemies fall 0.8 s, {p}% ATK/MATK"
+        ],
+        "wave": [
+          "Tide Wave",
+          "a wave pushes enemies ahead, {p}% ATK/MATK"
+        ],
+        "gust": [
+          "Whirlwind",
+          "a whirlwind 3 s pulls enemies in, {d}% ATK/MATK every half second"
+        ],
+        "strike": [
+          "Heavy Strike",
+          "one heavy blow, a sure critical, {p}% ATK/MATK"
+        ]
+      },
+      "boss": {
+        "bat_king": [
+          "King's Bat Swarm",
+          "6 bats home in on enemies, 120% ATK/MATK each"
+        ],
+        "mushking": [
+          "Glowing Mushroom Ring",
+          "a ring of mushrooms for 8 s: slows and poisons, 80% ATK/MATK a second"
+        ],
+        "ant_queen": [
+          "Queen's Command",
+          "3 soldier ants fight for 15 s, 90% ATK/MATK each"
+        ],
+        "crypt_lord": [
+          "Hands from the Grave",
+          "bone hands rise along a line and hold enemies 1.5 s, 250% ATK/MATK"
+        ],
+        "lava_dragon": [
+          "Lava Breath",
+          "a cone of fire for 2 s, 900% ATK/MATK in all"
+        ],
+        "hundred_string": [
+          "Hundred Strings",
+          "binds 5 enemies: +40% damage taken for 8 s, then pulls them in"
+        ],
+        "aurelion": [
+          "The Fallen Star",
+          "a great star falls on the aim point after 1.5 s, 1,500% ATK/MATK, holy"
+        ],
+        "sb_ivy": [
+          "Stolen Fire",
+          "fire bursts around you, burning enemies take double, 300% ATK/MATK"
+        ],
+        "sb_morrow": [
+          "Black-Market Tonic",
+          "3 poison flasks, 200% ATK/MATK each, slowing; you heal 10% HP"
+        ],
+        "sb_raven": [
+          "Brother's Shadow",
+          "your shadow fights beside you for 8 s, 150% ATK/MATK a second"
+        ],
+        "sb_halvard": [
+          "Salt Wall",
+          "a wall of salt around you for 5 s, damage taken −70%"
+        ],
+        "sb_ignis": [
+          "Feed the Fire",
+          "sets everything around you alight, then a blast of 400% ATK/MATK"
+        ],
+        "sb_vosse": [
+          "Book of the Mad Wind",
+          "wind blades circle you for 6 s, 120% ATK/MATK every half second"
+        ],
+        "sb_gareth": [
+          "Broken Oath",
+          "ATK +40% but damage taken +40% for 10 s"
+        ],
+        "sb_aldric": [
+          "Order to Fire",
+          "shadow arrows rain for 3 s, 12 arrows of 150% ATK/MATK"
+        ],
+        "sb_gorm": [
+          "Demon Horn Charge",
+          "a long charge through everything, 400% ATK/MATK"
+        ],
+        "sb_candle": [
+          "Melting Candles",
+          "3 candles explode on enemies who come near, 300% ATK/MATK each"
+        ],
+        "sb_quill": [
+          "Inscribed Ink",
+          "a seal on the ground for 8 s: enemies on it take +30%"
+        ],
+        "sb_nocturne": [
+          "Holy Night",
+          "night falls around you for 10 s (counts for night gear and Moon runes), 300% ATK/MATK around you"
+        ],
+        "sb_puppet1": [
+          "The Prototype",
+          "repeat your last skill (no SP, no cooldown)"
+        ],
+        "sb_puppet6": [
+          "Six Springs",
+          "6 jumping slams around you, 150% ATK/MATK each"
+        ],
+        "sb_severin": [
+          "Glass Judgement",
+          "glass bells fall on every enemy with a status, 300% ATK/MATK each"
+        ],
+        "sb_lumen3": [
+          "The Last Flame",
+          "for 60 s, if your HP would run out you stand up at 30% (once)"
+        ]
+      }
+    }
+  },
+  "patch": {
+    "version": "v0.2 · Season 2 test · 6 Nov 2026",
+    "date": "6 Nov 2026",
+    "sections": {
+      "New": [
+        "**Armor and Ward**: every monster wears Heavy Armor, Spirit, Hide or Flesh, shown on the target frame, the Map and the Monster Book",
+        "**Armor Pierce** and **Ward Pierce** from gear, buffs, your weapon, the **Breach** keystone branch and two new **pierce runes**, at most 50% (60% with the Breach keystone)",
+        "Knight and Monk skills leave **Armor Cracked**: +20% pierce on that monster for 6 s",
+        "**Armor tab** in the Element Chart: the four armours, your pierce and its sources, and your target worked out step by step",
+        "**A new look** for every window and the HUD, with right-click menus everywhere",
+        "**Blood Moon Night** · every Saturday 20:00–22:00, Bangkok time",
+        "**Map events** · root rift, black thorns, poison fog, with a chest for everyone who helped",
+        "**Smelter**, **Work Orders**, three **mines**, cotton and flax",
+        "**Option Stone window**: a padlock on every row, each row's kind from its own list, the cost and the smith points in one strip, and a card of every row rerolled",
+        "**Work Orders** show what each order takes; the quest tracker shows the life-skill AUTO time left today; mining shows **+1** for every ore a strike knocks loose",
+        "**Runes** on skills, **keystones**, **boss relics**",
+        "**13 new costume sets** in the Gacha Machine",
+        "**News board**, **Today** card and this list"
+      ],
+      "Changed": [
+        "A critical hit now ignores half of the armour, not all of it",
+        "A monster 10 or more levels above you keeps its armour: it doesn't break, and only a tenth of your damage gets through",
+        "Monsters above your level hit as hard as their own level, harder still when they are more than 5 levels above you",
+        "A new target frame: the monster's portrait and level, a clear HP bar, and its armour as a bar of its own under the HP",
+        "The HUD starts at 75% size and lays itself out for your screen; move, resize or hide its pieces from Settings › Screen and chat › Edit HUD",
+        "Monster HP, armour, coins and the EXP curve are tuned for Season 2",
+        "Costly actions still ask for a second press"
+      ],
+      "Balance": [
+        "Job power tuned at Lv 55, 70 and 90",
+        "**Refining**: no step is sure any more (90% at best), a hot furnace stops at 95%, and each step costs more coins",
+        "**Option stones**: lock up to 3 rows and roll every other row at once, each to the kind you pick; each row locked takes one more stone and more coins",
+        "**Option stones, drill stones and tier-I runes** drop far less; a monster gives an option stone only within 10 levels of you",
+        "**Quench oil** 50 and **lamp oil** 13 (Work Orders ask for more bottles); the furnace takes 10% of a good's price; planks take 10 logs; an iron bar takes a copper ore too",
+        "**Mining**: every strike knocks loose its share of the vein's ore (all of it on the glint, 80% off it, half for AUTO); a vein gives none when it breaks",
+        "**Option stones** from chests 1.5%; bars and cut crystals take a little fewer per refine and their prices rise a little (fitted to the new mining)",
+        "**AUTO** life skills: 4 hours a day, and a tree AUTO fells gives half",
+        "**Silver trees** grow on the Northward Trail (Lv 60–72) as well as Shadowmist Lake"
+      ],
+      "Fixed": [
+        "The mines now open on the Season 2 build",
+        "Work Orders no longer ask for thousands of charcoal",
+        "Boss names read properly",
+        "Monster names are no longer cut short",
+        "Leftover Thai lines are in English now"
+      ]
+    }
+  },
+  "posts": [
+    {
+      "id": "s2t-1106-armor",
+      "tag": "Patch Notes",
+      "title": "Armor, Ward and pierce",
+      "date": "6 Nov 2026",
+      "pic": "assets/kui/npc_smith.jpg",
+      "body": [
+        {
+          "p": "Every monster now wears one of four armours. **Armor** takes from physical hits, **Ward** from magic."
+        },
+        {
+          "ul": [
+            "**Heavy Armor**: much Armor, little Ward",
+            "**Spirit**: much Ward, little Armor",
+            "**Hide**: even",
+            "**Flesh**: little of either"
+          ]
+        },
+        {
+          "h": "Pierce"
+        },
+        {
+          "ul": [
+            "**Armor Pierce**: gear, buffs, spears, lances, bows, crossbows, pistols and rapiers (+10%)",
+            "**Ward Pierce**: gear, buffs, an epic or better staff, orb, book, lantern or bell (+10%)",
+            "The **Breach** keystone branch, **Armor Cracked** from Knight and Monk skills, and two pierce runes",
+            "At most **50%** in all, **60%** with the Breach keystone"
+          ]
+        },
+        {
+          "p": "Your totals are under **Status · Detailed Stats**. The target frame names a monster's armour; click the frame for its Armor and Ward right now."
+        }
+      ]
+    },
+    {
+      "id": "s2t-1105",
+      "tag": "Patch Notes",
+      "title": "Season 2 test · 5 Nov",
+      "date": "5 Nov 2026",
+      "pic": "assets/s2screen/keyart_puppet.webp",
+      "body": [
+        {
+          "p": "This build opens as **Season 2** from the first screen, with every new system on."
+        },
+        {
+          "h": "What's in it"
+        },
+        {
+          "ul": [
+            "**A new look** for every window and the HUD",
+            "**Blood Moon Night** and **map events**",
+            "**Smelter**, **Work Orders**, three **mines**",
+            "**Runes**, **keystones**, **boss relics**"
+          ]
+        },
+        {
+          "p": "The full list is in the patch notes."
+        }
+      ]
+    },
+    {
+      "id": "bm-weekly",
+      "tag": "Events",
+      "title": "Blood Moon Night · every Saturday",
+      "date": "5 Nov 2026",
+      "pic": "assets/s2screen/keyart_moon.webp",
+      "body": [
+        {
+          "p": "Every **Saturday 20:00–22:00** (Bangkok time) the moon turns red over every hunting map."
+        },
+        {
+          "ul": [
+            "Monsters have **HP and ATK ×1.25** and give **EXP ×1.25**",
+            "They come back after **10 s**, and each map holds half as many again",
+            "Pack leaders come **3× as often** and drop 3 of their materials and a potion, sometimes an Option Stone",
+            "Materials **+50%**",
+            "A map event every **30 minutes**"
+          ]
+        },
+        {
+          "p": "Open **Today** from the News button to see how long is left."
+        }
+      ]
+    },
+    {
+      "id": "map-events",
+      "tag": "Events",
+      "title": "Map events",
+      "date": "5 Nov 2026",
+      "pic": "assets/kui/wm_overview.jpg",
+      "body": [
+        {
+          "p": "Every **60 to 120 minutes** something happens on a hunting map, for **10 minutes**. AUTO can join in."
+        },
+        {
+          "h": "Black Creeping Root"
+        },
+        {
+          "p": "A rift tears open: five waves crawl out, then their captain."
+        },
+        {
+          "h": "Black Thorn Sprout"
+        },
+        {
+          "p": "Eight thorns sprout round the hero and keep growing. Cut them all."
+        },
+        {
+          "h": "Poison Fog"
+        },
+        {
+          "p": "Monsters inside hit **30% harder** and drop **twice the materials**. Break the three mist hearts."
+        },
+        {
+          "p": "Win: a **root chest** for everyone who helped. Lose: nothing is lost, but the roots hold the map for 10 minutes."
+        }
+      ]
+    },
+    {
+      "id": "test-build",
+      "tag": "Announcements",
+      "title": "What this test build is",
+      "date": "5 Nov 2026",
+      "pic": "assets/s2screen/login_bg.webp",
+      "body": [
+        {
+          "p": "Season 2 runs **offline** in your browser for now."
+        },
+        {
+          "ul": [
+            "Each browser keeps its own save",
+            "Party, guild and market with real people come when it goes online"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discord",
+      "tag": "Announcements",
+      "title": "Found a bug? Tell us on Discord",
+      "date": "5 Nov 2026",
+      "pic": "assets/kui/guild_hall.jpg",
+      "body": [
+        {
+          "p": "Open **Report Bug** from the menu (Esc). It takes you to our Discord."
+        }
+      ]
+    }
+  ],
+  "armour": {
+    "types": {
+      "heavy": {
+        "n": "Heavy Armor",
+        "def": 1.6,
+        "mdef": 0.6,
+        "dt": {
+          "blunt": 1.25,
+          "pierce": 1,
+          "slash": 0.85,
+          "magic": 1
+        },
+        "count": 135
+      },
+      "spirit": {
+        "n": "Spirit",
+        "def": 0.6,
+        "mdef": 1.8,
+        "dt": {
+          "magic": 1.25,
+          "slash": 0.85,
+          "pierce": 0.85,
+          "blunt": 0.85
+        },
+        "count": 99
+      },
+      "hide": {
+        "n": "Hide",
+        "def": 1,
+        "mdef": 1,
+        "dt": {
+          "pierce": 1.25,
+          "slash": 1,
+          "blunt": 1,
+          "magic": 0.85
+        },
+        "count": 188
+      },
+      "flesh": {
+        "n": "Flesh",
+        "def": 0.7,
+        "mdef": 0.7,
+        "dt": {
+          "slash": 1.25,
+          "pierce": 1,
+          "blunt": 0.85,
+          "magic": 1
+        },
+        "count": 60
+      }
+    },
+    "cap": 50,
+    "capKs": 60,
+    "crack": 20,
+    "crackT": 6,
+    "crackJobs": [
+      "knight",
+      "paladin",
+      "dragonknight",
+      "swordmaster",
+      "berserker",
+      "dawnwarden",
+      "dragonbound",
+      "starblade",
+      "bloodmoon",
+      "monk",
+      "meteorfist"
+    ],
+    "weaponPen": 10,
+    "pierceW": [
+      "spear",
+      "lance",
+      "bow",
+      "xbow",
+      "pistol",
+      "rapier"
+    ],
+    "magicW": [
+      "staff",
+      "orb",
+      "book",
+      "lantern",
+      "bell"
+    ],
+    "rune": [
+      15,
+      25,
+      35
+    ],
+    "noBreakGap": 10,
+    "gapHoldK": 0.1,
+    "bar": [
+      [
+        1,
+        30,
+        180
+      ],
+      [
+        10,
+        30,
+        180
+      ],
+      [
+        20,
+        30,
+        180
+      ],
+      [
+        30,
+        63,
+        380
+      ],
+      [
+        40,
+        110,
+        660
+      ],
+      [
+        52,
+        200,
+        1200
+      ],
+      [
+        60,
+        200,
+        1200
+      ],
+      [
+        70,
+        200,
+        1200
+      ],
+      [
+        80,
+        200,
+        1200
+      ],
+      [
+        90,
+        200,
+        1200
+      ],
+      [
+        99,
+        200,
+        1200
+      ]
+    ]
+  },
+  "bloodMoon": {
+    "r": {
+      "HP": 1.25,
+      "ATK": 1.25,
+      "EXP": 1.25,
+      "RESPAWN": 10,
+      "PACK": 0.5,
+      "LEADER": 3,
+      "LEADER_MAX": 0.5,
+      "MAT": 0.5,
+      "STONE": 0.1,
+      "WARN": 60
+    },
+    "when": "Every Saturday 20:00–22:00 (Bangkok time, UTC+7)",
+    "day": 6,
+    "from": 20,
+    "hours": 2
+  },
+  "mapEvent": {
+    "r": {
+      "DUR": 600,
+      "GAP": [
+        3600,
+        7200
+      ],
+      "GAP_BM": 1800,
+      "PER_HERO": 0.75,
+      "KPM": 6,
+      "REWARD": 0.5,
+      "STONE": 0.15,
+      "HELP": 0.03,
+      "HELP_T": 120,
+      "WAVES": [
+        6,
+        8,
+        10,
+        12,
+        6
+      ],
+      "WAVE_T": 75,
+      "CAPTAIN": 12,
+      "THORNS": 8,
+      "THORN_HP": [
+        2,
+        4,
+        6.5
+      ],
+      "GROW": 120,
+      "HATCH": 60,
+      "SHIELD": 0.6,
+      "SHIELD_R": 260,
+      "MIST_R": 1100,
+      "HEARTS": 3,
+      "HEART_HP": 5,
+      "MIST_ATK": 1.3,
+      "HOLD": 600,
+      "HOLD_K": 1.2
+    },
+    "kinds": {
+      "root": {
+        "n": "Black Creeping Root",
+        "icon": "ev_ic_root"
+      },
+      "thorn": {
+        "n": "Black Thorn Sprout",
+        "icon": "ev_ic_thorn"
+      },
+      "mist": {
+        "n": "Poison Fog",
+        "icon": "ev_ic_mist"
+      }
+    }
+  },
+  "xp": [
+    331,
+    381,
+    438,
+    504,
+    580,
+    766,
+    1010,
+    1330,
+    1750,
+    2280,
+    2990,
+    3860,
+    5000,
+    6390,
+    8210,
+    10400,
+    13200,
+    16800,
+    21400,
+    27200,
+    41120,
+    45623,
+    50600,
+    56051,
+    61857,
+    66834,
+    71811,
+    77025,
+    82121,
+    87335,
+    92430,
+    97526,
+    102621,
+    107717,
+    112694,
+    117434,
+    122055,
+    126795,
+    131535,
+    136275,
+    141015,
+    148125,
+    156420,
+    167085,
+    180120,
+    193155,
+    209745,
+    228705,
+    251220,
+    647010,
+    681375,
+    688485,
+    694410,
+    701520,
+    708630,
+    715740,
+    722850,
+    729960,
+    738255,
+    745365,
+    752475,
+    759585,
+    767880,
+    774990,
+    783285,
+    790395,
+    798690,
+    806985,
+    815280,
+    823575,
+    830685,
+    840165,
+    848460,
+    856755,
+    865050,
+    873345,
+    897045,
+    940890,
+    981180,
+    1014360,
+    1233354,
+    1326196,
+    1408692,
+    1473192,
+    1553772,
+    1649520,
+    1757805,
+    1895810,
+    2078395,
+    2302431,
+    2673170,
+    3136280,
+    3696916,
+    4371157,
+    5123490,
+    5984250,
+    6909854,
+    7900869
+  ],
+  "after99": {
+    "cons": {
+      "atk": {
+        "n": "Power",
+        "d": "ATK +1%"
+      },
+      "guard": {
+        "n": "Tough",
+        "d": "Damage taken −0.5%"
+      },
+      "swift": {
+        "n": "Swift",
+        "d": "Attack speed +1%"
+      },
+      "arcane": {
+        "n": "Star Magic",
+        "d": "MATK +1%"
+      },
+      "wander": {
+        "n": "Traveler",
+        "d": "Materials gathered +0.5%"
+      }
+    },
+    "capPer": 30,
+    "perLv": 0.5,
+    "times": [
+      [
+        12,
+        0
+      ],
+      [
+        19,
+        30
+      ],
+      [
+        22,
+        0
+      ]
+    ],
+    "towerLv": 88,
+    "towerHp": 0.04,
+    "towerKills": 30,
+    "towerBoss": 10,
+    "towerStone": 5,
+    "towerOre": 10,
+    "towerOreN": 2,
+    "towerMinLv": 90,
+    "wbNotice": 10,
+    "wbMins": 15
+  },
+  "gwar": {
+    "r": {
+      "minutes": 60,
+      "prep": 60,
+      "endHold": 30,
+      "small": {
+        "max": 100,
+        "burn": 0.4166666666666667,
+        "ring": 230,
+        "light": [
+          320,
+          4
+        ]
+      },
+      "great": {
+        "max": 200,
+        "burn": 0.6666666666666666,
+        "ring": 330,
+        "light": [
+          420,
+          3
+        ]
+      },
+      "douse": 4,
+      "douseCap": 3,
+      "douseBonus": 0.15,
+      "lightS": 8,
+      "litFuel": 30,
+      "wood": 15,
+      "carry": 3,
+      "chopS": 3,
+      "feedS": 0.5,
+      "respawnS": 10,
+      "vision": 320,
+      "perSide": 20,
+      "schedule": {
+        "day": 6,
+        "hour": 20
+      },
+      "reward": {
+        "base": 10,
+        "cap": 150,
+        "perCap": 4,
+        "perKill": 2,
+        "perWood": 0.5,
+        "perMin": 0.5,
+        "win": 1.5,
+        "land": 20
+      },
+      "holderBuffOff": 0.3,
+      "holderExp": 3,
+      "bid": {
+        "min": 100000,
+        "step": 10000,
+        "closeHours": 24
+      }
+    },
+    "lands": [
+      "Rootfire Yard",
+      "Abandoned Travelers' Camp",
+      "Ash Valley",
+      "Frozen Lake"
+    ]
+  },
+  "pvp": {
+    "rules": {
+      "dmg": 0.4,
+      "crit": 0.75,
+      "cap": 0.35,
+      "cc": 0.5,
+      "slow": 0.5,
+      "dr": 15,
+      "immune": 10
+    },
+    "field": {
+      "R": 420,
+      "sq": 0.58,
+      "time": 120,
+      "out": 5
+    },
+    "arena": {
+      "time": 100,
+      "shrinkAt": 60,
+      "shrinkTo": 90,
+      "burn": 0.06,
+      "best": 3
+    }
+  },
+  "stats": {
+    "str": {
+      "n": "STR",
+      "d": "Melee attack 1.6 per point + 0.6 per level · Impact toward armor break +0.4% per point · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    },
+    "agi": {
+      "n": "AGI",
+      "d": "Attack speed +0.5% per point (max ×1.5) · Graze 0.3% per point (a graze deals only 30%) · Dodge 0.15% per point (max 20%, shows MISS) · Mobbed by more than 2: dodge and graze fall 10% each · Slow resist · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    },
+    "vit": {
+      "n": "VIT",
+      "d": "HP +1% per point · Damage taken −0.2% per point (max 30%, cannot be pierced) · Healing taken +0.5% per point · Status resist · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    },
+    "int": {
+      "n": "INT",
+      "d": "Magic attack (MATK) 1.6 per point + 0.6 per level, plus magic weapon power · Healing power · Max SP and SP recovery · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    },
+    "dex": {
+      "n": "DEX",
+      "d": "Bow and gun attack 1.6 per point + 0.6 per level · Cast speed +0.6% per point (max 50%) · Accuracy 88% + 0.15% per point · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    },
+    "luk": {
+      "n": "LUK",
+      "d": "Critical 0.3% per point · Critical damage ×1.4 + 0.4% per point · Status chance +0.2% per point · Points above the cap (30 + 0.55 × level, at most 80) work at 40%"
+    }
+  },
+  "econ": {
+    "coinK": 0.1,
+    "gearSell": 0.05,
+    "sinkK": 2,
+    "wbLater": 0.2,
+    "forgeCost": {
+      "DRILL": {
+        "coins": 6000000,
+        "stone": "mat_drill_stone"
+      },
+      "STONE": {
+        "coins": 30000,
+        "stone": "mat_opt_stone"
+      },
+      "s2k": true
+    },
+    "forgeLock": {
+      "stones": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "coins": [
+        30000,
+        45000,
+        75000,
+        120000
+      ],
+      "fail": 0.2
+    },
+    "polish": {
+      "1": 10000,
+      "2": 30000,
+      "3": 80000,
+      "4": 160000
+    },
+    "rowCap": {
+      "str": 10,
+      "agi": 10,
+      "vit": 10,
+      "int": 10,
+      "dex": 10,
+      "luk": 10,
+      "flee": 50,
+      "pdodge": 10,
+      "cast": 30,
+      "critDmg": 100
+    },
+    "stones": {
+      "bossOpt": 8,
+      "bossOptN": [
+        1,
+        1
+      ],
+      "bossDrill": 0.2,
+      "bossDrill2": 0.2,
+      "chestOpt": 1.5,
+      "goldDrill": 0.5,
+      "monOpt": 0.01,
+      "monDrill": 0.0001,
+      "monDrillLv": 50,
+      "optGap": 10
+    },
+    "bag": [
+      10000,
+      25000,
+      50000,
+      100000,
+      200000,
+      400000
+    ],
+    "refineMax": 95,
+    "warp": {
+      "lv1": 20,
+      "lv40": 260,
+      "lv99": 1490
+    },
+    "chestK": 0.1,
+    "dropK": 1,
+    "furnace": 0.1
+  },
+  "mstatus": {
+    "tier": {
+      "normal": {
+        "k": 0.5,
+        "stop": {
+          "stun": 1,
+          "freeze": 1,
+          "sleep": 1
+        },
+        "silence": 2
+      },
+      "zone": {
+        "k": 0.75,
+        "stop": {
+          "stun": 1.5,
+          "freeze": 1.5,
+          "sleep": 2.5
+        },
+        "silence": 3
+      },
+      "boss": {
+        "k": 1,
+        "stop": {
+          "stun": 1.5,
+          "freeze": 1.5,
+          "sleep": 3
+        },
+        "silence": 3
+      }
+    },
+    "cap": 60,
+    "dr": [
+      1,
+      0.5,
+      0.25
+    ],
+    "drWin": 10,
+    "drImm": 6,
+    "cureCd": 10,
+    "soft": {
+      "stun": "slow",
+      "freeze": "slow",
+      "sleep": "blind"
+    }
+  },
+  "fresh": {
+    "xp0": 0,
+    "t0": 0,
+    "HP_KIT": [
+      [
+        1,
+        1.26
+      ],
+      [
+        40,
+        1.26
+      ],
+      [
+        52,
+        1.14
+      ],
+      [
+        60,
+        0.99
+      ],
+      [
+        70,
+        1.11
+      ],
+      [
+        80,
+        1.02
+      ],
+      [
+        90,
+        1.26
+      ],
+      [
+        99,
+        1.26
+      ]
+    ],
+    "ROOT_AGGRO": false,
+    "HEAL_K": 0.3333333333333333,
+    "BOSS_LEASH": true,
+    "BOSS_HOME_HEAL": 0.3,
+    "BOSS_HEAL_HIT": 8,
+    "BOSS_FIGHT_GAP": 120,
+    "BLOW_BASE": true,
+    "GAP_FREE": 5,
+    "GAP_K": 0.1,
+    "GAP_MAX": 6,
+    "BLOW_SS1": true,
+    "BLUE_K": 2,
+    "WAIT_CALM_ONLY": true,
+    "BASE": 0.8,
+    "PER": 0.1,
+    "MAX": 1.5,
+    "total": 0,
+    "excess": 0,
+    "NEED": [
+      5510,
+      5510,
+      5510,
+      5510,
+      5510,
+      6320,
+      7240,
+      8280,
+      9450,
+      10700,
+      12200,
+      13700,
+      15400,
+      17100,
+      19100,
+      21100,
+      23200,
+      25600,
+      28300,
+      31300,
+      41120,
+      45623,
+      50600,
+      56051,
+      61857,
+      66834,
+      71811,
+      77025,
+      82121,
+      87335,
+      92430,
+      97526,
+      102621,
+      107717,
+      112694,
+      117434,
+      122055,
+      126795,
+      131535,
+      136275,
+      141015,
+      148125,
+      156420,
+      167085,
+      180120,
+      193155,
+      209745,
+      228705,
+      251220,
+      647010,
+      681375,
+      688485,
+      694410,
+      701520,
+      708630,
+      715740,
+      722850,
+      729960,
+      738255,
+      745365,
+      752475,
+      759585,
+      767880,
+      774990,
+      783285,
+      790395,
+      798690,
+      806985,
+      815280,
+      823575,
+      830685,
+      840165,
+      848460,
+      856755,
+      865050,
+      873345,
+      897045,
+      940890,
+      981180,
+      1014360,
+      1233354,
+      1326196,
+      1408692,
+      1473192,
+      1553772,
+      1649520,
+      1757805,
+      1895810,
+      2078395,
+      2302431,
+      2673170,
+      3136280,
+      3696916,
+      4371157,
+      5123490,
+      5984250,
+      6909854,
+      7900869
+    ],
+    "NEED_K21": 1.185,
+    "NEED_C3": {
+      "81": 1.145,
+      "82": 1.167,
+      "83": 1.177,
+      "84": 1.184,
+      "85": 1.192,
+      "86": 1.2,
+      "87": 1.206,
+      "88": 1.212,
+      "89": 1.218,
+      "90": 1.222,
+      "91": 1.226,
+      "92": 1.231,
+      "93": 1.238,
+      "94": 1.242,
+      "95": 1.246,
+      "96": 1.25,
+      "97": 1.254,
+      "98": 1.258
+    },
+    "EARLY_FAST": true,
+    "BOSS_HP_LV": [
+      [
+        1,
+        2.75
+      ],
+      [
+        22,
+        2.75
+      ],
+      [
+        34,
+        1.85
+      ],
+      [
+        36,
+        1.725
+      ],
+      [
+        38,
+        2.15
+      ],
+      [
+        40,
+        2.15
+      ],
+      [
+        46,
+        1.28
+      ],
+      [
+        58,
+        1.28
+      ],
+      [
+        68,
+        0.77
+      ],
+      [
+        93,
+        0.77
+      ],
+      [
+        99,
+        1
+      ]
+    ],
+    "BOSS_ADDS": 2,
+    "addsCut": 0,
+    "FAINT_COIN": {
+      "fromLevel": 20,
+      "pct": 1,
+      "perLv": 500
+    },
+    "FAINT_N": 3,
+    "FAINT_T": 600,
+    "GEAR_HIGH": {
+      "from": 40,
+      "k": 1
+    },
+    "COIN_K": 0.1,
+    "JUNK_PRICE": {
+      "leaf_jelly": 2,
+      "pumpkin_stem": 2,
+      "goose_down": 2,
+      "carrot_top": 2,
+      "melon_rind": 2,
+      "gourd_wick": 2,
+      "echo_ear": 2,
+      "popcorn": 3,
+      "wax_chunk": 3,
+      "rotten_core": 3,
+      "corn_cob": 3,
+      "sprout_potato": 3,
+      "spider_silk": 3,
+      "honeycomb": 3,
+      "water_jelly": 2,
+      "nest_fluff": 4,
+      "cursed_straw": 4,
+      "puff_seed": 4,
+      "crow_feather": 3,
+      "stitch_needle": 4,
+      "torn_burlap": 4,
+      "bucket_lid": 4,
+      "cracked_bell": 4,
+      "sun_petal": 4,
+      "rooster_feather": 4,
+      "grass_fang": 5,
+      "hard_kernel": 4,
+      "hard_seed": 5,
+      "frog_lily": 4,
+      "bee_stinger": 4,
+      "firefly_tail": 6,
+      "thorn_stem": 6,
+      "shovel_leg": 6,
+      "boar_tusk": 3,
+      "reed_crown": 6,
+      "strider_leg": 6,
+      "pearl_horn": 6,
+      "sleep_dust": 6,
+      "hedge_spine": 6,
+      "crab_claw": 5,
+      "moon_tuft": 7,
+      "rusty_badge": 7,
+      "ghost_cloth": 7,
+      "pike_tooth": 7,
+      "turtle_moss": 4,
+      "dragonfly_wing": 4,
+      "trout_scale": 6,
+      "ant_jaw": 4,
+      "frog_cheek": 6,
+      "leech_slime": 6,
+      "river_pebble": 6,
+      "bark_jaw": 6,
+      "zombie_patch": 5,
+      "blue_plume": 6,
+      "rusty_hook": 6,
+      "fishbone_knife": 6,
+      "wreath_silk": 6,
+      "jelly_cap": 6,
+      "grave_chip": 5,
+      "moss_shell": 5,
+      "skull_chip": 7,
+      "black_whisker": 7,
+      "serpent_frill": 9,
+      "bat_wing": 5,
+      "eel_slime": 7,
+      "mist_drop": 7,
+      "firefly_lamp": 9,
+      "moon_water": 8,
+      "crystal_shell": 8,
+      "grave_dust": 8,
+      "big_claw": 6,
+      "grave_quill": 8,
+      "newt_frill": 6,
+      "gold_wing": 6,
+      "bone_arrow": 8,
+      "butler_monocle": 8,
+      "moth_scale": 7,
+      "moss_pelt": 8,
+      "acorn_cap": 8,
+      "honey_drop": 6,
+      "ghost_flame": 7,
+      "coffin_hinge": 9,
+      "ant_shell": 6,
+      "ghost_bark": 7,
+      "lantern_glass": 11,
+      "witch_wax": 9,
+      "coffin_nail": 9,
+      "living_ember": 11,
+      "stone_tear": 9,
+      "widow_veil": 9,
+      "rusty_shovel": 9,
+      "ember_feather": 11,
+      "glow_jelly": 6,
+      "loose_spoke": 11,
+      "beaver_tooth": 11,
+      "old_bone": 7,
+      "soot_fluff": 11,
+      "ash_dust": 9,
+      "shiny_ring": 11,
+      "rusty_shoe": 12,
+      "black_salt": 13,
+      "ant_wing": 7,
+      "ant_powder": 7,
+      "troll_moss": 12,
+      "shroom_glasses": 12,
+      "tent_peg": 12,
+      "harness_buckle": 12,
+      "burning_antler": 12,
+      "spore_sac": 12,
+      "ember_tail": 10,
+      "bandit_cloth": 12,
+      "glow_web": 12,
+      "ember_claw": 12,
+      "shrimp_whisker": 13,
+      "barrel_hoop": 13,
+      "beetle_cap": 10,
+      "wolf_fur": 7,
+      "charcoal": 9,
+      "hermit_cap": 10,
+      "signal_quill": 12,
+      "spike_collar": 12,
+      "ash_silk": 11,
+      "gust_orb": 9,
+      "salt_crystal": 13,
+      "fungal_plate": 11,
+      "pony_mane": 13,
+      "glow_gill": 11,
+      "glow_mane": 11,
+      "puff_spore": 11,
+      "tumble_thorn": 13,
+      "red_cap": 11,
+      "toll_token": 13,
+      "gull_feather": 13,
+      "tomb_shard": 9,
+      "marmot_cheek": 13,
+      "spirit_wax": 8,
+      "bone_bundle": 9,
+      "sentry_bolt": 13,
+      "cloud_wool": 10,
+      "spark_tuft": 14,
+      "static_down": 16,
+      "rusty_crest": 10,
+      "wind_edge": 14,
+      "storm_feather": 12,
+      "bone_charm": 10,
+      "kite_cloth": 16,
+      "ray_tail": 16,
+      "frost_flake": 16,
+      "storm_cloud": 16,
+      "woven_twig": 11,
+      "frost_feather": 11,
+      "yeti_fluff": 11,
+      "goat_horn": 10,
+      "chime_tube": 12,
+      "wind_stone": 10,
+      "brass_bell": 10,
+      "snow_fur": 13,
+      "star_lens": 15,
+      "stone_feather": 15,
+      "toad_gland": 11,
+      "ram_horn": 12,
+      "pine_fur": 12,
+      "ice_horn": 14,
+      "ice_fang": 12,
+      "poison_tusk": 14,
+      "angler_lure": 14,
+      "cracked_lens": 17,
+      "acorn_helm": 15,
+      "barnacle_shell": 14,
+      "wet_moss": 14,
+      "maneater_pollen": 13,
+      "snake_skin": 13,
+      "mosquito_needle": 15,
+      "mother_pollen": 15,
+      "cracked_vial": 17,
+      "poison_silk": 17,
+      "sticky_dew": 15,
+      "toxic_wart": 14,
+      "slug_slime": 14,
+      "lava_rock": 11,
+      "blast_fuse": 16,
+      "cold_stew": 16,
+      "gatherer_glove": 16,
+      "spore_pod": 18,
+      "croc_tooth": 14,
+      "worn_compass": 16,
+      "miner_lamp": 16,
+      "crystal_wing": 16,
+      "rock_plate": 16,
+      "hush_ribbon": 16,
+      "viper_rattle": 17,
+      "shadow_quill": 18,
+      "ploughshare": 17,
+      "geode_shard": 17,
+      "rust_rivet": 17,
+      "brass_button": 19,
+      "inn_key": 17,
+      "ghost_feather": 17,
+      "mole_lamp": 17,
+      "rail_rivet": 17,
+      "ladybug_shell": 19,
+      "orange_core": 17,
+      "golem_core": 16,
+      "cart_wheel": 17,
+      "milestone_chip": 17,
+      "young_bud": 19,
+      "root_fiber": 19,
+      "dye_lump": 18,
+      "smoke_essence": 18,
+      "bell_collar": 18,
+      "drain_slime": 18,
+      "stolen_button": 18,
+      "venom_bulb": 17,
+      "rock_feather": 17,
+      "steam_pearl": 18,
+      "lava_sac": 18,
+      "mirage_glass": 19,
+      "fire_wing": 15,
+      "scorpion_sting": 13,
+      "sand_fin": 19,
+      "frill_scale": 17,
+      "antlion_jaw": 19,
+      "sand_orb": 17,
+      "salamander_scale": 16,
+      "cart_lantern": 21,
+      "guard_badge": 19,
+      "vendor_token": 19,
+      "eel_crust": 20,
+      "magma_core": 20,
+      "still_water": 21,
+      "rivet_wing": 21,
+      "sandstone_slab": 18,
+      "jelly_lamp": 20,
+      "stitched_hide": 20,
+      "raft_shell": 20,
+      "iron_scute": 20,
+      "bent_nail": 21,
+      "obsidian_flake": 20,
+      "cinder_heart": 20,
+      "tar_lump": 22,
+      "kappa_dish": 17,
+      "pen_nib": 25,
+      "lizard_frill": 22,
+      "rat_tail": 22,
+      "crayfish_claw": 17,
+      "willow_knot": 17,
+      "saw_tooth": 19,
+      "brass_cog": 19,
+      "black_wick": 19,
+      "glow_page": 22,
+      "cracked_jar": 21,
+      "carved_fang": 18,
+      "sack_rope": 19,
+      "sail_skin": 19,
+      "drawer_key": 22,
+      "ghost_rope": 18,
+      "ink_blade": 22,
+      "old_lampwick": 22,
+      "heron_plume": 17,
+      "woolly_tuft": 20,
+      "mist_veil": 17,
+      "mist_memory": 23,
+      "mantis_blade": 20,
+      "urchin_spine": 22,
+      "worm_plate": 19,
+      "anchor_chain": 22,
+      "raptor_claw": 19,
+      "coral_chunk": 23,
+      "fog_fang": 23,
+      "kraken_sucker": 23,
+      "wisp_ember": 23,
+      "puppet_finger": 27,
+      "magma_crust": 21,
+      "silent_clapper": 23,
+      "coil_spring": 27,
+      "keeper_wick": 23,
+      "wood_joint": 24,
+      "beetle_horn": 20,
+      "dragon_eggshell": 23,
+      "ptero_crest": 23,
+      "herald_knot": 21,
+      "tiny_wrench": 26,
+      "ancient_sap": 20,
+      "hound_root": 21,
+      "tiny_claw": 23,
+      "thief_plume": 23,
+      "dark_leaf": 25,
+      "ammonite_pearl": 23,
+      "black_root": 22,
+      "amber_chunk": 24,
+      "sweep_bristle": 24,
+      "club_tail": 24,
+      "stone_veil": 24,
+      "shadow_thread": 22,
+      "lava_belly": 20,
+      "clock_spring": 24,
+      "imp_fork": 19,
+      "plesio_flipper": 24,
+      "gold_string": 29,
+      "red_thread": 27,
+      "sun_plate": 29,
+      "clock_hand": 24,
+      "marble_shard": 24,
+      "bell_fuse": 17,
+      "bell_rope": 17,
+      "vane_arrow": 25,
+      "star_crystal": 32,
+      "meteor_pebble": 32,
+      "star_glass": 32,
+      "star_ember": 32,
+      "gold_clapper": 17,
+      "bell_shard": 17
+    },
+    "DUR": {
+      "max": 25000,
+      "per": 25000,
+      "base": 100,
+      "perLv2": 0.6,
+      "refStep": 0.1,
+      "k": 0.5
+    },
+    "SINK_K": 2,
+    "GEAR_SELL_K": 0.05,
+    "FIXED": {},
+    "WB_LATER": 0.2,
+    "WARP": {
+      "base": 20,
+      "perLv2": 0.15
+    },
+    "POT_K": 0.2,
+    "BREW": {
+      "junk": 2,
+      "coinK": 0.5
+    },
+    "REF_STEP": {
+      "low": 1,
+      "mid": 2
+    },
+    "ROW_K": 0.5,
+    "ROW_STAT_CAP": 10,
+    "rowOn": true,
+    "RUNE_K": 0.1,
+    "runeOn": false,
+    "BOSS_ARMOUR": true,
+    "NO_BREAK_GAP": 10,
+    "GAP_HOLD_K": 0.1,
+    "KIT_UNIT": 0.85,
+    "KIT_DEF": true,
+    "CHASE_M": 6,
+    "CHASE_RING": 320,
+    "CHASE_OUT": 240,
+    "AOE_CAP_N": 6,
+    "aoeCap": {
+      "hits": 0,
+      "capped": 0,
+      "dotCapped": 0,
+      "chk": 0,
+      "bad": 0
+    },
+    "DOT_TRUE": true,
+    "DOT_WIN": 1.2,
+    "KIT_STEAL_SCALE": true,
+    "lv0": 1
+  },
+  "faint": [
+    [
+      1,
+      0.01
+    ],
+    [
+      20,
+      0.01
+    ],
+    [
+      21,
+      0.01
+    ],
+    [
+      40,
+      0.01
+    ],
+    [
+      41,
+      0.007
+    ],
+    [
+      60,
+      0.007
+    ],
+    [
+      61,
+      0.005
+    ],
+    [
+      80,
+      0.005
+    ],
+    [
+      81,
+      0.0033
+    ],
+    [
+      98,
+      0.0033
+    ]
+  ],
+  "hpMul": [
+    [
+      1,
+      1
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      20,
+      1.4
+    ],
+    [
+      30,
+      1.4
+    ],
+    [
+      40,
+      1.51
+    ],
+    [
+      50,
+      2.19
+    ],
+    [
+      60,
+      2.14
+    ],
+    [
+      70,
+      1.62
+    ],
+    [
+      80,
+      1.42
+    ],
+    [
+      90,
+      0.75
+    ],
+    [
+      99,
+      0.78
+    ]
+  ],
+  "party": {
+    "pot": [
+      [
+        2,
+        1.05
+      ],
+      [
+        3,
+        1.05
+      ],
+      [
+        4,
+        1.05
+      ]
+    ],
+    "support": 0
+  },
+  "dropK": {
+    "normal": 1,
+    "boss": 1
+  },
+  "bossK": {
+    "lava_dragon": 0.2
+  },
+  "wtypes": {
+    "sword": "Sword",
+    "gsword": "Greatsword",
+    "spear": "Spear",
+    "lance": "Long Spear",
+    "axe": "Axe",
+    "gaxe": "Giant Axe",
+    "hammer": "Giant Hammer",
+    "mace": "Mace",
+    "dagger": "Twin Daggers",
+    "katar": "Katar",
+    "bow": "Bow",
+    "xbow": "Crossbow",
+    "staff": "Rod",
+    "orb": "Orb",
+    "lantern": "Lantern",
+    "book": "Tome",
+    "knuckle": "Knuckles",
+    "qstaff": "Quarterstaff",
+    "huuma": "Giant Star",
+    "dsword": "Twin Swords",
+    "bell": "Spirit Bell",
+    "instrument": "Instrument",
+    "whip": "Whip",
+    "pistol": "Twin Pistols",
+    "shotgun": "Shotgun",
+    "scythe": "Great Scythe",
+    "sickle": "Twin Scythes",
+    "puppet": "Puppet Control Bar",
+    "wire": "Iron Thread",
+    "torch": "Torch"
+  },
+  "races": {
+    "plant": "Plant",
+    "brute": "Beast",
+    "insect": "Insect",
+    "undead": "Undead",
+    "spirit": "Ghost",
+    "formless": "Formless",
+    "dragon": "Dragon"
+  },
+  "elements": {
+    "neutral": "Neutral",
+    "water": "Water",
+    "earth": "Earth",
+    "fire": "Fire",
+    "wind": "Wind",
+    "poison": "Poison",
+    "holy": "Holy",
+    "shadow": "Shadow",
+    "ghost": "Ghost",
+    "undead": "Undead"
+  }
+}

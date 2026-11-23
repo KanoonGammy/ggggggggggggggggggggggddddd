@@ -1,0 +1,273 @@
+[
+  {
+    "page": "index.html",
+    "url": "https://play.nightcamp.app/wiki/index.html",
+    "title": "Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 9930,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/wiki.js?v=c2cce5b7da"
+    ]
+  },
+  {
+    "page": "season2.html",
+    "url": "https://play.nightcamp.app/wiki/season2.html",
+    "title": "Season 2 · Night Camp Wiki",
+    "description": "Night Camp Season 2 (version 0.2): patch notes, Blood Moon Night, map events, the Camp Calendar, armour and pierce, runes, keystones, relics, the smelter, work orders and the mines.",
+    "bytes": 7915,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_season2.js?v=63abdbe083"
+    ]
+  },
+  {
+    "page": "guide.html",
+    "url": "https://play.nightcamp.app/wiki/guide.html",
+    "title": "Beginner Guide · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 6677,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_guide.js?v=da85748f9b"
+    ]
+  },
+  {
+    "page": "jobs.html",
+    "url": "https://play.nightcamp.app/wiki/jobs.html",
+    "title": "Jobs · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7570,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_jobs.js?v=4b2bf410a3"
+    ]
+  },
+  {
+    "page": "skills.html",
+    "url": "https://play.nightcamp.app/wiki/skills.html",
+    "title": "Skills · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7367,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_skills.js?v=201dd12101"
+    ]
+  },
+  {
+    "page": "runes.html",
+    "url": "https://play.nightcamp.app/wiki/runes.html",
+    "title": "Runes · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7998,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_runes.js?v=f11d398e7c"
+    ]
+  },
+  {
+    "page": "weapons.html",
+    "url": "https://play.nightcamp.app/wiki/weapons.html",
+    "title": "Weapons · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7091,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_weapons.js?v=e16bcf6c63"
+    ]
+  },
+  {
+    "page": "outfits.html",
+    "url": "https://play.nightcamp.app/wiki/outfits.html",
+    "title": "Outfits & Dressing Room · Night Camp Wiki",
+    "description": "Try Night Camp outfits with the combined Pants + Shoes item, matching 2-piece and 3-piece set bonuses, and new character art previews.",
+    "bytes": 8955,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/doll.min.js?v=9805af960d",
+      "js/sharecard.js?v=c22518b2f1",
+      "js/stage.js?v=bd5b20a358",
+      "js/equipment.js",
+      "js/p_outfits.js?v=331c1eb102",
+      "js/p_gallery.js?v=9ac939117b"
+    ]
+  },
+  {
+    "page": "hats.html",
+    "url": "https://play.nightcamp.app/wiki/hats.html",
+    "title": "Hats · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7836,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/doll.min.js?v=9805af960d",
+      "js/p_hats.js?v=613bf25cb3"
+    ]
+  },
+  {
+    "page": "monsters.html",
+    "url": "https://play.nightcamp.app/wiki/monsters.html",
+    "title": "Monsters · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7002,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_monsters.js?v=28e5c598f3"
+    ]
+  },
+  {
+    "page": "monskills.html",
+    "url": "https://play.nightcamp.app/wiki/monskills.html",
+    "title": "Monster Skills · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 8889,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_monskills.js?v=d607bb88e6"
+    ]
+  },
+  {
+    "page": "lorebook.html",
+    "url": "https://play.nightcamp.app/wiki/lorebook.html",
+    "title": "Lore Book · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 9107,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_lore.js?v=23fe09cae4"
+    ]
+  },
+  {
+    "page": "maps.html",
+    "url": "https://play.nightcamp.app/wiki/maps.html",
+    "title": "Maps · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7643,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_maps.js?v=e0661adc7b"
+    ]
+  },
+  {
+    "page": "drops.html",
+    "url": "https://play.nightcamp.app/wiki/drops.html",
+    "title": "Drops · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7388,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_drops.js?v=74abbd5df9"
+    ]
+  },
+  {
+    "page": "quests.html",
+    "url": "https://play.nightcamp.app/wiki/quests.html",
+    "title": "Quests · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7947,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_quests.js?v=1a5a7cf007"
+    ]
+  },
+  {
+    "page": "life.html",
+    "url": "https://play.nightcamp.app/wiki/life.html",
+    "title": "Life Skills · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 7439,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_life.js?v=d30dd344f6"
+    ]
+  },
+  {
+    "page": "systems.html",
+    "url": "https://play.nightcamp.app/wiki/systems.html",
+    "title": "Game Systems · Night Camp Wiki",
+    "description": "Night Camp Wiki: jobs, skills, weapons, outfits, hats, monsters, maps, drops, quests and every system of the game, in one place.",
+    "bytes": 6725,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/p_systems.js?v=678ee996bc"
+    ]
+  },
+  {
+    "page": "gallery.html",
+    "url": "https://play.nightcamp.app/wiki/gallery.html",
+    "title": "Camp Looks · Night Camp Wiki",
+    "description": "Looks Night Camp players made in the Dressing Room and published: give hearts, leave comments and try any look on.",
+    "bytes": 8776,
+    "scripts": [
+      "data/wiki_en.js?v=807a0e8776",
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6",
+      "js/common.js?v=c4ef408063",
+      "js/doll.min.js?v=9805af960d",
+      "js/stage.js?v=bd5b20a358",
+      "js/equipment.js",
+      "js/p_gallery.js?v=9ac939117b"
+    ]
+  },
+  {
+    "page": "terms.html",
+    "url": "https://play.nightcamp.app/wiki/terms.html",
+    "title": "Content & Asset Use · Night Camp Wiki",
+    "description": "How Night Camp Wiki content and character artwork may be viewed and shared, and what requires permission from its rights holders.",
+    "bytes": 7354,
+    "scripts": [
+      "js/lang.js?v=712a7eb65a",
+      "js/shell.js?v=f388d47bb6"
+    ]
+  }
+]

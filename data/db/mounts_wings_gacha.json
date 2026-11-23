@@ -1,0 +1,588 @@
+{
+  "mounts": {
+    "list": [
+      {
+        "id": "sheep",
+        "n": "Black Sheep",
+        "t": "common"
+      },
+      {
+        "id": "scarecrow_pony",
+        "n": "Scarecrow Horse",
+        "t": "common"
+      },
+      {
+        "id": "robo_cat",
+        "n": "Robot Cat",
+        "t": "rare"
+      },
+      {
+        "id": "hover_sled",
+        "n": "Sky Jet Sled",
+        "t": "epic"
+      },
+      {
+        "id": "ride_armor",
+        "n": "Walking Armor",
+        "t": "legendary"
+      },
+      {
+        "id": "jet_board",
+        "n": "Mini Puppet Jetboard",
+        "t": "rare"
+      }
+    ],
+    "rule": {
+      "call": 1,
+      "lock": 5,
+      "bonus": 0.3,
+      "hits": 3,
+      "hitsIn": 5,
+      "stride": 120,
+      "trickAfter": 8
+    },
+    "tiers": [
+      {
+        "id": "common",
+        "n": "Common",
+        "spd": 0.2,
+        "odds": 70,
+        "stars": 3,
+        "col": "#6d7079"
+      },
+      {
+        "id": "rare",
+        "n": "Rare",
+        "spd": 0.23,
+        "odds": 22,
+        "stars": 5,
+        "col": "#2c70c4"
+      },
+      {
+        "id": "epic",
+        "n": "Epic",
+        "spd": 0.26,
+        "odds": 7,
+        "stars": 10,
+        "col": "#8444cc"
+      },
+      {
+        "id": "legendary",
+        "n": "Legend",
+        "spd": 0.3,
+        "odds": 1,
+        "stars": 20,
+        "col": "#c97d10"
+      }
+    ],
+    "box": {
+      "n": "Mount Mystery Box",
+      "pity": 40,
+      "most": 10
+    }
+  },
+  "wings": {
+    "tiers": {
+      "common": {
+        "n": "Common",
+        "col": "#6d7079",
+        "odds": 68,
+        "dup": 1,
+        "fx": false
+      },
+      "uncommon": {
+        "n": "Uncommon",
+        "col": "#2f8f49",
+        "odds": 0,
+        "dup": 2,
+        "fx": false
+      },
+      "rare": {
+        "n": "Rare",
+        "col": "#2c70c4",
+        "odds": 18,
+        "dup": 3,
+        "fx": false
+      },
+      "epic": {
+        "n": "Epic",
+        "col": "#8444cc",
+        "odds": 9,
+        "dup": 5,
+        "fx": true
+      },
+      "legendary": {
+        "n": "Legendary",
+        "col": "#c97d10",
+        "odds": 5,
+        "dup": 10,
+        "fx": true
+      },
+      "mystic": {
+        "n": "Mythic",
+        "col": "#d13f6d",
+        "odds": 0,
+        "dup": 20,
+        "fx": true
+      }
+    },
+    "list": [
+      {
+        "id": "c_rag",
+        "n": "Rag Wings",
+        "tier": "common"
+      },
+      {
+        "id": "c_paper",
+        "n": "Paper Wings",
+        "tier": "common"
+      },
+      {
+        "id": "c_hen",
+        "n": "Chicken Wings",
+        "tier": "common"
+      },
+      {
+        "id": "c_leaf",
+        "n": "Leaf Wings",
+        "tier": "common"
+      },
+      {
+        "id": "u_sparrow",
+        "n": "Sparrow Wings",
+        "tier": "common"
+      },
+      {
+        "id": "u_bat",
+        "n": "Wild Bat Wings",
+        "tier": "common"
+      },
+      {
+        "id": "u_beetle",
+        "n": "Leaf Beetle Wings",
+        "tier": "common"
+      },
+      {
+        "id": "u_reed",
+        "n": "Woven Reed Wings",
+        "tier": "common"
+      },
+      {
+        "id": "r_falcon",
+        "n": "Storm Hawk Wings",
+        "tier": "rare"
+      },
+      {
+        "id": "r_lacquer",
+        "n": "Red Lacquer Wings",
+        "tier": "rare"
+      },
+      {
+        "id": "r_moth",
+        "n": "Silver Butterfly Wings",
+        "tier": "rare"
+      },
+      {
+        "id": "r_gear",
+        "n": "Copper Gear Wings",
+        "tier": "rare"
+      },
+      {
+        "id": "e_frost",
+        "n": "Ice Scale Wings",
+        "tier": "epic"
+      },
+      {
+        "id": "e_dragon",
+        "n": "Ember Dragon Wings",
+        "tier": "epic"
+      },
+      {
+        "id": "e_venom",
+        "n": "Spirit Venom Wings",
+        "tier": "epic"
+      },
+      {
+        "id": "e_thunder",
+        "n": "Lightning Blade Wings",
+        "tier": "epic"
+      },
+      {
+        "id": "l_phoenix",
+        "n": "Dusk Phoenix Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_tree",
+        "n": "Dark Tree Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_royal",
+        "n": "Midnight King Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_bone",
+        "n": "Bone Goddess Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "m_void",
+        "n": "Void Rift Wings",
+        "tier": "mystic"
+      },
+      {
+        "id": "m_galaxy",
+        "n": "Galaxy Wings",
+        "tier": "mystic"
+      },
+      {
+        "id": "m_prism",
+        "n": "Prism Wings",
+        "tier": "mystic"
+      },
+      {
+        "id": "m_moon",
+        "n": "Broken Moon Wings",
+        "tier": "mystic"
+      },
+      {
+        "id": "l_phoenix_og",
+        "n": "OG Phoenix Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_tree_og",
+        "n": "OG Tree Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_royal_og",
+        "n": "OG Royal Wings",
+        "tier": "legendary"
+      },
+      {
+        "id": "l_bone_og",
+        "n": "OG Bone Wings",
+        "tier": "legendary"
+      }
+    ]
+  },
+  "gacha": {
+    "rates": [
+      [
+        "top",
+        2
+      ],
+      [
+        "hat",
+        18
+      ],
+      [
+        "dmgskin",
+        10
+      ],
+      [
+        "floater",
+        6
+      ],
+      [
+        "wing",
+        6
+      ],
+      [
+        "coins",
+        19
+      ],
+      [
+        "tokens",
+        19
+      ],
+      [
+        "feather",
+        20
+      ]
+    ],
+    "pity": 60,
+    "one": 150,
+    "ten": 1350,
+    "starPick": 120,
+    "dupTop": 20,
+    "dupHat": 5,
+    "pool": {
+      "top": 48,
+      "hats": 61
+    },
+    "floaters": {
+      "tiers": [
+        {
+          "t": "common",
+          "w": 50,
+          "stars": 3,
+          "n": "Common",
+          "looks": [
+            "Paper Crane",
+            "Patched Sock Puppet",
+            "Chick in an Eggshell",
+            "Sprouting Acorn",
+            "Hamster in a Bubble",
+            "Balloon Pufferfish"
+          ]
+        },
+        {
+          "t": "rare",
+          "w": 30,
+          "stars": 5,
+          "n": "Rare",
+          "looks": [
+            "Storm Falcon Compass",
+            "Red Lacquer Fan",
+            "Silver Moth Lantern",
+            "Copper Gear Pocket Watch",
+            "Sleepy Owlet",
+            "Bat-Winged Black Kitten"
+          ]
+        },
+        {
+          "t": "epic",
+          "w": 15,
+          "stars": 10,
+          "n": "Epic",
+          "looks": [
+            "Frost Sprite",
+            "Ember Dragon Egg",
+            "Soulfire Skull Lantern",
+            "Thunder Cloud",
+            "Sky Koi",
+            "Wisp-Tail Fox"
+          ]
+        },
+        {
+          "t": "legendary",
+          "w": 5,
+          "stars": 20,
+          "n": "Legendary",
+          "looks": [
+            "Dusk Phoenix Chick",
+            "Heart of the Dark Tree",
+            "Midnight King's Crown",
+            "Bone Goddess Cage Lantern",
+            "Moon Dragon Hatchling"
+          ]
+        }
+      ],
+      "pass": [
+        {
+          "lv": 15,
+          "n": "Chick in an Eggshell",
+          "t": "common"
+        },
+        {
+          "lv": 25,
+          "n": "Sleepy Owlet",
+          "t": "rare"
+        },
+        {
+          "lv": 35,
+          "n": "Wisp-Tail Fox",
+          "t": "epic"
+        },
+        {
+          "lv": 50,
+          "n": "Moon Dragon Hatchling",
+          "t": "legendary"
+        }
+      ]
+    },
+    "gem": "Moon Gems"
+  },
+  "checkin": [
+    {
+      "day": 1,
+      "k": "coins",
+      "n": "Coins",
+      "q": 1000
+    },
+    {
+      "day": 2,
+      "k": "red",
+      "n": "Red Potion",
+      "q": 10
+    },
+    {
+      "day": 3,
+      "k": "coins",
+      "n": "Coins",
+      "q": 2000
+    },
+    {
+      "day": 4,
+      "k": "feather",
+      "n": "Warm Breath Feather",
+      "q": 1
+    },
+    {
+      "day": 5,
+      "k": "blue",
+      "n": "Blue Potion",
+      "q": 10
+    },
+    {
+      "day": 6,
+      "k": "coins",
+      "n": "Coins",
+      "q": 5000
+    },
+    {
+      "day": 7,
+      "k": "opt",
+      "n": "Option Stone",
+      "q": 1
+    },
+    {
+      "day": 8,
+      "k": "coins",
+      "n": "Coins",
+      "q": 3000
+    },
+    {
+      "day": 9,
+      "k": "red",
+      "n": "Red Potion",
+      "q": 20
+    },
+    {
+      "day": 10,
+      "k": "feather",
+      "n": "Warm Breath Feather",
+      "q": 2
+    },
+    {
+      "day": 11,
+      "k": "coins",
+      "n": "Coins",
+      "q": 8000
+    },
+    {
+      "day": 12,
+      "k": "blue",
+      "n": "Blue Potion",
+      "q": 20
+    },
+    {
+      "day": 13,
+      "k": "opt",
+      "n": "Option Stone",
+      "q": 2
+    },
+    {
+      "day": 14,
+      "k": "tokens",
+      "n": "Season Emblem",
+      "q": 50
+    },
+    {
+      "day": 15,
+      "k": "coins",
+      "n": "Coins",
+      "q": 10000
+    },
+    {
+      "day": 16,
+      "k": "red",
+      "n": "Red Potion",
+      "q": 30
+    },
+    {
+      "day": 17,
+      "k": "feather",
+      "n": "Warm Breath Feather",
+      "q": 3
+    },
+    {
+      "day": 18,
+      "k": "coins",
+      "n": "Coins",
+      "q": 15000
+    },
+    {
+      "day": 19,
+      "k": "opt",
+      "n": "Option Stone",
+      "q": 3
+    },
+    {
+      "day": 20,
+      "k": "blue",
+      "n": "Blue Potion",
+      "q": 30
+    },
+    {
+      "day": 21,
+      "k": "tokens",
+      "n": "Season Emblem",
+      "q": 100
+    },
+    {
+      "day": 22,
+      "k": "coins",
+      "n": "Coins",
+      "q": 20000
+    },
+    {
+      "day": 23,
+      "k": "feather",
+      "n": "Warm Breath Feather",
+      "q": 4
+    },
+    {
+      "day": 24,
+      "k": "opt",
+      "n": "Option Stone",
+      "q": 4
+    },
+    {
+      "day": 25,
+      "k": "coins",
+      "n": "Coins",
+      "q": 30000
+    },
+    {
+      "day": 26,
+      "k": "tokens",
+      "n": "Season Emblem",
+      "q": 150
+    },
+    {
+      "day": 27,
+      "k": "drill",
+      "n": "Option Socket Stone",
+      "q": 1
+    },
+    {
+      "day": 28,
+      "k": "title",
+      "n": "Title",
+      "q": 1
+    }
+  ],
+  "sbBig": [
+    "sb_ivy",
+    "sb_morrow",
+    "sb_raven",
+    "sb_halvard",
+    "sb_ignis",
+    "sb_vosse",
+    "sb_gareth",
+    "sb_aldric",
+    "sb_gorm",
+    "sb_candle",
+    "sb_quill",
+    "sb_nocturne",
+    "sb_puppet1",
+    "sb_puppet6",
+    "sb_severin",
+    "sb_lumen3"
+  ]
+}

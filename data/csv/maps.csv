@@ -1,0 +1,177 @@
+﻿id,n,name_th,lv,kind,parent,secret,region,pin_x,pin_y,zones,monster_ids
+camp,Forest Camp,ค่ายกลางป่า,Safe Zone,camp,,False,woods,45.2,50,,
+meadow,Moonlit Meadow,ทุ่งหญ้าแสงจันทร์,Lv 8–18,field,,False,woods,35.6,50,Windmill Village|Moonlit Lotus Marsh,slime_blue|slime_honey|bee|scarecrow|selene
+woods,Glowshroom Forest,ป่าเห็ดเรืองแสง,Lv 25–40 · boss Lv 50,field,,False,woods,35.6,39.57,Sprite Mushroom Village|Mushroom King Yard|Moonshadow Marsh,slime_glow|slime_stone|moth|stump|wolf|mushling|mushking|silas
+canyon,Red Rock Cliffs,ผาหินแดง,Lv 60–72,field,,False,south,32,50,Abandoned Orange Crystal Mine,slime_lava|scorpion|golem|skeleton|sb_gareth|bartho
+farm,Pumpkin Patch,ไร่ฟักทอง,Lv 1–10,field,,False,woods,54.8,50,Roadside Slime Field|Farm Front Meadow|Farmhouse Yard|Cornfield|Pear Orchard|Giant Pumpkin Patch,pumpkin|carrot|crow|slime_green|bat|boar|scarecrow
+marsh,Clearbrook Frog Marsh,บึงกบลำธารใส,Lv 12–24,field,,False,woods,64.4,50,Fishermen's Dock|Great Lotus Marsh|Stone Frog Yard,frog|slime_blue|crab|dragonfly|turtle|merrick
+graveyard,Ruined Chapel Graveyard,เนินสุสานโบสถ์ร้าง,Lv 18–30,field,,False,woods,54.8,60.43,Ruined Chapel Yard|Old Grave Row|Nameless Graveyard,zombie|bat|skeleton|ghost|tombstone|victor
+burnt,Smoldering Burnt Forest,ป่าไหม้ถ่านคุ,Lv 35–45,field,,False,high,32,63.04,Charcoal Burning Yard|Ashfield,slime_lava|ash_wisp|ember_fox|char_stump|cassian
+wind,Whistlewind Cliff Plains,ทุ่งลมหวีดหน้าผา,Lv 42–52,field,,False,high,44,63.04,Shepherd's Hut|Windswept Cliff Top|Ancient Stone Circle,gust_sprite|bee|cloud_ram|storm_eagle|falk
+prime,Primeval Forest,ป่าดึกดำบรรพ์,Lv 88–99,field,,False,high,44,50,Explorers' Camp|Egg Nest Valley|Heart of the Ancient Forest,raptor|wolf|rhino_beetle|elder_treant|talon
+swamp,Poison Mangrove Swamp,หนองพิษป่าชายเลน,Lv 50–62,field,,False,south,80,50,Bog Witch's Hut|Heart of the Poison Swamp,poison_toad|slime_glow|swamp_snake|maneater|oswin
+lake,Shadowmist Lake,ทะเลสาบหมอกเงา,Lv 78–90,field,,False,high,80,63.04,Old Harbor|North of the Thick Mist,kappa|bat|mist_wraith|shadow_heron|lyria
+volcano,Sleeping Volcano,ภูเขาไฟหลับ,Lv 70–82,field,,False,south,32,63.04,Abandoned Smithy|Dragon Tomb,slime_lava|fire_bat|salamander|magma_golem|scorpion|drakos
+batcave,Meadowside Bat Cave,ถ้ำค้างคาวริมทุ่ง,Lv 8–16,dungeon,meadow,False,,,,,slime_stone|bat|echo_bat|cave_spider|mother_bat|bat_crimson
+batnest,Bat King's Roost,รังราชาค้างคาว,Lv 16–22 · Secret dungeon,dungeon,batcave,True,,,,,bat|cave_spider|bat_king
+antmine1,Ant Mine B1,เหมืองมด ชั้น B1,Lv 15–25,dungeon,farm,False,,,,,worker_ant|slime_stone|dig_ant|soldier_ant|nurse_ant
+antmine2,Ant Mine B2,เหมืองมด ชั้น B2,Lv 25–38,dungeon,antmine1,False,,,,,worker_ant|flying_ant|bomb_ant|soldier_ant|nurse_ant|dig_ant
+antmine3,Ant Mine B3 · Queen's Nest,เหมืองมด ชั้น B3 · รังนางพญา,Lv 38–50 · Boss Lv 50,dungeon,antmine2,False,,,,,worker_ant|flying_ant|bomb_ant|soldier_ant|ant_obsidian|nurse_ant|ant_queen
+crypt1,Catacombs F1,สุสานใต้ดิน ชั้น 1,Lv 34–44,dungeon,graveyard,False,,,,,zombie|skeleton|candle_wisp|bone_pile|bone_knight|ghost|tomb_knight
+crypt2,Catacombs F2 · King's Chamber,สุสานใต้ดิน ชั้น 2 · ห้องราชา,Lv 44–52 · Boss Lv 55,dungeon,crypt1,False,,,,,skeleton|candle_wisp|bone_pile|bone_knight|ghost|bone_shaman|tomb_knight|knight_rust|crypt_lord
+lavavent1,Volcano Crater F1,ปล่องภูเขาไฟ ชั้น 1,Lv 80–90,dungeon,volcano,False,,,,,fire_bat|slime_lava|magma_blob|lava_worm|fire_imp|salamander|lava_imp
+lavavent2,Volcano Crater F2 · Dragon Den,ปล่องภูเขาไฟ ชั้น 2 · ถ้ำมังกร,Lv 90–99 · Boss Lv 99,dungeon,lavavent1,False,,,,,fire_bat|fire_imp|magma_blob|lava_worm|magma_golem|lava_imp|imp_blue|lava_dragon
+road,Migrant Road,ถนนผู้อพยพ,Lv 32–42,field,,False,north,36.29,57.45,Roadside Rest Pavilion|Wrecked Wagon Train,giant_crow|crow|caravan_bandit|hollow_horse|rowan
+salt,Salt Bridge Checkpoint,ด่านสะพานเกลือ,Lv 36–48,field,,False,north,50,57.45,Crossing Wait Yard|Salt Warehouse|Warden's Castle,hound|giant_crow|toll_guard|salt_mole|sb_halvard|iris
+peak,Northmist Peak,ยอดเขาหมอกเหนือ,Lv 46–58,field,,False,north,50,42.55,Storm Shelter|Blizzard Ridge,storm_spirit|snow_wolf|ice_goat|inga
+nroad,Northward Trail,เส้นทางขึ้นเหนือ,Lv 60–72,field,,False,north,63.71,42.55,The House With a Lantern Still Lit|Abandoned Village,shadow_crow|hollow_villager|elwin
+outer,Outer Wall District,ย่านนอกกำแพง,Lv 68–82,field,,False,bell,30.8,60.43,Fountain Square|City Gate,city_hound|hollow_guard|hollow_carthorse|sb_aldric|rook
+canal,Canal District,ย่านริมคลอง,Lv 74–86,field,,False,bell,50,60.43,Small Harbor|Candle Works,canal_rat|candle_minion|light_filler|sb_candle|pip
+isle,Lake Island,เกาะกลางทะเลสาบ,Lv 84–92,field,,False,high,44,89.13,Island Harbor|Old Stone Tower,mist_citizen|mist_wraith|sb_nocturne|orla
+dark,Pitch-Black Southern Forest,ป่าใต้ที่มืดสนิท,Lv 86–96,field,,False,woods,35.6,60.43,Dark Forest Entrance|Camp with the Fire Out,shadow_crow|slime_glow|lightless_deer|ghost|faceless_puppet|sb_puppet1|nyx
+cathedral,Temple District,ย่านวิหาร,Lv 92–99,field,,False,bell,69.2,60.43,Temple District Gate|Backfence Slums|White Bell Yard,cardinal_puppet|temple_soldier|canal_rat|sb_severin|casper
+owl1,Owl Observatory F1,หอดูดาวนกฮูก ชั้น 1,Lv 50–54,dungeon,peak,False,,,,,stone_owl|walking_scope|hollow_stargazer|owlet_lead
+owl2,Owl Observatory F2,หอดูดาวนกฮูก ชั้น 2,Lv 53–56,dungeon,owl1,False,,,,,stone_owl|walking_scope|hollow_stargazer|owlet_lead
+owl3,Owl Observatory F3 · Star Dome,หอดูดาวนกฮูก ชั้น 3 · โดมดาว,Lv 55–58 · Boss Lv 58,dungeon,owl2,False,,,,,stone_owl|storm_spirit|walking_scope|hollow_stargazer|owl_star|sb_vosse
+ledger1,Temple Ledger Hall F1,หอบัญชีใต้วิหาร ชั้น 1,Lv 78–83,dungeon,canal,False,,,,,flying_book|paper_blade|ink_drop|hollow_lamplighter|cabinet_guard
+ledger2,Temple Ledger Hall F2 · Ledger Room,หอบัญชีใต้วิหาร ชั้น 2 · ห้องบัญชี,Lv 82–88 · Boss Lv 88,dungeon,ledger1,False,,,,,paper_blade|flying_book|ink_drop|hollow_lamplighter|cabinet_guard|book_gold|sb_quill
+puppet1,Temple Puppet Works F1 · Cells,โรงหุ่นใต้วิหาร ชั้น 1 · ห้องขัง,Lv 88–91,dungeon,cathedral,False,,,,,wooden_hand|faceless_puppet|spring_bomb|thread_binder|repair_puppet|sb_puppet2|sb_puppet3
+puppet2,Temple Puppet Works F2 · Workbench,โรงหุ่นใต้วิหาร ชั้น 2 · โต๊ะช่าง,Lv 90–94,dungeon,puppet1,False,,,,,wooden_hand|spring_bomb|thread_binder|faceless_puppet|repair_puppet|puppet_black|sb_puppet4|sb_puppet5|sb_puppet6
+grave1,Star Pit F1 · Glass Floor,หลุมดาว ชั้น 1 · พื้นแก้ว,Lv 97–99,dungeon,wind,False,,,,,star_crystal|tiny_meteor|first_lamplighter|glass_warden
+grave2,Star Pit F2 · Heart of the Star,หลุมดาว ชั้น 2 · ใจกลางดาว,Lv 99 · World Boss,dungeon,grave1,False,,,,,star_crystal|tiny_meteor|first_lamplighter|glass_warden|lamplighter_gold|sb_aurel
+bell1,Bell Tower F1,หอระฆัง ชั้น 1,Lv 94–96,dungeon,cathedral,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead
+bell2,Bell Tower F2,หอระฆัง ชั้น 2,Lv 95–97,dungeon,bell1,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead
+bell3,Bell Tower F3,หอระฆัง ชั้น 3,Lv 96–98,dungeon,bell2,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead
+bell4,Bell Tower F4,หอระฆัง ชั้น 4,Lv 97–99,dungeon,bell3,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
+bell5,Bell Tower F5,หอระฆัง ชั้น 5,Lv 98–99,dungeon,bell4,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
+bell6,Bell Tower F6,หอระฆัง ชั้น 6,Lv 99–99,dungeon,bell5,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
+bell7,Bell Tower F7 · Summit,หอระฆัง ชั้น 7 · ยอดหอ,Lv 99–99 · Boss Lv 99,dungeon,bell6,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver|hundred_string
+farm2,Abandoned Hillside Farm,ไร่ร้างหลังเขา,Lv 10–18,field,,False,woods,54.8,39.57,Way Down to the Pumpkin Farm|Collapsed Barn,potato_walker|field_mouse|bucket_scarecrow|angry_rooster|sunflower_bee|crow_red|harlock
+meadow2,Nightbloom Hill,เนินดอกไม้กลางคืน,Lv 14–22,field,,False,woods,26,39.57,Path Back to the Meadow|Hilltop Flower Arbor,seed_flower|firefly_healer|horn_rabbit|sleep_moth|hedgehog|boar_silver|selene
+marsh2,Brook Source,ต้นลำธาร,Lv 20–28,field,,False,woods,64.4,39.57,Riverside Mill,leap_trout|spit_frog|split_shroom|otter|kingfisher|turtle_jade|merrick
+marsh3,Firefly Falls,น้ำตกหิ่งห้อย,Lv 26–34 · Boss Lv 34,field,,False,woods,54.8,29.13,Waterfall's End|Waterfall Pool,mist_sprite|mud_eel|shield_crab|water_newt|dragonfly_lead|dragonfly_rainbow|frog_queen|merrick
+graveyard2,Old Graveyard Behind the Hill,สุสานเก่าหลังเนิน,Lv 28–38,field,,False,woods,54.8,70.87,Old Graveyard Gate|Old Royal Tomb,grave_crow|bone_archer|grave_digger|coffin_bomb|candle_witch|zombie_mold|ghost_violet|sb_morrow|victor
+woods2,Inner Mushroom Forest,ป่าเห็ดชั้นใน,Lv 36–46,field,,False,woods,26,29.13,Path Back to the Mushroom Forest|Deep Mushroom Ring,glow_spider|doctor_shroom|puff_shroom|shroom_beetle|shroom_wolf|stump_shroom|wolf_frost|silas
+wind2,Windborne Rock Isle,เกาะหินลอยลม,Lv 44–54,field,,False,high,44,76.09,Cliff Entrance|Far Floating Isle,storm_sparrow|blade_sprite|float_rock|cliff_goat|cloud_ram_lead|eagle_bolt|falk
+swamp2,Venom Mother Roots,รากต้นแม่พิษ,Lv 56–66,field,,False,south,20,89.13,Poison Bog Edge|Beneath the Poison Mother's Roots,mosquito|mother_bloom|bloat_toad|split_slug|swamp_croc|snake_triple|oswin
+canyon2,Orange Crystal Deep Mine,เหมืองลึกผลึกส้ม,Lv 62–72,field,,False,south,20,50,Deep Mine Entrance|Great Crystal Chamber,crystal_bat|ghost_miner|crystal_mole|crystal_golem|haunted_cart|golem_crystal|bartho
+canyon3,Heart of the Canyon,ใจกลางหุบผา,Lv 70–80 · Boss Lv 80,field,,False,south,8,50,Wanderers' Tent|Scorpion King Pit,stone_vulture|spit_scorpion|sand_giant|dust_devil|sand_lizard|scorpion_copper|scorpion_king|bartho
+prime2,Dragon Egg Lake,ทะเลสาบไข่มังกร,Lv 88–98 · Boss Lv 98,field,,False,high,44,36.96,Path Back to the Ancient Forest|Dragon Nest Side,pterosaur|hatchling|ankylo|plesio|tiny_dino|raptor_plume|dragon_mother|talon
+roots1,Venom Root Cave B1,ถ้ำรากแม่พิษ B1,Lv 62–68,dungeon,swamp2,False,,,,,poison_spore|poison_ladybug|root_worm|bloom_sprout|split_slug
+roots2,Venom Root Cave B2 · Heart,ถ้ำรากแม่พิษ B2 · หัวใจ,Lv 68–74 · Boss Lv 75,dungeon,roots1,False,,,,,poison_spore|poison_ladybug|root_worm|bloom_sprout|mother_bloom|poison_heart
+cornmaze,Corn Maze,เขาวงกตข้าวโพด,Lv 10–18,field,,False,woods,64.4,29.13,Giant Scarecrow Yard|Maze Entrance|In the Labyrinth|Outer Cornfield,popcorn_pod|crow|straw_shooter|scarecrow|angry_rooster|straw_shooter_ember|harlock
+pens,Abandoned Pens,คอกสัตว์ร้าง,Lv 10–18,field,,False,woods,64.4,70.87,Black Sheep Pen|Ruined Stable|Road to the Threshing Yard,potato_walker|crow_red|black_ewe|stitch_doll|bucket_scarecrow|black_ewe_frost|harlock
+tallgrass,Head-High Grassland,ทุ่งหญ้าสูงท่วมหัว,Lv 14–22,field,,False,woods,16.4,29.13,Stone Circle in the Field|Tall Grass Field Edge,grass_lurker|slime_blue|moon_hare|horn_rabbit|sleep_moth|moon_hare_eclipse|hedgehog|selene
+battlefield,Old Battlefield,สนามรบเก่ากลางทุ่ง,Lv 14–22,field,,False,woods,6.8,29.13,Broken Sword Memorial|Battlefield Descent,crow|slime_honey|bee|rusty_squire|banner_wraith|boar_silver|scarecrow|rusty_squire_gold|sb_ivy|selene
+stiltvillage,Abandoned Stilt Village,หมู่บ้านเรือนเสาร้าง,Lv 20–28,field,,False,woods,74,39.57,Pillar-House Village Center|Wooden Bridge Entrance,mud_leech|frog|drowned_fisher|crab|otter|mud_leech_red|kingfisher|merrick
+weepgarden,Weeping Statue Garden,สวนรูปปั้นร้องไห้,Lv 28–38,field,,False,woods,45.2,70.87,Weeping Fountain|Statue Garden Gate,grave_moth|bat|weeping_statue|ghost|candle_witch|weeping_statue_jade|ghost_violet|victor
+coffinhollow,Coffin Mist Hollow,หุบหมอกโลงศพ,Lv 28–38,field,,False,woods,54.8,81.3,Coffin Pile|Mist Gorge Mouth,zombie|grave_crow|coffin_mimic|mist_widow|grave_digger|coffin_mimic_violet|victor
+sporevale,Purple Spore Hollow,หุบสปอร์ม่วง,Lv 36–46,field,,False,woods,26,70.87,Spore Tower Mushrooms|Spore Gorge Descent,spore_puffer|slime_glow|myco_knight|shroom_beetle|puff_shroom|spore_puffer_gold|doctor_shroom|silas
+fallencap,Fallen Giant Mushroom,ต้นเห็ดยักษ์ล้ม,Lv 36–46,field,,False,woods,16.4,18.7,Under the Fallen Mushroom Cap|Giant Mushroom Forest Edge,glow_spider|slime_glow|gill_stalker|cap_beetle|shroom_wolf|gill_stalker_pale|silas
+blackroots,Blackroot Forest,ป่ารากดำ,Lv 86–96,field,,False,woods,83.6,60.43,Dark Root Arbor|Root Forest Entrance,violet_wisp|shadow_crow|root_crawler|lightless_deer|faceless_puppet|root_crawler_crimson|nyx
+shadowpath,Silent Shadow Path,ทางเดินเงาไร้เสียง,Lv 86–96,field,,False,woods,93.2,60.43,Dark Tree Gate|Shadow Gate,echo_bell|shadow_crow|shade_walker|lightless_deer|ghost|shade_walker_violet|nyx
+treeedge,Dark Tree Forest Edge,ขอบป่าต้นไม้มืด,Lv 86–96,field,,False,woods,93.2,70.87,"Giant Root at the Forest Edge|Abandoned Camp, Fire Out",violet_wisp|shadow_crow|rootbound_hound|tree_herald|root_crawler|rootbound_hound_frost|nyx
+minecart,Hanging Mine Rails,ทางรางเหมืองแขวน,Lv 55–78,field,,False,south,44,50,Abandoned Pulley Station|End of the Mine Rail,blast_imp|crystal_bat|rail_spider|haunted_cart|ghost_miner|rail_spider_copper|crystal_mole|bartho
+obsidian,Obsidian Flats,ลานหินออบซิเดียน,Lv 66–84,field,,False,south,44,63.04,Twin Obsidian Pillars|Black Stone Yard Edge,steam_wisp|fire_bat|obsidian_knight|salamander|magma_golem|obsidian_knight_ruby|drakos
+lavalake,Cooled Lava Lake,ทะเลสาบลาวาเย็น,Lv 66–84,field,,False,south,44,76.09,Stone Pier in the Lava|Basalt Shore,magma_frog|slime_lava|lava_eel|salamander|magma_golem|lava_eel_azure|drakos
+smokevent,Blacksmoke Vent,ปากปล่องควันดำ,Lv 66–84,field,,False,south,8,36.96,Great Smokestack|Smokestack Ascent,smoke_wraith|fire_bat|cinder_brute|magma_golem|salamander|smoke_wraith_white|drakos
+mangrove,Tidal Mangrove,ป่าชายเลนน้ำขึ้น,Lv 48–62,field,,False,south,80,63.04,Giant Mangrove Tree|Mangrove Forest Edge,poison_toad|mosquito|tide_crab|moss_lurker|swamp_snake|tide_crab_violet|oswin
+poisonvillage,Poison Gatherers' Village,หมู่บ้านคนเก็บพิษ,Lv 56–66,field,,False,south,32,76.09,Poison Brewing Yard|Poison Village Entrance,vial_imp|poison_toad|gatherer_ghoul|bloat_toad|split_slug|vial_imp_gold|mother_bloom|oswin
+stumpfield,Whitesmoke Stump Field,ทุ่งตอไม้ควันขาว,Lv 30–45,field,,False,high,20,63.04,Giant White-Smoke Stump|Stump Field Edge,soot_puff|ash_wisp|smoke_mole|ember_fox|char_stump|smoke_mole_frost|cassian
+ashvale,Driftash Gorge,หุบเถ้าลอย,Lv 30–45,field,,False,high,20,76.09,Abandoned Beacon Tower|Ashen Gorge Edge,cinder_owl|slime_lava|ash_weaver|char_stump|ember_fox|cinder_owl_frost|cassian
+stillburning,Still-Burning Forest,ป่าที่ยังไหม้,Lv 30–45,field,,False,high,32,89.13,Eternal Fire Tree|Wildfire Edge,flame_dryad|ash_wisp|fire_stag|ember_fox|char_stump|fire_stag_azure|cassian
+ropebridge,Cliff Rope Bridge,สะพานเชือกข้ามผา,Lv 44–54,field,,False,high,32,76.09,Broken Windmill Pillar|Rope Bridge End,kite_bat|storm_sparrow|chime_spirit|cliff_goat|float_rock|kite_bat_crimson|cloud_ram_lead|falk
+eyrie,Eagle's Nest Peak,ยอดรังอินทรี,Lv 44–54,field,,False,high,32,23.91,Giant Eagle Nest|Cliff Summit Path,storm_chick|storm_sparrow|nest_golem|cliff_goat|eagle_bolt|storm_chick_gold|storm_eagle|falk
+tarpit,Tar Bog,หนองน้ำมันดิน,Lv 72–92,field,,False,high,32,50,Giant Fossil Sunk in the Earth|Oil Marsh Edge,tar_blob|raptor|woolly_calf|rhino_beetle|elder_treant|woolly_calf_snow|ankylo|talon
+fernvale,Giant Fern Gorge,หุบเฟิร์นยักษ์,Lv 72–92,field,,False,high,56,50,Giant Fern in the Gorge|Fern Gorge Mouth,frill_lizard|pterosaur|horsetail_mantis|raptor|tiny_dino|horsetail_mantis_violet|sb_gorm|talon
+floatvillage,Abandoned Floating Village,หมู่บ้านลอยน้ำร้าง,Lv 70–88,field,,False,high,92,63.04,Great Raft House|Raft Dock Entrance,lantern_jelly|kappa|raft_turtle|shadow_heron|mist_wraith|lantern_jelly_rose|lyria
+willows,Drowned Willow Forest,ป่าต้นหลิวจมน้ำ,Lv 70–88,field,,False,high,80,50,Giant Weeping Willow|Sunken Stone Path,kappa|bat|willow_hand|crayfish_brute|shadow_heron|crayfish_brute_red|mist_wraith|lyria
+shipwreck,Shipwreck in the Mist,ซากเรือในหมอก,Lv 70–88,field,,False,high,32,10.87,Great Beached Ship|Shipwreck Beach,lantern_jelly|bat|ghost_sailor|serpent_figurehead|mist_wraith|ghost_sailor_amber|lyria
+reefs,Reef Rocks,แนวหินโสโครก,Lv 84–92,field,,False,high,44,23.91,Great Reef Rock|Coral Reef Stone Path,needle_urchin|mist_citizen|coral_golem|mist_wraith|needle_urchin_gold|orla
+lighthouse,Dark Lighthouse Isle,เกาะประภาคารดับ,Lv 84–92,field,,False,high,56,23.91,Lighthouse Foot|Lighthouse Island Stone Pier,mist_citizen|fog_hound|keeper_ghost|mist_wraith|fog_hound_amber|orla
+shipgrave,Ship Graveyard Isle,เกาะสุสานเรือ,Lv 84–92,field,,False,high,56,36.96,Stacked Boat Pile|Shipwreck Pile Entrance,mist_citizen|bat|anchor_brute|kraken_arm|ghost_sailor|kraken_arm_crimson|orla
+refugeecamp,Abandoned Migrant Camp,ค่ายผู้อพยพร้าง,Lv 32–42,field,,False,north,22.57,57.45,Dying Campfire at the Camp|Abandoned Camp Entrance,lost_lantern|crow|tent_crawler|caravan_bandit|hollow_horse|lost_lantern_blue|rowan
+woodbridge,Wooden River Bridge,สะพานไม้ข้ามแม่น้ำ,Lv 32–42,field,,False,north,22.57,42.55,Wooden Bridgehead|Riverbank,plank_beaver|crow|river_troll|hollow_horse|giant_crow|plank_beaver_gold|caravan_bandit|rowan
+wagonvale,Canyon Cart Road,ทางเกวียนในหุบ,Lv 32–42,field,,False,north,50,72.36,Broken Wagon Train|Gorge Mouth,wheel_spirit|crow|harness_hound|caravan_bandit|hollow_horse|harness_hound_ash|rowan
+saltflats,White Salt Flats,นาเกลือขาว,Lv 36–48,field,,False,north,63.71,57.45,Giant Salt Pile|Salt Paddy Bank,brine_shrimp|salt_mole|salt_golem|hound|toll_guard|salt_golem_rose|iris
+saltdock,Abandoned Salt Wharf,ท่าเรือเกลือร้าง,Lv 36–48,field,,False,north,63.71,72.36,Harborside Crane|Harbor Yard,brine_barrel|salt_mole|dock_gull|giant_crow|toll_guard|dock_gull_storm|iris
+watchtower,Checkpoint Watchtower,หอสังเกตการณ์ริมด่าน,Lv 36–48,field,,False,north,36.29,42.55,Observatory Foundation|Dormitory Yard,signal_crow|giant_crow|tower_sentry|toll_guard|hound|tower_sentry_pale|iris
+snowpines,Snowy Pine Forest,ป่าสนหิมะ,Lv 46–58,field,,False,north,50,27.64,Snowbound Hut|Pine Forest Edge,snow_owl|storm_spirit|pine_bear|snow_wolf|ice_goat|snow_owl_aurora|inga
+icefall,Cracked Glacier,ธารน้ำแข็งแตก,Lv 46–58,field,,False,north,36.29,27.64,Ice Waterfall|Glacier Edge,frost_sprite|storm_spirit|crevasse_worm|ice_goat|snow_wolf|crevasse_worm_azure|inga
+avalanche,Avalanche Ridge,สันเขาหิมะถล่ม,Lv 46–58,field,,False,north,8.86,57.45,Snow-Crushed Hut|Ridge Ascent,snowball_yeti|storm_spirit|avalanche_ram|snow_wolf|ice_goat|avalanche_ram_black|inga
+silentfarm,Silent Farm,ไร่เงียบงัน,Lv 60–72,field,,False,north,77.43,57.45,Stilled Windmill|Farm Fence,hush_fox|shadow_crow|hollow_plowman|hollow_villager|hollow_plowman_rust|elwin
+roadinn,Roadside Inn,โรงเตี๊ยมกลางทาง,Lv 60–72,field,,False,north,91.14,57.45,Inn Front|Stable Yard,stew_slime|shadow_crow|innkeeper_ghost|hollow_villager|stew_slime_spicy|elwin
+travelgrave,Travelers' Graveyard,สุสานคนเดินทาง,Lv 60–72,field,,False,north,91.14,72.36,Lost Travelers' Cairn|Graveyard Entrance,wanderer_ghost|shadow_crow|milestone_golem|hollow_villager|wanderer_ghost_ember|elwin
+nightmarket,Market of No Morning,ตลาดเช้าที่ไม่มีเช้า,Lv 68–82,field,,False,bell,30.8,81.3,Central Market Stall Yard|Market Entrance,pickpocket_cat|city_hound|lamp_vendor|hollow_guard|hollow_carthorse|pickpocket_cat_gold|rook
+tannery,Tannery District,ย่านโรงฟอกหนัง,Lv 68–82,field,,False,bell,11.6,81.3,Dye Pond Yard|Tannery Alley,vat_slime|city_hound|leather_wolf|hollow_guard|vat_slime_indigo|hollow_carthorse|rook
+moat,Still Moat,คูเมืองน้ำนิ่ง,Lv 68–82,field,,False,bell,30.8,39.57,Sunken Drawbridge|Moat Bank,drain_frog|city_hound|moat_turtle|hollow_guard|hollow_carthorse|moat_turtle_jade|rook
+sluicegate,Old Sluice Gate,ประตูน้ำเก่า,Lv 74–86,field,,False,bell,50,39.57,Giant Sluice Gear|Sluice Gate Walkway,sluice_spirit|canal_rat|gate_gear|candle_minion|light_filler|gate_gear_copper|pip
+warehouses,Waterfront Warehouses,ย่านโกดังริมน้ำ,Lv 74–86,field,,False,bell,69.2,39.57,Great Warehouse|Cargo Dock,crate_spider|canal_rat|dock_brute|candle_minion|light_filler|crate_spider_ink|pip
+shipyard,Abandoned Shipyard,อู่ต่อเรือร้าง,Lv 74–86,field,,False,bell,69.2,18.7,Unfinished Ship Frame|Woodpile Yard,rivet_bat|canal_rat|saw_beetle|light_filler|candle_minion|saw_beetle_gold|pip
+whitestatues,White Statue Garden,สวนรูปปั้นขาว,Lv 92–99,field,,False,bell,69.2,81.3,Dry Garden Fountain|Garden Gate,veiled_statue|canal_rat|marble_hound|temple_soldier|cardinal_puppet|marble_hound_gold|casper
+clocksquare,Clock Tower Square,ลานหอนาฬิกา,Lv 92–99,field,,False,bell,88.4,81.3,Under the Clock Tower|Courtyard Entrance,clockwork_owl|canal_rat|hour_knight|temple_soldier|cardinal_puppet|clockwork_owl_silver|sb_lumen|casper
+rooftops,City Rooftops,หลังคาเมือง,Lv 92–99,field,,False,bell,88.4,60.43,Great Chimney|Roof Edge,soot_sweeper|canal_rat|weather_rooster|temple_soldier|cardinal_puppet|soot_sweeper_violet|casper
+melonfield,Moonlit Melon Patch,ไร่แตงโมใต้จันทร์,Lv 3–10,field,,False,woods,64.4,60.43,Giant Split Watermelon|Watermelon Farm Entrance,pumpkin|melon_roller|carrot|crow|melon_roller_orange|scarecrow
+windpump,Pump Windmill Yard,ลานกังหันสูบน้ำ,Lv 3–10,field,,False,woods,74,60.43,Under the Water-Pump Wheel|Muddy Road,pumpkin|mad_goose|carrot|crow|mad_goose_blue|scarecrow
+curinghouse,Abandoned Pumpkin Cellar,โรงบ่มฟักทองร้าง,Lv 3–10,field,,False,woods,74,70.87,Carved Pumpkin Pile|Brewery Yard,pumpkin|gourd_lantern|carrot|crow|gourd_lantern_green|scarecrow
+appleslope,Wild Apple Hill,เนินแอปเปิลป่า,Lv 8–18,field,,False,woods,45.2,39.57,Apple Tree With Broken Swing|Apple Hill Ascent,slime_blue|slime_honey|bee|apple_worm|scarecrow|apple_worm_green|selene
+dandelion,Giant Dandelion Field,ทุ่งดอกแดนดิไลออนยักษ์,Lv 8–18,field,,False,woods,45.2,81.3,Giant Dandelion|Fluff Flower Field Edge,slime_blue|slime_honey|bee|puff_sprite|scarecrow|puff_sprite_pink|selene
+apiary,Abandoned Apiary,สวนรังผึ้งร้าง,Lv 8–18,field,,False,woods,54.8,91.74,Giant Honeycomb Tree|Bee Garden Fence,slime_blue|slime_honey|bee|wax_golem|scarecrow|wax_golem_blue|selene
+threshing,Abandoned Threshing Yard,ลานนวดข้าวร้าง,Lv 10–18,field,,False,woods,6.8,39.57,Giant Millstone Yard|Path from the Pens,potato_walker|field_mouse|sack_mimic|bucket_scarecrow|angry_rooster|sunflower_bee|crow_red|sack_mimic_red|harlock
+beaverdam,Abandoned Beaver Dam,เขื่อนบีเวอร์ร้าง,Lv 12–24,field,,False,woods,26,50,Great Log Dam|Gnawed Stump,frog|slime_blue|water_strider|crab|dragonfly|turtle|water_strider_gold|merrick
+reedmaze,Head-High Reed Thicket,ดงกกท่วมหัว,Lv 12–24,field,,False,woods,26,60.43,Duck-Hunting Blind|Reed Thicket Path,frog|slime_blue|reed_muskrat|crab|dragonfly|turtle|reed_muskrat_blue|merrick
+eelhut,Eel Smokehouse,กระท่อมรมควันปลาไหล,Lv 12–24,field,,False,woods,16.4,60.43,Riverside Smokehouse|Eel Fisher's Dock,frog|slime_blue|mud_pike|crab|dragonfly|turtle|mud_pike_violet|merrick
+thornrose,Thornrose Hill,เนินกุหลาบหนาม,Lv 14–22,field,,False,woods,16.4,39.57,Giant Rose Arbor|Rose Thorn Path,seed_flower|firefly_healer|rose_mantis|horn_rabbit|sleep_moth|hedgehog|boar_silver|rose_mantis_violet|selene
+diggervillage,Diggers' Village,หมู่บ้านคนขุดหลุม,Lv 18–32,field,,False,woods,45.2,60.43,Gravewatch Tower|Village Entrance,zombie|bat|grave_cat|skeleton|ghost|tombstone|grave_cat_brown|victor
+wreathfield,Dried Wreath Field,ทุ่งพวงหรีดแห้ง,Lv 18–32,field,,False,woods,35.6,70.87,Great Wreath Stone Gate|Wreath Field Entrance,zombie|bat|wreath_spider|skeleton|ghost|tombstone|wreath_spider_violet|victor
+giantbones,Giant Ribs Gorge,หุบซี่โครงยักษ์,Lv 18–32,field,,False,woods,26,81.3,Under the Giant Ribs|Mist Gorge Mouth,zombie|bat|bone_crab|skeleton|ghost|tombstone|bone_crab_blue|victor
+logdrive,Logjam Creek,ลำธารซุงติด,Lv 20–28,field,,False,woods,74,29.13,Log Pile in the Creek|Abandoned Logging Camp,leap_trout|spit_frog|log_lurker|split_shroom|otter|kingfisher|turtle_jade|log_lurker_blue|merrick
+springcave,Spring Cave,ถ้ำตาน้ำ,Lv 20–28,field,,False,woods,64.4,81.3,Spring Cave Mouth|Creekside Gravel Yard,leap_trout|spit_frog|pebble_golem|split_shroom|otter|kingfisher|turtle_jade|pebble_golem_pink|merrick
+acorngrove,Giant Oak Forest,ป่าโอ๊กยักษ์,Lv 24–40,field,,False,woods,35.6,29.13,Oak Stump Squirrel Tower|Acorn Yard,slime_glow|slime_stone|acorn_squirrel|moth|stump|wolf|acorn_squirrel_blue|silas
+hunterlodge,Abandoned Hunter's Cabin,กระท่อมพรานร้าง,Lv 24–40,field,,False,woods,45.2,29.13,Hunter's Hut Front|Hunter's Trail,slime_glow|slime_stone|moss_bear|moth|stump|wolf|moss_bear_pink|silas
+moonwell,Forest Moon Spring,บ่อน้ำจันทร์กลางป่า,Lv 24–40,field,,False,woods,35.6,18.7,Moon Well Edge|Well Yard Entrance,slime_glow|slime_stone|bucket_sprite|moth|stump|wolf|bucket_sprite_pink|sb_raven|silas
+cascades,Stepped Falls,น้ำตกขั้นบันได,Lv 26–34,field,,False,woods,45.2,18.7,Waterfall Steps|Waterfall Rock Yard,mist_sprite|mud_eel|firefly_knight|shield_crab|water_newt|dragonfly_lead|dragonfly_rainbow|firefly_knight_blue|merrick
+behindfalls,Cave Behind the Falls,ถ้ำหลังม่านน้ำ,Lv 26–34,field,,False,woods,45.2,8.26,Great Waterfall Curtain|Wet Cliffside Path,mist_sprite|mud_eel|crystal_snail|shield_crab|water_newt|dragonfly_lead|dragonfly_rainbow|crystal_snail_violet|merrick
+fallstop,Mistcap Falls Summit,ยอดน้ำตกหมอกลอย,Lv 26–34,field,,False,woods,35.6,8.26,Cliff-Edge Rockpile|Waterfall Summit Path,mist_sprite|mud_eel|falls_serpent|shield_crab|water_newt|dragonfly_lead|dragonfly_rainbow|falls_serpent_gold|merrick
+keeperhouse,Gravekeeper's House,บ้านผู้เฝ้าสุสาน,Lv 28–38,field,,False,woods,45.2,91.74,Keeper's House Front|Black Iron Gate,grave_crow|bone_archer|raven_butler|grave_digger|coffin_bomb|candle_witch|zombie_mold|ghost_violet|raven_butler_teal|victor
+glowpool,Glowshroom Root Pond,สระรากเห็ดเรืองแสง,Lv 36–46,field,,False,woods,16.4,8.26,Mushroom Web Curtain|Mushroom Pond Bank,glow_spider|doctor_shroom|cap_hermit|puff_shroom|shroom_beetle|shroom_wolf|stump_shroom|wolf_frost|cap_hermit_orange|silas
+heathmoor,Purple Heather Moor,ทุ่งเฮเทอร์ม่วง,Lv 36–50,field,,False,high,56,76.09,Stone Hut With Grass Roof|Stone Path in the Field,gust_sprite|bee|moor_pony|cloud_ram|storm_eagle|moor_pony_blue|falk
+howlpass,Whistling Pillar Pass,ช่องเขาเสาหินหวีด,Lv 36–50,field,,False,high,68,76.09,Whistling Stone Pillar|Mountain Pass Mouth,gust_sprite|bee|stone_marmot|cloud_ram|storm_eagle|stone_marmot_olive|falk
+cliffmill,Abandoned Cliffside Windmill,กังหันลมร้างริมผา,Lv 36–50,field,,False,high,68,89.13,Abandoned Stone Windmill|Windy Path,gust_sprite|bee|thorn_tumbler|cloud_ram|storm_eagle|thorn_tumbler_violet|sb_ignis|falk
+chainisles,Chained Floating Isle,เกาะลอยล่ามโซ่,Lv 44–54,field,,False,high,20,10.87,Giant Chain Pillar|Chain Stud Yard,storm_sparrow|blade_sprite|sky_ray|float_rock|cliff_goat|cloud_ram_lead|eagle_bolt|sky_ray_violet|falk
+hotsprings,Primeval Hot Springs,บ่อน้ำร้อนดึกดำบรรพ์,Lv 72–92,field,,False,high,68,50,Stepped Limestone Yard|Hot Steam Path,raptor|wolf|sailback|rhino_beetle|elder_treant|sailback_blue|talon
+ammonbeach,Ammonite Fossil Beach,หาดซากแอมโมไนต์,Lv 88–98,field,,False,high,32,36.96,Giant Shell|Black Sand Beach,pterosaur|hatchling|ammonite|ankylo|plesio|tiny_dino|raptor_plume|ammonite_violet|talon
+pteronest,Pterosaur Roost Cliff,ผารังเทอโรซอร์,Lv 88–98,field,,False,high,20,23.91,Giant Nest Stone Pillar|Basalt Cliff Foot,pterosaur|hatchling|egg_thief|ankylo|plesio|tiny_dino|raptor_plume|egg_thief_pink|talon
+amberwood,Amber Sap Forest,ป่ายางอำพัน,Lv 88–98,field,,False,high,8,23.91,Giant Amber Tree|Dripping Sap Path,pterosaur|hatchling|amber_golem|ankylo|plesio|tiny_dino|raptor_plume|amber_golem_green|talon
+bubblepits,Boiling Poison Mudpots,บ่อโคลนพิษเดือด,Lv 48–62,field,,False,south,92,63.04,Great Boiling Mud Pit|Mud Pit Edge,poison_toad|slime_glow|swamp_hog|swamp_snake|maneater|swamp_hog_green|oswin
+cagetrees,Caged Hanging Trees,ดงต้นไม้แขวนกรง,Lv 48–62,field,,False,south,92,76.09,Great Cage Tree|Rotten Plank Path,poison_toad|slime_glow|lure_angler|swamp_snake|maneater|lure_angler_violet|oswin
+goldsluice,Abandoned Gold Sluice,รางร่อนทองร้าง,Lv 55–78,field,,False,south,56,63.04,Giant Wooden Flume|Gold Digger Path,slime_lava|rattle_viper|scorpion|golem|skeleton|rattle_viper_blue|bartho
+dustgulch,Sandstone Pillar Gorge,หุบเสาหินทราย,Lv 55–78,field,,False,south,68,63.04,Sandstone Pillar Grove|Dust Gorge Mouth,slime_lava|rock_armadillo|scorpion|golem|skeleton|rock_armadillo_green|bartho
+pitcherfield,Giant Carnivorous Plant Field,ทุ่งพืชกินแมลงยักษ์,Lv 56–66,field,,False,south,44,89.13,Giant Pitcher Plant|Carnivorous Plant Field Edge,mosquito|mother_bloom|sundew_creeper|bloat_toad|split_slug|swamp_croc|snake_triple|sundew_creeper_green|oswin
+cocoonwood,Poison Cocoon Forest,ป่ารังไหมพิษ,Lv 56–66,field,,False,south,56,76.09,Giant Cocoon Tree|Silkweb Path,mosquito|mother_bloom|cocoon_weaver|bloat_toad|split_slug|swamp_croc|snake_triple|cocoon_weaver_lime|oswin
+floodedmine,Flooded Mine Pump Room,ห้องสูบน้ำเหมืองท่วม,Lv 62–72,field,,False,south,20,36.96,Giant Water Pump|Rail Path to the Pump Room,crystal_bat|ghost_miner|rust_crab|crystal_mole|crystal_golem|haunted_cart|golem_crystal|rust_crab_brass|bartho
+geodehall,Geode Hall,โถงหินจีโอด,Lv 62–72,field,,False,south,8,23.91,Giant Geode|Crystal Hall Entrance,crystal_bat|ghost_miner|geode_hopper|crystal_mole|crystal_golem|haunted_cart|golem_crystal|geode_hopper_blue|bartho
+minerscamp,Underground Workers' Camp,ค่ายคนงานใต้ดิน,Lv 62–72,field,,False,south,8,10.87,Mine Lift Shaft|Rail Path to the Camp,crystal_bat|ghost_miner|cage_canary|crystal_mole|crystal_golem|haunted_cart|golem_crystal|cage_canary_blue|bartho
+dryoasis,Dried-Up Oasis,โอเอซิสแห้งขอด,Lv 70–80,field,,False,south,8,63.04,Dry Well|Oasis Edge,stone_vulture|spit_scorpion|mirage_wisp|sand_giant|dust_devil|sand_lizard|scorpion_copper|mirage_wisp_blue|bartho
+antlionpits,Antlion Pit Field,ทุ่งหลุมแมลงช้าง,Lv 70–80,field,,False,south,20,63.04,Giant Sand Pit|Hardpacked Sand Path,stone_vulture|spit_scorpion|antlion|sand_giant|dust_devil|sand_lizard|scorpion_copper|antlion_blue|bartho
+raiderfort,Abandoned Desert Bandit Fort,ป้อมโจรทะเลทรายร้าง,Lv 70–80,field,,False,south,20,76.09,Wooden Fort on the Rock|Sand Dune Before the Fort,stone_vulture|spit_scorpion|sand_shark|sand_giant|dust_devil|sand_lizard|scorpion_copper|sand_shark_teal|bartho
+puppetroom,Puppet Room,ห้องหุ่นไม้,Starting Point,field,,True,,,,,
+homefarm,Firefly Farm,ฟาร์มหิ่งห้อย,Safe · our farm,safe,,False,woods,74,50,Our Farmhouse Yard|Our Vegetable Plot|Cherry and Maple Grove|Little Stone Yard|Firefly Lotus Pond,
+pvp_lake,Lake Arena,เวทีประลองกลางทะเลสาบ,Arena · PvP,safe,,False,,,,,
+flesh,Thorn Flesh Burrow,โพรงเนื้อหนาม,Lv 90–98 · Boss Lv 99,field,dark,False,woods,37,87,Flesh Tunnel Mouth|Glutton's Nest,fl_eye|fl_sac|fl_crawler|fl_glutton
+gw_roots,Rootfire Yard,ลานรากชิงไฟ,Battle for the Campfire · Guild Lands,safe,,False,,,,,
+gw_ruin,Abandoned Travelers' Camp,ค่ายนักเดินทางร้าง,Battle for the Campfire · Guild Lands,safe,,False,,,,,
+gw_ash,Ash Valley,หุบเขาเถ้า,Battle for the Campfire · Guild Lands,safe,,False,,,,,
+gw_ice,Frozen Lake,ทะเลสาบน้ำแข็ง,Battle for the Campfire · Guild Lands,safe,,False,,,,,
+quarry1,Fieldside Quarry F1,เหมืองหินริมทุ่ง ชั้น 1,Lv 5–12 · Mining Lv 1+,dungeon,homefarm,False,,,,,slime_stone|bat|cave_spider
+quarry2,Fieldside Quarry F2,เหมืองหินริมทุ่ง ชั้น 2,Lv 12–18 · Mining Lv 3+,dungeon,quarry1,False,,,,,slime_stone|bat|cave_spider|worker_ant
+quarry3,Fieldside Quarry F3,เหมืองหินริมทุ่ง ชั้น 3,Lv 18–25 · Mining Lv 6+,dungeon,quarry2,False,,,,,worker_ant|bat|cave_spider|soldier_ant
+silver1,Deep Silver Shaft B4,ปล่องเงินลึก ชั้น B4,Lv 50–56 · Mining Lv 13+,dungeon,antmine3,False,,,,,flying_ant|candle_wisp|soldier_ant|bone_knight
+silver2,Deep Silver Shaft B5,ปล่องเงินลึก ชั้น B5,Lv 56–62 · Mining Lv 16+ · Dark,dungeon,silver1,False,,,,,flying_ant|candle_wisp|soldier_ant|bone_knight|ghost
+meteor1,Meteor Shaft F1,ปล่องดาวตก ชั้น 1,Lv 60–66 · Mining Lv 18+,dungeon,volcano,False,,,,,fire_bat|slime_lava|lava_worm|fire_imp
+meteor2,Meteor Shaft F2,ปล่องดาวตก ชั้น 2,Lv 66–72 · Mining Lv 20+,dungeon,meteor1,False,,,,,fire_bat|slime_lava|lava_worm|fire_imp
+meteor3,Meteor Shaft F3,ปล่องดาวตก ชั้น 3,Lv 72–78 · Mining Lv 23+,dungeon,meteor2,False,,,,,fire_bat|slime_lava|lava_worm|fire_imp
+meteor4,Meteor Shaft F4,ปล่องดาวตก ชั้น 4,Lv 78–84 · Mining Lv 25+ · Dark,dungeon,meteor3,False,,,,,fire_bat|fire_imp|lava_worm|salamander|magma_golem
+meteor5,Meteor Shaft F5,ปล่องดาวตก ชั้น 5,Lv 84–90 · Mining Lv 26+ · Dark,dungeon,meteor4,False,,,,,fire_bat|fire_imp|lava_worm|salamander|magma_golem
+meteor6,Meteor Shaft F6,ปล่องดาวตก ชั้น 6,Lv 90–95 · Mining Lv 27+ · Dark,dungeon,meteor5,False,,,,,fire_bat|fire_imp|lava_worm|salamander|magma_golem
+meteor7,Meteor Shaft F7,ปล่องดาวตก ชั้น 7,Lv 95–99 · Mining Lv 28+ · Dark,dungeon,meteor6,False,,,,,fire_bat|fire_imp|lava_worm|salamander|magma_golem

@@ -1,0 +1,2722 @@
+[
+  {
+    "id": "hv_tin",
+    "n": "Trainee's Tin Armor",
+    "line": "hv",
+    "g": 1,
+    "lv": 1,
+    "pcs": [
+      "top_of_hv_tin",
+      "pants_of_hv_tin",
+      "acc_of_hv_tin"
+    ],
+    "b2": "HP +4% · VIT +1",
+    "b3": "HP +8% · VIT +2",
+    "pas": "Below 30% HP, gain a shield absorbing 15% of max HP (every 60 sec)",
+    "body": {
+      "top": "top_of_hv_tin",
+      "pants": "pants_of_hv_tin"
+    },
+    "acc": "acc_of_hv_tin",
+    "bonuses": [
+      {
+        "hpPct": 4,
+        "vit": 1
+      },
+      {
+        "hpPct": 8,
+        "vit": 2
+      }
+    ],
+    "name_th": "เกราะดีบุกเด็กฝึก",
+    "b2_th": "HP +4% · VIT +1",
+    "b3_th": "HP +8% · VIT +2",
+    "pas_th": "HP ต่ำกว่า 30% ได้โล่กันดาเมจ 15% ของ HP สูงสุด (ทุก 60 วิ)"
+  },
+  {
+    "id": "hv_boar",
+    "n": "Boarhide Armor",
+    "line": "hv",
+    "g": 1,
+    "lv": 8,
+    "pcs": [
+      "top_of_hv_boar",
+      "pants_of_hv_boar",
+      "acc_of_hv_boar"
+    ],
+    "b2": "HP +4% · VIT +1",
+    "b3": "HP +8% · VIT +2",
+    "pas": "Walk for 2 sec straight: first hit +40% and knocks back",
+    "body": {
+      "top": "top_of_hv_boar",
+      "pants": "pants_of_hv_boar"
+    },
+    "acc": "acc_of_hv_boar",
+    "bonuses": [
+      {
+        "hpPct": 4,
+        "vit": 1
+      },
+      {
+        "hpPct": 8,
+        "vit": 2
+      }
+    ],
+    "name_th": "เกราะหนังหมูป่า",
+    "b2_th": "HP +4% · VIT +1",
+    "b3_th": "HP +8% · VIT +2",
+    "pas_th": "เดินต่อเนื่อง 2 วิ ตีแรกแรง +40% และกระแทกถอย"
+  },
+  {
+    "id": "hv_bark",
+    "n": "Ghostbark Armor",
+    "line": "hv",
+    "g": 1,
+    "lv": 14,
+    "pcs": [
+      "top_of_hv_bark",
+      "pants_of_hv_bark",
+      "acc_of_hv_bark"
+    ],
+    "b2": "HP +4% · VIT +1",
+    "b3": "HP +8% · VIT +2",
+    "pas": "Stand still 3 sec: damage taken −10% and recover 1% HP per sec",
+    "body": {
+      "top": "top_of_hv_bark",
+      "pants": "pants_of_hv_bark"
+    },
+    "acc": "acc_of_hv_bark",
+    "bonuses": [
+      {
+        "hpPct": 4,
+        "vit": 1
+      },
+      {
+        "hpPct": 8,
+        "vit": 2
+      }
+    ],
+    "name_th": "เกราะเปลือกไม้ผี",
+    "b2_th": "HP +4% · VIT +1",
+    "b3_th": "HP +8% · VIT +2",
+    "pas_th": "ยืนนิ่ง 3 วิ: โดนดาเมจลดลง 10% และฟื้น HP 1% ต่อวิ"
+  },
+  {
+    "id": "hv_shell",
+    "n": "Crabshell Armor",
+    "line": "hv",
+    "g": 1,
+    "lv": 18,
+    "pcs": [
+      "top_of_hv_shell",
+      "pants_of_hv_shell",
+      "acc_of_hv_shell"
+    ],
+    "b2": "HP +4% · VIT +1",
+    "b3": "HP +8% · VIT +2",
+    "pas": "Monsters that hit you take 8% reflected",
+    "body": {
+      "top": "top_of_hv_shell",
+      "pants": "pants_of_hv_shell"
+    },
+    "acc": "acc_of_hv_shell",
+    "bonuses": [
+      {
+        "hpPct": 4,
+        "vit": 1
+      },
+      {
+        "hpPct": 8,
+        "vit": 2
+      }
+    ],
+    "name_th": "เกราะกระดองปู",
+    "b2_th": "HP +4% · VIT +1",
+    "b3_th": "HP +8% · VIT +2",
+    "pas_th": "มอนที่ตีเราโดนสะท้อน 8%"
+  },
+  {
+    "id": "hv_camp",
+    "n": "Camp Guard Armor",
+    "line": "hv",
+    "g": 1,
+    "lv": 22,
+    "pcs": [
+      "top_of_hv_camp",
+      "pants_of_hv_camp",
+      "acc_of_hv_camp"
+    ],
+    "b2": "HP +4% · VIT +1",
+    "b3": "HP +8% · VIT +2",
+    "pas": "At night, damage taken −8%",
+    "body": {
+      "top": "top_of_hv_camp",
+      "pants": "pants_of_hv_camp"
+    },
+    "acc": "acc_of_hv_camp",
+    "bonuses": [
+      {
+        "hpPct": 4,
+        "vit": 1
+      },
+      {
+        "hpPct": 8,
+        "vit": 2
+      }
+    ],
+    "name_th": "เกราะยามค่าย",
+    "b2_th": "HP +4% · VIT +1",
+    "b3_th": "HP +8% · VIT +2",
+    "pas_th": "กลางคืนโดนดาเมจลดลง 8%"
+  },
+  {
+    "id": "lt_scout",
+    "n": "Forest Scout Outfit",
+    "line": "lt",
+    "g": 1,
+    "lv": 1,
+    "pcs": [
+      "top_of_lt_scout",
+      "pants_of_lt_scout",
+      "acc_of_lt_scout"
+    ],
+    "b2": "Attack speed +2% · Critical +1%",
+    "b3": "Attack speed +4% · Critical +2%",
+    "pas": "Move speed +10%",
+    "body": {
+      "top": "top_of_lt_scout",
+      "pants": "pants_of_lt_scout"
+    },
+    "acc": "acc_of_lt_scout",
+    "bonuses": [
+      {
+        "aspd": 2,
+        "crit": 1
+      },
+      {
+        "aspd": 4,
+        "crit": 2
+      }
+    ],
+    "name_th": "ชุดลูกเสือป่า",
+    "b2_th": "ความเร็วโจมตี +2% · คริติคอล +1%",
+    "b3_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "pas_th": "เดินเร็ว +10%"
+  },
+  {
+    "id": "lt_bat",
+    "n": "Batwing Leather Outfit",
+    "line": "lt",
+    "g": 1,
+    "lv": 10,
+    "pcs": [
+      "top_of_lt_bat",
+      "pants_of_lt_bat",
+      "acc_of_lt_bat"
+    ],
+    "b2": "Attack speed +2% · Critical +1%",
+    "b3": "Attack speed +4% · Critical +2%",
+    "pas": "At night, hits drain 2% life",
+    "body": {
+      "top": "top_of_lt_bat",
+      "pants": "pants_of_lt_bat"
+    },
+    "acc": "acc_of_lt_bat",
+    "bonuses": [
+      {
+        "aspd": 2,
+        "crit": 1
+      },
+      {
+        "aspd": 4,
+        "crit": 2
+      }
+    ],
+    "name_th": "ชุดหนังปีกค้างคาว",
+    "b2_th": "ความเร็วโจมตี +2% · คริติคอล +1%",
+    "b3_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "pas_th": "กลางคืน ตีดูดเลือด 2%"
+  },
+  {
+    "id": "lt_fox",
+    "n": "Foxfur Outfit",
+    "line": "lt",
+    "g": 1,
+    "lv": 14,
+    "pcs": [
+      "top_of_lt_fox",
+      "pants_of_lt_fox",
+      "acc_of_lt_fox"
+    ],
+    "b2": "Attack speed +2% · Critical +1%",
+    "b3": "Attack speed +4% · Critical +2%",
+    "pas": "Critical +10% · Extra dodge 6%",
+    "body": {
+      "top": "top_of_lt_fox",
+      "pants": "pants_of_lt_fox"
+    },
+    "acc": "acc_of_lt_fox",
+    "bonuses": [
+      {
+        "aspd": 2,
+        "crit": 1
+      },
+      {
+        "aspd": 4,
+        "crit": 2
+      }
+    ],
+    "name_th": "ชุดขนจิ้งจอก",
+    "b2_th": "ความเร็วโจมตี +2% · คริติคอล +1%",
+    "b3_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "pas_th": "คริติคอล +10% · หลบการโจมตีเพิ่ม 6%"
+  },
+  {
+    "id": "lt_bee",
+    "n": "Little Bee Outfit",
+    "line": "lt",
+    "g": 1,
+    "lv": 18,
+    "pcs": [
+      "top_of_lt_bee",
+      "pants_of_lt_bee",
+      "acc_of_lt_bee"
+    ],
+    "b2": "Attack speed +2% · Critical +1%",
+    "b3": "Attack speed +4% · Critical +2%",
+    "pas": "Attack speed +5% · 5% on hit to poison",
+    "body": {
+      "top": "top_of_lt_bee",
+      "pants": "pants_of_lt_bee"
+    },
+    "acc": "acc_of_lt_bee",
+    "bonuses": [
+      {
+        "aspd": 2,
+        "crit": 1
+      },
+      {
+        "aspd": 4,
+        "crit": 2
+      }
+    ],
+    "name_th": "ชุดผึ้งน้อย",
+    "b2_th": "ความเร็วโจมตี +2% · คริติคอล +1%",
+    "b3_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "pas_th": "ตีเร็ว +5% · ตี 5% ติดพิษ"
+  },
+  {
+    "id": "lt_crow",
+    "n": "Black Crow Rogue Outfit",
+    "line": "lt",
+    "g": 1,
+    "lv": 22,
+    "pcs": [
+      "top_of_lt_crow",
+      "pants_of_lt_crow",
+      "acc_of_lt_crow"
+    ],
+    "b2": "Attack speed +2% · Critical +1%",
+    "b3": "Attack speed +4% · Critical +2%",
+    "pas": "Sell materials to Uncle Coco at +5% price",
+    "body": {
+      "top": "top_of_lt_crow",
+      "pants": "pants_of_lt_crow"
+    },
+    "acc": "acc_of_lt_crow",
+    "bonuses": [
+      {
+        "aspd": 2,
+        "crit": 1
+      },
+      {
+        "aspd": 4,
+        "crit": 2
+      }
+    ],
+    "name_th": "ชุดโจรอีกาดำ",
+    "b2_th": "ความเร็วโจมตี +2% · คริติคอล +1%",
+    "b3_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "pas_th": "ขายวัตถุดิบให้ลุงโกโก้ได้ราคา +5%"
+  },
+  {
+    "id": "mg_novice",
+    "n": "Apprentice Mage Outfit",
+    "line": "mg",
+    "g": 1,
+    "lv": 1,
+    "pcs": [
+      "top_of_mg_novice",
+      "pants_of_mg_novice",
+      "acc_of_mg_novice"
+    ],
+    "b2": "MATK +3% · SP +3%",
+    "b3": "MATK +6% · SP +6%",
+    "pas": "SP recovery +20%",
+    "body": {
+      "top": "top_of_mg_novice",
+      "pants": "pants_of_mg_novice"
+    },
+    "acc": "acc_of_mg_novice",
+    "bonuses": [
+      {
+        "matk": 3,
+        "spPct": 3
+      },
+      {
+        "matk": 6,
+        "spPct": 6
+      }
+    ],
+    "name_th": "ชุดเด็กฝึกเวท",
+    "b2_th": "MATK +3% · SP +3%",
+    "b3_th": "MATK +6% · SP +6%",
+    "pas_th": "SP ฟื้น +20%"
+  },
+  {
+    "id": "mg_mush",
+    "n": "Sprite Shroom Outfit",
+    "line": "mg",
+    "g": 1,
+    "lv": 8,
+    "pcs": [
+      "top_of_mg_mush",
+      "pants_of_mg_mush",
+      "acc_of_mg_mush"
+    ],
+    "b2": "MATK +3% · SP +3%",
+    "b3": "MATK +6% · SP +6%",
+    "pas": "8% on hit to burst toxic spores around the target for 80%",
+    "body": {
+      "top": "top_of_mg_mush",
+      "pants": "pants_of_mg_mush"
+    },
+    "acc": "acc_of_mg_mush",
+    "bonuses": [
+      {
+        "matk": 3,
+        "spPct": 3
+      },
+      {
+        "matk": 6,
+        "spPct": 6
+      }
+    ],
+    "name_th": "ชุดเห็ดพราย",
+    "b2_th": "MATK +3% · SP +3%",
+    "b3_th": "MATK +6% · SP +6%",
+    "pas_th": "ตี 8% ระเบิดสปอร์พิษรอบเป้า 80%"
+  },
+  {
+    "id": "mg_moth",
+    "n": "Night Moth Outfit",
+    "line": "mg",
+    "g": 1,
+    "lv": 14,
+    "pcs": [
+      "top_of_mg_moth",
+      "pants_of_mg_moth",
+      "acc_of_mg_moth"
+    ],
+    "b2": "MATK +3% · SP +3%",
+    "b3": "MATK +6% · SP +6%",
+    "pas": "Stronger at night 6%",
+    "body": {
+      "top": "top_of_mg_moth",
+      "pants": "pants_of_mg_moth"
+    },
+    "acc": "acc_of_mg_moth",
+    "bonuses": [
+      {
+        "matk": 3,
+        "spPct": 3
+      },
+      {
+        "matk": 6,
+        "spPct": 6
+      }
+    ],
+    "name_th": "ชุดผีเสื้อราตรี",
+    "b2_th": "MATK +3% · SP +3%",
+    "b3_th": "MATK +6% · SP +6%",
+    "pas_th": "กลางคืนแรงขึ้น 6%"
+  },
+  {
+    "id": "mg_leaf",
+    "n": "Leaf Sprite Outfit",
+    "line": "mg",
+    "g": 1,
+    "lv": 18,
+    "pcs": [
+      "top_of_mg_leaf",
+      "pants_of_mg_leaf",
+      "acc_of_mg_leaf"
+    ],
+    "b2": "MATK +3% · SP +3%",
+    "b3": "MATK +6% · SP +6%",
+    "pas": "Heal power +20%",
+    "body": {
+      "top": "top_of_mg_leaf",
+      "pants": "pants_of_mg_leaf"
+    },
+    "acc": "acc_of_mg_leaf",
+    "bonuses": [
+      {
+        "matk": 3,
+        "spPct": 3
+      },
+      {
+        "matk": 6,
+        "spPct": 6
+      }
+    ],
+    "name_th": "ชุดภูตใบไม้",
+    "b2_th": "MATK +3% · SP +3%",
+    "b3_th": "MATK +6% · SP +6%",
+    "pas_th": "ฮีลแรง +20%"
+  },
+  {
+    "id": "mg_candle",
+    "n": "Candle Spirit Outfit",
+    "line": "mg",
+    "g": 1,
+    "lv": 22,
+    "pcs": [
+      "top_of_mg_candle",
+      "pants_of_mg_candle",
+      "acc_of_mg_candle"
+    ],
+    "b2": "MATK +3% · SP +3%",
+    "b3": "MATK +6% · SP +6%",
+    "pas": "SP cost −30%",
+    "body": {
+      "top": "top_of_mg_candle",
+      "pants": "pants_of_mg_candle"
+    },
+    "acc": "acc_of_mg_candle",
+    "bonuses": [
+      {
+        "matk": 3,
+        "spPct": 3
+      },
+      {
+        "matk": 6,
+        "spPct": 6
+      }
+    ],
+    "name_th": "ชุดวิญญาณเทียน",
+    "b2_th": "MATK +3% · SP +3%",
+    "b3_th": "MATK +6% · SP +6%",
+    "pas_th": "ใช้ SP น้อยลง 30%"
+  },
+  {
+    "id": "rg_trail",
+    "n": "Forest Traveler Outfit",
+    "line": "rg",
+    "g": 1,
+    "lv": 1,
+    "pcs": [
+      "top_of_rg_trail",
+      "pants_of_rg_trail",
+      "acc_of_rg_trail"
+    ],
+    "b2": "HIT +5 · DEX +1",
+    "b3": "HIT +10 · DEX +2",
+    "pas": "Move speed +10% · warp 20% cheaper",
+    "body": {
+      "top": "top_of_rg_trail",
+      "pants": "pants_of_rg_trail"
+    },
+    "acc": "acc_of_rg_trail",
+    "bonuses": [
+      {
+        "hit": 5,
+        "dex": 1
+      },
+      {
+        "hit": 10,
+        "dex": 2
+      }
+    ],
+    "name_th": "ชุดนักเดินทางป่า",
+    "b2_th": "HIT +5 · DEX +1",
+    "b3_th": "HIT +10 · DEX +2",
+    "pas_th": "เดินเร็ว +10% · วาร์ปถูกลง 20%"
+  },
+  {
+    "id": "rg_frog",
+    "n": "Frog Raincoat Outfit",
+    "line": "rg",
+    "g": 1,
+    "lv": 8,
+    "pcs": [
+      "top_of_rg_frog",
+      "pants_of_rg_frog",
+      "acc_of_rg_frog"
+    ],
+    "b2": "HIT +5 · DEX +1",
+    "b3": "HIT +10 · DEX +2",
+    "pas": "Water resist 15%",
+    "body": {
+      "top": "top_of_rg_frog",
+      "pants": "pants_of_rg_frog"
+    },
+    "acc": "acc_of_rg_frog",
+    "bonuses": [
+      {
+        "hit": 5,
+        "dex": 1
+      },
+      {
+        "hit": 10,
+        "dex": 2
+      }
+    ],
+    "name_th": "ชุดกันฝนกบ",
+    "b2_th": "HIT +5 · DEX +1",
+    "b3_th": "HIT +10 · DEX +2",
+    "pas_th": "ต้านน้ำ 15%"
+  },
+  {
+    "id": "rg_wolf",
+    "n": "Wolf Hunter Outfit",
+    "line": "rg",
+    "g": 1,
+    "lv": 14,
+    "pcs": [
+      "top_of_rg_wolf",
+      "pants_of_rg_wolf",
+      "acc_of_rg_wolf"
+    ],
+    "b2": "HIT +5 · DEX +1",
+    "b3": "HIT +10 · DEX +2",
+    "pas": "+12% vs beast monsters",
+    "body": {
+      "top": "top_of_rg_wolf",
+      "pants": "pants_of_rg_wolf"
+    },
+    "acc": "acc_of_rg_wolf",
+    "bonuses": [
+      {
+        "hit": 5,
+        "dex": 1
+      },
+      {
+        "hit": 10,
+        "dex": 2
+      }
+    ],
+    "name_th": "ชุดพรานหมาป่า",
+    "b2_th": "HIT +5 · DEX +1",
+    "b3_th": "HIT +10 · DEX +2",
+    "pas_th": "แรงกับมอนเผ่าสัตว์ +12%"
+  },
+  {
+    "id": "rg_camp",
+    "n": "Camper Outfit",
+    "line": "rg",
+    "g": 1,
+    "lv": 18,
+    "pcs": [
+      "top_of_rg_camp",
+      "pants_of_rg_camp",
+      "acc_of_rg_camp"
+    ],
+    "b2": "HIT +5 · DEX +1",
+    "b3": "HIT +10 · DEX +2",
+    "pas": "Resting recovers HP/SP 2× faster",
+    "body": {
+      "top": "top_of_rg_camp",
+      "pants": "pants_of_rg_camp"
+    },
+    "acc": "acc_of_rg_camp",
+    "bonuses": [
+      {
+        "hit": 5,
+        "dex": 1
+      },
+      {
+        "hit": 10,
+        "dex": 2
+      }
+    ],
+    "name_th": "ชุดแคมป์ปิ้ง",
+    "b2_th": "HIT +5 · DEX +1",
+    "b3_th": "HIT +10 · DEX +2",
+    "pas_th": "นั่งพักฟื้น HP/SP เร็ว 2 เท่า"
+  },
+  {
+    "id": "rg_fly",
+    "n": "Dragonfly Outfit",
+    "line": "rg",
+    "g": 1,
+    "lv": 22,
+    "pcs": [
+      "top_of_rg_fly",
+      "pants_of_rg_fly",
+      "acc_of_rg_fly"
+    ],
+    "b2": "HIT +5 · DEX +1",
+    "b3": "HIT +10 · DEX +2",
+    "pas": "HIT +20 · Attack speed +3%",
+    "body": {
+      "top": "top_of_rg_fly",
+      "pants": "pants_of_rg_fly"
+    },
+    "acc": "acc_of_rg_fly",
+    "bonuses": [
+      {
+        "hit": 5,
+        "dex": 1
+      },
+      {
+        "hit": 10,
+        "dex": 2
+      }
+    ],
+    "name_th": "ชุดแมลงปอ",
+    "b2_th": "HIT +5 · DEX +1",
+    "b3_th": "HIT +10 · DEX +2",
+    "pas_th": "HIT +20 · ความเร็วโจมตี +3%"
+  },
+  {
+    "id": "hv_iron",
+    "n": "Forest Warden Iron Armor",
+    "line": "hv",
+    "g": 2,
+    "lv": 26,
+    "pcs": [
+      "top_of_hv_iron",
+      "pants_of_hv_iron",
+      "acc_of_hv_iron"
+    ],
+    "b2": "HP +8% · VIT +2",
+    "b3": "HP +16% · VIT +4",
+    "pas": "Damage taken −10% · DEF +6",
+    "body": {
+      "top": "top_of_hv_iron",
+      "pants": "pants_of_hv_iron"
+    },
+    "acc": "acc_of_hv_iron",
+    "bonuses": [
+      {
+        "hpPct": 8,
+        "vit": 2
+      },
+      {
+        "hpPct": 16,
+        "vit": 4
+      }
+    ],
+    "name_th": "เกราะเหล็กพิทักษ์ป่า",
+    "b2_th": "HP +8% · VIT +2",
+    "b3_th": "HP +16% · VIT +4",
+    "pas_th": "โดนดาเมจลดลง 10% · DEF +6"
+  },
+  {
+    "id": "hv_stone",
+    "n": "Cliffstone Armor",
+    "line": "hv",
+    "g": 2,
+    "lv": 32,
+    "pcs": [
+      "top_of_hv_stone",
+      "pants_of_hv_stone",
+      "acc_of_hv_stone"
+    ],
+    "b2": "HP +8% · VIT +2",
+    "b3": "HP +16% · VIT +4",
+    "pas": "DEF +10 · damage taken −8%",
+    "body": {
+      "top": "top_of_hv_stone",
+      "pants": "pants_of_hv_stone"
+    },
+    "acc": "acc_of_hv_stone",
+    "bonuses": [
+      {
+        "hpPct": 8,
+        "vit": 2
+      },
+      {
+        "hpPct": 16,
+        "vit": 4
+      }
+    ],
+    "name_th": "เกราะหินผา",
+    "b2_th": "HP +8% · VIT +2",
+    "b3_th": "HP +16% · VIT +4",
+    "pas_th": "DEF +10 · โดนดาเมจลดลง 8%"
+  },
+  {
+    "id": "hv_bear",
+    "n": "Black Bear Armor",
+    "line": "hv",
+    "g": 2,
+    "lv": 38,
+    "pcs": [
+      "top_of_hv_bear",
+      "pants_of_hv_bear",
+      "acc_of_hv_bear"
+    ],
+    "b2": "HP +8% · VIT +2",
+    "b3": "HP +16% · VIT +4",
+    "pas": "Every 4th hit releases a shockwave around you for 120% and recovers 3% HP",
+    "body": {
+      "top": "top_of_hv_bear",
+      "pants": "pants_of_hv_bear"
+    },
+    "acc": "acc_of_hv_bear",
+    "bonuses": [
+      {
+        "hpPct": 8,
+        "vit": 2
+      },
+      {
+        "hpPct": 16,
+        "vit": 4
+      }
+    ],
+    "name_th": "เกราะหมีดำ",
+    "b2_th": "HP +8% · VIT +2",
+    "b3_th": "HP +16% · VIT +4",
+    "pas_th": "ทุกการตีครั้งที่ 4 ปล่อยแรงกระแทกรอบตัว 120% และฟื้น HP 3%"
+  },
+  {
+    "id": "hv_beetle",
+    "n": "Green Beetle Armor",
+    "line": "hv",
+    "g": 2,
+    "lv": 42,
+    "pcs": [
+      "top_of_hv_beetle",
+      "pants_of_hv_beetle",
+      "acc_of_hv_beetle"
+    ],
+    "b2": "HP +8% · VIT +2",
+    "b3": "HP +16% · VIT +4",
+    "pas": "Damage from insect monsters −20%",
+    "body": {
+      "top": "top_of_hv_beetle",
+      "pants": "pants_of_hv_beetle"
+    },
+    "acc": "acc_of_hv_beetle",
+    "bonuses": [
+      {
+        "hpPct": 8,
+        "vit": 2
+      },
+      {
+        "hpPct": 16,
+        "vit": 4
+      }
+    ],
+    "name_th": "เกราะด้วงเขียว",
+    "b2_th": "HP +8% · VIT +2",
+    "b3_th": "HP +16% · VIT +4",
+    "pas_th": "ดาเมจจากมอนเผ่าแมลงลดลง 20%"
+  },
+  {
+    "id": "hv_forge",
+    "n": "Blacksmith Armor",
+    "line": "hv",
+    "g": 2,
+    "lv": 46,
+    "pcs": [
+      "top_of_hv_forge",
+      "pants_of_hv_forge",
+      "acc_of_hv_forge"
+    ],
+    "b2": "HP +8% · VIT +2",
+    "b3": "HP +16% · VIT +4",
+    "pas": "ATK +10% · Fire resist 15%",
+    "body": {
+      "top": "top_of_hv_forge",
+      "pants": "pants_of_hv_forge"
+    },
+    "acc": "acc_of_hv_forge",
+    "bonuses": [
+      {
+        "hpPct": 8,
+        "vit": 2
+      },
+      {
+        "hpPct": 16,
+        "vit": 4
+      }
+    ],
+    "name_th": "เกราะช่างตีเหล็ก",
+    "b2_th": "HP +8% · VIT +2",
+    "b3_th": "HP +16% · VIT +4",
+    "pas_th": "ATK +10% · ต้านไฟ 15%"
+  },
+  {
+    "id": "lt_raccoon",
+    "n": "Raccoon Rogue Outfit",
+    "line": "lt",
+    "g": 2,
+    "lv": 26,
+    "pcs": [
+      "top_of_lt_raccoon",
+      "pants_of_lt_raccoon",
+      "acc_of_lt_raccoon"
+    ],
+    "b2": "Attack speed +4% · Critical +2%",
+    "b3": "Attack speed +8% · Critical +4%",
+    "pas": "3% of gathered materials come doubled",
+    "body": {
+      "top": "top_of_lt_raccoon",
+      "pants": "pants_of_lt_raccoon"
+    },
+    "acc": "acc_of_lt_raccoon",
+    "bonuses": [
+      {
+        "aspd": 4,
+        "crit": 2
+      },
+      {
+        "aspd": 8,
+        "crit": 4
+      }
+    ],
+    "name_th": "ชุดโจรแรคคูน",
+    "b2_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "b3_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "pas_th": "3% ของวัตถุดิบที่เก็บได้มา 2 เท่า"
+  },
+  {
+    "id": "lt_snake",
+    "n": "Green Snakeskin Outfit",
+    "line": "lt",
+    "g": 2,
+    "lv": 32,
+    "pcs": [
+      "top_of_lt_snake",
+      "pants_of_lt_snake",
+      "acc_of_lt_snake"
+    ],
+    "b2": "Attack speed +4% · Critical +2%",
+    "b3": "Attack speed +8% · Critical +4%",
+    "pas": "8% on hit to poison · +15% vs poisoned monsters",
+    "body": {
+      "top": "top_of_lt_snake",
+      "pants": "pants_of_lt_snake"
+    },
+    "acc": "acc_of_lt_snake",
+    "bonuses": [
+      {
+        "aspd": 4,
+        "crit": 2
+      },
+      {
+        "aspd": 8,
+        "crit": 4
+      }
+    ],
+    "name_th": "ชุดหนังงูเขียว",
+    "b2_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "b3_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "pas_th": "ตี 8% ติดพิษ · แรง +15% กับมอนที่ติดพิษ"
+  },
+  {
+    "id": "lt_shadow",
+    "n": "Shadow Sneak Outfit",
+    "line": "lt",
+    "g": 2,
+    "lv": 38,
+    "pcs": [
+      "top_of_lt_shadow",
+      "pants_of_lt_shadow",
+      "acc_of_lt_shadow"
+    ],
+    "b2": "Attack speed +4% · Critical +2%",
+    "b3": "Attack speed +8% · Critical +4%",
+    "pas": "First hit on a full-HP monster +40%",
+    "body": {
+      "top": "top_of_lt_shadow",
+      "pants": "pants_of_lt_shadow"
+    },
+    "acc": "acc_of_lt_shadow",
+    "bonuses": [
+      {
+        "aspd": 4,
+        "crit": 2
+      },
+      {
+        "aspd": 8,
+        "crit": 4
+      }
+    ],
+    "name_th": "ชุดนักย่องเงา",
+    "b2_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "b3_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "pas_th": "ตีแรกใส่มอนที่เลือดเต็ม +40%"
+  },
+  {
+    "id": "lt_lizard",
+    "n": "Sand Lizard Outfit",
+    "line": "lt",
+    "g": 2,
+    "lv": 42,
+    "pcs": [
+      "top_of_lt_lizard",
+      "pants_of_lt_lizard",
+      "acc_of_lt_lizard"
+    ],
+    "b2": "Attack speed +4% · Critical +2%",
+    "b3": "Attack speed +8% · Critical +4%",
+    "pas": "Fire resist 20% · Extra dodge 6%",
+    "body": {
+      "top": "top_of_lt_lizard",
+      "pants": "pants_of_lt_lizard"
+    },
+    "acc": "acc_of_lt_lizard",
+    "bonuses": [
+      {
+        "aspd": 4,
+        "crit": 2
+      },
+      {
+        "aspd": 8,
+        "crit": 4
+      }
+    ],
+    "name_th": "ชุดกิ้งก่าทราย",
+    "b2_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "b3_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "pas_th": "ต้านไฟ 20% · หลบการโจมตีเพิ่ม 6%"
+  },
+  {
+    "id": "lt_cat",
+    "n": "Wildcat Outfit",
+    "line": "lt",
+    "g": 2,
+    "lv": 46,
+    "pcs": [
+      "top_of_lt_cat",
+      "pants_of_lt_cat",
+      "acc_of_lt_cat"
+    ],
+    "b2": "Attack speed +4% · Critical +2%",
+    "b3": "Attack speed +8% · Critical +4%",
+    "pas": "Attack speed +6% · Critical +6%",
+    "body": {
+      "top": "top_of_lt_cat",
+      "pants": "pants_of_lt_cat"
+    },
+    "acc": "acc_of_lt_cat",
+    "bonuses": [
+      {
+        "aspd": 4,
+        "crit": 2
+      },
+      {
+        "aspd": 8,
+        "crit": 4
+      }
+    ],
+    "name_th": "ชุดแมวป่า",
+    "b2_th": "ความเร็วโจมตี +4% · คริติคอล +2%",
+    "b3_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "pas_th": "ความเร็วโจมตี +6% · คริติคอล +6%"
+  },
+  {
+    "id": "mg_star",
+    "n": "Stargazer Outfit",
+    "line": "mg",
+    "g": 2,
+    "lv": 26,
+    "pcs": [
+      "top_of_mg_star",
+      "pants_of_mg_star",
+      "acc_of_mg_star"
+    ],
+    "b2": "MATK +6% · SP +6%",
+    "b3": "MATK +12% · SP +12%",
+    "pas": "Stronger at night 8%",
+    "body": {
+      "top": "top_of_mg_star",
+      "pants": "pants_of_mg_star"
+    },
+    "acc": "acc_of_mg_star",
+    "bonuses": [
+      {
+        "matk": 6,
+        "spPct": 6
+      },
+      {
+        "matk": 12,
+        "spPct": 12
+      }
+    ],
+    "name_th": "ชุดโหราดาว",
+    "b2_th": "MATK +6% · SP +6%",
+    "b3_th": "MATK +12% · SP +12%",
+    "pas_th": "กลางคืนแรงขึ้น 8%"
+  },
+  {
+    "id": "mg_ink",
+    "n": "Spellscribe Outfit",
+    "line": "mg",
+    "g": 2,
+    "lv": 32,
+    "pcs": [
+      "top_of_mg_ink",
+      "pants_of_mg_ink",
+      "acc_of_mg_ink"
+    ],
+    "b2": "MATK +6% · SP +6%",
+    "b3": "MATK +12% · SP +12%",
+    "pas": "Skill cooldown −10%",
+    "body": {
+      "top": "top_of_mg_ink",
+      "pants": "pants_of_mg_ink"
+    },
+    "acc": "acc_of_mg_ink",
+    "bonuses": [
+      {
+        "matk": 6,
+        "spPct": 6
+      },
+      {
+        "matk": 12,
+        "spPct": 12
+      }
+    ],
+    "name_th": "ชุดนักเขียนมนตร์",
+    "b2_th": "MATK +6% · SP +6%",
+    "b3_th": "MATK +12% · SP +12%",
+    "pas_th": "คูลดาวน์สกิล −10%"
+  },
+  {
+    "id": "mg_potion",
+    "n": "Alchemist Outfit",
+    "line": "mg",
+    "g": 2,
+    "lv": 38,
+    "pcs": [
+      "top_of_mg_potion",
+      "pants_of_mg_potion",
+      "acc_of_mg_potion"
+    ],
+    "b2": "MATK +6% · SP +6%",
+    "b3": "MATK +12% · SP +12%",
+    "pas": "Self HP regen +50%",
+    "body": {
+      "top": "top_of_mg_potion",
+      "pants": "pants_of_mg_potion"
+    },
+    "acc": "acc_of_mg_potion",
+    "bonuses": [
+      {
+        "matk": 6,
+        "spPct": 6
+      },
+      {
+        "matk": 12,
+        "spPct": 12
+      }
+    ],
+    "name_th": "ชุดนักปรุงยา",
+    "b2_th": "MATK +6% · SP +6%",
+    "b3_th": "MATK +12% · SP +12%",
+    "pas_th": "HP ฟื้นเอง +50%"
+  },
+  {
+    "id": "mg_slime",
+    "n": "Slime Jelly Outfit",
+    "line": "mg",
+    "g": 2,
+    "lv": 42,
+    "pcs": [
+      "top_of_mg_slime",
+      "pants_of_mg_slime",
+      "acc_of_mg_slime"
+    ],
+    "b2": "MATK +6% · SP +6%",
+    "b3": "MATK +12% · SP +12%",
+    "pas": "10% when hit, gain a jelly armor absorbing damage equal to 5% of HP",
+    "body": {
+      "top": "top_of_mg_slime",
+      "pants": "pants_of_mg_slime"
+    },
+    "acc": "acc_of_mg_slime",
+    "bonuses": [
+      {
+        "matk": 6,
+        "spPct": 6
+      },
+      {
+        "matk": 12,
+        "spPct": 12
+      }
+    ],
+    "name_th": "ชุดวุ้นสไลม์",
+    "b2_th": "MATK +6% · SP +6%",
+    "b3_th": "MATK +12% · SP +12%",
+    "pas_th": "โดนตี 10% ได้เกราะวุ้นซับดาเมจ 5% ของ HP"
+  },
+  {
+    "id": "mg_cloud",
+    "n": "Night Cloud Outfit",
+    "line": "mg",
+    "g": 2,
+    "lv": 46,
+    "pcs": [
+      "top_of_mg_cloud",
+      "pants_of_mg_cloud",
+      "acc_of_mg_cloud"
+    ],
+    "b2": "MATK +6% · SP +6%",
+    "b3": "MATK +12% · SP +12%",
+    "pas": "Water and Wind +20%",
+    "body": {
+      "top": "top_of_mg_cloud",
+      "pants": "pants_of_mg_cloud"
+    },
+    "acc": "acc_of_mg_cloud",
+    "bonuses": [
+      {
+        "matk": 6,
+        "spPct": 6
+      },
+      {
+        "matk": 12,
+        "spPct": 12
+      }
+    ],
+    "name_th": "ชุดเมฆราตรี",
+    "b2_th": "MATK +6% · SP +6%",
+    "b3_th": "MATK +12% · SP +12%",
+    "pas_th": "ธาตุน้ำและลมแรง +20%"
+  },
+  {
+    "id": "rg_fisher",
+    "n": "Fisherman Outfit",
+    "line": "rg",
+    "g": 2,
+    "lv": 26,
+    "pcs": [
+      "top_of_rg_fisher",
+      "pants_of_rg_fisher",
+      "acc_of_rg_fisher"
+    ],
+    "b2": "HIT +10 · DEX +2",
+    "b3": "HIT +20 · DEX +4",
+    "pas": "15% chance fishing gives 1 extra fish",
+    "body": {
+      "top": "top_of_rg_fisher",
+      "pants": "pants_of_rg_fisher"
+    },
+    "acc": "acc_of_rg_fisher",
+    "bonuses": [
+      {
+        "hit": 10,
+        "dex": 2
+      },
+      {
+        "hit": 20,
+        "dex": 4
+      }
+    ],
+    "name_th": "ชุดชาวประมง",
+    "b2_th": "HIT +10 · DEX +2",
+    "b3_th": "HIT +20 · DEX +4",
+    "pas_th": "ตกปลา 15% ได้ปลาเพิ่มอีก 1 ตัว"
+  },
+  {
+    "id": "rg_miner",
+    "n": "Mine Explorer Outfit",
+    "line": "rg",
+    "g": 2,
+    "lv": 32,
+    "pcs": [
+      "top_of_rg_miner",
+      "pants_of_rg_miner",
+      "acc_of_rg_miner"
+    ],
+    "b2": "HIT +10 · DEX +2",
+    "b3": "HIT +20 · DEX +4",
+    "pas": "15% chance mining gives 1 extra ore",
+    "body": {
+      "top": "top_of_rg_miner",
+      "pants": "pants_of_rg_miner"
+    },
+    "acc": "acc_of_rg_miner",
+    "bonuses": [
+      {
+        "hit": 10,
+        "dex": 2
+      },
+      {
+        "hit": 20,
+        "dex": 4
+      }
+    ],
+    "name_th": "ชุดนักสำรวจเหมือง",
+    "b2_th": "HIT +10 · DEX +2",
+    "b3_th": "HIT +20 · DEX +4",
+    "pas_th": "ขุดแร่ 15% ได้แร่เพิ่มอีก 1 ก้อน"
+  },
+  {
+    "id": "rg_herbal",
+    "n": "Herb Gatherer Outfit",
+    "line": "rg",
+    "g": 2,
+    "lv": 38,
+    "pcs": [
+      "top_of_rg_herbal",
+      "pants_of_rg_herbal",
+      "acc_of_rg_herbal"
+    ],
+    "b2": "HIT +10 · DEX +2",
+    "b3": "HIT +20 · DEX +4",
+    "pas": "15% chance harvesting gives 1 extra · Heal power +10%",
+    "body": {
+      "top": "top_of_rg_herbal",
+      "pants": "pants_of_rg_herbal"
+    },
+    "acc": "acc_of_rg_herbal",
+    "bonuses": [
+      {
+        "hit": 10,
+        "dex": 2
+      },
+      {
+        "hit": 20,
+        "dex": 4
+      }
+    ],
+    "name_th": "ชุดนักเก็บสมุนไพร",
+    "b2_th": "HIT +10 · DEX +2",
+    "b3_th": "HIT +20 · DEX +4",
+    "pas_th": "เก็บผัก 15% ได้เพิ่มอีก 1 · ฮีล +10%"
+  },
+  {
+    "id": "rg_courier",
+    "n": "Forest Mail Carrier Outfit",
+    "line": "rg",
+    "g": 2,
+    "lv": 42,
+    "pcs": [
+      "top_of_rg_courier",
+      "pants_of_rg_courier",
+      "acc_of_rg_courier"
+    ],
+    "b2": "HIT +10 · DEX +2",
+    "b3": "HIT +20 · DEX +4",
+    "pas": "Move speed +16% · 3 free warps per day",
+    "body": {
+      "top": "top_of_rg_courier",
+      "pants": "pants_of_rg_courier"
+    },
+    "acc": "acc_of_rg_courier",
+    "bonuses": [
+      {
+        "hit": 10,
+        "dex": 2
+      },
+      {
+        "hit": 20,
+        "dex": 4
+      }
+    ],
+    "name_th": "ชุดบุรุษไปรษณีย์ป่า",
+    "b2_th": "HIT +10 · DEX +2",
+    "b3_th": "HIT +20 · DEX +4",
+    "pas_th": "เดินเร็ว +16% · วาร์ปฟรีวันละ 3 ครั้ง"
+  },
+  {
+    "id": "rg_climber",
+    "n": "Mountaineer Outfit",
+    "line": "rg",
+    "g": 2,
+    "lv": 46,
+    "pcs": [
+      "top_of_rg_climber",
+      "pants_of_rg_climber",
+      "acc_of_rg_climber"
+    ],
+    "b2": "HIT +10 · DEX +2",
+    "b3": "HIT +20 · DEX +4",
+    "pas": "Wind resist 15% · FLEE +10",
+    "body": {
+      "top": "top_of_rg_climber",
+      "pants": "pants_of_rg_climber"
+    },
+    "acc": "acc_of_rg_climber",
+    "bonuses": [
+      {
+        "hit": 10,
+        "dex": 2
+      },
+      {
+        "hit": 20,
+        "dex": 4
+      }
+    ],
+    "name_th": "ชุดนักปีนเขา",
+    "b2_th": "HIT +10 · DEX +2",
+    "b3_th": "HIT +20 · DEX +4",
+    "pas_th": "ต้านลม 15% · FLEE +10"
+  },
+  {
+    "id": "hv_owl",
+    "n": "Night Owl Armor",
+    "line": "hv",
+    "g": 3,
+    "lv": 51,
+    "pcs": [
+      "top_of_hv_owl",
+      "pants_of_hv_owl",
+      "acc_of_hv_owl"
+    ],
+    "b2": "HP +12% · VIT +3",
+    "b3": "HP +24% · VIT +6",
+    "pas": "Stronger at night 10%",
+    "body": {
+      "top": "top_of_hv_owl",
+      "pants": "pants_of_hv_owl"
+    },
+    "acc": "acc_of_hv_owl",
+    "bonuses": [
+      {
+        "hpPct": 12,
+        "vit": 3
+      },
+      {
+        "hpPct": 24,
+        "vit": 6
+      }
+    ],
+    "name_th": "เกราะนกฮูกราตรี",
+    "b2_th": "HP +12% · VIT +3",
+    "b3_th": "HP +24% · VIT +6",
+    "pas_th": "กลางคืนแรงขึ้น 10%"
+  },
+  {
+    "id": "hv_crystal",
+    "n": "Cave Crystal Armor",
+    "line": "hv",
+    "g": 3,
+    "lv": 56,
+    "pcs": [
+      "top_of_hv_crystal",
+      "pants_of_hv_crystal",
+      "acc_of_hv_crystal"
+    ],
+    "b2": "HP +12% · VIT +3",
+    "b3": "HP +24% · VIT +6",
+    "pas": "MDEF +16 · damage taken −6%",
+    "body": {
+      "top": "top_of_hv_crystal",
+      "pants": "pants_of_hv_crystal"
+    },
+    "acc": "acc_of_hv_crystal",
+    "bonuses": [
+      {
+        "hpPct": 12,
+        "vit": 3
+      },
+      {
+        "hpPct": 24,
+        "vit": 6
+      }
+    ],
+    "name_th": "เกราะคริสตัลถ้ำ",
+    "b2_th": "HP +12% · VIT +3",
+    "b3_th": "HP +24% · VIT +6",
+    "pas_th": "MDEF +16 · โดนดาเมจลดลง 6%"
+  },
+  {
+    "id": "hv_ember",
+    "n": "Campfire Ember Armor",
+    "line": "hv",
+    "g": 3,
+    "lv": 62,
+    "pcs": [
+      "top_of_hv_ember",
+      "pants_of_hv_ember",
+      "acc_of_hv_ember"
+    ],
+    "b2": "HP +12% · VIT +3",
+    "b3": "HP +24% · VIT +6",
+    "pas": "10% on hit to burn · Water resist 20%",
+    "body": {
+      "top": "top_of_hv_ember",
+      "pants": "pants_of_hv_ember"
+    },
+    "acc": "acc_of_hv_ember",
+    "bonuses": [
+      {
+        "hpPct": 12,
+        "vit": 3
+      },
+      {
+        "hpPct": 24,
+        "vit": 6
+      }
+    ],
+    "name_th": "เกราะถ่านกองไฟ",
+    "b2_th": "HP +12% · VIT +3",
+    "b3_th": "HP +24% · VIT +6",
+    "pas_th": "ตี 10% ติดเผา · ต้านน้ำ 20%"
+  },
+  {
+    "id": "hv_turtle",
+    "n": "Ancient Turtle Armor",
+    "line": "hv",
+    "g": 3,
+    "lv": 66,
+    "pcs": [
+      "top_of_hv_turtle",
+      "pants_of_hv_turtle",
+      "acc_of_hv_turtle"
+    ],
+    "b2": "HP +12% · VIT +3",
+    "b3": "HP +24% · VIT +6",
+    "pas": "Below 40% HP, curl into your shell for 3 sec, damage taken −60% (every 90 sec)",
+    "body": {
+      "top": "top_of_hv_turtle",
+      "pants": "pants_of_hv_turtle"
+    },
+    "acc": "acc_of_hv_turtle",
+    "bonuses": [
+      {
+        "hpPct": 12,
+        "vit": 3
+      },
+      {
+        "hpPct": 24,
+        "vit": 6
+      }
+    ],
+    "name_th": "เกราะเต่าโบราณ",
+    "b2_th": "HP +12% · VIT +3",
+    "b3_th": "HP +24% · VIT +6",
+    "pas_th": "HP ต่ำกว่า 40% หดในกระดอง 3 วิ ดาเมจรับ −60% (ทุก 90 วิ)"
+  },
+  {
+    "id": "hv_stag",
+    "n": "Stag Antler Armor",
+    "line": "hv",
+    "g": 3,
+    "lv": 70,
+    "pcs": [
+      "top_of_hv_stag",
+      "pants_of_hv_stag",
+      "acc_of_hv_stag"
+    ],
+    "b2": "HP +12% · VIT +3",
+    "b3": "HP +24% · VIT +6",
+    "pas": "Kills heal 2% HP",
+    "body": {
+      "top": "top_of_hv_stag",
+      "pants": "pants_of_hv_stag"
+    },
+    "acc": "acc_of_hv_stag",
+    "bonuses": [
+      {
+        "hpPct": 12,
+        "vit": 3
+      },
+      {
+        "hpPct": 24,
+        "vit": 6
+      }
+    ],
+    "name_th": "เกราะกวางเขางาม",
+    "b2_th": "HP +12% · VIT +3",
+    "b3_th": "HP +24% · VIT +6",
+    "pas_th": "ฆ่ามอน ฟื้น HP 2%"
+  },
+  {
+    "id": "lt_night",
+    "n": "Night Hunter Outfit",
+    "line": "lt",
+    "g": 3,
+    "lv": 51,
+    "pcs": [
+      "top_of_lt_night",
+      "pants_of_lt_night",
+      "acc_of_lt_night"
+    ],
+    "b2": "Attack speed +6% · Critical +3%",
+    "b3": "Attack speed +12% · Critical +6%",
+    "pas": "Stronger at night 12%",
+    "body": {
+      "top": "top_of_lt_night",
+      "pants": "pants_of_lt_night"
+    },
+    "acc": "acc_of_lt_night",
+    "bonuses": [
+      {
+        "aspd": 6,
+        "crit": 3
+      },
+      {
+        "aspd": 12,
+        "crit": 6
+      }
+    ],
+    "name_th": "ชุดนักล่าราตรี",
+    "b2_th": "ความเร็วโจมตี +6% · คริติคอล +3%",
+    "b3_th": "ความเร็วโจมตี +12% · คริติคอล +6%",
+    "pas_th": "กลางคืนแรงขึ้น 12%"
+  },
+  {
+    "id": "lt_panther",
+    "n": "Black Panther Outfit",
+    "line": "lt",
+    "g": 3,
+    "lv": 56,
+    "pcs": [
+      "top_of_lt_panther",
+      "pants_of_lt_panther",
+      "acc_of_lt_panther"
+    ],
+    "b2": "Attack speed +6% · Critical +3%",
+    "b3": "Attack speed +12% · Critical +6%",
+    "pas": "Critical 40% stronger · First hit on a full-HP monster +20%",
+    "body": {
+      "top": "top_of_lt_panther",
+      "pants": "pants_of_lt_panther"
+    },
+    "acc": "acc_of_lt_panther",
+    "bonuses": [
+      {
+        "aspd": 6,
+        "crit": 3
+      },
+      {
+        "aspd": 12,
+        "crit": 6
+      }
+    ],
+    "name_th": "ชุดเสือดำ",
+    "b2_th": "ความเร็วโจมตี +6% · คริติคอล +3%",
+    "b3_th": "ความเร็วโจมตี +12% · คริติคอล +6%",
+    "pas_th": "คริติคอลแรงขึ้น 40% · ตีแรกใส่มอนที่เลือดเต็ม +20%"
+  },
+  {
+    "id": "lt_firefly",
+    "n": "Firefly Outfit",
+    "line": "lt",
+    "g": 3,
+    "lv": 62,
+    "pcs": [
+      "top_of_lt_firefly",
+      "pants_of_lt_firefly",
+      "acc_of_lt_firefly"
+    ],
+    "b2": "Attack speed +6% · Critical +3%",
+    "b3": "Attack speed +12% · Critical +6%",
+    "pas": "+15% vs Shadow-element monsters · +5% at night",
+    "body": {
+      "top": "top_of_lt_firefly",
+      "pants": "pants_of_lt_firefly"
+    },
+    "acc": "acc_of_lt_firefly",
+    "bonuses": [
+      {
+        "aspd": 6,
+        "crit": 3
+      },
+      {
+        "aspd": 12,
+        "crit": 6
+      }
+    ],
+    "name_th": "ชุดหิ่งห้อย",
+    "b2_th": "ความเร็วโจมตี +6% · คริติคอล +3%",
+    "b3_th": "ความเร็วโจมตี +12% · คริติคอล +6%",
+    "pas_th": "แรงกับมอนธาตุเงา +15% · กลางคืน +5%"
+  },
+  {
+    "id": "lt_spider",
+    "n": "Silk Spider Outfit",
+    "line": "lt",
+    "g": 3,
+    "lv": 66,
+    "pcs": [
+      "top_of_lt_spider",
+      "pants_of_lt_spider",
+      "acc_of_lt_spider"
+    ],
+    "b2": "Attack speed +6% · Critical +3%",
+    "b3": "Attack speed +12% · Critical +6%",
+    "pas": "10% on hit to web the monster, slowing it 40% for 2 sec",
+    "body": {
+      "top": "top_of_lt_spider",
+      "pants": "pants_of_lt_spider"
+    },
+    "acc": "acc_of_lt_spider",
+    "bonuses": [
+      {
+        "aspd": 6,
+        "crit": 3
+      },
+      {
+        "aspd": 12,
+        "crit": 6
+      }
+    ],
+    "name_th": "ชุดแมงมุมไหม",
+    "b2_th": "ความเร็วโจมตี +6% · คริติคอล +3%",
+    "b3_th": "ความเร็วโจมตี +12% · คริติคอล +6%",
+    "pas_th": "ตี 10% พันใยมอน ช้าลง 40% 2 วิ"
+  },
+  {
+    "id": "lt_mantis",
+    "n": "Mantis Outfit",
+    "line": "lt",
+    "g": 3,
+    "lv": 70,
+    "pcs": [
+      "top_of_lt_mantis",
+      "pants_of_lt_mantis",
+      "acc_of_lt_mantis"
+    ],
+    "b2": "Attack speed +6% · Critical +3%",
+    "b3": "Attack speed +12% · Critical +6%",
+    "pas": "Critical 50% stronger",
+    "body": {
+      "top": "top_of_lt_mantis",
+      "pants": "pants_of_lt_mantis"
+    },
+    "acc": "acc_of_lt_mantis",
+    "bonuses": [
+      {
+        "aspd": 6,
+        "crit": 3
+      },
+      {
+        "aspd": 12,
+        "crit": 6
+      }
+    ],
+    "name_th": "ชุดตั๊กแตนตำข้าว",
+    "b2_th": "ความเร็วโจมตี +6% · คริติคอล +3%",
+    "b3_th": "ความเร็วโจมตี +12% · คริติคอล +6%",
+    "pas_th": "คริติคอลแรงขึ้น 50%"
+  },
+  {
+    "id": "mg_tide",
+    "n": "Tidecaller Outfit",
+    "line": "mg",
+    "g": 3,
+    "lv": 51,
+    "pcs": [
+      "top_of_mg_tide",
+      "pants_of_mg_tide",
+      "acc_of_mg_tide"
+    ],
+    "b2": "MATK +9% · SP +9%",
+    "b3": "MATK +18% · SP +18%",
+    "pas": "Chill chance +40% · Water +10%",
+    "body": {
+      "top": "top_of_mg_tide",
+      "pants": "pants_of_mg_tide"
+    },
+    "acc": "acc_of_mg_tide",
+    "bonuses": [
+      {
+        "matk": 9,
+        "spPct": 9
+      },
+      {
+        "matk": 18,
+        "spPct": 18
+      }
+    ],
+    "name_th": "ชุดเวทกระแสน้ำ",
+    "b2_th": "MATK +9% · SP +9%",
+    "b3_th": "MATK +18% · SP +18%",
+    "pas_th": "โอกาสติดเย็นเฉียบ +40% · ธาตุน้ำแรง +10%"
+  },
+  {
+    "id": "mg_bloom",
+    "n": "Nightbloom Outfit",
+    "line": "mg",
+    "g": 3,
+    "lv": 56,
+    "pcs": [
+      "top_of_mg_bloom",
+      "pants_of_mg_bloom",
+      "acc_of_mg_bloom"
+    ],
+    "b2": "MATK +9% · SP +9%",
+    "b3": "MATK +18% · SP +18%",
+    "pas": "Heal power +30%",
+    "body": {
+      "top": "top_of_mg_bloom",
+      "pants": "pants_of_mg_bloom"
+    },
+    "acc": "acc_of_mg_bloom",
+    "bonuses": [
+      {
+        "matk": 9,
+        "spPct": 9
+      },
+      {
+        "matk": 18,
+        "spPct": 18
+      }
+    ],
+    "name_th": "ชุดดอกไม้ราตรี",
+    "b2_th": "MATK +9% · SP +9%",
+    "b3_th": "MATK +18% · SP +18%",
+    "pas_th": "ฮีลแรง +30%"
+  },
+  {
+    "id": "mg_rune",
+    "n": "Runecarver Outfit",
+    "line": "mg",
+    "g": 3,
+    "lv": 62,
+    "pcs": [
+      "top_of_mg_rune",
+      "pants_of_mg_rune",
+      "acc_of_mg_rune"
+    ],
+    "b2": "MATK +9% · SP +9%",
+    "b3": "MATK +18% · SP +18%",
+    "pas": "Skill power +16% · SP cost −16%",
+    "body": {
+      "top": "top_of_mg_rune",
+      "pants": "pants_of_mg_rune"
+    },
+    "acc": "acc_of_mg_rune",
+    "bonuses": [
+      {
+        "matk": 9,
+        "spPct": 9
+      },
+      {
+        "matk": 18,
+        "spPct": 18
+      }
+    ],
+    "name_th": "ชุดจารึกรูน",
+    "b2_th": "MATK +9% · SP +9%",
+    "b3_th": "MATK +18% · SP +18%",
+    "pas_th": "พลังสกิล +16% · ใช้ SP น้อยลง 16%"
+  },
+  {
+    "id": "mg_clock",
+    "n": "Timekeeper Outfit",
+    "line": "mg",
+    "g": 3,
+    "lv": 66,
+    "pcs": [
+      "top_of_mg_clock",
+      "pants_of_mg_clock",
+      "acc_of_mg_clock"
+    ],
+    "b2": "MATK +9% · SP +9%",
+    "b3": "MATK +18% · SP +18%",
+    "pas": "Skill cooldown −16%",
+    "body": {
+      "top": "top_of_mg_clock",
+      "pants": "pants_of_mg_clock"
+    },
+    "acc": "acc_of_mg_clock",
+    "bonuses": [
+      {
+        "matk": 9,
+        "spPct": 9
+      },
+      {
+        "matk": 18,
+        "spPct": 18
+      }
+    ],
+    "name_th": "ชุดผู้รักษาเวลา",
+    "b2_th": "MATK +9% · SP +9%",
+    "b3_th": "MATK +18% · SP +18%",
+    "pas_th": "คูลดาวน์สกิล −16%"
+  },
+  {
+    "id": "mg_frost",
+    "n": "Snowflake Mage Outfit",
+    "line": "mg",
+    "g": 3,
+    "lv": 70,
+    "pcs": [
+      "top_of_mg_frost",
+      "pants_of_mg_frost",
+      "acc_of_mg_frost"
+    ],
+    "b2": "MATK +9% · SP +9%",
+    "b3": "MATK +18% · SP +18%",
+    "pas": "Chill chance +60% · Water +10%",
+    "body": {
+      "top": "top_of_mg_frost",
+      "pants": "pants_of_mg_frost"
+    },
+    "acc": "acc_of_mg_frost",
+    "bonuses": [
+      {
+        "matk": 9,
+        "spPct": 9
+      },
+      {
+        "matk": 18,
+        "spPct": 18
+      }
+    ],
+    "name_th": "ชุดเวทเกล็ดหิมะ",
+    "b2_th": "MATK +9% · SP +9%",
+    "b3_th": "MATK +18% · SP +18%",
+    "pas_th": "โอกาสติดเย็นเฉียบ +60% · ธาตุน้ำแรง +10%"
+  },
+  {
+    "id": "rg_elk",
+    "n": "Elk Hunter Outfit",
+    "line": "rg",
+    "g": 3,
+    "lv": 51,
+    "pcs": [
+      "top_of_rg_elk",
+      "pants_of_rg_elk",
+      "acc_of_rg_elk"
+    ],
+    "b2": "HIT +15 · DEX +3",
+    "b3": "HIT +30 · DEX +6",
+    "pas": "+10% vs bosses and large monsters",
+    "body": {
+      "top": "top_of_rg_elk",
+      "pants": "pants_of_rg_elk"
+    },
+    "acc": "acc_of_rg_elk",
+    "bonuses": [
+      {
+        "hit": 15,
+        "dex": 3
+      },
+      {
+        "hit": 30,
+        "dex": 6
+      }
+    ],
+    "name_th": "ชุดพรานกวางเอลก์",
+    "b2_th": "HIT +15 · DEX +3",
+    "b3_th": "HIT +30 · DEX +6",
+    "pas_th": "แรงกับบอสและมอนตัวใหญ่ +10%"
+  },
+  {
+    "id": "rg_ranger",
+    "n": "Deepwood Ranger Outfit",
+    "line": "rg",
+    "g": 3,
+    "lv": 56,
+    "pcs": [
+      "top_of_rg_ranger",
+      "pants_of_rg_ranger",
+      "acc_of_rg_ranger"
+    ],
+    "b2": "HIT +15 · DEX +3",
+    "b3": "HIT +30 · DEX +6",
+    "pas": "Companion +30%",
+    "body": {
+      "top": "top_of_rg_ranger",
+      "pants": "pants_of_rg_ranger"
+    },
+    "acc": "acc_of_rg_ranger",
+    "bonuses": [
+      {
+        "hit": 15,
+        "dex": 3
+      },
+      {
+        "hit": 30,
+        "dex": 6
+      }
+    ],
+    "name_th": "ชุดเรนเจอร์ป่าลึก",
+    "b2_th": "HIT +15 · DEX +3",
+    "b3_th": "HIT +30 · DEX +6",
+    "pas_th": "สัตว์ข้างตัวแรง +30%"
+  },
+  {
+    "id": "rg_navigator",
+    "n": "Star Navigator Outfit",
+    "line": "rg",
+    "g": 3,
+    "lv": 62,
+    "pcs": [
+      "top_of_rg_navigator",
+      "pants_of_rg_navigator",
+      "acc_of_rg_navigator"
+    ],
+    "b2": "HIT +15 · DEX +3",
+    "b3": "HIT +30 · DEX +6",
+    "pas": "Stronger at night 8% · HIT +20",
+    "body": {
+      "top": "top_of_rg_navigator",
+      "pants": "pants_of_rg_navigator"
+    },
+    "acc": "acc_of_rg_navigator",
+    "bonuses": [
+      {
+        "hit": 15,
+        "dex": 3
+      },
+      {
+        "hit": 30,
+        "dex": 6
+      }
+    ],
+    "name_th": "ชุดนักเดินเรือดาว",
+    "b2_th": "HIT +15 · DEX +3",
+    "b3_th": "HIT +30 · DEX +6",
+    "pas_th": "กลางคืนแรงขึ้น 8% · HIT +20"
+  },
+  {
+    "id": "rg_falcon",
+    "n": "Falconer Outfit",
+    "line": "rg",
+    "g": 3,
+    "lv": 66,
+    "pcs": [
+      "top_of_rg_falcon",
+      "pants_of_rg_falcon",
+      "acc_of_rg_falcon"
+    ],
+    "b2": "HIT +15 · DEX +3",
+    "b3": "HIT +30 · DEX +6",
+    "pas": "Companion +40%",
+    "body": {
+      "top": "top_of_rg_falcon",
+      "pants": "pants_of_rg_falcon"
+    },
+    "acc": "acc_of_rg_falcon",
+    "bonuses": [
+      {
+        "hit": 15,
+        "dex": 3
+      },
+      {
+        "hit": 30,
+        "dex": 6
+      }
+    ],
+    "name_th": "ชุดผู้ฝึกเหยี่ยว",
+    "b2_th": "HIT +15 · DEX +3",
+    "b3_th": "HIT +30 · DEX +6",
+    "pas_th": "สัตว์ข้างตัวแรง +40%"
+  },
+  {
+    "id": "rg_polar",
+    "n": "Polar Explorer Outfit",
+    "line": "rg",
+    "g": 3,
+    "lv": 70,
+    "pcs": [
+      "top_of_rg_polar",
+      "pants_of_rg_polar",
+      "acc_of_rg_polar"
+    ],
+    "b2": "HIT +15 · DEX +3",
+    "b3": "HIT +30 · DEX +6",
+    "pas": "Water resist 25%",
+    "body": {
+      "top": "top_of_rg_polar",
+      "pants": "pants_of_rg_polar"
+    },
+    "acc": "acc_of_rg_polar",
+    "bonuses": [
+      {
+        "hit": 15,
+        "dex": 3
+      },
+      {
+        "hit": 30,
+        "dex": 6
+      }
+    ],
+    "name_th": "ชุดนักสำรวจขั้วโลก",
+    "b2_th": "HIT +15 · DEX +3",
+    "b3_th": "HIT +30 · DEX +6",
+    "pas_th": "ต้านน้ำ 25%"
+  },
+  {
+    "id": "hv_moon",
+    "n": "Moon Knight Armor",
+    "line": "hv",
+    "g": 4,
+    "lv": 76,
+    "pcs": [
+      "top_of_hv_moon",
+      "pants_of_hv_moon",
+      "acc_of_hv_moon"
+    ],
+    "b2": "HP +16% · VIT +4",
+    "b3": "HP +32% · VIT +8",
+    "pas": "Max HP +16% · At night recover 0.5% HP per sec",
+    "body": {
+      "top": "top_of_hv_moon",
+      "pants": "pants_of_hv_moon"
+    },
+    "acc": "acc_of_hv_moon",
+    "bonuses": [
+      {
+        "hpPct": 16,
+        "vit": 4
+      },
+      {
+        "hpPct": 32,
+        "vit": 8
+      }
+    ],
+    "name_th": "เกราะอัศวินจันทรา",
+    "b2_th": "HP +16% · VIT +4",
+    "b3_th": "HP +32% · VIT +8",
+    "pas_th": "HP สูงสุด +16% · กลางคืนฟื้น HP 0.5% ต่อวิ"
+  },
+  {
+    "id": "hv_wyrm",
+    "n": "Wildwood Dragon Armor",
+    "line": "hv",
+    "g": 4,
+    "lv": 80,
+    "pcs": [
+      "top_of_hv_wyrm",
+      "pants_of_hv_wyrm",
+      "acc_of_hv_wyrm"
+    ],
+    "b2": "HP +16% · VIT +4",
+    "b3": "HP +32% · VIT +8",
+    "pas": "Damage taken −16% · 5% on hit to breathe a 150% cone of fire",
+    "body": {
+      "top": "top_of_hv_wyrm",
+      "pants": "pants_of_hv_wyrm"
+    },
+    "acc": "acc_of_hv_wyrm",
+    "bonuses": [
+      {
+        "hpPct": 16,
+        "vit": 4
+      },
+      {
+        "hpPct": 32,
+        "vit": 8
+      }
+    ],
+    "name_th": "เกราะมังกรไพร",
+    "b2_th": "HP +16% · VIT +4",
+    "b3_th": "HP +32% · VIT +8",
+    "pas_th": "โดนดาเมจลดลง 16% · ตี 5% พ่นไฟเป็นกรวย 150%"
+  },
+  {
+    "id": "hv_nebula",
+    "n": "Galaxy Armor",
+    "line": "hv",
+    "g": 4,
+    "lv": 86,
+    "pcs": [
+      "top_of_hv_nebula",
+      "pants_of_hv_nebula",
+      "acc_of_hv_nebula"
+    ],
+    "b2": "HP +16% · VIT +4",
+    "b3": "HP +32% · VIT +8",
+    "pas": "In combat, a Falling Star hits the nearest monster every 8 sec for 200%",
+    "body": {
+      "top": "top_of_hv_nebula",
+      "pants": "pants_of_hv_nebula"
+    },
+    "acc": "acc_of_hv_nebula",
+    "bonuses": [
+      {
+        "hpPct": 16,
+        "vit": 4
+      },
+      {
+        "hpPct": 32,
+        "vit": 8
+      }
+    ],
+    "name_th": "เกราะดาราจักร",
+    "b2_th": "HP +16% · VIT +4",
+    "b3_th": "HP +32% · VIT +8",
+    "pas_th": "ระหว่างสู้ ดาวตกลงใส่มอนที่ใกล้สุดทุก 8 วิ 200%"
+  },
+  {
+    "id": "hv_aurora",
+    "n": "Aurora Armor",
+    "line": "hv",
+    "g": 4,
+    "lv": 90,
+    "pcs": [
+      "top_of_hv_aurora",
+      "pants_of_hv_aurora",
+      "acc_of_hv_aurora"
+    ],
+    "b2": "HP +16% · VIT +4",
+    "b3": "HP +32% · VIT +8",
+    "pas": "Every 20 sec, blocks 1 attack",
+    "body": {
+      "top": "top_of_hv_aurora",
+      "pants": "pants_of_hv_aurora"
+    },
+    "acc": "acc_of_hv_aurora",
+    "bonuses": [
+      {
+        "hpPct": 16,
+        "vit": 4
+      },
+      {
+        "hpPct": 32,
+        "vit": 8
+      }
+    ],
+    "name_th": "เกราะแสงเหนือ",
+    "b2_th": "HP +16% · VIT +4",
+    "b3_th": "HP +32% · VIT +8",
+    "pas_th": "ทุก 20 วิ กันการโจมตีได้ 1 ครั้ง"
+  },
+  {
+    "id": "hv_guardian",
+    "n": "Campfire Guardian Armor",
+    "line": "hv",
+    "g": 4,
+    "lv": 95,
+    "pcs": [
+      "top_of_hv_guardian",
+      "pants_of_hv_guardian",
+      "acc_of_hv_guardian"
+    ],
+    "b2": "HP +16% · VIT +4",
+    "b3": "HP +32% · VIT +8",
+    "pas": "Can't die once every 5 min (left at 1 HP, immortal 2 sec)",
+    "body": {
+      "top": "top_of_hv_guardian",
+      "pants": "pants_of_hv_guardian"
+    },
+    "acc": "acc_of_hv_guardian",
+    "bonuses": [
+      {
+        "hpPct": 16,
+        "vit": 4
+      },
+      {
+        "hpPct": 32,
+        "vit": 8
+      }
+    ],
+    "name_th": "เกราะผู้พิทักษ์กองไฟ",
+    "b2_th": "HP +16% · VIT +4",
+    "b3_th": "HP +32% · VIT +8",
+    "pas_th": "ตายไม่ได้ 1 ครั้งทุก 5 นาที (เหลือ HP 1 อมตะ 2 วิ)"
+  },
+  {
+    "id": "lt_phantom",
+    "n": "Mistshadow Outfit",
+    "line": "lt",
+    "g": 4,
+    "lv": 76,
+    "pcs": [
+      "top_of_lt_phantom",
+      "pants_of_lt_phantom",
+      "acc_of_lt_phantom"
+    ],
+    "b2": "Attack speed +8% · Critical +4%",
+    "b3": "Attack speed +16% · Critical +8%",
+    "pas": "Extra 16% dodge",
+    "body": {
+      "top": "top_of_lt_phantom",
+      "pants": "pants_of_lt_phantom"
+    },
+    "acc": "acc_of_lt_phantom",
+    "bonuses": [
+      {
+        "aspd": 8,
+        "crit": 4
+      },
+      {
+        "aspd": 16,
+        "crit": 8
+      }
+    ],
+    "name_th": "ชุดเงาหมอก",
+    "b2_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "b3_th": "ความเร็วโจมตี +16% · คริติคอล +8%",
+    "pas_th": "หลบการโจมตีเพิ่ม 16%"
+  },
+  {
+    "id": "lt_storm",
+    "n": "Thunderstorm Outfit",
+    "line": "lt",
+    "g": 4,
+    "lv": 80,
+    "pcs": [
+      "top_of_lt_storm",
+      "pants_of_lt_storm",
+      "acc_of_lt_storm"
+    ],
+    "b2": "Attack speed +8% · Critical +4%",
+    "b3": "Attack speed +16% · Critical +8%",
+    "pas": "Every 5th hit, Thunderstrike hits the target for 150% + shock",
+    "body": {
+      "top": "top_of_lt_storm",
+      "pants": "pants_of_lt_storm"
+    },
+    "acc": "acc_of_lt_storm",
+    "bonuses": [
+      {
+        "aspd": 8,
+        "crit": 4
+      },
+      {
+        "aspd": 16,
+        "crit": 8
+      }
+    ],
+    "name_th": "ชุดพายุสายฟ้า",
+    "b2_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "b3_th": "ความเร็วโจมตี +16% · คริติคอล +8%",
+    "pas_th": "ทุกการตีครั้งที่ 5 ฟ้าผ่าลงเป้า 150% + ช็อต"
+  },
+  {
+    "id": "lt_thorn",
+    "n": "Thornrose Outfit",
+    "line": "lt",
+    "g": 4,
+    "lv": 86,
+    "pcs": [
+      "top_of_lt_thorn",
+      "pants_of_lt_thorn",
+      "acc_of_lt_thorn"
+    ],
+    "b2": "Attack speed +8% · Critical +4%",
+    "b3": "Attack speed +16% · Critical +8%",
+    "pas": "Monsters that hit you take 12% reflected",
+    "body": {
+      "top": "top_of_lt_thorn",
+      "pants": "pants_of_lt_thorn"
+    },
+    "acc": "acc_of_lt_thorn",
+    "bonuses": [
+      {
+        "aspd": 8,
+        "crit": 4
+      },
+      {
+        "aspd": 16,
+        "crit": 8
+      }
+    ],
+    "name_th": "ชุดกุหลาบหนาม",
+    "b2_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "b3_th": "ความเร็วโจมตี +16% · คริติคอล +8%",
+    "pas_th": "มอนที่ตีเราโดนสะท้อน 12%"
+  },
+  {
+    "id": "lt_ghostcat",
+    "n": "Ghost Cat Outfit",
+    "line": "lt",
+    "g": 4,
+    "lv": 90,
+    "pcs": [
+      "top_of_lt_ghostcat",
+      "pants_of_lt_ghostcat",
+      "acc_of_lt_ghostcat"
+    ],
+    "b2": "Attack speed +8% · Critical +4%",
+    "b3": "Attack speed +16% · Critical +8%",
+    "pas": "On death, revive instantly with 30% HP (every 9 min)",
+    "body": {
+      "top": "top_of_lt_ghostcat",
+      "pants": "pants_of_lt_ghostcat"
+    },
+    "acc": "acc_of_lt_ghostcat",
+    "bonuses": [
+      {
+        "aspd": 8,
+        "crit": 4
+      },
+      {
+        "aspd": 16,
+        "crit": 8
+      }
+    ],
+    "name_th": "ชุดแมวผี",
+    "b2_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "b3_th": "ความเร็วโจมตี +16% · คริติคอล +8%",
+    "pas_th": "ตายแล้วฟื้นทันที HP 30% (ทุก 9 นาที)"
+  },
+  {
+    "id": "lt_gold",
+    "n": "Golden Thief Outfit",
+    "line": "lt",
+    "g": 4,
+    "lv": 95,
+    "pcs": [
+      "top_of_lt_gold",
+      "pants_of_lt_gold",
+      "acc_of_lt_gold"
+    ],
+    "b2": "Attack speed +8% · Critical +4%",
+    "b3": "Attack speed +16% · Critical +8%",
+    "pas": "10% of gathered materials give 1 extra piece",
+    "body": {
+      "top": "top_of_lt_gold",
+      "pants": "pants_of_lt_gold"
+    },
+    "acc": "acc_of_lt_gold",
+    "bonuses": [
+      {
+        "aspd": 8,
+        "crit": 4
+      },
+      {
+        "aspd": 16,
+        "crit": 8
+      }
+    ],
+    "name_th": "ชุดจอมโจรทองคำ",
+    "b2_th": "ความเร็วโจมตี +8% · คริติคอล +4%",
+    "b3_th": "ความเร็วโจมตี +16% · คริติคอล +8%",
+    "pas_th": "วัตถุดิบที่เก็บได้ 10% ได้เพิ่มอีก 1 ชิ้น"
+  },
+  {
+    "id": "mg_dream",
+    "n": "Dreamweaver Outfit",
+    "line": "mg",
+    "g": 4,
+    "lv": 76,
+    "pcs": [
+      "top_of_mg_dream",
+      "pants_of_mg_dream",
+      "acc_of_mg_dream"
+    ],
+    "b2": "MATK +12% · SP +12%",
+    "b3": "MATK +24% · SP +24%",
+    "pas": "8% on hit to shock the monster",
+    "body": {
+      "top": "top_of_mg_dream",
+      "pants": "pants_of_mg_dream"
+    },
+    "acc": "acc_of_mg_dream",
+    "bonuses": [
+      {
+        "matk": 12,
+        "spPct": 12
+      },
+      {
+        "matk": 24,
+        "spPct": 24
+      }
+    ],
+    "name_th": "ชุดนักทอฝัน",
+    "b2_th": "MATK +12% · SP +12%",
+    "b3_th": "MATK +24% · SP +24%",
+    "pas_th": "ตี 8% ทำให้มอนช็อต"
+  },
+  {
+    "id": "mg_phoenix",
+    "n": "Undying Firebird Outfit",
+    "line": "mg",
+    "g": 4,
+    "lv": 80,
+    "pcs": [
+      "top_of_mg_phoenix",
+      "pants_of_mg_phoenix",
+      "acc_of_mg_phoenix"
+    ],
+    "b2": "MATK +12% · SP +12%",
+    "b3": "MATK +24% · SP +24%",
+    "pas": "On death, revive in flames with 50% HP (every 10 min)",
+    "body": {
+      "top": "top_of_mg_phoenix",
+      "pants": "pants_of_mg_phoenix"
+    },
+    "acc": "acc_of_mg_phoenix",
+    "bonuses": [
+      {
+        "matk": 12,
+        "spPct": 12
+      },
+      {
+        "matk": 24,
+        "spPct": 24
+      }
+    ],
+    "name_th": "ชุดนกไฟอมตะ",
+    "b2_th": "MATK +12% · SP +12%",
+    "b3_th": "MATK +24% · SP +24%",
+    "pas_th": "ตายแล้วฟื้นด้วยไฟ HP 50% (ทุก 10 นาที)"
+  },
+  {
+    "id": "mg_spirit",
+    "n": "Wildwood Spirit Outfit",
+    "line": "mg",
+    "g": 4,
+    "lv": 86,
+    "pcs": [
+      "top_of_mg_spirit",
+      "pants_of_mg_spirit",
+      "acc_of_mg_spirit"
+    ],
+    "b2": "MATK +12% · SP +12%",
+    "b3": "MATK +24% · SP +24%",
+    "pas": "Heal power +40% · Self HP regen +60%",
+    "body": {
+      "top": "top_of_mg_spirit",
+      "pants": "pants_of_mg_spirit"
+    },
+    "acc": "acc_of_mg_spirit",
+    "bonuses": [
+      {
+        "matk": 12,
+        "spPct": 12
+      },
+      {
+        "matk": 24,
+        "spPct": 24
+      }
+    ],
+    "name_th": "ชุดวิญญาณพงไพร",
+    "b2_th": "MATK +12% · SP +12%",
+    "b3_th": "MATK +24% · SP +24%",
+    "pas_th": "ฮีลแรง +40% · HP ฟื้นเอง +60%"
+  },
+  {
+    "id": "mg_void",
+    "n": "Dark Dimension Outfit",
+    "line": "mg",
+    "g": 4,
+    "lv": 90,
+    "pcs": [
+      "top_of_mg_void",
+      "pants_of_mg_void",
+      "acc_of_mg_void"
+    ],
+    "b2": "MATK +12% · SP +12%",
+    "b3": "MATK +24% · SP +24%",
+    "pas": "Skill power +24%",
+    "body": {
+      "top": "top_of_mg_void",
+      "pants": "pants_of_mg_void"
+    },
+    "acc": "acc_of_mg_void",
+    "bonuses": [
+      {
+        "matk": 12,
+        "spPct": 12
+      },
+      {
+        "matk": 24,
+        "spPct": 24
+      }
+    ],
+    "name_th": "ชุดมิติมืด",
+    "b2_th": "MATK +12% · SP +12%",
+    "b3_th": "MATK +24% · SP +24%",
+    "pas_th": "พลังสกิล +24%"
+  },
+  {
+    "id": "mg_prism",
+    "n": "Light Prism Outfit",
+    "line": "mg",
+    "g": 4,
+    "lv": 95,
+    "pcs": [
+      "top_of_mg_prism",
+      "pants_of_mg_prism",
+      "acc_of_mg_prism"
+    ],
+    "b2": "MATK +12% · SP +12%",
+    "b3": "MATK +24% · SP +24%",
+    "pas": "All elements 16% stronger",
+    "body": {
+      "top": "top_of_mg_prism",
+      "pants": "pants_of_mg_prism"
+    },
+    "acc": "acc_of_mg_prism",
+    "bonuses": [
+      {
+        "matk": 12,
+        "spPct": 12
+      },
+      {
+        "matk": 24,
+        "spPct": 24
+      }
+    ],
+    "name_th": "ชุดปริซึมแสง",
+    "b2_th": "MATK +12% · SP +12%",
+    "b3_th": "MATK +24% · SP +24%",
+    "pas_th": "ทุกธาตุแรงขึ้น 16%"
+  },
+  {
+    "id": "rg_voyager",
+    "n": "Skyflyer Outfit",
+    "line": "rg",
+    "g": 4,
+    "lv": 76,
+    "pcs": [
+      "top_of_rg_voyager",
+      "pants_of_rg_voyager",
+      "acc_of_rg_voyager"
+    ],
+    "b2": "HIT +20 · DEX +4",
+    "b3": "HIT +40 · DEX +8",
+    "pas": "Piercing: the target behind takes 25%",
+    "body": {
+      "top": "top_of_rg_voyager",
+      "pants": "pants_of_rg_voyager"
+    },
+    "acc": "acc_of_rg_voyager",
+    "bonuses": [
+      {
+        "hit": 20,
+        "dex": 4
+      },
+      {
+        "hit": 40,
+        "dex": 8
+      }
+    ],
+    "name_th": "ชุดนักบินฟากฟ้า",
+    "b2_th": "HIT +20 · DEX +4",
+    "b3_th": "HIT +40 · DEX +8",
+    "pas_th": "ตีทะลุ: ตัวหลังเป้าโดน 25%"
+  },
+  {
+    "id": "rg_legend",
+    "n": "Legendary Hunter Outfit",
+    "line": "rg",
+    "g": 4,
+    "lv": 80,
+    "pcs": [
+      "top_of_rg_legend",
+      "pants_of_rg_legend",
+      "acc_of_rg_legend"
+    ],
+    "b2": "HIT +20 · DEX +4",
+    "b3": "HIT +40 · DEX +8",
+    "pas": "+15% vs bosses and large monsters",
+    "body": {
+      "top": "top_of_rg_legend",
+      "pants": "pants_of_rg_legend"
+    },
+    "acc": "acc_of_rg_legend",
+    "bonuses": [
+      {
+        "hit": 20,
+        "dex": 4
+      },
+      {
+        "hit": 40,
+        "dex": 8
+      }
+    ],
+    "name_th": "ชุดพรานในตำนาน",
+    "b2_th": "HIT +20 · DEX +4",
+    "b3_th": "HIT +40 · DEX +8",
+    "pas_th": "แรงกับบอสและมอนตัวใหญ่ +15%"
+  },
+  {
+    "id": "rg_moonwalk",
+    "n": "Moonlit Traveler Outfit",
+    "line": "rg",
+    "g": 4,
+    "lv": 86,
+    "pcs": [
+      "top_of_rg_moonwalk",
+      "pants_of_rg_moonwalk",
+      "acc_of_rg_moonwalk"
+    ],
+    "b2": "HIT +20 · DEX +4",
+    "b3": "HIT +40 · DEX +8",
+    "pas": "Stronger at night 10% · Move speed +10%",
+    "body": {
+      "top": "top_of_rg_moonwalk",
+      "pants": "pants_of_rg_moonwalk"
+    },
+    "acc": "acc_of_rg_moonwalk",
+    "bonuses": [
+      {
+        "hit": 20,
+        "dex": 4
+      },
+      {
+        "hit": 40,
+        "dex": 8
+      }
+    ],
+    "name_th": "ชุดนักเดินทางใต้แสงจันทร์",
+    "b2_th": "HIT +20 · DEX +4",
+    "b3_th": "HIT +40 · DEX +8",
+    "pas_th": "กลางคืนแรงขึ้น 10% · เดินเร็ว +10%"
+  },
+  {
+    "id": "rg_campking",
+    "n": "Camp King Outfit",
+    "line": "rg",
+    "g": 4,
+    "lv": 90,
+    "pcs": [
+      "top_of_rg_campking",
+      "pants_of_rg_campking",
+      "acc_of_rg_campking"
+    ],
+    "b2": "HIT +20 · DEX +4",
+    "b3": "HIT +40 · DEX +8",
+    "pas": "Monster EXP +5%",
+    "body": {
+      "top": "top_of_rg_campking",
+      "pants": "pants_of_rg_campking"
+    },
+    "acc": "acc_of_rg_campking",
+    "bonuses": [
+      {
+        "hit": 20,
+        "dex": 4
+      },
+      {
+        "hit": 40,
+        "dex": 8
+      }
+    ],
+    "name_th": "ชุดราชาแคมป์",
+    "b2_th": "HIT +20 · DEX +4",
+    "b3_th": "HIT +40 · DEX +8",
+    "pas_th": "EXP จากมอน +5%"
+  },
+  {
+    "id": "rg_windwalk",
+    "n": "Windwalker Outfit",
+    "line": "rg",
+    "g": 4,
+    "lv": 95,
+    "pcs": [
+      "top_of_rg_windwalk",
+      "pants_of_rg_windwalk",
+      "acc_of_rg_windwalk"
+    ],
+    "b2": "HIT +20 · DEX +4",
+    "b3": "HIT +40 · DEX +8",
+    "pas": "Move speed +20% · Attack speed +5%",
+    "body": {
+      "top": "top_of_rg_windwalk",
+      "pants": "pants_of_rg_windwalk"
+    },
+    "acc": "acc_of_rg_windwalk",
+    "bonuses": [
+      {
+        "hit": 20,
+        "dex": 4
+      },
+      {
+        "hit": 40,
+        "dex": 8
+      }
+    ],
+    "name_th": "ชุดผู้เดินตามลม",
+    "b2_th": "HIT +20 · DEX +4",
+    "b3_th": "HIT +40 · DEX +8",
+    "pas_th": "เดินเร็ว +20% · ความเร็วโจมตี +5%"
+  }
+]

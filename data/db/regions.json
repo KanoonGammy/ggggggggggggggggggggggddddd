@@ -1,0 +1,47 @@
+[
+  {
+    "id": "woods",
+    "n": "Campfire Woods",
+    "over": [
+      42,
+      70
+    ],
+    "name_th": "ป่ากองไฟ"
+  },
+  {
+    "id": "south",
+    "n": "The Red South",
+    "over": [
+      75,
+      72
+    ],
+    "name_th": "แดนใต้สีแดง"
+  },
+  {
+    "id": "high",
+    "n": "The Highlands",
+    "over": [
+      34,
+      40
+    ],
+    "name_th": "ที่ราบสูง"
+  },
+  {
+    "id": "north",
+    "n": "The North",
+    "over": [
+      52,
+      18
+    ],
+    "name_th": "ทางเหนือ"
+  },
+  {
+    "id": "bell",
+    "n": "Bell Tower City",
+    "over": [
+      82,
+      24
+    ],
+    "name_th": "เมืองหอระฆัง"
+  }
+]

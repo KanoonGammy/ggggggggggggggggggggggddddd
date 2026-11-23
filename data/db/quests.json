@@ -1,0 +1,1973 @@
+[
+  {
+    "id": "MQ00",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Kindling in the Dark",
+    "lv": 1,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Follow the forest path down to the campfire and talk to Lily"
+    ],
+    "title_th": "ขี้กบในความมืด",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "เดินตามทางในป่าลงมาถึงกองไฟ คุยกับลิลลี่"
+    ]
+  },
+  {
+    "id": "MQ01",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "First Night Firewood",
+    "lv": 1,
+    "map": "Forest Camp",
+    "coins": 200,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Cut Birch or Oak ×15"
+    ],
+    "title_th": "ฟืนคืนแรก",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "โค่นเบิร์ชหรือโอ๊ก ×15"
+    ]
+  },
+  {
+    "id": "MQ02",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Light's Edge",
+    "lv": 2,
+    "map": "Forest Camp",
+    "coins": 240,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Leaf Slime ×30"
+    ],
+    "title_th": "ขอบแสง",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ล่าสไลม์ใบไม้ ×30"
+    ]
+  },
+  {
+    "id": "MQ03",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Lodging Fee",
+    "lv": 3,
+    "map": "Forest Camp",
+    "coins": 420,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Leaf Gel ×15",
+      "Bring Bat Wing ×10"
+    ],
+    "title_th": "ค่าที่พัก",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "นำเจลใบไม้ ×15 มาส่ง",
+      "นำปีกค้างคาว ×10 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ04",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Granny's Vegetable Plot",
+    "lv": 3,
+    "map": "Firefly Farm",
+    "coins": 170,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Plant and Harvest Carrots ×5"
+    ],
+    "title_th": "แปลงผักของยาย",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ฟาร์มหิ่งห้อย",
+    "obj_th": [
+      "ปลูกและเก็บแครอท ×5"
+    ]
+  },
+  {
+    "id": "MQ05",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "The Smiling Scarecrow",
+    "lv": 5,
+    "map": "Pumpkin Patch",
+    "coins": 1300,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Corn Thief Crow ×30",
+      "Bring Cursed Straw ×10"
+    ],
+    "title_th": "หุ่นไล่กาที่ยิ้ม",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ไร่ฟักทอง",
+    "obj_th": [
+      "ล่าอีกาขโมยข้าวโพด ×30",
+      "นำฟางต้องสาป ×10 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ06",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Dusk Bell",
+    "lv": 6,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Be at the campfire when the Dusk Bell rings. Hear the Aurelian tale (Story scene)"
+    ],
+    "title_th": "ระฆังพลบค่ำ",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "อยู่ที่กองไฟตอนระฆังพลบค่ำ ฟังนิทานออเรเลียน (ภาพเล่าเรื่อง)"
+    ]
+  },
+  {
+    "id": "MQ07",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "The Struck-Out Name",
+    "lv": 7,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Answer Lily's question (the choice is kept until chapter 15)"
+    ],
+    "title_th": "ชื่อที่ถูกขีด",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ตอบคำถามของลิลลี่ (เก็บตัวเลือกไว้จนบทที่ 15)"
+    ]
+  },
+  {
+    "id": "MQ08",
+    "ch": "Prologue · The Camp in the Forest",
+    "t": "Five Paths",
+    "lv": 10,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "At Job Lv 10, talk to a teacher to change jobs the usual way"
+    ],
+    "title_th": "ห้าทางเดิน",
+    "chapter_th": "บทนำ · ค่ายกลางป่า",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ถึง Job Lv 10 แล้วคุยกับอาจารย์ เปลี่ยนอาชีพตามระบบเดิม"
+    ]
+  },
+  {
+    "id": "MQ10",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "Newcomer",
+    "lv": 9,
+    "map": "Moonlit Meadow",
+    "coins": 2300,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Giant Bee ×90",
+      "Bring Giant Bee Stinger ×18"
+    ],
+    "title_th": "ผู้มาใหม่",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ทุ่งหญ้าแสงจันทร์",
+    "obj_th": [
+      "ล่าผึ้งยักษ์ ×90",
+      "นำเหล็กในผึ้งยักษ์ ×18 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ11",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "Lotus Under the Moon",
+    "lv": 11,
+    "map": "Moonlit Meadow",
+    "coins": 2100,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Moon Lotus ×12 (quest drop)"
+    ],
+    "title_th": "บัวใต้จันทร์",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ทุ่งหญ้าแสงจันทร์",
+    "obj_th": [
+      "ดอกบัวจันทร์ ×12 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ12",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "The Dimming Fire",
+    "lv": 12,
+    "map": "Forest Camp",
+    "coins": 1500,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Cut Oak for the Campfire ×40",
+      "Bring Clear Gel Drop ×16"
+    ],
+    "title_th": "ไฟที่หรี่ลง",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ตัดไม้โอ๊กส่งกองไฟ ×40",
+      "นำหยดเจลน้ำใส ×16 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ13",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "Two Guards",
+    "lv": 13,
+    "map": "Moonlit Meadow",
+    "coins": 3300,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "A Piece of a Guard's Uniform ×8 (quest drop)"
+    ],
+    "title_th": "ยามสองคน",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ทุ่งหญ้าแสงจันทร์",
+    "obj_th": [
+      "ชิ้นส่วนเครื่องแบบยาม ×8 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ14",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "The Black Candle at the Windmill",
+    "lv": 15,
+    "map": "Moonlit Meadow",
+    "coins": 10000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Black Candle ×15 (quest drop)",
+      "Bring Honeycomb ×14"
+    ],
+    "title_th": "เทียนดำที่กังหันลม",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ทุ่งหญ้าแสงจันทร์",
+    "obj_th": [
+      "เทียนดำ ×15 (ดรอปจากเควส)",
+      "นำรวงผึ้งน้ำผึ้ง ×14 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ15",
+    "ch": "Chapter 1 · The Scarecrow Under the Moon",
+    "t": "Fire-Thief Doctor",
+    "lv": 18,
+    "map": "Moonlit Meadow",
+    "coins": 3000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Ivy (Lv 20)",
+      "Story scene: The First Vision"
+    ],
+    "title_th": "หมอผู้ขโมยไฟ",
+    "chapter_th": "บทที่ 1 · หุ่นไล่กาใต้แสงจันทร์",
+    "map_th": "ทุ่งหญ้าแสงจันทร์",
+    "obj_th": [
+      "ปราบไอวี่ (Lv 20)",
+      "ภาพเล่าเรื่อง: นิมิตแรก"
+    ]
+  },
+  {
+    "id": "MQ20",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "The One Who Never Came Home",
+    "lv": 18,
+    "map": "Ruined Chapel Graveyard",
+    "coins": 8600,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Farmer Zombie ×120",
+      "The Villagers' Name Tags ×3 (quest drop)"
+    ],
+    "title_th": "คนที่ไม่กลับบ้าน",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "เนินสุสานโบสถ์ร้าง",
+    "obj_th": [
+      "ล่าซอมบี้ชาวนา ×120",
+      "ป้ายชื่อชาวบ้าน ×3 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ21",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "Sunlight in a Bottle",
+    "lv": 19,
+    "map": "Ruined Chapel Graveyard",
+    "coins": 6100,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Sunspark ×20 (quest drop)",
+      "Mel Distills 3 Bottles of Sunlight"
+    ],
+    "title_th": "แสงแดดในขวด",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "เนินสุสานโบสถ์ร้าง",
+    "obj_th": [
+      "ประกายแดด ×20 (ดรอปจากเควส)",
+      "เมลกลั่นเป็นแสงแดดในขวด 3 ขวด"
+    ]
+  },
+  {
+    "id": "MQ22",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "The Yellow Scarf",
+    "lv": 20,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Choose whether to tell Lily"
+    ],
+    "title_th": "ผ้าพันคอสีเหลือง",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "เลือกจะบอกลิลลี่หรือไม่"
+    ]
+  },
+  {
+    "id": "MQ23",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "The Letter on the Grave",
+    "lv": 21,
+    "map": "Ruined Chapel Graveyard",
+    "coins": 12800,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Old Letters ×5 (quest drop)",
+      "Bring Glowing Gravestone Shard ×16"
+    ],
+    "title_th": "จดหมายบนหลุมศพ",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "เนินสุสานโบสถ์ร้าง",
+    "obj_th": [
+      "จดหมายเก่า ×5 (ดรอปจากเควส)",
+      "นำเศษหินหลุมศพเรืองแสง ×16 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ24",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "The Underground Lab",
+    "lv": 34,
+    "map": "Catacombs F1–2",
+    "coins": 17000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Morrow's Journal Page ×4 (quest drop)",
+      "Bring Spirit Wax ×17"
+    ],
+    "title_th": "ห้องทดลองใต้ดิน",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "สุสานใต้ดิน ชั้น 1–2",
+    "obj_th": [
+      "หน้าสมุดบันทึกมอร์โรว์ ×4 (ดรอปจากเควส)",
+      "นำขี้ผึ้งวิญญาณ ×17 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ25",
+    "ch": "Chapter 2 · Graveyard Hill",
+    "t": "Healer's Mercy",
+    "lv": 36,
+    "map": "Ruined Chapel Graveyard",
+    "coins": 8500,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Doctor Morrow (Lv 38)"
+    ],
+    "title_th": "ความเมตตาของหมอ",
+    "chapter_th": "บทที่ 2 · เนินสุสาน",
+    "map_th": "เนินสุสานโบสถ์ร้าง",
+    "obj_th": [
+      "ปราบหมอมอร์โรว์ (Lv 38)"
+    ]
+  },
+  {
+    "id": "MQ30",
+    "ch": "Chapter 3 · Glowshroom Forest",
+    "t": "The Lantern That Went Out",
+    "lv": 26,
+    "map": "Glowshroom Forest",
+    "coins": 5300,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Glow Gel ×25",
+      "First Meeting with Rayven (Story scene)"
+    ],
+    "title_th": "ตะเกียงที่ดับ",
+    "chapter_th": "บทที่ 3 · ป่าเห็ดเรืองแสง",
+    "map_th": "ป่าเห็ดเรืองแสง",
+    "obj_th": [
+      "นำเจลเรืองแสง ×25 มาส่ง",
+      "เจอไรเวนครั้งแรก (ภาพเล่าเรื่อง)"
+    ]
+  },
+  {
+    "id": "MQ31",
+    "ch": "Chapter 3 · Glowshroom Forest",
+    "t": "Walking Wood",
+    "lv": 28,
+    "map": "Glowshroom Forest",
+    "coins": 24000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Ghost Stump ×55",
+      "Bring Ghostbark ×11"
+    ],
+    "title_th": "ไม้เดินได้",
+    "chapter_th": "บทที่ 3 · ป่าเห็ดเรืองแสง",
+    "map_th": "ป่าเห็ดเรืองแสง",
+    "obj_th": [
+      "ล่าตอไม้ผี ×55",
+      "นำเปลือกไม้ผี ×11 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ32",
+    "ch": "Chapter 3 · Glowshroom Forest",
+    "t": "What Noel Doesn't Say",
+    "lv": 30,
+    "map": "Glowshroom Forest",
+    "coins": 6900,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "The Letter Noel Hid ×6 (quest drop)",
+      "Choose: Keep the Secret / Tell Hazel"
+    ],
+    "title_th": "สิ่งที่โนเอลไม่พูด",
+    "chapter_th": "บทที่ 3 · ป่าเห็ดเรืองแสง",
+    "map_th": "ป่าเห็ดเรืองแสง",
+    "obj_th": [
+      "จดหมายที่โนเอลซ่อนไว้ ×6 (ดรอปจากเควส)",
+      "เลือก: เก็บความลับ / บอกเฮเซล"
+    ]
+  },
+  {
+    "id": "MQ33",
+    "ch": "Chapter 3 · Glowshroom Forest",
+    "t": "Glow Mushrooms in the Mine",
+    "lv": 32,
+    "map": "Ant Mine B1–B2",
+    "coins": 6600,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Glow Mushroom ×25 (quest drop)"
+    ],
+    "title_th": "เห็ดแสงในเหมือง",
+    "chapter_th": "บทที่ 3 · ป่าเห็ดเรืองแสง",
+    "map_th": "เหมืองมด B1–B2",
+    "obj_th": [
+      "เห็ดเรืองแสง ×25 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ34",
+    "ch": "Chapter 3 · Glowshroom Forest",
+    "t": "Brother in the Shadows",
+    "lv": 38,
+    "map": "Glowshroom Forest",
+    "coins": 9000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Rayven (Lv 40)"
+    ],
+    "title_th": "พี่ชายในเงา",
+    "chapter_th": "บทที่ 3 · ป่าเห็ดเรืองแสง",
+    "map_th": "ป่าเห็ดเรืองแสง",
+    "obj_th": [
+      "ปราบเรเวน (Lv 40)"
+    ]
+  },
+  {
+    "id": "MQ40",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Old Road",
+    "lv": 34,
+    "map": "Migrant Road (New)",
+    "coins": 42000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Caravan Robber ×115",
+      "Bring Caravan Robber Headscarf ×17"
+    ],
+    "title_th": "ถนนเก่า",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ถนนผู้อพยพ (ใหม่)",
+    "obj_th": [
+      "ล่าโจรปล้นคาราวาน ×115",
+      "นำผ้าโพกโจรคาราวาน ×17 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ41",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Toll",
+    "lv": 36,
+    "map": "Salt Bridge Checkpoint (New)",
+    "coins": 7700,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Pay 8,000 coins",
+      "Bring Rusted Hollow Horseshoe ×11"
+    ],
+    "title_th": "ค่าผ่านทาง",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ด่านสะพานเกลือ (ใหม่)",
+    "obj_th": [
+      "จ่าย 8,000 เหรียญ",
+      "นำเกือกม้ากลวงขึ้นสนิม ×11 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ42",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Salt Warehouse",
+    "lv": 38,
+    "map": "Salt Bridge Checkpoint (New)",
+    "coins": 56000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Warehouse Keeper ×100",
+      "The Cell Key Ring ×12 (quest drop)"
+    ],
+    "title_th": "โกดังเกลือ",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ด่านสะพานเกลือ (ใหม่)",
+    "obj_th": [
+      "ล่าคนคุมโกดัง ×100",
+      "พวงกุญแจห้องขัง ×12 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ42b",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "The Child Who Didn't Cry",
+    "lv": 38,
+    "map": "Salt Bridge Checkpoint (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Meet Theo (Story scene). Theo waits at camp"
+    ],
+    "title_th": "เด็กที่ไม่ร้องไห้",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ด่านสะพานเกลือ (ใหม่)",
+    "obj_th": [
+      "พบธีโอ (ภาพเล่าเรื่อง) ธีโอไปรอที่ค่าย"
+    ]
+  },
+  {
+    "id": "MQ43",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Cross Before Sunset",
+    "lv": 40,
+    "map": "Salt Bridge Checkpoint (New)",
+    "coins": 59000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Hunting Hound ×125",
+      "Bring Hound's Spiked Collar ×15"
+    ],
+    "title_th": "ข้ามก่อนตะวันตก",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ด่านสะพานเกลือ (ใหม่)",
+    "obj_th": [
+      "ล่าสุนัขล่า ×125",
+      "นำปลอกคอหนามสุนัขล่า ×15 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ44",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Gatekeeper",
+    "lv": 44,
+    "map": "Salt Bridge Checkpoint (New)",
+    "coins": 30000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Lord Halvard (Lv 46)",
+      "Bring Black Salt Pouch ×12"
+    ],
+    "title_th": "เจ้าด่าน",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ด่านสะพานเกลือ (ใหม่)",
+    "obj_th": [
+      "ปราบลอร์ดฮัลวาร์ด (Lv 46)",
+      "นำถุงเกลือดำ ×12 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ45",
+    "ch": "Chapter 4 · Migrant Road and the Salt Bridge Checkpoint",
+    "t": "Handwriting on the Receipt",
+    "lv": 44,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Ask Old Lumen About the Receipt"
+    ],
+    "title_th": "ลายมือบนใบรับ",
+    "chapter_th": "บทที่ 4 · ถนนผู้อพยพและด่านสะพานเกลือ",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ถามตาลูเมนเรื่องใบรับ"
+    ]
+  },
+  {
+    "id": "MQ50",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "Orange Light to the North",
+    "lv": 38,
+    "map": "Smoldering Burnt Forest",
+    "coins": 36000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Red Ember Fox ×100"
+    ],
+    "title_th": "แสงส้มทางเหนือ",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ป่าไหม้ถ่านคุ",
+    "obj_th": [
+      "ล่าจิ้งจอกถ่านแดง ×100"
+    ]
+  },
+  {
+    "id": "MQ51",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "The Last of the First Camp",
+    "lv": 40,
+    "map": "Smoldering Burnt Forest",
+    "coins": 17000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Smoldering Charcoal ×25",
+      "Mine Copper Ore ×40",
+      "Papa Muri returns to camp and opens the forge"
+    ],
+    "title_th": "คนสุดท้ายของค่ายแรก",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ป่าไหม้ถ่านคุ",
+    "obj_th": [
+      "นำถ่านไม้คุไฟ ×25 มาส่ง",
+      "ขุดแร่ทองแดง ×40",
+      "ป๋าหมูหริ่งกลับค่าย เปิดเตาหลอม"
+    ]
+  },
+  {
+    "id": "MQ52",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "The Stone with a Name",
+    "lv": 42,
+    "map": "Whistlewind Cliff Plains",
+    "coins": 34000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Rubbing from the Stone Circle ×20 (quest drop)"
+    ],
+    "title_th": "หินที่จดชื่อ",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ทุ่งลมหวีดหน้าผา",
+    "obj_th": [
+      "ลอกลายจากวงหิน ×20 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ53",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "Wooden Stand-In",
+    "lv": 44,
+    "map": "Smoldering Burnt Forest",
+    "coins": 118000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Smoldering Stump ×115",
+      "Bring Spirit Ash Powder ×18"
+    ],
+    "title_th": "ไม้แทนคน",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ป่าไหม้ถ่านคุ",
+    "obj_th": [
+      "ล่าตอไม้ถ่านคุ ×115",
+      "นำผงเถ้าวิญญาณ ×18 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ54",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "Not Enough Fire",
+    "lv": 48,
+    "map": "Smoldering Burnt Forest",
+    "coins": 14800,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Ignis (Lv 50)"
+    ],
+    "title_th": "ไฟที่ไม่พอ",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ป่าไหม้ถ่านคุ",
+    "obj_th": [
+      "ปราบอิกนิส (Lv 50)"
+    ]
+  },
+  {
+    "id": "MQ55",
+    "ch": "Chapter 5 · The Burned Forest and the Stone Circle",
+    "t": "3 AM",
+    "lv": 48,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Story scene at camp at 3 AM"
+    ],
+    "title_th": "3 AM",
+    "chapter_th": "บทที่ 5 · ป่าไหม้และวงหิน",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ภาพเล่าเรื่องในค่ายตอนตีสาม"
+    ]
+  },
+  {
+    "id": "MQ60",
+    "ch": "Chapter 6 · Northmist Peak",
+    "t": "Mountain Path",
+    "lv": 46,
+    "map": "Whistlewind Cliff Plains",
+    "coins": 20000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Cloud Sheep Wool ×25",
+      "Granny Rabbit Weaves a Storm Blanket"
+    ],
+    "title_th": "ทางขึ้นเขา",
+    "chapter_th": "บทที่ 6 · ยอดเขาหมอกเหนือ",
+    "map_th": "ทุ่งลมหวีดหน้าผา",
+    "obj_th": [
+      "นำขนแกะเมฆ ×25 มาส่ง",
+      "ยายกระต่ายทอผ้าห่มกันพายุ"
+    ]
+  },
+  {
+    "id": "MQ61",
+    "ch": "Chapter 6 · Northmist Peak",
+    "t": "The Stranded Climber",
+    "lv": 48,
+    "map": "Northmist Peak (New)",
+    "coins": 92000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Snow Wolf ×110",
+      "Bring Snow Wolf Fur ×18",
+      "Bring Ice Goat Horn ×9"
+    ],
+    "title_th": "นักปีนเขาที่ค้างอยู่",
+    "chapter_th": "บทที่ 6 · ยอดเขาหมอกเหนือ",
+    "map_th": "ยอดเขาหมอกเหนือ (ใหม่)",
+    "obj_th": [
+      "ล่าหมาป่าหิมะ ×110",
+      "นำขนหมาป่าหิมะ ×18 มาส่ง",
+      "นำเขาแพะน้ำแข็ง ×9 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ62",
+    "ch": "Chapter 6 · Northmist Peak",
+    "t": "The Tower That Still Counts",
+    "lv": 52,
+    "map": "Owl Observatory (New)",
+    "coins": 76000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Star Lens ×9 (quest drop)",
+      "Bring Cracked Lens ×13"
+    ],
+    "title_th": "หอที่ยังนับ",
+    "chapter_th": "บทที่ 6 · ยอดเขาหมอกเหนือ",
+    "map_th": "หอดูดาวนกฮูก (ใหม่)",
+    "obj_th": [
+      "เลนส์ดาว ×9 (ดรอปจากเควส)",
+      "นำเลนส์ร้าว ×13 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ63",
+    "ch": "Chapter 6 · Northmist Peak",
+    "t": "The Teacher Who Never Stops Thinking",
+    "lv": 56,
+    "map": "Owl Observatory (New)",
+    "coins": 39000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Magister Voss (Lv 58)",
+      "Bring Stone Owl Feather ×13"
+    ],
+    "title_th": "อาจารย์ที่ไม่หยุดคิด",
+    "chapter_th": "บทที่ 6 · ยอดเขาหมอกเหนือ",
+    "map_th": "หอดูดาวนกฮูก (ใหม่)",
+    "obj_th": [
+      "ปราบมาจิสเตอร์วอสส์ (Lv 58)",
+      "นำขนนกฮูกหิน ×13 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ64",
+    "ch": "Chapter 6 · Northmist Peak",
+    "t": "Owlene's Handwriting",
+    "lv": 56,
+    "map": "Northmist Peak (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Comfort Owlene, get the star map"
+    ],
+    "title_th": "ลายมือของโอวลีน",
+    "chapter_th": "บทที่ 6 · ยอดเขาหมอกเหนือ",
+    "map_th": "ยอดเขาหมอกเหนือ (ใหม่)",
+    "obj_th": [
+      "ปลอบโอวลีน ได้แผนที่ดาว"
+    ]
+  },
+  {
+    "id": "MQ70",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "The Price of Knowledge",
+    "lv": 52,
+    "map": "Poison Mangrove Swamp",
+    "coins": 45000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Toad Venom Gland ×17",
+      "Bring Bogvenom Snake Shed ×13",
+      "Bring Man-Eating Flower Pollen ×11"
+    ],
+    "title_th": "ราคาของความรู้",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "หนองพิษป่าชายเลน",
+    "obj_th": [
+      "นำต่อมพิษคางคก ×17 มาส่ง",
+      "นำคราบงูหนองพิษ ×13 มาส่ง",
+      "นำเกสรดอกไม้กินคน ×11 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ71",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "Wagon at Dawn",
+    "lv": 54,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hear About the Wagon from Hazel"
+    ],
+    "title_th": "เกวียนตอนรุ่งสาง",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ฟังเรื่องเกวียนจากเฮเซล"
+    ]
+  },
+  {
+    "id": "MQ72",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "Three Memories",
+    "lv": 58,
+    "map": "Red Rock Cliffs",
+    "coins": 125000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "The Guard's Pin ×1 (quest drop)",
+      "The Unsent Letter ×1 (quest drop)",
+      "Old Bandage ×1 (quest drop)"
+    ],
+    "title_th": "ความทรงจำสามชิ้น",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "ผาหินแดง",
+    "obj_th": [
+      "เข็มกลัดยาม ×1 (ดรอปจากเควส)",
+      "จดหมายที่ไม่เคยส่ง ×1 (ดรอปจากเควส)",
+      "ผ้าพันแผลเก่า ×1 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ73",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "Lamb in the Fire",
+    "lv": 58,
+    "map": "Firefly Farm + Poison Swamp",
+    "coins": 22000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Plant and Harvest Potatoes ×20",
+      "Bring Glowing Wing Scale ×13",
+      "Granny Rabbit hands you 20 potato seeds when you take the quest"
+    ],
+    "title_th": "แกะในกองไฟ",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "ฟาร์มหิ่งห้อย + หนองพิษ",
+    "obj_th": [
+      "ปลูกและเก็บมันฝรั่ง ×20",
+      "นำเกล็ดปีกเรืองแสง ×13 มาส่ง",
+      "ยายกระต่ายให้เมล็ดมันฝรั่งมา 20 เม็ดตอนรับเควส"
+    ]
+  },
+  {
+    "id": "MQ74",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "The Fort in the Abandoned Mine",
+    "lv": 62,
+    "map": "Red Rock Cliffs (Abandoned Orange Crystal Mine)",
+    "coins": 172000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Red Rock Golem ×100",
+      "Bring Golem Core Crystal ×12",
+      "Mine Iron Ore ×40"
+    ],
+    "title_th": "ป้อมในเหมืองร้าง",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "ผาหินแดง (เหมืองร้างผลึกส้ม)",
+    "obj_th": [
+      "ล่าโกเลมหินแดง ×100",
+      "นำผลึกแกนโกเลม ×12 มาส่ง",
+      "ขุดแร่เหล็ก ×40"
+    ]
+  },
+  {
+    "id": "MQ75",
+    "ch": "Chapter 7 · The Poison Swamp and the Red Rock Cliffs",
+    "t": "Broken Oath",
+    "lv": 66,
+    "map": "Red Rock Cliffs (Abandoned Orange Crystal Mine)",
+    "coins": 20000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Gareth (Lv 68)"
+    ],
+    "title_th": "คำสาบานที่แตก",
+    "chapter_th": "บทที่ 7 · หนองพิษและผาหินแดง",
+    "map_th": "ผาหินแดง (เหมืองร้างผลึกส้ม)",
+    "obj_th": [
+      "ปราบกาเร็ธ (Lv 68)"
+    ]
+  },
+  {
+    "id": "MQ80",
+    "ch": "Chapter 8 · The Volcano and the Primeval Forest",
+    "t": "The Night the Forest Attacked",
+    "lv": 72,
+    "map": "Primeval Forest",
+    "coins": 196000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Leaf Raptor ×135",
+      "Bring Raptor Claw ×16",
+      "Who dies depends on your choices in earlier chapters, not on your skill"
+    ],
+    "title_th": "คืนที่ป่าบุก",
+    "chapter_th": "บทที่ 8 · ภูเขาไฟและป่าดึกดำบรรพ์",
+    "map_th": "ป่าดึกดำบรรพ์",
+    "obj_th": [
+      "ล่าแร็พเตอร์ใบไม้ ×135",
+      "นำกรงเล็บแร็พเตอร์ ×16 มาส่ง",
+      "ใครตายขึ้นกับตัวเลือกในบทก่อน ไม่ใช่ฝีมือการเล่น"
+    ]
+  },
+  {
+    "id": "MQ81",
+    "ch": "Chapter 8 · The Volcano and the Primeval Forest",
+    "t": "Giant Footprints",
+    "lv": 72,
+    "map": "Sleeping Volcano",
+    "coins": 143000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Salamander ×115",
+      "Fiend Fur and Horns ×10 (quest drop)"
+    ],
+    "title_th": "รอยเท้ายักษ์",
+    "chapter_th": "บทที่ 8 · ภูเขาไฟและป่าดึกดำบรรพ์",
+    "map_th": "ภูเขาไฟหลับ",
+    "obj_th": [
+      "ล่าซาลาแมนเดอร์ ×115",
+      "ขนและเขาปีศาจ ×10 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ82",
+    "ch": "Chapter 8 · The Volcano and the Primeval Forest",
+    "t": "What Finn Hunts",
+    "lv": 74,
+    "map": "Primeval Forest",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Story scene: Finn Breaks His Bow"
+    ],
+    "title_th": "สิ่งที่ฟินน์ล่า",
+    "chapter_th": "บทที่ 8 · ภูเขาไฟและป่าดึกดำบรรพ์",
+    "map_th": "ป่าดึกดำบรรพ์",
+    "obj_th": [
+      "ภาพเล่าเรื่อง: ฟินน์หักธนู"
+    ]
+  },
+  {
+    "id": "MQ83",
+    "ch": "Chapter 8 · The Volcano and the Primeval Forest",
+    "t": "Return the Light to the Forest",
+    "lv": 76,
+    "map": "Primeval Forest",
+    "coins": 50000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Ancient Sap ×16",
+      "Cut Willow ×30"
+    ],
+    "title_th": "คืนแสงให้ป่า",
+    "chapter_th": "บทที่ 8 · ภูเขาไฟและป่าดึกดำบรรพ์",
+    "map_th": "ป่าดึกดำบรรพ์",
+    "obj_th": [
+      "นำยางไม้โบราณ ×16 มาส่ง",
+      "ตัดไม้หลิว ×30"
+    ]
+  },
+  {
+    "id": "MQ84",
+    "ch": "Chapter 8 · The Volcano and the Primeval Forest",
+    "t": "Demon Horn King",
+    "lv": 80,
+    "map": "Primeval Forest",
+    "coins": 25000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Gorm (Lv 82)"
+    ],
+    "title_th": "ราชาเขาอสูร",
+    "chapter_th": "บทที่ 8 · ภูเขาไฟและป่าดึกดำบรรพ์",
+    "map_th": "ป่าดึกดำบรรพ์",
+    "obj_th": [
+      "ปราบกอร์ม (Lv 82)"
+    ]
+  },
+  {
+    "id": "MQ90",
+    "ch": "Chapter 9 · The Road to Bellhaven",
+    "t": "The Road to the Capital",
+    "lv": 66,
+    "map": "Northward Trail (New)",
+    "coins": 123000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Hollow Villager ×120",
+      "Bring Hollow Villager's Brass Button ×16",
+      "Pay 20,000 coins"
+    ],
+    "title_th": "เส้นทางสู่เมืองหลวง",
+    "chapter_th": "บทที่ 9 · เส้นทางสู่เบลล์เฮเวน",
+    "map_th": "เส้นทางขึ้นเหนือ (ใหม่)",
+    "obj_th": [
+      "ล่าชาวบ้านกลวง ×120",
+      "นำกระดุมทองเหลืองของชาวบ้านกลวง ×16 มาส่ง",
+      "จ่าย 20,000 เหรียญ"
+    ]
+  },
+  {
+    "id": "MQ91",
+    "ch": "Chapter 9 · The Road to Bellhaven",
+    "t": "The City That Still Works",
+    "lv": 70,
+    "map": "Outer Wall District (New)",
+    "coins": 149000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Hollow Guard ×135",
+      "Bring City Guard Badge ×16"
+    ],
+    "title_th": "เมืองที่ยังทำงาน",
+    "chapter_th": "บทที่ 9 · เส้นทางสู่เบลล์เฮเวน",
+    "map_th": "ย่านนอกกำแพง (ใหม่)",
+    "obj_th": [
+      "ล่ายามกลวง ×135",
+      "นำป้ายยามเมือง ×16 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ92",
+    "ch": "Chapter 9 · The Road to Bellhaven",
+    "t": "The Townsfolk Who Remember",
+    "lv": 72,
+    "map": "Outer Wall District (New)",
+    "coins": 137000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Sunspark ×50 (quest drop)",
+      "Wake 5 Townsfolk, Get the Secret Path"
+    ],
+    "title_th": "ชาวเมืองที่จำได้",
+    "chapter_th": "บทที่ 9 · เส้นทางสู่เบลล์เฮเวน",
+    "map_th": "ย่านนอกกำแพง (ใหม่)",
+    "obj_th": [
+      "ประกายแดด ×50 (ดรอปจากเควส)",
+      "ปลุกชาวเมือง 5 คน ได้ทางลับ"
+    ]
+  },
+  {
+    "id": "MQ93",
+    "ch": "Chapter 9 · The Road to Bellhaven",
+    "t": "The Last Order",
+    "lv": 78,
+    "map": "Outer Wall District (New)",
+    "coins": 30000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Aldric (Lv 80)"
+    ],
+    "title_th": "คำสั่งสุดท้าย",
+    "chapter_th": "บทที่ 9 · เส้นทางสู่เบลล์เฮเวน",
+    "map_th": "ย่านนอกกำแพง (ใหม่)",
+    "obj_th": [
+      "ปราบอัลดริก (Lv 80)"
+    ]
+  },
+  {
+    "id": "MQ100",
+    "ch": "Chapter 10 · Canal District",
+    "t": "The District That Paid Tribute",
+    "lv": 74,
+    "map": "Canal District (New)",
+    "coins": 101000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Canal Rat ×115"
+    ],
+    "title_th": "ย่านที่จ่ายส่วย",
+    "chapter_th": "บทที่ 10 · ย่านริมคลอง",
+    "map_th": "ย่านริมคลอง (ใหม่)",
+    "obj_th": [
+      "ล่าหนูคลอง ×115"
+    ]
+  },
+  {
+    "id": "MQ101",
+    "ch": "Chapter 10 · Canal District",
+    "t": "House Number Seven",
+    "lv": 75,
+    "map": "Canal District (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Ivy's house, Mew's drawing (Story scene)"
+    ],
+    "title_th": "บ้านเลขเจ็ด",
+    "chapter_th": "บทที่ 10 · ย่านริมคลอง",
+    "map_th": "ย่านริมคลอง (ใหม่)",
+    "obj_th": [
+      "บ้านของไอวี่ ภาพวาดของมิว (ภาพเล่าเรื่อง)"
+    ]
+  },
+  {
+    "id": "MQ102",
+    "ch": "Chapter 10 · Canal District",
+    "t": "Candle Works",
+    "lv": 78,
+    "map": "Canal District (New)",
+    "coins": 215000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Candle's Henchman ×150",
+      "Bring Black Candlewick ×16",
+      "Bring Cracked Light Bottle ×12"
+    ],
+    "title_th": "โรงเทียน",
+    "chapter_th": "บทที่ 10 · ย่านริมคลอง",
+    "map_th": "ย่านริมคลอง (ใหม่)",
+    "obj_th": [
+      "ล่าลูกน้องแคนเดิล ×150",
+      "นำไส้เทียนดำ ×16 มาส่ง",
+      "นำขวดแสงร้าว ×12 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ103",
+    "ch": "Chapter 10 · Canal District",
+    "t": "Light Merchant",
+    "lv": 82,
+    "map": "Canal District (New)",
+    "coins": 31000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Madame Candle (Lv 84)"
+    ],
+    "title_th": "แม่ค้าแสง",
+    "chapter_th": "บทที่ 10 · ย่านริมคลอง",
+    "map_th": "ย่านริมคลอง (ใหม่)",
+    "obj_th": [
+      "ปราบมาดามแคนเดิล (Lv 84)"
+    ]
+  },
+  {
+    "id": "MQ104",
+    "ch": "Chapter 10 · Canal District",
+    "t": "The Unwatched District",
+    "lv": 82,
+    "map": "Canal District (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Choose: share the light with the district (no coins) / keep it for yourself (coins, but it affects chapter 16)"
+    ],
+    "title_th": "ย่านที่ไม่มีใครดูแล",
+    "chapter_th": "บทที่ 10 · ย่านริมคลอง",
+    "map_th": "ย่านริมคลอง (ใหม่)",
+    "obj_th": [
+      "เลือก: แจกแสงให้ชาวย่าน (ไม่ได้เงิน) / เก็บไว้เอง (ได้เงิน แต่มีผลกับบทที่ 16)"
+    ]
+  },
+  {
+    "id": "MQ110",
+    "ch": "Chapter 11 · The Ledger Hall Beneath the Temple",
+    "t": "The Iron Door Beneath the Library",
+    "lv": 78,
+    "map": "The Ledger Hall Beneath the Temple (New)",
+    "coins": 143000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Hollow Lightkeeper ×115",
+      "Bring Old Lamp Wick ×12"
+    ],
+    "title_th": "ประตูเหล็กใต้หอสมุด",
+    "chapter_th": "บทที่ 11 · หอบัญชีใต้วิหาร",
+    "map_th": "หอบัญชีใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ล่าผู้จุดตะเกียงกลวง ×115",
+      "นำไส้ตะเกียงเก่า ×12 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ111",
+    "ch": "Chapter 11 · The Ledger Hall Beneath the Temple",
+    "t": "312 Books",
+    "lv": 82,
+    "map": "The Ledger Hall Beneath the Temple (New)",
+    "coins": 170000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Ledger Volume 1 ×1 (quest drop)",
+      "Ledger Volume 282 ×1 (quest drop)",
+      "Ledger Volume 312 ×1 (quest drop)",
+      "Bring Glowing Page ×19"
+    ],
+    "title_th": "312 เล่ม",
+    "chapter_th": "บทที่ 11 · หอบัญชีใต้วิหาร",
+    "map_th": "หอบัญชีใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "สมุดบัญชีเล่ม 1 ×1 (ดรอปจากเควส)",
+      "สมุดบัญชีเล่ม 282 ×1 (ดรอปจากเควส)",
+      "สมุดบัญชีเล่ม 312 ×1 (ดรอปจากเควส)",
+      "นำหน้ากระดาษเรืองแสง ×19 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ112",
+    "ch": "Chapter 11 · The Ledger Hall Beneath the Temple",
+    "t": "The Ledger Must Have No Blank Page",
+    "lv": 86,
+    "map": "The Ledger Hall Beneath the Temple (New)",
+    "coins": 33000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Brother Quill (Lv 88)"
+    ],
+    "title_th": "บัญชีต้องไม่มีหน้าว่าง",
+    "chapter_th": "บทที่ 11 · หอบัญชีใต้วิหาร",
+    "map_th": "หอบัญชีใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบบราเดอร์ควิลล์ (Lv 88)"
+    ]
+  },
+  {
+    "id": "MQ113",
+    "ch": "Chapter 11 · The Ledger Hall Beneath the Temple",
+    "t": "The Teacher's Handwriting",
+    "lv": 86,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Confront Old Lumen. Choose: believe / disbelieve"
+    ],
+    "title_th": "ลายมือของครู",
+    "chapter_th": "บทที่ 11 · หอบัญชีใต้วิหาร",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "เผชิญหน้าตาลูเมน เลือก: เชื่อ / ไม่เชื่อ"
+    ]
+  },
+  {
+    "id": "MQ120",
+    "ch": "Chapter 12 · Lake Island",
+    "t": "Mist Procession",
+    "lv": 84,
+    "map": "Shadowmist Lake",
+    "coins": 75000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Cut the Moonlight Tree ×20",
+      "Bring Shadowmist Cloak ×19",
+      "Bring Kappa Head Dish ×12"
+    ],
+    "title_th": "ขบวนหมอก",
+    "chapter_th": "บทที่ 12 · เกาะกลางทะเลสาบ",
+    "map_th": "ทะเลสาบหมอกเงา",
+    "obj_th": [
+      "ตัดต้นแสงจันทร์ ×20",
+      "นำผ้าคลุมหมอกเงา ×19 มาส่ง",
+      "นำจานน้ำบนหัวกัปปะ ×12 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ121",
+    "ch": "Chapter 12 · Lake Island",
+    "t": "Memory of the Capital",
+    "lv": 86,
+    "map": "Lake Island (New)",
+    "coins": 79000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Memory of the Mist ×4 (quest drop)"
+    ],
+    "title_th": "ความทรงจำของเมืองหลวง",
+    "chapter_th": "บทที่ 12 · เกาะกลางทะเลสาบ",
+    "map_th": "เกาะกลางทะเลสาบ (ใหม่)",
+    "obj_th": [
+      "ความทรงจำแห่งหมอก ×4 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ122",
+    "ch": "Chapter 12 · Lake Island",
+    "t": "The One Who Stopped the Sun",
+    "lv": 88,
+    "map": "Lake Island (New)",
+    "coins": 40000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Nocturne (Flees at Half HP)"
+    ],
+    "title_th": "คนที่หยุดตะวัน",
+    "chapter_th": "บทที่ 12 · เกาะกลางทะเลสาบ",
+    "map_th": "เกาะกลางทะเลสาบ (ใหม่)",
+    "obj_th": [
+      "ปราบโนคเทิร์น (หนีเมื่อ HP เหลือครึ่งเดียว)"
+    ]
+  },
+  {
+    "id": "MQ123",
+    "ch": "Chapter 12 · Lake Island",
+    "t": "The First Rope to Snap",
+    "lv": 88,
+    "map": "Lake Island (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Story scene: Old Lumen took all the star shards"
+    ],
+    "title_th": "เชือกเส้นแรกที่ขาด",
+    "chapter_th": "บทที่ 12 · เกาะกลางทะเลสาบ",
+    "map_th": "เกาะกลางทะเลสาบ (ใหม่)",
+    "obj_th": [
+      "ภาพเล่าเรื่อง: ตาลูเมนเอาเศษดาวไปทั้งหมด"
+    ]
+  },
+  {
+    "id": "MQ130",
+    "ch": "Chapter 13 · Pitch-Black Southern Forest",
+    "t": "The Dark Camp",
+    "lv": 86,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Story scene: The night the fire went out (the real camp still has fire, and everyone sees each other normally)"
+    ],
+    "title_th": "ค่ายที่มืด",
+    "chapter_th": "บทที่ 13 · ป่าใต้ที่มืดสนิท",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ภาพเล่าเรื่อง: คืนที่ไฟดับ (ค่ายจริงยังมีไฟ ทุกคนยังเห็นกันปกติ)"
+    ]
+  },
+  {
+    "id": "MQ131",
+    "ch": "Chapter 13 · Pitch-Black Southern Forest",
+    "t": "Those Who Remain",
+    "lv": 87,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Talk to the remaining NPCs one by one (results from the whole game's choices)"
+    ],
+    "title_th": "คนที่ยังเหลือ",
+    "chapter_th": "บทที่ 13 · ป่าใต้ที่มืดสนิท",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "คุยกับ NPC ที่เหลือทีละคน (ผลจากตัวเลือกทั้งเกม)"
+    ]
+  },
+  {
+    "id": "MQ132",
+    "ch": "Chapter 13 · Pitch-Black Southern Forest",
+    "t": "The Night Without Fire",
+    "lv": 88,
+    "map": "Pitch-Black Southern Forest (New)",
+    "coins": 260000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Lightless Deer ×165",
+      "Bring Lightless Leaf ×15",
+      "Bring Glow Gel ×35",
+      "Bring Spirit Flame ×19"
+    ],
+    "title_th": "คืนที่ไม่มีไฟ",
+    "chapter_th": "บทที่ 13 · ป่าใต้ที่มืดสนิท",
+    "map_th": "ป่าใต้ที่มืดสนิท (ใหม่)",
+    "obj_th": [
+      "ล่ากวางไร้แสง ×165",
+      "นำใบไม้ไร้แสง ×15 มาส่ง",
+      "นำเจลเรืองแสง ×35 มาส่ง",
+      "นำดวงไฟวิญญาณ ×19 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ133",
+    "ch": "Chapter 13 · Pitch-Black Southern Forest",
+    "t": "The First Sibling",
+    "lv": 90,
+    "map": "Pitch-Black Southern Forest (New)",
+    "coins": 41000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 1 (Lv 92)",
+      "Story scene: Control seized, Theo dies"
+    ],
+    "title_th": "พี่คนแรก",
+    "chapter_th": "บทที่ 13 · ป่าใต้ที่มืดสนิท",
+    "map_th": "ป่าใต้ที่มืดสนิท (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นหมายเลขหนึ่ง (Lv 92)",
+      "ภาพเล่าเรื่อง: การควบคุมถูกยึด ธีโอตาย"
+    ]
+  },
+  {
+    "id": "MQ140",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "The Cells Beneath the Temple",
+    "lv": 88,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 247000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Faceless Puppet ×165",
+      "Bring Puppet Wood Joint ×19"
+    ],
+    "title_th": "ห้องขังใต้วิหาร",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ล่าหุ่นไร้หน้า ×165",
+      "นำข้อต่อไม้หุ่น ×19 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ141",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "Puppet No. 2",
+    "lv": 89,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 14600,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 2"
+    ],
+    "title_th": "หุ่นที่ 2",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นที่ 2"
+    ]
+  },
+  {
+    "id": "MQ142",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "Puppet No. 3",
+    "lv": 90,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 58000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 3",
+      "Bring Red Thread ×11"
+    ],
+    "title_th": "หุ่นที่ 3",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นที่ 3",
+      "นำด้ายแดง ×11 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ143",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "Puppet No. 4",
+    "lv": 91,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 14900,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 4"
+    ],
+    "title_th": "หุ่นที่ 4",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นที่ 4"
+    ]
+  },
+  {
+    "id": "MQ144",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "Puppet No. 5",
+    "lv": 92,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 58000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 5",
+      "Bring Red Thread ×11"
+    ],
+    "title_th": "หุ่นที่ 5",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นที่ 5",
+      "นำด้ายแดง ×11 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ145",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "Puppet No. 6",
+    "lv": 93,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 15300,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Puppet No. 6"
+    ],
+    "title_th": "หุ่นที่ 6",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นที่ 6"
+    ]
+  },
+  {
+    "id": "MQ146",
+    "ch": "Chapter 14 · The Puppet Works Beneath the Temple",
+    "t": "The Seventh Puppet",
+    "lv": 94,
+    "map": "The Puppet Works Beneath the Temple (New)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Read Your Own Page (Story scene)"
+    ],
+    "title_th": "หุ่นที่เจ็ด",
+    "chapter_th": "บทที่ 14 · โรงหุ่นใต้วิหาร",
+    "map_th": "โรงหุ่นใต้วิหาร (ใหม่)",
+    "obj_th": [
+      "อ่านหน้าของตัวเอง (ภาพเล่าเรื่อง)"
+    ]
+  },
+  {
+    "id": "MQ150",
+    "ch": "Chapter 15 · The Last Lightkeeper",
+    "t": "Road to the Stone Circle",
+    "lv": 94,
+    "map": "Whistlewind Cliff Plains",
+    "coins": 82000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Bring Spirit Wax ×25",
+      "Bring Old Lamp Wick ×15",
+      "Mine Amber ×40"
+    ],
+    "title_th": "ทางไปวงหิน",
+    "chapter_th": "บทที่ 15 · ผู้จุดตะเกียงคนสุดท้าย",
+    "map_th": "ทุ่งลมหวีดหน้าผา",
+    "obj_th": [
+      "นำขี้ผึ้งวิญญาณ ×25 มาส่ง",
+      "นำไส้ตะเกียงเก่า ×15 มาส่ง",
+      "ขุดอำพัน ×40"
+    ]
+  },
+  {
+    "id": "MQ151",
+    "ch": "Chapter 15 · The Last Lightkeeper",
+    "t": "The Last Lightkeeper",
+    "lv": 97,
+    "map": "Windfield (Ancient Stone Circle)",
+    "coins": 86000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Old Lumen, 3 Phases (World Boss Lv 99)"
+    ],
+    "title_th": "ผู้จุดตะเกียงคนสุดท้าย",
+    "chapter_th": "บทที่ 15 · ผู้จุดตะเกียงคนสุดท้าย",
+    "map_th": "ทุ่งลม (วงหินโบราณ)",
+    "obj_th": [
+      "ปราบลูเมนเฒ่า 3 ระยะ (บอสโลก Lv 99)"
+    ]
+  },
+  {
+    "id": "MQ152",
+    "ch": "Chapter 15 · The Last Lightkeeper",
+    "t": "Crossroads",
+    "lv": 99,
+    "map": "Windfield (Ancient Stone Circle)",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Choose: cut the rope (Light side) / hold the rope (Dark side) · Permanent"
+    ],
+    "title_th": "ทางแยก",
+    "chapter_th": "บทที่ 15 · ผู้จุดตะเกียงคนสุดท้าย",
+    "map_th": "ทุ่งลม (วงหินโบราณ)",
+    "obj_th": [
+      "เลือก: ตัดเชือก (ฝ่ายแสง) / ยึดเชือก (ฝ่ายมืด) · ถาวร"
+    ]
+  },
+  {
+    "id": "MQ160",
+    "ch": "Chapter 16 · Temple District",
+    "t": "Morning Bread",
+    "lv": 99,
+    "map": "Temple District (New)",
+    "coins": 272000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Temple Soldier ×215"
+    ],
+    "title_th": "ขนมปังตอนเช้า",
+    "chapter_th": "บทที่ 16 · ย่านวิหาร",
+    "map_th": "ย่านวิหาร (ใหม่)",
+    "obj_th": [
+      "ล่าทหารวิหาร ×215"
+    ]
+  },
+  {
+    "id": "MQ161",
+    "ch": "Chapter 16 · Temple District",
+    "t": "The Stone Circle in the Poor District",
+    "lv": 99,
+    "map": "Temple District (New)",
+    "coins": 302000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Small Stone Circle Fragment ×40 (quest drop)"
+    ],
+    "title_th": "วงหินในย่านคนจน",
+    "chapter_th": "บทที่ 16 · ย่านวิหาร",
+    "map_th": "ย่านวิหาร (ใหม่)",
+    "obj_th": [
+      "เศษวงหินเล็ก ×40 (ดรอปจากเควส)"
+    ]
+  },
+  {
+    "id": "MQ162",
+    "ch": "Chapter 16 · Temple District",
+    "t": "The Cardinal's Puppet",
+    "lv": 99,
+    "map": "Temple District (New)",
+    "coins": 447000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Cardinal's Puppet ×270",
+      "Bring Red Thread ×25"
+    ],
+    "title_th": "หุ่นของท่านคาร์ดินัล",
+    "chapter_th": "บทที่ 16 · ย่านวิหาร",
+    "map_th": "ย่านวิหาร (ใหม่)",
+    "obj_th": [
+      "ล่าหุ่นของคาร์ดินัล ×270",
+      "นำด้ายแดง ×25 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ163",
+    "ch": "Chapter 16 · Temple District",
+    "t": "The Ones Who Never Paid",
+    "lv": 99,
+    "map": "Temple District (New)",
+    "coins": 59000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Cardinal Severin"
+    ],
+    "title_th": "คนที่ไม่เคยจ่าย",
+    "chapter_th": "บทที่ 16 · ย่านวิหาร",
+    "map_th": "ย่านวิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบคาร์ดินัลเซเวริน"
+    ]
+  },
+  {
+    "id": "MQ170",
+    "ch": "Chapter 17 · Temple Spire",
+    "t": "The Seven-Floor Bell Tower",
+    "lv": 99,
+    "map": "Temple Spire (New)",
+    "coins": 578000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt Bell Puppet ×270",
+      "Bell Clapper ×7 (quest drop)",
+      "Bring Brass Bell Shard ×18"
+    ],
+    "title_th": "หอระฆัง 7 ชั้น",
+    "chapter_th": "บทที่ 17 · ยอดวิหาร",
+    "map_th": "ยอดวิหาร (ใหม่)",
+    "obj_th": [
+      "ล่าหุ่นระฆัง ×270",
+      "ลิ้นระฆัง ×7 (ดรอปจากเควส)",
+      "นำเศษระฆังทองเหลือง ×18 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ171",
+    "ch": "Chapter 17 · Temple Spire",
+    "t": "Hundred-String Puppet",
+    "lv": 99,
+    "map": "Temple Spire (New)",
+    "coins": 59000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Hundred-String Puppet"
+    ],
+    "title_th": "หุ่นร้อยเชือก",
+    "chapter_th": "บทที่ 17 · ยอดวิหาร",
+    "map_th": "ยอดวิหาร (ใหม่)",
+    "obj_th": [
+      "ปราบหุ่นร้อยเชือก"
+    ]
+  },
+  {
+    "id": "MQ172",
+    "ch": "Chapter 17 · Temple Spire",
+    "t": "The Puppet That Rose by Itself",
+    "lv": 99,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Story scene · Some puppets become new NPCs in camp"
+    ],
+    "title_th": "หุ่นที่ลุกขึ้นเอง",
+    "chapter_th": "บทที่ 17 · ยอดวิหาร",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ภาพเล่าเรื่อง · หุ่นบางตัวกลายเป็น NPC ใหม่ในค่าย"
+    ]
+  },
+  {
+    "id": "MQ180",
+    "ch": "Chapter 18 · Star Pit",
+    "t": "Way Down the Pit",
+    "lv": 99,
+    "map": "Windfield (First Stone Circle)",
+    "coins": 32000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Mine Moonsilver ×40",
+      "Papa Muri Smelts the First Stone of the Circle"
+    ],
+    "title_th": "ทางลงหลุม",
+    "chapter_th": "บทที่ 18 · หลุมดาว",
+    "map_th": "ทุ่งลม (วงหินต้นแรก)",
+    "obj_th": [
+      "ขุดเงินจันทร์ ×40",
+      "ป๋าหมูหริ่งหลอมเป็นศิลาวงแรก"
+    ]
+  },
+  {
+    "id": "MQ181",
+    "ch": "Chapter 18 · Star Pit",
+    "t": "Glass Floor",
+    "lv": 99,
+    "map": "Star Pit (New)",
+    "coins": 633000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Hunt First Lightkeeper ×360",
+      "Bring Star Crystal Shard ×35"
+    ],
+    "title_th": "พื้นแก้ว",
+    "chapter_th": "บทที่ 18 · หลุมดาว",
+    "map_th": "หลุมดาว (ใหม่)",
+    "obj_th": [
+      "ล่าผู้จุดตะเกียงรุ่นแรก ×360",
+      "นำเศษผลึกดาว ×35 มาส่ง"
+    ]
+  },
+  {
+    "id": "MQ182",
+    "ch": "Chapter 18 · Star Pit",
+    "t": "The Saint in the Star Pit",
+    "lv": 99,
+    "map": "Star Pit (New)",
+    "coins": 173000,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "Defeat Saint Aurel, 3 Phases (World Boss)"
+    ],
+    "title_th": "นักบุญในหลุมดาว",
+    "chapter_th": "บทที่ 18 · หลุมดาว",
+    "map_th": "หลุมดาว (ใหม่)",
+    "obj_th": [
+      "ปราบนักบุญออเรล 3 ระยะ (บอสโลก)"
+    ]
+  },
+  {
+    "id": "MQ183",
+    "ch": "Chapter 18 · Star Pit",
+    "t": "Half an Hour",
+    "lv": 99,
+    "map": "Forest Camp",
+    "coins": 0,
+    "ok": true,
+    "keys": [],
+    "obj": [
+      "True ending (Story scene) · Day grows half an hour longer on the save of those who finish it"
+    ],
+    "title_th": "ครึ่งชั่วโมง",
+    "chapter_th": "บทที่ 18 · หลุมดาว",
+    "map_th": "ค่ายกลางป่า",
+    "obj_th": [
+      "ตอนจบแท้ (ภาพเล่าเรื่อง) · กลางวันยาวขึ้นครึ่งชั่วโมงในเซฟของคนที่จบ"
+    ]
+  }
+]
