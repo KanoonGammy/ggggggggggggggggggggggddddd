@@ -41,6 +41,21 @@
     maps: { region: '', kind: '', secret: 'all', q: '' },
     drops: { tab: 'drops', q: '', dtype: 'all', monType: 'all', el: '', map: '', minLv: '', maxLv: '', minRate: '', minPrice: '', maxPrice: '', sort: 'rate', dir: -1, page: 0, matFilter: 'all', matQ: '', matMinPrice: '', matMaxPrice: '', matSort: 'p', matDir: -1, matPage: 0 },
     cards: { q: '', kind: 'all', el: '', map: '', minLv: '', maxLv: '', sort: 'price', dir: -1, page: 0 },
+    highdrops: {
+      preset: 'best_normal',
+      q: '',
+      monType: 'normal',
+      includeRunes: false,
+      minRate: '5',
+      minPrice: '5',
+      minLv: '',
+      maxLv: '',
+      el: '',
+      map: '',
+      sort: 'ev',
+      dir: -1,
+      page: 0
+    },
     runes: { tab: 'runes', kind: '', on: '', q: '' },
     cooking: { q: '', pot: 'all', kind: 'all', minLv: '', maxLv: '', sort: 'price', dir: -1, viewMode: 'cards' },
     quests: { tab: 'quests', ch: '', q: '', lifeTab: 'crops', lifeQ: '', lifeMinLv: '', lifeMaxLv: '', lifeMinPrice: '', lifeMaxPrice: '', lifeWhen: 'all', lifeSort: 'price', lifeDir: -1 },
@@ -1180,10 +1195,13 @@
     _q: biText(id, ks.n, ks.small, ks.gain, ks.price)
   }));
 
+  const HIGH_DROPS_BADGE = FLAT_DROPS.filter((d) => d.dtype === 'material' && d.ratePct >= 5 && (d.price || 0) >= 5).length;
+
   // ------------------------------------------------------------------ Navigation Config
   const NAV_ITEMS = [
     { id: 'overview', icon: '📊', th: 'ภาพรวม & สถิติ', en: 'Overview & Stats', count: null },
     { id: 'market', icon: '💰', th: 'ฟาร์มเงิน & กรองราคา', en: 'Price & Farm Filter', count: UNIFIED_MARKET.length },
+    { id: 'highdrops', icon: '🏆', th: 'ของดรอปแพง + เรทสูง', en: 'High-Value Drops', count: HIGH_DROPS_BADGE },
     { id: 'cooking', icon: '🍲', th: 'ทำอาหาร & เมนูอาหาร', en: 'Cooking & Dishes', count: DISHES_LIST.length },
     { id: 'monsters', icon: '👾', th: 'มอนสเตอร์ & บอส', en: 'Monsters & Bosses', count: (W.monsters || []).length },
     { id: 'items', icon: '⚔️', th: 'อาวุธ & อุปกรณ์', en: 'Items & Gear', count: (W.items || []).length },
@@ -1253,6 +1271,7 @@
     const items = W.items || [];
     const bosses = mons.filter((m) => m.boss);
     const kpis = [
+      { view: 'highdrops', icon: '🏆', label: L('ของดรอปแพง + เรทสูง', 'High-Value Drops'), val: HIGH_DROPS_BADGE, sub: L('เรท ≥ 5% · ขายลุงโกโก้ได้ทันที', 'Rate ≥ 5% · Vendor Ready') },
       { view: 'items', icon: '⚔️', label: L('ไอเทม & อาวุธ', 'Items & Weapons'), val: items.length, sub: `${items.filter((x) => x.s === 'weapon').length} ${L('อาวุธ', 'weapons')}` },
       { view: 'monsters', icon: '👾', label: L('มอนสเตอร์', 'Monsters'), val: mons.length, sub: `${bosses.length} ${L('บอส', 'bosses')}` },
       { view: 'cooking', icon: '🍲', label: L('ทำอาหาร & เมนู', 'Cooking & Dishes'), val: DISHES_LIST.length, sub: L('บัฟ 30 นาที · กำไร +50%', '30m Buff · +50% Profit') },
@@ -1512,6 +1531,7 @@
       <div class="tabs">
         <button type="button" class="tab-btn is-on" data-mktab="filter">🔍 ${L('กรองราคา & แหล่งฟาร์ม', 'Unified Filter')} (${fmt(UNIFIED_MARKET.length)})</button>
         <button type="button" class="tab-btn" data-mktab="craft">🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่', 'Crafting & Smelter Value-Add')} (${SMELT_ANALYSIS.length})</button>
+        <button type="button" class="tab-btn" data-view="highdrops">🏆 ${L('ของดรอปแพง + เรทสูง', 'High-Value High-Rate Drops')} (${HIGH_DROPS_BADGE})</button>
       </div>
 
       <div class="tabs">
@@ -1679,13 +1699,14 @@
       <div class="page-head">
         <div>
           <h1>🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่ & Work Orders', 'Crafting & Smelter Value-Add Analyzer')}</h1>
-          <p>${L('เปรียบเทียบราคาขายของดิบ vs ต้นทุน + ค่าหลอม เทียบเป็นกำไรสุทธิและตัวคูณมูลค่า', 'Compare raw ingredient sell price + smelting fee against output sell value')}</p>
+          <p>${L('เปรียบเทียบต้นทุน + ค่าหลอม vs มูลค่าอ้างอิง · ⚠️ ของหลอม (lc_*) ลุงโกโก้ไม่รับซื้อตรง ใช้ส่งใบสั่งงาน Work Orders (จ่าย 60%) / ตีบวก / ขายแผงผู้เล่น (V)', 'Compare raw cost + fee vs ref value · Smelted goods fill Work Orders (60% pay), refine gear, or sell on player stalls (V)')}</p>
         </div>
       </div>
 
       <div class="tabs">
         <button type="button" class="tab-btn" data-mktab="filter">🔍 ${L('กรองราคา & แหล่งฟาร์ม', 'Unified Filter')} (${fmt(UNIFIED_MARKET.length)})</button>
         <button type="button" class="tab-btn is-on" data-mktab="craft">🔥 ${L('วิเคราะห์กำไรคราฟต์ / หลอมแร่', 'Crafting & Smelter Value-Add')} (${SMELT_ANALYSIS.length})</button>
+        <button type="button" class="tab-btn" data-view="highdrops">🏆 ${L('ของดรอปแพง + เรทสูง', 'High-Value High-Rate Drops')} (${HIGH_DROPS_BADGE})</button>
       </div>
 
       <div class="filter-bar">
@@ -1759,6 +1780,243 @@
     $('#crDir').addEventListener('click', () => { st.craftDir = -st.craftDir; renderCraftAnalyzer(); });
   }
 
+  // ------------------------------------------------------------------ VIEW: HIGH-VALUE HIGH-RATE DROPS
+  function renderHighDrops() {
+    const st = state.highdrops;
+    const q = norm(st.q);
+    const minR = st.minRate !== '' ? Number(st.minRate) : null;
+    const minP = st.minPrice !== '' ? Number(st.minPrice) : null;
+    const minLv = st.minLv !== '' ? Number(st.minLv) : null;
+    const maxLv = st.maxLv !== '' ? Number(st.maxLv) : null;
+
+    const list = FLAT_DROPS.filter((d) => {
+      const isMat = d.dtype === 'material';
+      const isRune = st.includeRunes && d.dtype === 'rune';
+      if (!isMat && !isRune) return false;
+      if (st.monType === 'normal' && d.mon.boss) return false;
+      if (st.monType === 'boss' && !d.mon.boss) return false;
+      if (st.el && (d.mon.el || 'neutral') !== st.el) return false;
+      if (st.map && !(d.maps || []).includes(st.map)) return false;
+      if (minLv != null || maxLv != null) {
+        if (!hasSpawnInLvRange(d.mon, d.maps, st.map, minLv, maxLv)) return false;
+      }
+      if (minR != null && d.ratePct < minR) return false;
+      if (minP != null && (d.price == null || d.price < minP)) return false;
+      if (q && !matchesQuery(d._q, q)) return false;
+      return true;
+    });
+
+    list.sort((a, b) => {
+      let va = 0, vb = 0;
+      if (st.sort === 'ev') { va = a.ev ?? -1; vb = b.ev ?? -1; }
+      else if (st.sort === 'evPerHp') { va = a.evPer1kHp ?? 0; vb = b.evPer1kHp ?? 0; }
+      else if (st.sort === 'price') { va = a.price ?? -1; vb = b.price ?? -1; }
+      else if (st.sort === 'rate') { va = a.ratePct ?? 0; vb = b.ratePct ?? 0; }
+      else if (st.sort === 'score') {
+        va = (a.price || 0) * Math.sqrt(a.ratePct || 0);
+        vb = (b.price || 0) * Math.sqrt(b.ratePct || 0);
+      } else if (st.sort === 'lv') {
+        const ra = getDropLvRange(a.mon, a.maps, st.map, minLv, maxLv);
+        const rb = getDropLvRange(b.mon, b.maps, st.map, minLv, maxLv);
+        va = st.dir > 0 ? ra.min : ra.max;
+        vb = st.dir > 0 ? rb.min : rb.max;
+      } else if (st.sort === 'hp') {
+        va = a.mon.hp || 0;
+        vb = b.mon.hp || 0;
+      } else {
+        va = tr(a.targetName);
+        vb = tr(b.targetName);
+      }
+      if (typeof va === 'number') {
+        if (va !== vb) return (va - vb) * st.dir;
+        return ((b.ev ?? 0) - (a.ev ?? 0)) || ((b.price ?? 0) - (a.price ?? 0));
+      }
+      return String(va).localeCompare(String(vb)) * st.dir;
+    });
+
+    const PER = 60;
+    const pages = Math.max(1, Math.ceil(list.length / PER));
+    st.page = Math.min(st.page, pages - 1);
+    const startIdx = st.page * PER;
+    const slice = list.slice(startIdx, startIdx + PER);
+
+    const bestEv = list.length ? Math.max(...list.map((d) => d.ev || 0)) : 0;
+    const bestPrice = list.length ? Math.max(...list.map((d) => d.price || 0)) : 0;
+    const bestEff = list.length ? Math.max(...list.map((d) => d.evPer1kHp || 0)) : 0;
+    const elOpts = Object.entries(W.elements || {}).map(([k, v]) => `<option value="${k}" ${st.el === k ? 'selected' : ''}>${esc(tr(v))}</option>`).join('');
+
+    const presets = [
+      ['best_normal', `🌟 ${L('มอนทั่วไปคุ้มสุด (EV สูง · เรท ≥ 5%)', 'Best Normal EV (Rate ≥ 5%)')}`],
+      ['high_both', `💎 ${L('แพง + ตกง่าย (≥ 20c · เรท ≥ 20%)', 'High Price & High Rate (≥20c · ≥20%)')}`],
+      ['vp95', `🔥 ${L('โบนัส 95c (เรท 5% · เลือดน้อยก่อน)', '95c Bonus Drops (5% · Lowest HP)')}`],
+      ['eff_hp', `⚡ ${L('วันช็อตเลือดน้อย (EV / 1k HP)', 'Fastest Kill (EV / 1k HP)')}`],
+      ['boss_best', `👑 ${L('บอสเรทสูง + แพง (≥ 4%)', 'Boss High-Rate Drops (≥4%)')}`],
+      ['early', `🌱 ${L('ต้นเกม (Lv ≤ 30 · เรท ≥ 5%)', 'Early (Lv ≤ 30 · ≥5%)')}`],
+      ['mid', `⚔️ ${L('กลางเกม (Lv 31–65 · เรท ≥ 5%)', 'Mid (Lv 31–65 · ≥5%)')}`],
+      ['late', `🔮 ${L('ท้ายเกม (Lv 66–99 · เรท ≥ 5%)', 'Late (Lv 66–99 · ≥5%)')}`]
+    ];
+
+    $('#mainView').innerHTML = `
+      <div class="page-head">
+        <div>
+          <h1>🏆 ${L('ตารางจัดอันดับของดรอปแพง + อัตราดรอปสูง', 'High-Value & High-Drop-Rate Ranking')}</h1>
+          <p>${L('คัดเฉพาะของดรอปที่ขายได้ราคาจริง (ขายลุงโกโก้ได้ทันที) จัดอันดับตามเงินเฉลี่ยต่อตัว (EV), ความคุ้มต่อเลือด (Coin/1k HP), ราคา และ % ดรอป', 'Ranked table of real sellable monster drops sorted by expected value per kill (EV), HP efficiency, unit price, and drop rate')}</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab-btn is-on" data-view="highdrops">🏆 ${L('ของดรอปแพง + เรทสูง', 'High-Value Drops')} (${fmt(HIGH_DROPS_BADGE)})</button>
+        <button type="button" class="tab-btn" data-view="market">💰 ${L('ฟาร์มเงิน & กรองราคาทุกหมวด', 'Unified Price Filter')}</button>
+        <button type="button" class="tab-btn" data-view="drops">💎 ${L('ตารางดรอปทั้งหมด', 'All Drop Finder')} (${fmt(FLAT_DROPS.length)})</button>
+      </div>
+
+      <div class="kpi-grid" style="margin-bottom:14px">
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>📋 ${L('รายการที่เข้าเกณฑ์', 'Matching Entries')}</span><span class="muted">${st.includeRunes ? 'Mats + Runes' : 'Mats Only'}</span></div>
+          <div class="kpi-card__val">${fmt(list.length)}</div>
+          <div class="kpi-card__sub">${L(`เรท ≥ ${st.minRate || 0}% · ราคา ≥ ${st.minPrice || 0}c`, `Rate ≥ ${st.minRate || 0}% · Price ≥ ${st.minPrice || 0}c`)}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>📈 ${L('เฉลี่ยต่อตัวสูงสุด (EV)', 'Top EV / Kill')}</span><span style="color:var(--gold)">Price × %</span></div>
+          <div class="kpi-card__val" style="color:var(--gold)">${fmtCoin(bestEv)}</div>
+          <div class="kpi-card__sub">${L('คาดหวังรายได้เฉลี่ยต่อการฆ่า 1 ตัว', 'Expected coin value per kill')}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>💰 ${L('ราคาต่อชิ้นสูงสุดในหน้า', 'Highest Unit Price')}</span><span style="color:var(--green)">Uncle Coco</span></div>
+          <div class="kpi-card__val" style="color:var(--green)">${fmtCoin(bestPrice)}</div>
+          <div class="kpi-card__sub">${L('โควต้าขายลุงราคาเต็มรีเซ็ตทุกเช้า', 'Daily full-price quota resets mornings')}</div>
+        </div>
+        <div class="kpi-card" style="cursor:default">
+          <div class="kpi-card__top"><span>⚡ ${L('คุ้มเลือดสูงสุด', 'Best Coin / 1k HP')}</span><span class="muted">One-Shot</span></div>
+          <div class="kpi-card__val" style="color:var(--blue, #3f95ff)">${fmtCoin(bestEff)}</div>
+          <div class="kpi-card__sub">${L('ยิ่งสูงยิ่งฟาร์มไวต่อดาเมจที่ใช้', 'Higher = faster coins per damage dealt')}</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+        ${presets.map(([k, lbl]) => `<button type="button" class="chip-link ${st.preset === k ? 'is-active' : ''}" data-hdpreset="${k}">${lbl}</button>`).join('')}
+      </div>
+
+      <div class="filter-bar">
+        <input class="input input--search" id="hdQ" type="search" value="${esc(st.q)}" placeholder="${L('ค้นหาชื่อของดรอป, มอนสเตอร์, หรือแมพ...', 'Search item, monster, map...')}">
+        <select class="select" id="hdMonT">
+          <option value="normal" ${st.monType === 'normal' ? 'selected' : ''}>${L('เฉพาะมอนทั่วไป', 'Normal Only')}</option>
+          <option value="boss" ${st.monType === 'boss' ? 'selected' : ''}>${L('เฉพาะบอส', 'Boss Only')}</option>
+          <option value="all" ${st.monType === 'all' ? 'selected' : ''}>${L('มอน + บอสทั้งหมด', 'All Monsters')}</option>
+        </select>
+        <input class="input input--sm" id="hdMinP" type="number" step="any" placeholder="Min c" value="${esc(st.minPrice)}" title="${L('ราคาขั้นต่ำ (Coins)', 'Minimum price')}">
+        <input class="input input--sm" id="hdMinR" type="number" step="any" placeholder="Rate ≥%" value="${esc(st.minRate)}" title="${L('โอกาสดรอปขั้นต่ำ (%)', 'Minimum drop rate (%)')}">
+        <input class="input input--sm" id="hdMinLv" type="number" placeholder="Min Lv" value="${esc(st.minLv)}">
+        <input class="input input--sm" id="hdMaxLv" type="number" placeholder="Max Lv" value="${esc(st.maxLv)}">
+        <select class="select" id="hdEl"><option value="">${L('ทุกธาตุ', 'All Elements')}</option>${elOpts}</select>
+        <select class="select" id="hdMap"><option value="">${L('ทุกแมพ', 'All Maps')}</option>${mapOptionsHtml(st.map)}</select>
+        <label class="chip-link" style="padding:5px 10px;user-select:none">
+          <input type="checkbox" id="hdRunes" ${st.includeRunes ? 'checked' : ''} style="margin:0">
+          <span>🔮 ${L('รวมหินรูน', 'Include Runes')}</span>
+        </label>
+        <select class="select" id="hdSort">
+          <option value="ev" ${st.sort === 'ev' ? 'selected' : ''}>Sort: ${L('เฉลี่ย/ตัว (EV)', 'EV / Kill')}</option>
+          <option value="evPerHp" ${st.sort === 'evPerHp' ? 'selected' : ''}>Sort: ${L('คุ้มเลือด (Coin/1k HP)', 'Coin / 1k HP')}</option>
+          <option value="price" ${st.sort === 'price' ? 'selected' : ''}>Sort: ${L('ราคาต่อชิ้น (Price)', 'Unit Price')}</option>
+          <option value="rate" ${st.sort === 'rate' ? 'selected' : ''}>Sort: ${L('% ดรอป (Drop Rate)', 'Drop Rate %')}</option>
+          <option value="score" ${st.sort === 'score' ? 'selected' : ''}>Sort: ${L('คะแนนสมดุล (Price × √Rate)', 'Balanced Score')}</option>
+          <option value="lv" ${st.sort === 'lv' ? 'selected' : ''}>Sort: ${L('เลเวลมอน (Lv)', 'Monster Lv')}</option>
+          <option value="hp" ${st.sort === 'hp' ? 'selected' : ''}>Sort: ${L('เลือดมอน (HP)', 'Monster HP')}</option>
+        </select>
+        <button type="button" class="btn" id="hdDir">${st.dir > 0 ? '▲ ASC' : '▼ DESC'}</button>
+      </div>
+
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr>
+          <th style="text-align:center">#</th>
+          <th>${L('ไอเทมดรอป (ขายลุงโกโก้ได้)', 'Drop Item')}</th>
+          <th style="text-align:right">${L('💰 ราคา/ชิ้น', 'Price')}</th>
+          <th style="text-align:right">${L('🎯 % ดรอป', 'Drop Rate')}</th>
+          <th style="text-align:right">${L('📈 เฉลี่ย/ตัว', 'EV / Kill')}</th>
+          <th style="text-align:right">${L('⚡ Coin/1k HP', 'Coin/1k HP')}</th>
+          <th>${L('มอนสเตอร์ & เลือด', 'Monster & HP')}</th>
+          <th>Lv</th>
+          <th>${L('แผนที่เกิด', 'Spawn Maps')}</th>
+        </tr></thead>
+        <tbody>
+          ${slice.map((d, idx) => {
+            const rank = startIdx + idx + 1;
+            const rankCls = rank === 1 ? 'is-top1' : rank === 2 ? 'is-top2' : rank === 3 ? 'is-top3' : '';
+            const rankTxt = rank === 1 ? '🥇 1' : rank === 2 ? '🥈 2' : rank === 3 ? '🥉 3' : String(rank);
+            const isRune = d.dtype === 'rune';
+            const icon = isRune ? atlasImg('mats', `bl_rune_${d.targetId}_1`, 32) : atlasImg('mats', d.targetId, 32);
+            const openKind = isRune ? 'rune' : 'mat';
+            const lvRange = getDropLvRange(d.mon, d.maps, st.map, minLv, maxLv);
+            const mapChips = renderMapLvChips(lvRange.entries, 2);
+            const sellNote = isRune
+              ? pill(L('รูน · ลุง/แผง V', 'Rune · Vendor/Stall'), '#9a5cf0')
+              : (String(d.targetId).startsWith('sd_') ? pill(L('เมล็ดปลูก', 'Seed'), '#38c97a') : pill(L('ขายลุงได้ 100%', 'Vendor OK'), '#38c97a'));
+            const barPct = Math.min(100, Math.max(4, d.ratePct));
+            return `<tr>
+              <td style="text-align:center"><span class="rank-num ${rankCls}">${rankTxt}</span></td>
+              <td>
+                <div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">
+                  ${icon}
+                  <div>
+                    ${nameHtml(d.targetName)}
+                    <div style="margin-top:2px">${sellNote}</div>
+                  </div>
+                </div>
+              </td>
+              <td class="num" style="text-align:right;color:var(--gold);font-weight:800;font-size:14px">${fmtCoin(d.price)}</td>
+              <td class="num" style="text-align:right">
+                <div class="rate-cell">
+                  <strong style="color:${d.ratePct >= 40 ? 'var(--green)' : d.ratePct >= 15 ? 'var(--gold)' : 'var(--text-0)'}">${fmtPct(d.ratePct)}</strong>
+                  <div class="rate-mini"><div class="rate-mini__fill" style="width:${barPct}%"></div></div>
+                </div>
+              </td>
+              <td class="num" style="text-align:right;color:var(--green);font-weight:800">${fmtCoin(d.ev)}</td>
+              <td class="num" style="text-align:right;color:var(--text-1)">${d.evPer1kHp != null ? fmtCoin(d.evPer1kHp) : '–'}</td>
+              <td>
+                <div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">
+                  ${monSprite(d.mon, 30)}
+                  <div>
+                    <div>${esc(tr(d.mon.n))} ${d.mon.boss ? pill('BOSS', '#f25c69') : ''}</div>
+                    <div class="name-sub">${elIcon(d.mon.el, 12)} <span>HP ${fmt(d.mon.hp)}</span></div>
+                  </div>
+                </div>
+              </td>
+              <td class="num">${esc(lvRange.label)}</td>
+              <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips}</div></td>
+            </tr>`;
+          }).join('') || `<tr><td colspan="9" class="muted" style="text-align:center;padding:24px">${L('ไม่พบรายการที่ตรงเงื่อนไข ลองลด Min ราคา หรือ Min % ดรอปลงครับ', 'No matching drops — try lowering Min Price or Min Drop Rate')}</td></tr>`}
+        </tbody>
+      </table></div>
+      ${renderPager(list.length, PER, st.page, 'data-hdpage="1"')}
+    `;
+
+    $('#hdQ').addEventListener('input', (e) => { st.q = e.target.value; st.preset = 'custom'; st.page = 0; keepFocus('#hdQ', renderHighDrops); });
+    $('#hdMinP').addEventListener('input', (e) => { st.minPrice = e.target.value; st.preset = 'custom'; st.page = 0; keepFocus('#hdMinP', renderHighDrops); });
+    $('#hdMinR').addEventListener('input', (e) => { st.minRate = e.target.value; st.preset = 'custom'; st.page = 0; keepFocus('#hdMinR', renderHighDrops); });
+    $('#hdMinLv').addEventListener('input', (e) => { st.minLv = e.target.value; st.preset = 'custom'; st.page = 0; keepFocus('#hdMinLv', renderHighDrops); });
+    $('#hdMaxLv').addEventListener('input', (e) => { st.maxLv = e.target.value; st.preset = 'custom'; st.page = 0; keepFocus('#hdMaxLv', renderHighDrops); });
+    $('#hdMonT').addEventListener('change', (e) => { st.monType = e.target.value; st.preset = 'custom'; st.page = 0; renderHighDrops(); });
+    $('#hdEl').addEventListener('change', (e) => { st.el = e.target.value; st.preset = 'custom'; st.page = 0; renderHighDrops(); });
+    $('#hdMap').addEventListener('change', (e) => { st.map = e.target.value; st.preset = 'custom'; st.page = 0; renderHighDrops(); });
+    $('#hdRunes').addEventListener('change', (e) => { st.includeRunes = e.target.checked; st.page = 0; renderHighDrops(); });
+    $('#hdSort').addEventListener('change', (e) => { st.sort = e.target.value; st.page = 0; renderHighDrops(); });
+    $('#hdDir').addEventListener('click', () => { st.dir = -st.dir; renderHighDrops(); });
+    $('#mainView').querySelectorAll('[data-hdpage]').forEach((b) => b.addEventListener('click', () => { st.page = Number(b.dataset.page); renderHighDrops(); }));
+    $('#mainView').querySelectorAll('[data-hdpreset]').forEach((b) => b.addEventListener('click', () => {
+      const p = b.dataset.hdpreset;
+      Object.assign(st, { preset: p, q: '', el: '', map: '', minLv: '', maxLv: '', includeRunes: false, dir: -1, page: 0 });
+      if (p === 'best_normal') Object.assign(st, { monType: 'normal', minRate: '5', minPrice: '5', sort: 'ev' });
+      else if (p === 'high_both') Object.assign(st, { monType: 'all', minRate: '20', minPrice: '20', sort: 'ev' });
+      else if (p === 'vp95') Object.assign(st, { monType: 'normal', minRate: '4.9', minPrice: '90', sort: 'evPerHp' });
+      else if (p === 'eff_hp') Object.assign(st, { monType: 'normal', minRate: '5', minPrice: '3', sort: 'evPerHp' });
+      else if (p === 'boss_best') Object.assign(st, { monType: 'boss', minRate: '4', minPrice: '15', includeRunes: true, sort: 'ev' });
+      else if (p === 'early') Object.assign(st, { monType: 'normal', minRate: '5', minPrice: '3', maxLv: '30', sort: 'evPerHp' });
+      else if (p === 'mid') Object.assign(st, { monType: 'normal', minRate: '5', minPrice: '10', minLv: '31', maxLv: '65', sort: 'ev' });
+      else if (p === 'late') Object.assign(st, { monType: 'normal', minRate: '5', minPrice: '15', minLv: '66', maxLv: '99', sort: 'ev' });
+      renderHighDrops();
+    }));
+  }
+
   // ------------------------------------------------------------------ VIEW: COOKING & DISHES
   function renderCooking() {
     const st = state.cooking;
@@ -1810,7 +2068,7 @@
       <div class="page-head">
         <div>
           <h1>🍲 ${L('ทำอาหาร & เมนูอาหาร (Cooking & Dishes)', 'Cooking & Dish Recipes')}</h1>
-          <p>${L('คู่มือเมนูอาหารครบสูตร แหล่งวัตถุดิบ บัฟสเตตัส 30 นาที ค่าปรุง และราคาขายทำกำไรสำหรับพ่อค้าและสายฟาร์ม', 'Complete cooking recipes, ingredient sources, 30-minute status buffs, cooking fees, and selling prices with profit margins')}</p>
+          <p>${L('คู่มือเมนูอาหารครบสูตร แหล่งวัตถุดิบ บัฟสเตตัส 30 นาที ค่าปรุง และมูลค่าอ้างอิง (⚠️ ลุงโกโก้ไม่รับซื้ออาหารโดยตรง — ทำไว้กินเอาบัฟ หรือตั้งขายแผงผู้เล่น V)', 'Complete cooking recipes, ingredient sources, 30-min buffs, fees & ref values (Uncle Coco does not buy dishes: eat for buff or sell at Player Stall V)')}</p>
         </div>
       </div>
 
@@ -2723,6 +2981,7 @@
       <div class="tabs">
         <button type="button" class="tab-btn is-on" data-dtab="drops">${L('ตารางดรอปทั้งหมด', 'Drop Finder')} (${fmt(FLAT_DROPS.length)})</button>
         <button type="button" class="tab-btn" data-dtab="materials">${L('สารบัญวัตถุดิบ', 'Materials')} (${fmt((W.materials || []).length)})</button>
+        <button type="button" class="tab-btn" data-view="highdrops">🏆 ${L('ของดรอปแพง + เรทสูง', 'High-Value High-Rate Drops')} (${fmt(HIGH_DROPS_BADGE)})</button>
       </div>
 
       <div class="filter-bar">
@@ -4117,6 +4376,7 @@
     switch (state.view) {
       case 'overview': renderOverview(); break;
       case 'market': renderMarket(); break;
+      case 'highdrops': renderHighDrops(); break;
       case 'cooking': renderCooking(); break;
       case 'monsters': renderMonsters(); break;
       case 'items': renderItems(); break;
