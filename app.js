@@ -3939,10 +3939,23 @@
 
   function modalBack() {
     if (modalStack.length < 2) return;
+    // go through the browser history so the browser/phone Back button and this button stay in sync
+    if (modalHistDepth > 0 && typeof history.back === 'function') {
+      history.back();
+      return;
+    }
+    modalStepBack();
+  }
+
+  function modalStepBack() {
+    if (modalStack.length < 2) return;
     modalStack.pop();
     const prev = modalStack[modalStack.length - 1];
     openModal(prev.kind, prev.id, { fromBack: true });
   }
+
+  let modalHistDepth = 0;
+  let suppressPop = false;
 
   function openModal(kind, id, opts = {}) {
     let html = '';
@@ -4436,9 +4449,15 @@
       });
     }
     if (!opts.fromBack) {
-      if ($('#modalBackdrop').hidden) modalStack.length = 0;
+      if ($('#modalBackdrop').hidden) { modalStack.length = 0; modalHistDepth = 0; }
       const top = modalStack[modalStack.length - 1];
-      if (!top || top.kind !== kind || top.id !== id) modalStack.push({ kind, id });
+      if (!top || top.kind !== kind || top.id !== id) {
+        modalStack.push({ kind, id });
+        if (typeof history.pushState === 'function') {
+          history.pushState({ ncModal: true }, '', location.href);
+          modalHistDepth++;
+        }
+      }
     }
     updateModalBack();
     $('#modalBackdrop').hidden = false;
@@ -4447,10 +4466,30 @@
   }
 
   function closeModal() {
+    const rewind = modalHistDepth;
     modalStack.length = 0;
+    modalHistDepth = 0;
     updateModalBack();
     $('#modalBackdrop').hidden = true;
+    if (rewind > 0 && typeof history.go === 'function') {
+      suppressPop = true;
+      history.go(-rewind);
+    }
   }
+
+  window.addEventListener('popstate', () => {
+    if (suppressPop) { suppressPop = false; return; }
+    if ($('#modalBackdrop').hidden) { modalHistDepth = 0; return; }
+    modalHistDepth = Math.max(0, modalHistDepth - 1);
+    if (modalStack.length > 1) {
+      modalStepBack();
+    } else {
+      modalStack.length = 0;
+      modalHistDepth = 0;
+      updateModalBack();
+      $('#modalBackdrop').hidden = true;
+    }
+  });
 
   // ------------------------------------------------------------------ GLOBAL SEARCH
   function runGlobalSearch(rawQuery) {
