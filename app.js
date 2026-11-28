@@ -276,6 +276,7 @@
   const FIRE_DROP = RUNE_CFG.fireDrop || {};
   const LOW_DROP = RUNE_CFG.lowDrop || {};
   const SPELL_CFG = RUNE_CFG.spell || null;
+  const BREW_ELS = ['water', 'earth', 'fire', 'wind', 'poison', 'holy', 'shadow', 'ghost', 'undead'];
 
   // Dedicated per-rune drop tables (they replace the monster's own single rune roll)
   const EXTRA_DROP_TABLES = [
@@ -3089,6 +3090,7 @@
         <button type="button" class="btn" id="dropDir">${st.dir > 0 ? '▲' : '▼'}</button>
       </div>
 
+      ${noDropHintHtml(st.q)}
       <div class="table-wrap"><table class="data-table">
         <thead><tr>
           <th>${L('ของที่ดรอป', 'Drop Target')}</th>
@@ -3211,7 +3213,7 @@
             <td><div class="name-cell"><span class="sprite-box">${atlasImg('mats', m.id, 32)}</span><div>${nameHtml(m.n)}${newTag('materials', m.id)}</div></div></td>
             <td><div style="display:flex;gap:4px">${m.rare ? pill('RARE', '#f5b942') : ''}${m.life ? pill('LIFE', '#38c97a') : ''}${!m.rare && !m.life ? '<span class="muted">Common</span>' : ''}</div></td>
             <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(m.p)}</td>
-            <td class="muted">${esc(tr(m.from || '–'))}</td>
+            <td class="muted">${esc(matFromText(m))}</td>
             <td class="num" style="text-align:right">${(MAT_DROPPERS[m.id] || []).length || '–'}</td>
           </tr>`).join('')}
         </tbody>
@@ -3906,6 +3908,164 @@
     }).join('')}</div>`;
   }
 
+  // ------------------------------------------------------------------ Non-drop materials (brewed / crafted, not dropped)
+  // Source: wiki "craft" guide. Dark Sap / Moon Dew are pressed from monster leftovers at Papa Moo (Brew tab).
+  function brewInfo(id) {
+    if (id === 'bl_dark_sap') {
+      return { kind: 'press', need: 10, els: ['shadow', 'ghost', 'undead'], night: true, same: false,
+        th: 'ปั๊มที่ป๋าหมูหริ่ง (แท็บต้มยา/สกัด) จากเศษมอนธาตุ ความมืด · วิญญาณ · อมตะ รวม 10 ชิ้น — ทำได้เฉพาะตอนกลางคืน',
+        en: "Pressed at Papa Moo's (Brew tab) from 10 leftovers of Shadow / Ghost / Undead monsters, at night only",
+        useTh: 'ราดบนชิ้นที่แปดเปื้อนเพื่อสุ่มคุณสมบัติใหม่ (รีโรลของแปดเปื้อน)', useEn: 'Rerolls the trait of a tainted piece' };
+    }
+    if (id === 'bl_moon_dew') {
+      return { kind: 'press', need: 10, els: ['holy'], night: false, same: false,
+        th: 'ปั๊มที่ป๋าหมูหริ่ง (แท็บต้มยา/สกัด) จากเศษมอนธาตุศักดิ์สิทธิ์ 10 ชิ้น',
+        en: "Pressed at Papa Moo's (Brew tab) from 10 leftovers of Holy monsters",
+        useTh: 'ล้างรอยแปดเปื้อนออกจากของสวมใส่ ให้เป็นชิ้นสะอาด', useEn: 'Washes the taint off a worn piece' };
+    }
+    let m = /^bl_ess_(\w+)$/.exec(id);
+    if (m && BREW_ELS.includes(m[1])) {
+      return { kind: 'essence', need: 3, els: [m[1]], night: false, same: true,
+        th: `สกัดที่ป๋าหมูหริ่ง จากเศษของมอนตัวเดียวกัน 3 ชิ้น (มอนธาตุ${tr((W.elements && W.elements[m[1]]) || m[1])})`,
+        en: `Extracted at Papa Moo's from 3 leftovers of the SAME ${m[1]}-element monster`,
+        useTh: 'ใช้ทำน้ำมันเคลือบอาวุธ (5 แก่น) และกระสุนธาตุ (2 แก่น)', useEn: 'Used for Coating Oil (5) and element ammo (2)' };
+    }
+    m = /^bl_oil_(\w+)$/.exec(id);
+    if (m && BREW_ELS.includes(m[1])) {
+      return { kind: 'oil', essId: `bl_ess_${m[1]}`, essQty: 5, els: [m[1]],
+        th: 'ทำที่ป๋าหมูหริ่ง จากแก่นธาตุ 5 ชิ้น + เหรียญ', en: "Made at Papa Moo's from 5 essences + coins",
+        useTh: 'อาวุธของคุณโจมตีด้วยธาตุนี้ 10 นาที', useEn: 'Your weapon hits with this element for 10 minutes' };
+    }
+    m = /^bl_ammo_(\w+)$/.exec(id);
+    if (m && BREW_ELS.includes(m[1])) {
+      return { kind: 'ammo', essId: `bl_ess_${m[1]}`, essQty: 2, els: [m[1]],
+        th: 'ทำที่ป๋าหมูหริ่ง จากแก่นธาตุ 2 ชิ้น + เหรียญ', en: "Made at Papa Moo's from 2 essences + coins",
+        useTh: 'กระสุนธาตุนี้ 100 นัด สำหรับธนู ปืน และคุไน', useEn: '100 shots of this element for bows, guns and kunai' };
+    }
+    return null;
+  }
+
+  // Monsters ranked by the least total HP you must burn to collect `need` leftovers
+  function leftoverFarmRows(els, need) {
+    const set = new Set(els);
+    const rows = [];
+    for (const mon of (W.monsters || [])) {
+      if (mon.boss || mon.story || !set.has(mon.el) || !(mon.hp > 0)) continue;
+      const per = (mon.mats || [])
+        .filter(([mid]) => MAT[mid] && !/_vp_|^sd_/.test(mid))
+        .reduce((s, [, r]) => s + Number(r || 0), 0);
+      if (!(per > 0)) continue;
+      const kills = need / per;
+      rows.push({ mon, per, kills, hpCost: kills * mon.hp });
+    }
+    rows.sort((a, b) => a.hpCost - b.hpCost);
+    return rows;
+  }
+
+  function matBrewHtml(mat) {
+    const info = brewInfo(mat.id);
+    if (!info) return '';
+    const title = info.kind === 'press' ? L('🧪 ไม่ได้ดรอปจากมอน — ปั๊มเอง', '🧪 Not a monster drop — you press it')
+      : info.kind === 'essence' ? L('🧪 ไม่ได้ดรอปจากมอน — สกัดเอง', '🧪 Not a monster drop — you extract it')
+      : L('⚗️ ไม่ได้ดรอปจากมอน — ทำเอง', '⚗️ Not a monster drop — you make it');
+    let farm = '';
+    if (info.kind === 'press' || info.kind === 'essence') {
+      const rows = leftoverFarmRows(info.els, info.need).slice(0, 12);
+      farm = `
+        <div style="margin-top:12px">
+          <strong>${L(`🎯 ฟาร์มเศษที่ไหนดี (เรียงจากต้องตีเลือดรวมน้อยสุดต่อ ${info.need} เศษ)`, `🎯 Best places to farm the leftovers (least total HP per ${info.need} leftovers)`)}</strong>
+          <div class="table-wrap" style="margin-top:6px"><table class="data-table">
+            <thead><tr>
+              <th>${L('มอนสเตอร์', 'Monster')}</th><th>Lv</th>
+              <th style="text-align:right">HP</th>
+              <th style="text-align:right">${L('เศษ/ตัว', 'Leftovers / kill')}</th>
+              <th style="text-align:right">${L(`ฆ่าราว (ตัว/${info.need} เศษ)`, `Kills per ${info.need}`)}</th>
+              <th>${L('แมพ', 'Maps')}</th>
+            </tr></thead>
+            <tbody>
+              ${rows.map(({ mon, per, kills }) => {
+                const lv = getDropLvRange(mon, mon.maps, '', null, null);
+                return `<tr>
+                  <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(mon.id)}">${monSprite(mon, 28)}<div>${esc(tr(mon.n))} ${elIcon(mon.el, 13)}</div></div></td>
+                  <td class="num">${esc(lv.label)}</td>
+                  <td class="num" style="text-align:right">${fmt(mon.hp)}</td>
+                  <td class="num" style="text-align:right">${per.toFixed(2)}</td>
+                  <td class="num" style="text-align:right;color:var(--gold);font-weight:700">~${Math.ceil(kills)}</td>
+                  <td><div style="display:flex;gap:4px;flex-wrap:wrap">${renderMapLvChips(lv.entries, 2)}</div></td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table></div>
+          <div class="muted" style="font-size:11.5px;margin-top:4px">${L('* นับเฉพาะ "เศษมอน" ที่ดรอปบ่อย (ไม่รวมของหายาก) · ของเหลือดรอปครั้งละหลายชิ้นได้ จึงอาจใช้ตัวน้อยกว่าที่แสดง', '* Counts only common monster leftovers (not rare drops) · leftovers can drop several at a time, so you may need fewer kills')}</div>
+        </div>`;
+    } else {
+      farm = `
+        <div style="margin-top:10px">
+          <strong>${L('📋 วัตถุดิบที่ต้องใช้:', '📋 Required:')}</strong>
+          <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <button type="button" class="chip-link" data-open="mat" data-id="${esc(info.essId)}">${atlasImg('mats', info.essId, 20)}<span>${esc(tr((MAT[info.essId] || {}).n || info.essId))} ×${info.essQty}</span></button>
+            <span class="chip-link" style="cursor:default">💰 ${L('+ เหรียญ (ตามตารางที่ป๋าหมูหริ่ง)', '+ coins (see Papa Moo)')}</span>
+          </div>
+        </div>`;
+    }
+    return `
+      <div class="modal-section">
+        <h3>${title}</h3>
+        <div style="font-size:13.5px;line-height:1.6">${esc(L(info.th, info.en))}</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+          ${info.night ? pill(L('🌙 เฉพาะกลางคืน', '🌙 Night only'), '#6a4fd0') : ''}
+          ${(info.els || []).map((el) => elPill(el)).join('')}
+          ${pill(L('ที่: ป๋าหมูหริ่ง (Papa Moo)', 'At: Papa Moo'), '#9a5cf0')}
+        </div>
+        <div class="muted" style="margin-top:8px">💡 ${esc(L(info.useTh, info.useEn))}</div>
+        ${farm}
+      </div>`;
+  }
+
+  // "Used in": smelter recipes and weapon forging recipes that consume this material
+  function matUsedInHtml(mat) {
+    const smelt = Object.values((S2.smelt && S2.smelt.recipes) || {}).filter((rc) => rc.in && Object.prototype.hasOwnProperty.call(rc.in, mat.id));
+    const crafts = [];
+    for (const g of ((W.sys && W.sys.craft) || [])) {
+      for (const it of (g.list || [])) {
+        if (it.mats && Object.prototype.hasOwnProperty.call(it.mats, mat.id)) crafts.push({ it, qty: it.mats[mat.id] });
+      }
+    }
+    if (!smelt.length && !crafts.length) return '';
+    const sChips = smelt.slice(0, 20).map((rc) => `<button type="button" class="chip-link" data-open="mat" data-id="${esc(rc.out)}">${atlasImg('mats', rc.out, 20)}<span>${esc(tr((MAT[rc.out] || {}).n || rc.out))}</span><span class="muted">×${rc.in[mat.id]} ${esc(String(rc.skill || '').toUpperCase())} Lv ${rc.lv ?? 1}</span></button>`).join('');
+    const cChips = crafts.slice(0, 20).map(({ it, qty }) => IT[it.id]
+      ? `<button type="button" class="chip-link" data-open="item" data-id="${esc(it.id)}">${itemSprite(IT[it.id], 20)}<span>${esc(tr(it.n))}</span><span class="muted">×${qty}</span></button>`
+      : `<span class="chip-link" style="cursor:default"><span>${esc(tr(it.n))}</span><span class="muted">×${qty}</span></span>`).join('');
+    return `
+      <div class="modal-section">
+        <h3>🔧 ${L('ใช้ทำอะไรต่อได้', 'Used In')}</h3>
+        ${sChips ? `<div class="muted" style="margin-bottom:4px">${L('เตาหลอม / ทอผ้า / เลื่อยไม้', 'Smelter recipes')} (${smelt.length})</div><div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">${sChips}</div>` : ''}
+        ${cChips ? `<div class="muted" style="margin-bottom:4px">${L('ตีอาวุธใหม่ที่ป๋าหมูหริ่ง', 'Weapon forging at Papa Moo')} (${crafts.length})</div><div style="display:flex;flex-wrap:wrap;gap:6px">${cChips}</div>` : ''}
+      </div>`;
+  }
+
+  // Short "where from" text for tables (covers materials that are not monster drops)
+  function matFromText(m) {
+    if (m.from) return tr(m.from);
+    const info = brewInfo(m.id);
+    if (info) return L(info.th, info.en);
+    if ((MAT_DROPPERS[m.id] || []).length) return L('ดรอปจากมอนสเตอร์ (คลิกดูรายชื่อ)', 'Monster drop (click for list)');
+    return '–';
+  }
+
+  // Hint chips for Drop Finder searches that match materials which are NOT monster drops
+  function noDropHintHtml(rawQ) {
+    const q = norm(rawQ);
+    if (!q) return '';
+    const hits = (W.materials || []).filter((m) =>
+      !(MAT_DROPPERS[m.id] || []).length && !/^bl_rune_|^bl_card_|^fc_|^lk_|^tk_/.test(m.id) && matchesQuery(m._q, q)).slice(0, 10);
+    if (!hits.length) return '';
+    return `<div class="panel" style="margin-bottom:12px;border-color:rgba(154,92,240,0.5)">
+      <div style="font-size:13px;margin-bottom:6px">🧪 ${L('ที่ค้นหาเจอ แต่ "ไม่ได้ดรอปจากมอนสเตอร์" — คลิกดูวิธีได้มา', 'Found, but NOT a monster drop — click to see how to get it')}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">${hits.map((m) => `<button type="button" class="chip-link" data-open="mat" data-id="${esc(m.id)}">${atlasImg('mats', m.id, 22)}<span>${esc(tr(m.n))}</span><span class="muted">${esc(matFromText(m).slice(0, 48))}</span></button>`).join('')}</div>
+    </div>`;
+  }
+
   // Modal navigation history: every modal opened from inside another one is stacked, so "Back" returns to the previous one
   const modalStack = [];
 
@@ -4319,6 +4479,7 @@
           </div>
         </div>
         <p>${esc(tr(mat.d || ''))}</p>
+        ${matBrewHtml(mat)}
         ${dish ? `
           <div class="modal-section">
             <h3>🍲 ${L('สูตรและข้อมูลการปรุงอาหาร', 'Cooking & Recipe Details')}</h3>
@@ -4357,7 +4518,7 @@
           <div class="modal-section">
             <div class="muted">${esc(tr(mat.from))}</div>
           </div>
-        ` : ''))}`;
+        ` : ''))}${matUsedInHtml(mat)}`;
     } else if (kind === 'rune') {
       const r = RUNES[id];
       if (!r) return;
@@ -4522,7 +4683,7 @@
     pushHits(W.jobs || [], 'job', L('อาชีพ', 'Job'), (j) => atlasImg('jobs', j.id, 28), (j) => `${j.n} · Tier ${j.tier}`);
     pushHits(ALL_SKILLS, 'skill', L('สกิล', 'Skill'), (s) => atlasImg('skills', s.icon, 28), (s) => `${s.n} · ${tr(s.jobName)}`);
     pushHits(W.maps || [], 'map', L('แผนที่', 'Map'), () => '🗺️', (mp) => `${mp.n} · ${mp.lv || ''}`);
-    pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => `${m.n} · ${fmtCoin(m.p)}`);
+    pushHits(W.materials || [], 'mat', L('วัตถุดิบ', 'Material'), (m) => atlasImg('mats', m.id, 28), (m) => `${m.n} · ${fmtCoin(m.p)}${brewInfo(m.id) ? ' · 🧪 ' + L('ไม่ดรอป: ปั๊ม/ทำเอง', 'not a drop: brewed') : ''}`);
     pushHits(DISHES_LIST, 'mat', L('อาหาร', 'Dish'), (d) => atlasImg('mats', d.id, 28), (d) => `${d.n} · ${L('ราคาขาย', 'Sell')} ${fmtCoin(d.sellPrice)} · Pot ${d.pot}`);
     pushHits(CARDS_LIST.map((c) => ({ id: c.id, n: c.cardName, ...c })), 'card', L('การ์ด', 'Card'), (c) => atlasImg('mats', c.cardId, 28), (c) => `${tr(c.monName)} · ${fmtCoin(c.stallPrice)}`);
     pushHits(RUNES_LIST, 'rune', L('รูน', 'Rune'), (r) => atlasImg('mats', `bl_rune_${r.id}_1`, 28), (r) => `${r.n} · ${(RUNE_DROPPERS[r.id] || []).length} ${L('มอน', 'mons')} / ${RUNE_MAP_COUNTS[r.id] || 0} ${L('แมพ', 'maps')}`);
