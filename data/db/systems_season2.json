@@ -2106,6 +2106,50 @@
         "fixed": false,
         "subs": null
       },
+      "lowDmg": {
+        "tiers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "on": "WA",
+        "g": "atk",
+        "cap": 30,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
+      "lowGuard": {
+        "tiers": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "on": "DA",
+        "g": "def",
+        "cap": 30,
+        "special": false,
+        "fixed": false,
+        "subs": null
+      },
       "matk": {
         "tiers": [
           [
@@ -4446,8 +4490,8 @@
     }
   },
   "fresh": {
-    "xp0": 0,
-    "t0": 0,
+    "xp0": null,
+    "t0": null,
     "HP_KIT": [
       [
         1,
@@ -4666,6 +4710,28 @@
       [
         99,
         1
+      ]
+    ],
+    "HIGH_MON": [
+      [
+        85,
+        0.5,
+        1.1
+      ],
+      [
+        90,
+        0.6,
+        1.2
+      ],
+      [
+        95,
+        0.7,
+        1.3
+      ],
+      [
+        99,
+        0.8,
+        1.4
       ]
     ],
     "BOSS_ADDS": 2,
@@ -5044,8 +5110,7 @@
     },
     "DOT_TRUE": true,
     "DOT_WIN": 1.2,
-    "KIT_STEAL_SCALE": true,
-    "lv0": 1
+    "KIT_STEAL_SCALE": true
   },
   "faint": [
     [

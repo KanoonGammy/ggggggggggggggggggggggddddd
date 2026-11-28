@@ -25,6 +25,11 @@
       "share",
       "shell",
       "moonrite",
+      "boil",
+      "lastgasp",
+      "bloodsip",
+      "bloodward",
+      "bloodseal",
       "arc",
       "wildfire",
       "frostbite",
@@ -46,6 +51,14 @@
       "dragon",
       "barrel",
       "recoil",
+      "icestorm",
+      "icelance",
+      "icecrack",
+      "iceshatter",
+      "lavapool",
+      "flarejump",
+      "minimeteor",
+      "firefan",
       "apierce",
       "wpierce"
     ],
@@ -2385,14 +2398,6 @@
             "rate_pct": 0.01
           },
           {
-            "monster_id": "salamander",
-            "monster_name": "Salamander",
-            "monster_name_th": "ซาลาแมนเดอร์",
-            "monster_lv": 84,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
             "monster_id": "fire_imp",
             "monster_name": "Flame Imp",
             "monster_name_th": "อิมป์เปลวไฟ",
@@ -3226,6 +3231,121 @@
           }
         ]
       },
+      "boil": {
+        "n": "Blood Boil Rune",
+        "on": "attack",
+        "t": [
+          "The lower your HP, the harder you hit: up to +25% at 25% HP · above 80% HP damage −10%",
+          "Up to +35% at 25% HP · above 80% HP −10%",
+          "Up to +45% at 25% HP · above 80% HP −10%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "boil",
+        "name_th": "Blood Boil Rune",
+        "t_th": [
+          "The lower your HP, the harder you hit: up to +25% at 25% HP · above 80% HP damage −10%",
+          "Up to +35% at 25% HP · above 80% HP −10%",
+          "Up to +45% at 25% HP · above 80% HP −10%"
+        ],
+        "dropped_by": []
+      },
+      "lastgasp": {
+        "n": "Last Gasp Rune",
+        "on": "any",
+        "t": [
+          "Under 35% HP: cooldown and delay −20%",
+          "Under 35% HP · −30%",
+          "Under 35% HP · −40%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "lastgasp",
+        "name_th": "Last Gasp Rune",
+        "t_th": [
+          "Under 35% HP: cooldown and delay −20%",
+          "Under 35% HP · −30%",
+          "Under 35% HP · −40%"
+        ],
+        "dropped_by": []
+      },
+      "bloodsip": {
+        "n": "Wounded Thirst Rune",
+        "on": "attack",
+        "t": [
+          "Under 50% HP: life steal 1% of damage",
+          "Under 50% HP · life steal 1.5%",
+          "Under 50% HP · life steal 2%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "bloodsip",
+        "name_th": "Wounded Thirst Rune",
+        "t_th": [
+          "Under 50% HP: life steal 1% of damage",
+          "Under 50% HP · life steal 1.5%",
+          "Under 50% HP · life steal 2%"
+        ],
+        "dropped_by": []
+      },
+      "bloodward": {
+        "n": "Blood Ward Rune",
+        "on": "any",
+        "t": [
+          "Under 40% HP: a cast gives a shield of 5% max HP for 8 s (every 20 s)",
+          "Under 40% HP · shield 8% (every 20 s)",
+          "Under 40% HP · shield 12% (every 20 s)"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "bloodward",
+        "name_th": "Blood Ward Rune",
+        "t_th": [
+          "Under 40% HP: a cast gives a shield of 5% max HP for 8 s (every 20 s)",
+          "Under 40% HP · shield 8% (every 20 s)",
+          "Under 40% HP · shield 12% (every 20 s)"
+        ],
+        "dropped_by": []
+      },
+      "bloodseal": {
+        "n": "Blood Seal Rune",
+        "on": "any",
+        "t": [
+          "Once in, HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from that 33% · this skill deals +10% damage",
+          "HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from 33% · this skill +15%",
+          "HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from 33% · this skill +20%"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "bloodseal",
+        "name_th": "Blood Seal Rune",
+        "t_th": [
+          "Once in, HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from that 33% · this skill deals +10% damage",
+          "HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from 33% · this skill +15%",
+          "HP drops to 33% at once and heals no higher · AUTO's red potion / warp lines count from 33% · this skill +20%"
+        ],
+        "dropped_by": []
+      },
       "arc": {
         "n": "Arc Rune",
         "on": "attack",
@@ -3554,30 +3674,6 @@
             "rate_pct": 0.01
           },
           {
-            "monster_id": "reed_muskrat",
-            "monster_name": "Water Rat Leader",
-            "monster_name_th": "หนูน้ำจ่าฝูง",
-            "monster_lv": 24,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "leap_trout",
-            "monster_name": "Leaping Trout",
-            "monster_name_th": "ปลาเทราต์กระโดด",
-            "monster_lv": 25,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "log_lurker",
-            "monster_name": "Ambush Log",
-            "monster_name_th": "ท่อนซุงซุ่ม",
-            "monster_lv": 28,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
             "monster_id": "otter",
             "monster_name": "Hunter Otter",
             "monster_name_th": "นากนักล่า",
@@ -3602,25 +3698,9 @@
             "rate_pct": 0.01
           },
           {
-            "monster_id": "brine_shrimp",
-            "monster_name": "Giant Brine Shrimp",
-            "monster_name_th": "กุ้งน้ำเค็มยักษ์",
-            "monster_lv": 48,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
             "monster_id": "crevasse_worm",
             "monster_name": "Fissure Worm",
             "monster_name_th": "หนอนรอยแยก",
-            "monster_lv": 58,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "frost_sprite",
-            "monster_name": "Ice Flake Sprite",
-            "monster_name_th": "ภูตเกล็ดน้ำแข็ง",
             "monster_lv": 58,
             "boss": false,
             "rate_pct": 0.01
@@ -3634,22 +3714,6 @@
             "rate_pct": 0.01
           },
           {
-            "monster_id": "snowball_yeti",
-            "monster_name": "Snowball Yeti",
-            "monster_name_th": "เยติลูกหิมะ",
-            "monster_lv": 58,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "lure_angler",
-            "monster_name": "Bog Anglerfish",
-            "monster_name_th": "ปลาตกเบ็ดหนอง",
-            "monster_lv": 62,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
             "monster_id": "kappa",
             "monster_name": "Mistbog Kappa",
             "monster_name_th": "กัปปะหนองหมอก",
@@ -3658,50 +3722,10 @@
             "rate_pct": 0.01
           },
           {
-            "monster_id": "crayfish_brute",
-            "monster_name": "Giant Crayfish",
-            "monster_name_th": "กุ้งเครย์ฟิชยักษ์",
-            "monster_lv": 88,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "shadow_heron",
-            "monster_name": "Shadow Heron",
-            "monster_name_th": "นกกระสาเงา",
-            "monster_lv": 88,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "kraken_arm",
-            "monster_name": "Kraken Tentacle",
-            "monster_name_th": "หนวดคราเคน",
-            "monster_lv": 92,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "fog_hound",
-            "monster_name": "Mist Hound",
-            "monster_name_th": "หมาหมอก",
-            "monster_lv": 92,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
             "monster_id": "plesio",
             "monster_name": "Plesiosaur",
             "monster_name_th": "พลีซิโอซอร์",
             "monster_lv": 97,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "ammonite",
-            "monster_name": "Crawling Ammonite",
-            "monster_name_th": "แอมโมไนต์คลาน",
-            "monster_lv": 98,
             "boss": false,
             "rate_pct": 0.01
           }
@@ -4911,6 +4935,367 @@
         ],
         "dropped_by": []
       },
+      "icestorm": {
+        "n": "Raging Blizzard Rune",
+        "on": "any",
+        "t": [
+          "Blizzard hits Chilled enemies 20% harder · its circle 10% larger",
+          "Blizzard hits Chilled enemies 30% harder · its circle 15% larger",
+          "Blizzard hits Chilled enemies 40% harder · its circle 20% larger"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "icestorm",
+        "name_th": "รูนพายุคลั่ง",
+        "t_th": [
+          "พายุหิมะตีตัวที่ติดเย็นเฉียบแรงขึ้น 20% · วงใหญ่ขึ้น 10%",
+          "พายุหิมะตีตัวที่ติดเย็นเฉียบแรงขึ้น 30% · วงใหญ่ขึ้น 15%",
+          "พายุหิมะตีตัวที่ติดเย็นเฉียบแรงขึ้น 40% · วงใหญ่ขึ้น 20%"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "lure_angler",
+            "monster_name": "Bog Anglerfish",
+            "monster_name_th": "ปลาตกเบ็ดหนอง",
+            "monster_lv": 62,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "fog_hound",
+            "monster_name": "Mist Hound",
+            "monster_name_th": "หมาหมอก",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "icelance": {
+        "n": "Glacier Lance Rune",
+        "on": "any",
+        "t": [
+          "Glacial Lance 25% wider · every enemy it hits gets 1 stack of Chill",
+          "Glacial Lance 40% wider · every enemy it hits gets 1 stack of Chill",
+          "Glacial Lance 60% wider · every enemy it hits gets 1 stack of Chill"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "icelance",
+        "name_th": "รูนหอกเยือกแข็ง",
+        "t_th": [
+          "หอกธารน้ำแข็งกว้างขึ้น 25% · ทุกตัวที่โดนติดเย็นเฉียบ 1 ชั้น",
+          "หอกธารน้ำแข็งกว้างขึ้น 40% · ทุกตัวที่โดนติดเย็นเฉียบ 1 ชั้น",
+          "หอกธารน้ำแข็งกว้างขึ้น 60% · ทุกตัวที่โดนติดเย็นเฉียบ 1 ชั้น"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "reed_muskrat",
+            "monster_name": "Water Rat Leader",
+            "monster_name_th": "หนูน้ำจ่าฝูง",
+            "monster_lv": 24,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "log_lurker",
+            "monster_name": "Ambush Log",
+            "monster_name_th": "ท่อนซุงซุ่ม",
+            "monster_lv": 28,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "brine_shrimp",
+            "monster_name": "Giant Brine Shrimp",
+            "monster_name_th": "กุ้งน้ำเค็มยักษ์",
+            "monster_lv": 48,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "snowball_yeti",
+            "monster_name": "Snowball Yeti",
+            "monster_name_th": "เยติลูกหิมะ",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "icecrack": {
+        "n": "Cracked Crystal Rune",
+        "on": "any",
+        "t": [
+          "Crystal Burst also breaks enemies with 3 stacks of Chill that are not frozen, for 50% of its damage",
+          "Crystal Burst also breaks enemies with 3 stacks of Chill that are not frozen, for 60% of its damage",
+          "Crystal Burst also breaks enemies with 3 stacks of Chill that are not frozen, for 70% of its damage"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "icecrack",
+        "name_th": "รูนผลึกร้าว",
+        "t_th": [
+          "ผลึกระเบิดทุบตัวที่ติดเย็นเฉียบครบ 3 ชั้นได้ด้วยแม้ยังไม่แข็ง ดาเมจ 50% ของผลึกระเบิด",
+          "ผลึกระเบิดทุบตัวที่ติดเย็นเฉียบครบ 3 ชั้นได้ด้วยแม้ยังไม่แข็ง ดาเมจ 60% ของผลึกระเบิด",
+          "ผลึกระเบิดทุบตัวที่ติดเย็นเฉียบครบ 3 ชั้นได้ด้วยแม้ยังไม่แข็ง ดาเมจ 70% ของผลึกระเบิด"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "leap_trout",
+            "monster_name": "Leaping Trout",
+            "monster_name_th": "ปลาเทราต์กระโดด",
+            "monster_lv": 25,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "shadow_heron",
+            "monster_name": "Shadow Heron",
+            "monster_name_th": "นกกระสาเงา",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "coral_golem",
+            "monster_name": "Coral Golem",
+            "monster_name_th": "โกเลมปะการัง",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "iceshatter": {
+        "n": "Deep Shatter Rune",
+        "on": "any",
+        "t": [
+          "Shatter 15% stronger · 1 more ice shards",
+          "Shatter 25% stronger · 1 more ice shards",
+          "Shatter 35% stronger · 2 more ice shards"
+        ],
+        "kind": "skill",
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "iceshatter",
+        "name_th": "รูนแตกลึก",
+        "t_th": [
+          "ทุบน้ำแข็งแรงขึ้น 15% · เศษน้ำแข็งเพิ่ม 1 ชิ้น",
+          "ทุบน้ำแข็งแรงขึ้น 25% · เศษน้ำแข็งเพิ่ม 1 ชิ้น",
+          "ทุบน้ำแข็งแรงขึ้น 35% · เศษน้ำแข็งเพิ่ม 2 ชิ้น"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "shield_crab",
+            "monster_name": "Big Shield Rock Crab",
+            "monster_name_th": "ปูหินโล่ใหญ่",
+            "monster_lv": 34,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "crayfish_brute",
+            "monster_name": "Giant Crayfish",
+            "monster_name_th": "กุ้งเครย์ฟิชยักษ์",
+            "monster_lv": 88,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "kraken_arm",
+            "monster_name": "Kraken Tentacle",
+            "monster_name_th": "หนวดคราเคน",
+            "monster_lv": 92,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
+            "monster_id": "ammonite",
+            "monster_name": "Crawling Ammonite",
+            "monster_name_th": "แอมโมไนต์คลาน",
+            "monster_lv": 98,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "lavapool": {
+        "n": "Lava Pool Rune",
+        "on": "attack",
+        "t": [
+          "On a cast, 30% chance to leave a lava pool under the target for 3 s that burns whatever stands in it · About 14% more group damage on every fire skill · Fire Mages only, with a staff or an orb",
+          "On a cast, 30% chance to leave a lava pool under the target for 3 s that burns whatever stands in it · About 22% more group damage on every fire skill · Fire Mages only, with a staff or an orb",
+          "On a cast, 30% chance to leave a lava pool under the target for 3 s that burns whatever stands in it · About 34% more group damage on every fire skill · Fire Mages only, with a staff or an orb"
+        ],
+        "kind": "fire",
+        "el": "fire",
+        "hex": "#ff6e28",
+        "wield": "all",
+        "share": [
+          0.14,
+          0.22,
+          0.34
+        ],
+        "p": 0.3,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 130,
+        "dur": 3,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "lavapool",
+        "name_th": "รูนบ่อลาวา",
+        "t_th": [
+          "ร่ายแล้ว 30% ทิ้งบ่อลาวาใต้เป้า 3 วิ ตัวที่ยืนในบ่อติดเผา · ตีฝูงแรงขึ้นราว 14% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ",
+          "ร่ายแล้ว 30% ทิ้งบ่อลาวาใต้เป้า 3 วิ ตัวที่ยืนในบ่อติดเผา · ตีฝูงแรงขึ้นราว 22% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ",
+          "ร่ายแล้ว 30% ทิ้งบ่อลาวาใต้เป้า 3 วิ ตัวที่ยืนในบ่อติดเผา · ตีฝูงแรงขึ้นราว 34% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ"
+        ],
+        "dropped_by": []
+      },
+      "flarejump": {
+        "n": "Flare Jump Rune",
+        "on": "attack",
+        "t": [
+          "On a cast, 40% chance a flame jumps from the target to nearby monsters and burns them · About 13% more group damage on every fire skill · Fire Mages only, with a staff or an orb",
+          "On a cast, 40% chance a flame jumps from the target to nearby monsters and burns them · About 21% more group damage on every fire skill · Fire Mages only, with a staff or an orb",
+          "On a cast, 40% chance a flame jumps from the target to nearby monsters and burns them · About 32% more group damage on every fire skill · Fire Mages only, with a staff or an orb"
+        ],
+        "kind": "fire",
+        "el": "fire",
+        "hex": "#ffaa3c",
+        "wield": "all",
+        "share": [
+          0.13,
+          0.21,
+          0.32
+        ],
+        "p": 0.4,
+        "alone": 0.3,
+        "jumps": [
+          2,
+          3,
+          4
+        ],
+        "reach": 260,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "flarejump",
+        "name_th": "รูนเปลวกระโดด",
+        "t_th": [
+          "ร่ายแล้ว 40% เปลวไฟกระโดดจากเป้าไปตัวข้างๆ ติดเผา · ตีฝูงแรงขึ้นราว 13% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ",
+          "ร่ายแล้ว 40% เปลวไฟกระโดดจากเป้าไปตัวข้างๆ ติดเผา · ตีฝูงแรงขึ้นราว 21% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ",
+          "ร่ายแล้ว 40% เปลวไฟกระโดดจากเป้าไปตัวข้างๆ ติดเผา · ตีฝูงแรงขึ้นราว 32% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทาหรือออร์บ"
+        ],
+        "dropped_by": []
+      },
+      "minimeteor": {
+        "n": "Small Meteor Rune",
+        "on": "attack",
+        "t": [
+          "On a cast, 25% chance a small meteor falls on the target: a blast that burns · About 12% more damage on every fire skill · Fire Mages only, with a staff",
+          "On a cast, 25% chance a small meteor falls on the target: a blast that burns · About 20% more damage on every fire skill · Fire Mages only, with a staff",
+          "On a cast, 25% chance a small meteor falls on the target: a blast that burns · About 30% more damage on every fire skill · Fire Mages only, with a staff"
+        ],
+        "kind": "fire",
+        "el": "fire",
+        "hex": "#ff5a28",
+        "wield": "staff",
+        "share": [
+          0.12,
+          0.2,
+          0.3
+        ],
+        "p": 0.25,
+        "alone": 0.6,
+        "jumps": null,
+        "reach": 140,
+        "dur": null,
+        "delay": 0.45,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "minimeteor",
+        "name_th": "รูนดาวตกเล็ก",
+        "t_th": [
+          "ร่ายแล้ว 25% อุกกาบาตลูกเล็กตกใส่เป้า ระเบิดเป็นวง ติดเผา · แรงขึ้นราว 12% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทา",
+          "ร่ายแล้ว 25% อุกกาบาตลูกเล็กตกใส่เป้า ระเบิดเป็นวง ติดเผา · แรงขึ้นราว 20% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทา",
+          "ร่ายแล้ว 25% อุกกาบาตลูกเล็กตกใส่เป้า ระเบิดเป็นวง ติดเผา · แรงขึ้นราว 30% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือคทา"
+        ],
+        "dropped_by": [
+          {
+            "monster_id": "salamander",
+            "monster_name": "Salamander",
+            "monster_name_th": "ซาลาแมนเดอร์",
+            "monster_lv": 84,
+            "boss": false,
+            "rate_pct": 0.01
+          }
+        ]
+      },
+      "firefan": {
+        "n": "Fire Fan Rune",
+        "on": "attack",
+        "t": [
+          "Every cast fans a cone of fire toward the target that burns · About 16% more group damage on every fire skill · Fire Mages only, with an orb",
+          "Every cast fans a cone of fire toward the target that burns · About 26% more group damage on every fire skill · Fire Mages only, with an orb",
+          "Every cast fans a cone of fire toward the target that burns · About 40% more group damage on every fire skill · Fire Mages only, with an orb"
+        ],
+        "kind": "fire",
+        "el": "fire",
+        "hex": "#ff8c32",
+        "wield": "orb",
+        "share": [
+          0.16,
+          0.26,
+          0.4
+        ],
+        "p": 1,
+        "alone": 0.5,
+        "jumps": null,
+        "reach": 240,
+        "dur": null,
+        "delay": null,
+        "price": [
+          19,
+          68,
+          225
+        ],
+        "id": "firefan",
+        "name_th": "รูนพัดเพลิง",
+        "t_th": [
+          "ร่ายทุกครั้ง ไฟพัดเป็นกรวยไปทางเป้า ติดเผา · ตีฝูงแรงขึ้นราว 16% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือออร์บ",
+          "ร่ายทุกครั้ง ไฟพัดเป็นกรวยไปทางเป้า ติดเผา · ตีฝูงแรงขึ้นราว 26% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือออร์บ",
+          "ร่ายทุกครั้ง ไฟพัดเป็นกรวยไปทางเป้า ติดเผา · ตีฝูงแรงขึ้นราว 40% เมื่อใส่ทุกสกิลไฟ · ใช้ได้เฉพาะสายจอมเวทไฟ ถือออร์บ"
+        ],
+        "dropped_by": []
+      },
       "apierce": {
         "n": "Armor Pierce Rune",
         "on": "attack",
@@ -4946,14 +5331,6 @@
             "monster_name": "Horned Skull Crab",
             "monster_name_th": "ปูกะโหลกเขา",
             "monster_lv": 32,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "shield_crab",
-            "monster_name": "Big Shield Rock Crab",
-            "monster_name_th": "ปูหินโล่ใหญ่",
-            "monster_lv": 34,
             "boss": false,
             "rate_pct": 0.01
           },
@@ -5081,14 +5458,6 @@
             "monster_id": "anchor_brute",
             "monster_name": "Anchor-Dragging Giant",
             "monster_name_th": "ยักษ์ลากสมอ",
-            "monster_lv": 92,
-            "boss": false,
-            "rate_pct": 0.01
-          },
-          {
-            "monster_id": "coral_golem",
-            "monster_name": "Coral Golem",
-            "monster_name_th": "โกเลมปะการัง",
             "monster_lv": 92,
             "boss": false,
             "rate_pct": 0.01
@@ -5270,6 +5639,14 @@
             "rate_pct": 0.01
           },
           {
+            "monster_id": "frost_sprite",
+            "monster_name": "Ice Flake Sprite",
+            "monster_name_th": "ภูตเกล็ดน้ำแข็ง",
+            "monster_lv": 58,
+            "boss": false,
+            "rate_pct": 0.01
+          },
+          {
             "monster_id": "innkeeper_ghost",
             "monster_name": "Innkeeper Ghost",
             "monster_name_th": "ผีเจ้าของโรงเตี๊ยม",
@@ -5444,6 +5821,10 @@
       "pistol": 0.4,
       "shotgun": 0.6
     },
+    "fireCap": {
+      "staff": 0.4,
+      "orb": 0.6
+    },
     "gunDrop": {
       "grenade": [
         [
@@ -5493,6 +5874,424 @@
         [
           "spit_scorpion",
           2.01e-05
+        ]
+      ]
+    },
+    "fireDrop": {
+      "lavapool": [
+        [
+          "salamander",
+          2.51e-05
+        ]
+      ],
+      "flarejump": [
+        [
+          "salamander",
+          2.51e-05
+        ]
+      ],
+      "minimeteor": [
+        [
+          "salamander",
+          2.46e-05
+        ]
+      ],
+      "firefan": [
+        [
+          "salamander",
+          2.52e-05
+        ]
+      ]
+    },
+    "lowDrop": {
+      "boil": [
+        [
+          "bat",
+          2e-05
+        ],
+        [
+          "fire_bat",
+          2e-05
+        ],
+        [
+          "fire_imp",
+          2e-05
+        ],
+        [
+          "mosquito",
+          2e-05
+        ],
+        [
+          "mother_bat",
+          2e-05
+        ],
+        [
+          "echo_bat",
+          2e-05
+        ],
+        [
+          "lava_imp",
+          2e-05
+        ],
+        [
+          "bat_crimson",
+          0.0005
+        ],
+        [
+          "imp_blue",
+          0.0005
+        ],
+        [
+          "blast_imp",
+          2e-05
+        ],
+        [
+          "root_crawler_crimson",
+          0.0005
+        ],
+        [
+          "kite_bat",
+          2e-05
+        ],
+        [
+          "kite_bat_crimson",
+          0.0005
+        ],
+        [
+          "mud_leech",
+          2e-05
+        ],
+        [
+          "mud_leech_red",
+          0.0005
+        ],
+        [
+          "vial_imp",
+          2e-05
+        ],
+        [
+          "vial_imp_gold",
+          0.0005
+        ],
+        [
+          "bat_king",
+          0.008
+        ],
+        [
+          "baphomet_root",
+          0.008
+        ]
+      ],
+      "lastgasp": [
+        [
+          "bat",
+          2e-05
+        ],
+        [
+          "fire_bat",
+          2e-05
+        ],
+        [
+          "fire_imp",
+          2e-05
+        ],
+        [
+          "mosquito",
+          2e-05
+        ],
+        [
+          "mother_bat",
+          2e-05
+        ],
+        [
+          "echo_bat",
+          2e-05
+        ],
+        [
+          "lava_imp",
+          2e-05
+        ],
+        [
+          "bat_crimson",
+          0.0005
+        ],
+        [
+          "imp_blue",
+          0.0005
+        ],
+        [
+          "blast_imp",
+          2e-05
+        ],
+        [
+          "root_crawler_crimson",
+          0.0005
+        ],
+        [
+          "kite_bat",
+          2e-05
+        ],
+        [
+          "kite_bat_crimson",
+          0.0005
+        ],
+        [
+          "mud_leech",
+          2e-05
+        ],
+        [
+          "mud_leech_red",
+          0.0005
+        ],
+        [
+          "vial_imp",
+          2e-05
+        ],
+        [
+          "vial_imp_gold",
+          0.0005
+        ],
+        [
+          "bat_king",
+          0.008
+        ],
+        [
+          "baphomet_root",
+          0.008
+        ]
+      ],
+      "bloodsip": [
+        [
+          "bat",
+          2e-05
+        ],
+        [
+          "fire_bat",
+          2e-05
+        ],
+        [
+          "fire_imp",
+          2e-05
+        ],
+        [
+          "mosquito",
+          2e-05
+        ],
+        [
+          "mother_bat",
+          2e-05
+        ],
+        [
+          "echo_bat",
+          2e-05
+        ],
+        [
+          "lava_imp",
+          2e-05
+        ],
+        [
+          "bat_crimson",
+          0.0005
+        ],
+        [
+          "imp_blue",
+          0.0005
+        ],
+        [
+          "blast_imp",
+          2e-05
+        ],
+        [
+          "root_crawler_crimson",
+          0.0005
+        ],
+        [
+          "kite_bat",
+          2e-05
+        ],
+        [
+          "kite_bat_crimson",
+          0.0005
+        ],
+        [
+          "mud_leech",
+          2e-05
+        ],
+        [
+          "mud_leech_red",
+          0.0005
+        ],
+        [
+          "vial_imp",
+          2e-05
+        ],
+        [
+          "vial_imp_gold",
+          0.0005
+        ],
+        [
+          "bat_king",
+          0.008
+        ],
+        [
+          "baphomet_root",
+          0.008
+        ]
+      ],
+      "bloodward": [
+        [
+          "bat",
+          2e-05
+        ],
+        [
+          "fire_bat",
+          2e-05
+        ],
+        [
+          "fire_imp",
+          2e-05
+        ],
+        [
+          "mosquito",
+          2e-05
+        ],
+        [
+          "mother_bat",
+          2e-05
+        ],
+        [
+          "echo_bat",
+          2e-05
+        ],
+        [
+          "lava_imp",
+          2e-05
+        ],
+        [
+          "bat_crimson",
+          0.0005
+        ],
+        [
+          "imp_blue",
+          0.0005
+        ],
+        [
+          "blast_imp",
+          2e-05
+        ],
+        [
+          "root_crawler_crimson",
+          0.0005
+        ],
+        [
+          "kite_bat",
+          2e-05
+        ],
+        [
+          "kite_bat_crimson",
+          0.0005
+        ],
+        [
+          "mud_leech",
+          2e-05
+        ],
+        [
+          "mud_leech_red",
+          0.0005
+        ],
+        [
+          "vial_imp",
+          2e-05
+        ],
+        [
+          "vial_imp_gold",
+          0.0005
+        ],
+        [
+          "bat_king",
+          0.008
+        ],
+        [
+          "baphomet_root",
+          0.008
+        ]
+      ],
+      "bloodseal": [
+        [
+          "bat",
+          2e-05
+        ],
+        [
+          "fire_bat",
+          2e-05
+        ],
+        [
+          "fire_imp",
+          2e-05
+        ],
+        [
+          "mosquito",
+          2e-05
+        ],
+        [
+          "mother_bat",
+          2e-05
+        ],
+        [
+          "echo_bat",
+          2e-05
+        ],
+        [
+          "lava_imp",
+          2e-05
+        ],
+        [
+          "bat_crimson",
+          0.0005
+        ],
+        [
+          "imp_blue",
+          0.0005
+        ],
+        [
+          "blast_imp",
+          2e-05
+        ],
+        [
+          "root_crawler_crimson",
+          0.0005
+        ],
+        [
+          "kite_bat",
+          2e-05
+        ],
+        [
+          "kite_bat_crimson",
+          0.0005
+        ],
+        [
+          "mud_leech",
+          2e-05
+        ],
+        [
+          "mud_leech_red",
+          0.0005
+        ],
+        [
+          "vial_imp",
+          2e-05
+        ],
+        [
+          "vial_imp_gold",
+          0.0005
+        ],
+        [
+          "bat_king",
+          0.008
+        ],
+        [
+          "baphomet_root",
+          0.008
         ]
       ]
     }
@@ -5664,6 +6463,18 @@
     "bl_rune_recoil_1",
     "bl_rune_recoil_2",
     "bl_rune_recoil_3",
+    "bl_rune_lavapool_1",
+    "bl_rune_lavapool_2",
+    "bl_rune_lavapool_3",
+    "bl_rune_flarejump_1",
+    "bl_rune_flarejump_2",
+    "bl_rune_flarejump_3",
+    "bl_rune_minimeteor_1",
+    "bl_rune_minimeteor_2",
+    "bl_rune_minimeteor_3",
+    "bl_rune_firefan_1",
+    "bl_rune_firefan_2",
+    "bl_rune_firefan_3",
     "bl_rune_apierce_1",
     "bl_rune_apierce_2",
     "bl_rune_apierce_3",

@@ -9844,8 +9844,8 @@
     "id": "wh_blitz",
     "n": "Hunting Falcon Dive",
     "name_th": "เหยี่ยวโฉบล่า",
-    "d": "Command the falcon to swoop 5 times, 21 each (by DEX and INT), ignoring DEF, never missing · swoop hits around the target for 50% · A lightning hawk: Wind, Shock",
-    "desc_th": "สั่งเหยี่ยวโฉบ 5 ครั้ง ครั้งละ 21 (ตาม DEX และ INT) ไม่สน DEF ไม่พลาด · โฉบโดนรอบเป้า 50% · เหยี่ยวสายฟ้า ธาตุลม ติดช็อต",
+    "d": "Command the falcon to swoop 5 times, 19 each (by DEX and INT), ignoring DEF, never missing · swoop hits around the target for 50% · A lightning hawk: Wind, Shock",
+    "desc_th": "สั่งเหยี่ยวโฉบ 5 ครั้ง ครั้งละ 19 (ตาม DEX และ INT) ไม่สน DEF ไม่พลาด · โฉบโดนรอบเป้า 50% · เหยี่ยวสายฟ้า ธาตุลม ติดช็อต",
     "job_id": "wolfhunter",
     "job_name": "Wolf Hunter",
     "job_name_th": "พรานหมาป่า",
@@ -12694,8 +12694,8 @@
     "id": "bi_miracle",
     "n": "Miracle",
     "name_th": "ปาฏิหาริย์",
-    "d": "Holy Sun: heals everyone 60%, revives fainted friends, judgment light hits enemies around you for 173% of MATK and blesses ATK/MATK +15% for 20 s",
-    "desc_th": "ตะวันแสงศักดิ์สิทธิ์: ฟื้น HP ทุกคน 60% ชุบเพื่อนที่หมดแรง แสงพิพากษาศัตรูรอบตัว 173% ของ MATK และอวยพร ATK/MATK +15% 20 วิ",
+    "d": "Holy Sun: heals everyone 60%, revives fainted friends, judgment light hits enemies around you for 173% of MATK and blesses ATK/MATK +15% for 20 s on you and friends within 520 (the heal reaches 700)",
+    "desc_th": "Holy Sun: heals everyone 60%, revives fainted friends, judgment light hits enemies around you for 173% of MATK and blesses ATK/MATK +15% for 20 s on you and friends within 520 (the heal reaches 700)",
     "job_id": "bishop",
     "job_name": "Bishop",
     "job_name_th": "บิชอป",
@@ -13703,7 +13703,7 @@
     "n": "Hundred-Direction Palm",
     "name_th": "ฝ่ามือร้อยทิศ",
     "d": "A flurry of 10 palm strikes ahead, 108% of ATK each, then knock back",
-    "desc_th": "ฝ่ามือรัว 10 ครั้งข้างหน้า ครั้งละ 108% ของ ATK แล้วผลักกระเด็น",
+    "desc_th": "ฝ่ามือรัว 10 ครั้งข้างหน้า ครั้งละ 108% ของ ATK ครั้งสุดท้ายผลักศัตรูถอยเล็กน้อย",
     "job_id": "monk",
     "job_name": "Monk",
     "job_name_th": "นักพรต",
@@ -13790,7 +13790,7 @@
     "n": "Storm Fist Combo",
     "name_th": "ชุดหมัดพายุ",
     "d": "A 4-beat fist combo ahead, 460% of ATK each, the last beat knocks back",
-    "desc_th": "หมัดชุด 4 จังหวะข้างหน้า ครั้งละ 460% ของ ATK จังหวะสุดท้ายผลักกระเด็น",
+    "desc_th": "หมัดชุด 4 จังหวะข้างหน้า ครั้งละ 460% ของ ATK จังหวะสุดท้ายผลักศัตรูถอยเล็กน้อย",
     "job_id": "monk",
     "job_name": "Monk",
     "job_name_th": "นักพรต",
@@ -16213,7 +16213,7 @@
     "el": "",
     "type": "phys",
     "active": true,
-    "max": 5,
+    "max": 1,
     "sp": "20",
     "cd": 6,
     "rg": null,
@@ -16230,30 +16230,6 @@
         20,
         6,
         null
-      ],
-      [
-        0,
-        20,
-        6,
-        null
-      ],
-      [
-        0,
-        20,
-        6,
-        null
-      ],
-      [
-        0,
-        20,
-        6,
-        null
-      ],
-      [
-        0,
-        20,
-        6,
-        null
       ]
     ]
   },
@@ -16261,8 +16237,8 @@
     "id": "fm_pillar",
     "n": "Pillar of Flame",
     "name_th": "เสาเพลิง",
-    "d": "A pillar of fire erupts under enemies 3 times (4 with a Rod), 75% of MATK each, Heat +8 · Burning enemies take 20% more · Leaves burning ground 3 s",
-    "desc_th": "เสาไฟปะทุใต้ศัตรู 3 ครั้ง (ถือคทา 4 ครั้ง) ครั้งละ 75% ของ MATK ความร้อน +8 · ตัวที่เผาอยู่โดนเพิ่ม 20% · ทิ้งพื้นไฟ 3 วิ",
+    "d": "A pillar of fire erupts under enemies 3 times (4 with a Rod), 75% of MATK each, burns for sure 6 sec (x2), Heat +8 · Burning enemies take 20% more · Leaves burning ground 3 s",
+    "desc_th": "เสาไฟปะทุใต้ศัตรู 3 ครั้ง (ถือคทา 4 ครั้ง) ครั้งละ 75% ของ MATK ติดเผาแน่ 6 วิ (แรง 2 เท่า) ความร้อน +8 · ตัวที่เผาอยู่โดนเพิ่ม 20% · ทิ้งพื้นไฟ 3 วิ",
     "job_id": "firemage",
     "job_name": "Fire Mage",
     "job_name_th": "นักเวทไฟ",
@@ -16343,8 +16319,8 @@
     "id": "fm_sea",
     "n": "Sea of Flame",
     "name_th": "ทะเลเพลิง",
-    "d": "A Sea of Flame, radius 320, for 6 sec, every half sec 75% of MATK, may apply Burn, Heat +20 · Enemies inside are slowed · The sea of flame follows the nearest enemy",
-    "desc_th": "ทะเลเพลิงรัศมี 320 นาน 6 วิ ทุกครึ่งวิ 75% ของ MATK มีโอกาสติดเผา ความร้อน +20 · ศัตรูข้างในช้าลง · ทะเลเพลิงไหลตามศัตรูที่ใกล้ที่สุด",
+    "d": "A Sea of Flame, radius 320, for 6 sec, every half sec 75% of MATK, burns for sure 6 sec (x2), Heat +20 · Enemies inside are slowed · The sea of flame follows the nearest enemy",
+    "desc_th": "ทะเลเพลิงรัศมี 320 นาน 6 วิ ทุกครึ่งวิ 75% ของ MATK ติดเผาแน่ 6 วิ (แรง 2 เท่า) ความร้อน +20 · ศัตรูข้างในช้าลง · ทะเลเพลิงไหลตามศัตรูที่ใกล้ที่สุด",
     "job_id": "firemage",
     "job_name": "Fire Mage",
     "job_name_th": "นักเวทไฟ",
@@ -16430,8 +16406,8 @@
     "id": "fm_ring",
     "n": "Ring of Fire",
     "name_th": "วงแหวนเพลิง",
-    "d": "A fire ring around you for 4 sec, enemies passing through take 194% of MATK and are pushed back, Heat +12 · The ring keeps expanding · 2 rings",
-    "desc_th": "วงแหวนไฟรอบตัว 4 วิ ศัตรูที่ผ่านโดน 194% ของ MATK และถูกผลักออก ความร้อน +12 · วงแหวนขยายออกเรื่อย ๆ · วงแหวน 2 ชั้น",
+    "d": "A fire ring around you for 4 sec, enemies passing through take 194% of MATK, burn for sure 6 sec (x2) and are pushed back, Heat +12 · The ring keeps expanding · 2 rings",
+    "desc_th": "วงแหวนไฟรอบตัว 4 วิ ศัตรูที่ผ่านโดน 194% ของ MATK ติดเผาแน่ 6 วิ (แรง 2 เท่า) และถูกผลักออก ความร้อน +12 · วงแหวนขยายออกเรื่อย ๆ · วงแหวน 2 ชั้น",
     "job_id": "firemage",
     "job_name": "Fire Mage",
     "job_name_th": "นักเวทไฟ",
@@ -16656,8 +16632,8 @@
     "id": "fm_vent",
     "n": "Vent Heat",
     "name_th": "ระบายความร้อน",
-    "d": "Release all your Heat as a blast around you, MATK 11% × Heat (now 0), pushing enemies back · At 100, leaves a fire ring for 4 sec · After venting, cast 30% faster for 5 s",
-    "desc_th": "ปล่อยความร้อนทั้งหมดเป็นระเบิดรอบตัว MATK 11% × ความร้อน (ตอนนี้ 0) ผลักศัตรูออก · ที่ 100 ทิ้งวงไฟ 4 วิ · ระบายแล้วร่ายเร็วขึ้น 30% 5 วิ",
+    "d": "Release all your Heat as a blast around you, MATK 11% × Heat (now 0), burns for sure 6 sec (x2), pushing enemies back · At 100, leaves a fire ring for 4 sec · After venting, cast 30% faster for 5 s",
+    "desc_th": "ปล่อยความร้อนทั้งหมดเป็นระเบิดรอบตัว MATK 11% × ความร้อน (ตอนนี้ 0) ติดเผาแน่ 6 วิ (แรง 2 เท่า) ผลักศัตรูออก · ที่ 100 ทิ้งวงไฟ 4 วิ · ระบายแล้วร่ายเร็วขึ้น 30% 5 วิ",
     "job_id": "firemage",
     "job_name": "Fire Mage",
     "job_name_th": "นักเวทไฟ",
@@ -17056,8 +17032,8 @@
     "id": "fm_meteor",
     "n": "Falling Meteors",
     "name_th": "อุกกาบาตถล่ม",
-    "d": "16 meteors fall over a big circle for 3 sec, 4 dash at enemies in the circle, 230% of MATK each, and the circle explodes · Cast at Heat 100 for 1 extra giant meteor (×3.2)",
-    "desc_th": "อุกกาบาต 16 ลูกร่วงใส่วงใหญ่ 3 วิ 4 ลูกพุ่งใส่ศัตรูในวง ลูกละ 230% ของ MATK วงระเบิดใหญ่ · ร่ายตอนความร้อน 100 ได้ลูกยักษ์เพิ่ม 1 ลูก (×3.2)",
+    "d": "5 sec cast: 16 meteors fall over a big circle for 3 sec, 4 dash at enemies in the circle, 460% of MATK each, the circle explodes, burns for sure 6 sec (x2) · Cast at Heat 100 for 1 extra giant meteor (×3.2)",
+    "desc_th": "ร่ายนาน 5 วิ: อุกกาบาต 16 ลูกร่วงใส่วงใหญ่ 3 วิ 4 ลูกพุ่งใส่ศัตรูในวง ลูกละ 460% ของ MATK วงระเบิดใหญ่ ติดเผาแน่ 6 วิ (แรง 2 เท่า) · ร่ายตอนความร้อน 100 ได้ลูกยักษ์เพิ่ม 1 ลูก (×3.2)",
     "job_id": "firemage",
     "job_name": "Fire Mage",
     "job_name_th": "นักเวทไฟ",
@@ -17082,34 +17058,34 @@
     ],
     "lvs": [
       [
-        150,
+        300,
         90,
         7,
-        3.5
+        5
       ],
       [
-        170,
+        340,
         90,
         7,
-        3.5
+        5
       ],
       [
-        190,
+        380,
         90,
         7,
-        3.5
+        5
       ],
       [
-        210,
+        420,
         90,
         7,
-        3.5
+        5
       ],
       [
-        230,
+        460,
         90,
         7,
-        3.5
+        5
       ]
     ]
   },
@@ -17117,8 +17093,8 @@
     "id": "im_blizzard",
     "n": "Snowstorm",
     "name_th": "พายุหิมะ",
-    "d": "A 5-sec snowstorm at the cursor, 79% of MATK per sec, may Chill every sec, enemies slowed · With a Rod: circle 30% bigger · Storm follows the target",
-    "desc_th": "พายุหิมะ 5 วิที่เมาส์ วิละ 79% ของ MATK มีโอกาสเย็นเฉียบทุกวิ ศัตรูช้า · ถือคทา: วงใหญ่ขึ้น 30% · พายุตามเป้าหมาย",
+    "d": "A 5-sec snowstorm at the cursor, 133% of MATK per sec, may Chill every sec, enemies slowed · With a Rod: circle 30% bigger · Storm follows the target",
+    "desc_th": "พายุหิมะ 5 วิที่เมาส์ วิละ 133% ของ MATK มีโอกาสเย็นเฉียบทุกวิ ศัตรูช้า · ถือคทา: วงใหญ่ขึ้น 30% · พายุตามเป้าหมาย",
     "job_id": "icemage",
     "job_name": "Ice Mage",
     "job_name_th": "นักเวทน้ำแข็ง",
@@ -17134,43 +17110,7 @@
     "req": [],
     "lvs": [
       [
-        38,
-        40,
-        4,
-        1
-      ],
-      [
-        42,
-        40,
-        4,
-        1
-      ],
-      [
-        47,
-        40,
-        4,
-        1
-      ],
-      [
-        51,
-        40,
-        4,
-        1
-      ],
-      [
-        56,
-        40,
-        4,
-        1
-      ],
-      [
-        61,
-        40,
-        4,
-        1
-      ],
-      [
-        65,
+        62,
         40,
         4,
         1
@@ -17182,13 +17122,49 @@
         1
       ],
       [
-        75,
+        78,
         40,
         4,
         1
       ],
       [
-        79,
+        86,
+        40,
+        4,
+        1
+      ],
+      [
+        94,
+        40,
+        4,
+        1
+      ],
+      [
+        102,
+        40,
+        4,
+        1
+      ],
+      [
+        110,
+        40,
+        4,
+        1
+      ],
+      [
+        117,
+        40,
+        4,
+        1
+      ],
+      [
+        125,
+        40,
+        4,
+        1
+      ],
+      [
+        133,
         40,
         4,
         1
@@ -17199,8 +17175,8 @@
     "id": "im_lance",
     "n": "Glacier Lance",
     "name_th": "หอกธารน้ำแข็ง",
-    "d": "A giant Ice Spear pierces the whole line for 236% of MATK, frozen enemies take double",
-    "desc_th": "หอกน้ำแข็งยักษ์พุ่งทะลุทั้งแนว 236% ของ MATK ตัวที่แข็งอยู่โดนสองเท่า",
+    "d": "A giant Ice Spear pierces the whole line for 397% of MATK, frozen enemies take double",
+    "desc_th": "หอกน้ำแข็งยักษ์พุ่งทะลุทั้งแนว 397% ของ MATK ตัวที่แข็งอยู่โดนสองเท่า",
     "job_id": "icemage",
     "job_name": "Ice Mage",
     "job_name_th": "นักเวทน้ำแข็ง",
@@ -17221,43 +17197,7 @@
     ],
     "lvs": [
       [
-        113,
-        19,
-        2,
-        0.7
-      ],
-      [
-        126,
-        19,
-        2,
-        0.7
-      ],
-      [
-        140,
-        19,
-        2,
-        0.7
-      ],
-      [
-        154,
-        19,
-        2,
-        0.7
-      ],
-      [
-        167,
-        19,
-        2,
-        0.7
-      ],
-      [
-        181,
-        19,
-        2,
-        0.7
-      ],
-      [
-        195,
+        185,
         19,
         2,
         0.7
@@ -17269,13 +17209,49 @@
         0.7
       ],
       [
-        222,
+        232,
         19,
         2,
         0.7
       ],
       [
-        236,
+        255,
+        19,
+        2,
+        0.7
+      ],
+      [
+        279,
+        19,
+        2,
+        0.7
+      ],
+      [
+        303,
+        19,
+        2,
+        0.7
+      ],
+      [
+        326,
+        19,
+        2,
+        0.7
+      ],
+      [
+        350,
+        19,
+        2,
+        0.7
+      ],
+      [
+        373,
+        19,
+        2,
+        0.7
+      ],
+      [
+        397,
         19,
         2,
         0.7
@@ -17477,8 +17453,8 @@
     "id": "im_breath",
     "n": "Freezing Breath",
     "name_th": "ลมหายใจเยือกแข็ง",
-    "d": "Breathe a freezing cone for 2 sec, 140% of MATK per sec, 2 Chill stacks per sec",
-    "desc_th": "พ่นลมหนาวเป็นกรวย 2 วิ วิละ 140% ของ MATK เย็นเฉียบ 2 ชั้นต่อวิ",
+    "d": "Breathe a freezing cone for 2 sec, 242% of MATK per sec, 2 Chill stacks per sec",
+    "desc_th": "พ่นลมหนาวเป็นกรวย 2 วิ วิละ 242% ของ MATK เย็นเฉียบ 2 ชั้นต่อวิ",
     "job_id": "icemage",
     "job_name": "Ice Mage",
     "job_name_th": "นักเวทน้ำแข็ง",
@@ -17499,61 +17475,61 @@
     ],
     "lvs": [
       [
-        85,
-        15,
-        2,
-        null
-      ],
-      [
-        95,
-        15,
-        2,
-        null
-      ],
-      [
-        105,
-        15,
-        2,
-        null
-      ],
-      [
-        115,
-        15,
-        2,
-        null
-      ],
-      [
-        125,
-        15,
-        2,
-        null
-      ],
-      [
         135,
         15,
         2,
         null
       ],
       [
-        145,
+        153,
         15,
         2,
         null
       ],
       [
-        155,
+        173,
         15,
         2,
         null
       ],
       [
-        165,
+        190,
         15,
         2,
         null
       ],
       [
-        175,
+        210,
+        15,
+        2,
+        null
+      ],
+      [
+        228,
+        15,
+        2,
+        null
+      ],
+      [
+        248,
+        15,
+        2,
+        null
+      ],
+      [
+        265,
+        15,
+        2,
+        null
+      ],
+      [
+        285,
+        15,
+        2,
+        null
+      ],
+      [
+        303,
         15,
         2,
         null
@@ -17564,8 +17540,8 @@
     "id": "im_burst",
     "n": "Crystal Burst",
     "name_th": "ผลึกระเบิด",
-    "d": "Smashes every frozen enemy on screen at once for 425% of MATK each · Kills restore 0.5 SP each",
-    "desc_th": "ทุบทุกตัวที่แข็งอยู่ในจอให้แตกพร้อมกัน ตัวละ 425% ของ MATK · ฆ่าได้คืน SP 0.5 ต่อตัว",
+    "d": "Smashes every frozen enemy on screen at once for 544% of MATK each · Kills restore 0.5 SP each",
+    "desc_th": "ทุบทุกตัวที่แข็งอยู่ในจอให้แตกพร้อมกัน ตัวละ 544% ของ MATK · ฆ่าได้คืน SP 0.5 ต่อตัว",
     "job_id": "icemage",
     "job_name": "Ice Mage",
     "job_name_th": "นักเวทน้ำแข็ง",
@@ -17586,61 +17562,61 @@
     ],
     "lvs": [
       [
-        195,
+        253,
         23,
         6,
         null
       ],
       [
-        221,
+        286,
         23,
         6,
         null
       ],
       [
-        247,
+        318,
         23,
         6,
         null
       ],
       [
-        272,
+        350,
         23,
         6,
         null
       ],
       [
-        298,
+        383,
         23,
         6,
         null
       ],
       [
-        323,
+        415,
         23,
         6,
         null
       ],
       [
-        348,
+        447,
         23,
         6,
         null
       ],
       [
-        374,
+        479,
         23,
         6,
         null
       ],
       [
-        400,
+        512,
         23,
         6,
         null
       ],
       [
-        425,
+        544,
         23,
         6,
         null
@@ -17907,8 +17883,8 @@
     "id": "im_iceage",
     "n": "Ice Age",
     "name_th": "ยุคน้ำแข็ง",
-    "d": "The whole screen freezes for 8 sec, every enemy gets Chill every sec (32% of MATK), frozen enemies shatter on their own every 2 sec · Area shrinks to 50% of normal",
-    "desc_th": "ทั้งจอหนาวจัด 8 วิ ศัตรูทุกตัวเย็นเฉียบทุกวิ (32% ของ MATK) ตัวที่แข็งแตกกระจายเองทุก 2 วิ · พื้นที่เหลือ 50% ของเดิม",
+    "d": "The whole screen freezes for 8 sec, every enemy takes 52% of MATK every sec with a 50% chance of Chill, frozen enemies shatter on their own every 2 sec · Area shrinks to 50% of normal",
+    "desc_th": "ทั้งจอหนาวจัด 8 วิ ศัตรูทุกตัวโดน 52% ของ MATK ทุกวิ มีโอกาสเย็นเฉียบ 50% ตัวที่แข็งแตกกระจายเองทุก 2 วิ · พื้นที่เหลือ 50% ของเดิม",
     "job_id": "icemage",
     "job_name": "Ice Mage",
     "job_name_th": "นักเวทน้ำแข็ง",
@@ -17917,8 +17893,8 @@
     "type": "magic",
     "active": true,
     "max": 5,
-    "sp": "90",
-    "cd": 8,
+    "sp": "120",
+    "cd": 12,
     "rg": 700,
     "icon": "sk_im_iceage",
     "req": [
@@ -17933,33 +17909,33 @@
     ],
     "lvs": [
       [
-        18,
-        90,
-        8,
-        3.5
-      ],
-      [
-        22,
-        90,
-        8,
-        3.5
-      ],
-      [
-        25,
-        90,
-        8,
-        3.5
-      ],
-      [
         29,
-        90,
-        8,
+        120,
+        12,
         3.5
       ],
       [
-        32,
-        90,
-        8,
+        35,
+        120,
+        12,
+        3.5
+      ],
+      [
+        41,
+        120,
+        12,
+        3.5
+      ],
+      [
+        46,
+        120,
+        12,
+        3.5
+      ],
+      [
+        52,
+        120,
+        12,
         3.5
       ]
     ]
@@ -17969,7 +17945,7 @@
     "n": "Tempo Song",
     "name_th": "เพลงเร่งจังหวะ",
     "d": "Continuous play (SP 2/sec), radius 450: your Attack Speed +10%, allies hit 10% harder, multiplied by verse (the verse rises every 5 sec ×1 / ×1.5 / ×2) · Press again = Chorus: your next 3 basic attacks are guaranteed crits, allies hit 30% harder for 4 sec",
-    "desc_th": "เล่นต่อเนื่อง (SP 2/วิ) รัศมี 450: ตัวเองความเร็วโจมตี +10% เพื่อนตีแรงขึ้น 10% คูณท่อน (ท่อนขึ้นทุก 5 วิ ×1 / ×1.5 / ×2) · กดอีกครั้ง = ท่อนฮุก: ตัวเองตีปกติ 3 ครั้งถัดไปคริแน่นอน เพื่อนตีแรงขึ้น 30% 4 วิ",
+    "desc_th": "เล่นต่อเนื่อง (SP 2/วิ) รัศมี 450: ตัวเองความเร็วโจมตี +10% ตัวเองและเพื่อนตีแรงขึ้น 10% คูณท่อน (ท่อนขึ้นทุก 5 วิ ×1 / ×1.5 / ×2) · กดอีกครั้ง = ท่อนฮุก: ตัวเองตีปกติ 3 ครั้งถัดไปคริแน่นอน เพื่อนตีแรงขึ้น 30% 4 วิ",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18281,8 +18257,8 @@
     "id": "bd_twirl",
     "n": "Fire Twirl Dance",
     "name_th": "ระบำควงไฟ",
-    "d": "Spin a fire-tipped whip around you for 2 sec, every 0.25 sec 45% of ATK, 35% chance to Burn · Area 200% of normal",
-    "desc_th": "ควงแส้ปลายไฟรอบตัว 2 วิ ทุก 0.25 วิ 45% ของ ATK มีโอกาสติดเผา 35% · พื้นที่ 200% ของเดิม",
+    "d": "Spin a fire-tipped whip around you for 2 sec, every 0.25 sec 90% of ATK, 35% chance to Burn · Area 200% of normal",
+    "desc_th": "ควงแส้ปลายไฟรอบตัว 2 วิ ทุก 0.25 วิ 90% ของ ATK มีโอกาสติดเผา 35% · พื้นที่ 200% ของเดิม",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18298,61 +18274,61 @@
     "req": [],
     "lvs": [
       [
-        23,
-        12,
-        0,
-        null
-      ],
-      [
-        25,
-        12,
-        0,
-        null
-      ],
-      [
-        28,
-        12,
-        0,
-        null
-      ],
-      [
-        30,
-        12,
-        0,
-        null
-      ],
-      [
-        33,
-        12,
-        0,
-        null
-      ],
-      [
-        35,
-        12,
-        0,
-        null
-      ],
-      [
-        38,
-        12,
-        0,
-        null
-      ],
-      [
-        40,
-        12,
-        0,
-        null
-      ],
-      [
-        43,
-        12,
-        0,
-        null
-      ],
-      [
         45,
+        12,
+        0,
+        null
+      ],
+      [
+        50,
+        12,
+        0,
+        null
+      ],
+      [
+        55,
+        12,
+        0,
+        null
+      ],
+      [
+        60,
+        12,
+        0,
+        null
+      ],
+      [
+        65,
+        12,
+        0,
+        null
+      ],
+      [
+        70,
+        12,
+        0,
+        null
+      ],
+      [
+        75,
+        12,
+        0,
+        null
+      ],
+      [
+        80,
+        12,
+        0,
+        null
+      ],
+      [
+        85,
+        12,
+        0,
+        null
+      ],
+      [
+        90,
         12,
         0,
         null
@@ -18537,8 +18513,8 @@
     "id": "bd_lash",
     "n": "Whip Pull",
     "name_th": "ฟาดแส้ดึง",
-    "d": "Crack a whip 320 long for 270% of ATK, pulling enemies in",
-    "desc_th": "ฟาดแส้ยาว 320 270% ของ ATK ดึงศัตรูเข้าหา",
+    "d": "Crack a whip 320 long for 540% of ATK, pulling enemies in",
+    "desc_th": "ฟาดแส้ยาว 320 540% ของ ATK ดึงศัตรูเข้าหา",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18559,31 +18535,31 @@
     ],
     "lvs": [
       [
-        163,
+        327,
         9,
         0,
         null
       ],
       [
-        190,
+        380,
         9,
         0,
         null
       ],
       [
-        217,
+        433,
         9,
         0,
         null
       ],
       [
-        243,
+        486,
         9,
         0,
         null
       ],
       [
-        270,
+        540,
         9,
         0,
         null
@@ -18594,8 +18570,8 @@
     "id": "bd_note",
     "n": "Bouncing Notes",
     "name_th": "โน้ตเด้ง",
-    "d": "The bouncing note shoots 2 more notes, 275% of ATK each",
-    "desc_th": "ยิงตัวโน้ตที่เด้งไปอีก 2 ตัว ตัวละ 275% ของ ATK",
+    "d": "The bouncing note shoots 2 more notes, 550% of ATK each",
+    "desc_th": "ยิงตัวโน้ตที่เด้งไปอีก 2 ตัว ตัวละ 550% ของ ATK",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18616,61 +18592,61 @@
     ],
     "lvs": [
       [
-        140,
+        280,
         9,
         0,
         null
       ],
       [
-        155,
+        310,
         9,
         0,
         null
       ],
       [
-        170,
+        340,
         9,
         0,
         null
       ],
       [
-        185,
+        370,
         9,
         0,
         null
       ],
       [
-        200,
+        400,
         9,
         0,
         null
       ],
       [
-        215,
+        430,
         9,
         0,
         null
       ],
       [
-        230,
+        460,
         9,
         0,
         null
       ],
       [
-        245,
+        490,
         9,
         0,
         null
       ],
       [
-        260,
+        520,
         9,
         0,
         null
       ],
       [
-        275,
+        550,
         9,
         0,
         null
@@ -18681,8 +18657,8 @@
     "id": "bd_noterain",
     "n": "Note Rain",
     "name_th": "ฝนโน้ต",
-    "d": "6 music notes fall on the circle, 120% of ATK each · Higher verses drop more (+2 per verse)",
-    "desc_th": "ตัวโน้ต 6 ตัวตกใส่วง ตัวละ 120% ของ ATK · ท่อนเพลงยิ่งสูงยิ่งตกเพิ่ม (+2 ต่อท่อน)",
+    "d": "6 music notes fall on the circle, 240% of ATK each · Higher verses drop more (+2 per verse)",
+    "desc_th": "ตัวโน้ต 6 ตัวตกใส่วง ตัวละ 240% ของ ATK · ท่อนเพลงยิ่งสูงยิ่งตกเพิ่ม (+2 ต่อท่อน)",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18703,49 +18679,7 @@
     ],
     "lvs": [
       [
-        48,
-        18,
-        0,
-        null
-      ],
-      [
-        56,
-        18,
-        0,
-        null
-      ],
-      [
-        64,
-        18,
-        0,
-        null
-      ],
-      [
-        72,
-        18,
-        0,
-        null
-      ],
-      [
-        80,
-        18,
-        0,
-        null
-      ],
-      [
-        88,
-        18,
-        0,
-        null
-      ],
-      [
         96,
-        18,
-        0,
-        null
-      ],
-      [
-        104,
         18,
         0,
         null
@@ -18757,7 +18691,49 @@
         null
       ],
       [
-        120,
+        128,
+        18,
+        0,
+        null
+      ],
+      [
+        144,
+        18,
+        0,
+        null
+      ],
+      [
+        160,
+        18,
+        0,
+        null
+      ],
+      [
+        176,
+        18,
+        0,
+        null
+      ],
+      [
+        192,
+        18,
+        0,
+        null
+      ],
+      [
+        208,
+        18,
+        0,
+        null
+      ],
+      [
+        224,
+        18,
+        0,
+        null
+      ],
+      [
+        240,
         18,
         0,
         null
@@ -18825,8 +18801,8 @@
     "id": "bd_festival",
     "n": "Campfire Jamboree",
     "name_th": "มหกรรมรอบกองไฟ",
-    "d": "Light a large campfire for 15 sec. Your songs are twice as strong while you stay near it, allies near it hit 25% harder, and enemies that approach take Burn at 11% of ATK per sec and sleep for 2 sec the first time",
-    "desc_th": "จุดกองไฟใหญ่ 15 วิ เพลงของเราแรงเป็นสองเท่าตอนอยู่ใกล้กองไฟ เพื่อนใกล้กองไฟตีแรงขึ้น 25% ศัตรูที่เข้าใกล้ติดเผาวิละ 11% ของ ATK และหลับ 2 วิครั้งแรก",
+    "d": "Light a large campfire for 15 sec. Your songs are twice as strong while you stay near it, allies near it hit 25% harder, and enemies that approach take Burn at 22% of ATK per sec and sleep for 2 sec the first time",
+    "desc_th": "จุดกองไฟใหญ่ 15 วิ เพลงของเราแรงเป็นสองเท่าตอนอยู่ใกล้กองไฟ เพื่อนใกล้กองไฟตีแรงขึ้น 25% ศัตรูที่เข้าใกล้ติดเผาวิละ 22% ของ ATK และหลับ 2 วิครั้งแรก",
     "job_id": "bard",
     "job_name": "Bard",
     "job_name_th": "นักกวี",
@@ -18851,31 +18827,31 @@
     ],
     "lvs": [
       [
-        6,
+        13,
         80,
         8,
         null
       ],
       [
-        8,
+        15,
         80,
         8,
         null
       ],
       [
-        9,
+        17,
         80,
         8,
         null
       ],
       [
-        10,
+        19,
         80,
         8,
         null
       ],
       [
-        11,
+        22,
         80,
         8,
         null

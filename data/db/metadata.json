@@ -3,10 +3,10 @@
   "wiki_version": 2,
   "season": "SS2 · v0.2",
   "s2_version": "v0.2 · Season 2 test · 6 Nov 2026",
-  "wiki_built_at": "2026-11-23T08:52:49.305Z",
-  "scraped_at": "2026-11-23T11:48:14.534112+00:00",
+  "wiki_built_at": "2026-11-26T18:06:59.246Z",
+  "scraped_at": "2026-11-28T11:40:31.689360+00:00",
   "counts": {
-    "items": 2130,
+    "items": 2135,
     "sets": 80,
     "boss_sets": 5,
     "monsters": 482,
@@ -15,11 +15,11 @@
     "regions": 5,
     "jobs": 46,
     "skills": 428,
-    "materials": 1530,
+    "materials": 1754,
     "cards": 338,
-    "drops_total": 4403,
+    "drops_total": 4398,
     "quests": 97,
-    "runes": 47,
+    "runes": 60,
     "relics": 10,
     "keystones": 4,
     "mounts": 6,
@@ -27,13 +27,13 @@
     "lore_families": 22,
     "smelt_recipes": 22,
     "pages": 19,
-    "th_data_entries": 10834,
-    "th_ui_entries": 2024
+    "th_data_entries": 11166,
+    "th_ui_entries": 2197
   },
   "db_files": [
     {
       "path": "data/db/items.json",
-      "bytes": 1594875
+      "bytes": 1596498
     },
     {
       "path": "data/db/sets.json",
@@ -45,11 +45,11 @@
     },
     {
       "path": "data/db/monsters.json",
-      "bytes": 923300
+      "bytes": 923052
     },
     {
       "path": "data/db/maps.json",
-      "bytes": 422555
+      "bytes": 422556
     },
     {
       "path": "data/db/regions.json",
@@ -57,19 +57,19 @@
     },
     {
       "path": "data/db/jobs.json",
-      "bytes": 854033
+      "bytes": 1073132
     },
     {
       "path": "data/db/skills.json",
-      "bytes": 655855
+      "bytes": 656158
     },
     {
       "path": "data/db/materials.json",
-      "bytes": 1152015
+      "bytes": 1288254
     },
     {
       "path": "data/db/drops.json",
-      "bytes": 2047345
+      "bytes": 2045112
     },
     {
       "path": "data/db/quests.json",
@@ -81,7 +81,7 @@
     },
     {
       "path": "data/db/runes_relics_keystones.json",
-      "bytes": 214442
+      "bytes": 239601
     },
     {
       "path": "data/db/monster_skills_lore.json",
@@ -97,23 +97,23 @@
     },
     {
       "path": "data/db/systems_season2.json",
-      "bytes": 116693
+      "bytes": 117688
     }
   ],
   "csv_files": [
     {
       "path": "data/csv/items.csv",
-      "bytes": 696342,
-      "rows": 2130
+      "bytes": 698412,
+      "rows": 2135
     },
     {
       "path": "data/csv/monsters.csv",
-      "bytes": 93557,
+      "bytes": 93570,
       "rows": 482
     },
     {
       "path": "data/csv/maps.csv",
-      "bytes": 38540,
+      "bytes": 38541,
       "rows": 176
     },
     {
@@ -123,18 +123,18 @@
     },
     {
       "path": "data/csv/skills.csv",
-      "bytes": 229220,
+      "bytes": 229789,
       "rows": 428
     },
     {
       "path": "data/csv/materials.csv",
-      "bytes": 691207,
-      "rows": 1530
+      "bytes": 804236,
+      "rows": 1754
     },
     {
       "path": "data/csv/drops.csv",
-      "bytes": 890106,
-      "rows": 4403
+      "bytes": 889343,
+      "rows": 4398
     },
     {
       "path": "data/csv/quests.csv",
@@ -143,8 +143,8 @@
     },
     {
       "path": "data/csv/runes.csv",
-      "bytes": 20216,
-      "rows": 47
+      "bytes": 27443,
+      "rows": 60
     },
     {
       "path": "data/csv/cards.csv",
@@ -156,27 +156,27 @@
     {
       "source": "data/wiki_hats128.webp",
       "path": "assets/atlas/wiki_hats128.webp",
-      "bytes": 1306404
+      "bytes": 1324150
     },
     {
       "source": "data/wiki_items.webp",
       "path": "assets/atlas/wiki_items.webp",
-      "bytes": 4457600
+      "bytes": 4467650
     },
     {
       "source": "data/wiki_jobs.webp",
       "path": "assets/atlas/wiki_jobs.webp",
-      "bytes": 367636
+      "bytes": 367402
     },
     {
       "source": "data/wiki_mats.webp",
       "path": "assets/atlas/wiki_mats.webp",
-      "bytes": 2286278
+      "bytes": 2599248
     },
     {
       "source": "data/wiki_mons.webp",
       "path": "assets/atlas/wiki_mons.webp",
-      "bytes": 2395918
+      "bytes": 2397034
     },
     {
       "source": "data/wiki_skills.webp",

@@ -45,7 +45,7 @@ bell3,Bell Tower F3,หอระฆัง ชั้น 3,Lv 96–98,dungeon,bell
 bell4,Bell Tower F4,หอระฆัง ชั้น 4,Lv 97–99,dungeon,bell3,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
 bell5,Bell Tower F5,หอระฆัง ชั้น 5,Lv 98–99,dungeon,bell4,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
 bell6,Bell Tower F6,หอระฆัง ชั้น 6,Lv 99–99,dungeon,bell5,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver
-bell7,Bell Tower F7 · Summit,หอระฆัง ชั้น 7 · ยอดหอ,Lv 99–99 · Boss Lv 99,dungeon,bell6,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver|hundred_string
+bell7,Bell Tower F7 · Summit,หอระฆัง ชั้น 7 · ยอดหอ,Lv 99–99 · Boss  Lv 99,dungeon,bell6,False,,,,,bell_puppet|hollow_bellringer|bomb_bell|bell_lead|bell_silver|hundred_string
 farm2,Abandoned Hillside Farm,ไร่ร้างหลังเขา,Lv 10–18,field,,False,woods,54.8,39.57,Way Down to the Pumpkin Farm|Collapsed Barn,potato_walker|field_mouse|bucket_scarecrow|angry_rooster|sunflower_bee|crow_red|harlock
 meadow2,Nightbloom Hill,เนินดอกไม้กลางคืน,Lv 14–22,field,,False,woods,26,39.57,Path Back to the Meadow|Hilltop Flower Arbor,seed_flower|firefly_healer|horn_rabbit|sleep_moth|hedgehog|boar_silver|selene
 marsh2,Brook Source,ต้นลำธาร,Lv 20–28,field,,False,woods,64.4,39.57,Riverside Mill,leap_trout|spit_frog|split_shroom|otter|kingfisher|turtle_jade|merrick

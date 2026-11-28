@@ -161,7 +161,6 @@ skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,it
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,item,qs_bones,Twin Bone Quarterstaff,ไม้พลองกระดูกคู่,0.25,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,item,ds_skeleton,Skeleton Soldier Twin Swords,ดาบคู่ทหารโครงกระดูก,0.25,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,item,wp_bonechain,Spine Whip,แส้กระดูกสันหลัง,0.25,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
-skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,item,buckler,Round Wooden Shield,โล่ไม้กลม,0.25,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,material,mat_old_bone,Old Bone,กระดูกเก่า,42.0,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,material,mat_vp_silver_leaf,Silver Leaf,ใบไม้เงิน,5.0,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
 skeleton,Skeleton Soldier,โครงกระดูกทหาร,75,False,material,mat_vp_wild_ginseng_root,Wild Ginseng Root,รากโสมป่า,0.1,canyon|graveyard|crypt1|crypt2|diggervillage|wreathfield|giantbones|goldsluice|dustgulch
@@ -272,7 +271,6 @@ crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,item,pp
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,item,top_of_hv_shell,Crab Shell Chestplate,เกราะอกกระดองปู,0.15,marsh|stiltvillage|beaverdam|reedmaze|eelhut
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,item,pants_of_hv_shell,Crab Shell Greaves,สนับขากระดองปู,0.15,marsh|stiltvillage|beaverdam|reedmaze|eelhut
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,item,acc_of_hv_shell,Crab Claw Bracelet,กำไลก้ามปู,0.05,marsh|stiltvillage|beaverdam|reedmaze|eelhut
-crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,item,buckler,Round Wooden Shield,โล่ไม้กลม,0.25,marsh|stiltvillage|beaverdam|reedmaze|eelhut
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,material,mat_crab_claw,Brook Crab Claw,ก้ามปูลำธาร,37.0,marsh|stiltvillage|beaverdam|reedmaze|eelhut
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,material,mat_vp_silver_leaf,Silver Leaf,ใบไม้เงิน,5.0,marsh|stiltvillage|beaverdam|reedmaze|eelhut
 crab,Bigclaw Brook Crab,ปูก้ามโตลำธาร,24,False,material,mat_vp_flower_pollen_dust,Flower Pollen Dust,ผงละอองดอกไม้,2.0,marsh|stiltvillage|beaverdam|reedmaze|eelhut
@@ -483,7 +481,7 @@ salamander,Salamander,ซาลาแมนเดอร์,84,False,material,mat
 salamander,Salamander,ซาลาแมนเดอร์,84,False,material,mat_vp_lava_orb,Lava Orb,ลูกแก้วลาวา,0.1,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
 salamander,Salamander,ซาลาแมนเดอร์,84,False,material,mat_vp_first_page_of_the_forbidden_book,First Page of the Forbidden Book,คัมภีร์ต้องห้ามหน้าแรก,0.01,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
 salamander,Salamander,ซาลาแมนเดอร์,84,False,material,mat_vp_cactus_spine,Cactus Spine,หนามกระบองเพชร,2.0,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
-salamander,Salamander,ซาลาแมนเดอร์,84,False,rune,burn,Burn Rune,รูนเผา,0.01,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
+salamander,Salamander,ซาลาแมนเดอร์,84,False,rune,minimeteor,Small Meteor Rune,รูนดาวตกเล็ก,0.01,volcano|lavavent1|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
 magma_golem,Lava Golem,โกเลมลาวา,89,False,item,gs_lava,Lava Greatsword,ดาบใหญ่ลาวา,0.06,volcano|lavavent2|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
 magma_golem,Lava Golem,โกเลมลาวา,89,False,item,ga_forge,Forge Great Axe,ขวานยักษ์เตาหลอม,0.06,volcano|lavavent2|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
 magma_golem,Lava Golem,โกเลมลาวา,89,False,item,hm_magmacore,Lava Golem Core Great Hammer,ค้อนยักษ์แกนโกเลมลาวา,0.25,volcano|lavavent2|obsidian|lavalake|smokevent|meteor4|meteor5|meteor6|meteor7
@@ -552,7 +550,7 @@ shadow_heron,Shadow Heron,นกกระสาเงา,88,False,item,sc_glacie
 shadow_heron,Shadow Heron,นกกระสาเงา,88,False,material,mat_heron_plume,Shadow Heron Tail Feather,ขนหางนกกระสาเงา,37.0,lake|floatvillage|willows
 shadow_heron,Shadow Heron,นกกระสาเงา,88,False,material,mat_vp_amber_with_mosquito,Amber with Mosquito,อำพันขังยุง,5.0,lake|floatvillage|willows
 shadow_heron,Shadow Heron,นกกระสาเงา,88,False,material,mat_vp_volcanic_glass_shard,Volcanic Glass Shard,เศษแก้วภูเขาไฟ,2.0,lake|floatvillage|willows
-shadow_heron,Shadow Heron,นกกระสาเงา,88,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,lake|floatvillage|willows
+shadow_heron,Shadow Heron,นกกระสาเงา,88,False,rune,icecrack,Cracked Crystal Rune,รูนผลึกร้าว,0.01,lake|floatvillage|willows
 raptor,Leaf Raptor,แร็พเตอร์ใบไม้,89,False,item,gs_raptortail,Raptor Tail Greatsword,ดาบใหญ่หางแร็พเตอร์,0.06,prime|tarpit|fernvale|hotsprings
 raptor,Leaf Raptor,แร็พเตอร์ใบไม้,89,False,item,sw_raptorclaw,Raptor Claw Sword,ดาบกรงเล็บแร็พเตอร์,0.12,prime|tarpit|fernvale|hotsprings
 raptor,Leaf Raptor,แร็พเตอร์ใบไม้,89,False,item,ln_raptor,Raptor Leaf Pike,หอกยาวใบไม้แร็พเตอร์,0.25,prime|tarpit|fernvale|hotsprings
@@ -1224,16 +1222,15 @@ leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,
 leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,material,mat_vp_golden_fluff,Golden Fluff,ขนนุ่มสีทอง,5.0,marsh2|logdrive|springcave
 leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,material,mat_vp_silver_marsh_pearl,Silver Marsh Pearl,ไข่มุกบึงสีเงิน,0.1,marsh2|logdrive|springcave
 leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,material,mat_vp_mother_tree_core,Mother Tree Core,แก่นต้นไม้แม่,0.01,marsh2|logdrive|springcave
-leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,marsh2|logdrive|springcave
+leap_trout,Leaping Trout,ปลาเทราต์กระโดด,25,False,rune,icecrack,Cracked Crystal Rune,รูนผลึกร้าว,0.01,marsh2|logdrive|springcave
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,item,xb_arbalest,Soldier Steel Crossbow,หน้าไม้เหล็กกล้าทหาร,0.25,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,item,ds_reed,Reed Twin Swords,ดาบคู่ต้นกก,0.12,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,item,bl_tincup,Tin Cup Spirit Bell,กระดิ่งวิญญาณถ้วยสังกะสี,0.25,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,item,bl_seashell,Spiral Shell Spirit Bell,กระดิ่งวิญญาณเปลือกหอยเกลียว,0.06,marsh3|cascades|behindfalls|fallstop
-shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,item,buckler,Round Wooden Shield,โล่ไม้กลม,0.25,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,material,mat_big_claw,Big Rock Crab Claw,ก้ามปูหินใหญ่,36.0,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,material,mat_vp_clear_ash_crystal,Clear Ash Crystal,ผลึกเถ้าใส,5.0,marsh3|cascades|behindfalls|fallstop
 shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,material,mat_vp_grave_moss,Grave Moss,ตะไคร่หลุมศพ,2.0,marsh3|cascades|behindfalls|fallstop
-shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,rune,apierce,Armor Pierce Rune,รูนเจาะเกราะ,0.01,marsh3|cascades|behindfalls|fallstop
+shield_crab,Big Shield Rock Crab,ปูหินโล่ใหญ่,34,False,rune,iceshatter,Deep Shatter Rune,รูนแตกลึก,0.01,marsh3|cascades|behindfalls|fallstop
 mud_eel,Mud Eel,ปลาไหลมุดโคลน,32,False,item,wp_stream,Stream Whip,แส้สายธาร,0.06,marsh3|cascades|behindfalls|fallstop
 mud_eel,Mud Eel,ปลาไหลมุดโคลน,32,False,item,ps_squirt,Slime Squirt Twin Pistols,ปืนพกคู่ฉีดน้ำสไลม์,0.06,marsh3|cascades|behindfalls|fallstop
 mud_eel,Mud Eel,ปลาไหลมุดโคลน,32,False,item,ps_pepperbox,Six-Barrel Twin Pistols,ปืนพกคู่หกลำกล้อง,0.25,marsh3|cascades|behindfalls|fallstop
@@ -2263,7 +2260,7 @@ coral_golem,Coral Golem,โกเลมปะการัง,92,False,material,m
 coral_golem,Coral Golem,โกเลมปะการัง,92,False,material,mat_vp_temple_gold_thread,Temple Gold Thread,เส้นด้ายทองวิหาร,5.0,reefs
 coral_golem,Coral Golem,โกเลมปะการัง,92,False,material,mat_vp_falling_star_orb,Falling Star Orb,ลูกแก้วดาวตก,0.1,reefs
 coral_golem,Coral Golem,โกเลมปะการัง,92,False,material,mat_vp_aurora_crystal,Aurora Crystal,ผลึกแสงเหนือ,2.0,reefs
-coral_golem,Coral Golem,โกเลมปะการัง,92,False,rune,apierce,Armor Pierce Rune,รูนเจาะเกราะ,0.01,reefs
+coral_golem,Coral Golem,โกเลมปะการัง,92,False,rune,icecrack,Cracked Crystal Rune,รูนผลึกร้าว,0.01,reefs
 bone_crab,Horned Skull Crab,ปูกะโหลกเขา,32,False,item,aw_bone_crab,Skull Crab Claw Axe,ขวานก้ามปูกะโหลก,0.25,giantbones
 bone_crab,Horned Skull Crab,ปูกะโหลกเขา,32,False,material,mat_skull_chip,Horn Bone Shard,เศษกระดูกเขาสัตว์,38.0,giantbones
 bone_crab,Horned Skull Crab,ปูกะโหลกเขา,32,False,material,mat_vp_old_silver_bell,Old Silver Bell,กระดิ่งเงินเก่า,5.0,giantbones
@@ -2318,7 +2315,7 @@ log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,material,mat_ba
 log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,material,mat_vp_old_silver_bell,Old Silver Bell,กระดิ่งเงินเก่า,5.0,logdrive
 log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,material,mat_vp_tiny_moonstone,Tiny Moonstone,หินพระจันทร์จิ๋ว,0.1,logdrive
 log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,material,mat_vp_golden_silkworm_thread,Golden Silkworm Thread,ใยไหมหนอนทอง,2.0,logdrive
-log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,logdrive
+log_lurker,Ambush Log,ท่อนซุงซุ่ม,28,False,rune,icelance,Glacier Lance Rune,รูนหอกเยือกแข็ง,0.01,logdrive
 log_lurker_blue,Ambush Log · Blue Moss Form,ท่อนซุงซุ่ม · ร่างตะไคร่ฟ้า,28,False,item,aw_log_lurker,Ambush Log Giant Axe,ขวานยักษ์ท่อนซุงซุ่ม,0.5,logdrive
 log_lurker_blue,Ambush Log · Blue Moss Form,ท่อนซุงซุ่ม · ร่างตะไคร่ฟ้า,28,False,material,mat_bark_jaw,Sawtooth Bark,เปลือกไม้ฟันเลื่อย,53.0,logdrive
 log_lurker_blue,Ambush Log · Blue Moss Form,ท่อนซุงซุ่ม · ร่างตะไคร่ฟ้า,28,False,material,mat_vp_raven_plume,Raven Plume,ขนกาดำ,2.0,logdrive
@@ -2519,7 +2516,7 @@ crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ�
 crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,material,mat_crayfish_claw,Giant Crayfish Claw,ก้ามกุ้งยักษ์,37.0,willows
 crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,material,mat_vp_volcanic_ash_pouch,Volcanic Ash Pouch,ขี้เถ้าภูเขาไฟ,5.0,willows
 crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,material,mat_vp_lava_rock_chip,Lava Rock Chip,เศษหินลาวา,2.0,willows
-crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,willows
+crayfish_brute,Giant Crayfish,กุ้งเครย์ฟิชยักษ์,88,False,rune,iceshatter,Deep Shatter Rune,รูนแตกลึก,0.01,willows
 crayfish_brute_red,Giant Crayfish · Boiled Red Form,กุ้งเครย์ฟิชยักษ์ · ร่างแดงสุก,88,False,item,aw_crayfish_brute,Crayfish Claw Katar,คาทาร์ก้ามกุ้งเครย์ฟิช,0.5,willows
 crayfish_brute_red,Giant Crayfish · Boiled Red Form,กุ้งเครย์ฟิชยักษ์ · ร่างแดงสุก,88,False,material,mat_crayfish_claw,Giant Crayfish Claw,ก้ามกุ้งยักษ์,60.0,willows
 crayfish_brute_red,Giant Crayfish · Boiled Red Form,กุ้งเครย์ฟิชยักษ์ · ร่างแดงสุก,88,False,material,mat_vp_tiny_dragon_scale,Tiny Dragon Scale,เกล็ดมังกรจิ๋ว,5.0,willows
@@ -2574,7 +2571,7 @@ brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์
 brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,material,mat_shrimp_whisker,Brine Shrimp Whisker,หนวดกุ้งน้ำเค็ม,39.0,saltflats
 brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,material,mat_vp_bone_flute,Bone Flute,ขลุ่ยกระดูก,0.1,saltflats
 brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,material,mat_vp_ghost_tear_drop,Ghost Tear Drop,น้ำตาผี,2.0,saltflats
-brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,saltflats
+brine_shrimp,Giant Brine Shrimp,กุ้งน้ำเค็มยักษ์,48,False,rune,icelance,Glacier Lance Rune,รูนหอกเยือกแข็ง,0.01,saltflats
 root_crawler,Blackroot Inchworm,ตัวคืบรากดำ,96,False,item,aw_root_crawler,Blackroot Inchworm Bow,ธนูตัวคืบรากดำ,0.06,blackroots|treeedge
 root_crawler,Blackroot Inchworm,ตัวคืบรากดำ,96,False,material,mat_black_root,Glowing Blackroot,รากดำเรืองแสง,33.0,blackroots|treeedge
 root_crawler,Blackroot Inchworm,ตัวคืบรากดำ,96,False,material,mat_vp_sky_serpent_scale,Sky Serpent Scale,เกล็ดงูฟ้า,2.0,blackroots|treeedge
@@ -2591,7 +2588,7 @@ kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,material,mat_
 kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,material,mat_vp_star_glass_powder,Star Glass Powder,ผงแก้วดาว,5.0,shipgrave
 kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,material,mat_vp_hourglass_sand,Hourglass Sand,ทรายนาฬิกาทราย,2.0,shipgrave
 kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,material,mat_vp_golden_griffin_wing,Golden Griffin Wing,ปีกกริฟฟินทอง,0.1,shipgrave
-kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,shipgrave
+kraken_arm,Kraken Tentacle,หนวดคราเคน,92,False,rune,iceshatter,Deep Shatter Rune,รูนแตกลึก,0.01,shipgrave
 kraken_arm_crimson,Kraken Tentacle · Deep Red Form,หนวดคราเคน · ร่างแดงเข้ม,92,False,item,aw_kraken_arm,Kraken Tentacle Bow,ธนูหนวดคราเคน,0.24,shipgrave
 kraken_arm_crimson,Kraken Tentacle · Deep Red Form,หนวดคราเคน · ร่างแดงเข้ม,92,False,material,mat_kraken_sucker,Giant Tentacle Sucker,ถ้วยดูดหนวดยักษ์,57.0,shipgrave
 kraken_arm_crimson,Kraken Tentacle · Deep Red Form,หนวดคราเคน · ร่างแดงเข้ม,92,False,material,mat_vp_stardust_vial,Stardust Vial,ฝุ่นดาว,5.0,shipgrave
@@ -2692,7 +2689,7 @@ frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,F
 frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,material,mat_vp_river_gold_sand,River Gold Sand,ทรายทองแม่น้ำ,5.0,icefall
 frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,material,mat_vp_ice_serpent_scale,Ice Serpent Scale,เกล็ดงูน้ำแข็ง,0.1,icefall
 frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,material,mat_vp_mountain_eagle_feather,Mountain Eagle Feather,ขนนกอินทรีภูเขา,2.0,icefall
-frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,icefall
+frost_sprite,Ice Flake Sprite,ภูตเกล็ดน้ำแข็ง,58,False,rune,wpierce,Ward Pierce Rune,รูนเจาะเวท,0.01,icefall
 stew_slime,Cold Soup Slime,สไลม์ซุปเย็นชืด,72,False,item,aw_stew_slime,Cold Bland Soup Rod,คทาซุปเย็นชืด,0.12,roadinn
 stew_slime,Cold Soup Slime,สไลม์ซุปเย็นชืด,72,False,item,staff_inga,Blackroot Ice Crystal Rod,คทาผลึกน้ำแข็งรากดำ,0.12,roadinn
 stew_slime,Cold Soup Slime,สไลม์ซุปเย็นชืด,72,False,material,mat_cold_stew,Cold Soup in a Bottle,ซุปเย็นชืดในขวด,41.0,roadinn
@@ -2740,7 +2737,7 @@ ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,mate
 ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,material,mat_vp_clear_holy_water,Clear Holy Water,น้ำมนต์ใส,5.0,ammonbeach
 ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,material,mat_vp_pure_silver_bell_clapper,Pure Silver Bell Clapper,ลิ้นระฆังเงินแท้,0.1,ammonbeach
 ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,material,mat_vp_sky_serpent_scale,Sky Serpent Scale,เกล็ดงูฟ้า,2.0,ammonbeach
-ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,ammonbeach
+ammonite,Crawling Ammonite,แอมโมไนต์คลาน,98,False,rune,iceshatter,Deep Shatter Rune,รูนแตกลึก,0.01,ammonbeach
 ammonite_violet,Crawling Ammonite · Purple Pattern Form,แอมโมไนต์คลาน · ร่างลายม่วง,98,False,item,aw_ammonite,Ammonite Spiral Rod,คทาเกลียวแอมโมไนต์,0.12,ammonbeach
 ammonite_violet,Crawling Ammonite · Purple Pattern Form,แอมโมไนต์คลาน · ร่างลายม่วง,98,False,material,mat_ammonite_pearl,Ammonite Spiral Pearl,มุกเกลียวแอมโมไนต์,54.0,ammonbeach
 ammonite_violet,Crawling Ammonite · Purple Pattern Form,แอมโมไนต์คลาน · ร่างลายม่วง,98,False,material,mat_vp_meteor_fragment,Meteor Fragment,เศษอุกกาบาต,2.0,ammonbeach
@@ -2771,7 +2768,7 @@ fog_hound,Mist Hound,หมาหมอก,92,False,material,mat_fog_fang,Mist F
 fog_hound,Mist Hound,หมาหมอก,92,False,material,mat_vp_clear_holy_water,Clear Holy Water,น้ำมนต์ใส,5.0,lighthouse
 fog_hound,Mist Hound,หมาหมอก,92,False,material,mat_vp_falling_star_orb,Falling Star Orb,ลูกแก้วดาวตก,0.1,lighthouse
 fog_hound,Mist Hound,หมาหมอก,92,False,material,mat_vp_aurora_crystal,Aurora Crystal,ผลึกแสงเหนือ,2.0,lighthouse
-fog_hound,Mist Hound,หมาหมอก,92,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,lighthouse
+fog_hound,Mist Hound,หมาหมอก,92,False,rune,icestorm,Raging Blizzard Rune,รูนพายุคลั่ง,0.01,lighthouse
 fog_hound_amber,Mist Hound · Amber Form,หมาหมอก · ร่างอำพัน,92,False,item,aw_fog_hound,Mist Hound Orb,ออร์บหมาหมอก,0.5,lighthouse
 fog_hound_amber,Mist Hound · Amber Form,หมาหมอก · ร่างอำพัน,92,False,material,mat_fog_fang,Mist Fang,เขี้ยวหมอก,57.0,lighthouse
 fog_hound_amber,Mist Hound · Amber Form,หมาหมอก · ร่างอำพัน,92,False,material,mat_vp_temple_gold_thread,Temple Gold Thread,เส้นด้ายทองวิหาร,5.0,lighthouse
@@ -2842,7 +2839,7 @@ lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,mate
 lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,material,mat_vp_pure_venom_dew,Pure Venom Dew,น้ำค้างพิษบริสุทธิ์,5.0,cagetrees
 lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,material,mat_vp_mountain_stone_core,Mountain Stone Core,แก่นหินภูเขา,2.0,cagetrees
 lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,material,mat_vp_storm_core,Storm Core,แก่นพายุ,0.01,cagetrees
-lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,cagetrees
+lure_angler,Bog Anglerfish,ปลาตกเบ็ดหนอง,62,False,rune,icestorm,Raging Blizzard Rune,รูนพายุคลั่ง,0.01,cagetrees
 lure_angler_violet,Bog Anglerfish · Purple Glow Form,ปลาตกเบ็ดหนอง · ร่างแสงม่วง,62,False,item,aw_lure_angler,Angler Lure Lantern,ตะเกียงเหยื่อปลาตกเบ็ด,0.24,cagetrees
 lure_angler_violet,Bog Anglerfish · Purple Glow Form,ปลาตกเบ็ดหนอง · ร่างแสงม่วง,62,False,material,mat_angler_lure,Anglerfish Lantern,ตะเกียงปลาตกเบ็ด,57.0,cagetrees
 lure_angler_violet,Bog Anglerfish · Purple Glow Form,ปลาตกเบ็ดหนอง · ร่างแสงม่วง,62,False,material,mat_vp_silver_snowflake,Silver Snowflake,เกล็ดหิมะเงิน,5.0,cagetrees
@@ -2909,14 +2906,12 @@ mirage_wisp_blue,Mirage Sprite · Blue Mirage Form,ภูตภาพลวง�
 mirage_wisp_blue,Mirage Sprite · Blue Mirage Form,ภูตภาพลวงตา · ร่างภาพลวงฟ้า,80,False,material,mat_vp_red_desert_sand,Red Desert Sand,ทรายแดงทะเลทราย,2.0,dryoasis
 mirage_wisp_blue,Mirage Sprite · Blue Mirage Form,ภูตภาพลวงตา · ร่างภาพลวงฟ้า,80,False,rune,execute,Execute Rune,รูนประหาร,0.25,dryoasis
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,item,aw_rusty_squire,Rusty Gauntlet Knuckles,สนับมือถุงมือเกราะสนิม,0.25,battlefield
-rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,item,buckler,Round Wooden Shield,โล่ไม้กลม,0.25,battlefield
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,material,mat_rusty_badge,Rusted Rank Badge,ป้ายยศขึ้นสนิม,38.0,battlefield
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,material,mat_vp_glowing_honey_jar,Glowing Honey Jar,น้ำผึ้งเรืองแสง,5.0,battlefield
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,material,mat_vp_carved_wooden_doll,Carved Wooden Doll,ตุ๊กตาไม้แกะ,0.1,battlefield
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,material,mat_vp_flower_pollen_dust,Flower Pollen Dust,ผงละอองดอกไม้,2.0,battlefield
 rusty_squire,Rusty Armor Soldier,ทหารเกราะสนิม,22,False,rune,curse,Curse Rune,รูนสาป,0.01,battlefield
 rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,item,aw_rusty_squire,Rusty Gauntlet Knuckles,สนับมือถุงมือเกราะสนิม,0.5,battlefield
-rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,item,buckler,Round Wooden Shield,โล่ไม้กลม,0.5,battlefield
 rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,material,mat_rusty_badge,Rusted Rank Badge,ป้ายยศขึ้นสนิม,61.0,battlefield
 rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,material,mat_vp_golden_wild_seed,Golden Wild Seed,เมล็ดทองป่า,5.0,battlefield
 rusty_squire_gold,Rusty Armor Soldier · Gold Armor Form,ทหารเกราะสนิม · ร่างเกราะทอง,22,False,material,mat_vp_silver_marsh_pearl,Silver Marsh Pearl,ไข่มุกบึงสีเงิน,0.1,battlefield
@@ -2947,7 +2942,7 @@ snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,material,
 snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,material,mat_vp_raw_star_ore_crust,Raw Star Ore Crust,เปลือกแร่ดาวดิบ,5.0,avalanche
 snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,material,mat_vp_north_star_compass,North Star Compass,เข็มทิศดาวเหนือ,0.01,avalanche
 snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,material,mat_vp_sulfur_powder,Sulfur Powder,ผงกำมะถัน,2.0,avalanche
-snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,avalanche
+snowball_yeti,Snowball Yeti,เยติลูกหิมะ,58,False,rune,icelance,Glacier Lance Rune,รูนหอกเยือกแข็ง,0.01,avalanche
 pickpocket_cat,Pickpocket Cat,แมวล้วงกระเป๋า,82,False,item,aw_pickpocket_cat,Pickpocket Cat Paw Knuckles,สนับมืออุ้งแมวล้วงกระเป๋า,0.06,nightmarket
 pickpocket_cat,Pickpocket Cat,แมวล้วงกระเป๋า,82,False,material,mat_stolen_button,Stolen Button,กระดุมที่ถูกขโมย,37.0,nightmarket
 pickpocket_cat,Pickpocket Cat,แมวล้วงกระเป๋า,82,False,material,mat_vp_white_shark_tooth,White Shark Tooth,ฟันฉลามขาว,5.0,nightmarket
@@ -3024,7 +3019,7 @@ reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,mate
 reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,material,mat_vp_glowing_honey_jar,Glowing Honey Jar,น้ำผึ้งเรืองแสง,5.0,reedmaze
 reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,material,mat_vp_golden_honey_pot,Golden Honey Pot,กระปุกน้ำผึ้งทอง,0.1,reedmaze
 reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,material,mat_vp_butterfly_wing_dust,Butterfly Wing Dust,ผงปีกผีเสื้อ,2.0,reedmaze
-reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,rune,frostbite,Frost Rune,รูนฟรอสต์,0.01,reedmaze
+reed_muskrat,Water Rat Leader,หนูน้ำจ่าฝูง,24,False,rune,icelance,Glacier Lance Rune,รูนหอกเยือกแข็ง,0.01,reedmaze
 reed_muskrat_blue,Water Rat Leader · Indigo Fur Form,หนูน้ำจ่าฝูง · ร่างขนคราม,24,False,item,aw_reed_muskrat,Water Rat Chief Pole,ไม้พลองหัวหน้าหนูน้ำ,0.06,reedmaze
 reed_muskrat_blue,Water Rat Leader · Indigo Fur Form,หนูน้ำจ่าฝูง · ร่างขนคราม,24,False,material,mat_reed_crown,Reed Crown,มงกุฎต้นกก,61.0,reedmaze
 reed_muskrat_blue,Water Rat Leader · Indigo Fur Form,หนูน้ำจ่าฝูง · ร่างขนคราม,24,False,material,mat_vp_pearl_shell,Pearl Shell,เปลือกหอยมุก,5.0,reedmaze
