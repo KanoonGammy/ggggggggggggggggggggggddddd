@@ -171,6 +171,16 @@
     return `<div class="name-main">${esc(tName)}</div>${sub ? `<div class="name-sub">${esc(sub)}</div>` : ''}`;
   }
 
+  // ------------------------------------------------------------------ NEW / UPDATED badges (data/new_ids.js)
+  const NEW_RAW = window.NEW_IDS || {};
+  const NEW_SET = {};
+  for (const k of ['items', 'materials', 'monsters', 'maps', 'jobs', 'quests', 'sets', 'skills', 'runes', 'cards', 'updatedMonsters']) {
+    NEW_SET[k] = new Set(NEW_RAW[k] || []);
+  }
+  const isNew = (kind, id) => !!(NEW_SET[kind] && NEW_SET[kind].has(id));
+  const newTag = (kind, id) => (isNew(kind, id) ? '<span class="new-badge" title="New in the latest update">NEW</span>' : '');
+  const updTag = (id) => (isNew('updatedMonsters', id) ? '<span class="new-badge new-badge--upd" title="Drop table changed in the latest update">UPDATED</span>' : '');
+
   // ------------------------------------------------------------------ Color Palettes
   const EL_COLOR = {
     neutral: '#8d8578', water: '#2f86e8', earth: '#a8692c', fire: '#ea5a24',
@@ -263,16 +273,26 @@
   const RUNE_CFG = S2.runes || {};
   const RUNES = RUNE_CFG.list || {};
   const GUN_DROP = RUNE_CFG.gunDrop || {};
+  const FIRE_DROP = RUNE_CFG.fireDrop || {};
+  const LOW_DROP = RUNE_CFG.lowDrop || {};
   const SPELL_CFG = RUNE_CFG.spell || null;
 
+  // Dedicated per-rune drop tables (they replace the monster's own single rune roll)
+  const EXTRA_DROP_TABLES = [
+    { src: 'gun', table: GUN_DROP },
+    { src: 'fire', table: FIRE_DROP },
+    { src: 'low', table: LOW_DROP }
+  ];
   const GUN_DROP_MON_KEYS = new Set();
   const GUN_DROP_BY_MON = {};
-  for (const [rid, rows] of Object.entries(GUN_DROP)) {
-    for (const [mid, frac] of (rows || [])) {
-      const f = Number(frac || 0);
-      if (!(f > 0)) continue;
-      GUN_DROP_MON_KEYS.add(`${rid}|${mid}`);
-      (GUN_DROP_BY_MON[mid] = GUN_DROP_BY_MON[mid] || []).push({ rid, ratePct: f * 100 });
+  for (const { table } of EXTRA_DROP_TABLES) {
+    for (const [rid, rows] of Object.entries(table)) {
+      for (const [mid, frac] of (rows || [])) {
+        const f = Number(frac || 0);
+        if (!(f > 0)) continue;
+        GUN_DROP_MON_KEYS.add(`${rid}|${mid}`);
+        (GUN_DROP_BY_MON[mid] = GUN_DROP_BY_MON[mid] || []).push({ rid, ratePct: f * 100 });
+      }
     }
   }
   for (const rows of Object.values(GUN_DROP_BY_MON)) {
@@ -478,28 +498,30 @@
     m._evPer1kHp = m.hp > 0 ? (evSum / m.hp) * 1000 : 0;
   }
 
-  // Index Gun Runes (W.s2.runes.gunDrop)
-  for (const [rid, rows] of Object.entries(GUN_DROP)) {
-    const rObj = RUNES[rid];
-    const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
-    for (const [mid, fracRaw] of (rows || [])) {
-      const frac = Number(fracRaw || 0);
-      const m = MON[mid];
-      if (!m || !(frac > 0)) continue;
-      const ratePct = frac * 100;
-      (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct, source: 'gun', minLv: 0 });
-      const ev = price != null ? price * frac : null;
-      FLAT_DROPS.push({
-        mon: m,
-        dtype: 'rune',
-        targetId: rid,
-        targetName: rObj ? rObj.n : rid,
-        ratePct,
-        price,
-        ev,
-        evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
-        maps: (m.maps || []).filter(Boolean)
-      });
+  // Index dedicated rune drop tables: gun (scorpions), fire (salamander), low-HP blood runes (bats/imps/bosses)
+  for (const { src, table } of EXTRA_DROP_TABLES) {
+    for (const [rid, rows] of Object.entries(table)) {
+      const rObj = RUNES[rid];
+      const price = rObj && Array.isArray(rObj.price) ? Number(rObj.price[0] ?? 0) : null;
+      for (const [mid, fracRaw] of (rows || [])) {
+        const frac = Number(fracRaw || 0);
+        const m = MON[mid];
+        if (!m || !(frac > 0)) continue;
+        const ratePct = frac * 100;
+        (RUNE_DROPPERS[rid] = RUNE_DROPPERS[rid] || []).push({ mon: m, ratePct, source: src, minLv: 0 });
+        const ev = price != null ? price * frac : null;
+        FLAT_DROPS.push({
+          mon: m,
+          dtype: 'rune',
+          targetId: rid,
+          targetName: rObj ? rObj.n : rid,
+          ratePct,
+          price,
+          ev,
+          evPer1kHp: ev != null && m.hp > 0 ? (ev / m.hp) * 1000 : null,
+          maps: (m.maps || []).filter(Boolean)
+        });
+      }
     }
   }
 
@@ -1265,6 +1287,55 @@
     </div>`;
   }
 
+  // ------------------------------------------------------------------ What's New panel (from data/new_ids.js)
+  function buildWhatsNew() {
+    const n = NEW_RAW;
+    const runes = (n.runes || []).filter((id) => RUNES[id]);
+    const items = (n.items || []).filter((id) => IT[id]);
+    const mats = (n.materials || []);
+    const tierMats = mats.filter((id) => /^bl_rune_/.test(id));
+    const otherMats = mats.filter((id) => !/^bl_rune_/.test(id) && MAT[id]);
+    const ticketMats = otherMats.filter((id) => /^tk_/.test(id));
+    const fashionMats = otherMats.filter((id) => /^fc_/.test(id));
+    const restMats = otherMats.filter((id) => !/^tk_|^fc_/.test(id));
+    const upd = (n.updatedMonsters || []).filter((id) => MON[id]);
+    const total = runes.length + items.length + otherMats.length + upd.length + (n.monsters || []).length + (n.maps || []).length + (n.skills || []).length + (n.quests || []).length + (n.cards || []).length;
+    if (!total) return '';
+
+    const chip = (kind, id, icon, label) => `<button type="button" class="chip-link" data-open="${kind}" data-id="${esc(id)}">${icon}<span>${esc(label)}</span><span class="new-badge">NEW</span></button>`;
+    const sect = (title, body) => body ? `<div style="margin-top:12px"><div style="font-size:12.5px;font-weight:700;color:var(--text-1);margin-bottom:6px">${title}</div><div style="display:flex;flex-wrap:wrap;gap:6px">${body}</div></div>` : '';
+    const noteLine = (txt) => `<span class="muted" style="font-size:12.5px">${txt}</span>`;
+
+    const runeChips = runes.map((id) => chip('rune', id, atlasImg('mats', `bl_rune_${id}_1`, 24), tr(RUNES[id].n))).join('');
+    const itemChips = items.map((id) => chip('item', id, itemSprite(IT[id], 24), tr(IT[id].n))).join('');
+    const matChips = restMats.slice(0, 24).map((id) => chip('mat', id, atlasImg('mats', id, 22), tr(MAT[id].n))).join('');
+    const updChips = upd.slice(0, 16).map((id) => `<button type="button" class="chip-link" data-open="monster" data-id="${esc(id)}">${monSprite(MON[id], 22)}<span>${esc(tr(MON[id].n))}</span><span class="new-badge new-badge--upd">UPDATED</span></button>`).join('');
+    const moreUpd = upd.length > 16 ? noteLine(`+${upd.length - 16} ${L('ตัวอื่น (ดูป้าย UPDATED ในหน้ามอนสเตอร์)', 'more (see UPDATED tags on the Monsters page)')}`) : '';
+
+    const extras = [];
+    if (ticketMats.length) extras.push(`🎫 ${ticketMats.length} ${L('ตั๋ว AUTO / การ์ดแคมป์ / สัตว์เลี้ยง', 'AUTO / Campfire-Card / Pet tickets')}`);
+    if (fashionMats.length) extras.push(`👗 ${fashionMats.length} ${L('วัตถุดิบแฟชั่น (หมวก / ชุด)', 'fashion materials (hats / robes)')}`);
+    if (tierMats.length) extras.push(`🔮 ${tierMats.length} ${L('ชิ้นรูนขั้น I–III', 'rune tier items I–III')}`);
+
+    return `
+      <section class="panel" style="margin-bottom:16px;border-color:rgba(245,185,66,0.45)">
+        <h2 class="panel__title">
+          <span>🆕 ${L('ของใหม่ในอัปเดตล่าสุด', "What's New in the Latest Update")}</span>
+          <span class="muted" style="font-size:12px">${esc(String(n.at || ''))} · ${L('เทียบกับ', 'vs')} <code>${esc(String(n.since || ''))}</code></span>
+        </h2>
+        <div style="font-size:12.5px;color:var(--text-1);display:flex;gap:14px;flex-wrap:wrap">
+          <span>🔮 <strong>${runes.length}</strong> ${L('รูนใหม่', 'new runes')}</span>
+          <span>⚔️ <strong>${items.length}</strong> ${L('ไอเทมใหม่', 'new items')}</span>
+          <span>📦 <strong>${mats.length}</strong> ${L('วัตถุดิบใหม่', 'new materials')}</span>
+          <span>🔄 <strong>${upd.length}</strong> ${L('มอนสเตอร์ที่ตารางดรอปเปลี่ยน', 'monsters with changed drops')}</span>
+        </div>
+        ${sect(`🔮 ${L('รูนใหม่', 'New Runes')} (${runes.length})`, runeChips)}
+        ${sect(`⚔️ ${L('ไอเทมใหม่', 'New Items')} (${items.length})`, itemChips)}
+        ${sect(`📦 ${L('วัตถุดิบ / ไอเทมอื่นๆ ใหม่', 'Other New Materials')}`, matChips + (extras.length ? noteLine(extras.join(' · ')) : ''))}
+        ${sect(`🔄 ${L('มอนสเตอร์ที่ดรอปเปลี่ยน', 'Monsters with Changed Drops')} (${upd.length})`, updChips + moreUpd)}
+      </section>`;
+  }
+
   // ------------------------------------------------------------------ VIEW 1: OVERVIEW
   function renderOverview() {
     const mons = W.monsters || [];
@@ -1356,6 +1427,8 @@
             <div class="kpi-card__sub">${esc(k.sub)}</div>
           </div>`).join('')}
       </div>
+
+      ${buildWhatsNew()}
 
       <div class="grid-2">
         <section class="panel">
@@ -1627,7 +1700,7 @@
               metaHtml = `${(x.prices || []).join('/')}`;
             }
             return `<tr>
-              <td><div class="name-cell" ${openAttr}>${icon}<div>${nameHtml(x.name)}</div></div></td>
+              <td><div class="name-cell" ${openAttr}>${icon}<div>${nameHtml(x.name)}${newTag(x.openKind === 'item' ? 'items' : x.openKind === 'rune' ? 'runes' : 'materials', x.id)}</div></div></td>
               <td>${pill(catLabel[x.cat] || x.cat, catColor[x.cat] || '#8a8499')}</td>
               <td class="num">${lvRange ? esc(lvRange.label) : (x.lv ?? '–')}</td>
               <td>${srcHtml}</td>
@@ -1959,7 +2032,7 @@
                   ${icon}
                   <div>
                     ${nameHtml(d.targetName)}
-                    <div style="margin-top:2px">${sellNote}</div>
+                    <div style="margin-top:2px">${newTag(isRune ? 'runes' : 'materials', d.targetId)}${sellNote}</div>
                   </div>
                 </div>
               </td>
@@ -2383,7 +2456,7 @@
         <tbody>
           ${slice.map((m) => `
             <tr data-open="monster" data-id="${esc(m.id)}">
-              <td><div class="name-cell">${monSprite(m, 40)}<div>${nameHtml(m.n)}${m.boss ? pill('BOSS', '#f25c69') : ''}${m.story ? pill('STORY', '#3f95ff') : ''}</div></div></td>
+              <td><div class="name-cell">${monSprite(m, 40)}<div>${nameHtml(m.n)}${m.boss ? pill('BOSS', '#f25c69') : ''}${m.story ? pill('STORY', '#3f95ff') : ''}${newTag('monsters', m.id)}${updTag(m.id)}</div></div></td>
               <td class="num">${esc(getDropLvRange(m, m.maps, '', minLv, maxLv).label)}</td>
               <td>${elPill(m.el)}</td>
               <td>
@@ -2517,7 +2590,7 @@
             const droppers = ITEM_DROPPERS[it.id] || [];
             const stats = itemStatsList(it);
             return `<tr data-open="item" data-id="${esc(it.id)}">
-              <td><div class="name-cell"><span class="sprite-box">${itemSprite(it, 36)}</span><div>${nameHtml(it.n)}</div></div></td>
+              <td><div class="name-cell"><span class="sprite-box">${itemSprite(it, 36)}</span><div>${nameHtml(it.n)}${newTag('items', it.id)}</div></div></td>
               <td>
                 <div style="display:flex;gap:4px;flex-wrap:wrap">
                   ${pill(tr(it.s), '#6e6a86')}
@@ -3038,9 +3111,9 @@
             const lvRange = getDropLvRange(d.mon, d.maps, st.map, minLv, maxLv);
             const mapChips = renderMapLvChips(lvRange.entries, 2);
             return `<tr>
-              <td><div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">${icon}<div>${nameHtml(d.targetName)}</div></div></td>
+              <td><div class="name-cell" style="cursor:pointer" data-open="${openKind}" data-id="${esc(d.targetId)}">${icon}<div>${nameHtml(d.targetName)}${newTag(d.dtype === 'item' ? 'items' : d.dtype === 'rune' ? 'runes' : d.dtype === 'card' ? 'cards' : 'materials', d.targetId)}</div></div></td>
               <td>${pill(d.dtype.toUpperCase(), typeColor)}</td>
-              <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''} ${elIcon(d.mon.el, 13)}</div></div></td>
+              <td><div class="name-cell" style="cursor:pointer" data-open="monster" data-id="${esc(d.mon.id)}">${monSprite(d.mon, 32)}<div>${nameHtml(d.mon.n)}${d.mon.boss ? pill('BOSS', '#f25c69') : ''}${updTag(d.mon.id)} ${elIcon(d.mon.el, 13)}</div></div></td>
               <td class="num">${esc(lvRange.label)}</td>
               <td><div style="display:flex;gap:4px;flex-wrap:wrap">${mapChips}</div></td>
               <td class="num" style="text-align:right">${fmtCoin(d.price)}</td>
@@ -3135,7 +3208,7 @@
         </tr></thead>
         <tbody>
           ${slice.map((m) => `<tr data-open="mat" data-id="${esc(m.id)}">
-            <td><div class="name-cell"><span class="sprite-box">${atlasImg('mats', m.id, 32)}</span><div>${nameHtml(m.n)}</div></div></td>
+            <td><div class="name-cell"><span class="sprite-box">${atlasImg('mats', m.id, 32)}</span><div>${nameHtml(m.n)}${newTag('materials', m.id)}</div></div></td>
             <td><div style="display:flex;gap:4px">${m.rare ? pill('RARE', '#f5b942') : ''}${m.life ? pill('LIFE', '#38c97a') : ''}${!m.rare && !m.life ? '<span class="muted">Common</span>' : ''}</div></td>
             <td class="num" style="text-align:right;color:var(--gold);font-weight:700">${fmtCoin(m.p)}</td>
             <td class="muted">${esc(tr(m.from || '–'))}</td>
@@ -3311,7 +3384,7 @@
             return `<article class="entity-card" data-open="rune" data-id="${esc(r.id)}">
               <div class="entity-card__head">
                 ${atlasImg('mats', `bl_rune_${r.id}_1`, 38)}
-                <div style="flex:1">${nameHtml(r.n)}</div>
+                <div style="flex:1">${nameHtml(r.n)}${newTag('runes', r.id)}</div>
                 <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
                   ${pill(r.kind || 'rune', '#9a5cf0')}
                   ${r.on ? pill(r.on, '#3f95ff') : ''}
@@ -4242,6 +4315,8 @@
       const realMapCount = allGroups.filter((g) => g.mapId !== '__none__').length;
       const spellEls = SPELL_ELS_BY_RUNE[id] || [];
       const isGun = !!GUN_DROP[id];
+      const isFire = !!FIRE_DROP[id];
+      const isLow = !!LOW_DROP[id];
       const spellMinLv = Number((SPELL_CFG && SPELL_CFG.lv) || 70);
       const spellRatePct = Number((SPELL_CFG && SPELL_CFG.rate) || 0.00002) * 100;
       const spellElLabels = spellEls.map((el) => tr((W.elements && W.elements[el]) || el)).join(' / ');
@@ -4255,6 +4330,16 @@
               `📖 กติการูนปืน: ดรอปจากตระกูลแมงป่อง (แมงป่องแดง / แมงป่องยิงพิษ) แทนรูนเจาะ (อัตรารวม 0.01% ต่อตัว แบ่งสุ่มตามแต่ละรูนปืน)`,
               `📖 Gun Rune Rule: Drops from Red Scorpion / Venom-Shot Scorpion in place of pierce runes (0.01% combined gun-rune roll split across eligible gun runes).`
             )
+          : isFire
+          ? L(
+              `📖 กติการูนไฟ: ดรอปจากซาลาแมนเดอร์ (Salamander) โดยเฉพาะ อัตราราว 0.0025% ต่อตัว ต่อรูน`,
+              `📖 Fire Rune Rule: Drops only from the Salamander, about 0.0025% a kill per rune.`
+            )
+          : isLow
+          ? L(
+              `📖 กติการูนเลือดต่ำ: ดรอปจากค้างคาว/อิมป์/ปลิง/หนอนรากดำ (0.002% – 0.05%) และบอส Bat King / Baphomet (0.8%) ตามตารางด้านล่าง`,
+              `📖 Low-HP Blood Rune Rule: Drops from the bat / imp / leech / blackroot-worm family (0.002% – 0.05%) and the Bat King / Baphomet bosses (0.8%), as listed below.`
+            )
           : L(
               `📖 กติการูนทั่วไป: ดรอปขั้น I จากมอนสเตอร์ในแผนที่ด้านล่าง (รวม ${RUNE_CFG.merge || 3} ชิ้นเป็นขั้นถัดไปฟรี I → II → III ที่แท็บรูนของป๋าหมูหริ่ง)`,
               `📖 Standard Drop Rule: Drops at Tier I from the monsters grouped below (merge ${RUNE_CFG.merge || 3} of a tier into the next for free at Papa Moo's Runes tab).`
@@ -4265,7 +4350,7 @@
             ${[1, 2, 3].map((tier) => atlasImg('mats', `bl_rune_${id}_${tier}`, tier === 3 ? 60 : tier === 2 ? 52 : 44)).join('')}
           </div>
           <div style="flex:1">
-            <h2>${esc(tr(r.n))}</h2>
+            <h2>${esc(tr(r.n))}${newTag('runes', id)}</h2>
             <div class="muted">${esc(r.n)} · <code>${esc(id)}</code></div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
               ${pill(r.kind || 'rune', '#9a5cf0')}
@@ -4336,7 +4421,9 @@
         const n = x.n || x.t || x.cardName || x.name || '';
         const hay = x._q || biText(x.id, n);
         if (matchesQuery(hay, q)) {
-          hits.push({ kind, id: x.id, label, title: tr(n), sub: getSub(x), icon: spriteFn(x) });
+          const newSetKey = { item: 'items', mat: 'materials', rune: 'runes', monster: 'monsters', map: 'maps', job: 'jobs', skill: 'skills', quest: 'quests', card: 'cards', set: 'sets' }[kind];
+          const flag = newSetKey && isNew(newSetKey, x.id) ? '🆕 ' : '';
+          hits.push({ kind, id: x.id, label: flag + label, title: tr(n), sub: getSub(x), icon: spriteFn(x) });
           catCount++;
         }
       }

@@ -66,3 +66,16 @@ python scraper/scrape_nightcamp.py
 ```
 
 สคริปต์จะดึง `data/wiki_en.js`, `data/i18n_*.js` (TH/JA/VI/ID/ZH), Sprite Atlases (`assets/atlas/*.webp`), ไอคอนธาตุ และสร้างไฟล์ใน `data/raw/`, `data/db/` และ `data/csv/` ใหม่ทั้งหมด
+
+---
+
+## 🆕 ป้าย NEW / UPDATED (Update Badges)
+
+หลังสเครปข้อมูลใหม่ (python scraper/scrape_nightcamp.py) และ **ก่อน commit** ให้รัน:
+
+```bash
+node scraper/mark_new.js          # เทียบกับ commit ล่าสุด (HEAD)
+node scraper/mark_new.js 04bf8dc  # หรือเทียบกับ commit / tag ที่ต้องการ
+```
+
+สคริปต์จะสร้าง data/new_ids.js เพื่อให้ Dashboard แสดงป้าย **NEW** (ไอเทม วัตถุดิบ รูนใหม่) และ **UPDATED** (มอนสเตอร์ที่ตารางดรอปเปลี่ยน) พร้อมแผง "ของใหม่ในอัปเดตล่าสุด" ในหน้า Overview
