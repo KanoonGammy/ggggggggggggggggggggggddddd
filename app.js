@@ -3906,7 +3906,45 @@
     }).join('')}</div>`;
   }
 
-  function openModal(kind, id) {
+  // Modal navigation history: every modal opened from inside another one is stacked, so "Back" returns to the previous one
+  const modalStack = [];
+
+  function modalLabel(entry) {
+    if (!entry) return '';
+    const { kind, id } = entry;
+    const obj = kind === 'monster' ? MON[id]
+      : kind === 'item' ? IT[id]
+      : kind === 'mat' ? MAT[id]
+      : kind === 'map' ? MAP[id]
+      : kind === 'rune' ? RUNES[id]
+      : kind === 'job' ? JOB[id]
+      : kind === 'skill' ? SKILL_MAP[id]
+      : kind === 'card' ? CARDS_LIST.find((c) => c.id === id)
+      : null;
+    const name = obj ? (obj.n || obj.cardName || id) : id;
+    return tr(name);
+  }
+
+  function updateModalBack() {
+    const btn = $('#modalBack');
+    if (!btn) return;
+    const prev = modalStack.length > 1 ? modalStack[modalStack.length - 2] : null;
+    btn.hidden = !prev;
+    if (prev) {
+      const label = modalLabel(prev);
+      btn.innerHTML = `<span class="modal__back-arrow">◀</span><span class="modal__back-text">${esc(L('ย้อนกลับ', 'Back'))}</span>${label ? `<span class="modal__back-prev">${esc(label)}</span>` : ''}`;
+      btn.title = `${L('ย้อนกลับไปที่', 'Back to')} ${label}`;
+    }
+  }
+
+  function modalBack() {
+    if (modalStack.length < 2) return;
+    modalStack.pop();
+    const prev = modalStack[modalStack.length - 1];
+    openModal(prev.kind, prev.id, { fromBack: true });
+  }
+
+  function openModal(kind, id, opts = {}) {
     let html = '';
     if (kind === 'monster') {
       const m = MON[id];
@@ -4397,10 +4435,20 @@
         });
       });
     }
+    if (!opts.fromBack) {
+      if ($('#modalBackdrop').hidden) modalStack.length = 0;
+      const top = modalStack[modalStack.length - 1];
+      if (!top || top.kind !== kind || top.id !== id) modalStack.push({ kind, id });
+    }
+    updateModalBack();
     $('#modalBackdrop').hidden = false;
+    const dlg = $('#modalDialog');
+    if (dlg) dlg.scrollTop = 0;
   }
 
   function closeModal() {
+    modalStack.length = 0;
+    updateModalBack();
     $('#modalBackdrop').hidden = true;
   }
 
@@ -4518,9 +4566,14 @@
       closeModal();
       $('#globalSearchResults').hidden = true;
     }
+    if (e.altKey && e.key === 'ArrowLeft' && !$('#modalBackdrop').hidden) {
+      e.preventDefault();
+      modalBack();
+    }
   });
 
   $('#modalClose').addEventListener('click', closeModal);
+  $('#modalBack').addEventListener('click', modalBack);
   $('#modalBackdrop').addEventListener('click', (e) => {
     if (e.target === $('#modalBackdrop')) closeModal();
   });

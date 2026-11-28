@@ -870,6 +870,41 @@ table.data-table {
 }
 .modal__close:hover { background: var(--red); color: #fff; }
 
+.modal__back {
+  position: sticky;
+  top: 0;
+  float: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 58%;
+  height: 32px;
+  padding: 0 14px 0 11px;
+  margin: 0 10px 0 0;
+  background: var(--bg-3);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.15s, border-color 0.15s;
+}
+.modal__back[hidden] { display: none; }
+.modal__back:hover { background: rgba(245, 185, 66, 0.18); border-color: var(--gold); }
+.modal__back-arrow { font-size: 11px; }
+.modal__back-prev {
+  color: var(--text-1);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+.modal__back-prev::before { content: "· "; color: var(--text-2); }
+.modal-hero { clear: both; }
+
 .modal-hero {
   display: flex;
   align-items: center;
